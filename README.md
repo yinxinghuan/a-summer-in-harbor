@@ -21,6 +21,8 @@ npm run dev
 
 当前是本地可玩制作版，未发布。不是多人世界或无限生成承诺。素材由平台服务新制，没有读旧游戏图片作为参考；同轮角色/门派生有明确记录。
 
+已获上线授权，发布接头与镜像入口正在准备；实际部署前仍须确认托管期限与临时存档身份，详见 [发布状态](doc/release-readiness.md) 和 [部署合同](deploy/README.md)。
+
 - [需求](doc/requirements.md)、[视觉](doc/visual.md)、[技术](doc/technical.md)
 - [验收与限制](doc/qa/acceptance.md)、[技能试用评估](doc/skill-evaluation.md)
 - [第三方许可](public/THIRD_PARTY_NOTICES.txt)

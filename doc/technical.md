@@ -56,4 +56,5 @@ NPC 首次接近只显示日常描述；正式介绍后才可问话和使用名�
 - 新故事：修改 `story/state.ts`、描述与 Cartridge，保持固定 ID 和旧档语义；不得仅在 UI 增加不可执行选项。
 - 新遭遇：复用 `combat/core.ts`，在 `presets.ts` 配置，加入权威绑定与 UI；提交可重放输入。
 - 新美术：平台服务生成新根图/同批派生，记录来源与处理，经过真实角色相邻与动作循环检查再准入。
-- 正式后台：先替换本地 authoring bootstrap 为已验证的平台身份和生产 authority 部署，完成生产恢复与所有权门禁后再发布。同 UUID 主站和 Pages 镜像按发布技能另行执行。
+- 正式后台：`server/public.ts` 为新 PG 接头，`scripts/migrate-public.ts` 负责显式迁移，`server/http.ts` 共用业务路由；`server/index.ts` 继续只作为本地 SQLite authoring 入口。`worker/index.js` 验证来源并签发绑定游戏 UUID 的能力 cookie。这个临时浏览器身份方案尚待用户接受，不是平台账号验证；真实 PG 运行和恢复尚未验收。
+- 发布：`scripts/prepare-public-deploy.ts` 将私有绑定写到仓库外 staging，`.github/workflows/deploy.yml` 构建同提交镜像。`src/ui/Mirror.tsx` 在 Pages 上引导到主站，不向原游戏后台发跨域存档请求。完整状态见 `doc/release-readiness.md`；不能把适配代码存在等同于已上线。

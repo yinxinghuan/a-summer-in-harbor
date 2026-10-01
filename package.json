@@ -8,7 +8,9 @@
     "preview": "vite preview --host 127.0.0.1 --port 5235 --strictPort",
     "test": "node --import tsx --test _qa/*.test.ts",
     "server": "node scripts/authoring.mjs",
-    "export:cartridge": "node --import tsx scripts/export-cartridge.ts"
+    "export:cartridge": "node --import tsx scripts/export-cartridge.ts",
+    "server:public": "node --import tsx server/public.ts",
+    "migrate:public": "node --import tsx scripts/migrate-public.ts"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +20,7 @@
     "@canvasengine/compiler": "2.2.0",
     "@resvg/resvg-js": "2.6.2",
     "@types/node": "22.19.15",
+    "@types/pg": "8.15.5",
     "@types/react": "18.3.28",
     "@types/react-dom": "18.3.7",
     "@vitejs/plugin-vue": "^6.0.8",
@@ -38,6 +41,7 @@
     "@rpgjs/ui-css": "5.0.0-beta.26",
     "@signe/di": "^3.1.1",
     "canvasengine": "2.2.0",
+    "pg": "8.16.3",
     "pixi.js": "^8.20.1",
     "react": "18.3.1",
     "react-dom": "18.3.1"

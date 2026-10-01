@@ -12,3 +12,4 @@
 .harbor-entry__art{width:min(65vw,280px);aspect-ratio:1;object-fit:cover;border-radius:4px;margin-bottom:24px}
 
 @media(max-width:360px){.harbor-map-place{width:82px;font-size:11px;padding:6px;min-height:44px}.harbor-map-place small{font-size:8px}}
+.harbor-mirror{height:auto;min-height:100dvh;padding:24px}.harbor-mirror .harbor-entry__art{width:min(65vw,26dvh,280px);margin-bottom:12px}.harbor-mirror h1{font-size:clamp(28px,7vw,40px);margin:14px 0}.harbor-mirror__play{display:flex;align-items:center;justify-content:center;min-height:48px;min-width:180px;padding:12px 20px;border-radius:4px;text-decoration:none;touch-action:manipulation}.harbor-mirror__play:focus-visible{outline:3px solid var(--gold);outline-offset:4px}

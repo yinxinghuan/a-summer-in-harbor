@@ -1,0 +1,16 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {randomBytes} from 'node:crypto';
+// @ts-expect-error deployable Worker JavaScript
+import {handleApi} from '../worker/index.js';import {verifiedEdgeOwner} from '../server/public-config';import {GAME_UUID} from '../src/game-id';
+test('public gateway: signed cookie, no caller owner, cross-origin/expired/missing-cookie guards',async()=>{
+ const token=randomBytes(32).toString('hex'),base='/'+GAME_UUID,origin='https://game.aiwaves.tech';const env={HARBOR_PUBLIC_ORIGIN:origin,HARBOR_GAME_BASE:base,HARBOR_UPSTREAM_ORIGIN:'https://harbor.example.test',HARBOR_EDGE_TOKEN:token,HARBOR_EXPIRES_AT:Date.now()+60000,HARBOR_IDENTITY_MODE:'browser-capability-v1'};
+ const seen:any[]=[];const old=globalThis.fetch;globalThis.fetch=async(input:any,init:any)=>{seen.push({input,init});return Response.json({ok:true})};
+ const req=(path:string,method='GET',cookie?:string,requestOrigin=origin)=>new Request(origin+path,{method,headers:{Origin:requestOrigin,...(method==='POST'?{'Content-Type':'application/json'}:{}),...(cookie?{Cookie:cookie}:{}),'X-Harbor-Owner':'forged-owner'},...(method==='POST'?{body:'{}'}:{})});
+ try{
+  assert.equal((await handleApi(req('/api/sessions'),env)).status,401);assert.equal(seen.length,0);
+  const first=await handleApi(req('/api/bootstrap','POST'),env);assert.equal(first.status,200);const cookie=first.headers.get('Set-Cookie')!;assert.match(cookie,/HttpOnly; SameSite=Strict/);assert.ok(cookie.includes('Path='+base+'/'));
+  assert.equal((await handleApi(req('/api/sessions','GET',cookie.split(';')[0]),env)).status,200);const identity=seen.at(-1).init.headers.get('X-Harbor-Owner');assert.match(identity,/^[a-f0-9]{64}$/);assert.notEqual(identity,'forged-owner');assert.equal(seen.at(-1).input,'https://harbor.example.test'+base+'/api/sessions');
+  const count=seen.length;assert.equal((await handleApi(req('/api/sessions','GET',cookie.split(';')[0]+'bad'),env)).status,401);assert.equal((await handleApi(req('/api/bootstrap','POST',undefined,'https://other.example.test'),env)).status,403);assert.equal((await handleApi(req('/api/health'),{...env,HARBOR_EXPIRES_AT:0})).status,410);assert.equal((await handleApi(req('/api/sessions','POST'),env)).status,401);assert.equal(seen.length,count);
+  assert.equal(verifiedEdgeOwner({headers:{'x-harbor-edge':token,'x-harbor-owner':identity,'x-harbor-game':GAME_UUID,origin}} as any,{expiresAt:Date.now()+60000,publicOrigin:origin},token),identity);
+  assert.throws(()=>verifiedEdgeOwner({headers:{'x-harbor-edge':'bad','x-harbor-owner':identity,'x-harbor-game':GAME_UUID,origin}} as any,{expiresAt:Date.now()+60000,publicOrigin:origin},token),/EDGE_IDENTITY_REQUIRED/);
+ }finally{globalThis.fetch=old}
+});

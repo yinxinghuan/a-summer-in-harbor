@@ -102,6 +102,18 @@
     "source": "package metadata; full MIT grant included"
   },
   {
+    "name": "pg-types",
+    "version": "2.2.0",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "pgpass",
+    "version": "1.0.5",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
     "name": "yoga-layout",
     "version": "3.2.1",
     "license": "MIT",

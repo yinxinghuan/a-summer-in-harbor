@@ -1,4 +1,7 @@
 import {cartridge} from './story/cartridge';
+import {Mirror} from './ui/Mirror';
+import {RELEASE} from './release';
+import {connectionError} from './story/connection-errors';
 import {description} from './story/descriptions';
 import {BayMap} from './ui/Map';
 import {nextObjectiveEntrance} from './story/navigation';
@@ -23,7 +26,7 @@ function App(){
  useEffect(()=>{summerAudio.setMuted(muted)},[muted]);
  useEffect(()=>{if(save)summerAudio.setArea(save.activeChallenge&&['sparring','footwork','endurance'].includes(save.activeChallenge.kind)?'practice':rooms[save.scene].area)},[save?.scene,save?.activeChallenge?.kind]);
  useEffect(()=>{const play=()=>summerAudio.unlock();window.addEventListener('pointerdown',play,{once:true});window.addEventListener('keydown',play,{once:true});return()=>{window.removeEventListener('pointerdown',play);window.removeEventListener('keydown',play)}},[]);
- const load=()=>{setBusy(true);setError(null);void connect(locale).then(s=>{setSave(s);position.current=s.position}).catch(()=>setError(['暂时没能读到进度，请重试。','Your progress could not be loaded. Please retry.'])).finally(()=>setBusy(false))};
+ const load=()=>{setBusy(true);setError(null);void connect(locale).then(s=>{setSave(s);position.current=s.position}).catch(e=>setError(connectionError(e.message)??['暂时没能读到进度，请重试。','Your progress could not be loaded. Please retry.'])).finally(()=>setBusy(false))};
  useEffect(()=>{load();const t=setInterval(()=>{const {save,busy,panel,worldReady}=latest.current;if(save&&worldReady&&!busy&&panel==='none')void checkpoint(save,position.current).catch(()=>{})},5000);return()=>clearInterval(t)},[]);
  useEffect(()=>{
   if(!message){setChoicesReady(true);return}
@@ -38,7 +41,7 @@ function App(){
   try{const r=await send(save,{action_id:crypto.randomUUID(),expected_version:save.version,scene:save.scene,position:position.current,target:targetId??e?.id??'',action,payload});if(r.head.scene!==save.scene){setWorldReady(false);summerAudio.effect('door')}else if(r.head.flags.length>save.flags.length)summerAudio.effect('progress');setSave(r.head);position.current=r.head.position;
    if(action==='travel'||action==='travel-map'){setPanel('none');setTarget(null);setMessage(null);setNear(null)}else{setMessage(r.text);if(action==='introduce'||action.startsWith('talk:'))setPanel('entity')}
    return true;
-  }catch(err:any){setError(errors[err.message]??['暂时没能完成，请重试读取进度。','That could not be completed. Reload your progress to retry.']);if(err.message==='VERSION_CONFLICT')load();return false}finally{setBusy(false)}
+  }catch(err:any){setError(errors[err.message]??connectionError(err.message)??['暂时没能完成，请重试读取进度。','That could not be completed. Reload your progress to retry.']);if(err.message==='VERSION_CONFLICT')load();return false}finally{setBusy(false)}
  };
  const interact=()=>{if(!near||!save||busy)return;setTarget(near);setPanel('entity');setError(null);setMessage(null);if(near.person&&!save.known.includes(near.person))void act('introduce',near)};
  useEffect(()=>{const fn=(e:KeyboardEvent)=>{if(e.target instanceof HTMLInputElement||e.target instanceof HTMLTextAreaElement)return;if(e.key.toLowerCase()==='e'&&panel==='none'&&!save?.activeChallenge){e.preventDefault();interact()}if(e.key==='Escape'&&!save?.activeChallenge){setPanel('none');setPortrait(null)}};window.addEventListener('keydown',fn);return()=>window.removeEventListener('keydown',fn)},[near,save,busy,panel]);
@@ -70,4 +73,5 @@ function App(){
  {portrait&&<div className="harbor-backdrop harbor-portrait-full" onClick={()=>setPortrait(null)}><button aria-label={tx(['关闭放大图','Close enlarged portrait'],locale)}><Icon name="close"/></button><img src={portrait.startsWith('note:')?noteImageUrl(save.id,portrait.slice(5)):portrait.startsWith('asset:')?`./art/${portrait.slice(6)}.png`:`./art/${portrait}-root-v2.png`} alt={portrait.startsWith('asset:')||portrait.startsWith('note:')?tx(['资料特写','Document detail'],locale):tx(people[portrait].name,locale)}/></div>}
  </main>
 }
-createRoot(document.getElementById('root')!).render(<App/>);
+document.documentElement.dataset.harborRelease=RELEASE;
+createRoot(document.getElementById('root')!).render(location.hostname.endsWith('.github.io')?<Mirror/>:<App/>);
