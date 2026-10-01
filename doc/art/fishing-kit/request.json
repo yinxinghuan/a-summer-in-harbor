@@ -1,0 +1,14 @@
+{
+  "request_id": "1b1592ed-6b26-41c4-9904-d4f49a4f34e5",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. One plain small wooden tackle box with a coil of fishing line and a small metal bucket alongside, compact realistic sizes, all on the same ground plane. No floor or water, no text.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

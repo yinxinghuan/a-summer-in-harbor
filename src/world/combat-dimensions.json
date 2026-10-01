@@ -1,0 +1,62 @@
+{
+  "hero-combat-guard": {
+    "width": 332,
+    "height": 754,
+    "anchorX": 0.4924698795180723
+  },
+  "hero-combat-punch": {
+    "width": 525,
+    "height": 745,
+    "anchorX": 0.7295238095238096
+  },
+  "hero-combat-down-guard": {
+    "width": 368,
+    "height": 790,
+    "anchorX": 0.5040760869565217
+  },
+  "hero-combat-down-punch": {
+    "width": 337,
+    "height": 769,
+    "anchorX": 0.5178041543026706
+  },
+  "hero-combat-up-guard": {
+    "width": 376,
+    "height": 788,
+    "anchorX": 0.488031914893617
+  },
+  "hero-combat-up-punch": {
+    "width": 375,
+    "height": 794,
+    "anchorX": 0.47333333333333333
+  },
+  "idris-combat-guard": {
+    "width": 403,
+    "height": 795,
+    "anchorX": 0.5583126550868487
+  },
+  "idris-combat-punch": {
+    "width": 617,
+    "height": 769,
+    "anchorX": 0.692868719611021
+  },
+  "idris-combat-down-guard": {
+    "width": 410,
+    "height": 768,
+    "anchorX": 0.5146341463414634
+  },
+  "idris-combat-down-punch": {
+    "width": 355,
+    "height": 775,
+    "anchorX": 0.4788732394366197
+  },
+  "idris-combat-up-guard": {
+    "width": 382,
+    "height": 762,
+    "anchorX": 0.5026178010471204
+  },
+  "idris-combat-up-punch": {
+    "width": 364,
+    "height": 763,
+    "anchorX": 0.48626373626373626
+  }
+}

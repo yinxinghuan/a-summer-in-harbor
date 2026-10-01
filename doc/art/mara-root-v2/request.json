@@ -1,0 +1,16 @@
+{
+  "request_id": "60c25968-7c0a-4abd-b24c-3c46f5efbc9d",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "edit",
+  "prompt": "Use reference ONLY for the compact adult game-sprite body/head proportions, large visible hair crown, elevated orthographic camera, chunky pixel density, palette treatment and dark outline. Create a DIFFERENT person: A middle aged woman55 with curly silver hair, coral linen shirt and cream trousers, navy comfortable shoes. Kind lined adult face. Stand facing screen down, arms at sides and shoes together. Match reference visible sprite height, head size, camera and proportions exactly; do not make a tall realistic human. Do NOT inherit the reference hair, face, clothes or colours. Single full-body figure on pure magenta #ff00ff background, no ground, shadow or letters.",
+  "reference_urls": [
+    "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+  ],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

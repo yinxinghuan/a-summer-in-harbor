@@ -1,0 +1,16 @@
+{
+  "request_id": "e433c5c1-0aa7-4970-8be7-2c157ca661e1",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "edit",
+  "prompt": "Edit this SAME newly made game panel candidate. Keep its width, mint material, exact orthographic parallel edges and no surrounding frame. Increase the vertical front-face height by50percent: final complete panel visible height must be1.30times the panel width, not squat horizontal and not tall upright door. It is a foreshortened door leaf with its OWN thin top plane. Do not add outer molding or lintel. Keep small brass handle and right hinges; handle round mounting base projects to a horizontally elongated ellipse. Preserve high-camera16bit pixel art and flat magenta background. Only one complete isolated panel. Do NOT stretch all details: re-render the new proportions naturally, keeping knob and hinges their original small physical size.",
+  "reference_urls": [
+    "https://images.aiwaves.tech/uploads/1790795668898-svrjgagsvzh.webp"
+  ],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

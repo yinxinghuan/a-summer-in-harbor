@@ -1,0 +1,9 @@
+{
+  "task_id": "mt_5e88c4e92eda71d9b78c97c0b7b58b37",
+  "request_id": "ef476c43-ede1-4d1b-92b2-2ae141937204",
+  "kind": "music",
+  "duration_seconds": 45,
+  "timing_ms": 2179,
+  "bytes": 708043,
+  "output": "/Users/yin/code/games/a-summer-in-harbor/public/audio/coast.mp3"
+}

@@ -1,0 +1,489 @@
+{
+  "hero-root-v2": "Restrained richly detailed 16-bit pixel art, consistent chunky clusters, dark outlines, muted warm coastal palette. ONE compact adult RPG walking-map character, standing facing screen bottom, steep elevated 50 degree orthographic view. The camera sees a large crown of dark-brown wavy hair; face vertically foreshortened, shoulders and shoe tops visible from above. Strong 3 HEAD TOTAL HEIGHT proportion (head occupies one third of sprite height), compact stocky game sprite rather than realistic anatomy or portrait. Sea-teal open overshirt, cream t-shirt, sand trousers, brown shoes. Hands at sides, both feet side by side. Single centered isolated whole body on pure magenta #ff00ff, no ground/shadow/text. The head is much larger relative to body than a realistic person, but adult facial appearance age28. Do not draw a tall six-head human.",
+  "door-front-v2": "Restrained richly detailed 16-bit pixel art, consistent chunky clusters, dark outlines, muted warm coastal palette. Draw a single wooden slab as a movable interior door leaf viewed from a steep elevated ORTHOGRAPHIC camera. Its image front face is a rectangle exactly 420 wide by 520 high (not a tall real-world door elevation), plus a 16 pixel thin own top surface. All four front face corners form a rectangle, both horizontal edges parallel equal length. One small brass handle on left with horizontal ellipse base, right hinge. Mint green wooden surface, fine wear, no lettering. NO fixed door frame, surrounding trim, wall or threshold. Entire object has target visible HEIGHT / WIDTH = 1.28 including own top edge. No vanishing point. Pure magenta #ff00ff background. The camera foreshortens the vertical door face and reveals the top of knob and hinges.",
+  "floor-wood": "Restrained richly detailed 16-bit pixel art, consistent chunky clusters, dark outlines, muted warm coastal palette. Seamless flat TOP DOWN floor texture only, edge to edge. Honey-coloured narrow wooden floor planks with subtle grain, equal scale, straight horizontal seams, no light gradient. No wall border furniture objects perspective or writing.",
+  "cafe-table": "Restrained richly detailed 16-bit pixel art, consistent chunky clusters, dark outlines, muted warm coastal palette. ONE square small honey oak cafe table viewed elevated ORTHOGRAPHIC camera at50 degrees, zero sideways yaw. Top is a rectangle with exact equal horizontal front/back lengths and vertical depth edges (not a trapezoid). A ceramic mug and folded newspaper physically rest on the top. Four short visible legs. No chairs, environment, wall, floor, shadow or text. Pure magenta #ff00ff background. Full object with margins.",
+  "plant": "Restrained richly detailed 16-bit pixel art, consistent chunky clusters, dark outlines, muted warm coastal palette. ONE terracotta pot containing a compact leafy fern, elevated 50 degree ORTHOGRAPHIC view, squarely facing front, no lateral camera yaw. Full plant and pot only, no floor, no shadow. Uniform pure magenta #ff00ff background. Pixel game asset.",
+  "hero-down-a": {
+    "prompt": "Use this newly created character as the exact identity and pixel style. Keep head/body ratio, dark brown wavy hair, sea-teal overshirt, cream tshirt, sand trousers, brown shoes and orthographic 50-degree elevated camera. One COMPLETE full-body figure only on pure magenta #ff00ff, no shadow/floor/text. Adult compact map sprite. Facing screen DOWN, walking contact A: screen-left shoe lower in image and planted forward, screen-right shoe higher with heel raised behind, right arm swings forward opposite the left leg. Both shoes fully visible. Clear walking stride, no running.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ]
+  },
+  "hero-up-stand": {
+    "prompt": "Use this newly created character as the exact identity and pixel style. Keep head/body ratio, dark brown wavy hair, sea-teal overshirt, cream tshirt, sand trousers, brown shoes and orthographic 50-degree elevated camera. One COMPLETE full-body figure only on pure magenta #ff00ff, no shadow/floor/text. Adult compact map sprite. Facing screen UP, directly away from camera. Back of head and back of shirt only, no face or chest. Feet side by side, arms resting at sides.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ]
+  },
+  "hero-up-a": {
+    "prompt": "Use this newly created character as the exact identity and pixel style. Keep head/body ratio, dark brown wavy hair, sea-teal overshirt, cream tshirt, sand trousers, brown shoes and orthographic 50-degree elevated camera. One COMPLETE full-body figure only on pure magenta #ff00ff, no shadow/floor/text. Adult compact map sprite. Facing screen UP, directly away from camera, walking contact A. Back of head/back shirt only. Screen-left shoe higher in image reaches forward; screen-right shoe lower behind shows lifted heel. Right arm forward, left arm backward. Both shoes distinct. Not standing.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ]
+  },
+  "hero-left-stand": {
+    "prompt": "Use this newly created character as the exact identity and pixel style. Keep head/body ratio, dark brown wavy hair, sea-teal overshirt, cream tshirt, sand trousers, brown shoes and orthographic 50-degree elevated camera. One COMPLETE full-body figure only on pure magenta #ff00ff, no shadow/floor/text. Adult compact map sprite. Facing screen LEFT in side profile, keep elevated orthographic camera so hair crown is visible. Legs neutral standing, arms by sides. Do not rotate body toward camera.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ]
+  },
+  "hero-left-a": {
+    "prompt": "Use this newly created character as the exact identity and pixel style. Keep head/body ratio, dark brown wavy hair, sea-teal overshirt, cream tshirt, sand trousers, brown shoes and orthographic 50-degree elevated camera. One COMPLETE full-body figure only on pure magenta #ff00ff, no shadow/floor/text. Adult compact map sprite. Facing screen LEFT in exact side profile, elevated orthographic camera. Walking contact A. Near leg reaches left with heel planted, far leg extends right behind with heel raised; near arm swings back to screen right. Legs form a readable moderate stride, not running. Both feet visible.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ]
+  },
+  "mara-root": {
+    "prompt": "Restrained richly detailed 16-bit pixel art, chunky pixel clusters, dark outlines. Compact adult walking-map sprite: 3 heads tall with large crown visible from steep elevated 50 degree orthographic camera, facing screen bottom. Whole body, arms relaxed, both shoes side by side. Pure magenta #ff00ff background, no shadow or floor. No text. Woman age55, short curly silver brown hair, pale coral linen overshirt, cream trousers, comfortable navy shoes, confident kind face, sturdy build. North American coastal landlord.",
+    "refs": []
+  },
+  "theo-root": {
+    "prompt": "Restrained richly detailed 16-bit pixel art, chunky pixel clusters, dark outlines. Compact adult walking-map sprite: 3 heads tall with large crown visible from steep elevated 50 degree orthographic camera, facing screen bottom. Whole body, arms relaxed, both shoes side by side. Pure magenta #ff00ff background, no shadow or floor. No text. Man age30 with dark skin, short tightly curled black hair, cream short sleeve shirt, dark navy barista apron, olive trousers and brown shoes, slim adult build.",
+    "refs": []
+  },
+  "idris-root": {
+    "prompt": "Restrained richly detailed 16-bit pixel art, chunky pixel clusters, dark outlines. Compact adult walking-map sprite: 3 heads tall with large crown visible from steep elevated 50 degree orthographic camera, facing screen bottom. Whole body, arms relaxed, both shoes side by side. Pure magenta #ff00ff background, no shadow or floor. No text. Man age48 with dark skin, close shaved hair, short salt pepper beard, broad shoulders, burgundy training shirt and navy track pants, grey trainers. Boxing coach, calm friendly serious expression.",
+    "refs": []
+  },
+  "door-front-v3": "A pixel-art thin rectangular mint green wooden board with brass handle at left and hinges at right. Orthographic elevated camera, absolutely RECTANGULAR silhouette. Image coordinates: front face top-left (272,235), top-right (752,235), bottom-right (752,815), bottom-left (272,815). Both vertical outside edges perfectly vertical; top and bottom same width. Thin own top face from y220 to235, same width. No other parts. No narrowing toward top or bottom, no trapezoid or perspective. The front face has two recessed panels and chipped paint. Small handle upper surface visible, mounting plate horizontal oval. Movable interior door panel, NO fixed frame/trim/wall/lintel/threshold. Polished restrained 16-bit pixel clusters, full object centered on pure magenta #ff00ff. No text or cast shadow.",
+  "hero-down-b": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795152512-1mwlwbad6ik.webp"
+    ],
+    "prompt": "Keep EXACT same full character, compact proportions, pixel rendering, camera, clothing, face, hair and facing DOWN. Produce the OPPOSITE WALK CONTACT pose. Exchange the two legs positions and the swinging arms. Screen RIGHT shoe now lower and forward planted; screen LEFT shoe higher behind with heel lifted. Do not merely reproduce reference pose. No new outfit or objects. Entire figure isolated on solid pure magenta #ff00ff background without floor or shadow."
+  },
+  "hero-up-b": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795190580-riho0kgs0se.webp"
+    ],
+    "prompt": "Keep EXACT same full character, compact proportions, pixel rendering, camera, clothing, face, hair and facing UP. Produce the OPPOSITE WALK CONTACT pose. Exchange the two legs positions and the swinging arms. Back view only. Screen RIGHT shoe now higher forward; screen LEFT shoe lower behind showing lifted heel. Do not merely reproduce reference pose. No new outfit or objects. Entire figure isolated on solid pure magenta #ff00ff background without floor or shadow."
+  },
+  "hero-left-b": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795224424-42cklhx97qj.webp"
+    ],
+    "prompt": "Keep EXACT same full character, compact proportions, pixel rendering, camera, clothing, face, hair and facing LEFT. Produce the OPPOSITE WALK CONTACT pose. Exchange the two legs positions and the swinging arms. Near leg now extends to screen RIGHT behind with heel lifted; FAR leg extends LEFT forward and plants its heel. Near arm swings forward to LEFT. Both legs/shoes visible, moderate walking stride. Do not merely reproduce reference pose. No new outfit or objects. Entire figure isolated on solid pure magenta #ff00ff background without floor or shadow."
+  },
+  "mara-root-v2": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ],
+    "prompt": "Use reference ONLY for the compact adult game-sprite body/head proportions, large visible hair crown, elevated orthographic camera, chunky pixel density, palette treatment and dark outline. Create a DIFFERENT person: A middle aged woman55 with curly silver hair, coral linen shirt and cream trousers, navy comfortable shoes. Kind lined adult face. Stand facing screen down, arms at sides and shoes together. Match reference visible sprite height, head size, camera and proportions exactly; do not make a tall realistic human. Do NOT inherit the reference hair, face, clothes or colours. Single full-body figure on pure magenta #ff00ff background, no ground, shadow or letters."
+  },
+  "theo-root-v2": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ],
+    "prompt": "Use reference ONLY for the compact adult game-sprite body/head proportions, large visible hair crown, elevated orthographic camera, chunky pixel density, palette treatment and dark outline. Create a DIFFERENT person: A man30 with dark skin, short black curls, cream shirt, short navy waist apron over olive trousers, brown shoes. Stand facing screen down, arms at sides and shoes together. Match reference visible sprite height, head size, camera and proportions exactly; do not make a tall realistic human. Do NOT inherit the reference hair, face, clothes or colours. Single full-body figure on pure magenta #ff00ff background, no ground, shadow or letters."
+  },
+  "idris-root-v2": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ],
+    "prompt": "Use reference ONLY for the compact adult game-sprite body/head proportions, large visible hair crown, elevated orthographic camera, chunky pixel density, palette treatment and dark outline. Create a DIFFERENT person: A muscular middle aged man48 with dark skin, shaved black hair and short greying beard, burgundy T shirt, navy track pants, grey trainers. Stand facing screen down, arms at sides and shoes together. Match reference visible sprite height, head size, camera and proportions exactly; do not make a tall realistic human. Do NOT inherit the reference hair, face, clothes or colours. Single full-body figure on pure magenta #ff00ff background, no ground, shadow or letters."
+  },
+  "door-front-v4": "A squat wide rectangular mint wooden cabinet-like panel, seen through elevated orthographic camera, in 16-bit pixel art. Draw only one thin panel whose visible height is just 1.25 times its width. Width500 image pixels, height625 image pixels. Perfect rectangle, no tapered edges. One plain recessed inset panel, one SMALL brass lever on left, two small hinges right. Own narrow top plane shows from above. No separate frame, no surrounding wood trim or architecture, no lintel. Do not draw a tall standard architectural door elevation. Full thin panel on pure magenta #ff00ff, no shadow or text. Fine worn paint, restrained dark outline. This is a game sprite with vertical plane foreshortened by camera, NOT a realistic upright tall door.",
+  "floor-grass": "Restrained richly detailed 16-bit pixel art with chunky clusters, muted coastal summer palette, dark outline. Seamless flat TOP DOWN orthographic grass texture only, edge to edge. Small soft sage green grass blades and very sparse tiny clover. Uniform equal scale and illumination. No plants taller than lawn, no object, path, wall, shadow, border or perspective.",
+  "floor-sand": "Restrained richly detailed 16-bit pixel art with chunky clusters, muted coastal summer palette, dark outline. Seamless flat TOP DOWN orthographic texture only of pale warm beach sand. Subtle small ripples, sparse tiny grains. Uniform equal scale and light, edge to edge. No footprints, shell, object, shore, water, shadow or perspective.",
+  "floor-water": "Restrained richly detailed 16-bit pixel art with chunky clusters, muted coastal summer palette, dark outline. Seamless flat TOP DOWN orthographic calm teal-blue seawater texture, edge to edge. Small soft pale ripples, uniform scale and light, no horizon or beach or boats or objects. No perspective. Not a photograph.",
+  "house-cafe": "Restrained richly detailed 16-bit pixel art with chunky clusters, muted coastal summer palette, dark outline. One complete small single-storey North American seaside cafe exterior as an isolated game-map building sprite. High elevated ORTHOGRAPHIC camera looking down50degrees, zero sideways yaw: front/back roof edges equal length and horizontal, depth edges vertical in image. No trapezoid, no vanishing point. White clapboard, warm terracotta gabled roof, mint green front door, two small front windows, folded cream awning, no sign lettering. Long axis horizontal. Door bottom at center front. Front facade is visibly shortened by steep camera, large roof plane visible. No ground, street, trees, furniture or cast shadow. Pure magenta #ff00ff background. Entire building visible.",
+  "bench": "Restrained richly detailed 16-bit pixel art with chunky clusters, muted coastal summer palette, dark outline. Single wooden outdoor park bench without arms, elevated50degree orthographic camera, zero sideways yaw, front and back edges horizontal and equal length. No perspective/trapezoid. Warm oak slats and dark green iron feet, complete isolated item without ground/shadow/environment. Pure magenta #ff00ff background.",
+  "house-rental": "Premium 16-bit pixel art for a cozy modern North American seaside exploration game. Carefully clustered pixels, restrained dark outlines, warm summer colors. Elevated ORTHOGRAPHIC camera pitched 50 degrees downward, zero camera yaw. All world X edges perfectly horizontal, all vertical walls vertical, parallel lines NEVER converge. Single isolated complete object on flat pure magenta #ff00ff, no ground, no cast shadow, no lettering, generous margins. Small two-story coastal rental house with sage clapboard walls, pale slate gable roof occupying the upper half, cream trim, three upstairs windows and downstairs a porch with central closed cream door and two window boxes. Square-on front facade with no visible left or right facade. Door at exact horizontal center. Roof depth compresses vertically. The object is a game map building sprite, not a street illustration.",
+  "house-grocery": "Premium 16-bit pixel art for a cozy modern North American seaside exploration game. Carefully clustered pixels, restrained dark outlines, warm summer colors. Elevated ORTHOGRAPHIC camera pitched 50 degrees downward, zero camera yaw. All world X edges perfectly horizontal, all vertical walls vertical, parallel lines NEVER converge. Single isolated complete object on flat pure magenta #ff00ff, no ground, no cast shadow, no lettering, generous margins. Small one-story coastal neighborhood grocery shop. Narrow faded brick front facade, blue corrugated roof visible from above, striped ivory and ocean-blue awning, centered closed blue glass door, two large display windows containing tiny bread crates. No visible side facade. Entire building fits in frame. No ground. Front door exact center.",
+  "canopy-tree": "Premium 16-bit pixel art for a cozy modern North American seaside exploration game. Carefully clustered pixels, restrained dark outlines, warm summer colors. Elevated ORTHOGRAPHIC camera pitched 50 degrees downward, zero camera yaw. All world X edges perfectly horizontal, all vertical walls vertical, parallel lines NEVER converge. Single isolated complete object on flat pure magenta #ff00ff, no ground, no cast shadow, no lettering, generous margins. One mature summer tree, broad layered rounded crown of olive and forest green leaves, clear sturdy bifurcating brown trunk ending at exact bottom center. Map sprite seen from above enough to see crown top. Crown 75 percent of height; visible trunk 25 percent. No roots protruding sideways, no grass, no landscape.",
+  "street-sign": "Premium 16-bit pixel art for a cozy modern North American seaside exploration game. Carefully clustered pixels, restrained dark outlines, warm summer colors. Elevated ORTHOGRAPHIC camera pitched 50 degrees downward, zero camera yaw. All world X edges perfectly horizontal, all vertical walls vertical, parallel lines NEVER converge. Single isolated complete object on flat pure magenta #ff00ff, no ground, no cast shadow, no lettering, generous margins. One short coastal town wayfinding post with three wooden arrow slats pointing left, right and up, blank cream surfaces with teal edges and no writing, solid timber vertical post. A few weathered bolts. The signs are clearly separate and usable for adding labels in UI.",
+  "flower-planter": "Premium 16-bit pixel art for a cozy modern North American seaside exploration game. Carefully clustered pixels, restrained dark outlines, warm summer colors. Elevated ORTHOGRAPHIC camera pitched 50 degrees downward, zero camera yaw. All world X edges perfectly horizontal, all vertical walls vertical, parallel lines NEVER converge. Single isolated complete object on flat pure magenta #ff00ff, no ground, no cast shadow, no lettering, generous margins. One low rectangular timber flower box with small lavender and yellow daisies. Long edges perfectly horizontal and equal length, short depth edges vertical. Low facade only one third of total visible height, flowers form compact tufts. Entire isolated object, no garden.",
+  "june-root-v2": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ],
+    "prompt": "Create ONE NEW NPC game sprite using only the reference pixel clustering, elevated camera angle, compact body proportions and world scale. Do NOT preserve the reference person identity or clothing. New character: adult woman age 38 with short curly black hair, dark brown skin, ochre work overalls over a navy shirt, sturdy boots, broad practical silhouette, no tools in hands. Exactly same visible total body height and same head-to-body ratio as reference; large readable hair crown with forward-down view. Front facing screen down, full body neutral standing, both shoes together but separated, arms resting at sides. Complete 16-bit pixel-art figure on uniform pure magenta #ff00ff background; no shadow, text, props or ground. No realistic tall portrait proportions. This is a different adult in the same game."
+  },
+  "ruth-root-v2": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ],
+    "prompt": "Create ONE NEW NPC game sprite using only the reference pixel clustering, elevated camera angle, compact body proportions and world scale. Do NOT preserve the reference person identity or clothing. New character: older woman age 64 with weathered face, silver hair under faded sand canvas hat, sea blue rain vest over cream shirt, dark green trousers, boots. Exactly same visible total body height and same head-to-body ratio as reference; large readable hair crown with forward-down view. Front facing screen down, full body neutral standing, both shoes together but separated, arms resting at sides. Complete 16-bit pixel-art figure on uniform pure magenta #ff00ff background; no shadow, text, props or ground. No realistic tall portrait proportions. This is a different adult in the same game."
+  },
+  "luis-root-v2": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ],
+    "prompt": "Create ONE NEW NPC game sprite using only the reference pixel clustering, elevated camera angle, compact body proportions and world scale. Do NOT preserve the reference person identity or clothing. New character: adult man age 45 with short dark curls and small moustache, medium tan skin, burgundy striped shirt and dark grocery apron, brown trousers, slightly rounded build. Exactly same visible total body height and same head-to-body ratio as reference; large readable hair crown with forward-down view. Front facing screen down, full body neutral standing, both shoes together but separated, arms resting at sides. Complete 16-bit pixel-art figure on uniform pure magenta #ff00ff background; no shadow, text, props or ground. No realistic tall portrait proportions. This is a different adult in the same game."
+  },
+  "nell-root-v2": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ],
+    "prompt": "Create ONE NEW NPC game sprite using only the reference pixel clustering, elevated camera angle, compact body proportions and world scale. Do NOT preserve the reference person identity or clothing. New character: slim older person age 62 with straight silver chin-length hair, round glasses, plum cardigan over cream blouse, olive trousers, walking shoes. Exactly same visible total body height and same head-to-body ratio as reference; large readable hair crown with forward-down view. Front facing screen down, full body neutral standing, both shoes together but separated, arms resting at sides. Complete 16-bit pixel-art figure on uniform pure magenta #ff00ff background; no shadow, text, props or ground. No realistic tall portrait proportions. This is a different adult in the same game."
+  },
+  "elena-root-v2": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ],
+    "prompt": "Create ONE NEW NPC game sprite using only the reference pixel clustering, elevated camera angle, compact body proportions and world scale. Do NOT preserve the reference person identity or clothing. New character: adult woman age 42 with tied-back black hair, warm medium skin, muted coral casual shirt, sage trousers and brown sandals. Exactly same visible total body height and same head-to-body ratio as reference; large readable hair crown with forward-down view. Front facing screen down, full body neutral standing, both shoes together but separated, arms resting at sides. Complete 16-bit pixel-art figure on uniform pure magenta #ff00ff background; no shadow, text, props or ground. No realistic tall portrait proportions. This is a different adult in the same game."
+  },
+  "arthur-root-v2": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ],
+    "prompt": "Create ONE NEW NPC game sprite using only the reference pixel clustering, elevated camera angle, compact body proportions and world scale. Do NOT preserve the reference person identity or clothing. New character: older man age 73 with white close-cropped hair and beard, pale skin, faded navy vest over oatmeal knit sweater, warm brown trousers and dark shoes. Exactly same visible total body height and same head-to-body ratio as reference; large readable hair crown with forward-down view. Front facing screen down, full body neutral standing, both shoes together but separated, arms resting at sides. Complete 16-bit pixel-art figure on uniform pure magenta #ff00ff background; no shadow, text, props or ground. No realistic tall portrait proportions. This is a different adult in the same game."
+  },
+  "bed": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. A small single bed aligned vertically in the image, white pillow at top, pale yellow quilt and dark teal folded blanket at bottom, visible honey wood front footboard and two short legs. Rectangular mattress, far and near ends EXACTLY equal width.",
+  "luggage": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. One closed sand-colored canvas overnight duffel bag with a teal strap, resting horizontally, no logo. Soft fabric volume, top zipper visible.",
+  "workbench": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. A low narrow wooden repair bench, steel tools and one bicycle wheel resting securely flat on rectangular tabletop, vice clipped to left edge, two thick legs and a lower shelf. Long front edge twice projected depth; all edges parallel. No giant tools.",
+  "noticeboard": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. One short timber public notice board on two short posts, three cream paper notes pinned to teal backing, no legible lettering. The upright board plane is foreshortened; total visible height 1.1 times width; thin visible top edge. No large roof or sign frame.",
+  "driftwood": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. A small loose bundle of three weathered timber planks, parallel horizontally and slightly overlapping. Soft salt-worn grey brown wood. No beach.",
+  "lantern": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. One small bronze outdoor lantern on a short wooden post, warm cream glowing glass, visible square cap top from above, small fasteners. No tall lamppost.",
+  "bookshelf": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. A low freestanding honey oak shelf with two rows of weathered books and two rolled nautical maps, one plant on top physically resting on the shelf. Rectangular flat top visible, width1.6times projected height.",
+  "boxing-rack": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. A low dark teal wooden gym bench with a pair of coral boxing gloves and folded cream towel lying naturally ON the bench. Parallel horizontal and vertical tabletop edges, tiny metal feet.",
+  "bridge": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. A complete short wooden pedestrian footbridge running LEFT TO RIGHT, exactly rectangular long deck visible from above, low simple wood railings along upper and lower edges, no tall arch. Width three times total projected height. Stable straight planks, no diagonal yaw. No river or ground.",
+  "fishing-kit": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. One plain small wooden tackle box with a coil of fishing line and a small metal bucket alongside, compact realistic sizes, all on the same ground plane. No floor or water, no text.",
+  "door-front-v5": "Make a crisp pixel-art game sprite on flat pure magenta #ff00ff. Geometry first: a single mint-painted rectangular wooden panel, its visible FRONT FACE spans x=310 to710 and y=252 to772 on a1024canvas. The top edge and bottom edge are exactly400pixels wide. All four front corners are right angles. Its own thin upper surface extends only20pixels upwards, between x310 and710. No additional horizontal bar, no molding around the outside, no supporting frame, no threshold, no shadow. Surface detail: a small brass lever on the left, mounted on a horizontally elongated ellipse because its physically circular base is viewed at50degrees down; two tiny hinges on the right with visible rounded top caps. This is a single door LEAF foreshortened by an elevated orthographic camera. Readable 16-bit pixel art, warm mint paint and tiny edge chips. Not a tall front-elevation architectural illustration. Total visible height approximately540pixels with width400pixels, no perspective taper.",
+  "cafe-table-v2": "A pixel-art game sprite of a little low square wooden cafe table, isolated on pure magenta #ff00ff. Elevated orthographic game camera 50degrees down, no camera yaw. The tabletop silhouette is EXACTLY a screen-aligned RECTANGLE: top-left(200,210), top-right(820,210), bottom-right(820,630), bottom-left(200,630). Four vertical short legs extend down from their own four corners; front legs end at y820. ALL table edges parallel; distant and near edge620pixels equally wide. A tiny white espresso cup (only65pixels tall) and small folded newspaper rest ON the tabletop. Cup circular rim appears a horizontal ellipse. High quality16bit pixel clustering, honeywood, restrained outline. No floor, no shadow, no chair, no perspective taper or diamond top.",
+  "bookshelf-v2": "A pixel-art game sprite of a small low bookcase with two rows of books, on pure magenta background. Draw the top shelf as a perfect screen-aligned rectangle fromx180 to840, y250 to410. Draw the vertical front facade fromx180 to840,y410 to780. The far edge and front edge are EXACTLY the same660pixel width and depth edges vertical; no trapezoid and no diagonal yaw. Elevated orthographic50degree camera. Many small books in muted coastal colors, one tiny plant securely ON the top shelf. Four short legs below. Warm honey oak,16bit pixel clustering and dark thin outline. No wall or floor, no cast shadow, entire object including legs.",
+  "door-front-v6": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795668898-svrjgagsvzh.webp"
+    ],
+    "prompt": "Edit this SAME newly made game panel candidate. Keep its width, mint material, exact orthographic parallel edges and no surrounding frame. Increase the vertical front-face height by50percent: final complete panel visible height must be1.30times the panel width, not squat horizontal and not tall upright door. It is a foreshortened door leaf with its OWN thin top plane. Do not add outer molding or lintel. Keep small brass handle and right hinges; handle round mounting base projects to a horizontally elongated ellipse. Preserve high-camera16bit pixel art and flat magenta background. Only one complete isolated panel. Do NOT stretch all details: re-render the new proportions naturally, keeping knob and hinges their original small physical size."
+  },
+  "door-front-v7": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790797439749-2yqyh2czc1t.webp"
+    ],
+    "prompt": "Make a precisely controlled correction to THIS newly generated mint panel sprite. Preserve its overall width,height,outline,panel inset,colors and all paint details. Change ONLY how the small brass hardware is projected: the lever circular mounting plate on the left MUST appear horizontally elongated, twice as wide as its vertical height, because a physically circular disk on this vertical door is foreshortened by the elevated camera. The upper surfaces of the handle and both hinges must be visible from above with the SAME camera. Do not make a vertically elongated plate. No new frame, no lintel, no surrounding wall or floor. Keep flat pure magenta background. Final leaf still the same compact1.4height/width ratio. High quality16bit pixels. This is a small technical projection fix, not a new door design."
+  },
+  "mara-left-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795606716-2m2sx0xys0l.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face LEFT profile, nose pointing screen left, BOTH feet resting on ground, hands relaxed at sides. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "mara-up-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795606716-2m2sx0xys0l.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face directly UP, back of head and back of clothing visible, no face visible, both feet resting on ground. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "mara-left-a": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795606716-2m2sx0xys0l.webp"
+    ],
+    "prompt": "ONE new full-body animation frame of the exact reference NPC, walking left in a natural modest stride: anatomical left foot leads, right foot trails, right arm leads, left arm trails. LEFT profile nose points screen left, parallel orthographic50degree elevated game camera. Pelvis center stable, both legs visible, shoes grounded, realistic small stride, no leap or huge lunge. Same compact proportions and clothing, same pixel-art style and head size. Complete single figure on uniform pure magenta background, no floor or text."
+  },
+  "mara-left-b": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795606716-2m2sx0xys0l.webp"
+    ],
+    "prompt": "ONE new full-body animation frame of the exact reference NPC, walking left in the OPPOSITE modest stride: anatomical right foot leads, left foot trails, left arm leads, right arm trails. LEFT profile nose points screen left, parallel orthographic50degree elevated game camera. Pelvis center stable, both legs visible, shoes grounded, realistic small stride, no leap or huge lunge. Same compact proportions and clothing, same pixel-art style and head size. Complete single figure on uniform pure magenta background, no floor or text."
+  },
+  "theo-left-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795635877-04npy6vds4ic.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face LEFT profile, nose pointing screen left, BOTH feet resting on ground, hands relaxed at sides. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "theo-up-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795635877-04npy6vds4ic.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face directly UP, back of head and back of clothing visible, no face visible, both feet resting on ground. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "idris-left-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face LEFT profile, nose pointing screen left, BOTH feet resting on ground, hands relaxed at sides. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "idris-up-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face directly UP, back of head and back of clothing visible, no face visible, both feet resting on ground. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "idris-left-a": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+    ],
+    "prompt": "ONE new full-body animation frame of the exact reference NPC, walking left in a natural modest stride: anatomical left foot leads, right foot trails, right arm leads, left arm trails. LEFT profile nose points screen left, parallel orthographic50degree elevated game camera. Pelvis center stable, both legs visible, shoes grounded, realistic small stride, no leap or huge lunge. Same compact proportions and clothing, same pixel-art style and head size. Complete single figure on uniform pure magenta background, no floor or text."
+  },
+  "idris-left-b": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+    ],
+    "prompt": "ONE new full-body animation frame of the exact reference NPC, walking left in the OPPOSITE modest stride: anatomical right foot leads, left foot trails, left arm leads, right arm trails. LEFT profile nose points screen left, parallel orthographic50degree elevated game camera. Pelvis center stable, both legs visible, shoes grounded, realistic small stride, no leap or huge lunge. Same compact proportions and clothing, same pixel-art style and head size. Complete single figure on uniform pure magenta background, no floor or text."
+  },
+  "june-left-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796708732-n6dqouwrker.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face LEFT profile, nose pointing screen left, BOTH feet resting on ground, hands relaxed at sides. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "june-up-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796708732-n6dqouwrker.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face directly UP, back of head and back of clothing visible, no face visible, both feet resting on ground. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "ruth-left-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796709967-io71pigsmyd.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face LEFT profile, nose pointing screen left, BOTH feet resting on ground, hands relaxed at sides. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "ruth-up-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796709967-io71pigsmyd.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face directly UP, back of head and back of clothing visible, no face visible, both feet resting on ground. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "luis-left-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796746063-bi4bya1m3g5.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face LEFT profile, nose pointing screen left, BOTH feet resting on ground, hands relaxed at sides. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "luis-up-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796746063-bi4bya1m3g5.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face directly UP, back of head and back of clothing visible, no face visible, both feet resting on ground. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "nell-left-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796747274-sdkbgvlry5c.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face LEFT profile, nose pointing screen left, BOTH feet resting on ground, hands relaxed at sides. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "nell-up-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796747274-sdkbgvlry5c.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face directly UP, back of head and back of clothing visible, no face visible, both feet resting on ground. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "elena-left-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796781100-bdg0w127wj8.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face LEFT profile, nose pointing screen left, BOTH feet resting on ground, hands relaxed at sides. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "elena-up-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796781100-bdg0w127wj8.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face directly UP, back of head and back of clothing visible, no face visible, both feet resting on ground. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "arthur-left-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796783179-w7x9xfreet.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face LEFT profile, nose pointing screen left, BOTH feet resting on ground, hands relaxed at sides. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "arthur-up-stand": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796783179-w7x9xfreet.webp"
+    ],
+    "prompt": "Generate ONE full-body direction frame of the EXACT SAME NPC in the reference: same face identity, hairstyle, clothing, body mass, short compact adult sprite proportions, small pixel clusters, total height and elevated50degree orthographic game camera. Only rotate the whole person to face directly UP, back of head and back of clothing visible, no face visible, both feet resting on ground. Preserve age and head/body proportion. Do not stretch taller or make a portrait. One complete figure on flat pure magenta #ff00ff with no floor, cast shadow, text or extra views."
+  },
+  "hero-combat-guard": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795187973-rd872mvcwll.webp"
+    ],
+    "prompt": "One full-body practice animation frame of the exact reference adult, LEFT profile facing left, relaxed boxing practice guard, elbows bent, hands close to chest, feet apart in a stable side-on stance. Keep exact identity, hair, costume, short compact body proportions, pixel clusters and elevated50degree orthographic camera. Friendly no-contact movement practice; no weapons, no blood, no effects. Hands bare. Entire single figure on pure magenta #ff00ff background, no floor, no shadow, no text, no extra views."
+  },
+  "hero-combat-punch": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795187973-rd872mvcwll.webp"
+    ],
+    "prompt": "One full-body practice animation frame of the exact reference adult, LEFT profile facing left, a controlled straight jab toward screen LEFT, one arm extended horizontally, other hand guards the chest, body leans only slightly, feet remain planted, no leap. Keep exact identity, hair, costume, short compact body proportions, pixel clusters and elevated50degree orthographic camera. Friendly no-contact movement practice; no weapons, no blood, no effects. Hands bare. Entire single figure on pure magenta #ff00ff background, no floor, no shadow, no text, no extra views."
+  },
+  "idris-combat-guard": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+    ],
+    "prompt": "One full-body practice animation frame of the exact reference adult, LEFT profile facing left, relaxed boxing practice guard, elbows bent, hands close to chest, feet apart in a stable side-on stance. Keep exact identity, hair, costume, short compact body proportions, pixel clusters and elevated50degree orthographic camera. Friendly no-contact movement practice; no weapons, no blood, no effects. Hands bare. Entire single figure on pure magenta #ff00ff background, no floor, no shadow, no text, no extra views."
+  },
+  "idris-combat-punch": {
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+    ],
+    "prompt": "One full-body practice animation frame of the exact reference adult, LEFT profile facing left, a controlled straight jab toward screen LEFT, one arm extended horizontally, other hand guards the chest, body leans only slightly, feet remain planted, no leap. Keep exact identity, hair, costume, short compact body proportions, pixel clusters and elevated50degree orthographic camera. Friendly no-contact movement practice; no weapons, no blood, no effects. Hands bare. Entire single figure on pure magenta #ff00ff background, no floor, no shadow, no text, no extra views."
+  },
+  "house-workshop": {
+    "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. Small single-story coastal bicycle repair workshop, salt-white clapboard, blue low gabled roof, wide open-looking but dark front bay, small bicycle wheel sign, tool shelves visible in bay, weathered useful details. Building facade front-facing centered.",
+    "refs": []
+  },
+  "house-gym": {
+    "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. Small one-story red brick harbor boxing clubhouse, dark green low roof, central door with glass upper panel, two symmetrical windows, hanging pair of boxing gloves on sign, modest community club architecture.",
+    "refs": []
+  },
+  "market-stall": {
+    "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. One front-facing outdoor market stall, cream and muted red striped fabric awning on four timber posts, wooden counter with neat crates of oranges and tomatoes resting naturally on top. Simple straight rectangle roof, horizontal front bar.",
+    "refs": []
+  },
+  "lighthouse-building": {
+    "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. Compact coastal white lighthouse tower with red lantern roof, small front door at ground level, narrow windows, attached one-story keeper cottage. Straight architectural elevation, visible top elliptical rim under orthographic camera, not isometric.",
+    "refs": []
+  },
+  "weather-building": {
+    "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. Small weather-beaten green timber coast weather station with slate low roof, two windows, central door, small wind vane on roof, modest ordinary coastal outbuilding.",
+    "refs": []
+  },
+  "camp-tent": {
+    "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. One small canvas camping tent seen facing its triangular entrance, moss green canvas, rolled open entrance, thin straight poles and visible tent floor inside. Elevated front orthographic, depth edges vertical, no diagonal yaw.",
+    "refs": []
+  },
+  "coastal-rocks": {
+    "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. Compact cluster of three rounded coastal granite rocks of different sizes, salt pale grey and sandy ochre, natural surface facets, no exaggerated sharp triangular mountain shapes.",
+    "refs": []
+  },
+  "harbor-crates": {
+    "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. One stack of two small weathered timber fish crates with coiled rope and one life ring leaning on the front. Compact useful coastal prop, horizontal crate edges and rectangular equal front/back tops.",
+    "refs": []
+  },
+  "wooden-chair": {
+    "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. One simple wooden dining chair facing down towards viewer, sea green painted seat and backrest, straight slim legs, visible rectangular seat top. No oblique yaw. Low back, adult normal proportions.",
+    "refs": []
+  },
+  "mara-left-b-v2": {
+    "prompt": "Edit this exact newly generated game character. Preserve identity, outfit, pixel art, orthographic camera, left-facing head and torso, scale. Produce the OPPOSITE walk phase. The arm on the viewer-facing visible side now swings FORWARD toward screen LEFT, while that same side leg steps BACKWARD toward screen RIGHT. The hidden far-side leg steps FORWARD toward screen LEFT. Hands must visibly exchange front/back positions compared with reference. Head and torso stay at the same place, knees natural, feet flat/toe-off, no crossed legs. Single full body facing screen LEFT on uniform pure magenta #ff00ff, no ground, shadow or text.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790797983003-9aef3mvc7z4.webp"
+    ]
+  },
+  "idris-left-b-v2": {
+    "prompt": "Edit this exact newly generated game character. Preserve identity, outfit, pixel art, orthographic camera, left-facing head and torso, scale. Produce the OPPOSITE walk phase. The arm on the viewer-facing visible side now swings FORWARD toward screen LEFT, while that same side leg steps BACKWARD toward screen RIGHT. The hidden far-side leg steps FORWARD toward screen LEFT. Hands must visibly exchange front/back positions compared with reference. Head and torso stay at the same place, knees natural, feet flat/toe-off, no crossed legs. Single full body facing screen LEFT on uniform pure magenta #ff00ff, no ground, shadow or text.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790798085403-538ks1x86zv.webp"
+    ]
+  },
+  "mara-left-b-v3": {
+    "prompt": "Generate the reverse walking phase of this LEFT-facing character. Keep exactly the same face, hair, clothing, camera and pixel art. CRITICAL visible silhouette: the big visible foreground arm hangs diagonally BACKWARD to SCREEN RIGHT, with its HAND FAR TO THE RIGHT of the torso, behind the hip. That foreground arm must NOT point left, NOT bend in front of the chest. The far arm is mostly hidden and swings forward toward SCREEN LEFT. The foreground trouser leg trails backwards to SCREEN RIGHT, bent knee and raised heel. The far trouser leg is straight forward towards SCREEN LEFT with its heel landing. Keep a relaxed ordinary walk, not a run. Same head direction LEFT and elevated orthographic camera. Entire single figure centered on solid magenta #ff00ff. No ground no cast shadow. Do not copy the reference pose: exchange which arm and which leg is foreground.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790797983003-9aef3mvc7z4.webp"
+    ]
+  },
+  "idris-left-b-v3": {
+    "prompt": "Generate the reverse walking phase of this LEFT-facing character. Keep exactly the same face, hair, clothing, camera and pixel art. CRITICAL visible silhouette: the big visible foreground arm hangs diagonally BACKWARD to SCREEN RIGHT, with its HAND FAR TO THE RIGHT of the torso, behind the hip. That foreground arm must NOT point left, NOT bend in front of the chest. The far arm is mostly hidden and swings forward toward SCREEN LEFT. The foreground trouser leg trails backwards to SCREEN RIGHT, bent knee and raised heel. The far trouser leg is straight forward towards SCREEN LEFT with its heel landing. Keep a relaxed ordinary walk, not a run. Same head direction LEFT and elevated orthographic camera. Entire single figure centered on solid magenta #ff00ff. No ground no cast shadow. Do not copy the reference pose: exchange which arm and which leg is foreground.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790798085403-538ks1x86zv.webp"
+    ]
+  },
+  "mara-left-a-v2": {
+    "prompt": "Edit this exact LEFT-facing game character into the opposite walking phase. Preserve all appearance and elevated orthographic pixel art. Swap the LEGS: The near leg facing the viewer now steps FORWARD TO SCREEN LEFT, heel on ground; the back leg is behind the body TO SCREEN RIGHT with bent knee and raised heel. The nearer arm swings BACK TO SCREEN RIGHT in coordination with its forward leg, far arm forward left. Separate knees and shoes clearly. Do not preserve the reference legs. Keep same size, hair and head facing left, no head tilt, no torso lean. Full figure uniform pure magenta background no ground or shadow.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790799386379-dqjnd9c8fr.webp"
+    ]
+  },
+  "idris-left-a-v2": {
+    "prompt": "Edit this exact LEFT-facing game character into the opposite walking phase. Preserve all appearance and elevated orthographic pixel art. Swap the LEGS: The near leg facing the viewer now steps FORWARD TO SCREEN LEFT, heel on ground; the back leg is behind the body TO SCREEN RIGHT with bent knee and raised heel. The nearer arm swings BACK TO SCREEN RIGHT in coordination with its forward leg, far arm forward left. Separate knees and shoes clearly. Do not preserve the reference legs. Keep same size, hair and head facing left, no head tilt, no torso lean. Full figure uniform pure magenta background no ground or shadow.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790799385330-pfs4fsx9nee.webp"
+    ]
+  },
+  "hero-combat-down-guard": {
+    "prompt": "Create the same exact character in a friendly boxing practice pose. Preserve compact adult body proportions, face, hair, clothes and elevated 50-degree orthographic pixel-art game camera. Face screen DOWN show face and front of torso. Arms bent up in relaxed boxing guard, feet apart, knees gently bent. Single complete full-body figure on uniform pure magenta #ff00ff background, no shadows no scene no text. Match all character identity. No boxing gloves, no weapon.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ]
+  },
+  "hero-combat-down-punch": {
+    "prompt": "Create the same exact character in a friendly boxing practice pose. Preserve compact adult body proportions, face, hair, clothes and elevated 50-degree orthographic pixel-art game camera. Face screen DOWN show face and front of torso. One arm extended punching toward screen DOWN, the other hand guards chin, shoulders turn slightly. Readable foreshortening under elevated orthographic view, NO perspective vanishing point. Feet apart with one heel lifted. Single complete full-body figure on uniform pure magenta #ff00ff background, no shadows no scene no text. Match all character identity. No boxing gloves, no weapon.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ]
+  },
+  "hero-combat-up-guard": {
+    "prompt": "Create the same exact character in a friendly boxing practice pose. Preserve compact adult body proportions, face, hair, clothes and elevated 50-degree orthographic pixel-art game camera. Face screen UP show back of head and back of torso, NO face. Arms bent up in relaxed boxing guard, feet apart, knees gently bent. Single complete full-body figure on uniform pure magenta #ff00ff background, no shadows no scene no text. Match all character identity. No boxing gloves, no weapon.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ]
+  },
+  "hero-combat-up-punch": {
+    "prompt": "Create the same exact character in a friendly boxing practice pose. Preserve compact adult body proportions, face, hair, clothes and elevated 50-degree orthographic pixel-art game camera. Face screen UP show back of head and back of torso, NO face. One arm extended punching toward screen UP, the other hand guards chin, shoulders turn slightly. Readable foreshortening under elevated orthographic view, NO perspective vanishing point. Feet apart with one heel lifted. Single complete full-body figure on uniform pure magenta #ff00ff background, no shadows no scene no text. Match all character identity. No boxing gloves, no weapon.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+    ]
+  },
+  "idris-combat-down-guard": {
+    "prompt": "Create the same exact character in a friendly boxing practice pose. Preserve compact adult body proportions, face, hair, clothes and elevated 50-degree orthographic pixel-art game camera. Face screen DOWN show face and front of torso. Arms bent up in relaxed boxing guard, feet apart, knees gently bent. Single complete full-body figure on uniform pure magenta #ff00ff background, no shadows no scene no text. Match all character identity. No boxing gloves, no weapon.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+    ]
+  },
+  "idris-combat-down-punch": {
+    "prompt": "Create the same exact character in a friendly boxing practice pose. Preserve compact adult body proportions, face, hair, clothes and elevated 50-degree orthographic pixel-art game camera. Face screen DOWN show face and front of torso. One arm extended punching toward screen DOWN, the other hand guards chin, shoulders turn slightly. Readable foreshortening under elevated orthographic view, NO perspective vanishing point. Feet apart with one heel lifted. Single complete full-body figure on uniform pure magenta #ff00ff background, no shadows no scene no text. Match all character identity. No boxing gloves, no weapon.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+    ]
+  },
+  "idris-combat-up-guard": {
+    "prompt": "Create the same exact character in a friendly boxing practice pose. Preserve compact adult body proportions, face, hair, clothes and elevated 50-degree orthographic pixel-art game camera. Face screen UP show back of head and back of torso, NO face. Arms bent up in relaxed boxing guard, feet apart, knees gently bent. Single complete full-body figure on uniform pure magenta #ff00ff background, no shadows no scene no text. Match all character identity. No boxing gloves, no weapon.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+    ]
+  },
+  "idris-combat-up-punch": {
+    "prompt": "Create the same exact character in a friendly boxing practice pose. Preserve compact adult body proportions, face, hair, clothes and elevated 50-degree orthographic pixel-art game camera. Face screen UP show back of head and back of torso, NO face. One arm extended punching toward screen UP, the other hand guards chin, shoulders turn slightly. Readable foreshortening under elevated orthographic view, NO perspective vanishing point. Feet apart with one heel lifted. Single complete full-body figure on uniform pure magenta #ff00ff background, no shadows no scene no text. Match all character identity. No boxing gloves, no weapon.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+    ]
+  },
+  "idris-left-a-v3": {
+    "prompt": "Change ONLY the walk phase of this left-facing pixel-art man. Same head, hair, beard, maroon shirt, navy tracksuit trousers with white outer-leg stripes, grey shoes. The camera-facing leg with the WHITE OUTER STRIPE must be the FORWARD LEG on SCREEN LEFT: draw the WHITE STRIPE visibly running down the diagonal leg from hip down-left to the LEFTMOST shoe. The leg trailing to SCREEN RIGHT must be the FAR LEG with NO white outer stripe visible. This is the opposite leg contact from the reference. Near visible arm swings back toward SCREEN RIGHT, hand behind hip. Far arm swings forward toward SCREEN LEFT. Ordinary relaxed walking, stable upright torso, full body facing left, exact same elevated orthographic camera and pixel style. Pure magenta #ff00ff background. No scene, text or shadow.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790799385330-pfs4fsx9nee.webp"
+    ]
+  },
+  "hero-combat-up-punch-v2": {
+    "prompt": "Edit this exact back-facing boxing guard sprite into a straight jab AWAY FROM CAMERA toward screen up. The fist moves horizontally forward away from the body in world space, NOT raised toward the sky. Because viewed from elevated orthographic camera behind, the arm is foreshortened: fist is visible just above the shoulder line, but stays BELOW THE TOP OF THE HEAD. Absolutely no arm or fist above the top of the hair silhouette. The other hand guards chin and is mostly obscured by head. Keep same head position, outfit, shoes and body size; slight shoulder turn only. Entire character seen from back, same pixel art, solid magenta background, no scene or shadow.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790799671694-cf5gc1a8gau.webp"
+    ]
+  },
+  "idris-combat-up-punch-v2": {
+    "prompt": "Edit this exact back-facing boxing guard sprite into a straight jab AWAY FROM CAMERA toward screen up. The fist moves horizontally forward away from the body in world space, NOT raised toward the sky. Because viewed from elevated orthographic camera behind, the arm is foreshortened: fist is visible just above the shoulder line, but stays BELOW THE TOP OF THE HEAD. Absolutely no arm or fist above the top of the hair silhouette. The other hand guards chin and is mostly obscured by head. Keep same head position, outfit, shoes and body size; slight shoulder turn only. Entire character seen from back, same pixel art, solid magenta background, no scene or shadow.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790799735188-ne7j3sy4w9l.webp"
+    ]
+  },
+  "idris-left-a-v4": {
+    "prompt": "Edit only the ARM POSITIONS in this exact sprite; keep the existing legs, white stripe on SCREEN-LEFT forward leg, both shoes, head, torso, proportions and placement completely unchanged. He faces screen left. Replace the large foreground arm now bending in front of his chest: it must hang from the visible right-side shoulder diagonally down and BACK toward SCREEN RIGHT, with its open hand BEHIND the hip on the right. The elbow should be behind the torso, not in front of the chest. The far arm is mostly hidden by torso but its smaller hand peeks out on SCREEN LEFT in front of body. This creates natural opposite arm/leg coordination: NEAR LEG forward left, NEAR ARM back right. Keep feet exactly as reference. Same pixel art, full body pure magenta background no shadow.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790799960857-5v7392d6gat.webp"
+    ]
+  },
+  "repair-closeup": {
+    "prompt": "Polished 16-bit pixel-art close-up on a weathered mint-green outdoor lantern resting on a warm oak cafe workbench. Its small rear service cover is open, showing three simple round brass wire connectors, loose red, blue and amber wires, screwdriver and tiny spare screws neatly resting on the bench. Warm quiet summer daylight. Detailed coherent pixel clusters, adult cozy modern seaside game aesthetic. Top-down close-up, functional everyday hardware, no futuristic machinery. No readable text, digits, hands, people or UI. Complete inviting square composition, edge-to-edge, 1024x1024.",
+    "refs": []
+  },
+  "trail-map-closeup": {
+    "prompt": "A square old illustrated trail map on cream paper in refined 16-bit pixel art. Top-down flat printed diagram. Show a pine-covered hill at upper LEFT, a winding walking trail curving from upper LEFT through upper RIGHT, over a small wooden footbridge in lower LEFT, then ending at a tiny white lighthouse and sandy bay at lower RIGHT. The trail must cross all four equal quadrants and visibly connect exactly over both horizontal and vertical center seams. Sparse small contour lines, pines, grassy areas, blue coastal water along right and bottom edges. No printed names, no letters, no numbers, no compass, no furniture or hands. Flat edge-to-edge artwork, no perspective, no frame. Useful recognizable pieces for a four-piece jigsaw puzzle.",
+    "refs": []
+  },
+  "bridge-broken": {
+    "prompt": "Edit this exact elevated orthographic pixel art footbridge into its damaged BEFORE-repair state. Keep all geometry, size, rails, anchors, palette, camera and pure magenta background. Remove TWO adjacent planks from the central span, revealing a clearly open gap. Underlying supporting beams remain intact. No extra floor or water. No perspective change.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790796952837-t12cldkssx9.webp"
+    ]
+  },
+  "market-stall-closed": {
+    "prompt": "Edit this exact orthographic pixel art market stall into its CLOSED preparation state. Keep all posts, size, awning, camera and structure at exactly same positions. Remove all fruit and produce. The counter is empty with two closed wooden boxes and folded tablecloth resting on it. No people no readable text. Exact same pure magenta background.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790799161377-kgsjcb90s9.webp"
+    ]
+  },
+  "repair-closeup-dark": {
+    "prompt": "Edit this exact lantern repair close-up. The lantern is BROKEN and UNLIT. Remove all yellow illumination, glow and bright filament from inside the glass. The bulb and inner metal remain dark grey, lit only by ordinary external daylight. Keep all other image content, open connector panel with three terminals, screwdriver, table and composition unchanged. No text or numbers.",
+    "refs": [
+      "https://images.aiwaves.tech/uploads/1790800307257-nob7r2e3t8d.webp"
+    ]
+  },
+  "bridge-photo": {
+    "prompt": "A worn old square photographic print rendered in polished 16-bit pixel art for a cozy modern seaside story game. Slightly faded warm monochrome photograph shows a small coastal wooden footbridge with two rails crossing a narrow stream, a clear public footpath curves from a pine hill on the LEFT down to the beach on the RIGHT. Modest landscape scale, empty of people. White aged photo border, a small crease in one corner, no writing or letters. Straight-on close-up of the photograph, fills image, no table or hands.",
+    "refs": []
+  },
+  "poster": "Polished 16-bit pixel art cover illustration for A Summer in Harbor. A warm modern North American coastal town, modest mint-painted cafe, honey-oak pier, deep blue sea, a distant white lighthouse, green hillside and walking paths. Foreground a full adult newcomer with short wavy dark brown hair, teal overshirt over ivory shirt, sand trousers, practical brown shoes, standing with a travel bag looking toward the bay. Friendly but sophisticated restrained colors, crisp clustered pixel edges, rich lived-in details, soft late afternoon sunshine. Clear focal hierarchy and strong silhouette. Illustration can use scenic perspective. No text, no logos, no border, no interface, no fantasy creatures. Square composition."
+}

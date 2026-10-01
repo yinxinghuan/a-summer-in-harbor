@@ -1,0 +1,14 @@
+{
+  "request_id": "fd0dc932-82a4-44a0-a6c1-edbef8f27c67",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Premium 16-bit pixel art for a cozy modern North American seaside exploration game. Carefully clustered pixels, restrained dark outlines, warm summer colors. Elevated ORTHOGRAPHIC camera pitched 50 degrees downward, zero camera yaw. All world X edges perfectly horizontal, all vertical walls vertical, parallel lines NEVER converge. Single isolated complete object on flat pure magenta #ff00ff, no ground, no cast shadow, no lettering, generous margins. One low rectangular timber flower box with small lavender and yellow daisies. Long edges perfectly horizontal and equal length, short depth edges vertical. Low facade only one third of total visible height, flowers form compact tufts. Entire isolated object, no garden.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

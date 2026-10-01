@@ -1,0 +1,14 @@
+{
+  "request_id": "3223379b-4b32-4589-aeed-0787f7f620ae",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Polished 16-bit pixel art with carefully clustered pixels, dark restrained outlines, coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera looking down 50 degrees, zero sideways yaw, no vanishing point. One full body ordinary adult newcomer age 28, slightly wavy dark brown short hair, sea-teal overshirt rolled sleeves over ivory T shirt, sand trousers, brown practical shoes, no carried bag, relaxed neutral standing facing screen DOWN. Friendly understated adult proportions: total body height 4 heads, not childlike. Both shoes visible and separated, arms at sides. Single complete figure on absolutely uniform pure magenta #ff00ff background, no shadow or ground. Strong readable silhouette, approximately 560 pixels tall centered on 1024 canvas. No lettering.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

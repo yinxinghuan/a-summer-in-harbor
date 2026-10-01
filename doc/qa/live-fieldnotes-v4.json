@@ -1,0 +1,240 @@
+{
+  "at": "2026-09-30T21:30:38.088Z",
+  "fixtureSource": true,
+  "liveModel": true,
+  "realRenderer": false,
+  "head": {
+    "id": "5f306572-03a3-4b8d-9cd8-6f9d16e13b98",
+    "version": 10,
+    "cursor": 10,
+    "mapVersion": 1,
+    "locale": "en",
+    "scene": "workshop",
+    "position": {
+      "x": 612,
+      "y": 257
+    },
+    "flags": [
+      "unpacked",
+      "bridge-seen"
+    ],
+    "known": [
+      "june"
+    ],
+    "visited": [
+      "station",
+      "workshop-annex-1",
+      "workshop",
+      "workshop-annex-2"
+    ],
+    "items": {
+      "toolkit": 1
+    },
+    "energy": 100,
+    "cash": 25,
+    "standing": 0,
+    "relations": {},
+    "history": [
+      {
+        "id": "qa-known-bridge",
+        "kind": "action",
+        "text": [
+          "两块桥板断了，下面的支撑还很牢。可以修，也可以找别的路。",
+          "Two boards have split. The supports below are sound. You could repair it—or find another route."
+        ]
+      },
+      {
+        "id": "qa-known-tools",
+        "kind": "talk",
+        "person": "june",
+        "text": [
+          "琼把工具借给你，请你用完送回来。",
+          "June lends you a toolkit and asks you to bring it back when you are done."
+        ]
+      },
+      {
+        "id": "harbor-live-notes-1-v4",
+        "kind": "action",
+        "text": [
+          "琼给你指了指工作台后的通道。可以进去看看，也可以稍后再来。",
+          "June points out a passage behind the workbench. You can take a look now or come back later."
+        ]
+      },
+      {
+        "id": "02b418fe-4dee-4844-83ea-7466063de68d",
+        "kind": "action",
+        "text": [
+          "你来到海边补修店后小储藏间。",
+          "You arrive at Small Storage Behind Seaside Repair Shop."
+        ]
+      },
+      {
+        "id": "8b073c6a-915f-4b3d-b54f-607c2e5c0c2d",
+        "kind": "action",
+        "text": [
+          "木样本末端有明显裂纹和膨胀，表明木头因为受潮而变形破损。",
+          "The wood sample’s end grain shows clear cracks and swelling, indicating damage caused by moisture."
+        ]
+      },
+      {
+        "id": "3b8af885-c107-4366-8406-464c2f339a25",
+        "kind": "action",
+        "text": [
+          "墙上的潮汐刻度和地面的潮湿痕迹说明潮水渗入了木样本末端，导致裂纹和膨胀。",
+          "Tide marks on the wall and damp floor stains suggest moisture reached the wood’s end grain, causing cracks and swelling."
+        ]
+      },
+      {
+        "id": "91bf8d50-8826-422e-9d05-eef83343777c",
+        "kind": "action",
+        "text": [
+          "你来到琼的修理铺。",
+          "You arrive at June’s Workshop."
+        ]
+      },
+      {
+        "id": "harbor-live-notes-2-v4",
+        "kind": "action",
+        "text": [
+          "琼给你指了指工作台后的通道。可以进去看看，也可以稍后再来。",
+          "June points out a passage behind the workbench. You can take a look now or come back later."
+        ]
+      },
+      {
+        "id": "d5570426-bef8-4afc-a575-4fcd1b1b0f2f",
+        "kind": "action",
+        "text": [
+          "你来到工具干燥角落。",
+          "You arrive at Tool-Drying Alcove."
+        ]
+      },
+      {
+        "id": "2e12c8a1-fe19-413d-92cd-e606986c1fea",
+        "kind": "action",
+        "text": [
+          "锤子底部有锈迹，说明潮湿环境会损坏金属工具。",
+          "Rust spots on the hammer’s bottom show that a damp environment damages metal tools."
+        ]
+      },
+      {
+        "id": "7b821d02-da21-4185-ba8b-a9bdd827954b",
+        "kind": "action",
+        "text": [
+          "架子离地设计让空气流通，防止工具底部受潮生锈。锤子上的锈迹说明若不抬高，工具会快速损坏。",
+          "The raised rack allows air circulation to prevent moisture and rust on tool bottoms. Rust on the hammer confirms that without raising, tools quickly degrade."
+        ]
+      },
+      {
+        "id": "f73d2190-bdfb-4b4b-afac-a7e0b71ad22e",
+        "kind": "action",
+        "text": [
+          "你来到琼的修理铺。",
+          "You arrive at June’s Workshop."
+        ]
+      }
+    ],
+    "fieldNotes": {
+      "artifact": "b8080fd0ee34774d32e8afd74fe5194000cf8fc7a2fa90adfd1e7070056ff723",
+      "depth": 2,
+      "rooms": [
+        {
+          "id": "workshop-annex-1",
+          "title": [
+            "海边补修店后小储藏间",
+            "Small Storage Behind Seaside Repair Shop"
+          ],
+          "detail": [
+            "这是一个位于海边修理铺后方的小空间，墙边堆放着一些带裂痕的木样本。地面有潮湿的痕迹，墙上的潮汐刻度显示这里经常受潮。",
+            "A small space behind the seaside repair shop, with cracked wood samples stacked by the wall. Damp marks on the floor and tide marks on the walls show this area often gets moisture."
+          ],
+          "observations": [
+            {
+              "id": "slot-b52e86329453-inspect-a",
+              "label": [
+                "观察裂纹木样本",
+                "Examine Cracked Wood Sample"
+              ],
+              "text": [
+                "木样本末端有明显裂纹和膨胀，表明木头因为受潮而变形破损。",
+                "The wood sample’s end grain shows clear cracks and swelling, indicating damage caused by moisture."
+              ],
+              "read": true
+            },
+            {
+              "id": "slot-b52e86329453-inspect-b",
+              "label": [
+                "推断裂纹原因",
+                "Infer Cause of Cracks"
+              ],
+              "text": [
+                "墙上的潮汐刻度和地面的潮湿痕迹说明潮水渗入了木样本末端，导致裂纹和膨胀。",
+                "Tide marks on the wall and damp floor stains suggest moisture reached the wood’s end grain, causing cracks and swelling."
+              ],
+              "read": true
+            }
+          ]
+        },
+        {
+          "id": "workshop-annex-2",
+          "title": [
+            "工具干燥角落",
+            "Tool-Drying Alcove"
+          ],
+          "detail": [
+            "角落里有一个架子，上面放着各种工具。架子底部一把铁锤上有锈点，显然之前没完全干燥。架子设计成抬高离地，留出空气流通的间隙。",
+            "A shelf in the corner holds assorted tools. A metal hammer low on the rack shows rust spots, clearly from incomplete drying. The shelf is raised off the ground, leaving air gaps for ventilation."
+          ],
+          "observations": [
+            {
+              "id": "slot-02a6713a643c-inspect-a",
+              "label": [
+                "观察锤子上的锈迹",
+                "Observe Rust Spots on Hammer"
+              ],
+              "text": [
+                "锤子底部有锈迹，说明潮湿环境会损坏金属工具。",
+                "Rust spots on the hammer’s bottom show that a damp environment damages metal tools."
+              ],
+              "read": true
+            },
+            {
+              "id": "slot-02a6713a643c-inspect-b",
+              "label": [
+                "推断工具架设计原因",
+                "Infer Reason for Raised Tool Rack"
+              ],
+              "text": [
+                "架子离地设计让空气流通，防止工具底部受潮生锈。锤子上的锈迹说明若不抬高，工具会快速损坏。",
+                "The raised rack allows air circulation to prevent moisture and rust on tool bottoms. Rust on the hammer confirms that without raising, tools quickly degrade."
+              ],
+              "read": true
+            }
+          ]
+        }
+      ],
+      "state": {
+        "location": "workshop",
+        "stats": {
+          "energy": 100,
+          "cash": 25,
+          "standing": 0
+        },
+        "facts": {
+          "source-known": true,
+          "notebook-complete": false,
+          "slot-b52e86329453-read-a": true,
+          "slot-b52e86329453-read-b": true,
+          "sys-dyn-done-5c8ad4ffaadb1448": true,
+          "sys-dyn-done-5d684acc6ce6b8d6": true,
+          "slot-02a6713a643c-read-a": true,
+          "slot-02a6713a643c-read-b": true,
+          "sys-dyn-done-b76a00e1e7164a35": true,
+          "sys-dyn-done-becdb91fb4261c8b": true
+        },
+        "inventory": [],
+        "characters": [],
+        "danger_phase": "calm"
+      }
+    }
+  }
+}

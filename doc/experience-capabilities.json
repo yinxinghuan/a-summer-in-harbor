@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "releaseTarget": "playable",
+  "gameProfile": {
+    "sessionShape": "chapter",
+    "expectedMinutes": 60,
+    "crossSessionContinuity": true,
+    "crossDevice": false,
+    "directMovement": true,
+    "physicalNpc": true,
+    "conversation": true,
+    "inventory": true,
+    "compareBranches": false,
+    "sharedDevice": false,
+    "creativeSilence": false
+  },
+  "modes": {
+    "journeys": "single",
+    "persistence": "local-session",
+    "conversation": "hybrid"
+  },
+  "capabilities": {
+    "opening": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "exploration": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "loadingRecovery": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "audioLayers": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "persistence": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "closure": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "npcWorldLife": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "stagedConversation": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "conversationHistory": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "inventoryVisuals": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "distanceFootsteps": {
+      "state": "implemented",
+      "evidence": [
+        "doc/technical.md",
+        "doc/qa/acceptance.md"
+      ]
+    },
+    "generatedConversationBoundary": {
+      "state": "implemented",
+      "evidence": [
+        "src/story/state.ts",
+        "_qa/story.test.ts",
+        "src/main.tsx"
+      ]
+    },
+    "generatedConversationFallback": {
+      "state": "implemented",
+      "evidence": [
+        "src/story/state.ts",
+        "_qa/story.test.ts",
+        "src/main.tsx"
+      ]
+    }
+  },
+  "decisions": {
+    "journeys": "本轮验证一段持续的夏日旅程；不承诺分支多档和共享设备切换。",
+    "persistence": "本地 authoring Story Session 是唯一写入者；SQLite 持久化，浏览器仅保存匿名能力与待提交意图。未提供平台账号云恢复。",
+    "conversation": "固定话题负责可信结果，自由输入走真实平台模型并回到相同权威动作。"
+  },
+  "verificationLimits": [
+    "新玩家理解未验证",
+    "真实 iPhone 持续性能未验证",
+    "音乐听感未由人验证",
+    "完整时长仍是目标，不能把自动化最短通关当实玩时长"
+  ]
+}

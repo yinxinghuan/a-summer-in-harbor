@@ -1,0 +1,16 @@
+{
+  "request_id": "9fbf977a-69c6-4f30-9a04-c6324f58227d",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "edit",
+  "prompt": "Create ONE NEW NPC game sprite using only the reference pixel clustering, elevated camera angle, compact body proportions and world scale. Do NOT preserve the reference person identity or clothing. New character: older woman age 64 with weathered face, silver hair under faded sand canvas hat, sea blue rain vest over cream shirt, dark green trousers, boots. Exactly same visible total body height and same head-to-body ratio as reference; large readable hair crown with forward-down view. Front facing screen down, full body neutral standing, both shoes together but separated, arms resting at sides. Complete 16-bit pixel-art figure on uniform pure magenta #ff00ff background; no shadow, text, props or ground. No realistic tall portrait proportions. This is a different adult in the same game.",
+  "reference_urls": [
+    "https://images.aiwaves.tech/uploads/1790794813388-3ozzrudrhv8.webp"
+  ],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

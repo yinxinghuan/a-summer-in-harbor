@@ -1,0 +1,240 @@
+{
+  "at": "2026-09-30T21:14:30.923Z",
+  "fixtureSource": true,
+  "liveModel": true,
+  "realRenderer": false,
+  "head": {
+    "id": "be7f2434-624d-4843-a5ea-48b530359d13",
+    "version": 10,
+    "cursor": 10,
+    "mapVersion": 1,
+    "locale": "en",
+    "scene": "workshop",
+    "position": {
+      "x": 612,
+      "y": 257
+    },
+    "flags": [
+      "unpacked",
+      "bridge-seen"
+    ],
+    "known": [
+      "june"
+    ],
+    "visited": [
+      "station",
+      "workshop-annex-1",
+      "workshop",
+      "workshop-annex-2"
+    ],
+    "items": {
+      "toolkit": 1
+    },
+    "energy": 100,
+    "cash": 25,
+    "standing": 0,
+    "relations": {},
+    "history": [
+      {
+        "id": "qa-known-bridge",
+        "kind": "action",
+        "text": [
+          "两块桥板断了，下面的支撑还很牢。可以修，也可以找别的路。",
+          "Two boards have split. The supports below are sound. You could repair it—or find another route."
+        ]
+      },
+      {
+        "id": "qa-known-tools",
+        "kind": "talk",
+        "person": "june",
+        "text": [
+          "琼把工具借给你，请你用完送回来。",
+          "June lends you a toolkit and asks you to bring it back when you are done."
+        ]
+      },
+      {
+        "id": "harbor-live-notes-1-v3",
+        "kind": "action",
+        "text": [
+          "琼给你指了指工作台后的通道。可以进去看看，也可以稍后再来。",
+          "June points out a passage behind the workbench. You can take a look now or come back later."
+        ]
+      },
+      {
+        "id": "7beeaf7e-9b62-4b44-9f09-321ea57bb124",
+        "kind": "action",
+        "text": [
+          "你来到海边修理铺后小储藏间。",
+          "You arrive at Small Storage Behind Seaside Repair Shop."
+        ]
+      },
+      {
+        "id": "29339ff2-031e-4750-b9d9-b25260838bab",
+        "kind": "action",
+        "text": [
+          "你注意到木材样品边缘有细小裂纹，部分木片膨胀，表明木材受潮后变形。",
+          "You notice fine cracks at the edges of the wood samples and some swelling, indicating the wood has warped after absorbing moisture."
+        ]
+      },
+      {
+        "id": "1c816ce3-371f-409d-9815-7ba8e3dd3437",
+        "kind": "action",
+        "text": [
+          "你发现裂纹主要出现在暴露端面，推测是潮湿的海风和偶尔的潮水侵袭使木材端面吸水膨胀，导致损坏。",
+          "You find that cracks mainly appear on the exposed end grain, deducing that damp sea breeze and occasional tide moisture cause the wood to absorb water and swell, resulting in damage."
+        ]
+      },
+      {
+        "id": "78a36d9a-3e38-4c1d-b78d-aa6286446d99",
+        "kind": "action",
+        "text": [
+          "你来到六月修理铺。",
+          "You arrive at June’s Workshop."
+        ]
+      },
+      {
+        "id": "harbor-live-notes-2-v3",
+        "kind": "action",
+        "text": [
+          "琼给你指了指工作台后的通道。可以进去看看，也可以稍后再来。",
+          "June points out a passage behind the workbench. You can take a look now or come back later."
+        ]
+      },
+      {
+        "id": "40400acb-a185-4053-a2e9-f2c2623dc736",
+        "kind": "action",
+        "text": [
+          "你来到修理铺后工具干燥隔间。",
+          "You arrive at Tool-Drying Alcove Behind Workshop."
+        ]
+      },
+      {
+        "id": "895f4c3c-916a-4bd4-ab99-2cd71b191b57",
+        "kind": "action",
+        "text": [
+          "你发现靠近地面的铁锤柄上有明显的锈斑，推测是因为放置位置潮湿，未能及时通风所致。",
+          "You note clear rust spots on the hammer handle near the floor, likely caused by damp placement and insufficient ventilation."
+        ]
+      },
+      {
+        "id": "6acd3bf7-444e-4074-908e-ce6599bc9dcc",
+        "kind": "action",
+        "text": [
+          "六月解释她总把工具挂高且底部留空气间隙，避免潮湿海风使工具生锈，正是低处锤子锈斑的原因。",
+          "June explains she always hangs tools high with air gaps underneath to avoid rust from damp sea breeze, explaining the rust on the low hammer."
+        ]
+      },
+      {
+        "id": "58f9e4cd-31b4-4b2d-b3f9-609e0ce3ca9e",
+        "kind": "action",
+        "text": [
+          "你来到六月修理铺。",
+          "You arrive at June’s Workshop."
+        ]
+      }
+    ],
+    "fieldNotes": {
+      "artifact": "3392d0e60a00656f29bec7ee8787036463f65f8db3d64c08114f2c8d2769872d",
+      "depth": 2,
+      "rooms": [
+        {
+          "id": "workshop-annex-1",
+          "title": [
+            "海边修理铺后小储藏间",
+            "Small Storage Behind Seaside Repair Shop"
+          ],
+          "detail": [
+            "一个狭小的空间，位于琼的修理铺后面。墙角堆放着小块木材样品，部分开裂膨胀，显示出海风和潮湿的影响。地上有潮水留下的潮痕，提醒人们这里偶尔潮湿。",
+            "A narrow space behind June’s workshop. Small wood samples are stacked in a corner, some cracked or swollen, showing effects of sea wind and moisture. Tide marks on the ground remind that the area is occasionally damp."
+          ],
+          "observations": [
+            {
+              "id": "slot-c0c4efad40f8-inspect-a",
+              "label": [
+                "观察木材样品的裂纹",
+                "Observe Cracks in Wood Samples"
+              ],
+              "text": [
+                "你注意到木材样品边缘有细小裂纹，部分木片膨胀，表明木材受潮后变形。",
+                "You notice fine cracks at the edges of the wood samples and some swelling, indicating the wood has warped after absorbing moisture."
+              ],
+              "read": true
+            },
+            {
+              "id": "slot-c0c4efad40f8-inspect-b",
+              "label": [
+                "分析裂纹原因",
+                "Analyze Cause of Cracks"
+              ],
+              "text": [
+                "你发现裂纹主要出现在暴露端面，推测是潮湿的海风和偶尔的潮水侵袭使木材端面吸水膨胀，导致损坏。",
+                "You find that cracks mainly appear on the exposed end grain, deducing that damp sea breeze and occasional tide moisture cause the wood to absorb water and swell, resulting in damage."
+              ],
+              "read": true
+            }
+          ]
+        },
+        {
+          "id": "workshop-annex-2",
+          "title": [
+            "修理铺后工具干燥隔间",
+            "Tool-Drying Alcove Behind Workshop"
+          ],
+          "detail": [
+            "这里是修理铺后一个狭小的隔间，墙上挂着几把金属工具。靠近地面的一把锤子柄上有锈斑，显然受潮。高处的工具则悬挂在通风架上，底部留有空气间隙。",
+            "This small alcove behind the workshop holds several metal tools hanging on the wall. A hammer left low shows rust spots from dampness, while tools higher up are hung on ventilated racks with clear air gaps beneath."
+          ],
+          "observations": [
+            {
+              "id": "slot-ebb8bc67a2cd-inspect-a",
+              "label": [
+                "观察工具锈斑",
+                "Examine Rust Spots on Tools"
+              ],
+              "text": [
+                "你发现靠近地面的铁锤柄上有明显的锈斑，推测是因为放置位置潮湿，未能及时通风所致。",
+                "You note clear rust spots on the hammer handle near the floor, likely caused by damp placement and insufficient ventilation."
+              ],
+              "read": true
+            },
+            {
+              "id": "slot-ebb8bc67a2cd-inspect-b",
+              "label": [
+                "了解工具挂放习惯",
+                "Learn Tool Hanging Practices"
+              ],
+              "text": [
+                "六月解释她总把工具挂高且底部留空气间隙，避免潮湿海风使工具生锈，正是低处锤子锈斑的原因。",
+                "June explains she always hangs tools high with air gaps underneath to avoid rust from damp sea breeze, explaining the rust on the low hammer."
+              ],
+              "read": true
+            }
+          ]
+        }
+      ],
+      "state": {
+        "location": "workshop",
+        "stats": {
+          "energy": 100,
+          "cash": 25,
+          "standing": 0
+        },
+        "facts": {
+          "source-known": true,
+          "notebook-complete": false,
+          "slot-c0c4efad40f8-read-a": true,
+          "slot-c0c4efad40f8-read-b": true,
+          "sys-dyn-done-766c81f6d26284ba": true,
+          "sys-dyn-done-afa7e464a2f11401": true,
+          "slot-ebb8bc67a2cd-read-a": true,
+          "slot-ebb8bc67a2cd-read-b": true,
+          "sys-dyn-done-b0aaee4d56a08255": true,
+          "sys-dyn-done-bbee7a8b61faf4ec": true
+        },
+        "inventory": [],
+        "characters": [],
+        "danger_phase": "calm"
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "file": "town-a.mp3",
+    "originalSha256": "441ca84a12bf78b9696309d99f09974973258566f8d0923f5decb316f9c55b8f",
+    "masteredSha256": "168c1d31f01e128a11813508072cf080af3cfa76f42fd6991daf4382eacaeff1",
+    "gainDb": -1.0,
+    "fadeOut": 0.5,
+    "semanticListening": "not machine verified"
+  },
+  {
+    "file": "town-b.mp3",
+    "originalSha256": "228e0f64b4a513f9962461d58f5f80633c93c489e18b0c6dc3e0bda1c3a3deb5",
+    "masteredSha256": "22dd48447b9065d6937ae4191e73f709ee1042d29d6d92607915662cba894742",
+    "gainDb": -2.0,
+    "fadeOut": 0.5,
+    "semanticListening": "not machine verified"
+  },
+  {
+    "file": "coast.mp3",
+    "originalSha256": "6ae6aeb2c2d2fc46b18eb138ee1fd38b0fdb0a8a880265e26e0af9d12e4fea72",
+    "masteredSha256": "0a22c19ad4e7b7c672f3fc887c630df18a2df83fe1e4cfc7b51ba69067efdefa",
+    "gainDb": 0.1,
+    "fadeOut": 0.5,
+    "semanticListening": "not machine verified"
+  },
+  {
+    "file": "hit.mp3",
+    "originalSha256": "7059309c82decd95971637a2580bcbec6eb1c1f11ccd70cc1f139939079c2db3",
+    "masteredSha256": "a0f1f1cc1eff397102c05dc3576d391514699543db08b3f496fd366522801c4d",
+    "gainDb": -21.8,
+    "fadeOut": 0.04,
+    "semanticListening": "not machine verified"
+  },
+  {
+    "file": "hill.mp3",
+    "originalSha256": "f2169fa7dfb5961e86dd1e3ab9fe079adb55e9c4bdeee34b70c1df69a73cddbd",
+    "masteredSha256": "249c45b9ab4113a226d9f0951fef84f9dcd7364e9bcca7e4ce0eedf2703ccc9b",
+    "gainDb": -3.7,
+    "fadeOut": 0.5,
+    "semanticListening": "not machine verified"
+  },
+  {
+    "file": "door.mp3",
+    "originalSha256": "1d8faaa7339015e51e5e16e3dd0eaf43d46f8e07f17e8e8caa7133d0404b87a8",
+    "masteredSha256": "80e78510757c6e4cf1195951cec85efd3e64a5d327d2d3d89b8348f6807d7ad3",
+    "gainDb": -21.6,
+    "fadeOut": 0.04,
+    "semanticListening": "not machine verified"
+  },
+  {
+    "file": "step.mp3",
+    "originalSha256": "a346d545051faf7d8daffe66382b499bfc46057f8c57c843b57488f4988cfbb9",
+    "masteredSha256": "5dc78244fcd8375480426c9b7749fb8d30227cc9b35160a711ec28cbd80b58b1",
+    "gainDb": -27.7,
+    "fadeOut": 0.04,
+    "semanticListening": "not machine verified"
+  },
+  {
+    "file": "practice.mp3",
+    "originalSha256": "91c3049d082708bb2ade9e11e218ebbb7cd8f7c8af2bff5b361de6977ee12c6f",
+    "masteredSha256": "5481c5dfd6914bbfded6f3570255a43752ff0fe568e10429536a7c0176f3e6f7",
+    "gainDb": -6.3,
+    "fadeOut": 0.5,
+    "semanticListening": "not machine verified"
+  },
+  {
+    "file": "progress.mp3",
+    "originalSha256": "4392f4e9509eaf99498797ac3bd9f681de996513c07eee7be212670dbc83c63e",
+    "masteredSha256": "166b3165116d25e87c5ccf81a712214b828d8f6eea6dd7c1ac2a24a6a9a1db72",
+    "gainDb": 24.4,
+    "fadeOut": 0.04,
+    "semanticListening": "not machine verified"
+  }
+]

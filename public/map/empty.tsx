@@ -1,0 +1,1 @@
+<?xml version="1.0"?><tileset version="1.10" name="empty" tilewidth="16" tileheight="16" tilecount="1" columns="1"><image source="empty.png" width="16" height="16"/></tileset>

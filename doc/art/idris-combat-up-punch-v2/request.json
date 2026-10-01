@@ -1,0 +1,16 @@
+{
+  "request_id": "d0e4c4a8-6953-411f-ad7d-6a68d9582ff1",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "edit",
+  "prompt": "Edit this exact back-facing boxing guard sprite into a straight jab AWAY FROM CAMERA toward screen up. The fist moves horizontally forward away from the body in world space, NOT raised toward the sky. Because viewed from elevated orthographic camera behind, the arm is foreshortened: fist is visible just above the shoulder line, but stays BELOW THE TOP OF THE HEAD. Absolutely no arm or fist above the top of the hair silhouette. The other hand guards chin and is mostly obscured by head. Keep same head position, outfit, shoes and body size; slight shoulder turn only. Entire character seen from back, same pixel art, solid magenta background, no scene or shadow.",
+  "reference_urls": [
+    "https://images.aiwaves.tech/uploads/1790799735188-ne7j3sy4w9l.webp"
+  ],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

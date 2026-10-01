@@ -1,0 +1,240 @@
+{
+  "at": "2026-09-30T20:58:27.426Z",
+  "fixtureSource": true,
+  "liveModel": true,
+  "realRenderer": false,
+  "head": {
+    "id": "1c48062f-8b25-4334-8409-fa1d1f59896e",
+    "version": 10,
+    "cursor": 10,
+    "mapVersion": 1,
+    "locale": "en",
+    "scene": "workshop",
+    "position": {
+      "x": 612,
+      "y": 257
+    },
+    "flags": [
+      "unpacked",
+      "bridge-seen"
+    ],
+    "known": [
+      "june"
+    ],
+    "visited": [
+      "station",
+      "workshop-annex-1",
+      "workshop",
+      "workshop-annex-2"
+    ],
+    "items": {
+      "toolkit": 1
+    },
+    "energy": 100,
+    "cash": 25,
+    "standing": 0,
+    "relations": {},
+    "history": [
+      {
+        "id": "qa-known-bridge",
+        "kind": "action",
+        "text": [
+          "两块桥板断了，下面的支撑还很牢。可以修，也可以找别的路。",
+          "Two boards have split. The supports below are sound. You could repair it—or find another route."
+        ]
+      },
+      {
+        "id": "qa-known-tools",
+        "kind": "talk",
+        "person": "june",
+        "text": [
+          "琼把工具借给你，请你用完送回来。",
+          "June lends you a toolkit and asks you to bring it back when you are done."
+        ]
+      },
+      {
+        "id": "harbor-live-notes-1-v1",
+        "kind": "action",
+        "text": [
+          "琼给你指了指工作台后的通道。可以进去看看，也可以稍后再来。",
+          "June points out a passage behind the workbench. You can take a look now or come back later."
+        ]
+      },
+      {
+        "id": "6f27327a-3d71-44a7-8f69-ede23e8d692b",
+        "kind": "action",
+        "text": [
+          "你来到修理铺的小间 1。",
+          "You arrive at Workshop annex 1."
+        ]
+      },
+      {
+        "id": "f0bd2e8b-2dda-45d5-b43f-3c5bd6fc29bf",
+        "kind": "action",
+        "text": [
+          "木板虽有些旧，但结实且形状合适，足以修补断裂的桥板。",
+          "The planks are a bit worn but sturdy and suitably sized to fix the split boards."
+        ]
+      },
+      {
+        "id": "0d2096e6-4064-4a25-b631-fa4116ee28ca",
+        "kind": "action",
+        "text": [
+          "潮汐痕迹说明储藏间地面偶尔潮湿，工具应放置高处避免生锈。",
+          "Tide marks indicate the floor gets damp sometimes; tools should be stored off the ground to prevent rust."
+        ]
+      },
+      {
+        "id": "19d2a325-12f7-46c2-ae83-665e76dbfbcd",
+        "kind": "action",
+        "text": [
+          "你来到六月修理铺。",
+          "You arrive at June’s Workshop."
+        ]
+      },
+      {
+        "id": "harbor-live-notes-2-v1",
+        "kind": "action",
+        "text": [
+          "琼给你指了指工作台后的通道。可以进去看看，也可以稍后再来。",
+          "June points out a passage behind the workbench. You can take a look now or come back later."
+        ]
+      },
+      {
+        "id": "315074b1-1866-4df7-ab00-bebfcb811337",
+        "kind": "action",
+        "text": [
+          "你来到修理铺的小间 2。",
+          "You arrive at Workshop annex 2."
+        ]
+      },
+      {
+        "id": "2c45edca-db58-4b8d-b415-5ac49f4930cc",
+        "kind": "action",
+        "text": [
+          "工具架稳固地挂在墙上，且工具排列整齐，没有锈迹，说明有人定期维护。",
+          "The tool racks hang firmly on the wall, tools neatly arranged and rust-free, indicating regular upkeep."
+        ]
+      },
+      {
+        "id": "cee51e5b-67e7-4e13-a4bc-3d9c41e76d47",
+        "kind": "action",
+        "text": [
+          "备用木板虽有些老旧，但无明显裂纹且尺寸适宜，完全可以用来修补破损的桥板。",
+          "The spare planks are aged but free of cracks and suitably sized, perfectly usable for repairing the broken bridge boards."
+        ]
+      },
+      {
+        "id": "4860d7d0-a705-4115-bec5-c55ca170480d",
+        "kind": "action",
+        "text": [
+          "你来到六月修理铺。",
+          "You arrive at June’s Workshop."
+        ]
+      }
+    ],
+    "fieldNotes": {
+      "artifact": "8d9170442b12d88595b98475c218a732ae39944f1232271b9bb7a795c6ad87f9",
+      "depth": 2,
+      "rooms": [
+        {
+          "id": "workshop-annex-1",
+          "title": [
+            "修理铺后小储藏间",
+            "Back Storage Nook"
+          ],
+          "detail": [
+            "修理铺后面有一个狭小储藏间，堆放着几块备用木板和一些散落的工具。墙上还有潮湿留下的潮汐痕迹，显示这里靠近海边，经常受潮。",
+            "Behind the workshop is a small storage nook with spare wooden planks stacked and some scattered tools. Tide marks on the walls show the spot is close to the sea and often damp."
+          ],
+          "observations": [
+            {
+              "id": "slot-c05ce9d1773a-inspect-a",
+              "label": [
+                "检查备用木板",
+                "Inspect Spare Planks"
+              ],
+              "text": [
+                "木板虽有些旧，但结实且形状合适，足以修补断裂的桥板。",
+                "The planks are a bit worn but sturdy and suitably sized to fix the split boards."
+              ],
+              "read": true
+            },
+            {
+              "id": "slot-c05ce9d1773a-inspect-b",
+              "label": [
+                "留意潮汐痕迹",
+                "Note the Tide Marks"
+              ],
+              "text": [
+                "潮汐痕迹说明储藏间地面偶尔潮湿，工具应放置高处避免生锈。",
+                "Tide marks indicate the floor gets damp sometimes; tools should be stored off the ground to prevent rust."
+              ],
+              "read": true
+            }
+          ]
+        },
+        {
+          "id": "workshop-annex-2",
+          "title": [
+            "修理铺后隐蔽储藏室",
+            "Hidden Storage Room Behind Workshop"
+          ],
+          "detail": [
+            "这间小储藏室里堆放着几块形状合适但略显陈旧的木板，墙上挂着些悬空的工具架。潮湿的地面上依稀可见潮汐留下的痕迹，工具都被安置在离地较高的架子上以防生锈。",
+            "Inside this small storage room lie a few suitably sized but somewhat aged planks. Tools hang on wall racks elevated above the damp floor, where faint tide marks remain visible, showing care to avoid rust."
+          ],
+          "observations": [
+            {
+              "id": "slot-5c10cd138cdc-inspect-a",
+              "label": [
+                "检查架空工具架",
+                "Inspect Elevated Tool Racks"
+              ],
+              "text": [
+                "工具架稳固地挂在墙上，且工具排列整齐，没有锈迹，说明有人定期维护。",
+                "The tool racks hang firmly on the wall, tools neatly arranged and rust-free, indicating regular upkeep."
+              ],
+              "read": true
+            },
+            {
+              "id": "slot-5c10cd138cdc-inspect-b",
+              "label": [
+                "确认备用木板状态",
+                "Confirm Spare Planks’ Condition"
+              ],
+              "text": [
+                "备用木板虽有些老旧，但无明显裂纹且尺寸适宜，完全可以用来修补破损的桥板。",
+                "The spare planks are aged but free of cracks and suitably sized, perfectly usable for repairing the broken bridge boards."
+              ],
+              "read": true
+            }
+          ]
+        }
+      ],
+      "state": {
+        "location": "workshop",
+        "stats": {
+          "energy": 100,
+          "cash": 25,
+          "standing": 0
+        },
+        "facts": {
+          "source-known": true,
+          "notebook-complete": false,
+          "slot-c05ce9d1773a-read-a": true,
+          "slot-c05ce9d1773a-read-b": true,
+          "sys-dyn-done-a6959523e5f4634b": true,
+          "sys-dyn-done-41f8f5d969dbb807": true,
+          "slot-5c10cd138cdc-read-a": true,
+          "slot-5c10cd138cdc-read-b": true,
+          "sys-dyn-done-0921a63a73093e07": true,
+          "sys-dyn-done-0e1a49fd42f54e42": true
+        },
+        "inventory": [],
+        "characters": [],
+        "danger_phase": "calm"
+      }
+    }
+  }
+}

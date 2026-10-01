@@ -1,0 +1,11 @@
+{
+  "id": "a-summer-in-harbor",
+  "uuid": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "title": {
+    "en": "A Summer in Harbor",
+    "zh": "\u6d77\u6e7e\u65b0\u751f\u6d3b"
+  },
+  "audience": "international",
+  "setting": "fictional contemporary North American coastal town",
+  "locale": "system zh/en with explicit override"
+}

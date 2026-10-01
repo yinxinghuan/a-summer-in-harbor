@@ -1,0 +1,14 @@
+{
+  "request_id": "d52deb10-bae3-4e00-b46f-c388dcb67c16",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Polished 16-bit pixel art with carefully clustered pixels, dark restrained outlines, coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera looking down 50 degrees, zero sideways yaw, no vanishing point. Single horizontal segment of a salt-white painted timber interior wall, 6:1 width to visible height. Thin flat warm-grey top cap takes 12 percent of total visible height, vertical cream painted plank facade takes 80 percent, narrow dark wood skirting 8 percent. No door, no window, no corners, no pilaster, no furniture, no environment. Flat straight parallel horizontal edges. Uniform pure magenta #ff00ff background, segment centered with large margins. Side ends flush cut. Not a short garden fence. No shadow outside object.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

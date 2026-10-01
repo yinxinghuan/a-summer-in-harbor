@@ -1,0 +1,14 @@
+{
+  "request_id": "00b7251c-c0db-4d12-88a8-40085446ee17",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Restrained richly detailed 16-bit pixel art, chunky pixel clusters, dark outlines. Compact adult walking-map sprite: 3 heads tall with large crown visible from steep elevated 50 degree orthographic camera, facing screen bottom. Whole body, arms relaxed, both shoes side by side. Pure magenta #ff00ff background, no shadow or floor. No text. Man age48 with dark skin, close shaved hair, short salt pepper beard, broad shoulders, burgundy training shirt and navy track pants, grey trainers. Boxing coach, calm friendly serious expression.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

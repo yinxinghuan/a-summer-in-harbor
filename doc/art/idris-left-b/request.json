@@ -1,0 +1,16 @@
+{
+  "request_id": "0e5c32fc-e2cb-4954-bac0-158997708c59",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "edit",
+  "prompt": "ONE new full-body animation frame of the exact reference NPC, walking left in the OPPOSITE modest stride: anatomical right foot leads, left foot trails, left arm leads, right arm trails. LEFT profile nose points screen left, parallel orthographic50degree elevated game camera. Pelvis center stable, both legs visible, shoes grounded, realistic small stride, no leap or huge lunge. Same compact proportions and clothing, same pixel-art style and head size. Complete single figure on uniform pure magenta background, no floor or text.",
+  "reference_urls": [
+    "https://images.aiwaves.tech/uploads/1790795641840-02yxfmumnrg9.webp"
+  ],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

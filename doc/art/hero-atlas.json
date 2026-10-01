@@ -1,0 +1,106 @@
+{
+  "cell": 128,
+  "visibleHeight": 108,
+  "footY": 122,
+  "worldHeight": 56,
+  "status": "candidate; runtime walk review pending",
+  "frames": [
+    {
+      "source": "hero-down-a",
+      "row": 0,
+      "col": 0,
+      "mirror": false,
+      "width": 53,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-root-v2",
+      "row": 0,
+      "col": 1,
+      "mirror": false,
+      "width": 55,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-down-b",
+      "row": 0,
+      "col": 2,
+      "mirror": false,
+      "width": 53,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-left-a",
+      "row": 1,
+      "col": 0,
+      "mirror": false,
+      "width": 49,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-left-stand",
+      "row": 1,
+      "col": 1,
+      "mirror": false,
+      "width": 48,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-left-b",
+      "row": 1,
+      "col": 2,
+      "mirror": false,
+      "width": 52,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-left-a",
+      "row": 2,
+      "col": 0,
+      "mirror": true,
+      "width": 49,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-left-stand",
+      "row": 2,
+      "col": 1,
+      "mirror": true,
+      "width": 48,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-left-b",
+      "row": 2,
+      "col": 2,
+      "mirror": true,
+      "width": 52,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-up-a",
+      "row": 3,
+      "col": 0,
+      "mirror": false,
+      "width": 45,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-up-stand",
+      "row": 3,
+      "col": 1,
+      "mirror": false,
+      "width": 47,
+      "visibleHeight": 108
+    },
+    {
+      "source": "hero-up-b",
+      "row": 3,
+      "col": 2,
+      "mirror": false,
+      "width": 46,
+      "visibleHeight": 108
+    }
+  ],
+  "sha256": "e88b33780048b721bbd697d8b9eb3b885754e4078893315c615d9fc9ade3b337"
+}

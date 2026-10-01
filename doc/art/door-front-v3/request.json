@@ -1,0 +1,14 @@
+{
+  "request_id": "0ebb5c47-6dd3-412d-bdf1-7cbda449bf0b",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "A pixel-art thin rectangular mint green wooden board with brass handle at left and hinges at right. Orthographic elevated camera, absolutely RECTANGULAR silhouette. Image coordinates: front face top-left (272,235), top-right (752,235), bottom-right (752,815), bottom-left (272,815). Both vertical outside edges perfectly vertical; top and bottom same width. Thin own top face from y220 to235, same width. No other parts. No narrowing toward top or bottom, no trapezoid or perspective. The front face has two recessed panels and chipped paint. Small handle upper surface visible, mounting plate horizontal oval. Movable interior door panel, NO fixed frame/trim/wall/lintel/threshold. Polished restrained 16-bit pixel clusters, full object centered on pure magenta #ff00ff. No text or cast shadow.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

@@ -1,0 +1,16 @@
+{
+  "request_id": "28d58c6a-5138-47ed-8608-78e7676cd7a9",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "edit",
+  "prompt": "Keep EXACT same full character, compact proportions, pixel rendering, camera, clothing, face, hair and facing LEFT. Produce the OPPOSITE WALK CONTACT pose. Exchange the two legs positions and the swinging arms. Near leg now extends to screen RIGHT behind with heel lifted; FAR leg extends LEFT forward and plants its heel. Near arm swings forward to LEFT. Both legs/shoes visible, moderate walking stride. Do not merely reproduce reference pose. No new outfit or objects. Entire figure isolated on solid pure magenta #ff00ff background without floor or shadow.",
+  "reference_urls": [
+    "https://images.aiwaves.tech/uploads/1790795224424-42cklhx97qj.webp"
+  ],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

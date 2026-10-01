@@ -1,0 +1,16 @@
+{
+  "request_id": "fae1f370-b08e-4518-8818-db9ff1ca736e",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "edit",
+  "prompt": "Keep EXACT same full character, compact proportions, pixel rendering, camera, clothing, face, hair and facing UP. Produce the OPPOSITE WALK CONTACT pose. Exchange the two legs positions and the swinging arms. Back view only. Screen RIGHT shoe now higher forward; screen LEFT shoe lower behind showing lifted heel. Do not merely reproduce reference pose. No new outfit or objects. Entire figure isolated on solid pure magenta #ff00ff background without floor or shadow.",
+  "reference_urls": [
+    "https://images.aiwaves.tech/uploads/1790795190580-riho0kgs0se.webp"
+  ],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

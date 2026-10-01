@@ -1,0 +1,14 @@
+{
+  "request_id": "f4a51afa-ba6d-45ee-823b-80074024dc1f",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Polished 16-bit pixel-art close-up on a weathered mint-green outdoor lantern resting on a warm oak cafe workbench. Its small rear service cover is open, showing three simple round brass wire connectors, loose red, blue and amber wires, screwdriver and tiny spare screws neatly resting on the bench. Warm quiet summer daylight. Detailed coherent pixel clusters, adult cozy modern seaside game aesthetic. Top-down close-up, functional everyday hardware, no futuristic machinery. No readable text, digits, hands, people or UI. Complete inviting square composition, edge-to-edge, 1024x1024.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

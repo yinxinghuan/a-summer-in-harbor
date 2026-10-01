@@ -1,0 +1,16 @@
+{
+  "request_id": "748fc255-7539-41a0-87d9-fd5e88d966b3",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "edit",
+  "prompt": "Edit only the ARM POSITIONS in this exact sprite; keep the existing legs, white stripe on SCREEN-LEFT forward leg, both shoes, head, torso, proportions and placement completely unchanged. He faces screen left. Replace the large foreground arm now bending in front of his chest: it must hang from the visible right-side shoulder diagonally down and BACK toward SCREEN RIGHT, with its open hand BEHIND the hip on the right. The elbow should be behind the torso, not in front of the chest. The far arm is mostly hidden by torso but its smaller hand peeks out on SCREEN LEFT in front of body. This creates natural opposite arm/leg coordination: NEAR LEG forward left, NEAR ARM back right. Keep feet exactly as reference. Same pixel art, full body pure magenta background no shadow.",
+  "reference_urls": [
+    "https://images.aiwaves.tech/uploads/1790799960857-5v7392d6gat.webp"
+  ],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

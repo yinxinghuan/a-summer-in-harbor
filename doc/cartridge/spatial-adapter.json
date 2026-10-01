@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "required": true,
+  "authority": "Story Session",
+  "mainTransactions": "src/story/state.ts",
+  "binding": "src/story/binding.ts",
+  "generatedRules": "server/fieldnotes.ts",
+  "movementEngine": "RPGJS 5 beta34",
+  "chapterCompletion": "market-open",
+  "finalEnding": false,
+  "notes": "Cartridge map rules describe physical links. Do not execute them without proximity, admission, journey flags and the server adapter.",
+  "sourceHashes": {
+    "src/story/state.ts": "e3296a4896e006c5595bc715bce62ede22e0cf3a6bc7a4abcfb10e270633df65",
+    "src/story/binding.ts": "f448d5b6c1311f955f969ef54a8c2adf6406b77e5377ae7712001a0cadf19aff",
+    "src/world/data.ts": "f345597f00eaa26c6b784108aec0137c2885c7ff948b416bfa5eb04284e06a56",
+    "server/fieldnotes.ts": "b77e4f980c0e3ccbe0684cd56c43fd824002f0a090b4fcbb3c786d424c309369"
+  }
+}

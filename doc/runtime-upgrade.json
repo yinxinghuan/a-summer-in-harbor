@@ -1,0 +1,8 @@
+{
+  "from": "2026-10-01.1",
+  "to": "2026-10-01.2",
+  "changed": [
+    "packages/authority-session/async-store.mjs"
+  ],
+  "oldCopyUnmodified": true
+}

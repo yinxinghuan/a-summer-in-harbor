@@ -1,0 +1,110 @@
+[
+  {
+    "name": "@canvasengine/presets",
+    "version": "2.2.0",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@canvasengine/testing",
+    "version": "2.1.1",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@canvasengine/tiled",
+    "version": "2.2.0",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@pixi/colord",
+    "version": "2.9.6",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@rpgjs/common",
+    "version": "5.0.0-beta.31",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@rpgjs/physic",
+    "version": "5.0.2",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@rpgjs/server",
+    "version": "5.0.0-beta.34",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@canvasengine/tiled",
+    "version": "2.1.0",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@rpgjs/testing",
+    "version": "5.0.0-beta.34",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@signe/reactive",
+    "version": "2.10.0",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "canvasengine",
+    "version": "2.1.1",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@canvasengine/tiled",
+    "version": "2.1.0",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@signe/reactive",
+    "version": "3.1.0",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@signe/reactive",
+    "version": "3.1.1",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "canvasengine",
+    "version": "2.2.0",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "@signe/reactive",
+    "version": "2.10.0",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "cssfontparser",
+    "version": "1.2.1",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  },
+  {
+    "name": "yoga-layout",
+    "version": "3.2.1",
+    "license": "MIT",
+    "source": "package metadata; full MIT grant included"
+  }
+]

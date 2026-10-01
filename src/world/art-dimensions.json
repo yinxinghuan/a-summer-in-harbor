@@ -1,0 +1,971 @@
+{
+  "hero-root-v2": {
+    "width": 392,
+    "height": 766,
+    "sourceBounds": [
+      311,
+      125,
+      703,
+      891
+    ],
+    "sourceCropSize": [
+      392,
+      766
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "f40487623254bafec2d36d731e70457d39bdd8318133a01be4c3430c1e020a5d",
+    "processedSha": "cd9dac765e5b8d7917f4be562f27519a280545df259a1a98141974a38b84f186",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "cafe-counter": {
+    "width": 450,
+    "height": 264,
+    "sourceBounds": [
+      81,
+      250,
+      943,
+      756
+    ],
+    "sourceCropSize": [
+      862,
+      506
+    ],
+    "uniformRuntimeScale": 0.5220417633410673,
+    "sourceSha": "30abdfedb68ffeffb0325ebc1d49a9afd358c5d44f55b093295fd0eb40177163",
+    "processedSha": "b31241f5ae438a4d0b990272915d15855dd6efba143d707e2b59fb743b6ffa43",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "cafe-table": {
+    "width": 656,
+    "height": 714,
+    "sourceBounds": [
+      182,
+      174,
+      838,
+      888
+    ],
+    "sourceCropSize": [
+      656,
+      714
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "4be929b86f012c498f2d140feabadb1d80c0b9633088dc818d4b3e27048338eb",
+    "processedSha": "de1689d9752f63bfc493ec800c475ad11ed85577bddb9bf88cb3ce0dfe602a01",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "plant": {
+    "width": 120,
+    "height": 125,
+    "sourceBounds": [
+      120,
+      80,
+      928,
+      920
+    ],
+    "sourceCropSize": [
+      808,
+      840
+    ],
+    "uniformRuntimeScale": 0.1485148514851485,
+    "sourceSha": "e633b42953120beed4d47eb716f9edb49e776a552da0e1bbacc96b99919e6691",
+    "processedSha": "bfdec1530ac30401779cf8c5964297322ba419bb5b76e2ef2989c89991464458",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "wall-north": {
+    "width": 954,
+    "height": 246,
+    "sourceBounds": [
+      35,
+      389,
+      989,
+      635
+    ],
+    "sourceCropSize": [
+      954,
+      246
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "a1b6ae14034781e4bb1f350e7185b40b768aba2168848ab25f54d6dfc9605c11",
+    "processedSha": "8b0ae9009fe76bbeead73559f556f1231ff8f048bf00235aec377f454a73bf61",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "floor-stone": {
+    "width": 1024,
+    "height": 1024,
+    "sourceBounds": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "sourceCropSize": [
+      1024,
+      1024
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "171000e7c5bd338460c871bc91ace9651d9154348ccf2c9739c8ac5f8ff56839",
+    "processedSha": "6e012764bab7bf8c42a86ddc71d8a576a676774f941448350b3f194a72ba332a",
+    "process": "decode PNG, unchanged geometry",
+    "status": "runtime candidate"
+  },
+  "floor-wood": {
+    "width": 1024,
+    "height": 1024,
+    "sourceBounds": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "sourceCropSize": [
+      1024,
+      1024
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "275cbb46e4bafffb9e098c72d15d039b8cd23dba716c43a0a8920d20defe573f",
+    "processedSha": "97ac8b22d01613524256dae95555845fde887a0db3c85c3164f802823045d4bd",
+    "process": "decode PNG, unchanged geometry",
+    "status": "runtime candidate"
+  },
+  "floor-grass": {
+    "width": 1024,
+    "height": 1024,
+    "sourceBounds": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "sourceCropSize": [
+      1024,
+      1024
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "118263dd808e53a5889cf0ce4dc51314edceed4e22a699cff7ae9142622a219e",
+    "processedSha": "601382adf588746ba66a30e01b837082f552b5dfa467ae131d7144ec1b5e2660",
+    "process": "decode PNG, unchanged geometry",
+    "status": "runtime candidate"
+  },
+  "floor-sand": {
+    "width": 1024,
+    "height": 1024,
+    "sourceBounds": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "sourceCropSize": [
+      1024,
+      1024
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "2588b3043c4d3cd5993be99e8c19ccd60d303e458df788da44afe6581aac7bb6",
+    "processedSha": "06fa23aa108931f21b1c95dc5c4900e3fbcd90028f23ec9217895e591705640e",
+    "process": "decode PNG, unchanged geometry",
+    "status": "runtime candidate"
+  },
+  "floor-water": {
+    "width": 1024,
+    "height": 1024,
+    "sourceBounds": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "sourceCropSize": [
+      1024,
+      1024
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "d254a711f079690bdf7943671d188bc4714cea2de91daeff7a407a8e53bd8bf0",
+    "processedSha": "011156706d163d4bced80198c42a455cef74eb3d493674570602a9ccff533f79",
+    "process": "decode PNG, unchanged geometry",
+    "status": "runtime candidate"
+  },
+  "house-cafe": {
+    "width": 900,
+    "height": 719,
+    "sourceBounds": [
+      59,
+      144,
+      965,
+      868
+    ],
+    "sourceCropSize": [
+      906,
+      724
+    ],
+    "uniformRuntimeScale": 0.9933774834437086,
+    "sourceSha": "38233962a02de2dc39bb96cc7b272127b30d1604747a563687929828299186cb",
+    "processedSha": "92f6d237278834cf110dd27c0c3cd701a325161c07d3548041e1690c9c489149",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "bench": {
+    "width": 204,
+    "height": 148,
+    "sourceBounds": [
+      72,
+      194,
+      952,
+      832
+    ],
+    "sourceCropSize": [
+      880,
+      638
+    ],
+    "uniformRuntimeScale": 0.2318181818181818,
+    "sourceSha": "23a7101c7ca6f4feab9fa5211b3d90995564ac17958d5fc4ed332f250b4cbc76",
+    "processedSha": "9ff042bdc3b8d9add1ac90f1385c50c2629a0c269413e965981c8155456d8f14",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "mara-root-v2": {
+    "width": 414,
+    "height": 766,
+    "sourceBounds": [
+      302,
+      129,
+      716,
+      895
+    ],
+    "sourceCropSize": [
+      414,
+      766
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "59b4a8d63fb7af38bf1ea06dd05502420785e07008c162ffc9a88e481e85a924",
+    "processedSha": "1cb2cb0275f1eccfb645a895fa811948ad83887237dd534a40b051e2f47f8e05",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "theo-root-v2": {
+    "width": 385,
+    "height": 753,
+    "sourceBounds": [
+      312,
+      139,
+      697,
+      892
+    ],
+    "sourceCropSize": [
+      385,
+      753
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "31323a355875d76001d95c8a72b8dca9037d8695cce1067c98a12b97a8de747b",
+    "processedSha": "079b555225345ac335a1c73e25f4e6098bf6b93eb29b0647491e2cc0f362080e",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "idris-root-v2": {
+    "width": 411,
+    "height": 745,
+    "sourceBounds": [
+      306,
+      147,
+      717,
+      892
+    ],
+    "sourceCropSize": [
+      411,
+      745
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "e8f985d6aa4108c2c8e2783acbf76af334cb2ee4970a55429abed36e07d3a07b",
+    "processedSha": "f4c51ff10b8e4a1272d05af654bade4ae5d0f79c59926477693004aac74990e0",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "house-rental": {
+    "width": 732,
+    "height": 846,
+    "sourceBounds": [
+      146,
+      69,
+      878,
+      915
+    ],
+    "sourceCropSize": [
+      732,
+      846
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "e902053ebc240f6010d085d1f924e6cd462dffabb4289030620d6aa84b2507a5",
+    "processedSha": "20fab5bfce4ad20fc9a22a69b728c1c396a5f36b1ee7b3031e6875201676624a",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "house-grocery": {
+    "width": 784,
+    "height": 721,
+    "sourceBounds": [
+      120,
+      127,
+      904,
+      848
+    ],
+    "sourceCropSize": [
+      784,
+      721
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "c0b71c2d82867e0b31ed5d675dae059a59a1924c3dbecce761db68102ddb8eb1",
+    "processedSha": "01f438f9b5392a8be44e7b394b2268b28388d90c68e1f8852411cbe3732446e6",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "canopy-tree": {
+    "width": 525,
+    "height": 567,
+    "sourceBounds": [
+      55,
+      15,
+      975,
+      1009
+    ],
+    "sourceCropSize": [
+      920,
+      994
+    ],
+    "uniformRuntimeScale": 0.5706521739130435,
+    "sourceSha": "beb89a85aea8aecdc0bb0f09ac02e3eb4eb8bf6cf052368530709394e6d5b5a1",
+    "processedSha": "bcadf26b2d44c90d16ca7c3eddd00511a7f0e45421ad1593af4ae1164de1a362",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "street-sign": {
+    "width": 168,
+    "height": 184,
+    "sourceBounds": [
+      143,
+      104,
+      881,
+      911
+    ],
+    "sourceCropSize": [
+      738,
+      807
+    ],
+    "uniformRuntimeScale": 0.22764227642276422,
+    "sourceSha": "dab56844ed96045eaad4bc11aa8ecda9f3d3342d73444982cbad7676a48b5bb7",
+    "processedSha": "75c232360b509c896b2790796fa9abfe1779df7373f795c1d558baf33ebb0c8f",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "flower-planter": {
+    "width": 198,
+    "height": 81,
+    "sourceBounds": [
+      101,
+      339,
+      924,
+      674
+    ],
+    "sourceCropSize": [
+      823,
+      335
+    ],
+    "uniformRuntimeScale": 0.24058323207776428,
+    "sourceSha": "735b8fef9e7b5144684266d0761cd601df090ddc7e4c7d496c818a738cb9935a",
+    "processedSha": "5b0e41ff2b185d9fdf7fc18c3bd6afd91c4873ddbd46d5cba470944d0dae4e93",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "june-root-v2": {
+    "width": 384,
+    "height": 762,
+    "sourceBounds": [
+      315,
+      129,
+      699,
+      891
+    ],
+    "sourceCropSize": [
+      384,
+      762
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "d2d768d39cb6620b5388708532cce756c236440a50827e1ea74d0c93634f1337",
+    "processedSha": "b16c07a96be3a3652147d70846938db54786247b30252486c5ceb9d504c65f4e",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "ruth-root-v2": {
+    "width": 466,
+    "height": 765,
+    "sourceBounds": [
+      276,
+      126,
+      742,
+      891
+    ],
+    "sourceCropSize": [
+      466,
+      765
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "20b500bb52e061105e021210e1a99da9e4ba7057d8c1dadd3f184afb040d8180",
+    "processedSha": "82c38daf2876bc43e1aebf688696412525afff0ff4e03b3d56f0cb5a12255895",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "luis-root-v2": {
+    "width": 404,
+    "height": 768,
+    "sourceBounds": [
+      305,
+      128,
+      709,
+      896
+    ],
+    "sourceCropSize": [
+      404,
+      768
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "0b2ab877c566241bdd879d5d512b5f96c998e8987c205a23a2872b4af46c3042",
+    "processedSha": "e02a0ec9dfb6c3e84575e511f1065c712e0362e6c5909b04d1639e5fd568f26c",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "nell-root-v2": {
+    "width": 400,
+    "height": 769,
+    "sourceBounds": [
+      302,
+      125,
+      702,
+      894
+    ],
+    "sourceCropSize": [
+      400,
+      769
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "3580ab48ee2d19dbe2f741a8acc2dadbef9a01cef16905120f04c44a046cce16",
+    "processedSha": "8fd6543e8953812771ffd8fac2f2ef23df52f8e5b0971fd050087d6131583872",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "elena-root-v2": {
+    "width": 342,
+    "height": 776,
+    "sourceBounds": [
+      338,
+      118,
+      680,
+      894
+    ],
+    "sourceCropSize": [
+      342,
+      776
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "d72d2f3aaf72c9ed1c1a712a475c9613532208c77ca02bcc5589e3e0045ea4a0",
+    "processedSha": "b67c32b125b63bfb0df532ea89437190ad3aa95e302468d4493d29aabe1aed63",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "arthur-root-v2": {
+    "width": 392,
+    "height": 747,
+    "sourceBounds": [
+      312,
+      144,
+      704,
+      891
+    ],
+    "sourceCropSize": [
+      392,
+      747
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "feab05876f79d81ce39b011c7e5af211752c94f68548e5308d1903d093e6b58d",
+    "processedSha": "e4a8e77b5c136cb4f08a0e589779c05f096867eec4ae49f066349e5624a6c1cc",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "bed": {
+    "width": 126,
+    "height": 227,
+    "sourceBounds": [
+      283,
+      89,
+      740,
+      911
+    ],
+    "sourceCropSize": [
+      457,
+      822
+    ],
+    "uniformRuntimeScale": 0.27571115973741794,
+    "sourceSha": "56b6021076f3a54cce314bc9ad0c78c692c90ead009ae40601001f4773e319a3",
+    "processedSha": "c627737b8a3ffea59baa231cb7c173eabc86f6846f38df083c9bac203166a46d",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "luggage": {
+    "width": 96,
+    "height": 65,
+    "sourceBounds": [
+      25,
+      186,
+      999,
+      843
+    ],
+    "sourceCropSize": [
+      974,
+      657
+    ],
+    "uniformRuntimeScale": 0.09856262833675565,
+    "sourceSha": "0e3e8161deea876322d9cdd4b01795224f576f12429473e2498a00cb3d527094",
+    "processedSha": "fe422861109b84b4bf96a1db001c8a8f3405d5aa5d3883579a735b7350d0993b",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "workbench": {
+    "width": 312,
+    "height": 220,
+    "sourceBounds": [
+      90,
+      215,
+      935,
+      810
+    ],
+    "sourceCropSize": [
+      845,
+      595
+    ],
+    "uniformRuntimeScale": 0.36923076923076925,
+    "sourceSha": "8da089d0382f366a677d184c0b6d165c662d74fd5d0b05beed7476934e754e34",
+    "processedSha": "56ed376474ae528af680f0b1fd702f02c1a3520beba0af00c79dcc154307976e",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "noticeboard": {
+    "width": 150,
+    "height": 175,
+    "sourceBounds": [
+      256,
+      226,
+      768,
+      824
+    ],
+    "sourceCropSize": [
+      512,
+      598
+    ],
+    "uniformRuntimeScale": 0.29296875,
+    "sourceSha": "54a8b96e38075b5da6d3a612bc410413b8ce915dd45e2b8542321ca71a7de5d0",
+    "processedSha": "b60cb7849218b599566a6775d1529529496801d7ec67bf7a4ab8ce365d52a735",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "driftwood": {
+    "width": 192,
+    "height": 94,
+    "sourceBounds": [
+      53,
+      296,
+      972,
+      748
+    ],
+    "sourceCropSize": [
+      919,
+      452
+    ],
+    "uniformRuntimeScale": 0.2089227421109902,
+    "sourceSha": "8b3eda879737cd631e84b46bd9bb2d39c75a232e8ef77ab20e65cf10ccf8cd1b",
+    "processedSha": "8d54a6a04fe6345900d6eff722edfc5a6121c144fdabcb4cc28ac08c87a28810",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "lantern": {
+    "width": 75,
+    "height": 171,
+    "sourceBounds": [
+      329,
+      104,
+      694,
+      934
+    ],
+    "sourceCropSize": [
+      365,
+      830
+    ],
+    "uniformRuntimeScale": 0.2054794520547945,
+    "sourceSha": "21c5994ad626702fd88f4115724459bebae9295cbfff433dfb8db3f9c9ae7466",
+    "processedSha": "5e413fb4261a9bbb1ecef746734588377b3126f8f8200c9a4f5b901ba00e4ba9",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "boxing-rack": {
+    "width": 234,
+    "height": 138,
+    "sourceBounds": [
+      90,
+      263,
+      935,
+      761
+    ],
+    "sourceCropSize": [
+      845,
+      498
+    ],
+    "uniformRuntimeScale": 0.27692307692307694,
+    "sourceSha": "137c11e2728573beba8889f459a0f023199e725632897c12c2461fdba8bcf55c",
+    "processedSha": "35375363c0b92140daf264570f1baa4a314c9dd77dea54246843beda27804d29",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "bridge": {
+    "width": 948,
+    "height": 284,
+    "sourceBounds": [
+      38,
+      362,
+      986,
+      646
+    ],
+    "sourceCropSize": [
+      948,
+      284
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "e6601a90cca9be8da361a299a4b34412f641b43d6d1a9582aab349b6faf9fce9",
+    "processedSha": "d54a8969666b1a7f3846eeaf60fe08a7aa42a8e790b09ca73d91b6e63224df04",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "fishing-kit": {
+    "width": 129,
+    "height": 99,
+    "sourceBounds": [
+      139,
+      232,
+      900,
+      818
+    ],
+    "sourceCropSize": [
+      761,
+      586
+    ],
+    "uniformRuntimeScale": 0.16951379763469118,
+    "sourceSha": "f0ebdfa63f8d2a2c060b4915f4175da9283b0451b9f653093be0552996892b77",
+    "processedSha": "1810c8aa068a86a5cd77ca361076344c76d80b40baf35ff42916e00a328098d1",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "cafe-table-v2": {
+    "width": 144,
+    "height": 121,
+    "sourceBounds": [
+      79,
+      147,
+      945,
+      875
+    ],
+    "sourceCropSize": [
+      866,
+      728
+    ],
+    "uniformRuntimeScale": 0.16628175519630484,
+    "sourceSha": "50fec28a4b28f1d3727e96f452b36442143e7a8c944baf9869ee87ac063cfa48",
+    "processedSha": "f2d06f11406c02d8677e726cbdfc046e0bc37c695b705ab0e89d6d7fdc4d7bfd",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "door-front-v7": {
+    "width": 138,
+    "height": 194,
+    "sourceBounds": [
+      231,
+      107,
+      797,
+      901
+    ],
+    "sourceCropSize": [
+      566,
+      794
+    ],
+    "uniformRuntimeScale": 0.24381625441696114,
+    "sourceSha": "b747805c410f63d3a7755cdb824dbe597780f2bb9d8f39fd5a144452b56b4514",
+    "processedSha": "c9f660e8aceb425352645121be488a2517e64d743cd5d44dba9547487493e67c",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "house-workshop": {
+    "width": 787,
+    "height": 677,
+    "sourceBounds": [
+      120,
+      158,
+      907,
+      835
+    ],
+    "sourceCropSize": [
+      787,
+      677
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "8606113f628db2aa624941db4e1864466bba5485d97024b787af9a75b0f824c9",
+    "processedSha": "d60d09cd2e45810bc8c09a182af4660c2dedebe479a3647c7523178cce33b5fb",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "house-gym": {
+    "width": 840,
+    "height": 636,
+    "sourceBounds": [
+      48,
+      147,
+      993,
+      862
+    ],
+    "sourceCropSize": [
+      945,
+      715
+    ],
+    "uniformRuntimeScale": 0.8888888888888888,
+    "sourceSha": "c926ff30bed4b9623d157e529d47674b2ecd7de961462b3930605e3466e12a01",
+    "processedSha": "4f3422776224f52ff1b1060fc233891fd13ca17d153946004aebbfdb536a73af",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "market-stall": {
+    "width": 390,
+    "height": 387,
+    "sourceBounds": [
+      92,
+      83,
+      932,
+      917
+    ],
+    "sourceCropSize": [
+      840,
+      834
+    ],
+    "uniformRuntimeScale": 0.4642857142857143,
+    "sourceSha": "ea6ad5b98c7d252bf8f2065962dabcbca5c27b7bb0560813a9a946af27894d84",
+    "processedSha": "ce89da7c52055e63b196712a61636b462dfa13a79d6175c0cbb387acd1e5929b",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "lighthouse-building": {
+    "width": 570,
+    "height": 859,
+    "sourceBounds": [
+      239,
+      42,
+      810,
+      903
+    ],
+    "sourceCropSize": [
+      571,
+      861
+    ],
+    "uniformRuntimeScale": 0.9982486865148862,
+    "sourceSha": "debf6b7cb6f0479a0f1d031a184c19a015ba2e2ffe40ec48387c0c1aae1d9a5f",
+    "processedSha": "50ef16c3625e639ba3bf3b9f20eacaf817ad3e993406d5e8e9f268d9d4478e31",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "weather-building": {
+    "width": 645,
+    "height": 512,
+    "sourceBounds": [
+      56,
+      112,
+      973,
+      840
+    ],
+    "sourceCropSize": [
+      917,
+      728
+    ],
+    "uniformRuntimeScale": 0.7033805888767721,
+    "sourceSha": "99a4aa556244300a4cdda81a89776bc68f4a25eb74ee263908426903a59e696b",
+    "processedSha": "1916b86e8d45f22e2e10e2cd15e5de51dccf63586c582d3aab6ad958d2a08fd5",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "camp-tent": {
+    "width": 315,
+    "height": 370,
+    "sourceBounds": [
+      171,
+      100,
+      854,
+      903
+    ],
+    "sourceCropSize": [
+      683,
+      803
+    ],
+    "uniformRuntimeScale": 0.4612005856515373,
+    "sourceSha": "3ddb3443f8a9d15e7628a4d65068375a30aa530ada8a63d6c81f54dcb16ae777",
+    "processedSha": "c3a5937a0273bbf71c87fe67cb3a594ff111361ebfa7f3da7b5bbf48ed36b92d",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "coastal-rocks": {
+    "width": 315,
+    "height": 268,
+    "sourceBounds": [
+      80,
+      145,
+      946,
+      882
+    ],
+    "sourceCropSize": [
+      866,
+      737
+    ],
+    "uniformRuntimeScale": 0.36374133949191684,
+    "sourceSha": "01de3f3341358cf90b4c22a0eba30b618c6f57ae5378bad608932e8842e4c9f9",
+    "processedSha": "4e7ccefa0ba382f452265f99f9656f2025a7ddbfa1306d4fdabb091cdcf0a020",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "harbor-crates": {
+    "width": 138,
+    "height": 130,
+    "sourceBounds": [
+      108,
+      138,
+      900,
+      882
+    ],
+    "sourceCropSize": [
+      792,
+      744
+    ],
+    "uniformRuntimeScale": 0.17424242424242425,
+    "sourceSha": "0504794de0c792ef3ba12f7bb7d89ed8e480b78fa9e091fc7d18906ad7418ba6",
+    "processedSha": "af969e0172d4eee0dd611ec44f6cdbde5e9bee1eee835e53d03dc5ae7bc8df85",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "wooden-chair": {
+    "width": 419,
+    "height": 776,
+    "sourceBounds": [
+      303,
+      124,
+      722,
+      900
+    ],
+    "sourceCropSize": [
+      419,
+      776
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "79d118a3f611a091563085d8656aec0ebba41d28d1b36307c12ee726b73c32e9",
+    "processedSha": "2da8f04f93a97e5a5cfad9667a39f8538ab67da7f0904558274b359b0b7b3541",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "bridge-broken": {
+    "width": 510,
+    "height": 153,
+    "sourceBounds": [
+      38,
+      362,
+      986,
+      646
+    ],
+    "sourceCropSize": [
+      948,
+      284
+    ],
+    "uniformRuntimeScale": 0.5379746835443038,
+    "sourceSha": "9ec1796f18ad50d4b3d7dc1c4ec34c0ed1ccb351ea546fef652d2335638a8bc4",
+    "processedSha": "268a1d88d7d8d47a56bd53ab3436c1b815e822fb9851161a8205334eb51167ed",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "market-stall-closed": {
+    "width": 330,
+    "height": 328,
+    "sourceBounds": [
+      92,
+      83,
+      932,
+      917
+    ],
+    "sourceCropSize": [
+      840,
+      834
+    ],
+    "uniformRuntimeScale": 0.39285714285714285,
+    "sourceSha": "4c7349beda47668bc3b5f672f861d5c8a12100e7515064a00d0f8626caebb7b2",
+    "processedSha": "c623473190176e5c6efff31e19a5b5345978444277c879c4d75ea55a8bf15d20",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "repair-closeup-dark": {
+    "width": 1024,
+    "height": 1024,
+    "sourceBounds": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "sourceCropSize": [
+      1024,
+      1024
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "f90d6de89dd05c642546ebda66532018868e4133f643fb42dfebbbb56e2de9fe",
+    "processedSha": "2804cc6f1b067618c5fb6a0e574bc8dee8efa3ab93321e9bd51a9db67e5d428e",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "trail-map-closeup": {
+    "width": 1024,
+    "height": 1024,
+    "sourceBounds": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "sourceCropSize": [
+      1024,
+      1024
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "2f05e1231c34ca0c71f13f74fcb80a8c7ab087517aec563d41d96e3700b8d466",
+    "processedSha": "9ec91ec3da191593ec8856b57522256c2acdefca938068a1ebf3b5dbda3e295a",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  },
+  "bridge-photo": {
+    "width": 1024,
+    "height": 1024,
+    "sourceBounds": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "sourceCropSize": [
+      1024,
+      1024
+    ],
+    "uniformRuntimeScale": 1.0,
+    "sourceSha": "f3c4c62766b5467a2f5c3279637e892fef3ead4c2818ad3400b16a5e48d53490",
+    "processedSha": "9aad9981f7e56c86517f44af90683f6227c118971b15b508e4af8be30e172536",
+    "process": "magenta colour key and tight crop, geometry unchanged",
+    "status": "runtime candidate"
+  }
+}

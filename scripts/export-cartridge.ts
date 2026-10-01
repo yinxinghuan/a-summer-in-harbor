@@ -1,0 +1,3 @@
+import {writeFileSync,mkdirSync,readFileSync} from 'node:fs';import {createHash} from 'node:crypto';import {harborZh,harborEn,spatialAdapterContract} from '../src/story/cartridge';
+mkdirSync('doc/cartridge',{recursive:true});for(const c of[harborZh,harborEn])writeFileSync(`doc/cartridge/harbor.${c.locale}.json`,JSON.stringify(c,null,2));
+writeFileSync('doc/cartridge/spatial-adapter.json',JSON.stringify({...spatialAdapterContract,sourceHashes:Object.fromEntries(['src/story/state.ts','src/story/binding.ts','src/world/data.ts','server/fieldnotes.ts'].map(f=>[f,createHash('sha256').update(readFileSync(f)).digest('hex')]))},null,2));

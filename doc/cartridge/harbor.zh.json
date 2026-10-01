@@ -1,0 +1,1460 @@
+{
+  "schemaVersion": 1,
+  "id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "locale": "zh",
+  "coverImage": "./poster.png",
+  "entryImage": "./poster.png",
+  "copy": {
+    "title": "海湾新生活",
+    "subtitle": "第一个夏天",
+    "promise": "认识海湾，也找到自己的节奏。",
+    "enter": "走进小镇",
+    "continue": "继续这个夏天",
+    "customAction": "自由询问",
+    "itemImagingTitle": "细节正在显现",
+    "itemImagingBody": "可以先查看线索。"
+  },
+  "theme": {
+    "outer": "#183f40",
+    "surface": "#2d4a46",
+    "paper": "#fff5df",
+    "ink": "#183f40",
+    "muted": "#64726e",
+    "accent": "#327e91",
+    "danger": "#bc674c",
+    "gold": "#e7bb70",
+    "material": "harbor"
+  },
+  "audioTheme": {
+    "material": "harbor",
+    "bpm": 76,
+    "rootHz": 130.81,
+    "scale": [
+      0,
+      2,
+      4,
+      7,
+      9
+    ],
+    "levels": {
+      "music": 1,
+      "ambient": 0,
+      "sfx": 0.7,
+      "master": 0.22
+    },
+    "tension": [],
+    "recorded": {
+      "music": {
+        "src": "./audio/town-a.mp3",
+        "gain": 1
+      },
+      "ambienceByLocationId": {
+        "harbor": {
+          "src": "./audio/coast.mp3",
+          "gain": 1
+        },
+        "coast": {
+          "src": "./audio/coast.mp3",
+          "gain": 1
+        },
+        "hill": {
+          "src": "./audio/hill.mp3",
+          "gain": 1
+        }
+      }
+    }
+  },
+  "statDefinitions": [
+    {
+      "id": "energy",
+      "label": "体力",
+      "min": 0,
+      "max": 100,
+      "initial": 100,
+      "display": "bar",
+      "maxDelta": 100,
+      "description": "修桥和垂钓消耗体力；家中休息免费恢复。低于10不能修桥，仍可走动。"
+    },
+    {
+      "id": "cash",
+      "label": "现金",
+      "min": 0,
+      "max": 999,
+      "initial": 25,
+      "display": "number",
+      "unit": "$",
+      "maxDelta": 999,
+      "description": "美元。点心4元，卖鱼6元；主线不要求付费。"
+    },
+    {
+      "id": "standing",
+      "label": "口碑",
+      "min": 0,
+      "max": 100,
+      "initial": 0,
+      "display": "bar",
+      "maxDelta": 100,
+      "description": "帮助街坊与完成练习后提高，不决定是否可以探索。"
+    }
+  ],
+  "drawerLabels": {
+    "party": "认识的人",
+    "map": "海湾地图",
+    "inventory": "行囊",
+    "log": "旅行手记"
+  },
+  "opening": {
+    "location": "车站街",
+    "time": "夏初 · 午后",
+    "objective": "和提着钥匙的女士打个招呼。",
+    "imagePrompt": "A newcomer arrives on a modest North American coastal street in summer.",
+    "blocks": [
+      {
+        "id": "arrival-0",
+        "kind": "narration",
+        "text": "你刚下长途汽车，肩上只有一只旅行包。上一份工作告一段落，你给自己留了一个夏天，来到这个从没住过的海湾小镇。没有紧急任务，也没有人等着你拯救什么。先安顿下来，认识几个人，看看自己想把日子过成什么样。"
+      },
+      {
+        "id": "arrival-1",
+        "kind": "narration",
+        "text": "你提前租了一间小屋。约好的房东正在街边等你，手里晃着一串钥匙。用左下角的摇杆走过去，也可以点地面行走。靠近她以后，右下角会出现谈话按钮。"
+      }
+    ],
+    "choices": [
+      {
+        "id": "meet-mara",
+        "label": "走过去打个招呼"
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "mara",
+      "name": "玛拉",
+      "role": "提着钥匙的女士",
+      "detail": "一位穿亚麻衬衣的女士抬手招呼。她晃了晃钥匙：“你就是来住一夏的新房客吧？我是玛拉。先放下行李，别急着认全镇的人。”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "theo",
+      "name": "西奥",
+      "role": "擦杯子的店员",
+      "detail": "柜台后的年轻人把杯子放下，围裙上写着Theo。“叫我西奥。你刚到？玛拉把她的工具袋忘在这里了。”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "june",
+      "name": "琼",
+      "role": "工作台旁的女人",
+      "detail": "穿工装的女人从工作台旁抬起头：“我是琼，这间修理铺是我的。全年都有人弄坏东西。需要借工具？”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "idris",
+      "name": "伊德里斯",
+      "role": "整理手套的教练",
+      "detail": "一个肩膀宽厚的中年男人正在晾手套。“我是伊德里斯。想练练脚步？先学躲，出拳不着急。这里谁都可以说停。”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "ruth",
+      "name": "露丝",
+      "role": "码头边的钓鱼人",
+      "detail": "戴旧帆布帽的女人把备用鱼竿靠在栏杆上。“露丝。别踩桶，那是我的午饭。你想试一竿吗？”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "luis",
+      "name": "路易斯",
+      "role": "补货的店主",
+      "detail": "店主从一箱苹果后探出头：“路易斯。新面孔！水龙头在门边，免费。别在第一天就把钱全花在我这里。”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "nell",
+      "name": "内尔",
+      "role": "整理旧照片的店主",
+      "detail": "灰发店主把一张褪色照片压平。“我是内尔。有些东西人们搬走时不愿带走，却又舍不得丢。你看这座桥。”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "elena",
+      "name": "埃琳娜",
+      "role": "浇花的住户",
+      "detail": "拿着水壶的女人停在小门内。“埃琳娜。我知道大家想穿过这里去海边，但这里也是我妈妈午睡的地方。”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "arthur",
+      "name": "阿瑟",
+      "role": "擦拭风向仪的老人",
+      "detail": "老人取下帽子，指了指胸前磨旧的名牌：Arthur。“以前每天都要量风。现在大家只看手机，不过手机可不知道下面那条小路。”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    }
+  ],
+  "initialMap": [
+    {
+      "id": "station",
+      "label": "车站街",
+      "current": true,
+      "visited": true
+    },
+    {
+      "id": "home",
+      "label": "你的租屋",
+      "current": false,
+      "visited": false,
+      "connectedTo": "station"
+    },
+    {
+      "id": "cafe",
+      "label": "潮间咖啡馆",
+      "current": false,
+      "visited": false,
+      "connectedTo": "station"
+    },
+    {
+      "id": "grocery",
+      "label": "街角杂货铺",
+      "current": false,
+      "visited": false,
+      "connectedTo": "station"
+    },
+    {
+      "id": "harbor",
+      "label": "港口",
+      "current": false,
+      "visited": false
+    },
+    {
+      "id": "dock",
+      "label": "钓鱼码头",
+      "current": false,
+      "visited": false,
+      "connectedTo": "harbor"
+    },
+    {
+      "id": "workshop",
+      "label": "琼的修理铺",
+      "current": false,
+      "visited": false,
+      "connectedTo": "harbor"
+    },
+    {
+      "id": "gym",
+      "label": "港口拳馆",
+      "current": false,
+      "visited": false,
+      "connectedTo": "harbor"
+    },
+    {
+      "id": "market",
+      "label": "旧街",
+      "current": false,
+      "visited": false
+    },
+    {
+      "id": "bazaar",
+      "label": "集市广场",
+      "current": false,
+      "visited": false,
+      "connectedTo": "market"
+    },
+    {
+      "id": "secondhand",
+      "label": "旧物店",
+      "current": false,
+      "visited": false,
+      "connectedTo": "market"
+    },
+    {
+      "id": "courtyard",
+      "label": "住户庭院",
+      "current": false,
+      "visited": false,
+      "connectedTo": "market"
+    },
+    {
+      "id": "coast",
+      "label": "海岸",
+      "current": false,
+      "visited": false
+    },
+    {
+      "id": "beach",
+      "label": "贝壳海滩",
+      "current": false,
+      "visited": false,
+      "connectedTo": "coast"
+    },
+    {
+      "id": "path",
+      "label": "滨海道",
+      "current": false,
+      "visited": false,
+      "connectedTo": "coast"
+    },
+    {
+      "id": "lighthouse",
+      "label": "灯塔",
+      "current": false,
+      "visited": false,
+      "connectedTo": "coast"
+    },
+    {
+      "id": "hill",
+      "label": "山坡",
+      "current": false,
+      "visited": false
+    },
+    {
+      "id": "garden",
+      "label": "山坡花园",
+      "current": false,
+      "visited": false,
+      "connectedTo": "hill"
+    },
+    {
+      "id": "camp",
+      "label": "松林营地",
+      "current": false,
+      "visited": false,
+      "connectedTo": "hill"
+    },
+    {
+      "id": "weather",
+      "label": "旧气象站",
+      "current": false,
+      "visited": false,
+      "connectedTo": "hill"
+    },
+    {
+      "id": "workshop-annex-1",
+      "label": "修理铺的小间 1",
+      "current": false,
+      "visited": false,
+      "connectedTo": "harbor"
+    },
+    {
+      "id": "workshop-annex-2",
+      "label": "修理铺的小间 2",
+      "current": false,
+      "visited": false,
+      "connectedTo": "harbor"
+    }
+  ],
+  "initialInventory": [],
+  "initialFacts": {
+    "key": false,
+    "unpacked": false,
+    "market-open": false
+  },
+  "demoTurns": [],
+  "director": {
+    "mode": "open-world",
+    "maxActiveThreads": 3,
+    "choiceIntents": [
+      "了解身边的人",
+      "亲手尝试一件事",
+      "走向另一个地方"
+    ],
+    "fixedWorldRules": [
+      "现代北美海湾小镇。美元经济。",
+      "先在可见对话登场，再显示角色名字。",
+      "任务结果只由空间适配器和权威状态确认。"
+    ],
+    "generationRules": [
+      "只从已读线索生成两代补充观察地点。",
+      "不得发物品、改变主线或创造未知角色。"
+    ]
+  },
+  "domainRules": {
+    "rules": [
+      {
+        "id": "station/to-home/travel",
+        "intent": "你的租屋",
+        "match": [
+          "station/to-home/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "station",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "home"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "station/to-cafe/travel",
+        "intent": "潮间咖啡馆",
+        "match": [
+          "station/to-cafe/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "station",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "cafe"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "station/to-grocery/travel",
+        "intent": "街角杂货铺",
+        "match": [
+          "station/to-grocery/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "station",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "grocery"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "station/road-harbor/travel",
+        "intent": "港口",
+        "match": [
+          "station/road-harbor/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "station",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "station/road-market/travel",
+        "intent": "旧街",
+        "match": [
+          "station/road-market/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "station",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "market"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "home/exit/travel",
+        "intent": "车站街",
+        "match": [
+          "home/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "home",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "station"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "cafe/exit/travel",
+        "intent": "车站街",
+        "match": [
+          "cafe/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "cafe",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "station"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "grocery/exit/travel",
+        "intent": "车站街",
+        "match": [
+          "grocery/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "grocery",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "station"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/to-dock/travel",
+        "intent": "钓鱼码头",
+        "match": [
+          "harbor/to-dock/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "dock"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/to-workshop/travel",
+        "intent": "琼的修理铺",
+        "match": [
+          "harbor/to-workshop/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "workshop"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/to-gym/travel",
+        "intent": "港口拳馆",
+        "match": [
+          "harbor/to-gym/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "gym"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/road-station/travel",
+        "intent": "车站街",
+        "match": [
+          "harbor/road-station/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "station"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/road-coast/travel",
+        "intent": "海岸",
+        "match": [
+          "harbor/road-coast/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "coast"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/road-hill/travel",
+        "intent": "山坡",
+        "match": [
+          "harbor/road-hill/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "dock/exit/travel",
+        "intent": "港口",
+        "match": [
+          "dock/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "dock",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "workshop/exit/travel",
+        "intent": "港口",
+        "match": [
+          "workshop/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "workshop",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "workshop/to-annex-1/travel",
+        "intent": "修理铺的小间 1",
+        "match": [
+          "workshop/to-annex-1/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "workshop",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "workshop-annex-1"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "workshop/to-annex-2/travel",
+        "intent": "修理铺的小间 2",
+        "match": [
+          "workshop/to-annex-2/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "workshop",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "workshop-annex-2"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "gym/exit/travel",
+        "intent": "港口",
+        "match": [
+          "gym/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "gym",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "market/to-bazaar/travel",
+        "intent": "集市广场",
+        "match": [
+          "market/to-bazaar/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "market",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "bazaar"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "market/to-secondhand/travel",
+        "intent": "旧物店",
+        "match": [
+          "market/to-secondhand/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "market",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "secondhand"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "market/to-courtyard/travel",
+        "intent": "住户庭院",
+        "match": [
+          "market/to-courtyard/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "market",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "courtyard"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "market/road-station/travel",
+        "intent": "车站街",
+        "match": [
+          "market/road-station/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "market",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "station"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "market/road-hill/travel",
+        "intent": "山坡",
+        "match": [
+          "market/road-hill/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "market",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "bazaar/exit/travel",
+        "intent": "旧街",
+        "match": [
+          "bazaar/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "bazaar",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "market"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "secondhand/exit/travel",
+        "intent": "旧街",
+        "match": [
+          "secondhand/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "secondhand",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "market"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "courtyard/exit/travel",
+        "intent": "旧街",
+        "match": [
+          "courtyard/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "courtyard",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "market"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "coast/to-beach/travel",
+        "intent": "贝壳海滩",
+        "match": [
+          "coast/to-beach/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "coast",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "beach"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "coast/to-path/travel",
+        "intent": "滨海道",
+        "match": [
+          "coast/to-path/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "coast",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "path"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "coast/to-lighthouse/travel",
+        "intent": "灯塔",
+        "match": [
+          "coast/to-lighthouse/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "coast",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "lighthouse"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "coast/road-harbor/travel",
+        "intent": "港口",
+        "match": [
+          "coast/road-harbor/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "coast",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "coast/road-hill/travel",
+        "intent": "山坡",
+        "match": [
+          "coast/road-hill/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "coast",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "beach/exit/travel",
+        "intent": "海岸",
+        "match": [
+          "beach/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "beach",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "coast"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "path/exit/travel",
+        "intent": "海岸",
+        "match": [
+          "path/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "path",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "coast"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "lighthouse/exit/travel",
+        "intent": "海岸",
+        "match": [
+          "lighthouse/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "lighthouse",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "coast"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "hill/to-garden/travel",
+        "intent": "山坡花园",
+        "match": [
+          "hill/to-garden/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "garden"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "hill/to-camp/travel",
+        "intent": "松林营地",
+        "match": [
+          "hill/to-camp/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "camp"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "hill/to-weather/travel",
+        "intent": "旧气象站",
+        "match": [
+          "hill/to-weather/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "weather"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "hill/road-market/travel",
+        "intent": "旧街",
+        "match": [
+          "hill/road-market/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "market"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "hill/road-harbor/travel",
+        "intent": "港口",
+        "match": [
+          "hill/road-harbor/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "hill/road-coast/travel",
+        "intent": "海岸",
+        "match": [
+          "hill/road-coast/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "coast"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "garden/exit/travel",
+        "intent": "山坡",
+        "match": [
+          "garden/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "garden",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "camp/exit/travel",
+        "intent": "山坡",
+        "match": [
+          "camp/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "camp",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "weather/exit/travel",
+        "intent": "山坡",
+        "match": [
+          "weather/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "weather",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "workshop-annex-1/exit/travel",
+        "intent": "琼的修理铺",
+        "match": [
+          "workshop-annex-1/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "workshop-annex-1",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "workshop"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      },
+      {
+        "id": "workshop-annex-2/exit/travel",
+        "intent": "琼的修理铺",
+        "match": [
+          "workshop-annex-2/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "workshop-annex-2",
+            "reason": "先走到入口所在地点。"
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "workshop"
+          }
+        ],
+        "successText": "你从入口前往下一处。",
+        "successChoices": []
+      }
+    ]
+  }
+}

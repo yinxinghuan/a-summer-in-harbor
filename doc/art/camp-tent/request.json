@@ -1,0 +1,14 @@
+{
+  "request_id": "a69e8843-8f32-4751-996d-bde7ebbc8141",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. One small canvas camping tent seen facing its triangular entrance, moss green canvas, rolled open entrance, thin straight poles and visible tent floor inside. Elevated front orthographic, depth edges vertical, no diagonal yaw.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

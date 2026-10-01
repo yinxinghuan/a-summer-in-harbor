@@ -1,0 +1,16 @@
+{
+  "request_id": "b092ce84-3bc9-42d4-9824-cd4a17ab10d2",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "edit",
+  "prompt": "Make a precisely controlled correction to THIS newly generated mint panel sprite. Preserve its overall width,height,outline,panel inset,colors and all paint details. Change ONLY how the small brass hardware is projected: the lever circular mounting plate on the left MUST appear horizontally elongated, twice as wide as its vertical height, because a physically circular disk on this vertical door is foreshortened by the elevated camera. The upper surfaces of the handle and both hinges must be visible from above with the SAME camera. Do not make a vertically elongated plate. No new frame, no lintel, no surrounding wall or floor. Keep flat pure magenta background. Final leaf still the same compact1.4height/width ratio. High quality16bit pixels. This is a small technical projection fix, not a new door design.",
+  "reference_urls": [
+    "https://images.aiwaves.tech/uploads/1790797439749-2yqyh2czc1t.webp"
+  ],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

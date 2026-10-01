@@ -1,0 +1,14 @@
+{
+  "request_id": "9ab6bb29-c6d7-4905-8769-3560c1bee4ef",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Restrained richly detailed 16-bit pixel art, consistent chunky clusters, dark outlines, muted warm coastal palette. ONE terracotta pot containing a compact leafy fern, elevated 50 degree ORTHOGRAPHIC view, squarely facing front, no lateral camera yaw. Full plant and pot only, no floor, no shadow. Uniform pure magenta #ff00ff background. Pixel game asset.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

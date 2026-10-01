@@ -1,0 +1,618 @@
+{
+  "station-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "station-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "station-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "station-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "home-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "home-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "home-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 496,
+    "empty": false
+  },
+  "home-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
+  },
+  "cafe-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "cafe-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "cafe-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 496,
+    "empty": false
+  },
+  "cafe-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
+  },
+  "grocery-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "grocery-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "grocery-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 496,
+    "empty": false
+  },
+  "grocery-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
+  },
+  "harbor-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "harbor-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "harbor-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "harbor-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "dock-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "dock-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "dock-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "dock-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "workshop-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "workshop-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "workshop-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 496,
+    "empty": false
+  },
+  "workshop-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
+  },
+  "gym-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "gym-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "gym-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 496,
+    "empty": false
+  },
+  "gym-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
+  },
+  "market-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "market-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "market-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "market-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "bazaar-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "bazaar-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "bazaar-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "bazaar-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "secondhand-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "secondhand-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "secondhand-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 496,
+    "empty": false
+  },
+  "secondhand-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
+  },
+  "courtyard-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "courtyard-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "courtyard-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "courtyard-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "coast-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "coast-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "coast-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "coast-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "beach-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "beach-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "beach-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "beach-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "path-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "path-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "path-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "path-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "lighthouse-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "lighthouse-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "lighthouse-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 496,
+    "empty": false
+  },
+  "lighthouse-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
+  },
+  "hill-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "hill-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "hill-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "hill-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "garden-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "garden-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "garden-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "garden-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "camp-base": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 1088,
+    "empty": false
+  },
+  "camp-north": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "camp-side": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "camp-front": {
+    "x": 0,
+    "y": 0,
+    "width": 1,
+    "height": 1,
+    "empty": true
+  },
+  "weather-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "weather-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "weather-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 496,
+    "empty": false
+  },
+  "weather-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
+  },
+  "workshop-annex-1-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "workshop-annex-1-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "workshop-annex-1-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 496,
+    "empty": false
+  },
+  "workshop-annex-1-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
+  },
+  "workshop-annex-2-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "workshop-annex-2-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "workshop-annex-2-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 496,
+    "empty": false
+  },
+  "workshop-annex-2-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
+  }
+}

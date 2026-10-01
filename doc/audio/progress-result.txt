@@ -1,0 +1,9 @@
+{
+  "task_id": "mt_079717059cf463a85e03740b1f255397",
+  "request_id": "f79e5668-9fbd-400c-a01e-ddd7b36f8a60",
+  "kind": "sfx",
+  "duration_seconds": 1,
+  "timing_ms": 388,
+  "bytes": 8545,
+  "output": "/Users/yin/code/games/a-summer-in-harbor/public/audio/progress.mp3"
+}

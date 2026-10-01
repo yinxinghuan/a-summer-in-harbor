@@ -1,0 +1,7 @@
+{
+  "kind": "dimension-based RGBA estimate, not device memory measurement",
+  "beforeAllLayersMiB": 525.9375,
+  "afterCroppedMiB": 87.87582397460938,
+  "nonemptyLayers": 52,
+  "sourceDetailUnchanged": true
+}

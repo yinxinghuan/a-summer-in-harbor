@@ -1,0 +1,14 @@
+{
+  "request_id": "7dc71f8b-9090-4d0d-a693-b9bddef2da06",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Restrained richly detailed 16-bit pixel art with chunky clusters, muted coastal summer palette, dark outline. One complete small single-storey North American seaside cafe exterior as an isolated game-map building sprite. High elevated ORTHOGRAPHIC camera looking down50degrees, zero sideways yaw: front/back roof edges equal length and horizontal, depth edges vertical in image. No trapezoid, no vanishing point. White clapboard, warm terracotta gabled roof, mint green front door, two small front windows, folded cream awning, no sign lettering. Long axis horizontal. Door bottom at center front. Front facade is visibly shortened by steep camera, large roof plane visible. No ground, street, trees, furniture or cast shadow. Pure magenta #ff00ff background. Entire building visible.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

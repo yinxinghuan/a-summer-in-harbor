@@ -1,0 +1,9 @@
+{
+  "task_id": "mt_2420518d316680924b1c4b3445992eca",
+  "request_id": "1f9a429a-2066-4431-acae-7d8d2f990014",
+  "kind": "sfx",
+  "duration_seconds": 0.5,
+  "timing_ms": 581,
+  "bytes": 10012,
+  "output": "/Users/yin/code/games/a-summer-in-harbor/public/audio/step.mp3"
+}

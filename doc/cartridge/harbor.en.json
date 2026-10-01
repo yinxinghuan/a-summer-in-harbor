@@ -1,0 +1,1460 @@
+{
+  "schemaVersion": 1,
+  "id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "locale": "en",
+  "coverImage": "./poster.png",
+  "entryImage": "./poster.png",
+  "copy": {
+    "title": "A Summer in Harbor",
+    "subtitle": "Your first summer",
+    "promise": "Get to know the bay, and find your own pace.",
+    "enter": "Step into town",
+    "continue": "Continue your summer",
+    "customAction": "Ask a question",
+    "itemImagingTitle": "The details are taking shape",
+    "itemImagingBody": "You can read the clues now."
+  },
+  "theme": {
+    "outer": "#183f40",
+    "surface": "#2d4a46",
+    "paper": "#fff5df",
+    "ink": "#183f40",
+    "muted": "#64726e",
+    "accent": "#327e91",
+    "danger": "#bc674c",
+    "gold": "#e7bb70",
+    "material": "harbor"
+  },
+  "audioTheme": {
+    "material": "harbor",
+    "bpm": 76,
+    "rootHz": 130.81,
+    "scale": [
+      0,
+      2,
+      4,
+      7,
+      9
+    ],
+    "levels": {
+      "music": 1,
+      "ambient": 0,
+      "sfx": 0.7,
+      "master": 0.22
+    },
+    "tension": [],
+    "recorded": {
+      "music": {
+        "src": "./audio/town-a.mp3",
+        "gain": 1
+      },
+      "ambienceByLocationId": {
+        "harbor": {
+          "src": "./audio/coast.mp3",
+          "gain": 1
+        },
+        "coast": {
+          "src": "./audio/coast.mp3",
+          "gain": 1
+        },
+        "hill": {
+          "src": "./audio/hill.mp3",
+          "gain": 1
+        }
+      }
+    }
+  },
+  "statDefinitions": [
+    {
+      "id": "energy",
+      "label": "Energy",
+      "min": 0,
+      "max": 100,
+      "initial": 100,
+      "display": "bar",
+      "maxDelta": 100,
+      "description": "Repairs and fishing use energy. Rest at home for free. Below ten, bridge repairs wait; walking remains free."
+    },
+    {
+      "id": "cash",
+      "label": "Cash",
+      "min": 0,
+      "max": 999,
+      "initial": 25,
+      "display": "number",
+      "unit": "$",
+      "maxDelta": 999,
+      "description": "US dollars. A snack costs four; a fish earns six. The main route never requires payment."
+    },
+    {
+      "id": "standing",
+      "label": "Reputation",
+      "min": 0,
+      "max": 100,
+      "initial": 0,
+      "display": "bar",
+      "maxDelta": 100,
+      "description": "Grows by helping neighbors and completing practice. It never blocks exploration."
+    }
+  ],
+  "drawerLabels": {
+    "party": "People you know",
+    "map": "Around the bay",
+    "inventory": "Your bag",
+    "log": "Your journal"
+  },
+  "opening": {
+    "location": "Station Street",
+    "time": "Early summer · Afternoon",
+    "objective": "Say hello to the woman with the keys.",
+    "imagePrompt": "A newcomer arrives on a modest North American coastal street in summer.",
+    "blocks": [
+      {
+        "id": "arrival-0",
+        "kind": "narration",
+        "text": "The bus pulls away. You have one bag and a whole summer between jobs. You have never lived in this little harbor town before. Nothing urgent is waiting for you. Find a room, meet a few people, and see what kind of days you want to make."
+      },
+      {
+        "id": "arrival-1",
+        "kind": "narration",
+        "text": "You arranged a room before arriving. Your landlady is waiting along the street, turning a key in her hand. Use the round stick at the bottom left, or tap the ground to walk. When you are close enough, the action button will let you say hello."
+      }
+    ],
+    "choices": [
+      {
+        "id": "meet-mara",
+        "label": "Go and say hello"
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "mara",
+      "name": "Mara",
+      "role": "Woman with the keys",
+      "detail": "A woman in a linen shirt waves a key. “You must be my summer tenant. I’m Mara. Let’s put your bag down before you try to learn the whole town.”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "theo",
+      "name": "Theo",
+      "role": "Man drying a cup",
+      "detail": "The man behind the counter sets down a cup. His apron reads Theo. “Just arrived? Mara left her tool bag here. You’re welcome to sit a while.”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "june",
+      "name": "June",
+      "role": "Woman at the workbench",
+      "detail": "The woman at the workbench looks up. “June. Like the sign. Things break all year, though. Need to borrow something?”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "idris",
+      "name": "Idris",
+      "role": "Coach sorting gloves",
+      "detail": "A broad-shouldered man hangs up a pair of gloves. “Idris. Want to try the footwork? Learn to move first. Anyone here can call a stop.”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "ruth",
+      "name": "Ruth",
+      "role": "Angler at the pier",
+      "detail": "A woman in a faded canvas hat sets a spare rod against the rail. “Ruth. Mind the bucket—that’s lunch. Fancy a try?”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "luis",
+      "name": "Luis",
+      "role": "Shopkeeper restocking",
+      "detail": "The shopkeeper peeks over a crate of apples. “Luis. New face! Free tap water by the door. Don’t spend your whole first day’s money here.”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "nell",
+      "name": "Nell",
+      "role": "Shopkeeper sorting photographs",
+      "detail": "The grey-haired shopkeeper flattens a faded photograph. “Nell. Some things are too heavy to take and too dear to throw away. Look at this bridge.”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "elena",
+      "name": "Elena",
+      "role": "Resident watering flowers",
+      "detail": "A woman with a watering can stops inside the gate. “Elena. I know everyone wants a way to the sea. It’s also where my mother takes her afternoon nap.”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    },
+    {
+      "id": "arthur",
+      "name": "Arthur",
+      "role": "Man cleaning a weather vane",
+      "detail": "The older man removes his cap and taps a worn name badge: Arthur. “Used to measure the wind every day. Phones do it now. They don’t know the little path below us, though.”",
+      "vitality": 100,
+      "stress": 0,
+      "skills": [],
+      "hiddenUntilIntroduced": true
+    }
+  ],
+  "initialMap": [
+    {
+      "id": "station",
+      "label": "Station Street",
+      "current": true,
+      "visited": true
+    },
+    {
+      "id": "home",
+      "label": "Your Room",
+      "current": false,
+      "visited": false,
+      "connectedTo": "station"
+    },
+    {
+      "id": "cafe",
+      "label": "Tide & Table",
+      "current": false,
+      "visited": false,
+      "connectedTo": "station"
+    },
+    {
+      "id": "grocery",
+      "label": "Corner Grocer",
+      "current": false,
+      "visited": false,
+      "connectedTo": "station"
+    },
+    {
+      "id": "harbor",
+      "label": "The Harbor",
+      "current": false,
+      "visited": false
+    },
+    {
+      "id": "dock",
+      "label": "Fishing Pier",
+      "current": false,
+      "visited": false,
+      "connectedTo": "harbor"
+    },
+    {
+      "id": "workshop",
+      "label": "June’s Workshop",
+      "current": false,
+      "visited": false,
+      "connectedTo": "harbor"
+    },
+    {
+      "id": "gym",
+      "label": "Harbor Boxing Club",
+      "current": false,
+      "visited": false,
+      "connectedTo": "harbor"
+    },
+    {
+      "id": "market",
+      "label": "Market Lane",
+      "current": false,
+      "visited": false
+    },
+    {
+      "id": "bazaar",
+      "label": "Market Square",
+      "current": false,
+      "visited": false,
+      "connectedTo": "market"
+    },
+    {
+      "id": "secondhand",
+      "label": "Second Chances",
+      "current": false,
+      "visited": false,
+      "connectedTo": "market"
+    },
+    {
+      "id": "courtyard",
+      "label": "Residents’ Courtyard",
+      "current": false,
+      "visited": false,
+      "connectedTo": "market"
+    },
+    {
+      "id": "coast",
+      "label": "The Coast",
+      "current": false,
+      "visited": false
+    },
+    {
+      "id": "beach",
+      "label": "Shell Beach",
+      "current": false,
+      "visited": false,
+      "connectedTo": "coast"
+    },
+    {
+      "id": "path",
+      "label": "Coastal Path",
+      "current": false,
+      "visited": false,
+      "connectedTo": "coast"
+    },
+    {
+      "id": "lighthouse",
+      "label": "The Lighthouse",
+      "current": false,
+      "visited": false,
+      "connectedTo": "coast"
+    },
+    {
+      "id": "hill",
+      "label": "The Hill",
+      "current": false,
+      "visited": false
+    },
+    {
+      "id": "garden",
+      "label": "Hillside Garden",
+      "current": false,
+      "visited": false,
+      "connectedTo": "hill"
+    },
+    {
+      "id": "camp",
+      "label": "Pine Camp",
+      "current": false,
+      "visited": false,
+      "connectedTo": "hill"
+    },
+    {
+      "id": "weather",
+      "label": "Weather Station",
+      "current": false,
+      "visited": false,
+      "connectedTo": "hill"
+    },
+    {
+      "id": "workshop-annex-1",
+      "label": "Workshop annex 1",
+      "current": false,
+      "visited": false,
+      "connectedTo": "harbor"
+    },
+    {
+      "id": "workshop-annex-2",
+      "label": "Workshop annex 2",
+      "current": false,
+      "visited": false,
+      "connectedTo": "harbor"
+    }
+  ],
+  "initialInventory": [],
+  "initialFacts": {
+    "key": false,
+    "unpacked": false,
+    "market-open": false
+  },
+  "demoTurns": [],
+  "director": {
+    "mode": "open-world",
+    "maxActiveThreads": 3,
+    "choiceIntents": [
+      "Get to know someone",
+      "Try something hands-on",
+      "Explore another place"
+    ],
+    "fixedWorldRules": [
+      "A modern North American harbor town, using US dollars.",
+      "Introduce people visibly before showing their names.",
+      "Only the spatial adapter and authority confirm persistent outcomes."
+    ],
+    "generationRules": [
+      "Generate at most two side spaces from already read evidence.",
+      "No item awards, mainline changes or unseen named people."
+    ]
+  },
+  "domainRules": {
+    "rules": [
+      {
+        "id": "station/to-home/travel",
+        "intent": "Your Room",
+        "match": [
+          "station/to-home/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "station",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "home"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "station/to-cafe/travel",
+        "intent": "Tide & Table",
+        "match": [
+          "station/to-cafe/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "station",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "cafe"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "station/to-grocery/travel",
+        "intent": "Corner Grocer",
+        "match": [
+          "station/to-grocery/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "station",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "grocery"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "station/road-harbor/travel",
+        "intent": "The Harbor",
+        "match": [
+          "station/road-harbor/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "station",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "station/road-market/travel",
+        "intent": "Market Lane",
+        "match": [
+          "station/road-market/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "station",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "market"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "home/exit/travel",
+        "intent": "Station Street",
+        "match": [
+          "home/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "home",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "station"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "cafe/exit/travel",
+        "intent": "Station Street",
+        "match": [
+          "cafe/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "cafe",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "station"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "grocery/exit/travel",
+        "intent": "Station Street",
+        "match": [
+          "grocery/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "grocery",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "station"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/to-dock/travel",
+        "intent": "Fishing Pier",
+        "match": [
+          "harbor/to-dock/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "dock"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/to-workshop/travel",
+        "intent": "June’s Workshop",
+        "match": [
+          "harbor/to-workshop/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "workshop"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/to-gym/travel",
+        "intent": "Harbor Boxing Club",
+        "match": [
+          "harbor/to-gym/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "gym"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/road-station/travel",
+        "intent": "Station Street",
+        "match": [
+          "harbor/road-station/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "station"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/road-coast/travel",
+        "intent": "The Coast",
+        "match": [
+          "harbor/road-coast/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "coast"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "harbor/road-hill/travel",
+        "intent": "The Hill",
+        "match": [
+          "harbor/road-hill/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "harbor",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "dock/exit/travel",
+        "intent": "The Harbor",
+        "match": [
+          "dock/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "dock",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "workshop/exit/travel",
+        "intent": "The Harbor",
+        "match": [
+          "workshop/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "workshop",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "workshop/to-annex-1/travel",
+        "intent": "Workshop annex 1",
+        "match": [
+          "workshop/to-annex-1/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "workshop",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "workshop-annex-1"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "workshop/to-annex-2/travel",
+        "intent": "Workshop annex 2",
+        "match": [
+          "workshop/to-annex-2/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "workshop",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "workshop-annex-2"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "gym/exit/travel",
+        "intent": "The Harbor",
+        "match": [
+          "gym/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "gym",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "market/to-bazaar/travel",
+        "intent": "Market Square",
+        "match": [
+          "market/to-bazaar/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "market",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "bazaar"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "market/to-secondhand/travel",
+        "intent": "Second Chances",
+        "match": [
+          "market/to-secondhand/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "market",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "secondhand"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "market/to-courtyard/travel",
+        "intent": "Residents’ Courtyard",
+        "match": [
+          "market/to-courtyard/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "market",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "courtyard"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "market/road-station/travel",
+        "intent": "Station Street",
+        "match": [
+          "market/road-station/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "market",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "station"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "market/road-hill/travel",
+        "intent": "The Hill",
+        "match": [
+          "market/road-hill/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "market",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "bazaar/exit/travel",
+        "intent": "Market Lane",
+        "match": [
+          "bazaar/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "bazaar",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "market"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "secondhand/exit/travel",
+        "intent": "Market Lane",
+        "match": [
+          "secondhand/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "secondhand",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "market"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "courtyard/exit/travel",
+        "intent": "Market Lane",
+        "match": [
+          "courtyard/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "courtyard",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "market"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "coast/to-beach/travel",
+        "intent": "Shell Beach",
+        "match": [
+          "coast/to-beach/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "coast",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "beach"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "coast/to-path/travel",
+        "intent": "Coastal Path",
+        "match": [
+          "coast/to-path/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "coast",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "path"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "coast/to-lighthouse/travel",
+        "intent": "The Lighthouse",
+        "match": [
+          "coast/to-lighthouse/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "coast",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "lighthouse"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "coast/road-harbor/travel",
+        "intent": "The Harbor",
+        "match": [
+          "coast/road-harbor/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "coast",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "coast/road-hill/travel",
+        "intent": "The Hill",
+        "match": [
+          "coast/road-hill/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "coast",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "beach/exit/travel",
+        "intent": "The Coast",
+        "match": [
+          "beach/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "beach",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "coast"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "path/exit/travel",
+        "intent": "The Coast",
+        "match": [
+          "path/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "path",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "coast"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "lighthouse/exit/travel",
+        "intent": "The Coast",
+        "match": [
+          "lighthouse/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "lighthouse",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "coast"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "hill/to-garden/travel",
+        "intent": "Hillside Garden",
+        "match": [
+          "hill/to-garden/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "garden"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "hill/to-camp/travel",
+        "intent": "Pine Camp",
+        "match": [
+          "hill/to-camp/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "camp"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "hill/to-weather/travel",
+        "intent": "Weather Station",
+        "match": [
+          "hill/to-weather/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "weather"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "hill/road-market/travel",
+        "intent": "Market Lane",
+        "match": [
+          "hill/road-market/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "market"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "hill/road-harbor/travel",
+        "intent": "The Harbor",
+        "match": [
+          "hill/road-harbor/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "harbor"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "hill/road-coast/travel",
+        "intent": "The Coast",
+        "match": [
+          "hill/road-coast/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "hill",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "coast"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "garden/exit/travel",
+        "intent": "The Hill",
+        "match": [
+          "garden/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "garden",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "camp/exit/travel",
+        "intent": "The Hill",
+        "match": [
+          "camp/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "camp",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "weather/exit/travel",
+        "intent": "The Hill",
+        "match": [
+          "weather/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "weather",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "hill"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "workshop-annex-1/exit/travel",
+        "intent": "June’s Workshop",
+        "match": [
+          "workshop-annex-1/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "workshop-annex-1",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "workshop"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      },
+      {
+        "id": "workshop-annex-2/exit/travel",
+        "intent": "June’s Workshop",
+        "match": [
+          "workshop-annex-2/exit/travel"
+        ],
+        "matchMode": "exact",
+        "requirements": [
+          {
+            "type": "map",
+            "nodeId": "workshop-annex-2",
+            "reason": "Walk to the place containing the entrance."
+          }
+        ],
+        "effects": [
+          {
+            "type": "map",
+            "nodeId": "workshop"
+          }
+        ],
+        "successText": "You pass through to the next place.",
+        "successChoices": []
+      }
+    ]
+  }
+}

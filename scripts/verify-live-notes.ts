@@ -1,0 +1,12 @@
+/** Explicit developer QA journey; never writes a player's preview save. */
+import {randomUUID} from 'node:crypto';import {mkdirSync,writeFileSync} from 'node:fs';
+import {initial,type Save,type Action} from '../src/story/state';import {entityAt,rooms} from '../src/world/data';import {GAME_UUID} from '../src/game-id';import {createRuntime} from '../server/runtime';import {createFieldNotes} from '../server/fieldnotes';
+// @ts-expect-error pinned skill library
+import {AsyncSessionAuthority,openAsyncSqliteAuthorityStore} from '../vendor/dynamic-runtime/packages/authority-session/async.mjs';
+mkdirSync('.data',{recursive:true});const store=openAsyncSqliteAuthorityStore({path:'.data/live-notes-qa.sqlite',worldId:GAME_UUID,gameId:GAME_UUID});
+try{const notes=await createFieldNotes(store);const runtime=createRuntime(undefined,notes);runtime.initial=(locale:any,id:string)=>({...initial(locale,id),scene:'workshop',position:rooms.workshop.spawn,known:['june'],flags:['unpacked','bridge-seen'],items:{toolkit:1},history:[{id:'qa-known-bridge',kind:'action',text:['两块桥板断了，下面的支撑还很牢。可以修，也可以找别的路。','Two boards have split. The supports below are sound. You could repair it—or find another route.']},{id:'qa-known-tools',kind:'talk',person:'june',text:['琼把工具借给你，请你用完送回来。','June lends you a toolkit and asks you to bring it back when you are done.']}]});
+const auth=new AsyncSessionAuthority(store,runtime),owner='developer-live-notes-test-v4';let s:Save;const prior=await auth.directory(owner);s=prior.length?await auth.get(owner,prior[0].id):await auth.create(owner,'harbor-notes-live-enrollment-v4','en');
+const perform=async(target:string,action:string)=>{const body:Action={action_id:action==='notes-generate'?`harbor-live-notes-${(s.fieldNotes?.depth??0)+1}-v4`:randomUUID(),expected_version:s.version,scene:s.scene,position:entityAt(s.scene,target)?.approach??s.position,target,action};s=(await auth.action(owner,s.id,body)).head;console.log(action,s.scene,s.version)};
+for(let n=(s.fieldNotes?.depth??0)+1;n<=2;n++){await perform('june','notes-generate');await perform('to-annex-'+n,'travel');await perform('observation-a','notes-observe');await perform('observation-b','notes-observe');await perform('exit','travel')}
+mkdirSync('doc/qa',{recursive:true});writeFileSync('doc/qa/live-fieldnotes-v4.json',JSON.stringify({at:new Date().toISOString(),fixtureSource:true,liveModel:true,realRenderer:false,head:s},null,2));console.log('Recorded live model + compiler + authority evidence');
+}finally{await store.close()}

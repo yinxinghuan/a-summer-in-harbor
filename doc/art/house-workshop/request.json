@@ -1,0 +1,14 @@
+{
+  "request_id": "2c3fa605-2720-4846-b39d-0d7fd1db8931",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single isolated game asset. High quality 16-bit pixel art, restrained dark outlines, warm coastal summer palette, soft upper-left light. Elevated ORTHOGRAPHIC camera at 50 degrees looking down, zero sideways yaw. Parallel edges, equal scale near and far. Front and back edges perfectly horizontal, depth edges vertical on screen. No vanishing point, no trapezoidal surfaces. Uniform pure magenta #ff00ff background, no floor, people, shadow or text. Complete object with generous margins. Small single-story coastal bicycle repair workshop, salt-white clapboard, blue low gabled roof, wide open-looking but dark front bay, small bicycle wheel sign, tool shelves visible in bay, weathered useful details. Building facade front-facing centered.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

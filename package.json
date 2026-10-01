@@ -1,0 +1,46 @@
+{
+  "name": "a-summer-in-harbor",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5234 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5235 --strictPort",
+    "test": "node --import tsx --test _qa/*.test.ts",
+    "server": "node scripts/authoring.mjs",
+    "export:cartridge": "node --import tsx scripts/export-cartridge.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "An open coastal town, everyday discoveries and reusable action encounters",
+  "devDependencies": {
+    "@canvasengine/compiler": "2.2.0",
+    "@resvg/resvg-js": "2.6.2",
+    "@types/node": "22.19.15",
+    "@types/react": "18.3.28",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "fake-indexeddb": "^6.2.5",
+    "path-browserify": "^1.0.1",
+    "playwright": "1.58.2",
+    "tsx": "4.23.0",
+    "typescript": "5.9.3",
+    "vite": "8.0.16"
+  },
+  "private": true,
+  "dependencies": {
+    "@canvasengine/presets": "2.2.0",
+    "@rpgjs/client": "5.0.0-beta.34",
+    "@rpgjs/common": "5.0.0-beta.31",
+    "@rpgjs/server": "5.0.0-beta.34",
+    "@rpgjs/tiledmap": "5.0.0-beta.34",
+    "@rpgjs/ui-css": "5.0.0-beta.26",
+    "@signe/di": "^3.1.1",
+    "canvasengine": "2.2.0",
+    "pixi.js": "^8.20.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "type": "module"
+}

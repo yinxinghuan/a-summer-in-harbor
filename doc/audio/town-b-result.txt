@@ -1,0 +1,9 @@
+{
+  "task_id": "mt_9fbd1116c4d6039c0bc577a34df944f4",
+  "request_id": "bb94f313-db03-48ba-8309-3d2f85de0733",
+  "kind": "music",
+  "duration_seconds": 45,
+  "timing_ms": 2345,
+  "bytes": 768217,
+  "output": "/Users/yin/code/games/a-summer-in-harbor/public/audio/town-b.mp3"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@alteru/rule-compiler",
+  "version": "0.1.0-dev.1",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "exports": { ".": "./index.mjs", "./game-definition": "./src/game-definition.mjs" },
+  "files": ["index.mjs", "src", "README.md"]
+}

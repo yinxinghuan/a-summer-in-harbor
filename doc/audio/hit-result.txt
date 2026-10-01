@@ -1,0 +1,9 @@
+{
+  "task_id": "mt_d48307256c26bd7721a8546e2708c7d1",
+  "request_id": "9ba4ef6d-b8a0-4532-b76b-07fc01d45871",
+  "kind": "sfx",
+  "duration_seconds": 0.5,
+  "timing_ms": 404,
+  "bytes": 10013,
+  "output": "/Users/yin/code/games/a-summer-in-harbor/public/audio/hit.mp3"
+}

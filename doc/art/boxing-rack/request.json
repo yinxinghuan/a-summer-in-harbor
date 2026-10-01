@@ -1,0 +1,14 @@
+{
+  "request_id": "8ddf1d72-2dbd-48c2-8540-01aa4c607910",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Premium compact 16-bit pixel-art game object, warm seaside summer palette and restrained dark pixel outlines. Elevated orthographic camera looking down 50 degrees, no vanishing point. Front edges perfectly horizontal, world-depth edges parallel vertical in screen, no side yaw. Single complete isolated object, flat pure magenta #ff00ff background, no cast shadow or surroundings. A low dark teal wooden gym bench with a pair of coral boxing gloves and folded cream towel lying naturally ON the bench. Parallel horizontal and vertical tabletop edges, tiny metal feet.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

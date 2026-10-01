@@ -1,0 +1,240 @@
+{
+  "at": "2026-09-30T21:10:56.870Z",
+  "fixtureSource": true,
+  "liveModel": true,
+  "realRenderer": false,
+  "head": {
+    "id": "ec551bd7-3b9c-49e6-a3a3-e6fc28804106",
+    "version": 10,
+    "cursor": 10,
+    "mapVersion": 1,
+    "locale": "en",
+    "scene": "workshop",
+    "position": {
+      "x": 612,
+      "y": 257
+    },
+    "flags": [
+      "unpacked",
+      "bridge-seen"
+    ],
+    "known": [
+      "june"
+    ],
+    "visited": [
+      "station",
+      "workshop-annex-1",
+      "workshop",
+      "workshop-annex-2"
+    ],
+    "items": {
+      "toolkit": 1
+    },
+    "energy": 100,
+    "cash": 25,
+    "standing": 0,
+    "relations": {},
+    "history": [
+      {
+        "id": "qa-known-bridge",
+        "kind": "action",
+        "text": [
+          "两块桥板断了，下面的支撑还很牢。可以修，也可以找别的路。",
+          "Two boards have split. The supports below are sound. You could repair it—or find another route."
+        ]
+      },
+      {
+        "id": "qa-known-tools",
+        "kind": "talk",
+        "person": "june",
+        "text": [
+          "琼把工具借给你，请你用完送回来。",
+          "June lends you a toolkit and asks you to bring it back when you are done."
+        ]
+      },
+      {
+        "id": "harbor-live-notes-1-v2",
+        "kind": "action",
+        "text": [
+          "琼给你指了指工作台后的通道。可以进去看看，也可以稍后再来。",
+          "June points out a passage behind the workbench. You can take a look now or come back later."
+        ]
+      },
+      {
+        "id": "85b3d54a-fc75-4d25-9043-354d75458b90",
+        "kind": "action",
+        "text": [
+          "你来到修理铺后的小储藏间。",
+          "You arrive at Small Storage Behind Workshop."
+        ]
+      },
+      {
+        "id": "8eefb0a6-edc3-4334-b96b-28cf0f58c5ed",
+        "kind": "action",
+        "text": [
+          "你注意到木材上的裂纹和旧钉孔，推测这些只是教学用残片，不适合实用修补。",
+          "You notice cracks and old nail holes on the wood, concluding these are just teaching remnants, unsuitable for real repairs."
+        ]
+      },
+      {
+        "id": "a6b35bcb-a292-4622-93c2-835cf48e3cd8",
+        "kind": "action",
+        "text": [
+          "木头边缘微微膨胀，说明这里的空气湿度很高，进一步证明需要耐潮湿的材料修桥。",
+          "The wood edges swell slightly, showing high humidity here, reinforcing the need for moisture-resistant materials for the bridge."
+        ]
+      },
+      {
+        "id": "c2654b39-1c64-4f40-aeae-fdbf8420c68d",
+        "kind": "action",
+        "text": [
+          "你来到六月修理铺。",
+          "You arrive at June’s Workshop."
+        ]
+      },
+      {
+        "id": "harbor-live-notes-2-v2",
+        "kind": "action",
+        "text": [
+          "琼给你指了指工作台后的通道。可以进去看看，也可以稍后再来。",
+          "June points out a passage behind the workbench. You can take a look now or come back later."
+        ]
+      },
+      {
+        "id": "750df3a0-22fc-446d-88af-50bd182293ed",
+        "kind": "action",
+        "text": [
+          "你来到修理铺后的小角落。",
+          "You arrive at Cozy Nook Behind Workshop."
+        ]
+      },
+      {
+        "id": "15bdeec6-917b-4dae-98da-446e183f5359",
+        "kind": "action",
+        "text": [
+          "你发现木料的边角磨损均匀，确认它们仅供教学示范，无法用作修桥材料。",
+          "You find the wood’s edges evenly worn, confirming these are teaching samples unsuitable for bridge repair."
+        ]
+      },
+      {
+        "id": "f1804fd0-9735-4011-a176-e33b5d351213",
+        "kind": "action",
+        "text": [
+          "拖鞋印迹指向外面潮湿的海边，说明这里的空气湿度持续，木材膨胀和腐蚀风险较高。",
+          "The slipper print leads outside to the damp seaside, showing that humidity persists here, raising risks of wood swelling and decay."
+        ]
+      },
+      {
+        "id": "17871248-aad9-4680-9577-37e5fbd911a7",
+        "kind": "action",
+        "text": [
+          "你来到六月修理铺。",
+          "You arrive at June’s Workshop."
+        ]
+      }
+    ],
+    "fieldNotes": {
+      "artifact": "f5645005f6a2d3bd4ff10d737ea34dcef55cee1a187783914f6f0a66c3ef2eb1",
+      "depth": 2,
+      "rooms": [
+        {
+          "id": "workshop-annex-1",
+          "title": [
+            "修理铺后的小储藏间",
+            "Small Storage Behind Workshop"
+          ],
+          "detail": [
+            "这里堆放着几片破损的木材样本，表面布满旧钉孔和裂纹。潮湿的海风让木头边缘略微膨胀，说明常年暴露在潮湿环境中。",
+            "Here lie several damaged wooden samples, marked with old nail holes and cracks. The edges swell slightly from damp sea air, indicating long-term exposure to moist conditions."
+          ],
+          "observations": [
+            {
+              "id": "slot-766014396ac6-inspect-a",
+              "label": [
+                "检查木材样本的状况",
+                "Examine Wooden Samples"
+              ],
+              "text": [
+                "你注意到木材上的裂纹和旧钉孔，推测这些只是教学用残片，不适合实用修补。",
+                "You notice cracks and old nail holes on the wood, concluding these are just teaching remnants, unsuitable for real repairs."
+              ],
+              "read": true
+            },
+            {
+              "id": "slot-766014396ac6-inspect-b",
+              "label": [
+                "观察木材受潮的迹象",
+                "Observe Dampness Signs on Wood"
+              ],
+              "text": [
+                "木头边缘微微膨胀，说明这里的空气湿度很高，进一步证明需要耐潮湿的材料修桥。",
+                "The wood edges swell slightly, showing high humidity here, reinforcing the need for moisture-resistant materials for the bridge."
+              ],
+              "read": true
+            }
+          ]
+        },
+        {
+          "id": "workshop-annex-2",
+          "title": [
+            "修理铺后的小角落",
+            "Cozy Nook Behind Workshop"
+          ],
+          "detail": [
+            "这里堆放着几块小木料，边角处有磨损痕迹，显示它们常被用作教学示范而非实用材料。",
+            "Several small wood pieces rest here, their worn edges showing frequent use as teaching samples, not for practical repair."
+          ],
+          "observations": [
+            {
+              "id": "slot-a54a613e27bd-inspect-a",
+              "label": [
+                "检查木料的磨损痕迹",
+                "Inspect Wear on Wood Samples"
+              ],
+              "text": [
+                "你发现木料的边角磨损均匀，确认它们仅供教学示范，无法用作修桥材料。",
+                "You find the wood’s edges evenly worn, confirming these are teaching samples unsuitable for bridge repair."
+              ],
+              "read": true
+            },
+            {
+              "id": "slot-a54a613e27bd-inspect-b",
+              "label": [
+                "观察拖鞋印迹与潮湿路径",
+                "Observe Slipper Print and Damp Path"
+              ],
+              "text": [
+                "拖鞋印迹指向外面潮湿的海边，说明这里的空气湿度持续，木材膨胀和腐蚀风险较高。",
+                "The slipper print leads outside to the damp seaside, showing that humidity persists here, raising risks of wood swelling and decay."
+              ],
+              "read": true
+            }
+          ]
+        }
+      ],
+      "state": {
+        "location": "workshop",
+        "stats": {
+          "energy": 100,
+          "cash": 25,
+          "standing": 0
+        },
+        "facts": {
+          "source-known": true,
+          "notebook-complete": false,
+          "slot-766014396ac6-read-a": true,
+          "slot-766014396ac6-read-b": true,
+          "sys-dyn-done-b2a36bd7c147d441": true,
+          "sys-dyn-done-f900195c303ee786": true,
+          "slot-a54a613e27bd-read-a": true,
+          "slot-a54a613e27bd-read-b": true,
+          "sys-dyn-done-72efcb60e5d58531": true,
+          "sys-dyn-done-943a32a04c991f66": true
+        },
+        "inventory": [],
+        "characters": [],
+        "danger_phase": "calm"
+      }
+    }
+  }
+}

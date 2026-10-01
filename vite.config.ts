@@ -1,0 +1,2 @@
+import {defineConfig} from 'vite';import canvasengine from '@canvasengine/compiler';
+export default defineConfig({base:'./',plugins:[canvasengine()],resolve:{dedupe:['@signe/reactive','@signe/di','canvasengine','pixi.js','@rpgjs/common']},optimizeDeps:{include:['pixi.js > @xmldom/xmldom']},preview:{proxy:{'^/[0-9a-f-]{36}/api/':{target:'http://127.0.0.1:5236',rewrite:p=>p.replace(/^\/[0-9a-f-]{36}/,'')}}},server:{proxy:{'^/[0-9a-f-]{36}/api/':{target:'http://127.0.0.1:5236',rewrite:p=>p.replace(/^\/[0-9a-f-]{36}/,'')}}}});

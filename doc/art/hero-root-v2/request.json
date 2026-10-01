@@ -1,0 +1,14 @@
+{
+  "request_id": "5a06415a-4e57-4230-af86-4261988a3b98",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Restrained richly detailed 16-bit pixel art, consistent chunky clusters, dark outlines, muted warm coastal palette. ONE compact adult RPG walking-map character, standing facing screen bottom, steep elevated 50 degree orthographic view. The camera sees a large crown of dark-brown wavy hair; face vertically foreshortened, shoulders and shoe tops visible from above. Strong 3 HEAD TOTAL HEIGHT proportion (head occupies one third of sprite height), compact stocky game sprite rather than realistic anatomy or portrait. Sea-teal open overshirt, cream t-shirt, sand trousers, brown shoes. Hands at sides, both feet side by side. Single centered isolated whole body on pure magenta #ff00ff, no ground/shadow/text. The head is much larger relative to body than a realistic person, but adult facial appearance age28. Do not draw a tall six-head human.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

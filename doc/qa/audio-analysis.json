@@ -1,0 +1,124 @@
+{
+  "files": [
+    {
+      "file": "public/audio/town-a.mp3",
+      "duration": 45.0,
+      "streams": [
+        {
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "meanDb": -22.1,
+      "peakDb": -2.5,
+      "longSilence": []
+    },
+    {
+      "file": "public/audio/town-b.mp3",
+      "duration": 45.0,
+      "streams": [
+        {
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "meanDb": -22.4,
+      "peakDb": -2.4,
+      "longSilence": []
+    },
+    {
+      "file": "public/audio/coast.mp3",
+      "duration": 45.0,
+      "streams": [
+        {
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "meanDb": -21.5,
+      "peakDb": -3.3,
+      "longSilence": []
+    },
+    {
+      "file": "public/audio/hit.mp3",
+      "duration": 0.5,
+      "streams": [
+        {
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "meanDb": -23.5,
+      "peakDb": -14.4,
+      "longSilence": []
+    },
+    {
+      "file": "public/audio/hill.mp3",
+      "duration": 45.0,
+      "streams": [
+        {
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "meanDb": -21.4,
+      "peakDb": -6.8,
+      "longSilence": []
+    },
+    {
+      "file": "public/audio/door.mp3",
+      "duration": 0.699977,
+      "streams": [
+        {
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "meanDb": -23.3,
+      "peakDb": -13.5,
+      "longSilence": []
+    },
+    {
+      "file": "public/audio/step.mp3",
+      "duration": 0.5,
+      "streams": [
+        {
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "meanDb": -29.5,
+      "peakDb": -19.7,
+      "longSilence": []
+    },
+    {
+      "file": "public/audio/practice.mp3",
+      "duration": 45.0,
+      "streams": [
+        {
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "meanDb": -21.5,
+      "peakDb": -6.4,
+      "longSilence": []
+    },
+    {
+      "file": "public/audio/progress.mp3",
+      "duration": 1.0,
+      "streams": [
+        {
+          "sample_rate": "44100",
+          "channels": 2
+        }
+      ],
+      "meanDb": -22.4,
+      "peakDb": -4.4,
+      "longSilence": []
+    }
+  ],
+  "masterGain": 0.22,
+  "crossfadeSeconds": 2,
+  "perceptualListening": "not established by numeric analysis"
+}

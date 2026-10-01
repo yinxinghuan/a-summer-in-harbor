@@ -1,0 +1,6 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import vm from 'node:vm';
+test('two deployed UUIDs isolate browser storage and clear leaves shell login intact',()=>{
+ const values=new Map<string,string>([['shell-login','untouched']]);const storage={get length(){return values.size},key:(i:number)=>[...values.keys()][i]??null,getItem:(k:string)=>values.get(k)??null,setItem:(k:string,v:string)=>values.set(k,v),removeItem:(k:string)=>values.delete(k)};
+ const install=(id:string)=>{const window:any={localStorage:storage,sessionStorage:storage,__GAME_UUID__:'source-uuid'};vm.runInNewContext(readFileSync('public/alteru-storage-scope.js','utf8'),{window,location:{hostname:'game.aiwaves.tech',pathname:`/${id}/`,host:'game.aiwaves.tech'},document:{currentScript:null,querySelector:()=>null}});return window.alteruLocalStorage};
+ const a=install('11111111-1111-4111-8111-111111111111'),b=install('22222222-2222-4222-8222-222222222222');a.setItem('journey','a');assert.equal(b.getItem('journey'),null);b.setItem('journey','b');a.clear();assert.equal(b.getItem('journey'),'b');assert.equal(storage.getItem('shell-login'),'untouched');assert.equal(a.length,0);
+});
