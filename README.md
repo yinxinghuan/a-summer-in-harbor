@@ -19,7 +19,7 @@ npm run dev
 
 ## 状态与证据
 
-首章、室内外美术与像素 UI 已完成，正式发布验收中。不是多人世界或无限生成承诺。素材由平台服务新制，没有读旧游戏图片作为参考；同轮角色/门派生有明确记录。
+首章、室内外美术与像素 UI 已完成，主站部署及真实后台验证通过；平台列表入库状态见发布验收记录。不是多人世界或无限生成承诺。素材由平台服务新制，没有读旧游戏图片作为参考；同轮角色/门派生有明确记录。
 
 已获上线授权，发布接头与镜像入口正在准备；已获批复用现有 ECS/PG 并暂用当前浏览器续玩，详见 [发布状态](doc/release-readiness.md) 和 [部署合同](deploy/README.md)。
 
@@ -34,3 +34,7 @@ npm run dev
 ## 服务端构建
 
 `node scripts/bundle-public.mjs` 生成 Linux 可用的 `dist-server/`（目标 Node22），不含私有配置。生产在既有 Node22/SWI 镜像的独立海湾层补充 Pillow；本地前端构建继续用 Node24。
+
+正式主站：https://game.aiwaves.tech/e78df027-7ef4-4d49-82eb-ea91f03d9fb3/
+
+前端镜像：https://yinxinghuan.github.io/a-summer-in-harbor/ （仅前端，开始旅程前往正式主站）

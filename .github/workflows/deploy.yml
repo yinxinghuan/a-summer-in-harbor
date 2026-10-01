@@ -1,7 +1,7 @@
 name: Deploy frontend mirror
 on:
   push:
-    branches: [master]
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read

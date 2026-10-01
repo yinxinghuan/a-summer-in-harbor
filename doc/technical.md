@@ -96,3 +96,7 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 ## 章节回顾补充 · 2026-10-02
 
 `src/story/chapter.ts`从权威market-open和route-choice标记生成只读回顾；`src/ui/ChapterReview.tsx`呈现，本作main.tsx提供菜单/告示入口和固定继续探索按钮。open-route首次权威提交冻结route-choice，旧档不臆测历史选择。`_qa/chapter-completion.test.ts`完整走三种合法路线，检查回执重放、数据库重开、角色隔离和后续修桥不改原决定；可显式输出不含真实玩家的QA布局夹具。
+
+
+## 发布运行环境（2026-10-02）
+前端仍Node24构建；服务端用esbuild目标Node22，冻结vendor目录作为外部模块原样携带，避免Prolog resolver路径和CLI入口判定因打包变化。实际服务器Node22.22.2/SWI10.0.2/Pillow，非root容器，独立harbor_game/kit_harbor，运行角色无DDL。平台同UUID Worker以私有绑定访问海湾专用HTTPS路径；现有预算保护保持，无新购。账号暂为明确获准browser capability，30日cookie在bootstrap续期，非AlterU账号认证。

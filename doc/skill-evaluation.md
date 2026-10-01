@@ -64,3 +64,7 @@
 - 采用 create-rpg-game 的 free-dialogue-onboarding 与 dialogue-continuity，新增知识前提、明确翻页、关闭/刷新恢复、真实自由提问与失败恢复；本地27测试、两尺寸、中英文真实请求通过，详见 `qa/dialogue-onboarding-20261001.md`。这说明本作已应用规则，不代表用户理解或所有游戏自动通过。
 - 发现跨技能身份表述需要统一：旧 rpg-story-session-production 的 capability 云同步建议与 get/data/list 的跨用户可见性相冲突；game-persistence 的“跨设备存档”不能自动等同于本作 PG 账号认证。旧平台代理 resolveVerifiedActor 有可复用边界，但仍需真实验证器。
 - 本次未向共享技能登记“真实账号接入已交付”；用户要求实际跨设备与不同账号通过后再写回，这一验收尚未完成。历史证据索引在 `account-storage-integration.md`。
+
+
+## 2026-10-02 Linux/PG 实机暴露的发布缺口
+本机SQLite、TS直跑全部通过仍不足以证明部署产物。此次补充验收发现：(1)打包改变import.meta后规则resolver丢失；生产应保留冻结模块目录和相邻Prolog文件，或显式传经过校验的资源路径；(2)PG BIGINT可能返回字符串，状态开关不能直接用truthiness判断，尤其"0"；(3)至少完成一次真实生成→规则准入→进入→有序观察→退出→重读，而不是只测生成成功。海湾在原请求ID/同一生成内容上修复后完整通过，未放宽规则或重置存档。上述写入本项目评估；共享技能核心尚未修改，不能说所有消费者自动获得修复。

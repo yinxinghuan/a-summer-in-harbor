@@ -1,0 +1,17 @@
+{
+  "request_id": "ae311102-76e7-4d01-8991-c2d19cdd252b",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "mode": "edit",
+  "reference_urls": [
+    "https://game.aiwaves.tech/e78df027-7ef4-4d49-82eb-ea91f03d9fb3/poster.png"
+  ],
+  "prompt": "Preserve this original coastal pixel-art illustration and the same adult newcomer, village, bay, cafe, pier and lighthouse. This is the official square game cover. Add clearly readable handsome cream pixel-lettered title A SUMMER IN HARBOR in the TOP quarter, arranged on two or three lines against a restrained deep-teal solid pixel-edged sign or title plaque for high contrast. Keep the hero and bay visible below. No other text, logos, badges or UI. Title must be readable at 160px thumbnail. Preserve warm welcoming summer atmosphere and crisp pixel clusters. Bottom 20 percent is quiet visual support, not title. 1024x1024.",
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "background": "opaque",
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "n": 1
+}

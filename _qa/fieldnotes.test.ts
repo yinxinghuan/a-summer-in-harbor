@@ -8,7 +8,8 @@ const intent=(s:Save,target:string,action:string):Action=>({action_id:randomUUID
 test('two generated notebook visits: compiled rules, safe return, read-only main story, idempotency and isolation',async()=>{
  const store=openAsyncSqliteAuthorityStore({worldId:'harbor-notes-test',gameId:'harbor-notes-test'});let generations=0,calls=0;
  try{
- const notes=await createFieldNotes(store,{directory:'/tmp/harbor-notes-rules-test',gateway:{call:async({purpose}:any)=>{calls++;return JSON.stringify(purpose==='generation'?draft(++generations):{passed:true,reasons:[]})}}});
+ const pgStyleStore={...store,transaction:(fn:any)=>store.transaction((tx:any)=>fn({...tx,artifact:async(...args:any[])=>{const row=await tx.artifact(...args);return row?{...row,revoked:String(row.revoked)}:row}}))};
+ const notes=await createFieldNotes(pgStyleStore,{directory:'/tmp/harbor-notes-rules-test',gateway:{call:async({purpose}:any)=>{calls++;return JSON.stringify(purpose==='generation'?draft(++generations):{passed:true,reasons:[]})}}});
  const adapter=createRuntime(undefined,notes);adapter.initial=(locale:any,id:string)=>({...initial(locale,id),scene:'workshop',position:rooms.workshop.spawn,known:['june'],flags:['unpacked','bridge-seen'],items:{toolkit:1}});
  const auth=new AsyncSessionAuthority(store,adapter);let s:Save=await auth.create('owner-a',randomUUID(),'en');const original={items:s.items,flags:s.flags,energy:s.energy,cash:s.cash,standing:s.standing};
  const first=intent(s,'june','notes-generate');s=(await auth.action('owner-a',s.id,first)).head;assert.equal(s.fieldNotes!.depth,1);assert.equal(calls,2);

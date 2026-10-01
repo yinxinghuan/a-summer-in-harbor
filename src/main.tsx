@@ -1,3 +1,4 @@
+import './game-id';
 import {ChapterReview} from './ui/ChapterReview';
 import {draftKey,readingKey,restoreReading,hasAsked} from './story/dialogue-reading';
 import {cartridge} from './story/cartridge';

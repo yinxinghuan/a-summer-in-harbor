@@ -1,0 +1,8 @@
+{
+  "mode": "edit",
+  "reference": "current game original poster",
+  "oldGameReference": false,
+  "output": "public/poster.png",
+  "sha256": "e17c19f750899698e7f4658d1b8feb3cf6e9d0c48f194517284e5aace78b30ef",
+  "review": "1024 original and 160 thumbnail inspected; readable English title"
+}
