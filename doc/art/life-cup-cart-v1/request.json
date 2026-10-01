@@ -1,0 +1,14 @@
+{
+  "request_id": "b16e1244-fc10-4212-8069-d11db7a5fb2b",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single isolated independent game prop for a relaxed North American seaside town. Restrained polished 16-bit pixel art, crisp small pixel clusters, fine dark outline, muted sage green and honey oak, soft upper-left light. Elevated ORTHOGRAPHIC downward camera50 degrees, zero sideways yaw. Parallel horizontal edges have exactly equal length, depth edges parallel vertical, no trapezoid, vanishing point or diagonal room view. No floor plane, room, horizon, text or cast shadow. Complete object on flat pure magenta #ff00ff with margins. Small two-level honey wood cafe cleanup trolley, muted teal frame, two used cream mugs and a plate with a few crumbs on upper tray, folded wiping cloth on one edge, clean stacked plates on bottom tray, small caster wheels. The objects rest on trays, nothing floats.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

@@ -1,0 +1,18 @@
+{
+  "mode": "text",
+  "reference_count": 0,
+  "model": "gpt-image-2.5-sunburst",
+  "keys": [
+    "tree-pine-v3",
+    "tree-birch-v3",
+    "tree-coastal-v3",
+    "bench-back-v3",
+    "bench-side-v3",
+    "trail-sign-v3",
+    "floor-grass-v3"
+  ],
+  "status": "accepted in current runtime scene scale",
+  "evidence": "doc/qa/outdoor-ui-20261001.md",
+  "references": "No reference image supplied. All seven source requests are text-only.",
+  "preparation": "scripts/prepare-outdoor-refresh.py; chroma key + crop + uniform nearest scale for sprites; decode-only for grass"
+}

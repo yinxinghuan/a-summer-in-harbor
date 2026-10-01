@@ -58,3 +58,9 @@
 ### 最终界面复验补记
 
 宽屏小房间不能依赖 Pixi `underflow:center` 自动理解自定义房间边界：它检查的是整个 world。应在视口大于房间的轴上对称扩展 clamp 边界，复验各尺寸与移动。场景 DOM `overflow:hidden` 仍能被焦点滚动，非滚动世界应使用 `overflow:clip`，防止 offscreen portal 的 focus/scrollIntoView 把画布移走。两项已经用于本游戏并截图，作为本地补充候选，不宣称已写回全部技能副本。
+
+## 2026-10-01 最新对白技能复验
+
+- 采用 create-rpg-game 的 free-dialogue-onboarding 与 dialogue-continuity，新增知识前提、明确翻页、关闭/刷新恢复、真实自由提问与失败恢复；本地27测试、两尺寸、中英文真实请求通过，详见 `qa/dialogue-onboarding-20261001.md`。这说明本作已应用规则，不代表用户理解或所有游戏自动通过。
+- 发现跨技能身份表述需要统一：旧 rpg-story-session-production 的 capability 云同步建议与 get/data/list 的跨用户可见性相冲突；game-persistence 的“跨设备存档”不能自动等同于本作 PG 账号认证。旧平台代理 resolveVerifiedActor 有可复用边界，但仍需真实验证器。
+- 本次未向共享技能登记“真实账号接入已交付”；用户要求实际跨设备与不同账号通过后再写回，这一验收尚未完成。历史证据索引在 `account-storage-integration.md`。

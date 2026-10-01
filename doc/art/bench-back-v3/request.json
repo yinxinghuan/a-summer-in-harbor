@@ -1,0 +1,14 @@
+{
+  "request_id": "acbec068-7810-41db-89c0-86e60f28a0b6",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single complete isolated game sprite. Polished restrained 16-bit pixel art with crisp small pixel clusters, subtle dark outline, soft upper-left daylight, warm summer seaside palette. Elevated ORTHOGRAPHIC camera looking down 50 degrees; no vanishing points, no converging parallel edges, no lens perspective. No floor, no ground plane, no cast shadow, no scene or text. Pure uniform magenta #ff00ff background, object fully in frame with generous clear margins. One wooden public park bench facing away toward screen UP. We see the OUTER BACK of its slatted backrest, the top narrow rail, a little seat from above and four short dark sea-green iron legs. Straight horizontal slats, equally long near and far edges, no sideways yaw. Warm weathered honey wood. Bench total width 2 times total visible height. Full intact bench. Back is toward viewer. Its seat height is about 0.3 times adult height.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

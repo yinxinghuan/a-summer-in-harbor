@@ -112,12 +112,17 @@
       {
         "id": "arrival-0",
         "kind": "narration",
-        "text": "The bus pulls away. You have one bag and a whole summer between jobs. You have never lived in this little harbor town before. Nothing urgent is waiting for you. Find a room, meet a few people, and see what kind of days you want to make."
+        "text": "The bus pulls away. You lift your bag and catch the salt in the breeze. Your last job has ended. You have given yourself one summer in a town where nobody knows you yet."
       },
       {
         "id": "arrival-1",
         "kind": "narration",
-        "text": "You arranged a room before arriving. Your landlady is waiting along the street, turning a key in her hand. Use the round stick at the bottom left, or tap the ground to walk. When you are close enough, the action button will let you say hello."
+        "text": "You arranged a room before leaving. Your landlady promised to meet you with the key. Today, finding your room is enough. A woman beside the street raises a set of keys. She seems to be waiting for you."
+      },
+      {
+        "id": "arrival-2",
+        "kind": "narration",
+        "text": "Use the round stick at the bottom left, or tap the ground to walk. Move close to the woman with the keys, then tap Interact at the bottom right. Start with hello."
       }
     ],
     "choices": [

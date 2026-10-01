@@ -1,0 +1,17 @@
+{
+  "keys": [
+    "life-open-luggage-v1",
+    "life-washstand-v1",
+    "life-cup-cart-v1",
+    "life-repair-stand-v1",
+    "life-potting-bench-v1",
+    "life-net-rack-v1",
+    "life-cold-firepit-v1",
+    "life-weather-board-v1"
+  ],
+  "mode": "text",
+  "reference_count": 0,
+  "status": "user accepted overall art and daily-use layout; not deployed",
+  "model": "gpt-image-2.5-sunburst",
+  "evidence": "doc/qa/use-logic-20261001.md"
+}

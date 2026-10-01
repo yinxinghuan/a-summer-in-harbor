@@ -13,6 +13,8 @@ def save_layer(scene,layer,im):
  metadata[scene+'-'+layer]={'x':x,'y':y,'width':right-x,'height':bottom-y,'empty':False}
  im.save(ROOT/'public/map'/f'{scene}-{layer}.png')
 
+def material_file(name):return ROOT/'public/art'/('floor-grass-v3.png' if name=='grass' else 'floor-'+name+'.png')
+
 wall=Image.open(ROOT/'public/art/wall-north.png').convert('RGBA');wall=wall.resize((round(wall.width*64/wall.height),64),Image.Resampling.NEAREST)
 for id,r in layout['rooms'].items():
  b=r['interior'];x,y,w,h=[b[k] for k in ['x','y','w','h']]
@@ -20,7 +22,7 @@ for id,r in layout['rooms'].items():
  floor=Image.new('RGBA',(W,H));inside=Image.new('RGBA',(w,h))
  if r['outdoor']:
   material=layout.get('outdoors',{}).get(id,{}).get('patches',[{'material':'grass'}])[0]['material']
-  edge=Image.open(ROOT/'public/art'/('floor-'+material+'.png')).convert('RGBA').resize((160,160),Image.Resampling.NEAREST)
+  edge=Image.open(material_file(material)).convert('RGBA').resize((160,160),Image.Resampling.NEAREST)
   for ey in range(0,H,160):
    for ex in range(0,W,160):floor.alpha_composite(edge,(ex,ey))
  for ty in range(0,h,160):
@@ -28,11 +30,20 @@ for id,r in layout['rooms'].items():
  floor.alpha_composite(inside,(x,y))
  if id in layout.get('outdoors',{}):
   for patch in layout['outdoors'][id]['patches']:
-   source=Image.open(ROOT/'public/art'/('floor-'+patch['material']+'.png')).convert('RGBA').resize((160,160),Image.Resampling.NEAREST)
+   source=Image.open(material_file(patch['material'])).convert('RGBA').resize((160,160),Image.Resampling.NEAREST)
    area=Image.new('RGBA',(patch['w'],patch['h']))
-   for py in range(0,area.height,160):
-    for px in range(0,area.width,160):area.alpha_composite(source,(px,py))
+   # All patches share the world's tile phase, including intersections.
+   for py in range(-(patch['y']%160),area.height,160):
+    for px in range(-(patch['x']%160),area.width,160):area.alpha_composite(source,(px,py))
    floor.alpha_composite(area,(patch['x'],patch['y']))
+ # Independent floor textiles sit below every character/furniture sprite. They
+ # remain separate source assets and never invent collision or cover walking feet.
+ for p in r['props']:
+  if not p.get('floorDecoration'):continue
+  decor=Image.open(ROOT/'public/art'/f"{p['art']}.png").convert('RGBA')
+  dw=round(p['width']);dh=round(decor.height*dw/decor.width)
+  decor=decor.resize((dw,dh),Image.Resampling.NEAREST)
+  floor.alpha_composite(decor,(round(p['at']['x']-dw/2),round(p['at']['y']-dh)))
  save_layer(id,'base',floor)
  north=Image.new('RGBA',(W,H));side=Image.new('RGBA',(W,H));south=Image.new('RGBA',(W,H))
  if not r['outdoor']:

@@ -1,0 +1,14 @@
+{
+  "request_id": "f17c9c90-a5b3-4085-b6c0-7d525b438eae",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single complete isolated game sprite. Polished restrained 16-bit pixel art, carefully clustered pixels, subtle dark outline, warm honey wood and muted sea-green accents, relaxed North American coastal summer life, soft upper-left daylight. Elevated ORTHOGRAPHIC camera looking down 50 degrees, zero camera yaw, no vanishing points. Front and back horizontal edges equal length, depth edges vertical in image, rectangular tops never trapezoids. No floor, no wall, no people, no cast shadow, no scene, no lettering. Entire object including feet fits within generous margins on absolutely uniform pure magenta #ff00ff background. One compact freestanding repair-shop tool storage cabinet facing screen DOWN. Low wooden drawers and a tall muted sage backboard holding clearly recognizable small spanner, handsaw and pliers. A few spare bolts in a tin rest on the horizontal worktop. Height 1 adult height, width 1.7 adult shoulder widths. Compact legs, no huge tools, no bicycle and no industrial machines.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

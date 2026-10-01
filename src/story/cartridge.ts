@@ -2,7 +2,11 @@
  * importing this into the text shell alone is intentionally not supported. */
 import type {StoryCartridge,Locale} from './cartridge-types';
 import {rooms,people,tx} from '../world/data';import {GAME_UUID} from '../game-id';
-const opening=[['你刚下长途汽车，肩上只有一只旅行包。上一份工作告一段落，你给自己留了一个夏天，来到这个从没住过的海湾小镇。没有紧急任务，也没有人等着你拯救什么。先安顿下来，认识几个人，看看自己想把日子过成什么样。','The bus pulls away. You have one bag and a whole summer between jobs. You have never lived in this little harbor town before. Nothing urgent is waiting for you. Find a room, meet a few people, and see what kind of days you want to make.'],['你提前租了一间小屋。约好的房东正在街边等你，手里晃着一串钥匙。用左下角的摇杆走过去，也可以点地面行走。靠近她以后，右下角会出现谈话按钮。','You arranged a room before arriving. Your landlady is waiting along the street, turning a key in her hand. Use the round stick at the bottom left, or tap the ground to walk. When you are close enough, the action button will let you say hello.']] as const;
+const opening=[
+ ['长途汽车开走了。你提起旅行包，海风里有一点盐味。上一份工作刚结束，你给自己留了一个夏天，来到这个从没住过的小镇。','The bus pulls away. You lift your bag and catch the salt in the breeze. Your last job has ended. You have given yourself one summer in a town where nobody knows you yet.'],
+ ['住处是出发前租好的。房东说会带钥匙来接你。今天先把行李放下，其他事情可以慢慢来。街边有位女士举起了钥匙，像是在等你。','You arranged a room before leaving. Your landlady promised to meet you with the key. Today, finding your room is enough. A woman beside the street raises a set of keys. She seems to be waiting for you.'],
+ ['用左下角的摇杆走过去，也可以点地面行走。靠近提钥匙的女士后，点右下角的“互动”。先打个招呼。','Use the round stick at the bottom left, or tap the ground to walk. Move close to the woman with the keys, then tap Interact at the bottom right. Start with hello.']
+] as const;
 function make(locale:Locale):StoryCartridge{return {
  schemaVersion:1,id:GAME_UUID,locale,coverImage:'./poster.png',entryImage:'./poster.png',
  copy:{title:tx(['海湾新生活','A Summer in Harbor'],locale),subtitle:tx(['第一个夏天','Your first summer'],locale),promise:tx(['认识海湾，也找到自己的节奏。','Get to know the bay, and find your own pace.'],locale),enter:tx(['走进小镇','Step into town'],locale),continue:tx(['继续这个夏天','Continue your summer'],locale),customAction:tx(['自由询问','Ask a question'],locale),itemImagingTitle:tx(['细节正在显现','The details are taking shape'],locale),itemImagingBody:tx(['可以先查看线索。','You can read the clues now.'],locale)},

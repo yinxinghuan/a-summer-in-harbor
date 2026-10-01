@@ -14,5 +14,5 @@ test('failed model and failed transaction preserve head, events and receipt boun
  }finally{await store.close()}
 });
 test('bilingual cartridges preserve the same stat, location, item and character identities',()=>{
- const en=cartridge('en'),zh=cartridge('zh');for(const key of ['statDefinitions','initialMap','initialInventory','characters'] as const){const a=(en as any)[key],b=(zh as any)[key];assert.ok(Array.isArray(a),key);assert.deepEqual(a.map(x=>x.id),b.map((x:any)=>x.id),key)}assert.equal(en.id,zh.id);assert.equal(en.opening.blocks.length,2);
+ const en=cartridge('en'),zh=cartridge('zh');for(const key of ['statDefinitions','initialMap','initialInventory','characters'] as const){const a=(en as any)[key],b=(zh as any)[key];assert.ok(Array.isArray(a),key);assert.deepEqual(a.map(x=>x.id),b.map((x:any)=>x.id),key)}assert.equal(en.id,zh.id);assert.equal(en.opening.blocks.length,3);
 });

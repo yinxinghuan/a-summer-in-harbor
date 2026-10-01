@@ -10,9 +10,9 @@
   "finalEnding": false,
   "notes": "Cartridge map rules describe physical links. Do not execute them without proximity, admission, journey flags and the server adapter.",
   "sourceHashes": {
-    "src/story/state.ts": "e3296a4896e006c5595bc715bce62ede22e0cf3a6bc7a4abcfb10e270633df65",
+    "src/story/state.ts": "16c177e50547fee197dfaaa0fdbec90042b0806f1be273b5bfad7813dfddd40a",
     "src/story/binding.ts": "f448d5b6c1311f955f969ef54a8c2adf6406b77e5377ae7712001a0cadf19aff",
-    "src/world/data.ts": "f345597f00eaa26c6b784108aec0137c2885c7ff948b416bfa5eb04284e06a56",
+    "src/world/data.ts": "ffc8b118e926392ea679dad7361a4f9462a3f51bfe36b19646620dec62de10fe",
     "server/fieldnotes.ts": "b77e4f980c0e3ccbe0684cd56c43fd824002f0a090b4fcbb3c786d424c309369"
   }
 }

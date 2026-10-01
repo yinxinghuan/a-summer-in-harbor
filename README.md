@@ -19,12 +19,18 @@ npm run dev
 
 ## 状态与证据
 
-当前是本地可玩制作版，未发布。不是多人世界或无限生成承诺。素材由平台服务新制，没有读旧游戏图片作为参考；同轮角色/门派生有明确记录。
+首章、室内外美术与像素 UI 已完成，正式发布验收中。不是多人世界或无限生成承诺。素材由平台服务新制，没有读旧游戏图片作为参考；同轮角色/门派生有明确记录。
 
-已获上线授权，发布接头与镜像入口正在准备；实际部署前仍须确认托管期限与临时存档身份，详见 [发布状态](doc/release-readiness.md) 和 [部署合同](deploy/README.md)。
+已获上线授权，发布接头与镜像入口正在准备；已获批复用现有 ECS/PG 并暂用当前浏览器续玩，详见 [发布状态](doc/release-readiness.md) 和 [部署合同](deploy/README.md)。
 
 - [需求](doc/requirements.md)、[视觉](doc/visual.md)、[技术](doc/technical.md)
 - [验收与限制](doc/qa/acceptance.md)、[技能试用评估](doc/skill-evaluation.md)
 - [第三方许可](public/THIRD_PARTY_NOTICES.txt)
 
 默认英文或中文跟随系统；方向键/WASD、点地面或圆形摇杆移动，靠近后使用行动按钮；地图可缩放拖动并返回已到访地点。对話可选择话题或自由输入。
+
+临时版本的旅程由当前浏览器/WebView 凭证持有。换设备不能自动恢复，同一浏览器切换 AlterU 账号也不会切换旅程；清除浏览器数据可能失去访问。平台真实账号绑定及持有权迁移是后续工作。
+
+## 服务端构建
+
+`node scripts/bundle-public.mjs` 生成 Linux 可用的 `dist-server/`（目标 Node22），不含私有配置。生产在既有 Node22/SWI 镜像的独立海湾层补充 Pillow；本地前端构建继续用 Node24。

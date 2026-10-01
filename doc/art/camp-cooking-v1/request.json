@@ -1,0 +1,14 @@
+{
+  "request_id": "4de66302-3900-4425-b0bf-76c2bcfc58d6",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single complete isolated game sprite for a relaxed North American coastal town. Polished restrained 16-bit pixel art, crisp small pixel clusters, restrained dark outlines, honey wood, muted sea-green, faded terracotta and warm cream palette, soft upper-left daylight. Elevated ORTHOGRAPHIC camera looking down 50 degrees; zero sideways yaw, no vanishing points. Rectangular tops have perfectly horizontal equal front/back edges and vertical parallel depth edges, never trapezoids. No people, floor, wall, cast shadow, scene, readable writing, logo or branding. Entire object fully visible on uniform pure magenta #ff00ff background with generous margins. One small campsite cooking station: a compact folding wooden camp table holding a single little portable stove, metal kettle and two enamel mugs, with a closed fabric cooler sitting on its lower shelf. Front facing screen DOWN, axis aligned table and short practical legs. No fire, no smoke, no floor. Width1.8 adult shoulder widths, height0.6 adult.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

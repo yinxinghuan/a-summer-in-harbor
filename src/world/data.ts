@@ -1,9 +1,12 @@
-import {outdoors,waterBarriers} from './outdoors';
+import {enrichPlanting} from './planting';
+import {organizeDailyLife} from './scene-use';
+import {dressHarbor} from './dressing';
+import {outdoors,passages,waterBarriers} from './outdoors';
 import type {Point,Rect,World} from '../engine/world';
 export type Words=[string,string];export type Locale='zh'|'en';
 export const tx=(w:Words,locale:Locale)=>w[locale==='zh'?0:1];
-export type Prop={id:string;art:string;at:Point;width:number;footprint?:Rect;foreground?:boolean;state?:{flag:string;art:string};visibleWhen?:string};
-export type Entity={id:string;label:Words;kind:'person'|'portal'|'object';at:Point;approach:Point;person?:string;destination?:string;actions?:string[]};
+export type Prop={id:string;art:string;at:Point;width:number;footprint?:Rect;floorDecoration?:boolean;foreground?:boolean;state?:{flag:string;art:string};visibleWhen?:string};
+export type Entity={id:string;label:Words;kind:'person'|'portal'|'object';at:Point;approach:Point;person?:string;destination?:string;actions?:string[];passage?:{side:'N'|'S'|'E'|'W';sign:Point}};
 export const entityLabel=(e:Entity,flags:string[]):Words=>e.id==='bridge'&&flags.includes('bridge-fixed')?['修好的小桥','Repaired footbridge']:e.id==='terrace'&&flags.includes('terrace-fixed')?['露台灯','Terrace lantern']:e.label;
 export type Room={id:string;title:Words;area:string;outdoor:boolean;spawn:Point;interior:Rect;props:Prop[];entities:Entity[];neighbors:string[];map:Point};
 const labels:Record<string,Words>={station:['车站街','Station Street'],harbor:['港口','The Harbor'],market:['旧街','Market Lane'],coast:['海岸','The Coast'],hill:['山坡','The Hill'],home:['你的租屋','Your Room'],cafe:['潮间咖啡馆','Tide & Table'],grocery:['街角杂货铺','Corner Grocer'],dock:['钓鱼码头','Fishing Pier'],workshop:['琼的修理铺','June’s Workshop'],gym:['港口拳馆','Harbor Boxing Club'],bazaar:['集市广场','Market Square'],secondhand:['旧物店','Second Chances'],courtyard:['住户庭院','Residents’ Courtyard'],beach:['贝壳海滩','Shell Beach'],path:['滨海道','Coastal Path'],lighthouse:['灯塔','The Lighthouse'],garden:['山坡花园','Hillside Garden'],camp:['松林营地','Pine Camp'],weather:['旧气象站','Weather Station']};
@@ -136,6 +139,70 @@ for(const n of [1,2]){
  furnish(id,'desk-a','workbench',380,350,90,76,24);furnish(id,'desk-b','cafe-table-v2',575,420,60,50,24);furnish(id,'seat','bench',575,480,48,40,12);furnish(id,'green','plant',635,290,30,16,12);
  object(id,'observation-a',['台上的记录','Notes on the bench'],380,355,['notes-observe']);object(id,'observation-b',['收好的材料','Stored material'],575,420,['notes-observe']);
 }
+// Outdoor art refresh. Actor height remains 56 world units; orient the source,
+// never rotate a flat sprite to pretend it is a differently facing bench.
+for(const r of Object.values(rooms).filter(r=>r.outdoor)){
+ let treeIndex=0;
+ for(const p of r.props){
+  if(p.art==='canopy-tree'){
+   const n=treeIndex++;const tree=r.id==='hill'||r.id==='camp'?(n%3===2?'tree-birch-v3':'tree-pine-v3'):n%2?'tree-birch-v3':'tree-coastal-v3';
+   p.art=tree;p.width=tree==='tree-pine-v3'?124:tree==='tree-birch-v3'?95:155;
+  }
+  if(p.art==='bench'){
+   if(['coast','dock','beach'].includes(r.id)){p.art='bench-back-v3';p.width=76}
+   if((r.id==='station'&&p.id==='arrival-bench')||['courtyard','garden'].includes(r.id)){p.art='bench-side-v3';p.width=26;p.footprint={x:p.at.x-12,y:p.at.y-47,w:24,h:47}}
+  }
+ }
+ for(const e of r.entities){
+  const link=e.destination&&passages[r.id]?.[e.destination];if(!link)continue;
+  e.at={...link.at};e.approach={...link.approach};e.passage={side:link.side,sign:{...link.sign}};
+  r.props.push({id:'route-sign-'+e.id,art:'trail-sign-v3',at:{...link.sign},width:29,footprint:{x:link.sign.x-4,y:link.sign.y-8,w:8,h:8}});
+ }
+}
+// Small, purposeful groups: shade by seating and taller pines beyond the trail.
+furnish('station','arrival-flowers','flower-planter',715,815,42,32,12);
+furnish('station','birch-arrival','tree-birch-v3',775,810,90,18,14);
+furnish('harbor','quay-planter','flower-planter',995,560,52,42,14);
+furnish('market','square-birch','tree-birch-v3',740,775,95,18,14);
+furnish('coast','wind-tree','tree-coastal-v3',700,680,148,23,16);
+furnish('coast','young-birch','tree-birch-v3',390,360,82,16,12);
+furnish('beach','dune-tree','tree-coastal-v3',235,290,130,21,16);
+furnish('beach','shore-seat','bench-back-v3',650,570,76,65,14);
+furnish('garden','garden-seat','bench-side-v3',635,450,26,24,47);
+furnish('camp','pine-north','tree-pine-v3',715,300,112,21,16);
+
+// Interior life is arranged in useful groups. Authored interaction positions and
+// entrance clearances stay intact; textiles are flat decor below feet, not actors.
+const refurnish=(scene:string,id:string,art:string,width:number,groundW:number,groundH:number)=>{
+ const p=rooms[scene].props.find(p=>p.id===id)!;p.art=art;p.width=width;
+ p.footprint={x:p.at.x-groundW/2,y:p.at.y-groundH,w:groundW,h:groundH};
+};
+for(const [scene,id] of [['home','chair'],['cafe','chair-a'],['cafe','chair-b'],['secondhand','chair']])refurnish(scene,id,'wooden-chair',23,19,17);
+refurnish('grocery','counter','interior-grocery-v1',104,94,25);
+refurnish('grocery','rest','harbor-crates',46,34,22);
+refurnish('weather','desk','interior-mapdesk-v1',95,82,26);
+furnish('home','books-and-linen','interior-bookcase-v1',345,288,65,57,19);
+furnish('home','summer-coat','interior-coatstand-v1',625,505,19,12,10);
+furnish('cafe','pantry','interior-grocery-v1',320,292,65,57,20);
+furnish('grocery','shelf','interior-grocery-v1',615,290,80,72,23);
+furnish('grocery','storage','harbor-crates',330,310,35,28,19);
+furnish('workshop','tool-storage','interior-tools-v1',510,290,65,56,20);
+furnish('workshop','coat','interior-coatstand-v1',650,505,19,12,10);
+furnish('gym','towel-shelf','interior-bookcase-v1',320,500,62,53,18);
+furnish('gym','club-coat','interior-coatstand-v1',640,290,19,12,10);
+furnish('secondhand','book-shelf','interior-bookcase-v1',610,300,80,70,22);
+furnish('secondhand','old-coat','interior-coatstand-v1',315,290,19,12,10);
+furnish('weather','records','interior-bookcase-v1',620,290,72,64,21);
+furnish('weather','raincoat','interior-coatstand-v1',650,530,19,12,10);
+furnish('lighthouse','chart-table','interior-mapdesk-v1',610,310,85,74,25);
+furnish('lighthouse','keeper-coat','interior-coatstand-v1',315,295,19,12,10);
+furnish('lighthouse','records','interior-bookcase-v1',625,455,70,61,20);
+for(const [scene,x,y,width] of [['home',475,490,240],['cafe',500,530,260]] as [string,number,number,number][])rooms[scene].props.push({id:'woven-rug',art:'interior-rug-v1',at:{x,y},width,floorDecoration:true});
+
+dressHarbor(rooms);
+organizeDailyLife(rooms);
+enrichPlanting(rooms);
+
 export const doorways=Object.fromEntries(Object.values(rooms).filter(r=>!r.outdoor).map(r=>{
  const floorEnd=r.interior.y+r.interior.h,door={id:'exit',side:'S' as const,center:480,width:50,leafWidth:46,leafBottom:floorEnd+8,opening:{start:455,end:505},activation:{x:441,y:floorEnd-58,w:78,h:58},closedFootprint:{x:455,y:floorEnd,w:50,h:8}};
  r.props.push({id:'exit-leaf',art:'door-front-v7',at:{x:door.center,y:door.leafBottom},width:door.leafWidth,foreground:true});

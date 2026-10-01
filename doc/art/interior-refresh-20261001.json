@@ -1,0 +1,18 @@
+{
+  "mode": "text",
+  "reference_count": 0,
+  "model": "gpt-image-2.5-sunburst",
+  "keys": [
+    "interior-bookcase-v1",
+    "interior-grocery-v1",
+    "interior-tools-v1",
+    "interior-mapdesk-v1",
+    "interior-coatstand-v1",
+    "interior-rug-v1"
+  ],
+  "status": "accepted at current runtime scale",
+  "existing_reprocessed": [
+    "wooden-chair"
+  ],
+  "evidence": "doc/qa/outdoor-ui-20261001.md"
+}

@@ -1,0 +1,2366 @@
+{
+  "scope": "Local project metadata for a future library; no shared service created",
+  "heroVisibleHeight": 56,
+  "assets": [
+    {
+      "id": "nature-sapling-v1",
+      "category": "vegetation",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "be6add14-d32b-4cde-a1c7-361d82c32d01",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854556231-vxgscjugsm.webp",
+      "sourceSha": "5771be1cc8517525d424ced4d4592affd3dd6480a048dafa373ee37526f34589",
+      "processedSha": "e1ce9dec25e23abf053964ac380cb5bc5c5fab620c724450178b9ff14ba7c5f3",
+      "promptPath": "doc/art/nature-sapling-v1/request.json",
+      "localPath": "public/art/nature-sapling-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "station",
+          "prop": "life-sapling-0",
+          "width": 37,
+          "height": 71.94,
+          "anchor": {
+            "x": 395,
+            "y": 375
+          },
+          "footprint": {
+            "x": 390.5,
+            "y": 367,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "station",
+          "prop": "life-sapling-1",
+          "width": 40,
+          "height": 77.78,
+          "anchor": {
+            "x": 850,
+            "y": 850
+          },
+          "footprint": {
+            "x": 845.5,
+            "y": 842,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "station",
+          "prop": "life-sapling-2",
+          "width": 40,
+          "height": 77.78,
+          "anchor": {
+            "x": 1150,
+            "y": 635
+          },
+          "footprint": {
+            "x": 1145.5,
+            "y": 627,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "market",
+          "prop": "life-sapling-0",
+          "width": 36,
+          "height": 70.0,
+          "anchor": {
+            "x": 410,
+            "y": 815
+          },
+          "footprint": {
+            "x": 405.5,
+            "y": 807,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "market",
+          "prop": "life-sapling-1",
+          "width": 38,
+          "height": 73.89,
+          "anchor": {
+            "x": 1150,
+            "y": 440
+          },
+          "footprint": {
+            "x": 1145.5,
+            "y": 432,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "courtyard",
+          "prop": "life-sapling-0",
+          "width": 38,
+          "height": 73.89,
+          "anchor": {
+            "x": 310,
+            "y": 260
+          },
+          "footprint": {
+            "x": 305.5,
+            "y": 252,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "coast",
+          "prop": "life-sapling-0",
+          "width": 37,
+          "height": 71.94,
+          "anchor": {
+            "x": 760,
+            "y": 370
+          },
+          "footprint": {
+            "x": 755.5,
+            "y": 362,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "path",
+          "prop": "life-sapling-0",
+          "width": 39,
+          "height": 75.83,
+          "anchor": {
+            "x": 650,
+            "y": 245
+          },
+          "footprint": {
+            "x": 645.5,
+            "y": 237,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "hill",
+          "prop": "life-sapling-0",
+          "width": 38,
+          "height": 73.89,
+          "anchor": {
+            "x": 250,
+            "y": 445
+          },
+          "footprint": {
+            "x": 245.5,
+            "y": 437,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "hill",
+          "prop": "life-sapling-1",
+          "width": 40,
+          "height": 77.78,
+          "anchor": {
+            "x": 1190,
+            "y": 380
+          },
+          "footprint": {
+            "x": 1185.5,
+            "y": 372,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "hill",
+          "prop": "life-sapling-2",
+          "width": 36,
+          "height": 70.0,
+          "anchor": {
+            "x": 450,
+            "y": 790
+          },
+          "footprint": {
+            "x": 445.5,
+            "y": 782,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "garden",
+          "prop": "life-sapling-0",
+          "width": 39,
+          "height": 75.83,
+          "anchor": {
+            "x": 180,
+            "y": 615
+          },
+          "footprint": {
+            "x": 175.5,
+            "y": 607,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "garden",
+          "prop": "life-sapling-1",
+          "width": 38,
+          "height": 73.89,
+          "anchor": {
+            "x": 805,
+            "y": 615
+          },
+          "footprint": {
+            "x": 800.5,
+            "y": 607,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "camp",
+          "prop": "life-sapling-0",
+          "width": 39,
+          "height": 75.83,
+          "anchor": {
+            "x": 315,
+            "y": 275
+          },
+          "footprint": {
+            "x": 310.5,
+            "y": 267,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "camp",
+          "prop": "life-sapling-1",
+          "width": 37,
+          "height": 71.94,
+          "anchor": {
+            "x": 635,
+            "y": 590
+          },
+          "footprint": {
+            "x": 630.5,
+            "y": 582,
+            "w": 9,
+            "h": 8
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "nature-broadleaf-v1",
+      "category": "vegetation",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "8afd94ff-91a7-4a7f-9708-55d77c9c0a54",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854560645-fraogngiyv.webp",
+      "sourceSha": "79ab951e890ec881aeb5297b3fd8eb5e1e8683b74a3e26368039601ad9766cd8",
+      "processedSha": "eae603374954c005a4f44e7524f8622596e76f73ac3524e1aa6e7ce4172d56bf",
+      "promptPath": "doc/art/nature-broadleaf-v1/request.json",
+      "localPath": "public/art/nature-broadleaf-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "station",
+          "prop": "tree-west",
+          "width": 180,
+          "height": 160.29,
+          "anchor": {
+            "x": 120,
+            "y": 630
+          },
+          "footprint": {
+            "x": 108,
+            "y": 614,
+            "w": 24,
+            "h": 16
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "market",
+          "prop": "life-broadleaf-0",
+          "width": 165,
+          "height": 146.93,
+          "anchor": {
+            "x": 805,
+            "y": 805
+          },
+          "footprint": {
+            "x": 793,
+            "y": 789,
+            "w": 24,
+            "h": 16
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "bazaar",
+          "prop": "life-broadleaf-0",
+          "width": 165,
+          "height": 146.93,
+          "anchor": {
+            "x": 150,
+            "y": 510
+          },
+          "footprint": {
+            "x": 138,
+            "y": 494,
+            "w": 24,
+            "h": 16
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "path",
+          "prop": "life-broadleaf-0",
+          "width": 165,
+          "height": 146.93,
+          "anchor": {
+            "x": 175,
+            "y": 615
+          },
+          "footprint": {
+            "x": 163,
+            "y": 599,
+            "w": 24,
+            "h": 16
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "hill",
+          "prop": "life-broadleaf-0",
+          "width": 175,
+          "height": 155.83,
+          "anchor": {
+            "x": 438,
+            "y": 435
+          },
+          "footprint": {
+            "x": 426,
+            "y": 419,
+            "w": 24,
+            "h": 16
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "nature-hydrangea-v1",
+      "category": "vegetation",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "364b6e86-402f-497c-8162-9c8c1ce680cd",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854592877-rug5qp9gshb.webp",
+      "sourceSha": "68641cc6b81ca8378907d230568dc0ec87437f7c7d8a92a96ad7e1cc8de0175a",
+      "processedSha": "6afa9b372d74aed95accbdc729317f878e292967adece72c4d99df31546d1873",
+      "promptPath": "doc/art/nature-hydrangea-v1/request.json",
+      "localPath": "public/art/nature-hydrangea-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "station",
+          "prop": "life-hydrangea-0",
+          "width": 48,
+          "height": 34.2,
+          "anchor": {
+            "x": 158,
+            "y": 389
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "station",
+          "prop": "life-hydrangea-1",
+          "width": 43,
+          "height": 30.64,
+          "anchor": {
+            "x": 336,
+            "y": 380
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "station",
+          "prop": "life-hydrangea-2",
+          "width": 45,
+          "height": 32.06,
+          "anchor": {
+            "x": 935,
+            "y": 640
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "station",
+          "prop": "life-hydrangea-3",
+          "width": 44,
+          "height": 31.35,
+          "anchor": {
+            "x": 963,
+            "y": 912
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "market",
+          "prop": "life-hydrangea-0",
+          "width": 48,
+          "height": 34.2,
+          "anchor": {
+            "x": 145,
+            "y": 420
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "market",
+          "prop": "life-hydrangea-1",
+          "width": 42,
+          "height": 29.93,
+          "anchor": {
+            "x": 940,
+            "y": 390
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "market",
+          "prop": "life-hydrangea-2",
+          "width": 45,
+          "height": 32.06,
+          "anchor": {
+            "x": 255,
+            "y": 775
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "bazaar",
+          "prop": "life-hydrangea-0",
+          "width": 47,
+          "height": 33.49,
+          "anchor": {
+            "x": 790,
+            "y": 425
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "bazaar",
+          "prop": "life-hydrangea-1",
+          "width": 43,
+          "height": 30.64,
+          "anchor": {
+            "x": 700,
+            "y": 630
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "courtyard",
+          "prop": "life-hydrangea-0",
+          "width": 47,
+          "height": 33.49,
+          "anchor": {
+            "x": 315,
+            "y": 545
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "courtyard",
+          "prop": "life-hydrangea-1",
+          "width": 45,
+          "height": 32.06,
+          "anchor": {
+            "x": 685,
+            "y": 280
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "garden",
+          "prop": "life-hydrangea-0",
+          "width": 46,
+          "height": 32.77,
+          "anchor": {
+            "x": 250,
+            "y": 310
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "garden",
+          "prop": "life-hydrangea-1",
+          "width": 48,
+          "height": 34.2,
+          "anchor": {
+            "x": 730,
+            "y": 600
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "garden",
+          "prop": "life-hydrangea-2",
+          "width": 43,
+          "height": 30.64,
+          "anchor": {
+            "x": 355,
+            "y": 525
+          },
+          "footprint": null,
+          "walkThrough": true
+        }
+      ]
+    },
+    {
+      "id": "nature-juniper-v1",
+      "category": "vegetation",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "dce3204d-4fb8-4dc4-a7ef-ad3961739813",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854598242-ahce831jqp5.webp",
+      "sourceSha": "165187e2c6d13ce24828f381b333cff405cbb3fd86e215931cb520a1c2b387a7",
+      "processedSha": "8a7eb551d6a3eece35bee391d9757bd34526013125599b2fc8cd9858efc0c674",
+      "promptPath": "doc/art/nature-juniper-v1/request.json",
+      "localPath": "public/art/nature-juniper-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "harbor",
+          "prop": "life-juniper-0",
+          "width": 48,
+          "height": 21.6,
+          "anchor": {
+            "x": 1020,
+            "y": 345
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "courtyard",
+          "prop": "life-juniper-0",
+          "width": 54,
+          "height": 24.3,
+          "anchor": {
+            "x": 175,
+            "y": 590
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "courtyard",
+          "prop": "life-juniper-1",
+          "width": 49,
+          "height": 22.05,
+          "anchor": {
+            "x": 805,
+            "y": 625
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "coast",
+          "prop": "life-juniper-0",
+          "width": 58,
+          "height": 26.1,
+          "anchor": {
+            "x": 330,
+            "y": 370
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "coast",
+          "prop": "life-juniper-1",
+          "width": 54,
+          "height": 24.3,
+          "anchor": {
+            "x": 860,
+            "y": 580
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "coast",
+          "prop": "life-juniper-2",
+          "width": 47,
+          "height": 21.15,
+          "anchor": {
+            "x": 980,
+            "y": 390
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "beach",
+          "prop": "life-juniper-0",
+          "width": 54,
+          "height": 24.3,
+          "anchor": {
+            "x": 620,
+            "y": 255
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "beach",
+          "prop": "life-juniper-1",
+          "width": 56,
+          "height": 25.2,
+          "anchor": {
+            "x": 200,
+            "y": 240
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "path",
+          "prop": "life-juniper-0",
+          "width": 55,
+          "height": 24.75,
+          "anchor": {
+            "x": 320,
+            "y": 250
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "path",
+          "prop": "life-juniper-1",
+          "width": 53,
+          "height": 23.85,
+          "anchor": {
+            "x": 645,
+            "y": 425
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "path",
+          "prop": "life-juniper-2",
+          "width": 51,
+          "height": 22.95,
+          "anchor": {
+            "x": 350,
+            "y": 535
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "hill",
+          "prop": "life-juniper-0",
+          "width": 57,
+          "height": 25.65,
+          "anchor": {
+            "x": 220,
+            "y": 350
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "hill",
+          "prop": "life-juniper-1",
+          "width": 53,
+          "height": 23.85,
+          "anchor": {
+            "x": 935,
+            "y": 800
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "hill",
+          "prop": "life-juniper-2",
+          "width": 55,
+          "height": 24.75,
+          "anchor": {
+            "x": 1115,
+            "y": 800
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "camp",
+          "prop": "life-juniper-0",
+          "width": 58,
+          "height": 26.1,
+          "anchor": {
+            "x": 275,
+            "y": 530
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "camp",
+          "prop": "life-juniper-1",
+          "width": 53,
+          "height": 23.85,
+          "anchor": {
+            "x": 705,
+            "y": 595
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "camp",
+          "prop": "life-juniper-2",
+          "width": 49,
+          "height": 22.05,
+          "anchor": {
+            "x": 700,
+            "y": 240
+          },
+          "footprint": null,
+          "walkThrough": true
+        }
+      ]
+    },
+    {
+      "id": "nature-wildflowers-v1",
+      "category": "vegetation",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "6783e05b-eecb-4b11-84ea-3aa43c219d6f",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854626909-qupegs7sba.webp",
+      "sourceSha": "72d255c811d4bdceee46fb540f713cbdda196d3f49457422fce40813b80ca212",
+      "processedSha": "806673b5bbbc859c7006efe9f14b09200148cb50d3257b7d031e807a2d58a580",
+      "promptPath": "doc/art/nature-wildflowers-v1/request.json",
+      "localPath": "public/art/nature-wildflowers-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "station",
+          "prop": "life-wildflowers-0",
+          "width": 23,
+          "height": 24.1,
+          "anchor": {
+            "x": 370,
+            "y": 693
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "station",
+          "prop": "life-wildflowers-1",
+          "width": 25,
+          "height": 26.2,
+          "anchor": {
+            "x": 412,
+            "y": 755
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "station",
+          "prop": "life-wildflowers-2",
+          "width": 26,
+          "height": 27.25,
+          "anchor": {
+            "x": 875,
+            "y": 777
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "station",
+          "prop": "life-wildflowers-3",
+          "width": 24,
+          "height": 25.15,
+          "anchor": {
+            "x": 1110,
+            "y": 955
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "market",
+          "prop": "life-wildflowers-0",
+          "width": 24,
+          "height": 25.15,
+          "anchor": {
+            "x": 1060,
+            "y": 815
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "market",
+          "prop": "life-wildflowers-1",
+          "width": 24,
+          "height": 25.15,
+          "anchor": {
+            "x": 200,
+            "y": 835
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "bazaar",
+          "prop": "life-wildflowers-0",
+          "width": 23,
+          "height": 24.1,
+          "anchor": {
+            "x": 260,
+            "y": 605
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "courtyard",
+          "prop": "life-wildflowers-0",
+          "width": 24,
+          "height": 25.15,
+          "anchor": {
+            "x": 710,
+            "y": 585
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "courtyard",
+          "prop": "life-wildflowers-1",
+          "width": 23,
+          "height": 24.1,
+          "anchor": {
+            "x": 280,
+            "y": 458
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "path",
+          "prop": "life-wildflowers-0",
+          "width": 23,
+          "height": 24.1,
+          "anchor": {
+            "x": 220,
+            "y": 535
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "path",
+          "prop": "life-wildflowers-1",
+          "width": 24,
+          "height": 25.15,
+          "anchor": {
+            "x": 625,
+            "y": 555
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "hill",
+          "prop": "life-wildflowers-0",
+          "width": 23,
+          "height": 24.1,
+          "anchor": {
+            "x": 520,
+            "y": 677
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "hill",
+          "prop": "life-wildflowers-1",
+          "width": 26,
+          "height": 27.25,
+          "anchor": {
+            "x": 790,
+            "y": 650
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "hill",
+          "prop": "life-wildflowers-2",
+          "width": 25,
+          "height": 26.2,
+          "anchor": {
+            "x": 1090,
+            "y": 345
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "hill",
+          "prop": "life-wildflowers-3",
+          "width": 22,
+          "height": 23.06,
+          "anchor": {
+            "x": 175,
+            "y": 680
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "garden",
+          "prop": "life-wildflowers-0",
+          "width": 23,
+          "height": 24.1,
+          "anchor": {
+            "x": 200,
+            "y": 515
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "garden",
+          "prop": "life-wildflowers-1",
+          "width": 25,
+          "height": 26.2,
+          "anchor": {
+            "x": 690,
+            "y": 485
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "camp",
+          "prop": "life-wildflowers-0",
+          "width": 21,
+          "height": 22.01,
+          "anchor": {
+            "x": 270,
+            "y": 455
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "camp",
+          "prop": "life-wildflowers-1",
+          "width": 24,
+          "height": 25.15,
+          "anchor": {
+            "x": 595,
+            "y": 230
+          },
+          "footprint": null,
+          "walkThrough": true
+        }
+      ]
+    },
+    {
+      "id": "nature-beachgrass-v1",
+      "category": "vegetation",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "152b4924-f418-425a-8274-5cacda559cd1",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854631603-5nwqocn2b1p.webp",
+      "sourceSha": "f853b21f1ffd3cf3869eadcb310ebe3813b20052034eee00b374bd9f4ea6bfde",
+      "processedSha": "fa127b0f77034f5915725e59fc7558abad1116d612834816e9db213e2dd0e5b7",
+      "promptPath": "doc/art/nature-beachgrass-v1/request.json",
+      "localPath": "public/art/nature-beachgrass-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "coast",
+          "prop": "life-beachgrass-0",
+          "width": 24,
+          "height": 28.24,
+          "anchor": {
+            "x": 370,
+            "y": 637
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "coast",
+          "prop": "life-beachgrass-1",
+          "width": 22,
+          "height": 25.88,
+          "anchor": {
+            "x": 420,
+            "y": 692
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "coast",
+          "prop": "life-beachgrass-2",
+          "width": 27,
+          "height": 31.76,
+          "anchor": {
+            "x": 670,
+            "y": 761
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "coast",
+          "prop": "life-beachgrass-3",
+          "width": 25,
+          "height": 29.41,
+          "anchor": {
+            "x": 860,
+            "y": 744
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "coast",
+          "prop": "life-beachgrass-4",
+          "width": 23,
+          "height": 27.06,
+          "anchor": {
+            "x": 905,
+            "y": 829
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "beach",
+          "prop": "life-beachgrass-0",
+          "width": 23,
+          "height": 27.06,
+          "anchor": {
+            "x": 175,
+            "y": 410
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "beach",
+          "prop": "life-beachgrass-1",
+          "width": 29,
+          "height": 34.12,
+          "anchor": {
+            "x": 265,
+            "y": 530
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "beach",
+          "prop": "life-beachgrass-2",
+          "width": 22,
+          "height": 25.88,
+          "anchor": {
+            "x": 330,
+            "y": 600
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "beach",
+          "prop": "life-beachgrass-3",
+          "width": 26,
+          "height": 30.59,
+          "anchor": {
+            "x": 775,
+            "y": 567
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "beach",
+          "prop": "life-beachgrass-4",
+          "width": 24,
+          "height": 28.24,
+          "anchor": {
+            "x": 700,
+            "y": 285
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "path",
+          "prop": "life-beachgrass-0",
+          "width": 25,
+          "height": 29.41,
+          "anchor": {
+            "x": 705,
+            "y": 480
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "path",
+          "prop": "life-beachgrass-1",
+          "width": 22,
+          "height": 25.88,
+          "anchor": {
+            "x": 270,
+            "y": 465
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "camp",
+          "prop": "life-beachgrass-0",
+          "width": 25,
+          "height": 29.41,
+          "anchor": {
+            "x": 205,
+            "y": 597
+          },
+          "footprint": null,
+          "walkThrough": true
+        },
+        {
+          "scene": "camp",
+          "prop": "life-beachgrass-1",
+          "width": 24,
+          "height": 28.24,
+          "anchor": {
+            "x": 752,
+            "y": 642
+          },
+          "footprint": null,
+          "walkThrough": true
+        }
+      ]
+    },
+    {
+      "id": "garden-raised-bed-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "b1fe8f8f-be61-40d6-8cc0-0d989de82af3",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854661766-ttxykx14qw.webp",
+      "sourceSha": "554c5509c240c1ee24ebe4a9fa3591c55293d604f06de2fea596bc1655744d1f",
+      "processedSha": "12e810ed8824946328ed70a36e1f01bf57295ec852e6f46a668860cf62cb2610",
+      "promptPath": "doc/art/garden-raised-bed-v1/request.json",
+      "localPath": "public/art/garden-raised-bed-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "garden",
+          "prop": "life-vegetable-bed",
+          "width": 116,
+          "height": 69.6,
+          "anchor": {
+            "x": 325,
+            "y": 568
+          },
+          "footprint": {
+            "x": 271,
+            "y": 516,
+            "w": 108,
+            "h": 52
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "garden",
+          "prop": "life-seedling-bed",
+          "width": 99,
+          "height": 59.4,
+          "anchor": {
+            "x": 655,
+            "y": 295
+          },
+          "footprint": {
+            "x": 609,
+            "y": 250,
+            "w": 92,
+            "h": 45
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "town-bicycle-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "e22090d9-5431-4658-b7b4-b10770fab524",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854669356-d0y1qtcw79.webp",
+      "sourceSha": "d6f5ecda25cf4961cf2be37707164ae3d75e20f21ab9540934152f2b90bb0f4d",
+      "processedSha": "a12f8e49ea8205f54d7b2a207ceab93c59d8fcb3f8876fcbec39d9bc51040acb",
+      "promptPath": "doc/art/town-bicycle-v1/request.json",
+      "localPath": "public/art/town-bicycle-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "station",
+          "prop": "life-parked-bicycle",
+          "width": 69,
+          "height": 43.99,
+          "anchor": {
+            "x": 843,
+            "y": 368
+          },
+          "footprint": {
+            "x": 812.5,
+            "y": 352,
+            "w": 61,
+            "h": 16
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "harbor",
+          "prop": "life-repair-cycle",
+          "width": 66,
+          "height": 42.08,
+          "anchor": {
+            "x": 398,
+            "y": 322
+          },
+          "footprint": {
+            "x": 369,
+            "y": 306,
+            "w": 58,
+            "h": 16
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "workshop",
+          "prop": "life-repair-bicycle",
+          "width": 66,
+          "height": 42.08,
+          "anchor": {
+            "x": 637,
+            "y": 531
+          },
+          "footprint": {
+            "x": 607,
+            "y": 516,
+            "w": 60,
+            "h": 15
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "market",
+          "prop": "life-customer-bicycle",
+          "width": 66,
+          "height": 42.08,
+          "anchor": {
+            "x": 855,
+            "y": 706
+          },
+          "footprint": {
+            "x": 826,
+            "y": 690,
+            "w": 58,
+            "h": 16
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "coast-rowboat-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "4f04bb52-c6b5-48b4-ab55-ec9522d4ce77",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854697037-tkb1kzl5jh.webp",
+      "sourceSha": "61a26d92df81a0750ae640f0693d122e90347f5a565f8c50c0c07fced0e0e9e9",
+      "processedSha": "f1d76876e24e9d6924edc3c4cbe4c9c6f0bf4dd1de1662d000098cf2a5f56d74",
+      "promptPath": "doc/art/coast-rowboat-v1/request.json",
+      "localPath": "public/art/coast-rowboat-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "harbor",
+          "prop": "life-stored-boat",
+          "width": 132,
+          "height": 49.5,
+          "anchor": {
+            "x": 380,
+            "y": 745
+          },
+          "footprint": {
+            "x": 323,
+            "y": 714,
+            "w": 114,
+            "h": 31
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "coast",
+          "prop": "life-pulled-up-boat",
+          "width": 136,
+          "height": 51.0,
+          "anchor": {
+            "x": 285,
+            "y": 735
+          },
+          "footprint": {
+            "x": 226,
+            "y": 703,
+            "w": 118,
+            "h": 32
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "beach",
+          "prop": "life-rowboat",
+          "width": 137,
+          "height": 51.38,
+          "anchor": {
+            "x": 590,
+            "y": 463
+          },
+          "footprint": {
+            "x": 530.5,
+            "y": 430,
+            "w": 119,
+            "h": 33
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "home-wardrobe-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "9d44594e-3231-429e-bfa9-b83dffacf0b2",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854747293-8hydnjjatm6.webp",
+      "sourceSha": "be11542bfd242b7abe7992bae30066233cee0e69ebdff494121d92c7cbb49526",
+      "processedSha": "292efe6583305d77eb33913317260a68de16fc7a37ca80e96ac6ac294be262b0",
+      "promptPath": "doc/art/home-wardrobe-v1/request.json",
+      "localPath": "public/art/home-wardrobe-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "home",
+          "prop": "books-and-linen",
+          "width": 43,
+          "height": 67.01,
+          "anchor": {
+            "x": 345,
+            "y": 288
+          },
+          "footprint": {
+            "x": 326.5,
+            "y": 271,
+            "w": 37,
+            "h": 17
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "home-bedside-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "10223125-8ff3-4040-a606-88c8e3237e94",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854747115-8xage4b19id.webp",
+      "sourceSha": "151bef6d40fb90768b9970993741e55cef0c67189b93021d994bc1c8d9a70951",
+      "processedSha": "ecbd075469c7aa99c4dbd760ded0ef07eb2f4b81287665a92c67819f84ddcbe9",
+      "promptPath": "doc/art/home-bedside-v1/request.json",
+      "localPath": "public/art/home-bedside-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "home",
+          "prop": "life-bedside",
+          "width": 24,
+          "height": 40.0,
+          "anchor": {
+            "x": 324,
+            "y": 389
+          },
+          "footprint": {
+            "x": 314,
+            "y": 376,
+            "w": 20,
+            "h": 13
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "cafe-pastry-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "1906267c-dd79-4f3e-9290-91be19454872",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854782151-4cqw6mg59jp.webp",
+      "sourceSha": "2d7f19c051c0fed366877037dda294703b00b5084c8f54f007a9971238f8fe57",
+      "processedSha": "3210fadc0bfc1fd6e7e4cf66eda165899f22a94f0531f628ea2579f8cf04836e",
+      "promptPath": "doc/art/cafe-pastry-v1/request.json",
+      "localPath": "public/art/cafe-pastry-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "cafe",
+          "prop": "pantry",
+          "width": 84,
+          "height": 51.8,
+          "anchor": {
+            "x": 320,
+            "y": 292
+          },
+          "footprint": {
+            "x": 282,
+            "y": 268,
+            "w": 76,
+            "h": 24
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "grocery-produce-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "165da5aa-bdc1-4e53-9da7-3540ad363b20",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854781072-f2t5alwgnsk.webp",
+      "sourceSha": "5d788a0e73b8c2b287186475d959f2c99525ded3ddb15023467ec257e37c8790",
+      "processedSha": "80e7f7a7064d49750a85c619814cf38a9184deb6152afe3bd335e87c544cef53",
+      "promptPath": "doc/art/grocery-produce-v1/request.json",
+      "localPath": "public/art/grocery-produce-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "grocery",
+          "prop": "rest",
+          "width": 77,
+          "height": 37.22,
+          "anchor": {
+            "x": 335,
+            "y": 455
+          },
+          "footprint": {
+            "x": 301,
+            "y": 430,
+            "w": 68,
+            "h": 25
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "grocery",
+          "prop": "storage",
+          "width": 60,
+          "height": 29.0,
+          "anchor": {
+            "x": 330,
+            "y": 310
+          },
+          "footprint": {
+            "x": 304,
+            "y": 290,
+            "w": 52,
+            "h": 20
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "market",
+          "prop": "life-market-produce",
+          "width": 58,
+          "height": 28.03,
+          "anchor": {
+            "x": 365,
+            "y": 654
+          },
+          "footprint": {
+            "x": 340,
+            "y": 634,
+            "w": 50,
+            "h": 20
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "bazaar",
+          "prop": "life-produce",
+          "width": 68,
+          "height": 32.87,
+          "anchor": {
+            "x": 313,
+            "y": 385
+          },
+          "footprint": {
+            "x": 284,
+            "y": 362,
+            "w": 58,
+            "h": 23
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "secondhand-records-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "209d8890-b263-4edb-a1d9-45c78d922563",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854818413-oi1y64vnfie.webp",
+      "sourceSha": "d0966b5a84b8ebfb844601b900360c3b82c4535108785b9dddfb7de8b3c50ea7",
+      "processedSha": "22734f9370c73ccdc2d15967c7012ba1dec2776d15080da001e392cc81a9d156",
+      "promptPath": "doc/art/secondhand-records-v1/request.json",
+      "localPath": "public/art/secondhand-records-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "bazaar",
+          "prop": "life-record-sale",
+          "width": 63,
+          "height": 39.64,
+          "anchor": {
+            "x": 650,
+            "y": 390
+          },
+          "footprint": {
+            "x": 622.5,
+            "y": 369,
+            "w": 55,
+            "h": 21
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "secondhand",
+          "prop": "book-shelf",
+          "width": 82,
+          "height": 51.59,
+          "anchor": {
+            "x": 610,
+            "y": 300
+          },
+          "footprint": {
+            "x": 574,
+            "y": 276,
+            "w": 72,
+            "h": 24
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "workshop-annex-2",
+          "prop": "desk-b",
+          "width": 73,
+          "height": 45.93,
+          "anchor": {
+            "x": 575,
+            "y": 420
+          },
+          "footprint": {
+            "x": 543.5,
+            "y": 396,
+            "w": 63,
+            "h": 24
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "secondhand-clothing-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "bfcd854b-548d-49fb-b545-26364199f3f2",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854815535-4p3c7bz86gg.webp",
+      "sourceSha": "da0bcf30a2b458948aa14b46d1dc32555f095fc5db9a57029d2e080ecfc900db",
+      "processedSha": "fe1476677830ae7bb1dc8ba7b3c39a2b930f36eb194264f3289e71dc7887d2f9",
+      "promptPath": "doc/art/secondhand-clothing-v1/request.json",
+      "localPath": "public/art/secondhand-clothing-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "secondhand",
+          "prop": "old-coat",
+          "width": 57,
+          "height": 39.9,
+          "anchor": {
+            "x": 315,
+            "y": 290
+          },
+          "footprint": {
+            "x": 290,
+            "y": 274,
+            "w": 50,
+            "h": 16
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "weather-instruments-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "04f5386d-6169-4db2-9765-bb76e0a4fe74",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854853266-8ju9hi99u5.webp",
+      "sourceSha": "2bef7aa3ce2dc93a440f182065c0799e34691f2dfcc6792203234981b172fe1b",
+      "processedSha": "b69fc04f676bf884069d5f0bcd786fc575e4a4fb635710578fa70ed5b118ed8b",
+      "promptPath": "doc/art/weather-instruments-v1/request.json",
+      "localPath": "public/art/weather-instruments-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "weather",
+          "prop": "records",
+          "width": 72,
+          "height": 63.0,
+          "anchor": {
+            "x": 620,
+            "y": 290
+          },
+          "footprint": {
+            "x": 588,
+            "y": 267,
+            "w": 64,
+            "h": 23
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "lighthouse-lanterns-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "46cb20f1-0a7f-4acd-8021-ce40d298890d",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854856739-1isaoijffex.webp",
+      "sourceSha": "fb329a9c6c01b4ebf6e45237685925e85e600e889b9f136e55c82cfa886f039b",
+      "processedSha": "d2b4b4caed811fb00319b569c91d468e14c3be0ef538231a675bf68d59462248",
+      "promptPath": "doc/art/lighthouse-lanterns-v1/request.json",
+      "localPath": "public/art/lighthouse-lanterns-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "lighthouse",
+          "prop": "records",
+          "width": 78,
+          "height": 56.55,
+          "anchor": {
+            "x": 625,
+            "y": 455
+          },
+          "footprint": {
+            "x": 591,
+            "y": 431,
+            "w": 68,
+            "h": 24
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "gym-punchbag-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "6e1f1dec-c2a5-4c9c-acf3-74a6cefad85d",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854886830-s2md9nlwabe.webp",
+      "sourceSha": "1896408bd67af54ccf7bcf93e3942ba83daab2bfaec11d5f5dfd84646ead3763",
+      "processedSha": "d93fead656eb76621a98b7d5c84447900f6498da0a733a58578fe09ece009da0",
+      "promptPath": "doc/art/gym-punchbag-v1/request.json",
+      "localPath": "public/art/gym-punchbag-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "gym",
+          "prop": "life-punchbag",
+          "width": 23,
+          "height": 60.0,
+          "anchor": {
+            "x": 634,
+            "y": 338
+          },
+          "footprint": {
+            "x": 623.5,
+            "y": 323,
+            "w": 21,
+            "h": 15
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "gym-towels-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "80ec803e-7342-43b5-9923-2e7fe873718c",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854890325-7tsat527rap.webp",
+      "sourceSha": "daa24db70990977ccec439725b9dcad07ee2152fc96bb6a7a518770ca9752f83",
+      "processedSha": "8965afd3fe176ef09675515aa6ca11adaef347bd1e009a9e1849cb71d2032b34",
+      "promptPath": "doc/art/gym-towels-v1/request.json",
+      "localPath": "public/art/gym-towels-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "gym",
+          "prop": "towel-shelf",
+          "width": 72,
+          "height": 40.8,
+          "anchor": {
+            "x": 320,
+            "y": 500
+          },
+          "footprint": {
+            "x": 288,
+            "y": 479,
+            "w": 64,
+            "h": 21
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "workshop-tires-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "beb5b3c8-d81a-4afd-988f-8bbe6d7e33a0",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854922637-ypbseacuc5j.webp",
+      "sourceSha": "87affe34549eb65b93ef0ea1014e459644b6dc0465fa9ce09496fcb5b7fcaba6",
+      "processedSha": "aa9f12d881f8ad55894ec8366e93fbe1686f78cc72bc9f955b697b7d525e41ed",
+      "promptPath": "doc/art/workshop-tires-v1/request.json",
+      "localPath": "public/art/workshop-tires-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "workshop",
+          "prop": "spares",
+          "width": 65,
+          "height": 53.08,
+          "anchor": {
+            "x": 605,
+            "y": 350
+          },
+          "footprint": {
+            "x": 576.5,
+            "y": 323,
+            "w": 57,
+            "h": 27
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "workshop-annex-1",
+          "prop": "desk-b",
+          "width": 75,
+          "height": 61.25,
+          "anchor": {
+            "x": 575,
+            "y": 420
+          },
+          "footprint": {
+            "x": 542.5,
+            "y": 391,
+            "w": 65,
+            "h": 29
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "camp-cooking-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "4de66302-3900-4425-b0bf-76c2bcfc58d6",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854930955-fit81d9ovp.webp",
+      "sourceSha": "f31c2ba016af6773a72181efa90a8112b7d194d101c36683efe1ffa8796656fb",
+      "processedSha": "14225c069b75485a491e8774155523a86d6b1166897652d103eb20c54c3c697e",
+      "promptPath": "doc/art/camp-cooking-v1/request.json",
+      "localPath": "public/art/camp-cooking-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "camp",
+          "prop": "life-cooking",
+          "width": 60,
+          "height": 51.25,
+          "anchor": {
+            "x": 655,
+            "y": 405
+          },
+          "footprint": {
+            "x": 629,
+            "y": 381,
+            "w": 52,
+            "h": 24
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "garden-wheelbarrow-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "7b397df3-4241-493e-9536-52172c7b01c4",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854958523-ni7hiu0vyrd.webp",
+      "sourceSha": "1059f1ce50bbc9bde741a3cdcbe12fcaa2ea0b6a69d1b1a15560e4d84bb9acc5",
+      "processedSha": "d8e5f7939d2f1ff024afb6f32c355f5c818bc90f609deaa2b21d9e28e66797cc",
+      "promptPath": "doc/art/garden-wheelbarrow-v1/request.json",
+      "localPath": "public/art/garden-wheelbarrow-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "garden",
+          "prop": "life-wheelbarrow",
+          "width": 72,
+          "height": 29.1,
+          "anchor": {
+            "x": 653,
+            "y": 545
+          },
+          "footprint": {
+            "x": 624.5,
+            "y": 524,
+            "w": 57,
+            "h": 21
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "harbor-bollard-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "see exact prompt",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "32bbb906-0a73-4656-b00e-ddf670c51d66",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790854965460-ml4ryf2isnq.webp",
+      "sourceSha": "5f430304a7f605f72cefa26bb858113ec53cf5a78d35e1164a5d3c53bdf65638",
+      "processedSha": "3e0ae2b583085840283ae435afded7278f1d6d1c89a02a99a78b56558f9a9847",
+      "promptPath": "doc/art/harbor-bollard-v1/request.json",
+      "localPath": "public/art/harbor-bollard-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "harbor",
+          "prop": "life-mooring-west",
+          "width": 24,
+          "height": 24.1,
+          "anchor": {
+            "x": 680,
+            "y": 565
+          },
+          "footprint": {
+            "x": 671.5,
+            "y": 552,
+            "w": 17,
+            "h": 13
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "harbor",
+          "prop": "life-mooring-east",
+          "width": 24,
+          "height": 24.1,
+          "anchor": {
+            "x": 1065,
+            "y": 565
+          },
+          "footprint": {
+            "x": 1056.5,
+            "y": 552,
+            "w": 17,
+            "h": 13
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "dock",
+          "prop": "life-mooring-left",
+          "width": 24,
+          "height": 24.1,
+          "anchor": {
+            "x": 343,
+            "y": 285
+          },
+          "footprint": {
+            "x": 334.5,
+            "y": 272,
+            "w": 17,
+            "h": 13
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "dock",
+          "prop": "life-mooring-right",
+          "width": 24,
+          "height": 24.1,
+          "anchor": {
+            "x": 635,
+            "y": 486
+          },
+          "footprint": {
+            "x": 626.5,
+            "y": 473,
+            "w": 17,
+            "h": 13
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "dining-chair-back-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "back",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "c9b16972-6069-4ac0-96a4-8bb511cdf38f",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790855512383-lgrkd7fh9t.webp",
+      "sourceSha": "15efa588ff06593ec9c5e5435734649f9eff103bcad72d038ef816d8981374bc",
+      "processedSha": "bbc349ad66f831f9d110b8cf226e8a1f3f29644b147d6b5149cc363ee08d306c",
+      "promptPath": "doc/art/dining-chair-back-v1/request.json",
+      "localPath": "public/art/dining-chair-back-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "home",
+          "prop": "chair",
+          "width": 23,
+          "height": 31.72,
+          "anchor": {
+            "x": 570,
+            "y": 420
+          },
+          "footprint": {
+            "x": 560.5,
+            "y": 403,
+            "w": 19,
+            "h": 17
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "cafe",
+          "prop": "chair-b",
+          "width": 23,
+          "height": 31.72,
+          "anchor": {
+            "x": 615,
+            "y": 530
+          },
+          "footprint": {
+            "x": 605.5,
+            "y": 513,
+            "w": 19,
+            "h": 17
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "dining-chair-side-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "side",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "c52311fb-9a86-4367-aa70-939b755185a7",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790855515464-dreruwhf2ac.webp",
+      "sourceSha": "591a251d09d113f614dc54846848a0191cf78bae61c78cb25a336d5b72090736",
+      "processedSha": "797d6926ca6d6b4088b07485fb76eece2034d47faa87a8ba0fa781df217adc53",
+      "promptPath": "doc/art/dining-chair-side-v1/request.json",
+      "localPath": "public/art/dining-chair-side-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "cafe",
+          "prop": "chair-a",
+          "width": 17,
+          "height": 31.38,
+          "anchor": {
+            "x": 411,
+            "y": 462
+          },
+          "footprint": {
+            "x": 404,
+            "y": 441,
+            "w": 14,
+            "h": 21
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "dining-table-front-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "front",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "9b1a5653-0052-49cc-bb14-b2bf0d5350f6",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790855547799-k29006nc8m.webp",
+      "sourceSha": "5860fb75d4019d282115214cc581c7d9e6c7d638d58fb033849ceb0d158935de",
+      "processedSha": "fd6d6f88da5abc9db1ff845b545e224bcfbe5b594e5189cebac45d31a6e1f51b",
+      "promptPath": "doc/art/dining-table-front-v1/request.json",
+      "localPath": "public/art/dining-table-front-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "home",
+          "prop": "breakfast",
+          "width": 58,
+          "height": 43.02,
+          "anchor": {
+            "x": 570,
+            "y": 355
+          },
+          "footprint": {
+            "x": 544,
+            "y": 330,
+            "w": 52,
+            "h": 25
+          },
+          "walkThrough": false
+        },
+        {
+          "scene": "cafe",
+          "prop": "table-a",
+          "width": 58,
+          "height": 43.02,
+          "anchor": {
+            "x": 450,
+            "y": 455
+          },
+          "footprint": {
+            "x": 424,
+            "y": 430,
+            "w": 52,
+            "h": 25
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "dining-table-side-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "side",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "90756c25-924d-4d48-91d0-57bab9d3c820",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790855550574-5mjdhhdxw7a.webp",
+      "sourceSha": "b912226abf42d29acc77bb0de01c913ff1544d8d149e5b473b52760e5b63b14d",
+      "processedSha": "6940c90c0869ac029ba68045b901b4133279717a3491149e850ea3ae82a8865b",
+      "promptPath": "doc/art/dining-table-side-v1/request.json",
+      "localPath": "public/art/dining-table-side-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "rejected: Tabletop depth edges converge; no runtime use",
+      "placements": []
+    },
+    {
+      "id": "town-bicycle-front-v1",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "front",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "bb6fce37-0359-4da2-9fd2-7bc0ab1f5f5f",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790855585407-m68m3lhy6ig.webp",
+      "sourceSha": "bac15069126e3b05e0fd9558c95f9d2e25df4b94e178394119465a1bf55a61d5",
+      "processedSha": "daea27ac1d2da78c33916d36faaba378ee96678785e9c7884385d177d8123364",
+      "promptPath": "doc/art/town-bicycle-front-v1/request.json",
+      "localPath": "public/art/town-bicycle-front-v1.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "courtyard",
+          "prop": "life-garden-cycle",
+          "width": 25,
+          "height": 49.18,
+          "anchor": {
+            "x": 627,
+            "y": 517
+          },
+          "footprint": {
+            "x": 618,
+            "y": 474,
+            "w": 18,
+            "h": 43
+          },
+          "walkThrough": false
+        }
+      ]
+    },
+    {
+      "id": "dining-table-side-v2",
+      "category": "furniture-or-prop",
+      "projection": "elevated orthographic 50 degrees",
+      "orientation": "side",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "686f49ee-8253-466e-b009-bcdb470eb484",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790855720131-ljvnn9p2xc.webp",
+      "sourceSha": "8b2ff9061eb648614b3b7cc223a83b7d4410d715d253d23b2241518115e36d0e",
+      "processedSha": "5152f006dc2a01c7a267858c932742e44a496b2be32994362983288a62fbe166",
+      "promptPath": "doc/art/dining-table-side-v2/request.json",
+      "localPath": "public/art/dining-table-side-v2.png",
+      "rights": "New platform-generated asset, no third-party game image input; service terms govern output, no independent exclusive-rights claim",
+      "status": "accepted in current game renderer; awaiting user review",
+      "placements": [
+        {
+          "scene": "cafe",
+          "prop": "table-b",
+          "width": 38,
+          "height": 71.81,
+          "anchor": {
+            "x": 615,
+            "y": 475
+          },
+          "footprint": {
+            "x": 598,
+            "y": 427,
+            "w": 34,
+            "h": 48
+          },
+          "walkThrough": false
+        }
+      ]
+    }
+  ],
+  "orientationFamilies": [
+    {
+      "id": "park-bench",
+      "members": {
+        "front": "bench",
+        "back": "bench-back-v3",
+        "side": "bench-side-v3"
+      },
+      "note": "Side view uses narrow/deep contact rectangle; existing front retained."
+    },
+    {
+      "id": "green-dining-chair",
+      "members": {
+        "front": "wooden-chair",
+        "back": "dining-chair-back-v1",
+        "right": "dining-chair-side-v1"
+      },
+      "note": "Text-matched paint and construction; free-generation wear can differ. No planar rotation."
+    },
+    {
+      "id": "oak-dining-table",
+      "members": {
+        "long-edge-front": "dining-table-front-v1",
+        "short-edge-front": "dining-table-side-v2"
+      },
+      "rejected": [
+        "dining-table-side-v1"
+      ],
+      "note": "Two independently generated orientations, common leg height; tabletop depth/contact dimensions differ."
+    },
+    {
+      "id": "sea-green-city-bicycle",
+      "members": {
+        "right": "town-bicycle-v1",
+        "front": "town-bicycle-front-v1"
+      },
+      "note": "Front view exposes basket/handlebar, wheels aligned in depth, different collision contact."
+    }
+  ]
+}

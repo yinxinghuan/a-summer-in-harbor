@@ -855,8 +855,8 @@
     "status": "runtime candidate"
   },
   "wooden-chair": {
-    "width": 419,
-    "height": 776,
+    "width": 130,
+    "height": 240,
     "sourceBounds": [
       303,
       124,
@@ -867,11 +867,11 @@
       419,
       776
     ],
-    "uniformRuntimeScale": 1.0,
+    "uniformRuntimeScale": 0.30927835051546393,
     "sourceSha": "79d118a3f611a091563085d8656aec0ebba41d28d1b36307c12ee726b73c32e9",
-    "processedSha": "2da8f04f93a97e5a5cfad9667a39f8538ab67da7f0904558274b359b0b7b3541",
-    "process": "magenta colour key and tight crop, geometry unchanged",
-    "status": "runtime candidate"
+    "processedSha": "03aa27c959880be3923e7a39f7c17b76673b1b20924703765e3656001d94757b",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
   },
   "bridge-broken": {
     "width": 510,
@@ -967,5 +967,1096 @@
     "processedSha": "9aad9981f7e56c86517f44af90683f6227c118971b15b508e4af8be30e172536",
     "process": "magenta colour key and tight crop, geometry unchanged",
     "status": "runtime candidate"
+  },
+  "tree-pine-v3": {
+    "width": 351,
+    "height": 420,
+    "sourceBounds": [
+      149,
+      40,
+      931,
+      977
+    ],
+    "sourceCropSize": [
+      782,
+      937
+    ],
+    "uniformRuntimeScale": 0.44823906083244397,
+    "sourceSha": "59f3f96aa491d117877435432eba732c2d8c928333d2f9dfd28c33b8ed240a86",
+    "processedSha": "3ede275c2cc2fe2cf44054cff20cab391df540449fe775db9d2ea5107e761874",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "tree-birch-v3": {
+    "width": 293,
+    "height": 420,
+    "sourceBounds": [
+      250,
+      83,
+      817,
+      897
+    ],
+    "sourceCropSize": [
+      567,
+      814
+    ],
+    "uniformRuntimeScale": 0.515970515970516,
+    "sourceSha": "5a37fc3e9e15107e6123f9a70f4c10e3684074779229e1b797b382bbaf838069",
+    "processedSha": "b42c72f70404012a34661f643003642e4fb24d037aeaa9a2a783d1664f88c340",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "tree-coastal-v3": {
+    "width": 420,
+    "height": 311,
+    "sourceBounds": [
+      51,
+      161,
+      977,
+      847
+    ],
+    "sourceCropSize": [
+      926,
+      686
+    ],
+    "uniformRuntimeScale": 0.4535637149028078,
+    "sourceSha": "d87873ae20dd18b40ccda6e17e677fb8eec9558d1245d9637561d1f58966d2cf",
+    "processedSha": "b020b528b0bc4b2c21d8c71cde488571f68890fbd0e8efa6078a599a29dd52eb",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "bench-back-v3": {
+    "width": 240,
+    "height": 102,
+    "sourceBounds": [
+      95,
+      348,
+      929,
+      703
+    ],
+    "sourceCropSize": [
+      834,
+      355
+    ],
+    "uniformRuntimeScale": 0.28776978417266186,
+    "sourceSha": "2981bbe0afa585927b4a4eb4bec1872c86c5213a2ddc1571f81efd4e309f64f2",
+    "processedSha": "420488b2d5cfcb756d4f65844194b840f42e4ca227e21d7baab6802d46790071",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "bench-side-v3": {
+    "width": 81,
+    "height": 240,
+    "sourceBounds": [
+      369,
+      74,
+      664,
+      944
+    ],
+    "sourceCropSize": [
+      295,
+      870
+    ],
+    "uniformRuntimeScale": 0.27586206896551724,
+    "sourceSha": "aea20eb19d5105093dae576ddb3ab438b1ddf37b4408a3d9990b88c2df0f301c",
+    "processedSha": "7b6d60371268e1eaa47f194662445e13d0b4d7352912eededc0bf47bf7476f50",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "trail-sign-v3": {
+    "width": 143,
+    "height": 240,
+    "sourceBounds": [
+      273,
+      104,
+      763,
+      926
+    ],
+    "sourceCropSize": [
+      490,
+      822
+    ],
+    "uniformRuntimeScale": 0.291970802919708,
+    "sourceSha": "24866b8132b1b4f00ac2fdd7c30b883b5de18287f013bd904ea581d441a5ec10",
+    "processedSha": "9c930efe4fb95b729f8e07f992a5dd0039f529beb1a701bdf1fdc50954514414",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "floor-grass-v3": {
+    "width": 1024,
+    "height": 1024,
+    "sourceSha": "72dac78113dec6953e59d20da34d27a6197ebaab5128fc61d235357eed135555",
+    "processedSha": "199cad5de22d58b9d2c4cedbcb9feb736f9c5eb7d9bc9ac55fd81cd8f88868a8",
+    "process": "decode to PNG, no image alteration",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "interior-bookcase-v1": {
+    "width": 240,
+    "height": 194,
+    "sourceBounds": [
+      144,
+      226,
+      881,
+      823
+    ],
+    "sourceCropSize": [
+      737,
+      597
+    ],
+    "uniformRuntimeScale": 0.3256445047489824,
+    "sourceSha": "c111e8a09e47ec22eda15d19d2c5e6a244240ef9f166c1f09a52ad362e956103",
+    "processedSha": "2f60aa8e5d6c305a8b901b6a58d48a220f3bc4f5bc6f23479f5ecf653336f2a9",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "interior-grocery-v1": {
+    "width": 240,
+    "height": 191,
+    "sourceBounds": [
+      189,
+      242,
+      833,
+      754
+    ],
+    "sourceCropSize": [
+      644,
+      512
+    ],
+    "uniformRuntimeScale": 0.37267080745341613,
+    "sourceSha": "0101327e424848af874529948bef055878a1032a60fcffbef3bae44e3f379160",
+    "processedSha": "17b28a3aeb1da8ee7cee51143bc126612b5de079988169499f0f635a456de814",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "interior-tools-v1": {
+    "width": 240,
+    "height": 233,
+    "sourceBounds": [
+      173,
+      183,
+      851,
+      842
+    ],
+    "sourceCropSize": [
+      678,
+      659
+    ],
+    "uniformRuntimeScale": 0.35398230088495575,
+    "sourceSha": "bc4518bf2761909599132bcb343b0e53e08a782421e72fc411f102130a6d7a9a",
+    "processedSha": "f4bb2644accddead0dc1a7cc4e70a7e268d893798a7d2052954f67f3aa23554a",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "interior-mapdesk-v1": {
+    "width": 240,
+    "height": 160,
+    "sourceBounds": [
+      163,
+      278,
+      861,
+      744
+    ],
+    "sourceCropSize": [
+      698,
+      466
+    ],
+    "uniformRuntimeScale": 0.3438395415472779,
+    "sourceSha": "29ba726f4fe4a333fecf4ff7ec7e3064d289c2699372c53507933a55c10a99b6",
+    "processedSha": "c9f5c739a104d66ea57e4cde0c89e8bf5a60e3b5e3e46a5a3bc92d220e117bf6",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "interior-coatstand-v1": {
+    "width": 71,
+    "height": 240,
+    "sourceBounds": [
+      380,
+      62,
+      642,
+      950
+    ],
+    "sourceCropSize": [
+      262,
+      888
+    ],
+    "uniformRuntimeScale": 0.2702702702702703,
+    "sourceSha": "24d04c68b0dfc7c71d5fca9a10f0e0365e8f9d368e37bcda7acfe5084717ec0c",
+    "processedSha": "92e3b384373bc925a1fc4608f804fa16415a210ee393208ce876e8a395c5f8ff",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "interior-rug-v1": {
+    "width": 240,
+    "height": 110,
+    "sourceBounds": [
+      83,
+      304,
+      942,
+      696
+    ],
+    "sourceCropSize": [
+      859,
+      392
+    ],
+    "uniformRuntimeScale": 0.27939464493597205,
+    "sourceSha": "c1c1f10d6f5c3a2a0045107e4a7da89f74756683057f34c6df4b6f4855bdce67",
+    "processedSha": "6c5a8dc305d333bbbf4cf105c5747cbe7e9c29f25b6b9d6748ff3c52c32dfd85",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current runtime scene scale; see doc/qa/outdoor-ui-20261001.md"
+  },
+  "nature-sapling-v1": {
+    "width": 216,
+    "height": 420,
+    "sourceBounds": [
+      320,
+      139,
+      705,
+      886
+    ],
+    "sourceCropSize": [
+      385,
+      747
+    ],
+    "uniformRuntimeScale": 0.5622489959839357,
+    "sourceSha": "5771be1cc8517525d424ced4d4592affd3dd6480a048dafa373ee37526f34589",
+    "processedSha": "e1ce9dec25e23abf053964ac380cb5bc5c5fab620c724450178b9ff14ba7c5f3",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "nature-broadleaf-v1": {
+    "width": 420,
+    "height": 374,
+    "sourceBounds": [
+      54,
+      102,
+      972,
+      920
+    ],
+    "sourceCropSize": [
+      918,
+      818
+    ],
+    "uniformRuntimeScale": 0.45751633986928103,
+    "sourceSha": "79ab951e890ec881aeb5297b3fd8eb5e1e8683b74a3e26368039601ad9766cd8",
+    "processedSha": "eae603374954c005a4f44e7524f8622596e76f73ac3524e1aa6e7ce4172d56bf",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "nature-hydrangea-v1": {
+    "width": 240,
+    "height": 171,
+    "sourceBounds": [
+      127,
+      226,
+      902,
+      779
+    ],
+    "sourceCropSize": [
+      775,
+      553
+    ],
+    "uniformRuntimeScale": 0.3096774193548387,
+    "sourceSha": "68641cc6b81ca8378907d230568dc0ec87437f7c7d8a92a96ad7e1cc8de0175a",
+    "processedSha": "6afa9b372d74aed95accbdc729317f878e292967adece72c4d99df31546d1873",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "nature-juniper-v1": {
+    "width": 240,
+    "height": 108,
+    "sourceBounds": [
+      22,
+      288,
+      1008,
+      730
+    ],
+    "sourceCropSize": [
+      986,
+      442
+    ],
+    "uniformRuntimeScale": 0.2434077079107505,
+    "sourceSha": "165187e2c6d13ce24828f381b333cff405cbb3fd86e215931cb520a1c2b387a7",
+    "processedSha": "8a7eb551d6a3eece35bee391d9757bd34526013125599b2fc8cd9858efc0c674",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "nature-wildflowers-v1": {
+    "width": 229,
+    "height": 240,
+    "sourceBounds": [
+      262,
+      237,
+      777,
+      777
+    ],
+    "sourceCropSize": [
+      515,
+      540
+    ],
+    "uniformRuntimeScale": 0.4444444444444444,
+    "sourceSha": "72d255c811d4bdceee46fb540f713cbdda196d3f49457422fce40813b80ca212",
+    "processedSha": "806673b5bbbc859c7006efe9f14b09200148cb50d3257b7d031e807a2d58a580",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "nature-beachgrass-v1": {
+    "width": 204,
+    "height": 240,
+    "sourceBounds": [
+      300,
+      263,
+      723,
+      760
+    ],
+    "sourceCropSize": [
+      423,
+      497
+    ],
+    "uniformRuntimeScale": 0.482897384305835,
+    "sourceSha": "f853b21f1ffd3cf3869eadcb310ebe3813b20052034eee00b374bd9f4ea6bfde",
+    "processedSha": "fa127b0f77034f5915725e59fc7558abad1116d612834816e9db213e2dd0e5b7",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "garden-raised-bed-v1": {
+    "width": 240,
+    "height": 144,
+    "sourceBounds": [
+      81,
+      242,
+      944,
+      760
+    ],
+    "sourceCropSize": [
+      863,
+      518
+    ],
+    "uniformRuntimeScale": 0.27809965237543455,
+    "sourceSha": "554c5509c240c1ee24ebe4a9fa3591c55293d604f06de2fea596bc1655744d1f",
+    "processedSha": "12e810ed8824946328ed70a36e1f01bf57295ec852e6f46a668860cf62cb2610",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "town-bicycle-v1": {
+    "width": 240,
+    "height": 153,
+    "sourceBounds": [
+      25,
+      182,
+      1001,
+      806
+    ],
+    "sourceCropSize": [
+      976,
+      624
+    ],
+    "uniformRuntimeScale": 0.2459016393442623,
+    "sourceSha": "d6f5ecda25cf4961cf2be37707164ae3d75e20f21ab9540934152f2b90bb0f4d",
+    "processedSha": "a12f8e49ea8205f54d7b2a207ceab93c59d8fcb3f8876fcbec39d9bc51040acb",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "coast-rowboat-v1": {
+    "width": 240,
+    "height": 90,
+    "sourceBounds": [
+      36,
+      338,
+      1000,
+      699
+    ],
+    "sourceCropSize": [
+      964,
+      361
+    ],
+    "uniformRuntimeScale": 0.24896265560165975,
+    "sourceSha": "61a26d92df81a0750ae640f0693d122e90347f5a565f8c50c0c07fced0e0e9e9",
+    "processedSha": "f1d76876e24e9d6924edc3c4cbe4c9c6f0bf4dd1de1662d000098cf2a5f56d74",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "home-wardrobe-v1": {
+    "width": 154,
+    "height": 240,
+    "sourceBounds": [
+      302,
+      163,
+      721,
+      818
+    ],
+    "sourceCropSize": [
+      419,
+      655
+    ],
+    "uniformRuntimeScale": 0.366412213740458,
+    "sourceSha": "be11542bfd242b7abe7992bae30066233cee0e69ebdff494121d92c7cbb49526",
+    "processedSha": "292efe6583305d77eb33913317260a68de16fc7a37ca80e96ac6ac294be262b0",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "home-bedside-v1": {
+    "width": 144,
+    "height": 240,
+    "sourceBounds": [
+      291,
+      136,
+      731,
+      868
+    ],
+    "sourceCropSize": [
+      440,
+      732
+    ],
+    "uniformRuntimeScale": 0.32786885245901637,
+    "sourceSha": "151bef6d40fb90768b9970993741e55cef0c67189b93021d994bc1c8d9a70951",
+    "processedSha": "ecbd075469c7aa99c4dbd760ded0ef07eb2f4b81287665a92c67819f84ddcbe9",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "cafe-pastry-v1": {
+    "width": 240,
+    "height": 148,
+    "sourceBounds": [
+      114,
+      271,
+      910,
+      762
+    ],
+    "sourceCropSize": [
+      796,
+      491
+    ],
+    "uniformRuntimeScale": 0.3015075376884422,
+    "sourceSha": "2d7f19c051c0fed366877037dda294703b00b5084c8f54f007a9971238f8fe57",
+    "processedSha": "3210fadc0bfc1fd6e7e4cf66eda165899f22a94f0531f628ea2579f8cf04836e",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "grocery-produce-v1": {
+    "width": 240,
+    "height": 116,
+    "sourceBounds": [
+      84,
+      316,
+      941,
+      731
+    ],
+    "sourceCropSize": [
+      857,
+      415
+    ],
+    "uniformRuntimeScale": 0.28004667444574094,
+    "sourceSha": "5d788a0e73b8c2b287186475d959f2c99525ded3ddb15023467ec257e37c8790",
+    "processedSha": "80e7f7a7064d49750a85c619814cf38a9184deb6152afe3bd335e87c544cef53",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "secondhand-records-v1": {
+    "width": 240,
+    "height": 151,
+    "sourceBounds": [
+      92,
+      240,
+      932,
+      768
+    ],
+    "sourceCropSize": [
+      840,
+      528
+    ],
+    "uniformRuntimeScale": 0.2857142857142857,
+    "sourceSha": "d0966b5a84b8ebfb844601b900360c3b82c4535108785b9dddfb7de8b3c50ea7",
+    "processedSha": "22734f9370c73ccdc2d15967c7012ba1dec2776d15080da001e392cc81a9d156",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "secondhand-clothing-v1": {
+    "width": 240,
+    "height": 168,
+    "sourceBounds": [
+      84,
+      199,
+      940,
+      798
+    ],
+    "sourceCropSize": [
+      856,
+      599
+    ],
+    "uniformRuntimeScale": 0.2803738317757009,
+    "sourceSha": "da0bcf30a2b458948aa14b46d1dc32555f095fc5db9a57029d2e080ecfc900db",
+    "processedSha": "fe1476677830ae7bb1dc8ba7b3c39a2b930f36eb194264f3289e71dc7887d2f9",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "weather-instruments-v1": {
+    "width": 240,
+    "height": 210,
+    "sourceBounds": [
+      196,
+      232,
+      828,
+      786
+    ],
+    "sourceCropSize": [
+      632,
+      554
+    ],
+    "uniformRuntimeScale": 0.379746835443038,
+    "sourceSha": "2bef7aa3ce2dc93a440f182065c0799e34691f2dfcc6792203234981b172fe1b",
+    "processedSha": "b69fc04f676bf884069d5f0bcd786fc575e4a4fb635710578fa70ed5b118ed8b",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "lighthouse-lanterns-v1": {
+    "width": 240,
+    "height": 174,
+    "sourceBounds": [
+      67,
+      171,
+      957,
+      818
+    ],
+    "sourceCropSize": [
+      890,
+      647
+    ],
+    "uniformRuntimeScale": 0.2696629213483146,
+    "sourceSha": "fb329a9c6c01b4ebf6e45237685925e85e600e889b9f136e55c82cfa886f039b",
+    "processedSha": "d2b4b4caed811fb00319b569c91d468e14c3be0ef538231a675bf68d59462248",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "gym-punchbag-v1": {
+    "width": 92,
+    "height": 240,
+    "sourceBounds": [
+      340,
+      57,
+      684,
+      950
+    ],
+    "sourceCropSize": [
+      344,
+      893
+    ],
+    "uniformRuntimeScale": 0.2687569988801792,
+    "sourceSha": "1896408bd67af54ccf7bcf93e3942ba83daab2bfaec11d5f5dfd84646ead3763",
+    "processedSha": "d93fead656eb76621a98b7d5c84447900f6498da0a733a58578fe09ece009da0",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "gym-towels-v1": {
+    "width": 240,
+    "height": 136,
+    "sourceBounds": [
+      137,
+      281,
+      888,
+      706
+    ],
+    "sourceCropSize": [
+      751,
+      425
+    ],
+    "uniformRuntimeScale": 0.3195739014647137,
+    "sourceSha": "daa24db70990977ccec439725b9dcad07ee2152fc96bb6a7a518770ca9752f83",
+    "processedSha": "8965afd3fe176ef09675515aa6ca11adaef347bd1e009a9e1849cb71d2032b34",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "workshop-tires-v1": {
+    "width": 240,
+    "height": 196,
+    "sourceBounds": [
+      86,
+      165,
+      939,
+      863
+    ],
+    "sourceCropSize": [
+      853,
+      698
+    ],
+    "uniformRuntimeScale": 0.2813599062133646,
+    "sourceSha": "87affe34549eb65b93ef0ea1014e459644b6dc0465fa9ce09496fcb5b7fcaba6",
+    "processedSha": "aa9f12d881f8ad55894ec8366e93fbe1686f78cc72bc9f955b697b7d525e41ed",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "camp-cooking-v1": {
+    "width": 240,
+    "height": 205,
+    "sourceBounds": [
+      182,
+      214,
+      842,
+      779
+    ],
+    "sourceCropSize": [
+      660,
+      565
+    ],
+    "uniformRuntimeScale": 0.36363636363636365,
+    "sourceSha": "f31c2ba016af6773a72181efa90a8112b7d194d101c36683efe1ffa8796656fb",
+    "processedSha": "14225c069b75485a491e8774155523a86d6b1166897652d103eb20c54c3c697e",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "garden-wheelbarrow-v1": {
+    "width": 240,
+    "height": 97,
+    "sourceBounds": [
+      66,
+      336,
+      958,
+      697
+    ],
+    "sourceCropSize": [
+      892,
+      361
+    ],
+    "uniformRuntimeScale": 0.26905829596412556,
+    "sourceSha": "1059f1ce50bbc9bde741a3cdcbe12fcaa2ea0b6a69d1b1a15560e4d84bb9acc5",
+    "processedSha": "d8e5f7939d2f1ff024afb6f32c355f5c818bc90f609deaa2b21d9e28e66797cc",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "harbor-bollard-v1": {
+    "width": 239,
+    "height": 240,
+    "sourceBounds": [
+      242,
+      192,
+      847,
+      800
+    ],
+    "sourceCropSize": [
+      605,
+      608
+    ],
+    "uniformRuntimeScale": 0.39473684210526316,
+    "sourceSha": "5f430304a7f605f72cefa26bb858113ec53cf5a78d35e1164a5d3c53bdf65638",
+    "processedSha": "3e0ae2b583085840283ae435afded7278f1d6d1c89a02a99a78b56558f9a9847",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "dining-chair-back-v1": {
+    "width": 174,
+    "height": 240,
+    "sourceBounds": [
+      279,
+      183,
+      745,
+      827
+    ],
+    "sourceCropSize": [
+      466,
+      644
+    ],
+    "uniformRuntimeScale": 0.37267080745341613,
+    "sourceSha": "15efa588ff06593ec9c5e5435734649f9eff103bcad72d038ef816d8981374bc",
+    "processedSha": "bbc349ad66f831f9d110b8cf226e8a1f3f29644b147d6b5149cc363ee08d306c",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "dining-chair-side-v1": {
+    "width": 130,
+    "height": 240,
+    "sourceBounds": [
+      294,
+      93,
+      734,
+      908
+    ],
+    "sourceCropSize": [
+      440,
+      815
+    ],
+    "uniformRuntimeScale": 0.294478527607362,
+    "sourceSha": "591a251d09d113f614dc54846848a0191cf78bae61c78cb25a336d5b72090736",
+    "processedSha": "797d6926ca6d6b4088b07485fb76eece2034d47faa87a8ba0fa781df217adc53",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "dining-table-front-v1": {
+    "width": 240,
+    "height": 178,
+    "sourceBounds": [
+      175,
+      275,
+      850,
+      777
+    ],
+    "sourceCropSize": [
+      675,
+      502
+    ],
+    "uniformRuntimeScale": 0.35555555555555557,
+    "sourceSha": "5860fb75d4019d282115214cc581c7d9e6c7d638d58fb033849ceb0d158935de",
+    "processedSha": "fd6d6f88da5abc9db1ff845b545e224bcfbe5b594e5189cebac45d31a6e1f51b",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "dining-table-side-v1": {
+    "width": 240,
+    "height": 224,
+    "sourceBounds": [
+      220,
+      240,
+      804,
+      785
+    ],
+    "sourceCropSize": [
+      584,
+      545
+    ],
+    "uniformRuntimeScale": 0.410958904109589,
+    "sourceSha": "b912226abf42d29acc77bb0de01c913ff1544d8d149e5b473b52760e5b63b14d",
+    "processedSha": "6940c90c0869ac029ba68045b901b4133279717a3491149e850ea3ae82a8865b",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "rejected: Tabletop depth edges converge; no runtime use"
+  },
+  "town-bicycle-front-v1": {
+    "width": 122,
+    "height": 240,
+    "sourceBounds": [
+      269,
+      30,
+      754,
+      988
+    ],
+    "sourceCropSize": [
+      485,
+      958
+    ],
+    "uniformRuntimeScale": 0.25052192066805845,
+    "sourceSha": "bac15069126e3b05e0fd9558c95f9d2e25df4b94e178394119465a1bf55a61d5",
+    "processedSha": "daea27ac1d2da78c33916d36faaba378ee96678785e9c7884385d177d8123364",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "dining-table-side-v2": {
+    "width": 127,
+    "height": 240,
+    "sourceBounds": [
+      292,
+      84,
+      732,
+      918
+    ],
+    "sourceCropSize": [
+      440,
+      834
+    ],
+    "uniformRuntimeScale": 0.28776978417266186,
+    "sourceSha": "8b2ff9061eb648614b3b7cc223a83b7d4410d715d253d23b2241518115e36d0e",
+    "processedSha": "5152f006dc2a01c7a267858c932742e44a496b2be32994362983288a62fbe166",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "accepted in current game renderer; awaiting user review"
+  },
+  "life-open-luggage-v1": {
+    "width": 198,
+    "height": 240,
+    "sourceBounds": [
+      139,
+      81,
+      875,
+      971
+    ],
+    "sourceCropSize": [
+      736,
+      890
+    ],
+    "uniformRuntimeScale": 0.2696629213483146,
+    "sourceSha": "ac6b7c978754ab69f16776c3997a46c9a135eaa75a715805884a2b24cd0416a5",
+    "processedSha": "5b7f2b36681a6cab48af19cc39cb215703141f9720d601e3b2dc6c31f5b8f4e0",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+  },
+  "life-washstand-v1": {
+    "width": 135,
+    "height": 240,
+    "sourceBounds": [
+      292,
+      123,
+      730,
+      902
+    ],
+    "sourceCropSize": [
+      438,
+      779
+    ],
+    "uniformRuntimeScale": 0.3080872913992298,
+    "sourceSha": "6074a9c63cc99cd121a6cf6ddc748dcbf383cb5d312b51c9ee49103435909796",
+    "processedSha": "ca9761bcceccc13a3b3411f02897e44531fdb8c98ce18649186bf4bb9225be0f",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+  },
+  "life-cup-cart-v1": {
+    "width": 212,
+    "height": 240,
+    "sourceBounds": [
+      174,
+      128,
+      850,
+      894
+    ],
+    "sourceCropSize": [
+      676,
+      766
+    ],
+    "uniformRuntimeScale": 0.3133159268929504,
+    "sourceSha": "b62751002737c11f2b0a0a7988b7e864437fffbbb52f410d2ced3385c3b3cdb3",
+    "processedSha": "e24f74b652539f1aaf7ee96ee0ac95200083dabf0766f5ad601a9246252bf518",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+  },
+  "life-repair-stand-v1": {
+    "width": 240,
+    "height": 238,
+    "sourceBounds": [
+      90,
+      82,
+      958,
+      942
+    ],
+    "sourceCropSize": [
+      868,
+      860
+    ],
+    "uniformRuntimeScale": 0.2764976958525346,
+    "sourceSha": "d989095c2de323a073197c7b89b21e51b6203afd03ab46e1c30e49ab7059a652",
+    "processedSha": "6927dc8ac75975a71c50ae78c179a9de03ce5789eed9072fe2b60e3c2dcb12a4",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+  },
+  "life-potting-bench-v1": {
+    "width": 240,
+    "height": 226,
+    "sourceBounds": [
+      150,
+      173,
+      873,
+      855
+    ],
+    "sourceCropSize": [
+      723,
+      682
+    ],
+    "uniformRuntimeScale": 0.33195020746887965,
+    "sourceSha": "b85f1b012ce4ea93164004f7814a3234191831692cc66edaaa5bfd39fbcda39f",
+    "processedSha": "d757bd8dace96f1368334521bb843f892fdda8592a604028087e43d7d681f2d6",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+  },
+  "life-net-rack-v1": {
+    "width": 240,
+    "height": 136,
+    "sourceBounds": [
+      67,
+      253,
+      957,
+      757
+    ],
+    "sourceCropSize": [
+      890,
+      504
+    ],
+    "uniformRuntimeScale": 0.2696629213483146,
+    "sourceSha": "2f936f983d1c5d8d29022d0518ca4ff7e6324f6e3d842e3c9325f0abdcd89571",
+    "processedSha": "e0db779564b90ba218df27fc4bd3ba8362298a42fd34e420711a28b4092220ff",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+  },
+  "life-cold-firepit-v1": {
+    "width": 240,
+    "height": 161,
+    "sourceBounds": [
+      237,
+      327,
+      788,
+      696
+    ],
+    "sourceCropSize": [
+      551,
+      369
+    ],
+    "uniformRuntimeScale": 0.4355716878402904,
+    "sourceSha": "cfde68f43b5331a818257c2d05a0c3ac91cb21e58862535a1c2f9f827725e40c",
+    "processedSha": "234116f1030b1e35ce84167109123d9212278d53d31f7080660ed07727051b28",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+  },
+  "life-weather-board-v1": {
+    "width": 240,
+    "height": 213,
+    "sourceBounds": [
+      139,
+      185,
+      885,
+      846
+    ],
+    "sourceCropSize": [
+      746,
+      661
+    ],
+    "uniformRuntimeScale": 0.32171581769436997,
+    "sourceSha": "1cc6a0e917275e48d4ca14657982e9aa8bd3f69e679e0d4e10bc45d88719c091",
+    "processedSha": "55548d9442dc5937a8f737ca3d0a6be8ccfc992c2ccee36da567400e1c1ac157",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+  },
+  "flora-maple-v1": {
+    "width": 420,
+    "height": 346,
+    "sourceBounds": [
+      64,
+      116,
+      960,
+      855
+    ],
+    "sourceCropSize": [
+      896,
+      739
+    ],
+    "uniformRuntimeScale": 0.46875,
+    "sourceSha": "27d7f4c6e04117c2897b0287aa83a7f6f14d3d5c22de13efa1f161b3e502c84d",
+    "processedSha": "f1a67bef8ade8e200606af6afcbc5b69ef9e6ae8b2e05a35d7391ec91fecc330",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; user aesthetic review pending; not deployed"
+  },
+  "flora-cedar-v1": {
+    "width": 150,
+    "height": 420,
+    "sourceBounds": [
+      358,
+      82,
+      667,
+      948
+    ],
+    "sourceCropSize": [
+      309,
+      866
+    ],
+    "uniformRuntimeScale": 0.48498845265588914,
+    "sourceSha": "562b871d29fbcb60253f912446af6ec51f5b87d7611030f51a92a131517074ce",
+    "processedSha": "3f24bd6a3cd580abc274b1eb944af8189a1f4ecfb671e2fd8ebf2339317ab71c",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; user aesthetic review pending; not deployed"
+  },
+  "flora-fern-v1": {
+    "width": 240,
+    "height": 210,
+    "sourceBounds": [
+      48,
+      104,
+      979,
+      920
+    ],
+    "sourceCropSize": [
+      931,
+      816
+    ],
+    "uniformRuntimeScale": 0.2577873254564984,
+    "sourceSha": "8d2e448a74af99709bce9e0fdb04acb4fb931ed6080a8f0ad2dd11d97b4fd32a",
+    "processedSha": "9c1671282b0317237a20270c694e59b5e11b0bee188e2693e19e5a65cbb32815",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; user aesthetic review pending; not deployed"
+  },
+  "flora-clover-v1": {
+    "width": 240,
+    "height": 164,
+    "sourceBounds": [
+      200,
+      285,
+      838,
+      721
+    ],
+    "sourceCropSize": [
+      638,
+      436
+    ],
+    "uniformRuntimeScale": 0.3761755485893417,
+    "sourceSha": "c94714c50d39487d868e6f5009bd92176d696386f7e819275ecab49bdc15ecc8",
+    "processedSha": "9f106d9dddec7c24bda7e3815b41be7f54125861d0583486baf631fd4ab61b6f",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; user aesthetic review pending; not deployed"
+  },
+  "flora-rose-v1": {
+    "width": 240,
+    "height": 166,
+    "sourceBounds": [
+      52,
+      188,
+      985,
+      833
+    ],
+    "sourceCropSize": [
+      933,
+      645
+    ],
+    "uniformRuntimeScale": 0.2572347266881029,
+    "sourceSha": "24f6824047f3fcb2cd9f67b154f50b6340fb1c62bbbee4b7be9a40ff0c4cd7c8",
+    "processedSha": "9a171742e1f6023db1280234c15d015e4e37a026630eb6aa9212f460550e0a23",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; user aesthetic review pending; not deployed"
+  },
+  "flora-reeds-v1": {
+    "width": 146,
+    "height": 240,
+    "sourceBounds": [
+      289,
+      104,
+      782,
+      915
+    ],
+    "sourceCropSize": [
+      493,
+      811
+    ],
+    "uniformRuntimeScale": 0.2959309494451295,
+    "sourceSha": "f1de591e6ac822c14ba7c04c493495ce9f4253bcdc0e3d72be17f976cc5ea8fb",
+    "processedSha": "4f5b856b70aea948c95816fdf3b5b479bde5f930a47b09ca4f28c5b2d2b7aac5",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; user aesthetic review pending; not deployed"
+  },
+  "flora-pot-rubber-v1": {
+    "width": 148,
+    "height": 240,
+    "sourceBounds": [
+      216,
+      46,
+      755,
+      920
+    ],
+    "sourceCropSize": [
+      539,
+      874
+    ],
+    "uniformRuntimeScale": 0.2745995423340961,
+    "sourceSha": "7540999c274817ff36cffaa435f4c2231d3b902b4d2f553070ef083f09fcdbd7",
+    "processedSha": "6999105ef2b070da65d0c0a0182da06f7f841c93abe7f30ec2959948ef52e744",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; user aesthetic review pending; not deployed"
+  },
+  "flora-herbs-v1": {
+    "width": 240,
+    "height": 148,
+    "sourceBounds": [
+      44,
+      194,
+      979,
+      770
+    ],
+    "sourceCropSize": [
+      935,
+      576
+    ],
+    "uniformRuntimeScale": 0.25668449197860965,
+    "sourceSha": "af0f802c75a25cfaa0b54d1da0637286de04eaacc0c32c7b3eac962747c58ffd",
+    "processedSha": "efdd6eda4830a99d3f9c759b74b2fbaa67e5f8179169e0269b79f686eeafd2af",
+    "process": "magenta colour key, tight crop, uniform nearest scaling; no geometry changes",
+    "status": "renderer-reviewed; user aesthetic review pending; not deployed"
   }
 }

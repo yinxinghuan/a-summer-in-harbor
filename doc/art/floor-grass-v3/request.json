@@ -1,0 +1,14 @@
+{
+  "request_id": "0034f127-91a9-4b35-b30c-fb1012cb72b4",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Seamless tileable TOP DOWN orthographic ground texture for a relaxed coastal 16-bit pixel RPG. Flat muted sage green summer lawn, edge to edge. Broad QUIET low-contrast areas with a very few tiny grouped blades and tiny dry olive patches. The color variation should stay close to base #819369, not a noisy speckled carpet. Crisp small pixel clusters, no photographic grain, no deep shadows, no perspective, no gradients, no flowers, no stones, no paths, no objects or borders. Suitable as calm background behind detailed trees and people, designed to repeat at160 pixels per tile.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

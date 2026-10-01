@@ -8,7 +8,8 @@ layout=json.loads((ROOT/'doc/world-layout.json').read_text())
 widths={}
 for room in layout['rooms'].values() if isinstance(layout['rooms'],dict) else layout['rooms']:
  for p in room['props']:widths[p['art']]=max(widths.get(p['art'],0),p['width'])
-meta={}
+meta_path=ROOT/'src/world/art-dimensions.json'
+meta=json.loads(meta_path.read_text()) if meta_path.exists() else {}
 for key in keys:
  src=ROOT/'doc/art'/key/'source.webp'
  if not src.exists():continue

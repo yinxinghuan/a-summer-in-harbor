@@ -1,0 +1,14 @@
+{
+  "request_id": "6608ff0c-47b6-4cfe-84c7-f146b0473292",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single independent game sprite. Polished restrained 16-bit pixel art, clustered pixels and subtle dark outlines, muted sea-green and warm summer palette, soft upper-left lighting. Elevated ORTHOGRAPHIC view looking down 50 degrees, no perspective convergence, no horizon. Entire object visible with generous margins on absolutely flat pure magenta #ff00ff. No landscape, floor, labels, frame or cast shadow. One low rectangular cream-painted wooden planter containing three distinct edible herb clusters: upright rosemary, rounded basil and small thyme. Leaf shapes readable, weathered corners. Full planter front and shallow top visible, front and back rim parallel equal length, depth edges vertical. Width adult shoulder span, height knee-high. No labels.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

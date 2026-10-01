@@ -1,0 +1,14 @@
+{
+  "request_id": "e8a3b3e6-1359-4263-9e26-3a31157a728e",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single complete isolated game sprite. Polished restrained 16-bit pixel art, carefully clustered pixels, subtle dark outline, warm honey wood and muted sea-green accents, relaxed North American coastal summer life, soft upper-left daylight. Elevated ORTHOGRAPHIC camera looking down 50 degrees, zero camera yaw, no vanishing points. Front and back horizontal edges equal length, depth edges vertical in image, rectangular tops never trapezoids. No floor, no wall, no people, no cast shadow, no scene, no lettering. Entire object including feet fits within generous margins on absolutely uniform pure magenta #ff00ff background. A modest waist-high narrow honey oak bookcase, two open shelves holding varied weathered books, a few folded towels on one shelf and one small blue pottery bowl on its top. Front facing screen DOWN, we see its rectangular top and front. Width 1.4 adult shoulder widths, height 0.8 adult height. Two short feet. Everyday lived-in coastal cottage, not grand library.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

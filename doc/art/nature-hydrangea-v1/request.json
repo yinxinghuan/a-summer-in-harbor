@@ -1,0 +1,14 @@
+{
+  "request_id": "364b6e86-402f-497c-8162-9c8c1ce680cd",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single isolated full game sprite for a relaxed North American coastal town. Polished restrained 16-bit pixel art, crisp small pixel clusters, subtle dark outlines, muted sage olive foliage, honey wood where relevant, soft upper-left daylight. Elevated ORTHOGRAPHIC camera looking down 50 degrees, zero sideways camera yaw, no vanishing point or converging parallel edges. No ground plane, floor, wall, horizon, environment, text or cast shadow. Complete object on perfectly uniform pure magenta #ff00ff background, clear margins all around. A single low irregular hydrangea bush with muted dark green leaves and five scattered dusty pale blue and ivory flower heads of different sizes. Compact ground-growing shrub, visible low base with no pot, no planter, no soil island. Sparse enough to read individual small flower clusters. About waist height next to an adult, intended display 45 pixels wide.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

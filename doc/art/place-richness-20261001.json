@@ -1,0 +1,24 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "reference_count": 0,
+  "keys": [
+    "home-wardrobe-v1",
+    "home-bedside-v1",
+    "cafe-pastry-v1",
+    "grocery-produce-v1",
+    "secondhand-records-v1",
+    "secondhand-clothing-v1",
+    "weather-instruments-v1",
+    "lighthouse-lanterns-v1",
+    "gym-punchbag-v1",
+    "gym-towels-v1",
+    "workshop-tires-v1",
+    "camp-cooking-v1",
+    "garden-wheelbarrow-v1",
+    "harbor-bollard-v1"
+  ],
+  "status": "renderer-reviewed; awaiting user review; not deployed",
+  "purpose": "Distinct room/region identities; newly generated original props, no color or mirror variants counted as new",
+  "evidence": "doc/qa/richness-20261001.md"
+}

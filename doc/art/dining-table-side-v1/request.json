@@ -1,0 +1,14 @@
+{
+  "request_id": "90756c25-924d-4d48-91d0-57bab9d3c820",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single isolated game sprite, restrained polished 16-bit pixel art, crisp pixel clusters and fine dark outline, warm coastal palette. Elevated ORTHOGRAPHIC camera looking down 50 degrees, no perspective convergence, no vanishing point, no camera yaw. Soft upper-left light. Uniform pure magenta #ff00ff, no floor, cast shadow, environment or text. Entire object with margins. One small honey-oak rectangular dining table with four slim square straight legs, tabletop real plan dimensions 100cm by 65cm, height 70cm. One small cream ceramic mug and one folded ivory newspaper with unreadable markings resting physically on top. No chairs. Short table edge runs horizontally across screen. This is the same rectangular furniture turned 90 degrees in the room: tabletop projected width65 and depth77, visible leg drop45 in same arbitrary units. Tabletop is rectangle with horizontal front/back edges equal and vertical depth edges parallel. No diagonal three-quarter pose.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

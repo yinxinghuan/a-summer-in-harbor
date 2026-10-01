@@ -1,0 +1,44 @@
+
+> a-summer-in-harbor@0.1.0 test
+> node --import tsx --test _qa/*.test.ts
+
+✔ fixed step is identical at 30/60/120fps (7.029584ms)
+✔ recording replays actual health, positions and outcome, no declared win trusted (2.622792ms)
+✔ one swing cannot hit twice across active frames (0.365875ms)
+✔ obstacles occlude melee and cannot be tunneled with dodge (0.822458ms)
+✔ three configurations validate; projectile mode has real projectiles (1.11825ms)
+✔ NaN, impossible geometry, overlapping spawns and inflated input fail (0.1875ms)
+✔ reaching safe exit does not require defeating invulnerable target (0.1575ms)
+✔ neutral initial questions, discovered bridge and prior answer gate follow-ups without reviving legacy topics (1.992791ms)
+✔ closed/reloaded midway response restores without modifying story; locale restarts same exchange and scopes reject other journeys/people (0.962292ms)
+✔ free dialogue is possible immediately after introduction; failure does not consume topic or count success (8.861083ms)
+✔ all introductions paginate into readable bilingual replies without dropping words (0.255083ms)
+✔ two generated notebook visits: compiled rules, safe return, read-only main story, idempotency and isolation (1218.122417ms)
+✔ fishing tension matters, controlled hold/release catches a fish (4.227667ms)
+✔ holding blindly loses and cannot submit a made up win (0.584625ms)
+✔ map pan/pinch is bounded and drag cannot become a travel tap (2.746417ms)
+✔ outdoor trail portals have real signs, dry approaches, and reciprocal arrival points (144.141042ms)
+✔ coast path and beach can be entered and returned through new approaches without changing story IDs (1.577791ms)
+✔ new side bench uses a narrow deep footprint; tree crowns do not become rectangular obstacles (0.256917ms)
+✔ new planting is grounded on dry land; unpotted foliage stays off paving (0.709041ms)
+✔ public gateway: signed cookie, no caller owner, cross-origin/expired/missing-cookie guards (36.841125ms)
+✔ lost response replays after database restart without repeating rewards (12.575542ms)
+✔ failed model and failed transaction preserve head, events and receipt boundary (2.629625ms)
+✔ bilingual cartridges preserve the same stat, location, item and character identities (0.139708ms)
+✔ daily activity groups retain an unobstructed reachable standing side (22.51875ms)
+✔ two deployed UUIDs isolate browser storage and clear leaves shell login intact (2.672417ms)
+✔ all actual scene spawns and interaction approaches are reachable (185.140667ms)
+✔ new player cannot receive names or key before introduction, talked topics retire (1.313208ms)
+✔ chapter has legal complete repair route; repeat rewards and remote actions blocked (1.520916ms)
+✔ exported session authority commits, replays, isolates and rejects stale writes (5.063083ms)
+✔ free question executes the same authored topic and never trusts model item rewards (0.460458ms)
+✔ unmet introduction or distance fails before any model call (0.225458ms)
+✔ broken bridge gap blocks feet until authoritative repair (0.064291ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1564.288625

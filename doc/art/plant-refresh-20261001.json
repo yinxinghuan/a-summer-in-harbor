@@ -1,0 +1,17 @@
+{
+  "keys": [
+    "flora-maple-v1",
+    "flora-cedar-v1",
+    "flora-fern-v1",
+    "flora-clover-v1",
+    "flora-rose-v1",
+    "flora-reeds-v1",
+    "flora-pot-rubber-v1",
+    "flora-herbs-v1"
+  ],
+  "mode": "text",
+  "reference_count": 0,
+  "model": "gpt-image-2.5-sunburst",
+  "status": "renderer-reviewed; awaiting user review; not deployed",
+  "evidence": "doc/qa/plant-refresh-20261001.md"
+}

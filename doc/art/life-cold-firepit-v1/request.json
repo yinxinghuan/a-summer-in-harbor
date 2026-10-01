@@ -1,0 +1,14 @@
+{
+  "request_id": "498fd081-4272-474c-baf1-c26aecf9bf6a",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single isolated independent game prop for a relaxed North American seaside town. Restrained polished 16-bit pixel art, crisp small pixel clusters, fine dark outline, muted sage green and honey oak, soft upper-left light. Elevated ORTHOGRAPHIC downward camera50 degrees, zero sideways yaw. Parallel horizontal edges have exactly equal length, depth edges parallel vertical, no trapezoid, vanishing point or diagonal room view. No floor plane, room, horizon, text or cast shadow. Complete object on flat pure magenta #ff00ff with margins. One small shallow ring of irregular grey stones viewed elevated orthographic from above, inside are cold grey ashes and three charred logs, no active fire or smoke. Compact low-height outdoor ground object, ring is a horizontally wide ellipse due orthographic projection. No surrounding floor texture.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

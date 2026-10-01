@@ -15,6 +15,6 @@ if((await realpath(output))!==output)throw Error('STAGING_REALPATH_MISMATCH');
 await mkdir(join(output,'worker'),{mode:0o700});
 await copyFile(join(root,'worker/index.js'),join(output,'worker/index.js'));
 await symlink(join(root,'dist'),join(output,'dist'));
-const values={HARBOR_PUBLIC_ORIGIN:config.publicOrigin,HARBOR_GAME_BASE:'/'+config.gameId,HARBOR_UPSTREAM_ORIGIN:config.upstreamOrigin,HARBOR_EXPIRES_AT:String(config.expiresAt),HARBOR_IDENTITY_MODE:config.identityMode};
+const values={HARBOR_PUBLIC_ORIGIN:config.publicOrigin,HARBOR_GAME_BASE:'/'+config.gameId,HARBOR_UPSTREAM_ORIGIN:config.upstreamOrigin,HARBOR_EXPIRES_AT:config.expiresAt===null?'none':String(config.expiresAt),...(config.timePolicy?{HARBOR_TIME_POLICY:config.timePolicy}:{}),HARBOR_IDENTITY_MODE:config.identityMode};
 await writeFile(join(output,'worker/bindings.json'),JSON.stringify({bindings:[...Object.entries(values).map(([name,text])=>({name,type:'plain_text',text})),{name:'HARBOR_EDGE_TOKEN',type:'secret_text',text:token}]}),{mode:0o600});
 console.log(JSON.stringify({prepared:true,gameId:config.gameId,expiresAt:config.expiresAt,privateBindingsOutsideRepository:true}));

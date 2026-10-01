@@ -48,7 +48,7 @@ export function createRpgSpace(options:SpaceOptions){
  const unproject=(point:Point)=>{const q={x:(point.x-leftInset)/scale,y:point.y/scale};const p=viewport()?.toWorld(q.x,q.y)??q;return {x:p.x,y:p.y}};
  const resize=()=>{
   const box=host.parentElement!,width=box.clientWidth,height=box.clientHeight;
-  engineHeight=Math.min(520,Math.max(220,height/1.3));
+  engineHeight=Math.max(220,height/1.3); // Keep actor scale stable when HUD frees more vertical space.
   engineWidth=width/Math.max(1,height)*engineHeight;
   scale=height/engineHeight;leftInset=(width-engineWidth*scale)/2;
   host.style.width=`${engineWidth}px`;host.style.height=`${engineHeight}px`;host.style.left='50%';host.style.top='0';host.style.transformOrigin='top center';host.style.transform=`translateX(-50%) scale(${scale})`;

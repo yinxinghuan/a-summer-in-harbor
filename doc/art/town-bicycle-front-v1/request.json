@@ -1,0 +1,14 @@
+{
+  "request_id": "bb6fce37-0359-4da2-9fd2-7bc0ab1f5f5f",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single isolated game sprite, restrained polished 16-bit pixel art, crisp pixel clusters and fine dark outline, warm coastal palette. Elevated ORTHOGRAPHIC camera looking down 50 degrees, no perspective convergence, no vanishing point, no camera yaw. Soft upper-left light. Uniform pure magenta #ff00ff, no floor, cast shadow, environment or text. Entire object with margins. One everyday city bicycle in muted sea-green, cream fenders, small wicker FRONT basket, brown saddle, rear luggage rack and kickstand. Exact head-on view facing screen DOWN, not diagonal. Front wheel centered below basket, rear wheel aligns behind it deeper in image, handlebars extend horizontally left/right. Elevated view sees tops of basket and saddle. Same practical well-used town bike as a right-facing side view but rotate physical bicycle, no flat image rotation. No person.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

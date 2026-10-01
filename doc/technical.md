@@ -32,7 +32,7 @@ TypeScript、React 18、Vite 8（`base: './'`）。场景使用 RPGJS 5 beta34�
 
 浏览器加载同 UUID `/api`；唯一持久写入者是 Story Session。每次意图先落本地 session 隔离日志，再携稳定 ID 提交；未知结果重试同 ID，随后读取最新 head，防止旧回执倒退进度。版本冲突、重复奖励、异主读取、事务回滚、重启后的回执重放均有测试。
 
-NPC 首次接近只显示日常描述；正式介绍后才可问话和使用名字。固定话题一次性退场，服务入口可重复，谈话进入手记。自由输入先过人物、距离、版本与用量门禁；模型选合法话题时执行原动作，不能靠正文发奖励。阅读文字先出现，选项后出现，也可点正文立即显示。
+NPC 首次接近只显示日常描述；正式介绍后才可问话和使用名字。固定话题一次性退场，服务入口可重复，谈话进入手记。自由输入先过人物、距离、版本与用量门禁；模型选合法话题时执行原动作，不能靠正文发奖励。阅读文字先出现，玩家明确翻完当前回复后才显示下一组选项；不再使用计时器自动放出选项，也不点击正文跳过。
 
 ### 战斗与小游戏
 
@@ -58,3 +58,41 @@ NPC 首次接近只显示日常描述；正式介绍后才可问话和使用名�
 - 新美术：平台服务生成新根图/同批派生，记录来源与处理，经过真实角色相邻与动作循环检查再准入。
 - 正式后台：`server/public.ts` 为新 PG 接头，`scripts/migrate-public.ts` 负责显式迁移，`server/http.ts` 共用业务路由；`server/index.ts` 继续只作为本地 SQLite authoring 入口。`worker/index.js` 验证来源并签发绑定游戏 UUID 的能力 cookie。这个临时浏览器身份方案尚待用户接受，不是平台账号验证；真实 PG 运行和恢复尚未验收。
 - 发布：`scripts/prepare-public-deploy.ts` 将私有绑定写到仓库外 staging，`.github/workflows/deploy.yml` 构建同提交镜像。`src/ui/Mirror.tsx` 在 Pages 上引导到主站，不向原游戏后台发跨域存档请求。完整状态见 `doc/release-readiness.md`；不能把适配代码存在等同于已上线。
+
+### 2026-10-01 阅读与前期引导修订
+
+`src/story/dialogue-reading.ts` 按句子生成中英短页，并保存 `exchangeId/page/locale/finished`。缓存经 storage adapter 隔离部署，再按权威旅程 UUID 与人物分区；从已提交 history 恢复，不提交 action。切语言从同一回复第一页开始。finished 标记防止同一历史回执重新唤起已读回复，缓存不代表跨设备阅读状态或真实账号认证。
+
+`client.ts` 在拿到对话回执时先登记阅读缓存；未知结果用原 action_id 恢复，成功后只清除与该问题相同的草稿。UI 草稿使用旅程/人物 key。存在 pending 时禁发新动作，并提供直接重新连接按钮。离开人物窗口会递增 UI epoch，迟到结果仍采纳权威进度，但不强行改回旧人物窗口。
+
+初次 AI 体验成功由权威 `free-dialogue-experienced` 标记或旧档实际问答记录判断；点击邀请、输入问题、失败都不算完成。固定话题 ID 未变；桥的具体追问要求已检查桥，庭院开放时间要求已讨论住户需要，模型与按钮共用 availableTopics。
+
+开场从两页改三页，分别解释来历、住宿目标、操作。开场 UI 游标按旅程存储。正文、自由提问入口、可编辑示例与下一步话题均有中英版本。账号现状和旧技能证据见 account-storage-integration.md；本批没有新增凭据、部署或真实账号验证完成声明。
+
+### 2026-10-01 室外道路与像素 UI
+
+`src/world/outdoors.ts` 的 `passages` 将出口、接近点、路标和方向统一；`data.ts`把它映射为已有portal ID，并装配独立路标。路面延伸与水域碰撞继续从同一layout导出。`View.tsx`只在190单位内显示路标目的地，65单位内转为底部行动；点击不会直接提交travel。`Map.tsx`同步区域地点方位。
+
+`src/ui/pixel-theme.css`在基础样式之后加载，用CSS变量定义字体/颜色/边框。面板flex布局保持标题与关闭按钮固定，正文内部滚动；选项自动换行。字体位于public/fonts，notices脚本保留完整许可证。世界高度按实际可用视口/1.3计算，取消520单位上限，避免长屏角色被额外放大。
+
+素材重做流程：平台media-batch生成 → scripts/prepare-outdoor-refresh.py处理七件素材 → export-world.ts导出布局 → assemble-maps.py重装缓存地图。新的草地只含材质，树、椅和路标仍是独立有脚点的精灵；处理脚本不修改几何透视。主prepare-art保留新增素材的metadata。准入状态与全套前后对照见doc/qa/outdoor-ui-20261001.md。DEV-only压力页位于_qa/ui-stress.html，不连接账号或写存档，不进入生产构建。
+
+室内追加使用同一处理脚本的可选manifest参数：`python scripts/prepare-outdoor-refresh.py doc/art/interior-refresh-20261001.json`。`Prop.floorDecoration`仅用于无碰撞的平面地毯：独立源图等比装入base层，sheets/View不创建对应Y排序事件，防止遮住脚部。八个作者室内新增用途匹配的陈设，原任务entity ID/坐标保持。
+
+### 场景陈设与朝向元数据（10月1日）
+`src/world/dressing.ts` 在基础布置后应用地点专用物件，人物、门和剧情实体身份不变。方向资产各自携带世界尺寸与地面碰撞。`scripts/catalog-refresh.py` 从实际布局汇总来源与朝向家族，输出项目级记录，不是共享库。地形按世界坐标对齐纹理，离线合成缓存底图。
+
+
+## 2026-10-01 · 空间使用逻辑第三轮
+
+src/world/scene-use.ts在dressHarbor之后组织用途分区；move同步移动精灵锚点和footprint，type同步重算素材尺寸与接地范围。dailyUseSpaces提供10个可站立且从出生点可达的使用侧测试。scripts/export-world.ts和assemble-maps.py重导出地图。来源与使用比例见art/use-logic-catalog-20261001.json，验收见qa/use-logic-20261001.md。
+
+
+## 2026-10-01 · 植物层次第四轮
+
+src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/planting.test.ts按outdoors最终地形层检查落地。植物来源与当前比例见art/plant-catalog-20261001.json；验收见qa/plant-refresh-20261001.md。
+
+
+## 章节回顾补充 · 2026-10-02
+
+`src/story/chapter.ts`从权威market-open和route-choice标记生成只读回顾；`src/ui/ChapterReview.tsx`呈现，本作main.tsx提供菜单/告示入口和固定继续探索按钮。open-route首次权威提交冻结route-choice，旧档不臆测历史选择。`_qa/chapter-completion.test.ts`完整走三种合法路线，检查回执重放、数据库重开、角色隔离和后续修桥不改原决定；可显式输出不含真实玩家的QA布局夹具。

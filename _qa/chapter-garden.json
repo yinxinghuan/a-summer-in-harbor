@@ -1,0 +1,377 @@
+{
+  "id": "a3999a67-6cc8-498e-99c9-5c37e6bee565",
+  "version": 38,
+  "cursor": 38,
+  "mapVersion": 1,
+  "locale": "en",
+  "scene": "bazaar",
+  "position": {
+    "x": 472,
+    "y": 399
+  },
+  "flags": [
+    "key",
+    "talk:mara:key",
+    "unpacked",
+    "unpack",
+    "talk:mara:settle",
+    "talk:theo:bag",
+    "terrace-fixed",
+    "bag-returned",
+    "talk:mara:return-bag",
+    "market-known",
+    "read-market",
+    "bridge-seen",
+    "inspect-bridge",
+    "talk:elena:quiet",
+    "garden-agreed",
+    "talk:elena:hours",
+    "route-open",
+    "route-choice:garden",
+    "open-route",
+    "market-open",
+    "open-market"
+  ],
+  "known": [
+    "mara",
+    "theo",
+    "elena"
+  ],
+  "visited": [
+    "station",
+    "home",
+    "cafe",
+    "market",
+    "bazaar",
+    "hill",
+    "coast",
+    "path",
+    "courtyard",
+    "lighthouse"
+  ],
+  "items": {
+    "key": 1
+  },
+  "energy": 100,
+  "cash": 25,
+  "standing": 15,
+  "relations": {
+    "mara": 3,
+    "elena": 2
+  },
+  "history": [
+    {
+      "id": "88eb1cae-29d9-487f-9abe-049efd9f2d29",
+      "kind": "talk",
+      "person": "mara",
+      "text": [
+        "一位穿亚麻衬衣的女士抬手招呼。她晃了晃钥匙：“你就是来住一夏的新房客吧？我是玛拉。先放下行李，别急着认全镇的人。”",
+        "A woman in a linen shirt waves a key. “You must be my summer tenant. I’m Mara. Let’s put your bag down before you try to learn the whole town.”"
+      ]
+    },
+    {
+      "id": "1e8a1a5b-2037-4b66-8700-21a878f6729e",
+      "kind": "talk",
+      "person": "mara",
+      "text": [
+        "“楼上的小房间是你的。先去放下包，回来再说别的。”她把钥匙放进你手里。",
+        "“The little room is yours. Put your bag down first. Everything else can wait.” She places the key in your hand."
+      ]
+    },
+    {
+      "id": "85ead061-6081-484d-9279-a87e3f7d2481",
+      "kind": "action",
+      "text": [
+        "你来到你的租屋。",
+        "You arrive at Your Room."
+      ]
+    },
+    {
+      "id": "4cbb3513-bf1f-450c-b59c-ebd60413725b",
+      "kind": "action",
+      "text": [
+        "行李放到了床边。窗外有杯碟碰响。房间是你的了——可以去看看小镇。",
+        "Your bag rests beside the bed. Cups clink somewhere outside. The room is yours. Time to see a little of town."
+      ]
+    },
+    {
+      "id": "dce2cdfa-3991-4856-9fb9-22998cfb3034",
+      "kind": "action",
+      "text": [
+        "你来到车站街。",
+        "You arrive at Station Street."
+      ]
+    },
+    {
+      "id": "33955524-939e-4310-a7e3-2db12be60d60",
+      "kind": "talk",
+      "person": "mara",
+      "text": [
+        "“想认识人就去咖啡馆，想清静就沿海走。咖啡馆替我保管着工具袋，路过时替我带回来就好。”",
+        "“The café for company, the coast for quiet. The café is keeping my tool bag. Bring it back if you pass that way.”"
+      ]
+    },
+    {
+      "id": "b11975ea-076d-4960-b3e8-0dd89b687e20",
+      "kind": "action",
+      "text": [
+        "你来到潮间咖啡馆。",
+        "You arrive at Tide & Table."
+      ]
+    },
+    {
+      "id": "db53d23b-4db0-431d-8cf1-8c75b0d0427d",
+      "kind": "talk",
+      "person": "theo",
+      "text": [
+        "柜台后的年轻人把杯子放下，围裙上写着Theo。“叫我西奥。你刚到？玛拉把她的工具袋忘在这里了。”",
+        "The man behind the counter sets down a cup. His apron reads Theo. “Just arrived? Mara left her tool bag here. You’re welcome to sit a while.”"
+      ]
+    },
+    {
+      "id": "1ddbbb5c-8ace-439e-9488-1438274c2e92",
+      "kind": "talk",
+      "person": "theo",
+      "text": [
+        "“就在这里。”他把帆布袋递给你。“别急着走，那盏露台灯送进来检修，可一直没时间弄。”",
+        "“Right here.” He hands you a canvas bag. “No rush. The terrace lantern came in for repairs, but I haven’t had time to look at it.”"
+      ]
+    },
+    {
+      "id": "ae5477dd-dd2e-466f-b8dd-b09d7f142bde",
+      "kind": "action",
+      "text": [
+        "准备好了就开始，也可以随时退出。",
+        "Start when you’re ready. You can leave at any time."
+      ]
+    },
+    {
+      "id": "6373eb2e-ef77-4535-b133-c32e3b0fca83",
+      "kind": "action",
+      "text": [
+        "灯亮了。西奥把一杯咖啡放在你面前，冲你举起杯子。",
+        "The lantern lights up. Theo sets a coffee down for you and raises his own cup."
+      ]
+    },
+    {
+      "id": "ed8b0c74-6ebe-435b-8808-00f4a5e4d914",
+      "kind": "action",
+      "text": [
+        "你来到车站街。",
+        "You arrive at Station Street."
+      ]
+    },
+    {
+      "id": "d6a27483-b4c7-4492-b5aa-2e504da7efda",
+      "kind": "talk",
+      "person": "mara",
+      "text": [
+        "她拉开袋子，松了口气：“正要用呢。谢谢。往后你不必事事问我，这个夏天是你的。”",
+        "She opens the bag with relief. “Just what I needed. Thank you. You don’t need my permission for every outing. This summer is yours.”"
+      ]
+    },
+    {
+      "id": "d978839b-633e-4144-a767-168e9b5c4c0c",
+      "kind": "action",
+      "text": [
+        "你来到旧街。",
+        "You arrive at Market Lane."
+      ]
+    },
+    {
+      "id": "9fbcef93-a157-4960-a43d-f79cba90bf75",
+      "kind": "action",
+      "text": [
+        "你来到集市广场。",
+        "You arrive at Market Square."
+      ]
+    },
+    {
+      "id": "b7808b77-937c-4e77-84d5-ffe3dcee45a6",
+      "kind": "action",
+      "text": [
+        "告示说夏日集市缺少通往海边的安全路线。桥坏了，私人庭院也不能默认借道。你决定先去看看。",
+        "The notice says the summer market needs safe access to the coast. The bridge is damaged, and the private garden isn’t a public shortcut. Worth a look."
+      ]
+    },
+    {
+      "id": "46bdbde5-5c22-487f-bbaa-0142d7fc7b40",
+      "kind": "action",
+      "text": [
+        "你来到旧街。",
+        "You arrive at Market Lane."
+      ]
+    },
+    {
+      "id": "ca9edee5-6b2b-4a06-b2e1-00434f6eb46f",
+      "kind": "action",
+      "text": [
+        "你来到山坡。",
+        "You arrive at The Hill."
+      ]
+    },
+    {
+      "id": "0328aaa4-cc07-45ed-850d-641e52d03411",
+      "kind": "action",
+      "text": [
+        "你来到海岸。",
+        "You arrive at The Coast."
+      ]
+    },
+    {
+      "id": "000cdfc8-ea7f-4e77-86f3-6d53f41b80a9",
+      "kind": "action",
+      "text": [
+        "你来到滨海道。",
+        "You arrive at Coastal Path."
+      ]
+    },
+    {
+      "id": "b7e51355-6eb9-4bcc-a8ea-e7433f91fdb6",
+      "kind": "action",
+      "text": [
+        "两块桥板断了，下面的支撑还很牢。可以修，也可以找别的路。",
+        "Two boards have split. The supports below are sound. You could repair it—or find another route."
+      ]
+    },
+    {
+      "id": "034712b1-767a-4e87-8a7d-30785ab3356b",
+      "kind": "action",
+      "text": [
+        "你来到海岸。",
+        "You arrive at The Coast."
+      ]
+    },
+    {
+      "id": "075f2924-a7ff-43d3-8ec1-4ea7691b11df",
+      "kind": "action",
+      "text": [
+        "你来到山坡。",
+        "You arrive at The Hill."
+      ]
+    },
+    {
+      "id": "40ccc0dc-9bec-47b7-bc16-5c036ee2aa2b",
+      "kind": "action",
+      "text": [
+        "你来到旧街。",
+        "You arrive at Market Lane."
+      ]
+    },
+    {
+      "id": "13eeb9fb-162a-4851-853c-809f7dc4572f",
+      "kind": "action",
+      "text": [
+        "你来到住户庭院。",
+        "You arrive at Residents’ Courtyard."
+      ]
+    },
+    {
+      "id": "09041d50-1eef-42c4-ac57-8840626c085b",
+      "kind": "talk",
+      "person": "elena",
+      "text": [
+        "拿着水壶的女人停在小门内。“埃琳娜。我知道大家想穿过这里去海边，但这里也是我妈妈午睡的地方。”",
+        "A woman with a watering can stops inside the gate. “Elena. I know everyone wants a way to the sea. It’s also where my mother takes her afternoon nap.”"
+      ]
+    },
+    {
+      "id": "0d1ec218-c4b3-4ea7-acc2-5fdaeb89fc26",
+      "kind": "talk",
+      "person": "elena",
+      "text": [
+        "“不只是声音。院子是我们的家。大家需要去海边，我理解，但不能默认这道门永远为他们开着。”",
+        "“It isn’t just noise. This is our home. I understand people need the coast, but that doesn’t make our gate a public road.”"
+      ]
+    },
+    {
+      "id": "41185856-fc73-4bc7-bf3c-c44009a05c2c",
+      "kind": "talk",
+      "person": "elena",
+      "text": [
+        "“上午十点到十二点，贴清楚时间。我愿意试一天，不是把院子交出去。”",
+        "“Ten to twelve, with a clear sign. I’ll try it for one day. I’m not giving the garden away.”"
+      ]
+    },
+    {
+      "id": "6f126b22-585c-4c07-bdd7-b4eb34ecf7e8",
+      "kind": "action",
+      "text": [
+        "你来到旧街。",
+        "You arrive at Market Lane."
+      ]
+    },
+    {
+      "id": "2589b9d7-267b-4fd8-8f97-01e7d0f0a9bf",
+      "kind": "action",
+      "text": [
+        "你来到山坡。",
+        "You arrive at The Hill."
+      ]
+    },
+    {
+      "id": "e5641d15-3dd7-4d36-9db0-10935f720b9c",
+      "kind": "action",
+      "text": [
+        "你来到海岸。",
+        "You arrive at The Coast."
+      ]
+    },
+    {
+      "id": "94077f93-3063-4770-b99c-51d6df7abc62",
+      "kind": "action",
+      "text": [
+        "你来到灯塔。",
+        "You arrive at The Lighthouse."
+      ]
+    },
+    {
+      "id": "f5c64f1e-e8c4-40fb-a25a-9e3fb1a1dbbe",
+      "kind": "action",
+      "text": [
+        "入口清楚写下上午十点到十二点的借道时间。庭院的边界保留着。",
+        "The entrance clearly states the agreed hours: ten until noon. The garden remains a home."
+      ]
+    },
+    {
+      "id": "1ceadb8a-419a-4ec0-bad0-3993a1fd1004",
+      "kind": "action",
+      "text": [
+        "你来到海岸。",
+        "You arrive at The Coast."
+      ]
+    },
+    {
+      "id": "5bc3039a-069b-4e17-9352-e1a2cd47dba4",
+      "kind": "action",
+      "text": [
+        "你来到山坡。",
+        "You arrive at The Hill."
+      ]
+    },
+    {
+      "id": "b1a8600f-0579-4350-bcf9-8dfe6d7e7620",
+      "kind": "action",
+      "text": [
+        "你来到旧街。",
+        "You arrive at Market Lane."
+      ]
+    },
+    {
+      "id": "7a35cbb9-a24b-4b41-be7d-776072a5f5a7",
+      "kind": "action",
+      "text": [
+        "你来到集市广场。",
+        "You arrive at Market Square."
+      ]
+    },
+    {
+      "id": "5074217f-391d-48d7-92d4-bac1c7eee57b",
+      "kind": "action",
+      "text": [
+        "摊位支起来了，海岸那边传来笑声。你没有解决镇上所有的问题，却已经在这里留下了自己的痕迹。这个夏天还长。",
+        "Stalls unfold, and laughter carries up from the coast. You haven’t solved every problem in town. But you’ve left a mark. There’s still a whole summer ahead."
+      ]
+    }
+  ]
+}

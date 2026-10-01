@@ -1,0 +1,14 @@
+{
+  "request_id": "209d8890-b263-4edb-a1d9-45c78d922563",
+  "session_id": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "prompt": "Single complete isolated game sprite for a relaxed North American coastal town. Polished restrained 16-bit pixel art, crisp small pixel clusters, restrained dark outlines, honey wood, muted sea-green, faded terracotta and warm cream palette, soft upper-left daylight. Elevated ORTHOGRAPHIC camera looking down 50 degrees; zero sideways yaw, no vanishing points. Rectangular tops have perfectly horizontal equal front/back edges and vertical parallel depth edges, never trapezoids. No people, floor, wall, cast shadow, scene, readable writing, logo or branding. Entire object fully visible on uniform pure magenta #ff00ff background with generous margins. One worn honey oak stereo cabinet on short legs with a small record player on its top and visible vinyl sleeves in a lower open shelf, one compact teal radio alongside the turntable. No modern flat screen. Front facing screen DOWN, tabletop a rectangle. Width 1.8 adult shoulder widths, total height 0.7 adult.",
+  "reference_urls": [],
+  "size": {
+    "width": 1024,
+    "height": 1024
+  },
+  "quality": "high",
+  "background": "opaque"
+}

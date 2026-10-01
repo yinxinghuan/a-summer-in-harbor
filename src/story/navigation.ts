@@ -1,13 +1,14 @@
 import {rooms,type Entity} from '../world/data';
-import {has,type Save} from './state';
+import {has,hasCoastRoute,type Save} from './state';
 export function objectivePlace(s:Save):{scene:string;entity:string}|null{
+ if(has(s,'market-open'))return null;
  if(!has(s,'key'))return {scene:'station',entity:'mara'};
  if(!has(s,'unpacked'))return {scene:'home',entity:'bed'};
  if(!has(s,'talk:mara:settle')&&!s.items.toolbag&&!has(s,'bag-returned'))return {scene:'station',entity:'mara'};
  if(!has(s,'bag-returned'))return s.items.toolbag?{scene:'station',entity:'mara'}:{scene:'cafe',entity:'theo'};
  if(!has(s,'market-known'))return {scene:'bazaar',entity:'notice'};
- if(!has(s,'bridge-seen'))return {scene:'path',entity:'bridge'};
- if(!has(s,'bridge-fixed')&&!has(s,'alternative-route')&&!has(s,'garden-agreed')){
+ if(!has(s,'bridge-seen')&&!hasCoastRoute(s))return {scene:'path',entity:'bridge'};
+ if(!hasCoastRoute(s)){
   if(!s.items.toolkit)return {scene:'workshop',entity:'june'};
   if((s.items.wood??0)<2)return {scene:'beach',entity:'driftwood'};
   return {scene:'path',entity:'bridge'};

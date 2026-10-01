@@ -1,0 +1,19 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "mode": "text",
+  "reference_count": 0,
+  "keys": [
+    "nature-sapling-v1",
+    "nature-broadleaf-v1",
+    "nature-hydrangea-v1",
+    "nature-juniper-v1",
+    "nature-wildflowers-v1",
+    "nature-beachgrass-v1",
+    "garden-raised-bed-v1",
+    "town-bicycle-v1",
+    "coast-rowboat-v1"
+  ],
+  "status": "renderer-reviewed; awaiting user review; not deployed",
+  "purpose": "Second outdoor richness pass; current game first, metadata prepared for future reuse without creating a library service",
+  "evidence": "doc/qa/richness-20261001.md"
+}

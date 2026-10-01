@@ -1,5 +1,8 @@
 import type {Point,Rect} from '../engine/world';
 export type TerrainPatch=Rect&{material:'stone'|'grass'|'sand'|'water'|'wood'};
+export type Passage={at:Point;approach:Point;sign:Point;side:'N'|'S'|'E'|'W'};
+// Authored spatial links: the route, approach, sign and arrival share one contract.
+export const passages:Record<string,Record<string,Passage>>={};
 export type OutdoorLayout={bounds:Rect;spawn:Point;landmark:Point;patches:TerrainPatch[];barriers:Rect[];entrances:Record<string,Point>;roadExits:Record<string,Point>;quietZone:Rect};
 // The topmost terrain patch is also the collision authority. Partition at patch
 // edges so no invisible water strip is accidentally walkable beside a pier.
@@ -28,7 +31,65 @@ export const outdoors:Record<string,OutdoorLayout>={
 // These are clearings, beaches and piers, not interior room envelopes.
 const clearing=(patches:TerrainPatch[],spawn:Point={x:460,y:540}):OutdoorLayout=>({bounds:{x:80,y:120,w:800,h:560},spawn,landmark:{x:480,y:350},quietZone:{x:560,y:400,w:160,h:100},patches,barriers:[],entrances:{},roadExits:{}});
 outdoors.dock=clearing([{x:80,y:120,w:800,h:560,material:'water'},{x:325,y:120,w:330,h:560,material:'wood'},{x:120,y:540,w:680,h:140,material:'stone'}]);
-outdoors.beach=clearing([{x:80,y:120,w:800,h:560,material:'sand'},{x:80,y:120,w:800,h:120,material:'grass'},{x:80,y:620,w:800,h:60,material:'water'}]);
+outdoors.beach=clearing([{x:80,y:120,w:800,h:560,material:'sand'},{x:80,y:120,w:800,h:120,material:'grass'},{x:0,y:620,w:1440,h:468,material:'water'}]);
 outdoors.path=clearing([{x:80,y:120,w:800,h:560,material:'grass'},{x:150,y:285,w:650,h:100,material:'stone'},{x:435,y:120,w:90,h:235,material:'water'},{x:392,y:285,w:176,h:48,material:'wood'},{x:430,y:380,w:100,h:300,material:'stone'}]);
 for(const id of ['garden','camp','courtyard'])outdoors[id]=clearing([{x:80,y:120,w:800,h:560,material:'grass'},{x:430,y:210,w:110,h:470,material:id==='camp'?'sand':'stone'},{x:240,y:340,w:460,h:100,material:id==='camp'?'sand':'stone'}]);
 outdoors.bazaar=clearing([{x:80,y:120,w:800,h:560,material:'grass'},{x:190,y:210,w:580,h:380,material:'stone'},{x:430,y:590,w:100,h:90,material:'stone'}]);
+
+function route(scene:string,destination:string,x:number,y:number,side:Passage['side'],sign:Point){
+ const dx=side==='W'?28:side==='E'?-28:0,dy=side==='N'?28:side==='S'?-28:0;
+ (passages[scene]??={})[destination]={at:{x,y},approach:{x:x+dx-8,y:y+dy-6},sign,side};
+}
+route('station','harbor',1280,540,'E',{x:1240,y:610});
+route('station','market',585,110,'N',{x:670,y:160});
+route('harbor','station',70,450,'W',{x:120,y:520});
+route('harbor','coast',1280,450,'E',{x:1235,y:535});
+route('harbor','hill',555,110,'N',{x:625,y:160});
+route('harbor','dock',805,645,'S',{x:835,y:585});
+route('market','station',615,920,'S',{x:690,y:885});
+route('market','hill',1280,530,'E',{x:1240,y:595});
+route('market','bazaar',605,110,'N',{x:685,y:170});
+// The courtyard keeps its visible house gate, rather than becoming a ground exit.
+route('coast','harbor',70,475,'W',{x:130,y:550});
+route('coast','hill',550,110,'N',{x:620,y:170});
+route('coast','path',1280,475,'E',{x:1235,y:550});
+route('coast','beach',550,805,'S',{x:625,y:765});
+route('hill','market',70,540,'W',{x:125,y:615});
+route('hill','harbor',650,920,'S',{x:735,y:880});
+route('hill','coast',1270,540,'E',{x:1230,y:610});
+route('hill','garden',355,110,'N',{x:420,y:170});
+route('hill','camp',1005,110,'N',{x:1080,y:170});
+for(const [scene,parent] of [['garden','hill'],['camp','hill'],['courtyard','market'],['bazaar','market'],['dock','harbor']])route(scene,parent,480,650,'S',{x:555,y:605});
+route('beach','coast',480,150,'N',{x:555,y:205});
+route('path','coast',125,335,'W',{x:195,y:400});
+
+// Each passage follows terrain to a visible continuation; no transport in blank grass.
+outdoors.station.patches.push({x:120,y:430,w:1200,h:220,material:'stone'},{x:995,y:875,w:150,h:50,material:'stone'},{x:630,y:890,w:500,h:55,material:'stone'});
+outdoors.coast.patches.push({x:495,y:80,w:110,h:450,material:'stone'},{x:495,y:525,w:110,h:335,material:'sand'});
+outdoors.hill.patches.push({x:305,y:80,w:100,h:190,material:'sand'},{x:955,y:80,w:100,h:210,material:'sand'});
+outdoors.beach.patches.push({x:430,y:120,w:100,h:430,material:'sand'});
+outdoors.path.patches.push({x:80,y:285,w:150,h:100,material:'stone'});
+// The west/east edges of the quay need a physical dry route to the next district.
+outdoors.harbor.patches.push({x:40,y:395,w:1280,h:110,material:'stone'});
+outdoors.harbor.barriers=outdoors.harbor.barriers.filter(b=>b.x!==1150);
+outdoors.harbor.barriers.push({x:1150,y:80,w:170,h:315},{x:1150,y:505,w:170,h:455});
+
+// Rocks/trees/tents already have grounded prop footprints. Old placeholder
+// rectangles here blocked empty grass and no longer represent scenery.
+outdoors.coast.barriers=outdoors.coast.barriers.filter(b=>b.x!==180);
+outdoors.hill.barriers=[];
+
+// Continue the visible route beyond the playable boundary. The off-map margin is
+// scenery, not another traversable area: travel still needs an explicit action.
+for(const [scene,links] of Object.entries(passages))for(const p of Object.values(links)){
+ const layout=outdoors[scene];
+ const ground=layout.patches.slice().reverse().find(t=>p.at.x>=t.x&&p.at.x<=t.x+t.w&&p.at.y>=t.y&&p.at.y<=t.y+t.h);
+ const material=ground?.material??'stone';const width=material==='wood'?100:110;
+ const patch=p.side==='N'?{x:p.at.x-width/2,y:0,w:width,h:p.at.y+40}:
+  p.side==='S'?{x:p.at.x-width/2,y:p.at.y-40,w:width,h:1088-p.at.y+40}:
+  p.side==='W'?{x:0,y:p.at.y-width/2,w:p.at.x+40,h:width}:
+  {x:p.at.x-40,y:p.at.y-width/2,w:1440-p.at.x+40,h:width};
+ if((p.side==='N'||p.side==='S')&&ground&&ground.w<=230){patch.x=ground.x;patch.w=ground.w}
+ if((p.side==='E'||p.side==='W')&&ground&&ground.h<=230){patch.y=ground.y;patch.h=ground.h}
+ layout.patches.push({...patch,material});
+}

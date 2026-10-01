@@ -1,0 +1,19 @@
+{
+  "keys": [
+    "dining-chair-back-v1",
+    "dining-chair-side-v1",
+    "dining-table-front-v1",
+    "dining-table-side-v1",
+    "town-bicycle-front-v1",
+    "dining-table-side-v2"
+  ],
+  "mode": "text",
+  "model": "gpt-image-2.5-sunburst",
+  "reference_count": 0,
+  "status": "renderer-reviewed; awaiting user review; not deployed",
+  "purpose": "Five direction samples plus one bounded geometry correction",
+  "rejected": {
+    "dining-table-side-v1": "Tabletop depth edges converge; no runtime use"
+  },
+  "evidence": "doc/qa/richness-20261001.md"
+}

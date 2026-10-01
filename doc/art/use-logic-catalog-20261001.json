@@ -1,0 +1,271 @@
+{
+  "scope": "Local project only; no shared asset library",
+  "heroHeight": 56,
+  "projection": "elevated orthographic",
+  "assets": [
+    {
+      "id": "life-open-luggage-v1",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "98c95cef-d0d3-42d6-b6b1-91164ee98eae",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790857426939-gddghchbr4t.webp",
+      "sourceSha": "ac6b7c978754ab69f16776c3997a46c9a135eaa75a715805884a2b24cd0416a5",
+      "processedSha": "5b7f2b36681a6cab48af19cc39cb215703141f9720d601e3b2dc6c31f5b8f4e0",
+      "promptPath": "doc/art/life-open-luggage-v1/request.json",
+      "localPath": "public/art/life-open-luggage-v1.png",
+      "placements": [
+        {
+          "scene": "home",
+          "prop": "use-unpacking",
+          "width": 47,
+          "height": 56.97,
+          "anchor": {
+            "x": 429,
+            "y": 433
+          },
+          "footprint": {
+            "x": 410,
+            "y": 414,
+            "w": 38,
+            "h": 19
+          }
+        }
+      ],
+      "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+    },
+    {
+      "id": "life-washstand-v1",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "6b1470f3-2ed3-4493-8845-d41056efb95f",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790857410830-l9x69gbf5tm.webp",
+      "sourceSha": "6074a9c63cc99cd121a6cf6ddc748dcbf383cb5d312b51c9ee49103435909796",
+      "processedSha": "ca9761bcceccc13a3b3411f02897e44531fdb8c98ce18649186bf4bb9225be0f",
+      "promptPath": "doc/art/life-washstand-v1/request.json",
+      "localPath": "public/art/life-washstand-v1.png",
+      "placements": [
+        {
+          "scene": "home",
+          "prop": "use-washing",
+          "width": 39,
+          "height": 69.33,
+          "anchor": {
+            "x": 328,
+            "y": 501
+          },
+          "footprint": {
+            "x": 311.5,
+            "y": 482,
+            "w": 33,
+            "h": 19
+          }
+        }
+      ],
+      "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+    },
+    {
+      "id": "life-cup-cart-v1",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "b16e1244-fc10-4212-8069-d11db7a5fb2b",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790857450802-eahvgbpcbjm.webp",
+      "sourceSha": "b62751002737c11f2b0a0a7988b7e864437fffbbb52f410d2ced3385c3b3cdb3",
+      "processedSha": "e24f74b652539f1aaf7ee96ee0ac95200083dabf0766f5ad601a9246252bf518",
+      "promptPath": "doc/art/life-cup-cart-v1/request.json",
+      "localPath": "public/art/life-cup-cart-v1.png",
+      "placements": [
+        {
+          "scene": "cafe",
+          "prop": "use-used-cups",
+          "width": 37,
+          "height": 41.89,
+          "anchor": {
+            "x": 310,
+            "y": 396
+          },
+          "footprint": {
+            "x": 294.5,
+            "y": 376,
+            "w": 31,
+            "h": 20
+          }
+        }
+      ],
+      "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+    },
+    {
+      "id": "life-repair-stand-v1",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "638e261e-b382-4129-a4ec-ac1b39a7702d",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790857470807-m0no6in4fxf.webp",
+      "sourceSha": "d989095c2de323a073197c7b89b21e51b6203afd03ab46e1c30e49ab7059a652",
+      "processedSha": "6927dc8ac75975a71c50ae78c179a9de03ce5789eed9072fe2b60e3c2dcb12a4",
+      "promptPath": "doc/art/life-repair-stand-v1/request.json",
+      "localPath": "public/art/life-repair-stand-v1.png",
+      "placements": [
+        {
+          "scene": "workshop",
+          "prop": "use-active-repair",
+          "width": 79,
+          "height": 78.34,
+          "anchor": {
+            "x": 602,
+            "y": 462
+          },
+          "footprint": {
+            "x": 570,
+            "y": 437,
+            "w": 64,
+            "h": 25
+          }
+        }
+      ],
+      "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+    },
+    {
+      "id": "life-potting-bench-v1",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "4532bf0b-bbef-4d24-826e-b9b359b3287d",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790857487908-qk1cmbs7ntd.webp",
+      "sourceSha": "b85f1b012ce4ea93164004f7814a3234191831692cc66edaaa5bfd39fbcda39f",
+      "processedSha": "d757bd8dace96f1368334521bb843f892fdda8592a604028087e43d7d681f2d6",
+      "promptPath": "doc/art/life-potting-bench-v1/request.json",
+      "localPath": "public/art/life-potting-bench-v1.png",
+      "placements": [
+        {
+          "scene": "garden",
+          "prop": "use-potting",
+          "width": 79,
+          "height": 74.39,
+          "anchor": {
+            "x": 205,
+            "y": 525
+          },
+          "footprint": {
+            "x": 172,
+            "y": 500,
+            "w": 66,
+            "h": 25
+          }
+        }
+      ],
+      "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+    },
+    {
+      "id": "life-net-rack-v1",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "1546cff5-cb51-40a8-a97f-a5d87c49350f",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790857510268-8ccsnpljn8c.webp",
+      "sourceSha": "2f936f983d1c5d8d29022d0518ca4ff7e6324f6e3d842e3c9325f0abdcd89571",
+      "processedSha": "e0db779564b90ba218df27fc4bd3ba8362298a42fd34e420711a28b4092220ff",
+      "promptPath": "doc/art/life-net-rack-v1/request.json",
+      "localPath": "public/art/life-net-rack-v1.png",
+      "placements": [
+        {
+          "scene": "harbor",
+          "prop": "use-nets",
+          "width": 90,
+          "height": 51.0,
+          "anchor": {
+            "x": 258,
+            "y": 699
+          },
+          "footprint": {
+            "x": 220,
+            "y": 682,
+            "w": 76,
+            "h": 17
+          }
+        },
+        {
+          "scene": "beach",
+          "prop": "use-drying-net",
+          "width": 93,
+          "height": 52.7,
+          "anchor": {
+            "x": 515,
+            "y": 364
+          },
+          "footprint": {
+            "x": 476,
+            "y": 346,
+            "w": 78,
+            "h": 18
+          }
+        }
+      ],
+      "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+    },
+    {
+      "id": "life-cold-firepit-v1",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "498fd081-4272-474c-baf1-c26aecf9bf6a",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790857521481-535dzn4asu7.webp",
+      "sourceSha": "cfde68f43b5331a818257c2d05a0c3ac91cb21e58862535a1c2f9f827725e40c",
+      "processedSha": "234116f1030b1e35ce84167109123d9212278d53d31f7080660ed07727051b28",
+      "promptPath": "doc/art/life-cold-firepit-v1/request.json",
+      "localPath": "public/art/life-cold-firepit-v1.png",
+      "placements": [
+        {
+          "scene": "camp",
+          "prop": "use-cold-fire",
+          "width": 48,
+          "height": 32.2,
+          "anchor": {
+            "x": 574,
+            "y": 420
+          },
+          "footprint": {
+            "x": 554.5,
+            "y": 399,
+            "w": 39,
+            "h": 21
+          }
+        }
+      ],
+      "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+    },
+    {
+      "id": "life-weather-board-v1",
+      "model": "gpt-image-2.5-sunburst",
+      "mode": "text",
+      "referenceCount": 0,
+      "requestId": "6ef67544-25b4-4d8e-8123-bf954eb0ccba",
+      "sourceUrl": "https://images.aiwaves.tech/uploads/1790857551515-dvypzp1bxf.webp",
+      "sourceSha": "1cc6a0e917275e48d4ca14657982e9aa8bd3f69e679e0d4e10bc45d88719c091",
+      "processedSha": "55548d9442dc5937a8f737ca3d0a6be8ccfc992c2ccee36da567400e1c1ac157",
+      "promptPath": "doc/art/life-weather-board-v1/request.json",
+      "localPath": "public/art/life-weather-board-v1.png",
+      "placements": [
+        {
+          "scene": "weather",
+          "prop": "use-chart-board",
+          "width": 65,
+          "height": 57.69,
+          "anchor": {
+            "x": 484,
+            "y": 289
+          },
+          "footprint": {
+            "x": 457,
+            "y": 274,
+            "w": 54,
+            "h": 15
+          }
+        }
+      ],
+      "status": "renderer-reviewed; awaiting user aesthetic review; not deployed"
+    }
+  ]
+}
