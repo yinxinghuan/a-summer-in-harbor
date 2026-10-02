@@ -1,0 +1,27 @@
+{
+  "method": "Original deterministic band-limited noise and damped body synthesis; not field recording",
+  "license": "MIT (project)",
+  "sourceScript": "scripts/audio/soft-footsteps.py",
+  "externalSamples": [],
+  "paidRequests": 0,
+  "files": [
+    {
+      "file": "step-soft-a.wav",
+      "durationSeconds": 0.14,
+      "sampleRate": 44100,
+      "channels": 1,
+      "sha256": "a0718cd5ae3964573b76d14c66a50d8ba607f02bdd463d874dc17f39cc951336",
+      "peakDb": -13.151546383555875,
+      "rmsDb": -29.426808839512898
+    },
+    {
+      "file": "step-soft-b.wav",
+      "durationSeconds": 0.14,
+      "sampleRate": 44100,
+      "channels": 1,
+      "sha256": "3c7da95cb07120511b42e16655c763c180eb47b5805ace3c3637aaeab1b852f1",
+      "peakDb": -13.151546383555875,
+      "rmsDb": -29.664895409547736
+    }
+  ]
+}
