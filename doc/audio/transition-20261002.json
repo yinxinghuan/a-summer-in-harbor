@@ -1,0 +1,11 @@
+{
+  "method": "Original deterministic soft wooden/felt transition cue. MIT. No external samples or fees.",
+  "sampleRate": 44100,
+  "channels": 1,
+  "durationSeconds": 0.3,
+  "peak": 0.18,
+  "sha256": "628c81208116168753704424f0a769e0da2c0d63807f7c88c25abe65cec8417a",
+  "externalSamples": [],
+  "paidRequests": 0,
+  "sourceScript": "scripts/audio/soft-transition.py"
+}

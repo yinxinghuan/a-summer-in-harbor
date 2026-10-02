@@ -1,4 +1,4 @@
-/** One bounded mixer. Platform music/SFX plus original local soft footsteps; no provider URLs. */
+/** One bounded mixer. Platform music/SFX plus original local soft footsteps and transition cue; no provider URLs. */
 export class SummerAudio{
  private context?:AudioContext;
  private master?:GainNode;
@@ -14,16 +14,17 @@ export class SummerAudio{
  private generation=0;
  private next=0;
  private stepIndex=0;
+ private transitionVoice?:{source:AudioBufferSourceNode;gain:GainNode};
  private stepVoice?:{source:AudioBufferSourceNode;gain:GainNode};
  constructor(){
-  document.addEventListener('visibilitychange',()=>{if(!this.context)return;if(document.hidden){this.stopSteps();void this.context.suspend()}else if(!this.muted)void this.context.resume().catch(()=>{})});
+  document.addEventListener('visibilitychange',()=>{if(!this.context)return;if(document.hidden){this.stopSteps();this.stopTransition(true);void this.context.suspend()}else if(!this.muted)void this.context.resume().catch(()=>{})});
  }
  unlock(){
   if(!this.context){this.context=new AudioContext();this.master=this.context.createGain();this.master.gain.value=this.muted?0:.22;this.master.connect(this.context.destination)}
   if(!this.muted)void this.context.resume().then(()=>this.change()).catch(()=>{});
-  this.prepareSteps();
+  this.prepareSteps();this.prepareTransition();
  }
- setMuted(muted:boolean){this.muted=muted;if(muted)this.stopSteps();if(this.master&&this.context){this.master.gain.cancelScheduledValues(this.context.currentTime);this.master.gain.setTargetAtTime(muted?0:.22,this.context.currentTime,.08)}if(!muted)this.unlock()}
+ setMuted(muted:boolean){this.muted=muted;if(muted){this.stopSteps();this.stopTransition()}if(this.master&&this.context){this.master.gain.cancelScheduledValues(this.context.currentTime);this.master.gain.setTargetAtTime(muted?0:.22,this.context.currentTime,.08)}if(!muted)this.unlock()}
  /** Decode ahead of time; an unloaded step is skipped, never played later. */
  private prepareSteps(){
   const context=this.context;if(!context)return;
@@ -47,9 +48,30 @@ export class SummerAudio{
   source.connect(gain);gain.connect(this.master!);const voice={source,gain};this.stepVoice=voice;this.effects++;
   source.onended=()=>{this.effects--;if(this.stepVoice===voice)this.stepVoice=undefined;source.disconnect();gain.disconnect()};source.start();
  }
+ /** Scene cues never wait for a request/decode and never queue stale arrivals. */
+ private prepareTransition(){
+  const context=this.context,key='transition-soft';if(!context||this.effectLoads.has(key))return;
+  const load=fetch('./audio/transition-soft.wav').then(r=>{if(!r.ok)throw Error('TRANSITION_LOAD');return r.arrayBuffer()}).then(b=>context.decodeAudioData(b));
+  this.effectLoads.set(key,load);void load.then(b=>this.buffers.set(key,b)).catch(()=>this.effectLoads.delete(key));
+ }
+ private stopTransition(immediate=false){
+  const voice=this.transitionVoice,context=this.context;if(!voice||!context)return;this.transitionVoice=undefined;
+  voice.gain.gain.setTargetAtTime(0,context.currentTime,.008);voice.source.stop(context.currentTime+(immediate?0:.025));
+ }
+ private transition(){
+  this.stopSteps();this.stopTransition();
+  const context=this.context;if(!context||context.state!=='running'||this.muted||document.hidden||this.effects>=4)return;
+  const now=performance.now();if(now-(this.effectTimes.get('door')??-1000)<180)return;
+  const buffer=this.buffers.get('transition-soft');if(!buffer)return;
+  this.effectTimes.set('door',now);
+  const source=context.createBufferSource(),gain=context.createGain();source.buffer=buffer;gain.gain.value=.42;
+  source.connect(gain);gain.connect(this.master!);const voice={source,gain};this.transitionVoice=voice;this.effects++;
+  source.onended=()=>{this.effects--;if(this.transitionVoice===voice)this.transitionVoice=undefined;source.disconnect();gain.disconnect()};source.start();
+ }
  setArea(area:string){this.desired=area==='practice'?'practice':area==='coast'||area==='harbor'?'coast':area==='hill'?'hill':'town-a';if(this.context)void this.change()}
  effect(key:'step'|'door'|'hit'|'progress'){
   if(key==='step'){this.step();return}
+  if(key==='door'){this.transition();return}
   const context=this.context;if(!context||this.muted||document.hidden||this.effects>=4)return;
   const now=performance.now();if(now-(this.effectTimes.get(key)??-1000)<90)return;this.effectTimes.set(key,now);
   let load=this.effectLoads.get(key);if(!load){load=fetch('./audio/'+key+'.mp3').then(r=>{if(!r.ok)throw Error('SFX_LOAD');return r.arrayBuffer()}).then(b=>context.decodeAudioData(b));this.effectLoads.set(key,load)}
