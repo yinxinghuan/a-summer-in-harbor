@@ -30,6 +30,6 @@ export function restoreReading(cache:Cache,save:Save,person:string,locale:Locale
  if(!entry||cursor.finished)return null;
  const pages=dialoguePages(entry.text[locale==='zh'?0:1],locale);
  const page=cursor.locale===locale?Math.min(cursor.page,pages.length-1):0;
- return {entry,pages,cursor:{...cursor,page,locale}};
+ return {entry,pages,historical:save.history.at(-1)?.id!==entry.id,cursor:{...cursor,page,locale}};
 }
 export const hasAsked=(save:Save)=>save.flags.includes('free-dialogue-experienced')||save.history.some(h=>h.kind==='talk'&&!!h.question);

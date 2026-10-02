@@ -4,6 +4,7 @@ import {walkable,type Point} from '../engine/world';import {world,worldWithFlags
 import {encounterPresets} from '../combat/presets';import {replayEncounter,type InputRun} from '../combat/core';
 export type Entry={id:string;kind:'talk'|'action';person?:string;question?:string;text:Words};
 import type {FieldNotes} from './fieldnotes-types';
+import {questProgress} from './progress';
 export type Save={fieldNotes?:FieldNotes;id:string;version:number;cursor:number;mapVersion:1;locale:Locale;scene:string;position:Point;flags:string[];known:string[];visited:string[];items:Record<string,number>;energy:number;cash:number;standing:number;relations:Record<string,number>;history:Entry[];activeChallenge?:{id:string;kind:string;scene:string};};
 export type Action={action_id:string;expected_version:number;scene:string;position:Point;target:string;action:string;payload?:unknown};
 export const has=(s:Save,id:string)=>s.flags.includes(id);
@@ -40,7 +41,24 @@ export const topics:Record<string,{id:string;label:Words;reply:Words;requires?:s
  elena:[{id:'quiet',label:['你希望路过的人注意些什么？','What would you like people passing through to consider?'],reply:['“不只是声音。院子是我们的家。大家需要去海边，我理解，但不能默认这道门永远为他们开着。”','“It isn’t just noise. This is our home. I understand people need the coast, but that doesn’t make our gate a public road.”'],once:true},{id:'hours',label:['只在上午借道，可以吗？','Could people pass in the morning?'],reply:['“上午十点到十二点，贴清楚时间。我愿意试一天，不是把院子交出去。”','“Ten to twelve, with a clear sign. I’ll try it for one day. I’m not giving the garden away.”'],requires:'bridge-seen',all:['talk:elena:quiet'],once:true}],
  arthur:[{id:'trail',label:['还有别的路到海边吗？','Is there another way to the coast?'],reply:['“营地那张旧图上的路还在。拼好它，你就看得出转弯处。那是公共小路，不必穿过别人的院子。”','“The trail on the old camp map is still there. Put the pieces together and you’ll see the turn. Public land. No need to cross anyone’s garden.”'],once:true}]
 };
-export function availableTopics(s:Save,p:string){return (topics[p]??[]).filter(t=>(!t.requires||has(s,t.requires))&&(!t.all||t.all.every(f=>has(s,f)))&&(!t.once||!has(s,`talk:${p}:${t.id}`))&&(t.id!=='return-bag'||!!s.items.toolbag)&&(t.id!=='fish'||!!s.items.fish)&&(t.id!=='key'||!has(s,'key')))}
+function currentTopic(s:Save,p:string,t:(typeof topics)[string][number]){
+ const q=questProgress(s);let reply:Words|undefined;
+ switch(p+':'+t.id){
+  case 'mara:settle':
+   if(q.toolbag==='returned')reply=['“工具袋已经收好了，谢谢你。想热闹就去咖啡馆，想清静就沿海走。慢慢逛，不用急着替谁办事。”','“The tool bag is safely back, thanks to you. The café for company, the coast for quiet. Take your time; you don’t owe anyone an errand.”'];
+   else if(q.toolbag==='carried'||q.toolbag==='collected')reply=['“想认识人就去咖啡馆，想清静就沿海走。你已经替我取到工具袋了，方便时交给我就好。”','“The café for company, the coast for quiet. You’ve already collected my tool bag; hand it over when you’re ready.”'];break;
+  case 'theo:repair':if(q.terrace==='repaired')reply=['“灯已经修好了，多亏你。今晚露台终于能亮起来。先坐会儿吧，不用再修一次。”','“The lantern is fixed, thanks to you. We’ll have light on the terrace tonight. Take a seat; there’s nothing to fix again.”'];break;
+  case 'theo:bag':if(q.terrace==='repaired')reply=['“就在这里。”他把帆布袋递给你。“灯也多亏你修好了，替我向玛拉问好。”','“Right here.” He hands you the canvas bag. “And thanks for fixing the lantern. Give Mara my regards.”'];break;
+  case 'theo:coast':
+   if(q.access==='open')reply=['“海岸通行安排已经贴好了，按指路牌走就行。要是选了庭院那条路，别忘了约好的时段。”','“The coast access arrangements are posted. Follow the signs. If you take the garden route, keep to the agreed hours.”'];
+   else if(q.access==='ready')reply=['“你已经找到了可行的路。去灯塔确认通行安排，就能把路线告诉大家了。”','“You’ve found a workable route. Confirm the access arrangements at the lighthouse, then let everyone know.”'];break;
+  case 'june:bridge':if(q.bridge==='repaired')reply=['“新桥板已经固定好了。做得不错。以后留意木板的状况就行，不用再找两块来换。”','“The new boards are secure. Good work. Just keep an eye on them; you don’t need another pair.”'];break;
+  case 'arthur:trail':if(q.trail==='mapped')reply=['“你已经把公共小路拼出来了。沿气象站下面走，不需要经过私人院子。”','“You’ve already pieced together the public trail. It runs below the weather station, clear of the private garden.”'];break;
+  case 'nell:photo':if(q.trail==='mapped')reply=['内尔把照片递给你：“留着吧。照片里就是你找到的那条公共小路，往后也能作个纪念。”','Nell gives you the photograph. “Keep it. That’s the public trail you found. A little memento, too.”'];break;
+ }
+ return reply?{...t,reply}:t;
+}
+export function availableTopics(s:Save,p:string){return (topics[p]??[]).filter(t=>(!t.requires||has(s,t.requires))&&(!t.all||t.all.every(f=>has(s,f)))&&(!t.once||!has(s,`talk:${p}:${t.id}`))&&(t.id!=='return-bag'||(!!s.items.toolbag&&!has(s,'bag-returned')))&&(t.id!=='fish'||!!s.items.fish)&&(t.id!=='key'||!has(s,'key'))&&!(p==='theo'&&t.id==='bag'&&(!!s.items.toolbag||has(s,'bag-returned')))&&!(p==='june'&&t.id==='tools'&&!!s.items.toolkit)&&!(p==='elena'&&t.id==='hours'&&has(s,'garden-agreed'))).map(t=>currentTopic(s,p,t))}
 export function validateQuestion(s:Save,a:Action){
  requireState(a.expected_version===s.version,'VERSION_CONFLICT');requireState(a.scene===s.scene&&walkable(worldWithFlags(s.flags),s.scene,a.position),'INVALID_POSITION');requireState(!s.activeChallenge,'CHALLENGE_ACTIVE');const e=entityAt(s.scene,a.target);requireState(e?.person&&s.known.includes(e.person),'INTRODUCE_FIRST');requireState(Math.hypot(a.position.x+8-e!.at.x,a.position.y+6-e!.at.y)<=75,'TOO_FAR');const text=(a.payload as {text?:unknown})?.text;requireState(typeof text==='string'&&text.trim().length>0&&text.length<=400,'INVALID_QUESTION');return {person:e!.person!,question:(text as string).trim()};
 }
@@ -84,12 +102,12 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution)
    switch(a.action){
     case 'unpack':requireState(has(s,'key'),'KEY_NEEDED');flag(s,'unpacked');text=['行李放到了床边。窗外有杯碟碰响。房间是你的了——可以去看看小镇。','Your bag rests beside the bed. Cups clink somewhere outside. The room is yours. Time to see a little of town.'];break;
     case 'rest':s.energy=100;text=['你歇了一会儿。海风吹进房间，体力恢复了。','You rest while the sea breeze moves through the room. Your energy returns.'];break;
-    case 'read-market':flag(s,'market-known');text=['告示说夏日集市缺少通往海边的安全路线。桥坏了，私人庭院也不能默认借道。你决定先去看看。','The notice says the summer market needs safe access to the coast. The bridge is damaged, and the private garden isn’t a public shortcut. Worth a look.'];break;
+    case 'read-market':flag(s,'market-known');text=has(s,'route-open')?['夏日集市正在等通行安排的消息。路线已经准备好了，可以把好消息告诉大家。','The summer market is waiting for news of access. Your route is ready; you can share the good news.']:hasCoastRoute(s)?['集市需要安全的海岸通路。你已经找到可行的路线，去灯塔确认安排后就能来报信。','The market needs safe coast access. You already have a workable route; confirm the arrangements at the lighthouse, then bring the news.']:['告示说夏日集市缺少通往海边的安全路线。桥坏了，私人庭院也不能默认借道。你决定先去看看。','The notice says the summer market needs safe access to the coast. The bridge is damaged, and the private garden isn’t a public shortcut. Worth a look.'];break;
     case 'inspect-bridge':flag(s,'bridge-seen');text=['两块桥板断了，下面的支撑还很牢。可以修，也可以找别的路。','Two boards have split. The supports below are sound. You could repair it—or find another route.'];break;
     case 'gather-wood':requireState(!has(s,'wood-collected'),'ALREADY_DONE');give(s,'wood',2);flag(s,'wood-collected');text=['你挑出两块结实的木板，避开了已经朽烂的部分。','You pick out two sound planks, leaving the rotten wood behind.'];break;
     case 'repair-bridge':requireState(has(s,'bridge-seen')&&s.items.toolkit&&s.items.wood>=2,'BRIDGE_REQUIREMENTS');requireState(s.energy>=10,'REST_NEEDED');take(s,'wood',2);s.energy-=10;flag(s,'bridge-fixed');s.standing+=5;text=['新桥板固定好了。你试着踩上去，木头稳稳承住你的重量。','The new boards hold. You test your weight on them; the bridge stays steady.'];break;
-    case 'inspect-garden':text=['便条写着：请先敲门。这是住户的家，不是公共通道。','The note says: Please knock. This is someone’s home, not a public passage.'];break;
-    case 'read-weather':flag(s,'weather-read');text=['记录本标着一条避开私人院子的旧路。完整路线可能在营地的旧图上。','The log marks an old trail clear of the private garden. The camp map may show the rest.'];break;
+    case 'inspect-garden':text=has(s,'garden-agreed')?['便条已经写上约定的上午十点到十二点。院子仍是住户的家，其他时间请走公共路线。','The note now shows the agreed hours, ten until noon. The garden is still a home; use a public route outside those hours.']:['便条写着：请先敲门。这是住户的家，不是公共通道。','The note says: Please knock. This is someone’s home, not a public passage.'];break;
+    case 'read-weather':flag(s,'weather-read');text=has(s,'alternative-route')?['记录本上的小路与你已经拼好的路线吻合：从气象站下方通往海边。','The log matches the trail you already mapped: below the weather station and down to the coast.']:['记录本标着一条避开私人院子的旧路。完整路线可能在营地的旧图上。','The log marks an old trail clear of the private garden. The camp map may show the rest.'];break;
     case 'open-route':requireState(has(s,'bridge-fixed')||has(s,'alternative-route')||has(s,'garden-agreed'),'ROUTE_NOT_READY');flag(s,'route-open');flag(s,has(s,'bridge-fixed')?'route-choice:bridge':has(s,'alternative-route')?'route-choice:trail':'route-choice:garden');s.standing+=4;text=has(s,'bridge-fixed')?['桥边的封闭牌摘下了。新路既方便，也保住了住户的安静。','The closure sign comes down by the bridge. Access is restored, and the residents keep their quiet.']:has(s,'alternative-route')?['指路牌转向了山坡的公共小路。远一点，但大家都能自在地走。','The sign now points along the public hillside trail. A little longer, but open to everyone.']:['入口清楚写下上午十点到十二点的借道时间。庭院的边界保留着。','The entrance clearly states the agreed hours: ten until noon. The garden remains a home.'];break;
     case 'open-market':requireState(has(s,'route-open')&&has(s,'market-known'),'ROUTE_NOT_READY');flag(s,'market-open');s.standing+=8;text=['摊位支起来了，海岸那边传来笑声。你没有解决镇上所有的问题，却已经在这里留下了自己的痕迹。这个夏天还长。','Stalls unfold, and laughter carries up from the coast. You haven’t solved every problem in town. But you’ve left a mark. There’s still a whole summer ahead.'];break;
     default:throw Error('ACTION_UNAVAILABLE');
