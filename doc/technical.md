@@ -104,3 +104,7 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 ## 2026-10-03 B：受限动态素材验证
 
 新增 server/dynamic-assets：现有浏览器能力身份与两个新 QA 旅程白名单绑定；五个同 UUID 动作；只读 inventory catalog → 精确用途/视角/几何筛选 → 共享 selector → 固定 grant。PG 同事务提交 packages/grants 与 async_media 附件，不推进剧情游标。元数据只接受三个精确 @2；无新生图。默认 off，QA 文件到期关闭；普通玩家/旧档没有附加对象。前端 src/dynamic-assets 经逐字节与授权检查后整组挂载 RPGJS；三个预审槽位的碰撞由同一 layout 合同供应，图片不可改变几何。实际远程验收状态以本轮 release 回执为准，不能把本地测试说成平台账号接入。
+
+## 2026-10-04 上下文举例
+
+`src/story/question-examples.ts` 从现有Save和questProgress选择只读双语候选，缺少已知上下文时给泛问；不依赖新schema。`src/ui/ExampleAssist.tsx`管理轮换/预览/明确替换，接受受控value/onChange、inputId、locale、disabled；父组件以包含相关上下文与候选的key重置临时状态并沿用draftKey持久化。示例只写草稿，ask/send仍走既有权威链。角色/动作/生成房间是否需要例子取决于是否实际存在自由输入。扩展人物内容在game-owned适配器内完成，不能只按known角色推断所有知识已公开。移动端面板遮罩仅对直接按在背景的pointer-down关闭，防止打开面板的尾随click误关。定向证据见doc/qa/examples-20261004。

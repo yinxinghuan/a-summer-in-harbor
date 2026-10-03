@@ -14,3 +14,12 @@ button,input,textarea,select{font-family:var(--font-ui);font-weight:400}strong,b
 @media(prefers-reduced-motion:reduce){button{transition:none}}
 
 .harbor-panel__footer{flex:none;padding:12px 18px;border-top:2px solid var(--line);background:var(--paper)}.harbor-panel__footer button{width:100%;min-height:48px;white-space:normal}.harbor-chapter-review ul{padding-left:22px}.harbor-chapter-review li{margin:0 0 12px;overflow-wrap:anywhere}.harbor-chapter-review small{font-size:12px;color:var(--text-muted)}
+
+/* Contextual writing assistance inherits the existing panel and pixel tokens. */
+.harbor-example-assist{display:grid;gap:8px;min-width:0}
+.harbor-example-assist>.harbor-suggestion{justify-self:start;min-height:44px}
+.harbor-example-assist small{display:block;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+.harbor-example-assist__preview{border:2px solid var(--line);padding:12px;background:var(--paper-light);min-width:0}
+.harbor-example-assist__preview p{margin:0 0 8px;overflow-wrap:anywhere}
+.harbor-example-assist__actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.harbor-example-assist__actions button{flex:1 1 150px;min-height:44px;padding:8px;font-size:16px}

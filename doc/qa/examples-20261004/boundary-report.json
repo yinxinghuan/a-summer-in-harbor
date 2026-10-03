@@ -1,0 +1,20 @@
+[
+  {
+    "locale": "en",
+    "pages": 4,
+    "readingGate": true,
+    "touchActivation": true,
+    "rapidClickDraftSafe": true,
+    "shortEditingViewport": true,
+    "requests": 0
+  },
+  {
+    "locale": "zh",
+    "pages": 3,
+    "readingGate": true,
+    "touchActivation": true,
+    "rapidClickDraftSafe": true,
+    "shortEditingViewport": true,
+    "requests": 0
+  }
+]

@@ -1,0 +1,97 @@
+---
+name: create-rpg-game
+description: Create a new AlterU AI RPG from product idea through bilingual world authoring, deterministic rules, visual and audio production, server-authoritative Story Session integration, QA, handoff, and—when explicitly requested—formal release. Use for making a new persistent text, cinematic, or map-exploration RPG; do not use for migrating an already published game or for ordinary non-RPG games.
+---
+
+# Create a Production RPG
+
+Build a new RPG as one coherent product. The game starts with the current Story Session architecture; do not present server authority as a later migration project.
+
+## Route the work
+
+For server-validated dynamic rooms, reusable rule modules, PostgreSQL/container authority, or exporting the proven dynamic RPG method, read [references/dynamic-authority.md](references/dynamic-authority.md). This is an additional backend route, not a replacement for every existing Worker game. It distinguishes reusable code from game-specific adapters and keeps FC as an unverified deployment experiment. For an already published game, enter through `migrate-story-session-runtime` and use the same reference; do not recreate its story or reset its saves.
+
+This Skill is the main entry point in the RPG creation kit. Use the sibling Skills appropriate to the selected shell:
+
+- `build-stateful-story-game` owns product discovery, engine selection, Cartridge authoring, deterministic game rules, art/audio direction, standalone export, and source QA.
+- `build-spatial-story-game` owns directly controlled orthogonal map exploration, shared collision/layout, entity admission, renderer transitions, and spatial QA. It is required for the `spatial` route; confirm it is available before starting that route.
+- `game-publish` owns repository creation, self-hosted + Pages release, catalog registration, and live verification, but only when the user explicitly requests publishing.
+
+Read the relevant sibling `SKILL.md` before entering that phase. Their permissions and stopping conditions remain in force.
+
+## End-to-end workflow
+
+### 1. Define the RPG in product language
+
+Use `build-stateful-story-game` to identify the player fantasy, session shape, freedom, exactly three visible stats, resource/economy, companions, danger, failure/recovery, image cadence, audio character, persistence, and return motivation. Choose one shell:
+
+- `stateful`: accumulated reading, open exploration, relationships, inventories, and lower media frequency.
+- `cinematic`: short paginated scenes, fixed 4:5 stage, `decision → resolving → result → decision`, and one image decision per successful step.
+- `spatial`: direct movement through orthogonal maps, collision, approaching objects/people, and actions or conversation backed by the same Story Session. Use `build-spatial-story-game` and [references/spatial-production.md](references/spatial-production.md). Do not substitute text choices or cinematic scene cards for requested map movement.
+
+Do not expose reducer, schema, API, hosting, or deployment questions during the creative interview.
+
+### 2. Author and verify the game
+
+For every RPG with open AI dialogue, read [references/free-dialogue-onboarding.md](references/free-dialogue-onboarding.md). Make the capability a hands-on part of the prologue or first safe character interaction, not a hidden secondary option. Preserve character introduction and authority boundaries. For authored choices, follow-up questions, paginated replies or reopen/reload recovery, also read [references/dialogue-continuity.md](references/dialogue-continuity.md): choices must not disclose unknown information, committing a response is not proof the player has seen it, and an unspoken topic must not reopen a task already completed by another legal path. Resolve authored replies and model context from current committed progress, not only topic-consumption keys.
+
+For finite campaigns, use `build-stateful-story-game/references/campaign-pacing.md` to define milestone dependencies, chapter versus final-ending semantics, and a shortest-completion-route check. Apply this to all three shells. Do not treat a successful rules-service integration or a short sample walkthrough as evidence of adequate campaign length; runtime-generated episodes require their own supported admission and persistence contract.
+
+For `stateful` or `cinematic`, follow the complete `build-stateful-story-game` workflow and work in an empty copy of its frozen template. For `spatial`, follow the spatial reference and reuse the current Story Core contracts without copying either complete presentation shell. For every shell, author paired Chinese/English Cartridge exports with identical stable IDs. Keep the engine responsible for state, parsing, reducer logic, danger, save migration, media queues, UI flow, and recovery. Keep the Cartridge responsible for this game's world, characters, places, items, stats, domain rules, director rules, opening, campaign, and endings.
+
+Complete requirements, visual, technical, poster, notices, mobile/desktop QA, tests, build, and UUID isolation. Produce `doc/artifact-handoff.json` when source handoff is part of the requested delivery; do not add a separate handoff package to an internal experiment. Do not claim user comprehension without real new-player evidence.
+
+### 3. Install Story Session before first release
+
+Read [references/production-from-day-one.md](references/production-from-day-one.md). For `stateful` or `cinematic`, apply the mode-specific verified overlay in `assets/story-session-runtime/` to the exported project, then adapt it to the new Cartridge and save schema. These overlays do not include a verified generic `spatial` template: use the spatial integration contract, keep the existing story authority when extending a game, and verify the new adapter before claiming production readiness.
+
+Required production shape:
+
+- one same-UUID authority owns enrollment, snapshot, version, cursor, events, action/ending idempotency, and owner directory: use the existing Worker + Durable Object SQLite route, or the explicitly selected PostgreSQL/container route in `dynamic-authority.md`;
+- browser persists pending intent before network I/O and reconciles unknown results from the authority;
+- exactly one production writer exists;
+- model output passes through the game's existing authoritative turn pipeline and reducer;
+- media uses stable request IDs and server overlays without changing story version/cursor;
+- self-hosted API base follows the current Remix-safe UUID contract;
+- a new game does not invent a fake migration history. A local engine may remain as an explicit QA/emergency fallback, but production defaults to Story Session from its first release.
+
+Use a platform-verified actor when available. If it is unavailable and the user explicitly accepts the risk, the kit's `anonymous-capability-v1` bootstrap may be used temporarily. Describe it as possession-based isolation, never as user authentication. Read [references/player-identity-status.md](references/player-identity-status.md) before claiming account login or cross-device continuation; it records the current example's unimplemented boundary and the evidence required to close it.
+
+### 4. Run the combined acceptance gates
+
+Read [references/acceptance.md](references/acceptance.md). At minimum verify:
+
+- the source game's normal protocol/domain/danger/persistence/ending/browser suites;
+- for `spatial`, actual character movement and continuous map transitions, authoritative action/input equivalence, consumed inventory and relationships after reentry, and slow/failed image loading without changing story facts;
+- server-compatible authoritative turn behavior;
+- enrollment and action replay, version conflict, transaction rollback, response-loss recovery, directory isolation, and restart persistence;
+- browser default Story Session entry, one journal writer, refresh to the same session, and no page errors;
+- public-secret, API-base, scoped-storage, licensing, and portable-build audits;
+- 390×844, 320×568, 1024×768, and 1440×900 product QA;
+- `dist/` and the selected backend build from one known source commit; a Worker gateway build is still required when the chosen public routing uses one.
+
+Do not treat a model response, upload command, green CI job, or health 200 as full acceptance by itself.
+
+### 5. Hand off or publish
+
+If the request ends at source delivery, produce the artifacts in [references/handoff.md](references/handoff.md) and state `handoff-ready artifacts verified`. Do not publish.
+
+If the user explicitly requests release, use `game-publish` after all creation and Story Session gates pass. Deploy the original permanent UUID self-hosted runtime and the Pages front-end mirror from the same commit, run a fresh live capability canary, verify the real browser flow, and inspect both actual bundles. Only then state `published and production-verified`.
+
+## Non-negotiable boundaries
+
+- Do not reuse another game's UUID, save namespace, repository, database, capability, poster, or shared-world authority.
+- Do not let prose become the state database; structured reducer state is authoritative.
+- Do not let the browser silently become a second writer after a Story Session error.
+- Do not ship long-lived credentials in source, Vite variables, bundles, templates, Skills, or handoff archives.
+- Do not copy a canonical game's Cartridge, UI identity, or story content into a new product; reuse engine contracts only.
+- Do not promise multiplayer merely because a personal Story Session exists. Shared-world actions need a separate authority and receipt boundary.
+- Do not broaden a creation request into catalog mutation or production deployment without explicit authorization.
+
+## Status language
+
+- `design locked`: requirements and visual direction are accepted; implementation is not complete.
+- `source verified`: authoring validation, game tests, QA, and production build pass.
+- `Story Session verified`: authority/client/persistence/browser gates pass locally or in the stated environment.
+- `handoff-ready artifacts verified`: source package and manifest pass; no deployment claim.
+- `published and production-verified`: both release surfaces and live authority checks pass after explicit publication.

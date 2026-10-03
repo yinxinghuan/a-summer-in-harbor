@@ -1,0 +1,12 @@
+[
+  {
+    "path": "/Users/yin/code/games/.agents/skills/create-rpg-game/references/free-dialogue-onboarding.md",
+    "beforeSHA256": "9ec08df955263c56bdc20060929d5ab1a97f3a1c08cbe4cf9badda542e9de586",
+    "afterSHA256": "b8808d9521949f4435b9dcd0328a78d8d20ff460b89f3ee8bd01872e02e613b0"
+  },
+  {
+    "path": "/Users/yin/code/games/.agents/skills/create-rpg-game/SKILL.md",
+    "beforeSHA256": "571da31f9df61c44b8d232a945efdc9399cf715203f4bca2a8165dbab212ba46",
+    "afterSHA256": "df8b366103d1663735dfe59883882df35188036a2a3f8d2e5057a369e01c429e"
+  }
+]

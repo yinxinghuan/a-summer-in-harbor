@@ -1,0 +1,165 @@
+{
+  "cases": [
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "cycled": true,
+      "nonDestructive": true,
+      "reopenReload": true,
+      "focus": true,
+      "manualSendFailureOnly": true,
+      "bounds": {
+        "width": 390,
+        "scroll": 390,
+        "canvases": 1
+      }
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "height": 844,
+      "cycled": true,
+      "nonDestructive": true,
+      "reopenReload": true,
+      "focus": true,
+      "manualSendFailureOnly": true,
+      "bounds": {
+        "width": 390,
+        "scroll": 390,
+        "canvases": 1
+      }
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 568,
+      "cycled": true,
+      "nonDestructive": true,
+      "reopenReload": true,
+      "focus": true,
+      "manualSendFailureOnly": true,
+      "bounds": {
+        "width": 320,
+        "scroll": 320,
+        "canvases": 1
+      }
+    },
+    {
+      "locale": "zh",
+      "width": 320,
+      "height": 568,
+      "cycled": true,
+      "nonDestructive": true,
+      "reopenReload": true,
+      "focus": true,
+      "manualSendFailureOnly": true,
+      "bounds": {
+        "width": 320,
+        "scroll": 320,
+        "canvases": 1
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "height": 768,
+      "cycled": true,
+      "nonDestructive": true,
+      "reopenReload": true,
+      "focus": true,
+      "manualSendFailureOnly": true,
+      "bounds": {
+        "width": 1024,
+        "scroll": 1024,
+        "canvases": 1
+      }
+    },
+    {
+      "locale": "zh",
+      "width": 1440,
+      "height": 900,
+      "cycled": true,
+      "nonDestructive": true,
+      "reopenReload": true,
+      "focus": true,
+      "manualSendFailureOnly": true,
+      "bounds": {
+        "width": 1440,
+        "scroll": 1440,
+        "canvases": 1
+      }
+    },
+    {
+      "person": "theo",
+      "actualApp": true,
+      "examplePresent": true,
+      "noRequests": true
+    },
+    {
+      "person": "june",
+      "actualApp": true,
+      "examplePresent": true,
+      "noRequests": true
+    },
+    {
+      "person": "idris",
+      "actualApp": true,
+      "examplePresent": true,
+      "noRequests": true
+    },
+    {
+      "person": "ruth",
+      "actualApp": true,
+      "examplePresent": true,
+      "noRequests": true
+    },
+    {
+      "person": "luis",
+      "actualApp": true,
+      "examplePresent": true,
+      "noRequests": true
+    },
+    {
+      "person": "nell",
+      "actualApp": true,
+      "examplePresent": true,
+      "noRequests": true
+    },
+    {
+      "person": "elena",
+      "actualApp": true,
+      "examplePresent": true,
+      "noRequests": true
+    },
+    {
+      "person": "arthur",
+      "actualApp": true,
+      "examplePresent": true,
+      "noRequests": true
+    },
+    {
+      "progressReload": true,
+      "oldDraftPreserved": true,
+      "newExampleUsesCompletion": true
+    },
+    {
+      "locale": "zh",
+      "stressLong": true,
+      "unbroken": true,
+      "eighthOptionReachable": true,
+      "disabled": true
+    },
+    {
+      "locale": "en",
+      "stressLong": true,
+      "unbroken": true,
+      "eighthOptionReachable": true,
+      "disabled": true
+    }
+  ],
+  "errors": [],
+  "blockedExternal": [],
+  "syntheticAuthority": true,
+  "modelCalls": 0
+}

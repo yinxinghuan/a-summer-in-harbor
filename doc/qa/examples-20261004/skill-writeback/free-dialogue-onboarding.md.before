@@ -1,0 +1,25 @@
+# First open-dialogue experience
+
+User-confirmed product rule (2026-10-01): open AI conversation is a core RPG selling point. Every game that offers it must teach its actual effect early, across text, cinematic and spatial shells.
+
+- After a character's visible introduction, explicitly offer “自由对话 / Ask in your own words” in the prologue or first safe interaction. Do not hide the only entry under a vague “something else” label. Cinematic opening beats still finish before the first input opportunity.
+- Create a real loop: player writes an editable, situation-relevant question; manually sends it; receives the live model's contextual response; can follow up or return to the current objective. A suggested question may help, but never auto-send it or substitute canned dialogue for a claimed AI demonstration.
+- Use only introduced characters and discovered information. Verify the same onboarding state through the real backend: a UI invitation is broken if an unrelated mainline completion gate rejects it before the model runs.
+- Keep dialogue admission separate from mainline action admission. Once the character is introduced and interaction is allowed, do not require completion of the entire prologue merely to chat. Preserve scene/proximity, input, ownership and output validation; enabling chat does not enable travel, rewards or endings. Distinguish a definite story-gate rejection from network/model failure in bilingual recovery messages instead of showing a generic retry loop.
+- Explain what dialogue can actually do. In narration-only games, conversation supports understanding but does not independently grant objects, establish evidence or finish tasks. Where actions are supported, teach the authoritative effect, not merely the prose claim.
+- Derive completion from durable authoritative successful dialogue, not a clicked button or local success flag. Failure retains the draft and current progress; a scripted route and later retry remain available. AI uptime must not become an unavoidable onboarding lock.
+- Verify an early zh/en live exchange, preserved story invariants, failure/reload recovery, and 320×568 / 390×844 layouts. Record capability verification separately from new-player comprehension; without human evidence, use `comprehension unverified`.
+
+Reuse this contract, not a sample game's names, rooms, questions, fixed dialogue count or task flags. For existing games, preserve saves and add this as a presentation/admission correction rather than resetting the campaign.
+
+## Gradual first visit
+
+Introduce identity, immediate need and the first reachable place over player-paced beats rather than one dense briefing. Let the player cause one small visible result before explaining the next system; the current objective should name the place and action, so the player need not remember a paragraph of directions. Opening a menu or revisiting a character must not restart the entire introduction. In a spatial game, retain approach → explicit interaction → reply → follow-up rather than triggering dialogue on proximity alone. A suggested question remains editable and is never sent automatically. Keep a usable authored route when the model is unavailable.
+
+Choose the number and length of beats for the story and test readability with actual locales and viewports. Harbor's short arrival sequence, early question and visible first task provide a worked verification example, not a mandatory three-page prologue or universal quest sequence. A completed scripted walkthrough establishes operability; without a new player's own explanation or behavior, comprehension remains unverified.
+
+## Evidence and transfer boundary · 2026-10-01
+
+Before the Close demonstrated an early real public exchange in both languages, a manually typed question from the explicit coaching button, a contextual reply, a success explanation and return to the authored investigation. Refresh retained history and did not repeat the first-time invitation. The original failure was a main-flow prologue gate applied before the narrator, not quota exhaustion. This is a verified example, not proof of service uptime or new-player comprehension (`comprehension unverified`).
+
+Apply [dialogue-continuity.md](dialogue-continuity.md) to what the player sees before and after the reply. Keep the model-success record, story effects and presentation reading cursor separate.

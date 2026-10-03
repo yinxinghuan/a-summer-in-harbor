@@ -1,0 +1,66 @@
+
+> a-summer-in-harbor@0.1.0 test
+> node --import tsx --test _qa/*.test.ts
+
+✔ chapter bridge: legal route, receipt replay, restart and continued exploration (65.190458ms)
+✔ chapter trail: legal route, receipt replay, restart and continued exploration (74.291792ms)
+✔ chapter garden: legal route, receipt replay, restart and continued exploration (61.977917ms)
+✔ legacy completion stays neutral, and incomplete saves get no chapter page (0.184417ms)
+✔ fixed step is identical at 30/60/120fps (6.802792ms)
+✔ recording replays actual health, positions and outcome, no declared win trusted (2.379791ms)
+✔ one swing cannot hit twice across active frames (0.382542ms)
+✔ obstacles occlude melee and cannot be tunneled with dodge (1.099458ms)
+✔ three configurations validate; projectile mode has real projectiles (1.258583ms)
+✔ NaN, impossible geometry, overlapping spawns and inflated input fail (0.197375ms)
+✔ reaching safe exit does not require defeating invulnerable target (0.144ms)
+✔ neutral initial questions, discovered bridge and prior answer gate follow-ups without reviving legacy topics (1.9325ms)
+✔ closed/reloaded midway response restores without modifying story; locale restarts same exchange and scopes reject other journeys/people (0.919041ms)
+✔ free dialogue is possible immediately after introduction; failure does not consume topic or count success (12.486167ms)
+✔ all introductions paginate into readable bilingual replies without dropping words (0.525959ms)
+✔ two generated notebook visits: compiled rules, safe return, read-only main story, idempotency and isolation (1166.003625ms)
+✔ fishing tension matters, controlled hold/release catches a fish (1.274541ms)
+✔ holding blindly loses and cannot submit a made up win (1.170459ms)
+✔ contacts require actual distance; wall, pause, teleport and new room reset partial stride (0.640167ms)
+✔ slow audio decode never backfills a footstep; one short step voice; mute/hidden/stop cancel it (9.470417ms)
+✔ map pan/pinch is bounded and drag cannot become a travel tap (0.634458ms)
+✔ outdoor trail portals have real signs, dry approaches, and reciprocal arrival points (193.137083ms)
+✔ coast path and beach can be entered and returned through new approaches without changing story IDs (2.39725ms)
+✔ new side bench uses a narrow deep footprint; tree crowns do not become rectangular obstacles (0.4295ms)
+✔ new planting is grounded on dry land; unpotted foliage stays off paving (0.709667ms)
+✔ public gateway: signed cookie, no caller owner, cross-origin/expired/missing-cookie guards (25.120416ms)
+✔ out-of-order handover: canonical choices and free-dialogue preview agree with completed facts (2.902375ms)
+✔ normal order remains playable; failed premature handover leaves state untouched (1.733166ms)
+✔ persisted completion survives restart, same receipt replay, duplicate and old model selection (18.602583ms)
+✔ repair and route topics follow world completion even if their hints were skipped (1.687667ms)
+✔ alternate route and garden agreement stay distinct from bridge repairs (0.876417ms)
+✔ completed legacy facts prevent duplicate grants without changing historical save (1.193083ms)
+✔ real resolver prompt uses current projection; selected completed-stage topic uses same reducer reply (0.761542ms)
+✔ reading cache preserves historical wording without making it current task state (0.5995ms)
+✔ late pre-handover AI response cannot overwrite a newer completed handover (3.860416ms)
+✔ every actual NPC input has multiple distinct, bilingual, bounded examples without mutating the save (1.996708ms)
+✔ completion overrides unconsumed old topics and absent consumed bag/materials after restore (6.3955ms)
+✔ unknown person or mismatched scene yields spoiler-free generic fallback (1.593583ms)
+✔ introductory examples do not leak optional repairs, trails or future clues (2.064333ms)
+✔ context identity resets on relevant progress, locale, journey and person, not incidental version (0.184875ms)
+✔ dynamic room observations do not imply the NPC knows them; completed repeat conversations retain examples (0.174333ms)
+✔ lost response replays after database restart without repeating rewards (14.015542ms)
+✔ failed model and failed transaction preserve head, events and receipt boundary (2.874166ms)
+✔ bilingual cartridges preserve the same stat, location, item and character identities (0.172417ms)
+✔ daily activity groups retain an unobstructed reachable standing side (28.850417ms)
+✔ two deployed UUIDs isolate browser storage and clear leaves shell login intact (1.669541ms)
+✔ all actual scene spawns and interaction approaches are reachable (160.95425ms)
+✔ new player cannot receive names or key before introduction, talked topics retire (1.3915ms)
+✔ chapter has legal complete repair route; repeat rewards and remote actions blocked (1.490291ms)
+✔ exported session authority commits, replays, isolates and rejects stale writes (4.010708ms)
+✔ free question executes the same authored topic and never trusts model item rewards (0.495042ms)
+✔ unmet introduction or distance fails before any model call (0.236ms)
+✔ broken bridge gap blocks feet until authoritative repair (0.064375ms)
+✔ scene cue skips slow decode, replaces prior cue, cancels steps, mute and hidden tails; no replay on restore (5.247208ms)
+ℹ tests 54
+ℹ suites 0
+ℹ pass 54
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1353.3675
