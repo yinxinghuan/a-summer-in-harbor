@@ -1,0 +1,16 @@
+{
+  "status": "game-specific-B-qa-candidate",
+  "owner": "rpg-asset-library",
+  "files": {
+    "runtime/core.mjs": "ace59167776785b8da233a79217800ccce493fc805cec5d1e2c948ba4e667d96",
+    "runtime/metadata-contract.mjs": "a200327db05e48bafb73603158409ef7da7111b4c6a3b8a85fb5435a304b2936",
+    "runtime/eligibility.mjs": "819e6e3467da6dee33d19880fd8b4f681edf5e54a5d00f83be96333f57e3effa",
+    "runtime/selection-adapter.mjs": "1cec4e83b3ac1dd31a917b2cac03df2e317c5775625b53c2338e1d1b40282402",
+    "runtime/grant-preparation.mjs": "d1a5ed1e8a1916d8e24042f9cff1e808a9c9993c5a9b43011624e8e97a88bca1",
+    "runtime/consumer-contract.mjs": "8c16f50155d098b1c3aec84b31ef06208214e7f6e2100f31a5b0a46a674c990f",
+    "runtime/service-consumer.mjs": "e973d365a560d45aedce90eb5b43f5554c030886172e9b79e5c536ac46f7abfd",
+    "selection.mjs": "7f452a8fdecc586c4d16c2717bd022eb3ecb4004b11622aaf9a24e6d733bf24b"
+  },
+  "upstreamFrozenCodeHash": "8498f9013d55fcff61c2e0059d66fce897a01f78f709ef629badd173109d2d04",
+  "note": "Eight unchanged modules from the owner frozen delivery; deployment remains separately gated."
+}

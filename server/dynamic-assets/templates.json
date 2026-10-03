@@ -1,0 +1,416 @@
+[
+  {
+    "id": "harbor-dynamic-home",
+    "version": 1,
+    "roomId": "home",
+    "profile": {
+      "styleFamilyId": "harbor-pixel",
+      "profileId": "harbor-home-approved-slot-v1",
+      "version": 1,
+      "compatProfile": {
+        "pixelScale": {
+          "value": 8.16,
+          "unit": "source-px/game-px"
+        },
+        "density": {
+          "value": 8.16,
+          "unit": "source-px/world-unit"
+        },
+        "paletteId": "harbor-home-png-exemplar-v1",
+        "projection": "harbor-home-approved-slot-v1",
+        "lighting": "harbor-home-baked-exemplar-v1"
+      },
+      "hash": "254fd80a4db643dc3d0df7132db6ff0ee527a75166b273f2d430153568428e2a"
+    },
+    "geometry": {
+      "library-laundry": {
+        "anchor": [
+          0.5007012622720898,
+          0.9975932611311672
+        ],
+        "scale": 0.12254901960784313,
+        "eventAt": {
+          "x": 389,
+          "y": 501
+        },
+        "imageOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "supportPropId": null,
+        "footprints": [
+          {
+            "x": 378,
+            "y": 490,
+            "w": 22,
+            "h": 11
+          }
+        ],
+        "approaches": {
+          "spawn": {
+            "x": 460,
+            "y": 540
+          },
+          "rear": {
+            "x": 381,
+            "y": 475
+          },
+          "right": {
+            "x": 404,
+            "y": 490
+          },
+          "front": {
+            "x": 381,
+            "y": 505
+          },
+          "left": {
+            "x": 358,
+            "y": 490
+          },
+          "visit-exit": {
+            "x": 470,
+            "y": 559
+          },
+          "visit-bed": {
+            "x": 372,
+            "y": 409
+          }
+        }
+      }
+    },
+    "layout": {
+      "width": 1,
+      "height": 1,
+      "placements": [
+        {
+          "slotId": "library-laundry",
+          "itemId": "lidded-laundry-hamper",
+          "orientation": "front",
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    "slots": [
+      {
+        "slotId": "library-laundry",
+        "need": {
+          "needId": "library-laundry",
+          "itemId": "lidded-laundry-hamper",
+          "category": "prop",
+          "orientation": "front",
+          "view": "elevated-2d",
+          "purpose": "home-exact-approved-placement",
+          "minWidth": 206,
+          "maxWidth": 206,
+          "minHeight": 240,
+          "maxHeight": 240,
+          "quantity": 1,
+          "minDistinct": 1,
+          "placementScope": {
+            "roomId": "home",
+            "slotId": "library-laundry",
+            "geometryHash": "76b3ae91187968990b13363a23f2b1f4e501e7c48a5b4faf21159fa912bd96c2"
+          }
+        },
+        "request": {
+          "roomId": "home",
+          "slotId": "library-laundry",
+          "itemId": "lidded-laundry-hamper",
+          "category": "prop",
+          "orientation": "front",
+          "usage": "prop",
+          "dimensions": {
+            "minWidth": 206,
+            "maxWidth": 206,
+            "minHeight": 240,
+            "maxHeight": 240
+          },
+          "requiredTags": [
+            "home-exact-approved-placement"
+          ],
+          "purposeTags": [
+            "home-exact-approved-placement"
+          ]
+        }
+      }
+    ],
+    "allowedAssetId": "harbor__lidded-laundry-hamper-front-v1",
+    "allowedRevision": 2
+  },
+  {
+    "id": "harbor-dynamic-cafe",
+    "version": 1,
+    "roomId": "cafe",
+    "profile": {
+      "styleFamilyId": "harbor-pixel",
+      "profileId": "harbor-cafe-approved-slot-v1",
+      "version": 1,
+      "compatProfile": {
+        "pixelScale": {
+          "value": 16.333333333333332,
+          "unit": "source-px/game-px"
+        },
+        "density": {
+          "value": 16.333333333333332,
+          "unit": "source-px/world-unit"
+        },
+        "paletteId": "harbor-cafe-png-exemplar-v1",
+        "projection": "harbor-cafe-approved-slot-v1",
+        "lighting": "harbor-cafe-baked-exemplar-v1"
+      },
+      "hash": "82a9af20e5aea78487dec655060905ad98d8436771f0f7b8b2a176a496e9624c"
+    },
+    "geometry": {
+      "library-coffee-jar": {
+        "anchor": [
+          0.49819168173598555,
+          0.9970149253731343
+        ],
+        "scale": 0.061224489795918366,
+        "eventAt": {
+          "x": 534,
+          "y": 341
+        },
+        "imageOffset": {
+          "x": 0,
+          "y": -34
+        },
+        "supportPropId": "counter",
+        "footprints": [],
+        "approaches": {
+          "spawn": {
+            "x": 460,
+            "y": 540
+          },
+          "rear": {
+            "x": 526,
+            "y": 295
+          },
+          "right": {
+            "x": 544,
+            "y": 318
+          },
+          "front": {
+            "x": 526,
+            "y": 347
+          },
+          "left": {
+            "x": 380,
+            "y": 318
+          },
+          "visit-exit": {
+            "x": 470,
+            "y": 559
+          },
+          "visit-theo": {
+            "x": 571,
+            "y": 372
+          },
+          "visit-terrace": {
+            "x": 362,
+            "y": 414
+          }
+        }
+      }
+    },
+    "layout": {
+      "width": 1,
+      "height": 1,
+      "placements": [
+        {
+          "slotId": "library-coffee-jar",
+          "itemId": "coffee-bean-canister",
+          "orientation": "front",
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    "slots": [
+      {
+        "slotId": "library-coffee-jar",
+        "need": {
+          "needId": "library-coffee-jar",
+          "itemId": "coffee-bean-canister",
+          "category": "prop",
+          "orientation": "front",
+          "view": "elevated-2d",
+          "purpose": "cafe-exact-approved-placement",
+          "minWidth": 198,
+          "maxWidth": 198,
+          "minHeight": 240,
+          "maxHeight": 240,
+          "quantity": 1,
+          "minDistinct": 1,
+          "placementScope": {
+            "roomId": "cafe",
+            "slotId": "library-coffee-jar",
+            "geometryHash": "a9da60ef0779d02a2841d0bf8edf37451c5df7e6a74f3c44e18c6c192a048121"
+          }
+        },
+        "request": {
+          "roomId": "cafe",
+          "slotId": "library-coffee-jar",
+          "itemId": "coffee-bean-canister",
+          "category": "prop",
+          "orientation": "front",
+          "usage": "prop",
+          "dimensions": {
+            "minWidth": 198,
+            "maxWidth": 198,
+            "minHeight": 240,
+            "maxHeight": 240
+          },
+          "requiredTags": [
+            "cafe-exact-approved-placement"
+          ],
+          "purposeTags": [
+            "cafe-exact-approved-placement"
+          ]
+        }
+      }
+    ],
+    "allowedAssetId": "harbor__coffee-bean-canister-front-v1",
+    "allowedRevision": 2
+  },
+  {
+    "id": "harbor-dynamic-garden",
+    "version": 1,
+    "roomId": "garden",
+    "profile": {
+      "styleFamilyId": "harbor-pixel",
+      "profileId": "harbor-garden-approved-slot-v1",
+      "version": 1,
+      "compatProfile": {
+        "pixelScale": {
+          "value": 6.888888888888888,
+          "unit": "source-px/game-px"
+        },
+        "density": {
+          "value": 6.888888888888888,
+          "unit": "source-px/world-unit"
+        },
+        "paletteId": "harbor-garden-png-exemplar-v1",
+        "projection": "harbor-garden-approved-slot-v1",
+        "lighting": "harbor-garden-baked-exemplar-v1"
+      },
+      "hash": "459fd222ce2155777e8ba5d96341d439533c0dfffe5acc4b402fa6bc85d030c3"
+    },
+    "geometry": {
+      "library-hose-reel": {
+        "anchor": [
+          0.517636684303351,
+          0.9972413793103448
+        ],
+        "scale": 0.14516129032258066,
+        "eventAt": {
+          "x": 261,
+          "y": 476
+        },
+        "imageOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "supportPropId": null,
+        "footprints": [
+          {
+            "x": 249.5,
+            "y": 466,
+            "w": 23,
+            "h": 10
+          }
+        ],
+        "approaches": {
+          "spawn": {
+            "x": 460,
+            "y": 540
+          },
+          "rear": {
+            "x": 253,
+            "y": 451
+          },
+          "right": {
+            "x": 280,
+            "y": 464
+          },
+          "front": {
+            "x": 253,
+            "y": 480
+          },
+          "left": {
+            "x": 229,
+            "y": 463
+          },
+          "visit-exit": {
+            "x": 472,
+            "y": 616
+          },
+          "visit-gate-hours": {
+            "x": 467,
+            "y": 394
+          }
+        }
+      }
+    },
+    "layout": {
+      "width": 1,
+      "height": 1,
+      "placements": [
+        {
+          "slotId": "library-hose-reel",
+          "itemId": "garden-hose-reel",
+          "orientation": "right-side",
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    "slots": [
+      {
+        "slotId": "library-hose-reel",
+        "need": {
+          "needId": "library-hose-reel",
+          "itemId": "garden-hose-reel",
+          "category": "prop",
+          "orientation": "right-side",
+          "view": "elevated-2d",
+          "purpose": "garden-exact-approved-placement",
+          "minWidth": 188,
+          "maxWidth": 188,
+          "minHeight": 240,
+          "maxHeight": 240,
+          "quantity": 1,
+          "minDistinct": 1,
+          "placementScope": {
+            "roomId": "garden",
+            "slotId": "library-hose-reel",
+            "geometryHash": "e92d1863955e25d69d0158bc3c6a37878dcb74da48719ba7e1150d8e2562b275"
+          }
+        },
+        "request": {
+          "roomId": "garden",
+          "slotId": "library-hose-reel",
+          "itemId": "garden-hose-reel",
+          "category": "prop",
+          "orientation": "right-side",
+          "usage": "prop",
+          "dimensions": {
+            "minWidth": 188,
+            "maxWidth": 188,
+            "minHeight": 240,
+            "maxHeight": 240
+          },
+          "requiredTags": [
+            "garden-exact-approved-placement"
+          ],
+          "purposeTags": [
+            "garden-exact-approved-placement"
+          ]
+        }
+      }
+    ],
+    "allowedAssetId": "harbor__garden-hose-reel-right-side-v1",
+    "allowedRevision": 2
+  }
+]

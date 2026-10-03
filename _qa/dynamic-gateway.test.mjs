@@ -1,0 +1,9 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {randomBytes} from 'node:crypto';
+import {handleApi} from '../worker/index.js';
+test('five bounded asset routes keep identity and grant headers, reject anonymous/unknown/oversized requests',async()=>{
+ const origin='https://game.aiwaves.tech',base='/e78df027-7ef4-4d49-82eb-ea91f03d9fb3',env={HARBOR_PUBLIC_ORIGIN:origin,HARBOR_GAME_BASE:base,HARBOR_UPSTREAM_ORIGIN:'https://harbor.example.test',HARBOR_EDGE_TOKEN:randomBytes(32).toString('hex'),HARBOR_TIME_POLICY:'user-approved-budget-only-20261001',HARBOR_EXPIRES_AT:'none',HARBOR_IDENTITY_MODE:'browser-capability-v1'};
+ const previous=globalThis.fetch,seen=[];globalThis.fetch=async(url,init)=>{seen.push({url,init});return new Response('{}',{headers:{'Content-Type':'application/json','X-Consumer-Grant':'a'.repeat(64)}})};
+ const req=(p,method='POST',cookie='',body='{}')=>new Request(origin+p,{method,headers:{origin,'content-type':'application/json',cookie,'X-Harbor-Dynamic-Assets':'1', 'X-Harbor-Owner':'fake'},...(method==='POST'?{body}:{})});
+ const root='/api/sessions/12345678-1234-1234-1234-123456789012/assets/home/';
+ try{assert.equal((await handleApi(req(root+'prepare'),env)).status,401);const bootstrap=await handleApi(req('/api/bootstrap'),env),cookie=bootstrap.headers.get('set-cookie').split(';')[0];for(const action of ['prepare','package','check','manifest','blob']){const r=await handleApi(req(root+action,action==='package'?'GET':'POST',cookie),env);assert.equal(r.status,200);assert.equal(r.headers.get('X-Consumer-Grant'),'a'.repeat(64));assert.equal(seen.at(-1).init.headers.get('X-Harbor-Dynamic-Assets'),'1');assert.notEqual(seen.at(-1).init.headers.get('X-Harbor-Owner'),'fake')};assert.equal((await handleApi(req(root+'query','POST',cookie),env)).status,404);assert.equal((await handleApi(req(root+'prepare','POST',cookie,'x'.repeat(16385)),env)).status,413)}finally{globalThis.fetch=previous}
+});

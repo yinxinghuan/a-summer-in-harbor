@@ -100,3 +100,7 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 
 ## 发布运行环境（2026-10-02）
 前端仍Node24构建；服务端用esbuild目标Node22，冻结vendor目录作为外部模块原样携带，避免Prolog resolver路径和CLI入口判定因打包变化。实际服务器Node22.22.2/SWI10.0.2/Pillow，非root容器，独立harbor_game/kit_harbor，运行角色无DDL。平台同UUID Worker以私有绑定访问海湾专用HTTPS路径；现有预算保护保持，无新购。账号暂为明确获准browser capability，30日cookie在bootstrap续期，非AlterU账号认证。
+
+## 2026-10-03 B：受限动态素材验证
+
+新增 server/dynamic-assets：现有浏览器能力身份与两个新 QA 旅程白名单绑定；五个同 UUID 动作；只读 inventory catalog → 精确用途/视角/几何筛选 → 共享 selector → 固定 grant。PG 同事务提交 packages/grants 与 async_media 附件，不推进剧情游标。元数据只接受三个精确 @2；无新生图。默认 off，QA 文件到期关闭；普通玩家/旧档没有附加对象。前端 src/dynamic-assets 经逐字节与授权检查后整组挂载 RPGJS；三个预审槽位的碰撞由同一 layout 合同供应，图片不可改变几何。实际远程验收状态以本轮 release 回执为准，不能把本地测试说成平台账号接入。

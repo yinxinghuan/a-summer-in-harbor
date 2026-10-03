@@ -1,0 +1,191 @@
+[
+  {
+    "scene": "home",
+    "slotId": "library-laundry",
+    "assetId": "harbor__lidded-laundry-hamper-front-v1",
+    "imageHash": "151794b91a192182b931564e12c2de11ce0589dded9ad3cf70865d81b755db9a",
+    "bytes": 108946,
+    "mime": "image/png",
+    "sourceSize": [
+      206,
+      240
+    ],
+    "anchor": [
+      0.5007012622720898,
+      0.9975932611311672
+    ],
+    "scale": 0.12254901960784313,
+    "eventAt": {
+      "x": 389,
+      "y": 501
+    },
+    "imageOffset": {
+      "x": 0,
+      "y": 0
+    },
+    "supportPropId": null,
+    "footprints": [
+      {
+        "x": 378,
+        "y": 490,
+        "w": 22,
+        "h": 11
+      }
+    ],
+    "approaches": {
+      "spawn": {
+        "x": 460,
+        "y": 540
+      },
+      "rear": {
+        "x": 381,
+        "y": 475
+      },
+      "right": {
+        "x": 404,
+        "y": 490
+      },
+      "front": {
+        "x": 381,
+        "y": 505
+      },
+      "left": {
+        "x": 358,
+        "y": 490
+      },
+      "visit-exit": {
+        "x": 470,
+        "y": 559
+      },
+      "visit-bed": {
+        "x": 372,
+        "y": 409
+      }
+    }
+  },
+  {
+    "scene": "cafe",
+    "slotId": "library-coffee-jar",
+    "assetId": "harbor__coffee-bean-canister-front-v1",
+    "imageHash": "35a987f5866a754eff3f21c618b87b20257fd6d6a76662df086d2a8b82c2bb4f",
+    "bytes": 74377,
+    "mime": "image/png",
+    "sourceSize": [
+      198,
+      240
+    ],
+    "anchor": [
+      0.49819168173598555,
+      0.9970149253731343
+    ],
+    "scale": 0.061224489795918366,
+    "eventAt": {
+      "x": 534,
+      "y": 341
+    },
+    "imageOffset": {
+      "x": 0,
+      "y": -34
+    },
+    "supportPropId": "counter",
+    "footprints": [],
+    "approaches": {
+      "spawn": {
+        "x": 460,
+        "y": 540
+      },
+      "rear": {
+        "x": 526,
+        "y": 295
+      },
+      "right": {
+        "x": 544,
+        "y": 318
+      },
+      "front": {
+        "x": 526,
+        "y": 347
+      },
+      "left": {
+        "x": 380,
+        "y": 318
+      },
+      "visit-exit": {
+        "x": 470,
+        "y": 559
+      },
+      "visit-theo": {
+        "x": 571,
+        "y": 372
+      },
+      "visit-terrace": {
+        "x": 362,
+        "y": 414
+      }
+    }
+  },
+  {
+    "scene": "garden",
+    "slotId": "library-hose-reel",
+    "assetId": "harbor__garden-hose-reel-right-side-v1",
+    "imageHash": "1f37b3de485f0cf9f7e4715b63d687b1c874c7a3e92a437dd6356fc447ac87d0",
+    "bytes": 75117,
+    "mime": "image/png",
+    "sourceSize": [
+      188,
+      240
+    ],
+    "anchor": [
+      0.517636684303351,
+      0.9972413793103448
+    ],
+    "scale": 0.14516129032258066,
+    "eventAt": {
+      "x": 261,
+      "y": 476
+    },
+    "imageOffset": {
+      "x": 0,
+      "y": 0
+    },
+    "supportPropId": null,
+    "footprints": [
+      {
+        "x": 249.5,
+        "y": 466,
+        "w": 23,
+        "h": 10
+      }
+    ],
+    "approaches": {
+      "spawn": {
+        "x": 460,
+        "y": 540
+      },
+      "rear": {
+        "x": 253,
+        "y": 451
+      },
+      "right": {
+        "x": 280,
+        "y": 464
+      },
+      "front": {
+        "x": 253,
+        "y": 480
+      },
+      "left": {
+        "x": 229,
+        "y": 463
+      },
+      "visit-exit": {
+        "x": 472,
+        "y": 616
+      },
+      "visit-gate-hours": {
+        "x": 467,
+        "y": 394
+      }
+    }
+  }
+]

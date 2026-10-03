@@ -3,7 +3,7 @@ import {getGameApiBase} from '../game-id';import type {Save,Action} from './stat
 const storage=()=>window.alteruLocalStorage;
 const pendingKey='harbor-pending-v1';
 export const hasPendingAction=()=>!!storage().getItem(pendingKey);
-async function request(path:string,body?:unknown){const r=await fetch(getGameApiBase()+'/api'+path,{method:body===undefined?'GET':'POST',credentials:'same-origin',headers:body===undefined?{}:{'Content-Type':'application/json'},...(body===undefined?{}:{body:JSON.stringify(body)})});const data=await r.json();if(!r.ok)throw Object.assign(Error(data.error??'REQUEST_FAILED'),{status:r.status,terminal:data.terminal});return data}
+async function request(path:string,body?:unknown){const r=await fetch(getGameApiBase()+'/api'+path,{method:body===undefined?'GET':'POST',credentials:'same-origin',headers:{'X-Harbor-Dynamic-Assets':'1',...(body===undefined?{}:{'Content-Type':'application/json'})},...(body===undefined?{}:{body:JSON.stringify(body)})});const data=await r.json();if(!r.ok)throw Object.assign(Error(data.error??'REQUEST_FAILED'),{status:r.status,terminal:data.terminal});return data}
 export async function connect(locale:Locale):Promise<Save>{
  await request('/bootstrap',{});const directory=await request('/sessions');let id=storage().getItem('harbor-journey');
  if(!id||!directory.some((s:{id:string})=>s.id===id)){id=directory[0]?.id;if(!id){let enrollment=storage().getItem('harbor-enroll');if(!enrollment){enrollment=crypto.randomUUID();storage().setItem('harbor-enroll',enrollment)}const save=await request('/sessions',{enrollment_id:enrollment,locale});id=save.id;}storage().setItem('harbor-journey',id!)}
