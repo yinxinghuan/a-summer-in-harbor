@@ -10,6 +10,7 @@ import {advanceRoute,moveWithCollision} from './distance-motion';
 import {findPath,walkable,type Point,type World} from './world';
 
 export type Space={
+ installSpritesheets:(sheets:any[])=>void;
  position:()=>Point;scene:()=>string;renderedScene:()=>string|null;
  move:(x:number,y:number)=>void;walkTo:(target:Point,arrive?:()=>void)=>boolean;
  pause:(value:boolean)=>void;restore:(scene:string,position:Point)=>Promise<void>;
@@ -56,7 +57,7 @@ export function createRpgSpace(options:SpaceOptions){
   if(client?.renderer){client.renderer.resize(engineWidth,engineHeight,resolution);client.width.set(String(engineWidth));client.height.set(String(engineHeight));configureCamera()}
  };
  const observer=new ResizeObserver(resize);observer.observe(host.parentElement!);resize();
- const runtime:Space={position:()=>({...pos}),scene:()=>scene,renderedScene:()=>loaded,
+ const runtime:Space={installSpritesheets:sheets=>{if(!client)throw Error("RENDERER_NOT_READY");for(const sheet of sheets)client.addSpriteSheet(sheet)},position:()=>({...pos}),scene:()=>scene,renderedScene:()=>loaded,
   move:(x,y)=>{stick={x,y};if(x||y)cancel()},
   walkTo:(target,callback)=>{if(paused||changing)return false;const next=options.findPath?.(pos,target,scene)??findPath(world,scene,pos,target);if(!next.length)return false;route=next;arrive=callback;options.onDestination(target);return true},
   pause:value=>{paused=value;stick={x:0,y:0};keys.clear();if(value){cancel();stand()}},

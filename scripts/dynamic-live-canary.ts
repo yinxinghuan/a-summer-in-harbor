@@ -19,7 +19,7 @@ if(process.argv[2]==='create'){
  if(!head.known.includes('mara')){await go('station');await action('mara','introduce')};if(!head.flags.includes('key')){await go('station');await action('mara','talk:key')}
  await go('home');if(!head.flags.includes('unpacked'))await action('bed','unpack');
  for(const room of ['home','cafe','garden']){
-  if(room==='garden'&&!head.flags.includes('garden-agreed')){await go('courtyard');if(!head.known.includes('elena'))await action('elena','introduce');if(!head.flags.includes('talk:elena:quiet'))await action('elena','talk:quiet');if(!head.flags.includes('garden-agreed'))await action('elena','talk:hours')}
+  if(room==='garden'&&!head.flags.includes('garden-agreed')){if(!head.flags.includes('bridge-seen')){await go('path');await action('bridge','inspect-bridge')}await go('courtyard');if(!head.known.includes('elena'))await action('elena','introduce');if(!head.flags.includes('talk:elena:quiet'))await action('elena','talk:quiet');if(!head.flags.includes('garden-agreed'))await action('elena','talk:hours')}
   await go(room);const prefix='/sessions/'+player.id+'/assets/'+room+'/';const before=head;
   const [a,b]=await Promise.all([request(player,prefix+'prepare',{}),request(player,prefix+'prepare',{})]);assert.equal(a.status,200,JSON.stringify(a.data));assert.equal(b.status,200);assert.equal(a.data.attachment.grantHash,b.data.attachment.grantHash);
   const pack=await request(player,prefix+'package');assert.equal(pack.status,200);assert.deepEqual(pack.data,a.data);const updated=(await request(player,'/sessions/'+player.id)).data;assert.equal(updated.version,before.version);assert.equal(updated.cursor,before.cursor);assert.ok(updated.roomAssetAttachments.some((x:any)=>x.grantHash===a.data.attachment.grantHash));
