@@ -1,0 +1,23 @@
+{
+  "cases": [
+    {
+      "kind": "sparring",
+      "result": "UI won, authoritative replay accepted, return rendered"
+    },
+    {
+      "kind": "endurance",
+      "result": "UI won, authoritative replay accepted, return rendered"
+    },
+    {
+      "kind": "world-movement-after-return",
+      "before": 435,
+      "after": 415
+    },
+    {
+      "kind": "existing-give-an-example",
+      "result": "passed; no model request sent"
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

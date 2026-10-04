@@ -129,3 +129,9 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 ## 独立生活候选（2026-10-04，未发布）
 
 基于正式5fcc3f4，提取本地3c409374的居民日程/场所限定互动/夜景/疲劳。server/runtime.ts只追加可选awakeMinutes的非负安全整数校验；Save缺少该字段时消费端按0处理，upgrade仍不变更内容，mapVersion仍1。现有JSON存档容纳该可选字段，不需要DDL、批量迁移、重设版本或覆盖旧玩家进度。13人出场与巡游/碰撞共享residents.ts规则；state.ts负责权威时间与休息，fatigue.ts提供纯计算，UI/View渲染日程/灯光。无crops/town-news/collector依赖。SQLite旧save/CAS/丢回复/重启/owner隔离已验；正式PG与iPhone硬件未在本批复测。
+
+## 2026-10-05 训练画布生命周期修正（本地候选）
+
+Combat 拥有独立 Pixi Application、场景节点、24个图集帧视图；缓存素材 TextureSource 由 Assets 共享。销毁使用 `{removeView:true, releaseGlobalResources:false}`，禁止布尔 true 清全局资源池影响仍运行的 RPGJS renderer。异步初始化/加载后的取消检查阻止退出后再次挂载；只释放自有帧视图，不卸载共享素材。
+
+返回以同步 ref 防重并立即冻结模拟/输入；真实 authority 确认后卸载。请求结果不明时，继续通过现有 pending 请求 ID/connect 恢复；不创建第二次奖励请求。挑战期间停发世界 checkpoint，刷新保留服务器 activeChallenge 并要求重新显式开始。规则、确定性回放和服务器奖励不变。

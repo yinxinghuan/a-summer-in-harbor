@@ -1,0 +1,170 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "locale": "en",
+      "name": "cancel-loading",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "name": "returned",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "name": "refresh-active-return",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "name": "lost-return",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "name": "footwork-return",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "name": "retry-return",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "name": "refreshed",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "name": "cancel-loading",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "name": "returned",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "name": "refresh-active-return",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "name": "lost-return",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "name": "footwork-return",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "name": "retry-return",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "name": "refreshed",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 320,
+      "locale": "zh",
+      "name": "cancel-loading",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 320,
+      "locale": "zh",
+      "name": "returned",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 1280,
+      "locale": "en",
+      "name": "cancel-loading",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    },
+    {
+      "width": 1280,
+      "locale": "en",
+      "name": "returned",
+      "sameCanvas": true,
+      "textures": 15,
+      "contextLost": false,
+      "graphics": 1
+    }
+  ],
+  "errors": [],
+  "failedAssets": [],
+  "environment": "local synthetic SQLite authority; no external media/model calls; no deployment",
+  "status": "passed"
+}
