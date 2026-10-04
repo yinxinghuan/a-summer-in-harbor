@@ -1,3 +1,5 @@
+import {newsRecord,newsMemory} from '../src/story/town-news';
+import {shopHours} from '../src/story/crops';
 import {lifeContext} from '../src/story/resident-life';
 import {availableTopics,objective,type Save} from '../src/story/state';
 import {questProgress} from '../src/story/progress';
@@ -23,7 +25,7 @@ export function dialogueContext(s:Save,person:string){
   setting:'A modern fictional North American seaside town. A newcomer rents a room for summer. Everyday life, no fantasy or financial jargon.',
   authority:{journey:s.id,version:s.version,precedence:'Current committed facts override old dialogue. History is an immutable record of what was said then, not a request to repeat past tasks.',currentFacts:facts},
   speaker:{name:people[person].name,currentSituation:description(s,entityAt(s.scene,person)!)},
-  residentLife:lifeContext(s,person),place:rooms[s.scene].title,knownPeople:s.known.map(id=>people[id].name),facts:s.flags,heldItems:s.items,
+  news:person==='dani'&&newsMemory(s)?{source:newsRecord,memory:newsMemory(s),rule:'Frozen dated sample, not live news. Casey is a fictional holidaying software engineer, not a real quoted source. No real company participates in this town activity.'}:undefined,gardening:{shopHours,plots:s.plots??{},rule:'No gifts, craft materials, spoilage, offline growth or secret harvest rewards.'},residentLife:lifeContext(s,person),place:rooms[s.scene].title,knownPeople:s.known.map(id=>people[id].name),facts:s.flags,heldItems:s.items,
   currentObjective:objective(s),
   availableTopics:availableTopics(s,person).map(t=>({id:t.id,question:t.label,canonicalReply:t.reply})),
   historicalExchanges:s.history.filter(h=>h.person===person).slice(-8),

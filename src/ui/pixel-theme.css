@@ -26,7 +26,18 @@ button,input,textarea,select{font-family:var(--font-ui);font-weight:400}strong,b
 
 /* Committed town period changes outdoor light only, never input or readability. */
 .harbor-world::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;transition:background-color .7s}
-.harbor-world[data-period="evening"]::after{background:rgba(170,91,38,.09)}
-.harbor-world[data-period="night"]::after{background:rgba(20,33,82,.23)}
+.harbor-world[data-period="evening"]::after{background:rgba(170,91,38,.18)}
+.harbor-world[data-period="night"]::after{background:rgba(10,20,62,.50)}
 .harbor-location{flex-wrap:wrap;gap:2px 10px}
 .harbor-location small{white-space:normal;text-align:right;font-size:11px}
+
+/* World-anchored lighting and prototype growing beds; no new media assets. */
+.harbor-night-light{position:absolute;left:0;top:0;width:130px;height:110px;z-index:3;pointer-events:none;opacity:0;background:radial-gradient(ellipse,#ffdda177,transparent 67%);mix-blend-mode:screen}
+.harbor-world[data-period="night"] .harbor-night-light{opacity:1}
+.harbor-world[data-period="evening"] .harbor-night-light{opacity:.4}
+.harbor-crop-bed{position:absolute;left:0;top:0;width:58px;height:26px;background:repeating-linear-gradient(#75543b 0 5px,#5d402f 5px 7px);border:3px solid #ad8661;z-index:1;pointer-events:none;box-shadow:0 2px #473c2c}
+.harbor-crop-bed span{position:absolute;right:2px;top:-19px;min-width:17px;background:#f3e4b8;border:2px solid #785237;color:#38291e;text-align:center;font:12px monospace}
+.harbor-crop-bed[data-stage="growing"]{border-color:#81ae72;background:repeating-linear-gradient(90deg,#385d39 0 6px,#554233 6px 13px)}
+.harbor-crop-bed[data-stage="ready"]{border-color:#f9d46c;background:repeating-linear-gradient(90deg,#799349 0 8px,#66512e 8px 14px)}
+.harbor-news-source,.harbor-garden-info{padding:12px;margin:12px 0;border:2px solid #9b9876;background:#efe8cc;color:#343d36;overflow-wrap:anywhere}
+.harbor-news-source a{display:inline-block;min-height:44px;padding:10px 0;color:#205d5b;text-decoration:underline}

@@ -18,12 +18,21 @@ export const residentPeople:Record<string,{name:Words;unknown:Words;intro:Words;
  dani:{name:['丹妮','Dani Costa'],unknown:['收好一片叶子的居民','Resident saving a fallen leaf'],intro:['“丹妮，在图书馆工作。我想做本小册子，收一点街坊种花的故事。今天这页只有一片叶子，也挺好。”','“Dani. I work at the library. I’m making a little book of neighbors’ garden stories. Today’s page has just one leaf. That’s fine too.”'],art:'dani'},
 };
 export const residentRoutes:Record<string,{scene:string;at:{x:number;y:number}}[]>={
+ mara:[{scene:'station',at:{x:565,y:685}},{scene:'courtyard',at:{x:365,y:500}},{scene:'market',at:{x:560,y:650}}],
+ theo:[{scene:'cafe',at:{x:579,y:330}},{scene:'cafe',at:{x:579,y:330}},{scene:'harbor',at:{x:500,y:640}}],
+ june:[{scene:'workshop',at:{x:510,y:358}},{scene:'workshop',at:{x:510,y:358}},{scene:'dock',at:{x:370,y:490}}],
+ idris:[{scene:'gym',at:{x:443,y:380}},{scene:'gym',at:{x:443,y:380}},{scene:'coast',at:{x:670,y:580}}],
+ luis:[{scene:'grocery',at:{x:552,y:376}},{scene:'grocery',at:{x:552,y:376}},{scene:'market',at:{x:690,y:650}}],
+ nell:[{scene:'secondhand',at:{x:510,y:380}},{scene:'secondhand',at:{x:510,y:380}},{scene:'courtyard',at:{x:350,y:500}}],
+ ruth:[{scene:'dock',at:{x:390,y:350}},{scene:'dock',at:{x:390,y:350}},{scene:'coast',at:{x:520,y:650}}],
+ elena:[{scene:'courtyard',at:{x:495,y:370}},{scene:'garden',at:{x:535,y:510}},{scene:'courtyard',at:{x:495,y:370}}],
+ arthur:[{scene:'weather',at:{x:510,y:365}},{scene:'weather',at:{x:510,y:365}},{scene:'hill',at:{x:700,y:620}}],
  avery:[{scene:'station',at:{x:520,y:490}},{scene:'market',at:{x:650,y:520}},{scene:'dock',at:{x:560,y:450}}],
  samira:[{scene:'market',at:{x:550,y:430}},{scene:'harbor',at:{x:600,y:560}},{scene:'dock',at:{x:505,y:450}}],
  owen:[{scene:'harbor',at:{x:680,y:540}},{scene:'path',at:{x:360,y:480}},{scene:'coast',at:{x:600,y:600}}],
  dani:[{scene:'garden',at:{x:430,y:510}},{scene:'market',at:{x:730,y:580}},{scene:'courtyard',at:{x:540,y:480}}],
 };
-export function residentHere(s:Pick<TownState,'townMinutes'>,person:string,scene:string){const route=residentRoutes[person];return !route||route[['morning','afternoon','evening'].indexOf(townPeriod(s))]?.scene===scene}
+export function residentHere(s:Pick<TownState,'townMinutes'>&{flags?:string[]},person:string,scene:string){if(person==='mara'&&s.flags&&!s.flags.includes('bag-returned'))return scene==='station';const route=residentRoutes[person];return !route||route[['morning','afternoon','evening'].indexOf(townPeriod(s))]?.scene===scene}
 export function presentEntity(s:Pick<TownState,'townMinutes'|'scene'>,e:Entity){return !e.person||residentHere(s,e.person,s.scene)}
 const activities:Record<string,Words[]>={
  avery:[['艾弗里在树荫下补画一扇窗，不时抬头看看街道。','Avery sketches a window in the shade, glancing up at the street.'],['艾弗里把速写本翻到空白页，看人们经过。','Avery turns to a blank page and watches people passing.'],['艾弗里看着水上的船，今天不必画完。','Avery watches the boats. The drawing need not be finished today.']],
@@ -31,7 +40,10 @@ const activities:Record<string,Words[]>={
  owen:[['欧文在分辨头顶两种不同的鸟叫。','Owen listens for two different calls overhead.'],['欧文停在路边，让一只小鸟先过去。','Owen pauses at the path edge to let a small bird pass.'],['欧文合上记录本，最后看了一眼海面。','Owen closes his notebook and takes one last look at the sea.']],
  dani:[['丹妮把落叶夹进本子，没有摘下还活着的叶子。','Dani presses a fallen leaf into the book, leaving living leaves alone.'],['丹妮在旧街记下刚刚听到的一个小故事。','Dani writes down a small story heard along Market Lane.'],['丹妮在院子里小声说话，留出住户休息的安静。','Dani speaks softly in the courtyard, leaving room for the residents’ quiet.']],
 };
-export function residentActivity(s:Pick<TownState,'townMinutes'>,person:string):Words|undefined{return activities[person]?.[['morning','afternoon','evening'].indexOf(townPeriod(s))]}
+export function residentActivity(s:Pick<TownState,'townMinutes'>&{scene?:string;flags?:string[]},person:string):Words|undefined{if(person==='dani'&&s.flags?.includes('news:checked'))return ['丹妮把你核对过的营业便条留在本子里，另抄了一份贴在花园告示板上。','Dani keeps your checked hours in the notebook, with a copy on the garden noticeboard.'];const specific=activities[person]?.[['morning','afternoon','evening'].indexOf(townPeriod(s))];if(specific)return specific;if(!residentRoutes[person])return;return ['对方停下手里的事，转身听你说话。','They pause what they are doing and turn to listen.']}
+export const shopScenes=['cafe','grocery','workshop','gym','secondhand'];
+export function openingNotice(scene:string,s:Pick<TownState,'townMinutes'>):Words|undefined{if(!shopScenes.includes(scene))return;const open=['morning','afternoon'].includes(townPeriod(s));return open?['营业至17:00。傍晚店主外出，明早06:00回来。','Open until 17:00. The owner goes out in the evening and returns at 06:00.']:['店主已休息，明早06:00恢复营业。可以先回家睡到09:00，再来办事。','The owner is away. Business resumes at 06:00. Sleep at home until 09:00 and return.']}
+
 export const oldLife:Record<string,{label:Words;reply:Words}>={
  mara:{label:['你休息时喜欢做什么？','What do you enjoy on a day off?'],reply:['“沿街看谁家的窗台添了新花。以前总想给人提建议，现在学会只说好看了。”','“Looking for new flowers on the windowsills. I used to offer advice. Now I mostly say they look lovely.”']},
  theo:{label:['下班后还想喝咖啡吗？','Do you want coffee after work?'],reply:['“想喝别人泡的。最好不用我收杯子。我最近在学把面包烤得没那么硬。”','“Someone else’s coffee. Preferably without washing the cup. Lately I’m learning to bake bread that doesn’t fight back.”']},
@@ -47,14 +59,16 @@ export const oldLife:Record<string,{label:Words;reply:Words}>={
 /** A bounded authored stroll, shared by rendering, hitboxes and action admission.
  * Like player walking, the observed footpoint is checked against this corridor;
  * it cannot move a resident to another route, scene or schedule period. */
-export function patrolRadius(person?:string){return person==='idris'?40:person&&residentPeople[person]?24:0}
+export function patrolRadius(person?:string){return person==='idris'?40:person&&residentRoutes[person]?24:0}
 export function observedActor(e:Entity,point?:{x:number;y:number}){if(!point)return e.at;const r=patrolRadius(e.person);if(!Number.isFinite(point.x)||!Number.isFinite(point.y)||Math.abs(point.y-e.at.y)>.1||Math.abs(point.x-e.at.x)>r+.1)throw Error('INVALID_ACTOR_POSITION');return point}
 
 /** An old save may stand where a newly added resident now appears. Move only the
  * resident within its authored corridor; never rewrite the player's saved spot. */
 export function residentClearOfPlayer(e:Entity,current:{x:number;y:number},player:{x:number;y:number},size:{w:number;h:number},clear:(point:{x:number;y:number})=>boolean){
  const overlaps=(q:{x:number;y:number})=>player.x<q.x+9&&player.x+size.w>q.x-9&&player.y<q.y&&player.y+size.h>q.y-8;
- if(!e.person||!residentPeople[e.person]||!overlaps(current))return current;
+ if(!e.person||!residentRoutes[e.person]||!overlaps(current))return current;
  const r=patrolRadius(e.person),ends=[{x:e.at.x-r,y:e.at.y},{x:e.at.x+r,y:e.at.y}].sort((a,b)=>Math.abs(a.x-current.x)-Math.abs(b.x-current.x));
  return ends.find(q=>!overlaps(q)&&clear(q))??current;
 }
+
+export function openingBadge(scene:string,s:Pick<TownState,'townMinutes'>):Words|undefined{if(!shopScenes.includes(scene))return;return ['morning','afternoon'].includes(townPeriod(s))?['营业至17:00','Open until 17:00']:['06:00恢复营业','Reopens 06:00']}

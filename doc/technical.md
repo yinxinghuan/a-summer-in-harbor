@@ -125,3 +125,12 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 ## 2026-10-04 最终居民美术集成
 
 最终美术通过 residentPeople.art → NPC sheet/关系页肖像消费；植物通过 sheets.ts 的三阶段图形 id 消费。时间/约会权威模型沿用居民分支，关系 UI 不写入虚构亲密度。该批不依赖账号 PG 接入。
+
+## 2026-10-04 本地生活模块
+
+- `src/story/crops.ts`：数据驱动三作物、湿润时间、阶段、买卖选项和原子状态变更。Save新增可选`plots`；缺省空，不修改已有fernStartedAt。每块菜畦保存crop/grown/updatedAt/wetUntil，以提交的townMinutes结算，现实离线不推进。
+- `src/story/fatigue.ts`：可选awakeMinutes，整数小时阈值按差值结算，拆分多个10分钟动作与一个长动作同结果。旅行/田间劳动增加，休息重置/减少。
+- `src/world/residents.ts`：13人三时段路线，夜间休息；玛拉工具袋归还前停留车站。人物位置、互动准入、NPC碰撞共用配置。三时段之间是在下一次权威时间推进时切换场景，不宣称连续跨地图步行。
+- `src/story/town-news.ts`：单条已核实官方信息的固定本地样例，无运行时网络请求。新闻ID/version事实，与虚构Casey/丹妮分支分开。独立flags持久化参与、核对、婉拒和回顾。已核对便条在山坡花园出现，使用现有noticeboard素材。未来正式采集器、审核、TTL/更正传播仍未实现。
+- `server/runtime.ts`：兼容旧Save并验证可选新字段。所有作物/金钱/剧情动作继续走既有AsyncSessionAuthority版本与幂等事务。前端不独立写plots或cash。
+- `_qa/townlife-server.ts`/`townlife-vite.mjs`：仅127.0.0.1:5267/5266、合成玩家SQLite、本地回复、无模型与媒体调用。不是正式PG或账号测试。

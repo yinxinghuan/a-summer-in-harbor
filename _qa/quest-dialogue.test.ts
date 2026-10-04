@@ -38,7 +38,7 @@ test('repair and route topics follow world completion even if their hints were s
 test('alternate route and garden agreement stay distinct from bridge repairs',()=>{
  const c=scenario();c.arrive();c.go('camp');c.step('old-map','challenge-start:map');c.step(c.save.activeChallenge!.id,'challenge-finish',{solution:[0,1,2,3]});assert.match(reply(c.save,'arthur','trail')[1],/already pieced/);assert.match(reply(c.save,'nell','photo')[1],/trail you found/);
  c.go('weather');assert.match(c.step('logbook','read-weather').text[1],/already mapped/);assert.equal(questProgress(c.save).bridge,'uninspected');
- c.go('path');c.step('bridge','inspect-bridge');c.go('courtyard');c.step('elena','introduce');c.step('elena','talk:quiet');c.step('elena','talk:hours');c.go('garden');assert.match(c.step('gate-hours','inspect-garden').text[1],/ten until noon/);assert.equal(questProgress(c.save).bridge,'inspected');assert.ok(!availableTopics(c.save,'elena').some(t=>t.id==='hours'));
+ c.go('path');c.step('bridge','inspect-bridge');c.go('home');c.step('bed','sleep');c.go('courtyard');c.step('elena','introduce');c.step('elena','talk:quiet');c.step('elena','talk:hours');c.go('garden');assert.match(c.step('gate-hours','inspect-garden').text[1],/ten until noon/);assert.equal(questProgress(c.save).bridge,'inspected');assert.ok(!availableTopics(c.save,'elena').some(t=>t.id==='hours'));
 });
 test('completed legacy facts prevent duplicate grants without changing historical save',()=>{
  const c=scenario();c.arrive();c.collect();c.step('mara','talk:return-bag');const legacy=structuredClone(c.save);legacy.flags=legacy.flags.filter(f=>!f.startsWith('talk:'));legacy.items.toolbag=1;const before=JSON.stringify(legacy);

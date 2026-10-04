@@ -1,0 +1,73 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "scenario": "news",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 320,
+      "scenario": "news",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 1024,
+      "scenario": "news",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 390,
+      "scenario": "farming",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 320,
+      "scenario": "harvest",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 390,
+      "scenario": "selling",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 320,
+      "scenario": "closed-shop",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 390,
+      "scenario": "day-street",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 390,
+      "scenario": "evening-street",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 390,
+      "scenario": "night-street",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 320,
+      "scenario": "tired",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    }
+  ],
+  "errors": [],
+  "failedAssets": [],
+  "environment": "local synthetic SQLite authority; no model/media calls, no production changes"
+}

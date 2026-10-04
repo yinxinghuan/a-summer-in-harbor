@@ -10,10 +10,10 @@ const interests:Record<string,LifeTopic>={
  owen:topic('birds',['你在听哪一种声音？','Which sound are you listening for?'],['“短的那一声。先别猜，和我听一会儿。”你们等着鸟声再次出现。欧文笑了：“听见两次，就不容易忘了。”','“The short call. Don’t guess yet. Listen with me.” You wait for it to return. Owen smiles. “Hear it twice and it tends to stay.”']),
  dani:topic('leaves',['这片叶子值得记下来吗？','Is this leaf worth a page?'],['“值得。它掉在我刚听完一个故事的地方。别人的秘密不写，只写那个人喜欢什么。”丹妮在空白页上留了一小块位置。','“Yes. It fell where I’d just heard a story. No one’s secrets go in the book. Just something they love.” Dani leaves a little space on the page.']),
 };
-export const lifeTopicIds=(p:string)=>residentPeople[p]?['routine','sketch','humming','birds','leaves','company','invite','listen','after-song','remember','boundaries']:oldLife[p]?['life']:[];
+export const lifeTopicIds=(p:string)=>residentPeople[p]?['routine','sketch','humming','birds','leaves','company','invite','listen','after-song','remember','boundaries']:oldLife[p]?['life','routine']:[];
 export function lifeTopics(s:TownState,p:string):LifeTopic[]{
  if(!s.known.includes(p))return [];
- if(!residentPeople[p])return oldLife[p]&&!seen(s,p,'life')?[topic('life',oldLife[p].label,oldLife[p].reply)]:[];
+ if(!residentPeople[p])return oldLife[p]?[...(!seen(s,p,'life')?[topic('life',oldLife[p].label,oldLife[p].reply)]:[]),...(!seen(s,p,'routine')?[topic('routine',['平时在哪儿能找到你？','Where can I usually find you?'],p==='mara'&&!s.flags.includes('bag-returned')?['“工具袋拿回来之前，我会留在车站街等你。平时上午在车站街，午后去住户庭院，傍晚逛旧街。”','“Until my tool bag is back, I will wait on Station Street. Usually I spend mornings here, afternoons in the courtyard, and evenings on Market Lane.”']:routineReply(p))]:[])]:[];
  if(!residentHere(s,p,s.scene))return [];
  let options=[interests[p]];
  if(seen(s,p,interests[p].id))options.push(topic('routine',['平时在哪些地方能遇到你？','Where do you usually spend your day?'],routineReply(p)));
