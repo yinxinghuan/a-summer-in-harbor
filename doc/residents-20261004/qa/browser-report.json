@@ -9,7 +9,7 @@
       "locale": "en",
       "before": {
         "id": "person-samira",
-        "x": 554,
+        "x": 557,
         "y": 430,
         "graphics": [
           "npc-samira"
@@ -29,7 +29,7 @@
       },
       "stopped": {
         "id": "person-samira",
-        "x": 574,
+        "x": 570,
         "y": 430,
         "graphics": [
           "npc-samira"
@@ -144,7 +144,7 @@
       "name": "evening shared event and reload",
       "head": {
         "townMinutes": 1080,
-        "id": "455322ce-71d6-4419-a18b-d9b29747f121",
+        "id": "1c6326a8-d156-4731-a610-64c63e371590",
         "version": 1,
         "cursor": 1,
         "mapVersion": 1,
@@ -205,7 +205,7 @@
         },
         "history": [
           {
-            "id": "5e490f08-33b2-463f-beb4-9989e15d4e0b",
+            "id": "d93926fc-a687-4a5f-82ed-40c8f251b88c",
             "kind": "talk",
             "person": "samira",
             "text": [
@@ -220,7 +220,7 @@
       "name": "water, two naps, morning sleep, visible fern states",
       "head": {
         "townMinutes": 2000,
-        "id": "6b1775d7-668a-4931-ab47-e0e6dad49a36",
+        "id": "e51ca891-aede-4449-9e73-95930980b030",
         "version": 8,
         "cursor": 8,
         "mapVersion": 1,
@@ -269,7 +269,7 @@
         "relations": {},
         "history": [
           {
-            "id": "b8651e53-0e8c-437d-ab7d-ff0c2d996b54",
+            "id": "0d5c2fe6-318e-4f95-9b8b-47b7e9b8cbe1",
             "kind": "action",
             "text": [
               "水渗进土里，小叶轻轻晃了晃。几个小时后再来看，不必守着它。",
@@ -277,7 +277,7 @@
             ]
           },
           {
-            "id": "321ddefa-868a-45ba-aedb-759c4199c9e5",
+            "id": "95c1f36e-a3c9-42ea-8d8e-6ce689ecfdbb",
             "kind": "action",
             "text": [
               "你沿熟悉的路抵达目的地。",
@@ -285,7 +285,7 @@
             ]
           },
           {
-            "id": "2da9b638-1704-45a7-b46c-edc1f62e6600",
+            "id": "44b30e8e-c7dc-409b-bdb9-b3255dce5fd5",
             "kind": "action",
             "text": [
               "你睡了一小觉。窗外的光变了，体力也恢复了。",
@@ -293,7 +293,7 @@
             ]
           },
           {
-            "id": "0a1b9da5-5252-42fe-9bd5-d65dcf2f0ade",
+            "id": "556a1d5f-c509-45e9-9a3c-cd049a774682",
             "kind": "action",
             "text": [
               "你睡了一小觉。窗外的光变了，体力也恢复了。",
@@ -301,7 +301,7 @@
             ]
           },
           {
-            "id": "60984741-2c4b-46a0-b4a3-ad3a4e23e3d2",
+            "id": "89b57042-cedc-4ed4-afcb-87ec7b4cc708",
             "kind": "action",
             "text": [
               "你沿熟悉的路抵达目的地。",
@@ -309,7 +309,7 @@
             ]
           },
           {
-            "id": "b216b45b-4003-489b-aa76-62a87de988c8",
+            "id": "2fdd5e2b-fb31-4140-90b5-12abb0f0e187",
             "kind": "action",
             "text": [
               "你沿熟悉的路抵达目的地。",
@@ -317,7 +317,7 @@
             ]
           },
           {
-            "id": "796db281-871f-4b9d-8a25-78a4648ff947",
+            "id": "b39b3209-26ac-4c34-a119-7c6502fadac8",
             "kind": "action",
             "text": [
               "一觉醒来，窗外又有了晨光。今天可以慢慢开始。",
@@ -325,7 +325,7 @@
             ]
           },
           {
-            "id": "38dbbcec-089a-4793-a85c-d82ab76da990",
+            "id": "400be734-2d5e-4f90-a4b9-db97656fa9e6",
             "kind": "action",
             "text": [
               "你沿熟悉的路抵达目的地。",
