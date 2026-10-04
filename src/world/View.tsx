@@ -1,4 +1,4 @@
-import {residentHere,patrolRadius,townPeriod,fernStage} from './residents';
+import {residentHere,patrolRadius,townPeriod,fernStage,residentClearOfPlayer} from './residents';
 import {dynamicWorld,slots} from '../dynamic-assets/layout';
 import {summerAudio} from '../audio';
 import {FootstepCadence} from '../footsteps';
@@ -38,7 +38,10 @@ export function View({townMinutes=540,fernStartedAt,scene,start,locale,flags,tit
     motionTime+=blocked?0:dt;npcTick+=dt;
     if(npcTick>.06){npcTick=0;for(const e of rooms[id].entities.filter(e=>e.person)){
      const actor=actors.get(id+'/'+e.id);if(!actor)continue;if(!active(id,e)){if(actor.graphics().length){actor.setGraphic([]);actor.syncChanges()}continue}if(actor.graphics()[0]!=='npc-'+e.person)actor.setGraphic('npc-'+e.person);
-     const current=actorPositions.get(id+'/'+e.id)??e.at,nearPlayer=Math.hypot(p.x+8-current.x,p.y+6-current.y)<110;
+     const previous=actorPositions.get(id+'/'+e.id)??e.at;
+     const current=residentClearOfPlayer(e,previous,p,world.actor,q=>walkable(baseWorld(),id,{x:q.x-8,y:q.y-6})&&!rooms[id].entities.some(other=>other.person&&other.id!==e.id&&active(id,other)&&Math.hypot(q.x-(actorPositions.get(id+'/'+other.id)??other.at).x,q.y-(actorPositions.get(id+'/'+other.id)??other.at).y)<28));
+     if(current!==previous){void actor.teleport(current);actorPositions.set(id+'/'+e.id,current)}
+     const nearPlayer=Math.hypot(p.x+8-current.x,p.y+6-current.y)<110;
      let next={...current},pose='stand',direction=actor.direction();
      if(!blocked&&!nearPlayer&&patrolRadius(e.person)>0){
       const patrol=patrols.get(id+'/'+e.id)??{side:1,pause:0,distance:0};patrols.set(id+'/'+e.id,patrol);

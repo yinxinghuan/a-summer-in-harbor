@@ -7,6 +7,7 @@ mkdirSync('.data',{recursive:true});const store=openAsyncSqliteAuthorityStore({p
 const contexts:any[]=[];const runtime=createRuntime(async(s,a)=>{contexts.push(dialogueContext(s,entityAt(s.scene,a.target)!.person!));return {topic:null,reply:['这是本地测试回复，已收到当前小镇生活记录。','This local test reply received the current town-life context.']}});
 const auth=new AsyncSessionAuthority(store,runtime);const api=createApiHandler({authority:auth,usage:{status:async()=>({resetAt:0,dialogue:{remaining:0,maximum:0,retryAt:null,pending:0}}),reserve:async()=>{},settle:async()=>{}},noteMedia:{}});
 const cases:Record<string,Partial<Save>>={
+ 'legacy-overlap':{scene:'market',townMinutes:undefined,position:{x:542,y:424}},
  owen:{scene:'harbor',townMinutes:540,position:{x:672,y:582}},
  dani:{scene:'garden',townMinutes:540,position:{x:422,y:552}},
  morning:{scene:'market',townMinutes:560,position:{x:500,y:590}},

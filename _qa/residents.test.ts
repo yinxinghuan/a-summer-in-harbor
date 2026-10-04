@@ -1,7 +1,7 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import {randomUUID} from 'node:crypto';import {mkdtempSync,rmSync} from 'node:fs';import {tmpdir} from 'node:os';import {join} from 'node:path';
 import {initial,applyAction,availableTopics,type Save,type Action} from '../src/story/state';
 import {rooms,entityAt,world} from '../src/world/data';import {findPath,walkable} from '../src/engine/world';
-import {residentRoutes,residentHere,patrolRadius,townMinutes,townPeriod,fernStage,advanceTown,sleepToMorning} from '../src/world/residents';
+import {residentRoutes,residentClearOfPlayer,observedActor,residentHere,patrolRadius,townMinutes,townPeriod,fernStage,advanceTown,sleepToMorning} from '../src/world/residents';
 import {runtime,createRuntime} from '../server/runtime';import {questionExamples} from '../src/story/question-examples';import {dialogueContext} from '../server/dialogue-context';
 // @ts-expect-error frozen runtime module
 import {AsyncSessionAuthority,openAsyncSqliteAuthorityStore} from '../vendor/dynamic-runtime/packages/authority-session/async.mjs';
@@ -54,4 +54,16 @@ test('SQLite restart and lost replies preserve clock/plant/memories; stale AI an
   const receipt=await auth.action('A',s.id,nap);assert.equal(receipt.head.townMinutes,720);const current=await auth.get('A',s.id);assert.equal(current.townMinutes,1980);assert.equal(current.fernStartedAt,540);assert.equal(current.relations.avery,2);assert.ok(current.flags.includes('residents:song-shared'));
   await assert.rejects(auth.action('A',s.id,{...sleep,action_id:randomUUID()}),/VERSION_CONFLICT/);await assert.rejects(auth.get('B',s.id),/SESSION_NOT_FOUND/);assert.deepEqual(await auth.get('A',s.id),current);
  }finally{await store.close();rmSync(dir,{recursive:true,force:true})}
+});
+
+test('legacy saved feet overlapping any new resident can exit without moving the save or leaving the patrol corridor',()=>{
+ for(const [person,routes] of Object.entries(residentRoutes))for(const [period,r] of routes.entries()){
+  const e=entityAt(r.scene,person)!;
+  for(let offset=-24;offset<=24;offset+=4)for(let dx=-15;dx<=8;dx+=2){
+   const current={x:r.at.x+offset,y:r.at.y},player={x:current.x+dx,y:current.y-6},before={...player};
+   const clear=(q:{x:number;y:number})=>walkable(world,r.scene,{x:q.x-8,y:q.y-6})&&!rooms[r.scene].entities.some(other=>other.person&&other.id!==e.id&&residentHere({townMinutes:[540,780,1080][period]},other.person,r.scene)&&Math.hypot(q.x-other.at.x,q.y-other.at.y)<28);
+   const next=residentClearOfPlayer(e,current,player,world.actor,clear);observedActor(e,next);assert.deepEqual(player,before);
+   assert.ok(!(player.x<next.x+9&&player.x+world.actor.w>next.x-9&&player.y<next.y&&player.y+world.actor.h>next.y-8),`${person}/${r.scene}/${offset}/${dx}`);
+  }
+ }
 });

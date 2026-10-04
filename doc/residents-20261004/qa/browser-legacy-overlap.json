@@ -1,0 +1,118 @@
+{
+  "authority": "real local SQLite, synthetic player fixtures",
+  "externalModelCalls": 0,
+  "errors": [],
+  "cases": [
+    {
+      "name": "legacy-overlap",
+      "actor": {
+        "id": "person-samira",
+        "x": 526,
+        "y": 430,
+        "graphics": [
+          "npc-samira"
+        ],
+        "pose": "stand",
+        "direction": "right"
+      },
+      "before": {
+        "id": "d6b36681-11e3-4284-9cf1-981fa41267b4",
+        "version": 0,
+        "cursor": 0,
+        "mapVersion": 1,
+        "locale": "en",
+        "scene": "market",
+        "position": {
+          "x": 542,
+          "y": 424
+        },
+        "flags": [
+          "key",
+          "unpacked"
+        ],
+        "known": [],
+        "visited": [
+          "station",
+          "home",
+          "cafe",
+          "grocery",
+          "harbor",
+          "dock",
+          "workshop",
+          "gym",
+          "market",
+          "bazaar",
+          "secondhand",
+          "courtyard",
+          "coast",
+          "beach",
+          "path",
+          "lighthouse",
+          "hill",
+          "garden",
+          "camp",
+          "weather",
+          "workshop-annex-1",
+          "workshop-annex-2"
+        ],
+        "items": {
+          "key": 1
+        },
+        "energy": 100,
+        "cash": 25,
+        "standing": 0,
+        "relations": {},
+        "history": []
+      },
+      "after": {
+        "id": "d6b36681-11e3-4284-9cf1-981fa41267b4",
+        "version": 0,
+        "cursor": 0,
+        "mapVersion": 1,
+        "locale": "en",
+        "scene": "market",
+        "position": {
+          "x": 542,
+          "y": 531.2512000000008
+        },
+        "flags": [
+          "key",
+          "unpacked"
+        ],
+        "known": [],
+        "visited": [
+          "station",
+          "home",
+          "cafe",
+          "grocery",
+          "harbor",
+          "dock",
+          "workshop",
+          "gym",
+          "market",
+          "bazaar",
+          "secondhand",
+          "courtyard",
+          "coast",
+          "beach",
+          "path",
+          "lighthouse",
+          "hill",
+          "garden",
+          "camp",
+          "weather",
+          "workshop-annex-1",
+          "workshop-annex-2"
+        ],
+        "items": {
+          "key": 1
+        },
+        "energy": 100,
+        "cash": 25,
+        "standing": 0,
+        "relations": {},
+        "history": []
+      }
+    }
+  ]
+}

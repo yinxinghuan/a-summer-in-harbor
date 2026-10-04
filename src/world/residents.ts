@@ -49,3 +49,12 @@ export const oldLife:Record<string,{label:Words;reply:Words}>={
  * it cannot move a resident to another route, scene or schedule period. */
 export function patrolRadius(person?:string){return person==='idris'?40:person&&residentPeople[person]?24:0}
 export function observedActor(e:Entity,point?:{x:number;y:number}){if(!point)return e.at;const r=patrolRadius(e.person);if(!Number.isFinite(point.x)||!Number.isFinite(point.y)||Math.abs(point.y-e.at.y)>.1||Math.abs(point.x-e.at.x)>r+.1)throw Error('INVALID_ACTOR_POSITION');return point}
+
+/** An old save may stand where a newly added resident now appears. Move only the
+ * resident within its authored corridor; never rewrite the player's saved spot. */
+export function residentClearOfPlayer(e:Entity,current:{x:number;y:number},player:{x:number;y:number},size:{w:number;h:number},clear:(point:{x:number;y:number})=>boolean){
+ const overlaps=(q:{x:number;y:number})=>player.x<q.x+9&&player.x+size.w>q.x-9&&player.y<q.y&&player.y+size.h>q.y-8;
+ if(!e.person||!residentPeople[e.person]||!overlaps(current))return current;
+ const r=patrolRadius(e.person),ends=[{x:e.at.x-r,y:e.at.y},{x:e.at.x+r,y:e.at.y}].sort((a,b)=>Math.abs(a.x-current.x)-Math.abs(b.x-current.x));
+ return ends.find(q=>!overlaps(q)&&clear(q))??current;
+}
