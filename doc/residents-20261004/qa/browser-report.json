@@ -1,0 +1,340 @@
+{
+  "authority": "real local SQLite, synthetic player fixtures",
+  "externalModelCalls": 0,
+  "errors": [],
+  "cases": [
+    {
+      "name": "market walk, approach, face, introduce, interest, contextual example",
+      "width": 390,
+      "locale": "en",
+      "before": {
+        "id": "person-samira",
+        "x": 554,
+        "y": 430,
+        "graphics": [
+          "npc-samira"
+        ],
+        "pose": "stride-0",
+        "direction": "right"
+      },
+      "after": {
+        "id": "person-samira",
+        "x": 574,
+        "y": 430,
+        "graphics": [
+          "npc-samira"
+        ],
+        "pose": "stand",
+        "direction": "right"
+      },
+      "stopped": {
+        "id": "person-samira",
+        "x": 574,
+        "y": 430,
+        "graphics": [
+          "npc-samira"
+        ],
+        "pose": "stand",
+        "direction": "down"
+      }
+    },
+    {
+      "name": "market walk, approach, face, introduce, interest, contextual example",
+      "width": 320,
+      "locale": "zh",
+      "before": {
+        "id": "person-samira",
+        "x": 552,
+        "y": 430,
+        "graphics": [
+          "npc-samira"
+        ],
+        "pose": "stride-0",
+        "direction": "right"
+      },
+      "after": {
+        "id": "person-samira",
+        "x": 574,
+        "y": 430,
+        "graphics": [
+          "npc-samira"
+        ],
+        "pose": "stand",
+        "direction": "right"
+      },
+      "stopped": {
+        "id": "person-samira",
+        "x": 574,
+        "y": 430,
+        "graphics": [
+          "npc-samira"
+        ],
+        "pose": "stand",
+        "direction": "down"
+      }
+    },
+    {
+      "name": "afternoon",
+      "visible": [
+        "person-avery",
+        "person-dani"
+      ],
+      "ev": [
+        {
+          "id": "person-avery",
+          "x": 674,
+          "y": 520,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stand",
+          "direction": "down"
+        },
+        {
+          "id": "person-samira",
+          "x": 550,
+          "y": 430,
+          "graphics": [],
+          "pose": "stand",
+          "direction": "down"
+        },
+        {
+          "id": "person-dani",
+          "x": 754,
+          "y": 580,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "left"
+        }
+      ]
+    },
+    {
+      "name": "night",
+      "visible": [],
+      "ev": [
+        {
+          "id": "person-avery",
+          "x": 650,
+          "y": 520,
+          "graphics": [],
+          "pose": "stand",
+          "direction": "down"
+        },
+        {
+          "id": "person-samira",
+          "x": 550,
+          "y": 430,
+          "graphics": [],
+          "pose": "stand",
+          "direction": "down"
+        },
+        {
+          "id": "person-dani",
+          "x": 730,
+          "y": 580,
+          "graphics": [],
+          "pose": "stand",
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "name": "evening shared event and reload",
+      "head": {
+        "townMinutes": 1080,
+        "id": "455322ce-71d6-4419-a18b-d9b29747f121",
+        "version": 1,
+        "cursor": 1,
+        "mapVersion": 1,
+        "locale": "en",
+        "scene": "dock",
+        "position": {
+          "x": 497,
+          "y": 492
+        },
+        "flags": [
+          "key",
+          "unpacked",
+          "residents:invited",
+          "talk:avery:sketch",
+          "talk:avery:company",
+          "talk:samira:humming",
+          "talk:samira:invite",
+          "residents:song-shared",
+          "talk:samira:listen"
+        ],
+        "known": [
+          "avery",
+          "samira"
+        ],
+        "visited": [
+          "station",
+          "home",
+          "cafe",
+          "grocery",
+          "harbor",
+          "dock",
+          "workshop",
+          "gym",
+          "market",
+          "bazaar",
+          "secondhand",
+          "courtyard",
+          "coast",
+          "beach",
+          "path",
+          "lighthouse",
+          "hill",
+          "garden",
+          "camp",
+          "weather",
+          "workshop-annex-1",
+          "workshop-annex-2"
+        ],
+        "items": {
+          "key": 1
+        },
+        "energy": 100,
+        "cash": 25,
+        "standing": 0,
+        "relations": {
+          "avery": 2,
+          "samira": 2
+        },
+        "history": [
+          {
+            "id": "5e490f08-33b2-463f-beb4-9989e15d4e0b",
+            "kind": "talk",
+            "person": "samira",
+            "text": [
+              "你在码头停下。萨米拉没有报曲名，艾弗里也没有急着画完。最后一个音落下，你们又听了一会儿水声。“这样就很好。”萨米拉说。",
+              "You pause on the pier. Samira gives no title; Avery leaves the drawing unfinished. After the last note you listen to the water a little longer. “That was enough,” Samira says."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "water, two naps, morning sleep, visible fern states",
+      "head": {
+        "townMinutes": 2000,
+        "id": "6b1775d7-668a-4931-ab47-e0e6dad49a36",
+        "version": 8,
+        "cursor": 8,
+        "mapVersion": 1,
+        "locale": "en",
+        "scene": "garden",
+        "position": {
+          "x": 210,
+          "y": 404
+        },
+        "flags": [
+          "key",
+          "unpacked",
+          "water-fern"
+        ],
+        "known": [],
+        "visited": [
+          "station",
+          "home",
+          "cafe",
+          "grocery",
+          "harbor",
+          "dock",
+          "workshop",
+          "gym",
+          "market",
+          "bazaar",
+          "secondhand",
+          "courtyard",
+          "coast",
+          "beach",
+          "path",
+          "lighthouse",
+          "hill",
+          "garden",
+          "camp",
+          "weather",
+          "workshop-annex-1",
+          "workshop-annex-2"
+        ],
+        "items": {
+          "key": 1
+        },
+        "energy": 100,
+        "cash": 25,
+        "standing": 0,
+        "relations": {},
+        "history": [
+          {
+            "id": "b8651e53-0e8c-437d-ab7d-ff0c2d996b54",
+            "kind": "action",
+            "text": [
+              "水渗进土里，小叶轻轻晃了晃。几个小时后再来看，不必守着它。",
+              "Water sinks into the soil. A small frond trembles. Come back in a few hours; you needn’t stay and watch."
+            ]
+          },
+          {
+            "id": "321ddefa-868a-45ba-aedb-759c4199c9e5",
+            "kind": "action",
+            "text": [
+              "你沿熟悉的路抵达目的地。",
+              "You follow the familiar route back."
+            ]
+          },
+          {
+            "id": "2da9b638-1704-45a7-b46c-edc1f62e6600",
+            "kind": "action",
+            "text": [
+              "你睡了一小觉。窗外的光变了，体力也恢复了。",
+              "You take a nap. The light outside has shifted, and your energy returns."
+            ]
+          },
+          {
+            "id": "0a1b9da5-5252-42fe-9bd5-d65dcf2f0ade",
+            "kind": "action",
+            "text": [
+              "你睡了一小觉。窗外的光变了，体力也恢复了。",
+              "You take a nap. The light outside has shifted, and your energy returns."
+            ]
+          },
+          {
+            "id": "60984741-2c4b-46a0-b4a3-ad3a4e23e3d2",
+            "kind": "action",
+            "text": [
+              "你沿熟悉的路抵达目的地。",
+              "You follow the familiar route back."
+            ]
+          },
+          {
+            "id": "b216b45b-4003-489b-aa76-62a87de988c8",
+            "kind": "action",
+            "text": [
+              "你沿熟悉的路抵达目的地。",
+              "You follow the familiar route back."
+            ]
+          },
+          {
+            "id": "796db281-871f-4b9d-8a25-78a4648ff947",
+            "kind": "action",
+            "text": [
+              "一觉醒来，窗外又有了晨光。今天可以慢慢开始。",
+              "You wake to morning light. There is room to start slowly today."
+            ]
+          },
+          {
+            "id": "38dbbcec-089a-4793-a85c-d82ab76da990",
+            "kind": "action",
+            "text": [
+              "你沿熟悉的路抵达目的地。",
+              "You follow the familiar route back."
+            ]
+          }
+        ],
+        "fernStartedAt": 540
+      }
+    }
+  ]
+}

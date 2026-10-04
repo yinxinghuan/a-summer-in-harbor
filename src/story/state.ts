@@ -1,3 +1,5 @@
+import {advanceTown,presentEntity,sleepToMorning,townMinutes,observedActor} from '../world/residents';
+import {lifeTopics,applyLifeTopic} from './resident-life';
 import {replayFishing,type FishingRun} from '../challenges/fishing';
 import {rooms,people,entityAt,tx,type Words,type Locale} from '../world/data';
 import {walkable,type Point} from '../engine/world';import {world,worldWithFlags} from '../world/data';
@@ -5,10 +7,10 @@ import {encounterPresets} from '../combat/presets';import {replayEncounter,type 
 export type Entry={id:string;kind:'talk'|'action';person?:string;question?:string;text:Words};
 import type {FieldNotes} from './fieldnotes-types';
 import {questProgress} from './progress';
-export type Save={dynamicAssetRooms?:string[];roomAssetAttachments?:any[];dynamicAssetAvailable?:boolean;fieldNotes?:FieldNotes;id:string;version:number;cursor:number;mapVersion:1;locale:Locale;scene:string;position:Point;flags:string[];known:string[];visited:string[];items:Record<string,number>;energy:number;cash:number;standing:number;relations:Record<string,number>;history:Entry[];activeChallenge?:{id:string;kind:string;scene:string};};
-export type Action={action_id:string;expected_version:number;scene:string;position:Point;target:string;action:string;payload?:unknown};
+export type Save={townMinutes?:number;fernStartedAt?:number;dynamicAssetRooms?:string[];roomAssetAttachments?:any[];dynamicAssetAvailable?:boolean;fieldNotes?:FieldNotes;id:string;version:number;cursor:number;mapVersion:1;locale:Locale;scene:string;position:Point;flags:string[];known:string[];visited:string[];items:Record<string,number>;energy:number;cash:number;standing:number;relations:Record<string,number>;history:Entry[];activeChallenge?:{id:string;kind:string;scene:string};};
+export type Action={action_id:string;expected_version:number;scene:string;position:Point;target:string;action:string;payload?:unknown;actorPosition?:Point};
 export const has=(s:Save,id:string)=>s.flags.includes(id);
-export function initial(locale:Locale,id:string):Save{return {id,version:0,cursor:0,mapVersion:1,locale,scene:'station',position:{...rooms.station.spawn},flags:[],known:[],visited:['station'],items:{},energy:100,cash:25,standing:0,relations:{},history:[]}}
+export function initial(locale:Locale,id:string):Save{return {townMinutes:540,id,version:0,cursor:0,mapVersion:1,locale,scene:'station',position:{...rooms.station.spawn},flags:[],known:[],visited:['station'],items:{},energy:100,cash:25,standing:0,relations:{},history:[]}}
 const requireState=(value:unknown,code:string)=>{if(!value)throw Error(code)};
 const flag=(s:Save,id:string)=>{if(!s.flags.includes(id))s.flags.push(id)};
 const give=(s:Save,id:string,n=1)=>s.items[id]=(s.items[id]??0)+n;
@@ -58,9 +60,9 @@ function currentTopic(s:Save,p:string,t:(typeof topics)[string][number]){
  }
  return reply?{...t,reply}:t;
 }
-export function availableTopics(s:Save,p:string){return (topics[p]??[]).filter(t=>(!t.requires||has(s,t.requires))&&(!t.all||t.all.every(f=>has(s,f)))&&(!t.once||!has(s,`talk:${p}:${t.id}`))&&(t.id!=='return-bag'||(!!s.items.toolbag&&!has(s,'bag-returned')))&&(t.id!=='fish'||!!s.items.fish)&&(t.id!=='key'||!has(s,'key'))&&!(p==='theo'&&t.id==='bag'&&(!!s.items.toolbag||has(s,'bag-returned')))&&!(p==='june'&&t.id==='tools'&&!!s.items.toolkit)&&!(p==='elena'&&t.id==='hours'&&has(s,'garden-agreed'))).map(t=>currentTopic(s,p,t))}
+export function availableTopics(s:Save,p:string){return [...(topics[p]??[]),...lifeTopics(s,p)].filter(t=>(!t.requires||has(s,t.requires))&&(!t.all||t.all.every(f=>has(s,f)))&&(!t.once||!has(s,`talk:${p}:${t.id}`))&&(t.id!=='return-bag'||(!!s.items.toolbag&&!has(s,'bag-returned')))&&(t.id!=='fish'||!!s.items.fish)&&(t.id!=='key'||!has(s,'key'))&&!(p==='theo'&&t.id==='bag'&&(!!s.items.toolbag||has(s,'bag-returned')))&&!(p==='june'&&t.id==='tools'&&!!s.items.toolkit)&&!(p==='elena'&&t.id==='hours'&&has(s,'garden-agreed'))).map(t=>currentTopic(s,p,t))}
 export function validateQuestion(s:Save,a:Action){
- requireState(a.expected_version===s.version,'VERSION_CONFLICT');requireState(a.scene===s.scene&&walkable(worldWithFlags(s.flags),s.scene,a.position),'INVALID_POSITION');requireState(!s.activeChallenge,'CHALLENGE_ACTIVE');const e=entityAt(s.scene,a.target);requireState(e?.person&&s.known.includes(e.person),'INTRODUCE_FIRST');requireState(Math.hypot(a.position.x+8-e!.at.x,a.position.y+6-e!.at.y)<=75,'TOO_FAR');const text=(a.payload as {text?:unknown})?.text;requireState(typeof text==='string'&&text.trim().length>0&&text.length<=400,'INVALID_QUESTION');return {person:e!.person!,question:(text as string).trim()};
+ requireState(a.expected_version===s.version,'VERSION_CONFLICT');requireState(a.scene===s.scene&&walkable(worldWithFlags(s.flags),s.scene,a.position),'INVALID_POSITION');requireState(!s.activeChallenge,'CHALLENGE_ACTIVE');const e=entityAt(s.scene,a.target);requireState(e?.person&&s.known.includes(e.person),'INTRODUCE_FIRST');requireState(presentEntity(s,e!),'PERSON_AWAY');requireState(Math.hypot(a.position.x+8-observedActor(e!,a.actorPosition).x,a.position.y+6-observedActor(e!,a.actorPosition).y)<=75,'TOO_FAR');const text=(a.payload as {text?:unknown})?.text;requireState(typeof text==='string'&&text.trim().length>0&&text.length<=400,'INVALID_QUESTION');return {person:e!.person!,question:(text as string).trim()};
 }
 export type DialogueResolution={topic:string|null;reply:Words};
 export function applyAction(before:Save,a:Action,resolution?:DialogueResolution):{head:Save;text:Words}{
@@ -81,7 +83,7 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution)
   }else if(active.kind==='fishing'){const result=replayFishing(p.fishing!);requireState(result.result!=='playing','CHALLENGE_NOT_FINISHED');if(result.result==='caught'){give(s,'fish');s.energy=Math.max(0,s.energy-2);relate(s,'ruth',1);text=['鱼进了桶。露丝点点头：拿去咖啡馆，或者留着当晚饭。','The fish lands in the bucket. Ruth nods. Take it to the café, or keep it for supper.']}else text=['鱼游走了。露丝递给你一杯水，下次还可以再试。','The fish slips away. Ruth offers you water. There is always another try.']}
   delete s.activeChallenge;
  }else{
-  requireState(!s.activeChallenge,'CHALLENGE_ACTIVE');requireState(e,'UNKNOWN_TARGET');requireState(Math.hypot(s.position.x+8-e!.at.x,s.position.y+6-e!.at.y)<=75,'TOO_FAR');
+  requireState(!s.activeChallenge,'CHALLENGE_ACTIVE');requireState(e,'UNKNOWN_TARGET');requireState(presentEntity(s,e!),'PERSON_AWAY');requireState(Math.hypot(s.position.x+8-observedActor(e!,a.actorPosition).x,s.position.y+6-observedActor(e!,a.actorPosition).y)<=75,'TOO_FAR');
   if(a.action==='travel'){
    requireState(e!.kind==='portal','NOT_A_DOOR');const dest=e!.destination!;
    if(dest.startsWith('workshop-annex-'))requireState(s.fieldNotes?.rooms.some(r=>r.id===dest),'NOTES_LOCKED');
@@ -93,7 +95,7 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution)
   }else if(a.action.startsWith('talk:')){
    const person=e!.person!;requireState(person&&s.known.includes(person),'INTRODUCE_FIRST');const topic=availableTopics(s,person).find(t=>t.id===a.action.slice(5));requireState(topic,'TOPIC_UNAVAILABLE');text=topic!.reply;
    switch(person+':'+topic!.id){case 'mara:key':flag(s,'key');give(s,'key');break;case 'mara:return-bag':take(s,'toolbag');flag(s,'bag-returned');relate(s,'mara',3);break;case 'theo:bag':give(s,'toolbag');break;case 'theo:fish':take(s,'fish');s.cash+=6;break;case 'june:tools':give(s,'toolkit');break;case 'nell:photo':give(s,'photo');break;case 'elena:hours':flag(s,'garden-agreed');relate(s,'elena',2);break;case 'luis:snack':requireState(s.cash>=4,'NOT_ENOUGH_CASH');s.cash-=4;s.energy=Math.min(100,s.energy+30);break;case 'luis:water':s.energy=Math.min(100,s.energy+10);break;}
-   if(topic!.once)flag(s,`talk:${person}:${topic!.id}`);
+   applyLifeTopic(s,person,topic!.id);if(topic!.once)flag(s,`talk:${person}:${topic!.id}`);
   }else if(a.action.startsWith('challenge-start:')){
    const kind=a.action.slice(16);requireState((e!.person==='idris'&&['sparring','footwork','endurance'].includes(kind))||(e!.person==='ruth'&&kind==='fishing')||(e!.id==='terrace'&&kind==='repair'&&!has(s,'terrace-fixed'))||(e!.id==='old-map'&&kind==='map'&&!has(s,'alternative-route')),'CHALLENGE_UNAVAILABLE');
    if(e!.person)requireState(s.known.includes(e!.person),'INTRODUCE_FIRST');s.activeChallenge={id:a.action_id,kind,scene:s.scene};text=['准备好了就开始，也可以随时退出。','Start when you’re ready. You can leave at any time.'];
@@ -101,7 +103,9 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution)
    requireState(e!.actions?.includes(a.action),'ACTION_UNAVAILABLE');requireState(!has(s,a.action),'ALREADY_DONE');
    switch(a.action){
     case 'unpack':requireState(has(s,'key'),'KEY_NEEDED');flag(s,'unpacked');text=['行李放到了床边。窗外有杯碟碰响。房间是你的了——可以去看看小镇。','Your bag rests beside the bed. Cups clink somewhere outside. The room is yours. Time to see a little of town.'];break;
-    case 'rest':s.energy=100;text=['你歇了一会儿。海风吹进房间，体力恢复了。','You rest while the sea breeze moves through the room. Your energy returns.'];break;
+    case 'sleep':s.energy=100;text=['一觉醒来，窗外又有了晨光。今天可以慢慢开始。','You wake to morning light. There is room to start slowly today.'];break;
+    case 'water-fern':requireState(s.fernStartedAt===undefined,'ALREADY_DONE');s.fernStartedAt=townMinutes(s);text=['水渗进土里，小叶轻轻晃了晃。几个小时后再来看，不必守着它。','Water sinks into the soil. A small frond trembles. Come back in a few hours; you needn’t stay and watch.'];break;
+    case 'rest':s.energy=100;text=['你睡了一小觉。窗外的光变了，体力也恢复了。','You take a nap. The light outside has shifted, and your energy returns.'];break;
     case 'read-market':flag(s,'market-known');text=has(s,'route-open')?['夏日集市正在等通行安排的消息。路线已经准备好了，可以把好消息告诉大家。','The summer market is waiting for news of access. Your route is ready; you can share the good news.']:hasCoastRoute(s)?['集市需要安全的海岸通路。你已经找到可行的路线，去灯塔确认安排后就能来报信。','The market needs safe coast access. You already have a workable route; confirm the arrangements at the lighthouse, then bring the news.']:['告示说夏日集市缺少通往海边的安全路线。桥坏了，私人庭院也不能默认借道。你决定先去看看。','The notice says the summer market needs safe access to the coast. The bridge is damaged, and the private garden isn’t a public shortcut. Worth a look.'];break;
     case 'inspect-bridge':flag(s,'bridge-seen');text=['两块桥板断了，下面的支撑还很牢。可以修，也可以找别的路。','Two boards have split. The supports below are sound. You could repair it—or find another route.'];break;
     case 'gather-wood':requireState(!has(s,'wood-collected'),'ALREADY_DONE');give(s,'wood',2);flag(s,'wood-collected');text=['你挑出两块结实的木板，避开了已经朽烂的部分。','You pick out two sound planks, leaving the rotten wood behind.'];break;
@@ -112,8 +116,9 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution)
     case 'open-market':requireState(has(s,'route-open')&&has(s,'market-known'),'ROUTE_NOT_READY');flag(s,'market-open');s.standing+=8;text=['摊位支起来了，海岸那边传来笑声。你没有解决镇上所有的问题，却已经在这里留下了自己的痕迹。这个夏天还长。','Stalls unfold, and laughter carries up from the coast. You haven’t solved every problem in town. But you’ve left a mark. There’s still a whole summer ahead.'];break;
     default:throw Error('ACTION_UNAVAILABLE');
    }
-   if(a.action!=='rest')flag(s,a.action);
+   if(!['rest','sleep'].includes(a.action))flag(s,a.action);
   }
  }
+ if((a.action==='travel'||a.action==='travel-map')&&s.scene!==before.scene)advanceTown(s,20);if(a.action==='rest')advanceTown(s,180);if(a.action==='sleep')sleepToMorning(s);
  s.energy=Math.max(0,Math.min(100,s.energy));s.cash=Math.max(0,Math.min(999,s.cash));s.standing=Math.max(0,Math.min(100,s.standing));s.version++;s.cursor++;s.history.push({id:a.action_id,kind:a.action.startsWith('talk:')||a.action==='introduce'?'talk':'action',...(e?.person?{person:e.person}:{}),text});s.history=s.history.slice(-500);return {head:s,text};
 }

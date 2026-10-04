@@ -1,5 +1,5 @@
 import mapDimensions from './map-dimensions.json';
-import type {Direction} from '@rpgjs/common';import dimensions from './art-dimensions.json';import {rooms,type Prop} from './data';
+import type {Direction} from '@rpgjs/common';import dimensions from './art-dimensions.json';import {rooms,people,type Prop} from './data';
 const row=(d:Direction)=>({down:0,left:1,right:2,up:3}[d]??0);
 export const heroSheet={id:'harbor-hero',image:'./art/hero.png',width:384,height:512,framesWidth:3,framesHeight:4,textures:Object.fromEntries([['stand',1],['stride-0',0],['stride-1',1],['stride-2',2]].map(([name,col])=>[name,{animations:({direction}:{direction:Direction})=>[[{frameX:col,frameY:row(direction),time:0,anchor:[.5,122/128],scale:[56/108,56/108],x:8,y:12}]]}]))};
 const still=(anchor:number[],scale:number,y=0)=>({animations:()=>[[{frameX:0,frameY:0,time:0,anchor,scale:[scale,scale],x:0,y}]]});
@@ -9,5 +9,11 @@ export const sheets:any[]=Object.values(rooms).flatMap(r=>[
  ...['base','north','side','front'].flatMap(layer=>{const d=mapDimensions[(r.id+'-'+layer) as keyof typeof mapDimensions];return d.empty?[]:[graphic(`${layer}-${r.id}`,`./map/${r.id}-${layer}.png`,d.width,d.height,[0,layer==='front'?1:0],1)]}),
  ...r.props.filter(p=>!p.floorDecoration).flatMap(p=>[p.art,...(p.state?[p.state.art]:[])].map((art,index)=>{const d=dimensions[art as keyof typeof dimensions];return graphic(propId(r.id,p)+(index?'-active':''),`./art/${art}.png`,d.width,d.height,[.5,1],p.width/d.width)}))]);
 
-export const npcSheets=["mara","theo","idris","june","ruth","luis","nell","elena","arthur"].map(id=>({...heroSheet,id:'npc-'+id,image:`./art/npc-${id}.png`,textures:Object.fromEntries([['stand',1],['stride-0',0],['stride-1',1],['stride-2',2]].map(([name,col])=>[name,{animations:({direction}:{direction:Direction})=>[[{frameX:col,frameY:row(direction),time:0,anchor:[.5,122/128],scale:[56/108,56/108],x:0,y:0}]]}]))}));
+export const npcSheets=Object.keys(people).map(id=>({...heroSheet,id:'npc-'+id,image:`./art/npc-${people[id].art}.png`,textures:Object.fromEntries([['stand',1],['stride-0',0],['stride-1',1],['stride-2',2]].map(([name,col])=>[name,{animations:({direction}:{direction:Direction})=>[[{frameX:col,frameY:row(direction),time:0,anchor:[.5,122/128],scale:[56/108,56/108],x:0,y:0}]]}]))}));
 sheets.push(...npcSheets);
+
+// Local growth prototype: the same unpotted fern, at a fixed root anchor.
+// Distinct leaf-stage art is a separate requested production asset batch.
+const growth=rooms.garden.props.find(p=>p.id==='growing-fern')!;
+const fd=dimensions[growth.art as keyof typeof dimensions];
+for(const [stage,mult] of [['young',.45],['unfurling',.7],['grown',1]] as const)sheets.push(graphic('prop-garden-growing-fern-'+stage,'./art/'+growth.art+'.png',fd.width,fd.height,[.5,1],growth.width/fd.width*mult));

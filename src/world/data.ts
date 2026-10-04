@@ -1,3 +1,4 @@
+import {residentPeople,residentRoutes} from './residents';
 import {enrichPlanting} from './planting';
 import {organizeDailyLife} from './scene-use';
 import {dressHarbor} from './dressing';
@@ -10,7 +11,7 @@ export type Entity={id:string;label:Words;kind:'person'|'portal'|'object';at:Poi
 export const entityLabel=(e:Entity,flags:string[]):Words=>e.id==='bridge'&&flags.includes('bridge-fixed')?['修好的小桥','Repaired footbridge']:e.id==='terrace'&&flags.includes('terrace-fixed')?['露台灯','Terrace lantern']:e.label;
 export type Room={id:string;title:Words;area:string;outdoor:boolean;spawn:Point;interior:Rect;props:Prop[];entities:Entity[];neighbors:string[];map:Point};
 const labels:Record<string,Words>={station:['车站街','Station Street'],harbor:['港口','The Harbor'],market:['旧街','Market Lane'],coast:['海岸','The Coast'],hill:['山坡','The Hill'],home:['你的租屋','Your Room'],cafe:['潮间咖啡馆','Tide & Table'],grocery:['街角杂货铺','Corner Grocer'],dock:['钓鱼码头','Fishing Pier'],workshop:['琼的修理铺','June’s Workshop'],gym:['港口拳馆','Harbor Boxing Club'],bazaar:['集市广场','Market Square'],secondhand:['旧物店','Second Chances'],courtyard:['住户庭院','Residents’ Courtyard'],beach:['贝壳海滩','Shell Beach'],path:['滨海道','Coastal Path'],lighthouse:['灯塔','The Lighthouse'],garden:['山坡花园','Hillside Garden'],camp:['松林营地','Pine Camp'],weather:['旧气象站','Weather Station']};
-export const people:Record<string,{name:Words;unknown:Words;intro:Words;art:string}>={
+export const people:Record<string,{name:Words;unknown:Words;intro:Words;art:string}>={...residentPeople,
  mara:{name:['玛拉','Mara'],unknown:['提着钥匙的女士','Woman with the keys'],intro:['一位穿亚麻衬衣的女士抬手招呼。她晃了晃钥匙：“你就是来住一夏的新房客吧？我是玛拉。先放下行李，别急着认全镇的人。”','A woman in a linen shirt waves a key. “You must be my summer tenant. I’m Mara. Let’s put your bag down before you try to learn the whole town.”'],art:'mara'},
  theo:{name:['西奥','Theo'],unknown:['擦杯子的店员','Man drying a cup'],intro:['柜台后的年轻人把杯子放下，围裙上写着Theo。“叫我西奥。你刚到？玛拉把她的工具袋忘在这里了。”','The man behind the counter sets down a cup. His apron reads Theo. “Just arrived? Mara left her tool bag here. You’re welcome to sit a while.”'],art:'theo'},
  june:{name:['琼','June'],unknown:['工作台旁的女人','Woman at the workbench'],intro:['穿工装的女人从工作台旁抬起头：“我是琼，这间修理铺是我的。全年都有人弄坏东西。需要借工具？”','The woman at the workbench looks up. “June. Like the sign. Things break all year, though. Need to borrow something?”'],art:'june'},
@@ -34,7 +35,7 @@ for(const [area,children,map] of hubSpecs){
 const addPerson=(scene:string,person:string,x:number,y:number)=>rooms[scene].entities.push({id:person,label:people[person].unknown,kind:'person',person,at:{x,y},approach:{x:x-8,y:y+42}});
 addPerson('station','mara',438,435);addPerson('cafe','theo',575,375);addPerson('workshop','june',510,380);addPerson('gym','idris',535,345);addPerson('dock','ruth',410,350);addPerson('grocery','luis',535,370);addPerson('secondhand','nell',510,380);addPerson('courtyard','elena',495,370);addPerson('weather','arthur',510,365);
 const object=(scene:string,id:string,label:Words,x:number,y:number,actions:string[])=>rooms[scene].entities.push({id,label,kind:'object',at:{x,y},approach:{x:x-8,y:y+34},actions});
-object('home','bed',['床与行李','Bed & luggage'],380,375,['unpack','rest']);object('cafe','terrace',['待修的露台灯','Terrace lantern for repair'],370,380,['repair-terrace']);object('path','bridge',['受损的小桥','Damaged footbridge'],480,360,['inspect-bridge','repair-bridge']);object('beach','driftwood',['岸边的木板','Washed-up planks'],385,370,['gather-wood']);object('lighthouse','gate',['海岸路线入口','Coast route gate'],480,360,['open-route']);object('bazaar','notice',['集市告示板','Market noticeboard'],480,365,['read-market','open-market']);object('camp','old-map',['旧路线图','Old route map'],420,360,['assemble-map']);object('garden','gate-hours',['小门上的便条','Note on the garden gate'],475,360,['inspect-garden']);object('weather','logbook',['气象记录本','Weather log'],390,380,['read-weather']);
+object('home','bed',['床与行李','Bed & luggage'],380,375,['unpack','rest','sleep']);object('cafe','terrace',['待修的露台灯','Terrace lantern for repair'],370,380,['repair-terrace']);object('path','bridge',['受损的小桥','Damaged footbridge'],480,360,['inspect-bridge','repair-bridge']);object('beach','driftwood',['岸边的木板','Washed-up planks'],385,370,['gather-wood']);object('lighthouse','gate',['海岸路线入口','Coast route gate'],480,360,['open-route']);object('bazaar','notice',['集市告示板','Market noticeboard'],480,365,['read-market','open-market']);object('camp','old-map',['旧路线图','Old route map'],420,360,['assemble-map']);object('garden','gate-hours',['小门上的便条','Note on the garden gate'],475,360,['inspect-garden']);object('weather','logbook',['气象记录本','Weather log'],390,380,['read-weather']);
 rooms.cafe.props=[{id:'counter',art:'cafe-counter',at:{x:470,y:340},width:150,footprint:{x:400,y:313,w:140,h:30}},{id:'fern',art:'plant',at:{x:653,y:295},width:40,footprint:{x:643,y:278,w:20,h:18}}];
 // Furniture groups give each place a purpose; footprints are grounded contact areas.
 const furnish=(scene:string,id:string,art:string,x:number,y:number,width:number,groundW=width*.75,groundH=14)=>rooms[scene].props.push({id,art,at:{x,y},width,footprint:{x:x-groundW/2,y:y-groundH,w:groundW,h:groundH}});
@@ -209,6 +210,9 @@ export const doorways=Object.fromEntries(Object.values(rooms).filter(r=>!r.outdo
  return [r.id,door];
 }));
 export const world:World={width:1440,height:1088,step:12,actor:{w:16,h:12},scenes:Object.fromEntries(Object.values(rooms).map(r=>[r.id,{interior:r.interior,spawn:r.spawn,obstacles:[...(outdoors[r.id]?waterBarriers(outdoors[r.id]):[]),...(outdoors[r.id]?.barriers??[]),...r.props.flatMap(p=>p.footprint?[p.footprint]:[])]}]))};
+const fern=rooms.garden.props.find(p=>p.art==='flora-fern-v1')!;fern.id='growing-fern';
+rooms.garden.entities.push({id:'growing-fern',kind:'object',label:['路边的小蕨','Pathside fern'],at:{...fern.at},approach:{x:fern.at.x+28,y:fern.at.y+14},actions:['water-fern']});
+for(const [person,routes] of Object.entries(residentRoutes))for(const route of routes)addPerson(route.scene,person,route.at.x,route.at.y);
 export function entityAt(scene:string,id:string){return rooms[scene]?.entities.find(e=>e.id===id)}
 
 export function worldWithFlags(flags:string[]):World {

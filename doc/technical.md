@@ -108,3 +108,12 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 ## 2026-10-04 上下文举例
 
 `src/story/question-examples.ts` 从现有Save和questProgress选择只读双语候选，缺少已知上下文时给泛问；不依赖新schema。`src/ui/ExampleAssist.tsx`管理轮换/预览/明确替换，接受受控value/onChange、inputId、locale、disabled；父组件以包含相关上下文与候选的key重置临时状态并沿用draftKey持久化。示例只写草稿，ask/send仍走既有权威链。角色/动作/生成房间是否需要例子取决于是否实际存在自由输入。扩展人物内容在game-owned适配器内完成，不能只按known角色推断所有知识已公开。移动端面板遮罩仅对直接按在背景的pointer-down关闭，防止打开面板的尾随click误关。定向证据见doc/qa/examples-20261004。
+
+## 2026-10-04 居民与统一游戏时间（本地候选）
+- `src/world/residents.ts`：一个权威存档分钟、旧档默认、单调推进/睡眠、时段、四居民路线、活动、受限散步位置和蕨苗阶段；不读取现实时间。
+- `src/story/resident-life.ts`：兴趣→追问→邀请→时段相聚→回忆；稳定话题flag、一次关系影响。原9NPC新增生活话题；无新主线锁。
+- `state.ts`在唯一行动提交中推进travel 20分钟、nap 180分钟、sleep到下一个09:00；自由阅读/模型回答不推进。`fernStartedAt`只写一次，阶段为纯派生。`runtime.ts`验证可选字段，SQLite/原PG存储序列化合同不另增第二写入者。
+- `View.tsx`保留单个RPGJS实例；注册所有已作者化日程事件，缺席清空graphic且不占动态碰撞；活动时移动脚点共用于碰撞/热点/接近/提交。走廊内移动是本地环境表现，提交脚点须通过规则走廊准入，非服务器逐帧NPC模拟。
+- `dialogue-context.ts`提供已提交兴趣/相聚/关系；`question-examples.ts`只读当前可见/已知事实，示例不消耗模型。本地QA注入固定回复，不调用外部AI。
+- `_qa/residents-server.ts`仅127.0.0.1:5258，合成玩家和隔离SQLite；`_qa/residents.vite.ts`仅5257。不会修改原5234/5236服务。测试页面仍是真实App与RPGJS。
+- 扩展：日程在residentRoutes添加，话题在resident-life增加；植物按相同权威分钟导出，不加独立timer。生产账号接线属于另一个候选，本批保留正式版browser-capability边界。

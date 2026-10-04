@@ -1,0 +1,383 @@
+{
+  "authority": "real local SQLite, synthetic player fixtures",
+  "externalModelCalls": 0,
+  "errors": [],
+  "cases": [
+    {
+      "name": "owen",
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "events": [
+        {
+          "id": "person-samira",
+          "x": 600,
+          "y": 560,
+          "graphics": [],
+          "pose": "stand",
+          "direction": "down"
+        },
+        {
+          "id": "person-owen",
+          "x": 680,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stand",
+          "direction": "down"
+        }
+      ],
+      "head": {
+        "townMinutes": 540,
+        "id": "62a72ddd-2cb2-44ea-9119-177d010a47ff",
+        "version": 1,
+        "cursor": 1,
+        "mapVersion": 1,
+        "locale": "en",
+        "scene": "harbor",
+        "position": {
+          "x": 672,
+          "y": 582
+        },
+        "flags": [
+          "key",
+          "unpacked"
+        ],
+        "known": [
+          "owen"
+        ],
+        "visited": [
+          "station",
+          "home",
+          "cafe",
+          "grocery",
+          "harbor",
+          "dock",
+          "workshop",
+          "gym",
+          "market",
+          "bazaar",
+          "secondhand",
+          "courtyard",
+          "coast",
+          "beach",
+          "path",
+          "lighthouse",
+          "hill",
+          "garden",
+          "camp",
+          "weather",
+          "workshop-annex-1",
+          "workshop-annex-2"
+        ],
+        "items": {
+          "key": 1
+        },
+        "energy": 100,
+        "cash": 25,
+        "standing": 0,
+        "relations": {},
+        "history": [
+          {
+            "id": "ed130fe0-49e3-4886-a281-cf246c592590",
+            "kind": "talk",
+            "person": "owen",
+            "text": [
+              "“欧文。以前修公交车，现在练习分清海鸟的叫声。两样都得先听，别急着拆。”",
+              "“Owen. Used to repair buses. Now I try to tell seabirds apart. Both start with listening, before taking anything to pieces.”"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "dani",
+      "width": 390,
+      "height": 844,
+      "locale": "zh",
+      "events": [
+        {
+          "id": "prop-garden-growing-fern",
+          "x": 182,
+          "y": 390,
+          "graphics": [
+            "prop-garden-growing-fern-young"
+          ],
+          "pose": "stand",
+          "direction": "down"
+        },
+        {
+          "id": "person-dani",
+          "x": 430,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "down"
+        }
+      ],
+      "head": {
+        "townMinutes": 540,
+        "id": "1d5f08ce-f20c-4064-ad6f-0d7ca0199f2b",
+        "version": 1,
+        "cursor": 1,
+        "mapVersion": 1,
+        "locale": "zh",
+        "scene": "garden",
+        "position": {
+          "x": 422,
+          "y": 552
+        },
+        "flags": [
+          "key",
+          "unpacked"
+        ],
+        "known": [
+          "dani"
+        ],
+        "visited": [
+          "station",
+          "home",
+          "cafe",
+          "grocery",
+          "harbor",
+          "dock",
+          "workshop",
+          "gym",
+          "market",
+          "bazaar",
+          "secondhand",
+          "courtyard",
+          "coast",
+          "beach",
+          "path",
+          "lighthouse",
+          "hill",
+          "garden",
+          "camp",
+          "weather",
+          "workshop-annex-1",
+          "workshop-annex-2"
+        ],
+        "items": {
+          "key": 1
+        },
+        "energy": 100,
+        "cash": 25,
+        "standing": 0,
+        "relations": {},
+        "history": [
+          {
+            "id": "262a3a26-b31d-4089-8fa8-45eda38f1583",
+            "kind": "talk",
+            "person": "dani",
+            "text": [
+              "“丹妮，在图书馆工作。我想做本小册子，收一点街坊种花的故事。今天这页只有一片叶子，也挺好。”",
+              "“Dani. I work at the library. I’m making a little book of neighbors’ garden stories. Today’s page has just one leaf. That’s fine too.”"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "evening",
+      "width": 1024,
+      "height": 768,
+      "locale": "en",
+      "events": [
+        {
+          "id": "person-ruth",
+          "x": 410,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stand",
+          "direction": "down"
+        },
+        {
+          "id": "person-avery",
+          "x": 560,
+          "y": 450,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stand",
+          "direction": "left"
+        },
+        {
+          "id": "person-samira",
+          "x": 505,
+          "y": 450,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stand",
+          "direction": "down"
+        }
+      ],
+      "head": {
+        "townMinutes": 1080,
+        "id": "9cbcf456-566e-49b7-a70b-6005cc50ecd3",
+        "version": 0,
+        "cursor": 0,
+        "mapVersion": 1,
+        "locale": "en",
+        "scene": "dock",
+        "position": {
+          "x": 497,
+          "y": 492
+        },
+        "flags": [
+          "key",
+          "unpacked",
+          "residents:invited",
+          "talk:avery:sketch",
+          "talk:avery:company",
+          "talk:samira:humming",
+          "talk:samira:invite"
+        ],
+        "known": [
+          "avery",
+          "samira"
+        ],
+        "visited": [
+          "station",
+          "home",
+          "cafe",
+          "grocery",
+          "harbor",
+          "dock",
+          "workshop",
+          "gym",
+          "market",
+          "bazaar",
+          "secondhand",
+          "courtyard",
+          "coast",
+          "beach",
+          "path",
+          "lighthouse",
+          "hill",
+          "garden",
+          "camp",
+          "weather",
+          "workshop-annex-1",
+          "workshop-annex-2"
+        ],
+        "items": {
+          "key": 1
+        },
+        "energy": 100,
+        "cash": 25,
+        "standing": 0,
+        "relations": {
+          "avery": 1,
+          "samira": 1
+        },
+        "history": []
+      }
+    },
+    {
+      "name": "evening",
+      "width": 1440,
+      "height": 900,
+      "locale": "en",
+      "events": [
+        {
+          "id": "person-ruth",
+          "x": 410,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stand",
+          "direction": "down"
+        },
+        {
+          "id": "person-avery",
+          "x": 560,
+          "y": 450,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stand",
+          "direction": "left"
+        },
+        {
+          "id": "person-samira",
+          "x": 505,
+          "y": 450,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stand",
+          "direction": "down"
+        }
+      ],
+      "head": {
+        "townMinutes": 1080,
+        "id": "e2486be1-2506-4810-8b64-800b139b8cfb",
+        "version": 0,
+        "cursor": 0,
+        "mapVersion": 1,
+        "locale": "en",
+        "scene": "dock",
+        "position": {
+          "x": 497,
+          "y": 492
+        },
+        "flags": [
+          "key",
+          "unpacked",
+          "residents:invited",
+          "talk:avery:sketch",
+          "talk:avery:company",
+          "talk:samira:humming",
+          "talk:samira:invite"
+        ],
+        "known": [
+          "avery",
+          "samira"
+        ],
+        "visited": [
+          "station",
+          "home",
+          "cafe",
+          "grocery",
+          "harbor",
+          "dock",
+          "workshop",
+          "gym",
+          "market",
+          "bazaar",
+          "secondhand",
+          "courtyard",
+          "coast",
+          "beach",
+          "path",
+          "lighthouse",
+          "hill",
+          "garden",
+          "camp",
+          "weather",
+          "workshop-annex-1",
+          "workshop-annex-2"
+        ],
+        "items": {
+          "key": 1
+        },
+        "energy": 100,
+        "cash": 25,
+        "standing": 0,
+        "relations": {
+          "avery": 1,
+          "samira": 1
+        },
+        "history": []
+      }
+    }
+  ]
+}
