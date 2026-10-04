@@ -10,7 +10,8 @@ import {encounterPresets} from '../combat/presets';import {replayEncounter,type 
 export type Entry={id:string;kind:'talk'|'action';person?:string;question?:string;text:Words};
 import type {FieldNotes} from './fieldnotes-types';
 import {questProgress} from './progress';
-export type Save={awakeMinutes?:number;plots?:Record<string,Plot>;townMinutes?:number;fernStartedAt?:number;dynamicAssetRooms?:string[];roomAssetAttachments?:any[];dynamicAssetAvailable?:boolean;fieldNotes?:FieldNotes;id:string;version:number;cursor:number;mapVersion:1;locale:Locale;scene:string;position:Point;flags:string[];known:string[];visited:string[];items:Record<string,number>;energy:number;cash:number;standing:number;relations:Record<string,number>;history:Entry[];activeChallenge?:{id:string;kind:string;scene:string};};
+import type {NewsState} from './news-edition';
+export type Save=NewsState&{awakeMinutes?:number;plots?:Record<string,Plot>;townMinutes?:number;fernStartedAt?:number;dynamicAssetRooms?:string[];roomAssetAttachments?:any[];dynamicAssetAvailable?:boolean;fieldNotes?:FieldNotes;id:string;version:number;cursor:number;mapVersion:1;locale:Locale;scene:string;position:Point;flags:string[];known:string[];visited:string[];items:Record<string,number>;energy:number;cash:number;standing:number;relations:Record<string,number>;history:Entry[];activeChallenge?:{id:string;kind:string;scene:string};};
 export type Action={action_id:string;expected_version:number;scene:string;position:Point;target:string;action:string;payload?:unknown;actorPosition?:Point};
 export const has=(s:Save,id:string)=>s.flags.includes(id);
 export function initial(locale:Locale,id:string):Save{return {townMinutes:540,id,version:0,cursor:0,mapVersion:1,locale,scene:'station',position:{...rooms.station.spawn},flags:[],known:[],visited:['station'],items:{},energy:100,cash:25,standing:0,relations:{},history:[]}}

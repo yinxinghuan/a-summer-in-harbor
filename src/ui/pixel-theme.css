@@ -41,3 +41,5 @@ button,input,textarea,select{font-family:var(--font-ui);font-weight:400}strong,b
 .harbor-crop-bed[data-stage="ready"]{border-color:#f9d46c;background:repeating-linear-gradient(90deg,#799349 0 8px,#66512e 8px 14px)}
 .harbor-news-source,.harbor-garden-info{padding:12px;margin:12px 0;border:2px solid #9b9876;background:#efe8cc;color:#343d36;overflow-wrap:anywhere}
 .harbor-news-source a{display:inline-block;min-height:44px;padding:10px 0;color:#205d5b;text-decoration:underline}
+
+.harbor-news-source{scroll-margin-top:100px}.harbor-news-source .harbor-news-dates{font-size:12px;line-height:1.65;color:var(--text-muted)}

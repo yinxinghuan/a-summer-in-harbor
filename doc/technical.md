@@ -134,3 +134,11 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 - `src/story/town-news.ts`：单条已核实官方信息的固定本地样例，无运行时网络请求。新闻ID/version事实，与虚构Casey/丹妮分支分开。独立flags持久化参与、核对、婉拒和回顾。已核对便条在山坡花园出现，使用现有noticeboard素材。未来正式采集器、审核、TTL/更正传播仍未实现。
 - `server/runtime.ts`：兼容旧Save并验证可选新字段。所有作物/金钱/剧情动作继续走既有AsyncSessionAuthority版本与幂等事务。前端不独立写plots或cash。
 - `_qa/townlife-server.ts`/`townlife-vite.mjs`：仅127.0.0.1:5267/5266、合成玩家SQLite、本地回复、无模型与媒体调用。不是正式PG或账号测试。
+
+## 2026-10-04 本地RSS适配层（尚未生产启用）
+
+- `server/news/collector.mjs` 固定美联储货币政策RSS、HTTPS+TLS、公网IPv4绑定、禁止重定向、10秒/512KiB、无XML外部实体。原子文件写入+独占锁；canonical URL+标题/description hash去重；记录原发布日期、首次抓取、最近核对、72小时缓存/30天发布时效上限。失败不写新catalog。同URL变化追加revision并暂缓选用；不推断它一定是事实纠错，缺项也不当作来源撤回。
+- `scripts/collect-news-once.mjs --once` 只手动运行，写`.data/news/catalog.json`，不建立服务或排程。不读取页面图片，不调用模型。
+- `server/news/runtime.ts:withNewsRuntime` 只在本地QA显式接线，给新旅程选择一条当时有效来源；旧存档不静默替换。原authority事务保存edition和剧情选择。`projectNews`是只读状态投影，不改事件版本；正常游戏API的可选`newsProject`未在正式public入口启用。
+- 来源变化或找不到已固定版本：停止新的相关选择；单纯到期阻止开始新故事，已开始虚构故事可继续。已发生选择保留原来源snapshot。RSS未反映的正文更正不可检测，真实生产内容审核/更正传播仍需补足，不能宣称覆盖全部外部更正。
+- `_qa/news-server.ts`、`_qa/news-vite.mjs`只绑定5271/5270，`HARBOR_LOCAL_NEWS_CATALOG`明确选择本地catalog。合成测试路径与真实采集输出分开，87回归测试，320/390浏览器验收；没有模型、PG、ECS写入。

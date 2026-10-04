@@ -1,0 +1,25 @@
+{
+  "input": "SYNTHETIC QA fixture; actual collector blocked by non-public DNS. No claim of live-source success.",
+  "cases": [
+    {
+      "width": 320,
+      "sourceDatesVisible": true,
+      "persistentBudgetBranch": true,
+      "reloadRetainsOriginalEdition": true,
+      "changedSourcePausesOptions": true,
+      "visibleNotice": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "sourceDatesVisible": true,
+      "persistentBudgetBranch": true,
+      "reloadRetainsOriginalEdition": true,
+      "changedSourcePausesOptions": true,
+      "visibleNotice": true,
+      "errors": 0
+    }
+  ],
+  "errors": [],
+  "modelCalls": 0
+}

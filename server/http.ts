@@ -1,6 +1,6 @@
 import type {IncomingMessage,ServerResponse} from 'node:http';
 export const json=(res:ServerResponse,status:number,data:unknown)=>{res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(data))};
-export function createApiHandler({authority,usage,noteMedia,dynamicAssets}:any){return async(req:IncomingMessage,res:ServerResponse,who:string)=>{const path=new URL(req.url!,'http://localhost').pathname,method=req.method;
+export function createApiHandler({authority,usage,noteMedia,dynamicAssets,newsProject}:any){return async(req:IncomingMessage,res:ServerResponse,who:string)=>{const path=new URL(req.url!,'http://localhost').pathname,method=req.method;
   let body:any={};if(method==='POST'){let size=0,parts:Buffer[]=[];for await(const c of req){size+=c.length;if(size>(path.includes('/assets/')?16384:1500000))return json(res,413,{error:'REQUEST_TOO_LARGE'});parts.push(c)}body=JSON.parse(Buffer.concat(parts).toString()||'{}')}
   if(path==='/api/usage'&&method==='GET')return json(res,200,await usage.status(who));
   if(path==='/api/sessions'&&method==='GET')return json(res,200,await authority.directory(who));
@@ -12,7 +12,7 @@ export function createApiHandler({authority,usage,noteMedia,dynamicAssets}:any){
   const match=path.match(/^\/api\/sessions\/([a-f0-9-]{36})(?:\/(action|checkpoint|events))?$/);
   if(!match)return json(res,404,{error:'NOT_FOUND'});const [,id,operation]=match;
   const inContext=(fn:()=>Promise<any>)=>dynamicAssets?dynamicAssets.context(who,id,fn):fn();
-  const project=(head:any)=>dynamicAssets?dynamicAssets.project(who,head):head;
+  const project=async(head:any)=>{const h=dynamicAssets?await dynamicAssets.project(who,head):head;return newsProject?newsProject(h):h};
   if(dynamicAssets?.policy.entry(who,id)&&req.headers['x-harbor-dynamic-assets']!=='1')return json(res,409,{error:'CLIENT_REFRESH_REQUIRED'});
   if(!operation&&method==='GET')return json(res,200,await inContext(async()=>project(await authority.get(who,id))));
   if(operation==='action'&&method==='POST'){
