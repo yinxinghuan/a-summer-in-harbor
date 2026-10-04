@@ -9,7 +9,1539 @@
   },
   "planSha256": "ae6cbd1edfbf4f0cc610e684851b9d8315ee3e7e6c1e1b3bc122ff2cb798bad5",
   "frozenAt": "2026-10-04T05:53:57.216411+00:00",
-  "attempts": [],
-  "reviews": [],
-  "pilotRendererApproved": false
+  "attempts": [
+    {
+      "job": "avery-identity",
+      "requestId": "b47734cb-c0a1-4940-ab6e-0d7f6684e6da",
+      "start": "2026-10-04T07:57:21.809401+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-identity-1.json",
+      "bodySha256": "459cd8fe8a3e18d12240497caf997f408df732ccee844e7bb23cb5881c58f015",
+      "references": [],
+      "elapsedSeconds": 27.54,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T07:57:49.344974+00:00",
+      "responseFile": "responses/avery-identity-1.json",
+      "taskId": "mt_f8a23e43b547db92549a787fb93c47b4",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791100668312-tmbfrqc3i2.webp",
+      "file": "raw/avery-identity-1.webp",
+      "sha256": "4c77a2e5a2d59d048d38ea26a4d72a006dbf917861b9c2622c136da5740ba25e"
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "40263f9f-212b-425f-aa00-f42f55403c7a",
+      "start": "2026-10-04T07:58:49.076769+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-identity-2.json",
+      "bodySha256": "66754f60ecf3ea1b1c81e84e7946973b1e3bb8205b3c4c77406e37d3a6507cac",
+      "references": [],
+      "elapsedSeconds": 23.82,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T07:59:12.902825+00:00",
+      "responseFile": "responses/avery-identity-2.json",
+      "taskId": "mt_0fd9ee758ef52d03c1aab8a7ca2c5515",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791100751825-ujxjxb98kza.webp",
+      "file": "raw/avery-identity-2.webp",
+      "sha256": "b1c1904b84d2ddf7edbf4a5a3e02cc9c38afdd645dfebf22688e3a3ac269f0d8"
+    },
+    {
+      "job": "avery-down",
+      "requestId": "b109d841-68c6-440d-8e8b-d91b13aef312",
+      "start": "2026-10-04T07:59:43.744236+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-down-1.json",
+      "bodySha256": "70b77974973d68fea2508fe48385cbaf69ec3a7a528017a341799496cfa468ad",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791100751825-ujxjxb98kza.webp"
+      ],
+      "elapsedSeconds": 27.51,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:00:11.256152+00:00",
+      "responseFile": "responses/avery-down-1.json",
+      "taskId": "mt_13b57bc628011af81ab6cc462615506e",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791100810699-mmfb9ont78.webp",
+      "file": "raw/avery-down-1.webp",
+      "sha256": "f870555ac13388033588775461a98b622d672e7f5556d6476a1502289042cc36"
+    },
+    {
+      "job": "avery-side",
+      "requestId": "0c19165a-9def-4680-b801-b97cad877406",
+      "start": "2026-10-04T08:01:14.575311+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-side-1.json",
+      "bodySha256": "5fd1d67a5215eed4e5595fbeeb59da7862fd202aa8e3fd606a60d6011bf34d26",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791100751825-ujxjxb98kza.webp"
+      ],
+      "elapsedSeconds": 28.14,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:01:42.714020+00:00",
+      "responseFile": "responses/avery-side-1.json",
+      "taskId": "mt_ff6d67426fc3296904cf85d5d3473d1a",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791100902049-15gjgaitwos.webp",
+      "file": "raw/avery-side-1.webp",
+      "sha256": "8677bf3d64a169e96b8c5314e6b3f02eb5ecb5102bcb2b1ec2b15b95804c28c0"
+    },
+    {
+      "job": "avery-side",
+      "requestId": "029a9508-8be4-4b65-a318-5cf3d6de895b",
+      "start": "2026-10-04T08:02:43.243305+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-side-2.json",
+      "bodySha256": "0161807383dc2851c53b20e5523cb3602285e2aaa905e04411cc5cd597bffcf6",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791100751825-ujxjxb98kza.webp"
+      ],
+      "elapsedSeconds": 29.48,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:03:12.725494+00:00",
+      "responseFile": "responses/avery-side-2.json",
+      "taskId": "mt_f0eccfc7e9e604ca140425d9c5c5f2b7",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791100992080-xyxz0utfhx.webp",
+      "file": "raw/avery-side-2.webp",
+      "sha256": "4ab0c243552028f3d76d6bded668f88b15c9bd8a7249b68f246d42f1e3b8ddb1"
+    },
+    {
+      "job": "avery-up",
+      "requestId": "172978c7-21ca-4b6c-97cb-997a688bd5dd",
+      "start": "2026-10-04T08:04:00.123074+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-up-1.json",
+      "bodySha256": "f7522527a97a4cb45829c513a6b884246c77a2fcae739e1a224314cd49d7c203",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791100751825-ujxjxb98kza.webp"
+      ],
+      "elapsedSeconds": 28.85,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:04:28.973806+00:00",
+      "responseFile": "responses/avery-up-1.json",
+      "taskId": "mt_468529e04be897800a0e960d8c5cf6c0",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791101068464-gz258zo71o.webp",
+      "file": "raw/avery-up-1.webp",
+      "sha256": "eda851ed788cf248a491f4992859fa4d3871b1af91700055175f5c538957a32a"
+    },
+    {
+      "job": "avery-up",
+      "requestId": "07f36022-7f32-4bc2-9504-6a3ded3e9d85",
+      "start": "2026-10-04T08:05:22.487872+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-up-2.json",
+      "bodySha256": "187c278430cbd623783d8ba18c82e0be1e48661e153f2fe85b49fd94c3e3e136",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791100751825-ujxjxb98kza.webp"
+      ],
+      "elapsedSeconds": 27.78,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:05:50.272458+00:00",
+      "responseFile": "responses/avery-up-2.json",
+      "taskId": "mt_ba80a82fc14924e7a63c4157c6759217",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791101149645-3tmlmudff1i.webp",
+      "file": "raw/avery-up-2.webp",
+      "sha256": "d7d17fa9d49c8bd23c8a29352fa826e1c929ac2149b8ee5a0a5d06362c509b43"
+    },
+    {
+      "job": "avery-portrait",
+      "requestId": "ea9dd405-bca0-45b1-8759-3601920fe0ce",
+      "start": "2026-10-04T08:06:35.602173+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-portrait-1.json",
+      "bodySha256": "219ba06e6e158ee4852cf447a36e9b0d877f06f576e5fb38d47d4c1377d29aec",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791100751825-ujxjxb98kza.webp"
+      ],
+      "elapsedSeconds": 38.18,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:07:13.781728+00:00",
+      "responseFile": "responses/avery-portrait-1.json",
+      "taskId": "mt_06f772ac35321a054c648ba83df156d0",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791101233146-0p2he0wl9fc.webp",
+      "file": "raw/avery-portrait-1.webp",
+      "sha256": "e9b36bc0d38b6b85485d4a3ed2184841d0e6e03ca3c835ecb2e702e3bc6b0f46"
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "dd4491c4-a51a-4905-97f5-934505392bb1",
+      "start": "2026-10-04T08:29:26.242729+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-identity-3.json",
+      "bodySha256": "11f3cfdcf29b1164fc299e5d71d6d85137ed363f07cc7889a4e7b3cfbef2f8f8",
+      "references": [],
+      "elapsedSeconds": 27.64,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:29:53.887983+00:00",
+      "responseFile": "responses/avery-identity-3.json",
+      "taskId": "mt_060ccb07e75bfc7b514c11cd11a1f791",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791102592993-n8d63mwgfgh.webp",
+      "file": "raw/avery-identity-3.webp",
+      "sha256": "6b5f1ec56d7a4fdb9f321f42ee0abfcc7ecacedd3746b52ddfc6ae50f967ed41"
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "f512a08a-77de-4518-8451-0d4e05489995",
+      "start": "2026-10-04T08:31:51.978965+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-identity-4.json",
+      "bodySha256": "ac8008bd87b518681fa8f85b359a421f6c28dbc497893e17214f60a211b781fb",
+      "references": [],
+      "elapsedSeconds": 26.63,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:32:18.612722+00:00",
+      "responseFile": "responses/avery-identity-4.json",
+      "taskId": "mt_2b6bcf1f6dafb7ed7dbf28734fdfeefa",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791102737593-u812kcxv1m9.webp",
+      "file": "raw/avery-identity-4.webp",
+      "sha256": "a5a81aa516d926ef8cb45fc59dfdcf6c62748a70ca9743e94a9b36219e334341"
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "b85dcec0-7ca3-475d-a407-101cebdbcbae",
+      "start": "2026-10-04T08:33:35.535461+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-identity-5.json",
+      "bodySha256": "a820f86c1199f2a12f403fbc4208539fe773840fdd81fe47863a4a1bbe3b5432",
+      "references": [],
+      "elapsedSeconds": 25.47,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:34:01.004864+00:00",
+      "responseFile": "responses/avery-identity-5.json",
+      "taskId": "mt_654fa66ee42389dd9a4ffcf3023f6a81",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791102840078-xc3k3oqa91a.webp",
+      "file": "raw/avery-identity-5.webp",
+      "sha256": "6fcb7862475349154e9b87f8b4cd27bde42b12dc4606826cde56984b2f7c36a0"
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "302868cb-d849-4b61-9b27-1d2866947a5e",
+      "start": "2026-10-04T08:35:43.148464+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-identity-6.json",
+      "bodySha256": "de68754c2eab0b0050b6b23a895fb9f36c0f8d45172b4f88776c372ed386d1c5",
+      "references": [],
+      "elapsedSeconds": 24.94,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:36:08.088455+00:00",
+      "responseFile": "responses/avery-identity-6.json",
+      "taskId": "mt_00095ff987f80168c439b1cbf5830e72",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791102967073-nz099bgn9j.webp",
+      "file": "raw/avery-identity-6.webp",
+      "sha256": "fab4d473b3dad90e888595b8be5974487dc0db60e07a69b4495a92c4e792bd55"
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "e963b537-72d3-48be-a5b4-a997cadcdae4",
+      "start": "2026-10-04T08:37:08.637547+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-identity-7.json",
+      "bodySha256": "cacd890b35d375e047837a578952765b2209b281efd82cf53ab775f1479b88c9",
+      "references": [],
+      "elapsedSeconds": 28.69,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:37:37.330854+00:00",
+      "responseFile": "responses/avery-identity-7.json",
+      "taskId": "mt_691d6aee34a4a256b06332f1f2694282",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791103056471-wfhdhoafaj.webp",
+      "file": "raw/avery-identity-7.webp",
+      "sha256": "8e23575287a2508a38c34ae8afcd49198ee01b8fb66c73bd924b84d45ea8f024"
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "2c1dc50c-f246-4fa4-912b-81ba6f028428",
+      "start": "2026-10-04T08:38:38.102997+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-identity-8.json",
+      "bodySha256": "a29911cade58d4750f45100c3cf13f548a76a357b8558c970a1324b6b3eb6fef",
+      "references": [],
+      "elapsedSeconds": 29.62,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:39:07.726717+00:00",
+      "responseFile": "responses/avery-identity-8.json",
+      "taskId": "mt_2d55acfa2d9501deb5eb341e8605cf21",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791103146855-4ekwb4sga54.webp",
+      "file": "raw/avery-identity-8.webp",
+      "sha256": "1398cb05b9d7db38bae2781c39a161aaddc3cde655f21bee1a7bfff7fb81667e"
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "6b99b36d-7d88-4336-a8ae-ae8183789766",
+      "start": "2026-10-04T08:40:10.287899+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-identity-9.json",
+      "bodySha256": "b91d716be23866c2f959aa8c7939e6129eec631a9326af08d14d463b57b57908",
+      "references": [],
+      "elapsedSeconds": 30.61,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:40:40.903960+00:00",
+      "responseFile": "responses/avery-identity-9.json",
+      "taskId": "mt_7cddce362e709d313b68ce8ceeac9776",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791103239939-b6qs6qdpnma.webp",
+      "file": "raw/avery-identity-9.webp",
+      "sha256": "06629129420592875b1708572f059f888e9e3fc5f013de79198f303380cc09c9"
+    },
+    {
+      "job": "avery-down",
+      "requestId": "43e8a188-7c4d-4af7-ba82-b0f7fcb30451",
+      "start": "2026-10-04T08:43:12.235743+00:00",
+      "status": "recovered",
+      "bodyFile": "requests/avery-down-2.json",
+      "bodySha256": "a04e9253eb1c0ec4b88ca28f8f05a130dcb66d670e1f67a991c978ffb60238f2",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791103239939-b6qs6qdpnma.webp"
+      ],
+      "elapsedSeconds": 300.03,
+      "httpStatus": "000",
+      "exitCode": 28,
+      "end": "2026-10-04T08:48:12.272772+00:00",
+      "responseFile": "responses/avery-down-2.json",
+      "taskId": "mt_8e5bd5f783666d9a12063f298175cb29",
+      "error": null,
+      "statusHistory": [
+        {
+          "time": "2026-10-04T08:49:09.832781+00:00",
+          "status": "unknown",
+          "reason": "same-ID recovery discovered authoritative task"
+        }
+      ],
+      "recoveredByPost": 17
+    },
+    {
+      "job": "avery-down",
+      "requestId": "43e8a188-7c4d-4af7-ba82-b0f7fcb30451",
+      "start": "2026-10-04T08:49:08.182420+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-down-2.json",
+      "bodySha256": "a04e9253eb1c0ec4b88ca28f8f05a130dcb66d670e1f67a991c978ffb60238f2",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791103239939-b6qs6qdpnma.webp"
+      ],
+      "recoveryOfAttempt": 16,
+      "elapsedSeconds": 1.65,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:49:09.832311+00:00",
+      "responseFile": "responses/avery-down-recovery.json",
+      "taskId": "mt_8e5bd5f783666d9a12063f298175cb29",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791103420145-xrc91q6u2e.webp",
+      "file": "raw/avery-down-recovered.webp",
+      "sha256": "b4d32853e3437e70cfb771a78d774c20b5a95ec54585a5123ac6e858db3fcfcf"
+    },
+    {
+      "job": "avery-side",
+      "requestId": "a2c79282-3ea3-4134-9b52-eec2d950337a",
+      "start": "2026-10-04T08:53:50.120379+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-side-3.json",
+      "bodySha256": "54a43b4d7bdaf3ec04ed467bae64304480ab78ee87035d3f80fda43d86ed53b6",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791103239939-b6qs6qdpnma.webp"
+      ],
+      "elapsedSeconds": 28.5,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:54:18.622187+00:00",
+      "responseFile": "responses/avery-side-3.json",
+      "taskId": "mt_f29ac22cefcc7c11069d88249f3d88c7",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104057690-31ga80enc4w.webp",
+      "file": "raw/avery-side-3.webp",
+      "sha256": "2daceae6e514a3cc4d58380bfa17787a35ced2bab59e57dcef2cd617ce9e6803"
+    },
+    {
+      "job": "avery-up",
+      "requestId": "484956b0-d66d-484a-8625-502142b7afea",
+      "start": "2026-10-04T08:54:35.182050+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-up-3.json",
+      "bodySha256": "fb8227cdc1f493fb89a880b2731944656cdf587adf3b278ecad929eda254d810",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791103239939-b6qs6qdpnma.webp"
+      ],
+      "elapsedSeconds": 28.81,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:55:03.998145+00:00",
+      "responseFile": "responses/avery-up-3.json",
+      "taskId": "mt_3de42b2d9172508ab77a431ee36c0fbf",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104103043-o8uluxy61km.webp",
+      "file": "raw/avery-up-3.webp",
+      "sha256": "e3a70dda4a0e30f2147236beaaeb96065f879fb7c948a797aa2ff8a41278d379"
+    },
+    {
+      "job": "avery-side",
+      "requestId": "203ab9c2-c6c3-42c6-90ee-a750539f9b95",
+      "start": "2026-10-04T08:55:36.745301+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-side-4.json",
+      "bodySha256": "7e1893e38e7a3c15e6497be4eefcfe4a3a3e3b4c72181a8ab739d1a4b123db1e",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791103239939-b6qs6qdpnma.webp"
+      ],
+      "elapsedSeconds": 30.36,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:56:07.094797+00:00",
+      "responseFile": "responses/avery-side-4.json",
+      "taskId": "mt_3fd4408d0352f206bd9d49d25eef6dd6",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104166221-10evrl4gtsyq.webp",
+      "file": "raw/avery-side-4.webp",
+      "sha256": "3554c8e0e0716f1beba701351f955726ec1a100c1bb8921637f81254361af456"
+    },
+    {
+      "job": "avery-portrait",
+      "requestId": "22d209a9-6801-4a6b-b69c-34c4890ff9d4",
+      "start": "2026-10-04T08:56:30.613424+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/avery-portrait-2.json",
+      "bodySha256": "655dcddad856bac304afe62447af2214e0f7f18f4e23a0b261fb78445e66231d",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791103239939-b6qs6qdpnma.webp"
+      ],
+      "elapsedSeconds": 37.13,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T08:57:07.744441+00:00",
+      "responseFile": "responses/avery-portrait-2.json",
+      "taskId": "mt_68c8f5903b8a05fdb06bc02ff491d598",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104226862-h31bjn0veh.webp",
+      "file": "raw/avery-portrait-2.webp",
+      "sha256": "4e63efd88cbbbd6e115a6b24ed80f6066227bce6d10eb2ae17abbe0228fb12c2"
+    },
+    {
+      "job": "samira-identity",
+      "requestId": "8e3d6894-2b80-450d-b71c-513b41f7cc73",
+      "start": "2026-10-04T09:01:15.542550+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/samira-identity-1.json",
+      "bodySha256": "0af01ffc02d07dbd9c9e36af38b03b75e589699e89b0f1aaadec6246549d1df9",
+      "references": [],
+      "elapsedSeconds": 32.9,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:01:48.449495+00:00",
+      "responseFile": "responses/samira-identity-1.json",
+      "taskId": "mt_22b4d0c397c839df40fc296d0af5aa07",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104507341-n654i086g1.webp",
+      "file": "raw/samira-identity-1.webp",
+      "sha256": "eef3f65c86955a4699a2a7aa64f089342572beecea0972124a696785ed414068"
+    },
+    {
+      "job": "samira-down",
+      "requestId": "64a43c70-e570-4721-becd-136469c26934",
+      "start": "2026-10-04T09:02:46.057230+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/samira-down-1.json",
+      "bodySha256": "0a983683f7e39d6e87148d7c282f3a065cc29df99bb81b315e1bae6f368f8f5e",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104507341-n654i086g1.webp"
+      ],
+      "elapsedSeconds": 29.54,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:03:15.599386+00:00",
+      "responseFile": "responses/samira-down-1.json",
+      "taskId": "mt_08080ee8fbd0feee6ab63ee7b25a67a9",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104594739-zp0f70ibmlr.webp",
+      "file": "raw/samira-down-1.webp",
+      "sha256": "15e55729bbf8866a80babd6a011e1e01aa2956208e3f97e9716dfbccc9658a02"
+    },
+    {
+      "job": "samira-side",
+      "requestId": "b91a986e-c58a-4810-9cb0-bcd6d531d368",
+      "start": "2026-10-04T09:03:29.346850+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/samira-side-1.json",
+      "bodySha256": "160ebbce121a86bc91dbcb728e8e8c8e07e63bd4e1f0ba82c2c2836104453ddc",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104507341-n654i086g1.webp"
+      ],
+      "elapsedSeconds": 30.63,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:03:59.981302+00:00",
+      "responseFile": "responses/samira-side-1.json",
+      "taskId": "mt_4bad63ef85c60a51ea96505280c91766",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104639149-zhroltrgnin.webp",
+      "file": "raw/samira-side-1.webp",
+      "sha256": "a54b4c05d2444fd6bcb31e215280cb6757788adbb1c087d59d22e08b18a62a8c"
+    },
+    {
+      "job": "samira-down",
+      "requestId": "ee8b9cec-dd20-42e5-a97b-2dc1a70689f6",
+      "start": "2026-10-04T09:04:19.115094+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/samira-down-2.json",
+      "bodySha256": "58bd6c7bba8695d4f8c86e4c80309ed7b0a8b38fdb1e66e764e45ccf92b0f518",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104507341-n654i086g1.webp"
+      ],
+      "elapsedSeconds": 30.9,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:04:50.019273+00:00",
+      "responseFile": "responses/samira-down-2.json",
+      "taskId": "mt_0ac9553d8c460d4fb9149f13e0c04928",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104688951-yj8i0q18k8i.webp",
+      "file": "raw/samira-down-2.webp",
+      "sha256": "af6b468a53576ed31306f51365439fe18325264b0f69a5ba2d574b5d808197e7"
+    },
+    {
+      "job": "samira-side",
+      "requestId": "56212dd4-f04b-4b7a-8715-7439f712fa9f",
+      "start": "2026-10-04T09:05:12.495257+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/samira-side-2.json",
+      "bodySha256": "264851489e067e6a0f76275155e465768f69444408067557a23a239b352a024a",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104507341-n654i086g1.webp"
+      ],
+      "elapsedSeconds": 31.71,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:05:44.210223+00:00",
+      "responseFile": "responses/samira-side-2.json",
+      "taskId": "mt_a17d43225557905b6090ee4054d55aa9",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104743259-ftiitxi8ug.webp",
+      "file": "raw/samira-side-2.webp",
+      "sha256": "c177bf794904388ffbac245ac83ae482327bbfa45b12b0223a60f7ceb85a9199"
+    },
+    {
+      "job": "samira-up",
+      "requestId": "e89043a1-b6dd-4ba7-b13b-85e14f4d9d40",
+      "start": "2026-10-04T09:06:04.512728+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/samira-up-1.json",
+      "bodySha256": "5bd7ab6707d6a03db0022d94e897d574e3ea3884ada65df97423ef5240523fa8",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104507341-n654i086g1.webp"
+      ],
+      "elapsedSeconds": 28.09,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:06:32.601063+00:00",
+      "responseFile": "responses/samira-up-1.json",
+      "taskId": "mt_368244551d894826f7964c06a451afd9",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104791666-q75zfp34sx.webp",
+      "file": "raw/samira-up-1.webp",
+      "sha256": "701e033d7cb8f58389b82ddeca320f001b0b3c554a271bd1d64dda55c960e4fc"
+    },
+    {
+      "job": "samira-portrait",
+      "requestId": "fb5a49ca-1a80-4e44-99ba-93490f1b4d78",
+      "start": "2026-10-04T09:07:06.284210+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/samira-portrait-1.json",
+      "bodySha256": "e5ef46ee8363e8687f85fdd4eda12a1589f27c29c13d8ebdf79960ec445fbf95",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104507341-n654i086g1.webp"
+      ],
+      "elapsedSeconds": 38.03,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:07:44.313464+00:00",
+      "responseFile": "responses/samira-portrait-1.json",
+      "taskId": "mt_2cdc658f01769e1e293e3dcfcdd40c07",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104863312-uaefd0wl1.webp",
+      "file": "raw/samira-portrait-1.webp",
+      "sha256": "1d3064fe15549065a15af6a67985caed8db4fa144a6b9c1c6df87e64f5fa6623"
+    },
+    {
+      "job": "owen-identity",
+      "requestId": "87b67426-b86f-437c-a29d-3c9429a42b22",
+      "start": "2026-10-04T09:08:04.704104+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/owen-identity-1.json",
+      "bodySha256": "f494360f5b601c407988fa19c496c58c01ad60d4b1b26ea6e813cf8e5fc00f29",
+      "references": [],
+      "elapsedSeconds": 32.15,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:08:36.853609+00:00",
+      "responseFile": "responses/owen-identity-1.json",
+      "taskId": "mt_25866b043061e549af7eb734706f5b37",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791104915937-dc4bt1237i8.webp",
+      "file": "raw/owen-identity-1.webp",
+      "sha256": "e48a45bdc8444adedf503bb82d78576aac01bb17c6e21bf4b67e13191405a4ac"
+    },
+    {
+      "job": "owen-down",
+      "requestId": "2bf44160-5ed0-4fa0-aa85-e58e50237c69",
+      "start": "2026-10-04T09:09:55.287418+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/owen-down-1.json",
+      "bodySha256": "8aa8f71ed742991e68325259cc5a4027ebe31947e79bd752083f85f495692c4f",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104915937-dc4bt1237i8.webp"
+      ],
+      "elapsedSeconds": 28.92,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:10:24.206323+00:00",
+      "responseFile": "responses/owen-down-1.json",
+      "taskId": "mt_19bf5cab9a89359ca68e0826a61d2b30",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105023209-u07mr3q4cg8.webp",
+      "file": "raw/owen-down-1.webp",
+      "sha256": "2e4c9568024526084faf7479cbcbc5770b7e53e0628d1c9b240530d303723e82"
+    },
+    {
+      "job": "samira-side",
+      "requestId": "10f73070-f468-4b8d-af0e-cb8e89019585",
+      "start": "2026-10-04T09:11:20.990293+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/samira-side-3.json",
+      "bodySha256": "0054707374fae734ec92b4f536dcc8c86eeecfe7edee79de4345482cee59f607",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104507341-n654i086g1.webp"
+      ],
+      "elapsedSeconds": 31.6,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:11:52.587561+00:00",
+      "responseFile": "responses/samira-side-3.json",
+      "taskId": "mt_04d33a4fcb9863e27cfb1b82f0e00f0d",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105111613-aea851flfe.webp",
+      "file": "raw/samira-side-3.webp",
+      "sha256": "b8a3753ad6746a883e2efb21ad05940c99fe47e6c924551bcc8d5495324831eb"
+    },
+    {
+      "job": "owen-down",
+      "requestId": "625f62b9-9d0d-4c84-9207-dbde825eb02a",
+      "start": "2026-10-04T09:14:04.457688+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/owen-down-2.json",
+      "bodySha256": "e1f0d984a9bfdd823b00b50fa806b0f9e5abdb7958647dc6616d8762970afaae",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104915937-dc4bt1237i8.webp"
+      ],
+      "elapsedSeconds": 29.46,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:14:33.923221+00:00",
+      "responseFile": "responses/owen-down-2.json",
+      "taskId": "mt_a94e904240a339932738aef4bf1f572e",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105272960-2azboilixd7.webp",
+      "file": "raw/owen-down-2.webp",
+      "sha256": "9da4a30f699ab4e1e1aa2e23ea1f9b74729046fcff091abb590d439138d217d0"
+    },
+    {
+      "job": "owen-side",
+      "requestId": "adde1cfb-a471-44bc-813c-42e33b4599ef",
+      "start": "2026-10-04T09:15:02.285700+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/owen-side-1.json",
+      "bodySha256": "81aa280d10c5c63931d2612a734e73b498fa56dd7efeb972f3ad4571c4cd6d08",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104915937-dc4bt1237i8.webp"
+      ],
+      "elapsedSeconds": 29.59,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:15:31.874913+00:00",
+      "responseFile": "responses/owen-side-1.json",
+      "taskId": "mt_5c2a8cb67ea820bc4b538970e2f7d5a7",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105330998-m2mgdxt23wb.webp",
+      "file": "raw/owen-side-1.webp",
+      "sha256": "74fe8a79ff0131679a37448c99dc5635b18c79578b1925b0d509cbab79c5cd3a"
+    },
+    {
+      "job": "owen-up",
+      "requestId": "1b6bd1d1-1d64-4f29-8820-dad890961d6e",
+      "start": "2026-10-04T09:16:28.322679+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/owen-up-1.json",
+      "bodySha256": "81fb56ca4d030ae6b0df52af0b639950ef1f490be0f6c6828319eaa19a97e896",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104915937-dc4bt1237i8.webp"
+      ],
+      "elapsedSeconds": 26.96,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:16:55.284274+00:00",
+      "responseFile": "responses/owen-up-1.json",
+      "taskId": "mt_04f153e20200d856a209a555f4e99acc",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105414370-eqvodbdpurm.webp",
+      "file": "raw/owen-up-1.webp",
+      "sha256": "d7d0b9fefa79603edf08d2038eade8c7682670abab027674762f00a278132426"
+    },
+    {
+      "job": "owen-portrait",
+      "requestId": "34959783-fea2-45e4-86cd-8ea6adc93efc",
+      "start": "2026-10-04T09:17:26.879795+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/owen-portrait-1.json",
+      "bodySha256": "28b55f4f21a4475ad53e4af164e96a495a8ead0fd5b8ca533365bfba67464c87",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791104915937-dc4bt1237i8.webp"
+      ],
+      "elapsedSeconds": 37.12,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:18:04.005864+00:00",
+      "responseFile": "responses/owen-portrait-1.json",
+      "taskId": "mt_cc3e3c3a6bbf7f6770075f6f6cb3e8bc",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105483072-3njz81xarz9.webp",
+      "file": "raw/owen-portrait-1.webp",
+      "sha256": "98695bcd7bdfd2caa2038b72850ee5d9ac79cec59137d3a6ea36a435073f503c"
+    },
+    {
+      "job": "dani-identity",
+      "requestId": "cfa88d47-1166-4c3a-a4bd-bbc9e138d473",
+      "start": "2026-10-04T09:18:37.323077+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/dani-identity-1.json",
+      "bodySha256": "884471947debe62327cf2332f80a814b7842055d9dc472620a8f51f48cb8a8a1",
+      "references": [],
+      "elapsedSeconds": 32.06,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:19:09.388721+00:00",
+      "responseFile": "responses/dani-identity-1.json",
+      "taskId": "mt_1ad4075d3941d0549ac43afe77bf0d6f",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105548264-nft6hmo36ap.webp",
+      "file": "raw/dani-identity-1.webp",
+      "sha256": "57e95660fac06f0dda97a6384cafbfafce39392bfc312d4ecded5d8a3ef8a699"
+    },
+    {
+      "job": "dani-down",
+      "requestId": "d3c53708-0966-4b8a-aacc-593c5d7d2c24",
+      "start": "2026-10-04T09:20:30.154906+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/dani-down-1.json",
+      "bodySha256": "ef79aec6ba6cbcb51a26eb467adc4250e8586443ac71549726cd10ac19e9874d",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791105548264-nft6hmo36ap.webp"
+      ],
+      "elapsedSeconds": 29.4,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:20:59.556649+00:00",
+      "responseFile": "responses/dani-down-1.json",
+      "taskId": "mt_3e2aace8bead758149b1f7e55e6d717b",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105658622-cucxbdz04ft.webp",
+      "file": "raw/dani-down-1.webp",
+      "sha256": "7175509ff397e8387f7b9ac7ae2b229cffb961951e90a13df232aff32eff6d6d"
+    },
+    {
+      "job": "dani-side",
+      "requestId": "97a12f68-9bda-4a61-9bd9-a01108a5f8c9",
+      "start": "2026-10-04T09:21:41.601554+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/dani-side-1.json",
+      "bodySha256": "51c4f1d6f5a44383de752cb14a99ede5a629f7ea9b7916c54c1a7d90bb7e86cb",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791105548264-nft6hmo36ap.webp"
+      ],
+      "elapsedSeconds": 31.16,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:22:12.762864+00:00",
+      "responseFile": "responses/dani-side-1.json",
+      "taskId": "mt_ebcf17e8f8909e8e2202e54e34511085",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105731737-ne6a7ygae0l.webp",
+      "file": "raw/dani-side-1.webp",
+      "sha256": "c31fcba643ae929d2b04c4badbf3e9fc3487f5a9cda970c8140f6b640a0ee92e"
+    },
+    {
+      "job": "dani-up",
+      "requestId": "ed203b5c-a706-4c2c-9202-dd71da399b7d",
+      "start": "2026-10-04T09:23:18.018920+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/dani-up-1.json",
+      "bodySha256": "375f3a286f7c1d9447c0d6f808ddf8f77fd19a404978baf08fb87d54ecc317f2",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791105548264-nft6hmo36ap.webp"
+      ],
+      "elapsedSeconds": 30.08,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:23:48.101427+00:00",
+      "responseFile": "responses/dani-up-1.json",
+      "taskId": "mt_437cb97af9babba0a02ebd23237454c8",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105826641-9np8cc11hiu.webp",
+      "file": "raw/dani-up-1.webp",
+      "sha256": "12fca77bdc09f59fee0867f94bfa1bd8c895c0e6b2de250e98e5a1b1d9e9a8a7"
+    },
+    {
+      "job": "dani-side",
+      "requestId": "d8d78434-3bea-4a62-b24b-9d0191aa0dc0",
+      "start": "2026-10-04T09:24:24.578929+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/dani-side-2.json",
+      "bodySha256": "e878c661ed83689495a304128a35a6678b266019a4e8495af826a9f41975ecec",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791105548264-nft6hmo36ap.webp"
+      ],
+      "elapsedSeconds": 30.62,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:24:55.203790+00:00",
+      "responseFile": "responses/dani-side-2.json",
+      "taskId": "mt_4371e81c0443a8e383aacb731c9648d0",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791105894070-largmcz1n5.webp",
+      "file": "raw/dani-side-2.webp",
+      "sha256": "b4c7cd2c3a1b33195987780371dd59941a8d64878c1ffdb8b17a3c011720cd13"
+    },
+    {
+      "job": "dani-portrait",
+      "requestId": "d782eace-66b9-4391-ac37-b6ebcb80efd5",
+      "start": "2026-10-04T09:26:33.248445+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/dani-portrait-1.json",
+      "bodySha256": "f8e51351bf0d3e0846634d0c329cd2d95bbaae4ae3bfc1e342577f401883149c",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791105548264-nft6hmo36ap.webp"
+      ],
+      "elapsedSeconds": 36.31,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:27:09.565454+00:00",
+      "responseFile": "responses/dani-portrait-1.json",
+      "taskId": "mt_531f7852ba2855e707b0d93f81aafde5",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791106028584-g8y2xtbd0t9.webp",
+      "file": "raw/dani-portrait-1.webp",
+      "sha256": "f1ad3b655419c2385d9880e1f1177ca6a02ef1f45756913df3bae67555c6b899"
+    },
+    {
+      "job": "fern-stages",
+      "requestId": "c0b5550c-cf4e-41d4-bddd-7da79c80e95d",
+      "start": "2026-10-04T09:27:59.068119+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/fern-stages-1.json",
+      "bodySha256": "c229070f83dace373f416310d5a78c104f1e4069e7cee629fcc2e89a18e829f1",
+      "references": [],
+      "elapsedSeconds": 26.8,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T09:28:25.870757+00:00",
+      "responseFile": "responses/fern-stages-1.json",
+      "taskId": "mt_d86d9f4ba3e86f12b7030dbc9342f8e4",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791106104956-xz58c3x5x3.webp",
+      "file": "raw/fern-stages-1.webp",
+      "sha256": "3e1ba588d2d2c0c1002dd5a1925ad16ece4c95dd514cccbdf746f46c87538bc2"
+    },
+    {
+      "job": "dani-side-contact-a",
+      "requestId": "a5e91231-db01-4056-89b8-60fc5a5e9ee9",
+      "start": "2026-10-04T10:43:37.902570+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/dani-side-contact-a-1.json",
+      "bodySha256": "a7b61534024ff75593888273881dd144b914c159e4abb65740c1b870d846c6ad",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791105548264-nft6hmo36ap.webp"
+      ],
+      "elapsedSeconds": 34.46,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T10:44:12.361952+00:00",
+      "responseFile": "responses/dani-side-contact-a-1.json",
+      "taskId": "mt_2e7b73081622d151945ccf2e1236dad2",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791110651081-neqjq32rnq8.webp",
+      "file": "raw/dani-side-contact-a-1.webp",
+      "sha256": "2fc831570454d776ef0f1c8c73c3cc1f0de353af3b262f4937d171d52a96aa4d"
+    },
+    {
+      "job": "dani-side-contact-b",
+      "requestId": "8c5ab2c1-9994-4a4b-ad65-3c003fa62b3b",
+      "start": "2026-10-04T10:44:57.388940+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/dani-side-contact-b-1.json",
+      "bodySha256": "3c1359f038aa020d0ede8f7990b711c1c4fcc8a883acd70c08f729140b455eaf",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791110651081-neqjq32rnq8.webp"
+      ],
+      "elapsedSeconds": 32.2,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T10:45:29.587924+00:00",
+      "responseFile": "responses/dani-side-contact-b-1.json",
+      "taskId": "mt_147be5dc50b2361067f495050da589d8",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791110728395-5cjp03m29ss.webp",
+      "file": "raw/dani-side-contact-b-1.webp",
+      "sha256": "c0b4267f7701e7604b5344c5f61649c0662003d243a21910846c980c457d6238"
+    },
+    {
+      "job": "dani-side-contact-b",
+      "requestId": "301f25b4-0536-4e72-b5ff-3f31543cf537",
+      "start": "2026-10-04T10:46:37.427242+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/dani-side-contact-b-2.json",
+      "bodySha256": "6c6edb63bea450438e10a82091b5773daeaf16f8c521ec7b2fa58dd5dc349689",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791110651081-neqjq32rnq8.webp"
+      ],
+      "elapsedSeconds": 33.83,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T10:47:11.092870+00:00",
+      "responseFile": "responses/dani-side-contact-b-2.json",
+      "taskId": "mt_07e75600c8616ab0278b1974f71593bc",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791110830136-0peu3mcp4z1.webp",
+      "file": "raw/dani-side-contact-b-2.webp",
+      "sha256": "841eb17a1caff78456cfd6efd25324c70cf9f7317e67078176f40b959b800405"
+    },
+    {
+      "job": "dani-side-stand",
+      "requestId": "589bf075-f91c-4c8a-b316-21e519861850",
+      "start": "2026-10-04T10:50:57.594272+00:00",
+      "status": "succeeded",
+      "bodyFile": "requests/dani-side-stand-1.json",
+      "bodySha256": "5c30183eeb971406d799e8f57f11459de0a1b7711ed3ce25a5fdfccc0fba937c",
+      "references": [
+        "https://images.aiwaves.tech/uploads/1791110651081-neqjq32rnq8.webp"
+      ],
+      "elapsedSeconds": 31.72,
+      "httpStatus": "200",
+      "exitCode": 0,
+      "end": "2026-10-04T10:51:29.317253+00:00",
+      "responseFile": "responses/dani-side-stand-1.json",
+      "taskId": "mt_ed636d05520c8114c903911d952212e1",
+      "error": null,
+      "url": "https://images.aiwaves.tech/uploads/1791111088475-9179rggfsxm.webp",
+      "file": "raw/dani-side-stand-1.webp",
+      "sha256": "0b85dbf2585254492bf756fa4556131e31a0f54c92f6529c3bdc7c5eb95e3850"
+    }
+  ],
+  "reviews": [
+    {
+      "job": "avery-identity",
+      "requestId": "b47734cb-c0a1-4940-ab6e-0d7f6684e6da",
+      "time": "2026-10-04T07:58:43.864680+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Eye-level character illustration: long body, front-facing face without enough downward foreshortening; inconsistent with the elevated orthographic scene camera. Full character and identity colors are usable but do not override camera rejection.",
+      "renderer": "not-admitted"
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "40263f9f-212b-425f-aa00-f42f55403c7a",
+      "time": "2026-10-04T07:59:39.709026+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Second source accepted for derivation: elevated camera with visible crown/shoulders/shoe tops, compressed adult sprite silhouette, complete paired hands/shoes, symmetric plain clothing and clear key background. Same-scene scale and directional-family acceptance remain pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "avery-down",
+      "requestId": "b109d841-68c6-440d-8e8b-d91b13aef312",
+      "time": "2026-10-04T08:01:09.881088+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Three complete matching front/down figures; camera and costume match accepted root; two distinct contacts exchange lower shoe and opposite hand, middle stand neutral. Source reverses requested A/B screen-side labels, but the 0/stand/2 cycle is complementary; labels recorded as observed, no repaint. Renderer/alpha review pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "avery-side",
+      "requestId": "0c19165a-9def-4680-b801-b97cad877406",
+      "time": "2026-10-04T08:02:38.037634+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Left and right contact panels both show the near arm trailing screen-right and near leg leading screen-left. Slight spacing changes do not exchange near/far limbs: duplicate gait phase, would cause marching/sliding. Reject before assembly.",
+      "renderer": "not-admitted"
+    },
+    {
+      "job": "avery-side",
+      "requestId": "029a9508-8be4-4b65-a318-5cf3d6de895b",
+      "time": "2026-10-04T08:03:55.900228+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Corrected second strip visibly reverses near arm front/behind torso and near thigh overlap: left contact near leg leads left; right contact near leg trails right in front of far advancing thigh. Complete matching identity and shoes. Near forward elbow is more bent in B, acceptable candidate pending native-size continuous renderer inspection.",
+      "renderer": "pending"
+    },
+    {
+      "job": "avery-up",
+      "requestId": "172978c7-21ca-4b6c-97cb-997a688bd5dd",
+      "time": "2026-10-04T08:05:18.755650+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Both back-view contacts put screen-left shoe lower and screen-right shoe higher; duplicate support phase. Reject even though identity and camera match.",
+      "renderer": "not-admitted"
+    },
+    {
+      "job": "avery-up",
+      "requestId": "07f36022-7f32-4bc2-9504-6a3ded3e9d85",
+      "time": "2026-10-04T08:06:31.866165+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Second strip corrects duplicate phase: A screen-left foot higher/right foot lower, B reverses them; opposing arms exchange, rear head and back seams consistent, no face leakage. Both shoes complete; candidate accepted for alpha/renderer review.",
+      "renderer": "pending"
+    },
+    {
+      "job": "avery-portrait",
+      "requestId": "ea9dd405-bca0-45b1-8759-3601920fe0ce",
+      "time": "2026-10-04T08:08:33.735038+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Portrait preserves auburn wave silhouette, complexion, teal jacket and mustard collar, relaxed expression; close-up camera allowed. Candidate UI thumbnail/enlargement review pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "avery-family",
+      "time": "2026-10-04T08:14:01.423731+00:00",
+      "reviewer": "AI",
+      "decision": "scene-rejected",
+      "reason": "Same-scene 390 front comparison and native-size contact sheet show materially smaller head/longer body silhouette and coarser lower-detail pixel treatment than current hero. Equal visible height is not sufficient to match the established character family. Individual source acceptances only authorized derivation, not final game use.",
+      "evidence": [
+        "qa/avery/390-front-comparison-platform-layout.png",
+        "prepared/avery/hero-comparison.png"
+      ],
+      "mechanics": "actual RPGJS movement eight direction/viewport cases, two NPC/portrait cases passed",
+      "familyConsistency": "directional identity recognizable; final shared-game style rejected",
+      "renderer": "tested, visual admission failed"
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "dd4491c4-a51a-4905-97f5-934505392bb1",
+      "time": "2026-10-04T08:31:47.622399+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Improved but root-only actual390 scene still shows head narrower than shoulders, longer torso/legs and less elevated face than established hero. Rejected before any new directions/portrait. Numeric wording alone did not overcome adult illustration prior.",
+      "evidence": [
+        "recalibration/root-dd4491c4-a51a-4905-97f5-934505392bb1/390-platform-layout.png",
+        "recalibration/root-dd4491c4-a51a-4905-97f5-934505392bb1/hero-comparison-3x.png"
+      ]
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "f512a08a-77de-4518-8451-0d4e05489995",
+      "time": "2026-10-04T08:33:30.890743+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Text overcorrection: super-deformed/very high camera caused oversized crown and almost hidden torso/legs. Local final-size side-by-side proof is sufficient to reject before renderer or derivatives. Need explicit balanced silhouette regions instead of repeated extreme adjectives.",
+      "evidence": [
+        "recalibration/root-f512a08a-77de-4518-8451-0d4e05489995/hero-comparison-3x.png"
+      ]
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "b85dcec0-7ca3-475d-a407-101cebdbcbae",
+      "time": "2026-10-04T08:35:38.473246+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Balanced numeric regions were not followed: face is near frontal and head remains narrower than shoulders, full body again elongated. Reject without generating directions. Next prompt uses the existing game's documented text camera/style contract, never its image reference."
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "302868cb-d849-4b61-9b27-1d2866947a5e",
+      "time": "2026-10-04T08:37:04.305973+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "v6 text camera improved but head remains narrow/torso long compared with existing hero. Audit recovered original root square1024 canvas whereas this frozen plan uses portrait1024x1536. Next intentional comparison changes only root canvas to square, same text/model/zero refs. No derivative approved."
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "e963b537-72d3-48be-a5b4-a997cadcdae4",
+      "time": "2026-10-04T08:38:33.981382+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Square canvas improved overall compactness and pixel density, but local108px comparison still shows too small a head and head narrower than jacket. Controlled next correction changes3-head wording to2.5-head and explicit head/shoulder relationship; no other changes or new references."
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "2c1dc50c-f246-4fa4-912b-81ba6f028428",
+      "time": "2026-10-04T08:40:02.912620+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Still narrower head than shoulders and longer body; comparison of actual source prompt reveals added slim/avoid-extreme-overhead phrasing weakened original compact-stocky/steep-camera text. Next restores original text style literally while swapping identity/clothing only. No prior images transmitted."
+    },
+    {
+      "job": "avery-identity",
+      "requestId": "6b99b36d-7d88-4336-a8ae-ae8183789766",
+      "time": "2026-10-04T08:42:02.787888+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Version9 accepted for new derivation after root-only actual390x844 and320x568 scene: compact body, readable crown/shoulder/shoe tops, head remains substantial at native size, adult height aligns with hero, hair-volume/outfit differences read as character identity rather than different scale. Fine restrained clusters coherent. No prior frames inherit this acceptance; all new directions must match this root.",
+      "renderer": "pending"
+    },
+    {
+      "job": "avery-down",
+      "requestId": "43e8a188-7c4d-4af7-ba82-b0f7fcb30451",
+      "time": "2026-10-04T08:53:39.322490+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "New root family: opposing screen-left/screen-right leading feet and opposing arms, centered standing pose, consistent crown/outfit and complete feet; source accepted pending animated renderer.",
+      "renderer": "pending"
+    },
+    {
+      "job": "avery-side",
+      "requestId": "a2c79282-3ea3-4134-9b52-eec2d950337a",
+      "time": "2026-10-04T08:55:32.042503+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Both eyes/front torso visible: not true left-facing side profile. Contact near-leg silhouette repeats. v3 prompt explicitly restricts profile and reverses overlap diagonal."
+    },
+    {
+      "job": "avery-up",
+      "requestId": "484956b0-d66d-484a-8625-502142b7afea",
+      "time": "2026-10-04T08:56:25.782789+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "New identity family: back of head and jacket stable; alternating lowest shoe and raised sole visible; opposing arms; stand centered; complete silhouettes. Animated renderer pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "avery-side",
+      "requestId": "203ab9c2-c6c3-42c6-90ee-a750539f9b95",
+      "time": "2026-10-04T08:57:19.848954+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Corrected true left profile, single eye, crown and compact family preserved. Near trouser overlap and near arm swap front/back between contact endpoints; both complete shoes visible. Pending actual native-size cycle.",
+      "renderer": "pending"
+    },
+    {
+      "job": "avery-portrait",
+      "requestId": "22d209a9-6801-4a6b-b69c-34c4890ff9d4",
+      "time": "2026-10-04T08:57:39.541268+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Same auburn wave silhouette, teal/mustard clothing, facial features; clean shoulder-up portrait, cream background. Actual small/large dialogue UI pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "avery-family-v2",
+      "reviewer": "AI",
+      "decision": "scene-accepted",
+      "time": "2026-10-04T09:01:10.783577+00:00",
+      "reason": "390x844 and320x568 actual RPGJS movement8cases + nearby/facing/patrol/portrait2cases passed. Reviewed native scene and actual cycle crops: alternating feet readable, stable footline, coherent compact sprite family; original hero retained in same-scene. Portrait is same new root. New standing position needed QA retreat to right to avoid nearby entities; corrected QA passes.",
+      "evidence": [
+        "qa-v2/avery/renderer-report.json",
+        "qa-v2/avery/scene-report.json",
+        "qa-v2/avery/actual-cycle-contact-sheet.png",
+        "qa-v2/avery/390-hero-with-avery-platform-layout.png",
+        "qa-v2/avery/320-hero-with-avery-platform-layout.png"
+      ]
+    },
+    {
+      "job": "samira-identity",
+      "requestId": "8e3d6894-2b80-450d-b71c-513b41f7cc73",
+      "time": "2026-10-04T09:02:42.418411+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Root stand in real390 scene and108px hero comparison: crown/shoulder/shoe tops, substantial head and compact sturdy body, coherent outline/pixel density. Distinct adult identity/clothing. No old images supplied. Derivatives remain pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "samira-down",
+      "requestId": "64a43c70-e570-4721-becd-136469c26934",
+      "time": "2026-10-04T09:04:15.510241+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Both outer figures lead with screen-right shoe. Identical support leg fails; reject before assembly. Correct with screen-foot ordering first in prompt."
+    },
+    {
+      "job": "samira-side",
+      "requestId": "b91a986e-c58a-4810-9cb0-bcd6d531d368",
+      "time": "2026-10-04T09:05:08.677443+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Correct profile but both outer figures have same near-arm trailing and near-thigh advancing. Contact phases duplicate; reject."
+    },
+    {
+      "job": "samira-down",
+      "requestId": "ee8b9cec-dd20-42e5-a97b-2dc1a70689f6",
+      "time": "2026-10-04T09:06:00.658831+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Corrected opposite leading shoes and opposing arms; stable identity, scale and complete silhouettes. Family animation pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "samira-side",
+      "requestId": "56212dd4-f04b-4b7a-8715-7439f712fa9f",
+      "time": "2026-10-04T09:06:59.015957+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Correction now swaps near arm and near thigh overlap: near leg ahead then behind; true one-eye profile, same silhouette/identity. Renderer pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "samira-up",
+      "requestId": "e89043a1-b6dd-4ba7-b13b-85e14f4d9d40",
+      "time": "2026-10-04T09:07:59.281187+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Alternating raised/lower shoes and opposite arms, complete back-view silhouettes, matching curled hair and coral shirt. Renderer pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "samira-portrait",
+      "requestId": "fb5a49ca-1a80-4e44-99ba-93490f1b4d78",
+      "time": "2026-10-04T09:09:22.109101+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Curly hair, face, coral/cream outfit preserved, clean shoulder-up composition and matching pixel clusters. UI validation pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "owen-identity",
+      "requestId": "87b67426-b86f-437c-a29d-3c9429a42b22",
+      "time": "2026-10-04T09:09:51.603066+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Native390 actual scene coherent adult height, compact mature silhouette and visible crown/shoulder/shoe tops; elderly short hair naturally has less volume than hero. Cardinal orthographic view and pixel texture coherent. Derivatives pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "samira-side",
+      "requestId": "56212dd4-f04b-4b7a-8715-7439f712fa9f",
+      "time": "2026-10-04T09:11:15.996176+00:00",
+      "reviewer": "human",
+      "decision": "source-rejected",
+      "source": "direct current-chat user correction with samira-side-2.webp attachment",
+      "quote": "这个有问题，人物腿部的朝向不对，朝右走的时候。",
+      "reason": "User override: rightmost stride rear ankle/shoe turns against body direction. Earlier AI admission missed joint/toe direction. Runtime Samira reverted to original proxy; old evidence retained, candidate no longer valid."
+    },
+    {
+      "job": "samira-side",
+      "requestId": "10f73070-f468-4b8d-af0e-cb8e89019585",
+      "time": "2026-10-04T09:14:00.031426+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "New version after human rejection: all shoe toes now face screen-left, including rear foot; ankle joins heel, knees not reversed; near thigh and arm swap between contact phases, true profile. Earlier human-rejected version remains rejected. Both mirrored directions require actual cycle recheck.",
+      "renderer": "pending"
+    },
+    {
+      "job": "owen-down",
+      "requestId": "2bf44160-5ed0-4fa0-aa85-e58e50237c69",
+      "time": "2026-10-04T09:14:00.124849+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Feet swap correctly but both outer panels lower screen-left hand; first contact moves same-side hand/foot together. Correct opposing arm motion before family admission."
+    },
+    {
+      "job": "owen-down",
+      "requestId": "625f62b9-9d0d-4c84-9207-dbde825eb02a",
+      "time": "2026-10-04T09:16:24.945895+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Corrected opposing hands now exchange together with opposite leading feet; no reversed knees/ankles, same root scale and identity. Runtime pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "owen-side",
+      "requestId": "adde1cfb-a471-44bc-813c-42e33b4599ef",
+      "time": "2026-10-04T09:17:21.407871+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "True profile, near thigh/arm exchange across contacts; all shoes toe-left/heel-right including trailing shoe, knees and ankles coherent. Same compact elder identity. Renderer pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "owen-up",
+      "requestId": "1b6bd1d1-1d64-4f29-8820-dad890961d6e",
+      "time": "2026-10-04T09:18:33.157549+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Alternating raised soles and grounded opposite shoes, correct backward-view anatomy, stable hair and cardigan. Scene cycle pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "owen-portrait",
+      "requestId": "34959783-fea2-45e4-86cd-8ea6adc93efc",
+      "time": "2026-10-04T09:19:37.679021+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Silver receding hair, elder facial structure and moss cardigan/cream shirt match root; clean detailed pixel portrait, actual dialogue QA pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "dani-identity",
+      "requestId": "cfa88d47-1166-4c3a-a4bd-bbc9e138d473",
+      "time": "2026-10-04T09:20:25.870480+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Actual390 scene root matches compact world proportions; bob/lavender/ochre identity clearly differs from Elena and other residents. Crown/shoulder/shoe top orthographic view present; native-size readability good. Derivatives pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "dani-down",
+      "requestId": "d3c53708-0966-4b8a-aacc-593c5d7d2c24",
+      "time": "2026-10-04T09:23:14.001493+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Opposite lower shoes and hands across outer panels, neutral center, complete feet, consistent bob/lavender/ochre identity and scale. Renderer pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "dani-side",
+      "requestId": "97a12f68-9bda-4a61-9bd9-a01108a5f8c9",
+      "time": "2026-10-04T09:24:18.719988+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Toes face correctly, but near-thigh crossing diagonal repeats in outer contacts, arms change alone. Require explicit near-thigh down-right vs down-left and near/far shading to make support exchange readable."
+    },
+    {
+      "job": "dani-up",
+      "requestId": "ed203b5c-a706-4c2c-9202-dd71da399b7d",
+      "time": "2026-10-04T09:26:28.745074+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Alternating rear-view feet and arms with complete shoes and coherent knee/ankle direction; matching bob/jacket identity, stable height. Runtime pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "dani-side",
+      "requestId": "d8d78434-3bea-4a62-b24b-9d0191aa0dc0",
+      "time": "2026-10-04T09:27:52.254050+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Second strip still keeps lighter near thigh advancing left in both outer figures. Arm swap alone does not fix leg phase. Reject; do not assemble Dani or imply four finished residents. Need independent whole-pose alternative if further generation authorized."
+    },
+    {
+      "job": "dani-portrait",
+      "requestId": "d782eace-66b9-4391-ac37-b6ebcb80efd5",
+      "time": "2026-10-04T09:29:30.429313+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Bob hairstyle, facial identity and lavender/ochre clothing match accepted root. This only accepts portrait source; Dani sprite family remains rejected/pending due side poses.",
+      "renderer": "pending"
+    },
+    {
+      "job": "fern-stages",
+      "requestId": "c0b5550c-cf4e-41d4-bddd-7da79c80e95d",
+      "time": "2026-10-04T09:30:16.213738+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Three genuinely distinct fiddlehead/unfurling/open-frond stages; same small root clump and coherent orthographic botanical pixel style. Layout is NOT equal thirds: grown fronds cross nominal divider, so use explicitly recorded non-overlapping source rectangles around complete separate plants. Common scaling/root anchor required; scene pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "dani-side-contact-a",
+      "requestId": "a5e91231-db01-4056-89b8-60fc5a5e9ee9",
+      "time": "2026-10-04T10:44:47.982574+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "Complete left-facing profile; near thigh visibly advances left across far thigh, near arm swings right, both shoe toes left including trailing shoe, knees/ankles coherent. Root bob/lavender/ochre/olive identity preserved. Source accepted; opposite contact and renderer still pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "dani-side-contact-b",
+      "requestId": "8c5ab2c1-9994-4a4b-ad65-3c003fa62b3b",
+      "time": "2026-10-04T10:46:32.668871+00:00",
+      "reviewer": "AI",
+      "decision": "source-rejected",
+      "reason": "Leg overlap now swaps correctly, but near arm remains backward as in contactA. Near arm and near leg both backward: opposing gait phase not yet coherent. Regenerate B from accepted A with explicit near-arm forward across torso."
+    },
+    {
+      "job": "dani-side-contact-b",
+      "requestId": "301f25b4-0536-4e72-b5ff-3f31543cf537",
+      "time": "2026-10-04T10:50:49.961730+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "AI source inspection: left-facing whole body; near leg swings backward right and near arm forward left, opposite to contact A; both toes point left, ankles coherent, same identity and view. Renderer validation pending.",
+      "renderer": "pending"
+    },
+    {
+      "job": "dani-side-stand",
+      "requestId": "589bf075-f91c-4c8a-b316-21e519861850",
+      "time": "2026-10-04T10:51:53.965972+00:00",
+      "reviewer": "AI",
+      "decision": "source-accepted",
+      "reason": "AI source inspection: relaxed neutral left-facing stance, arms hanging, both shoes face left, matching identity/view/height; full cycle renderer validation pending.",
+      "renderer": "pending"
+    }
+  ],
+  "pilotRendererApproved": true,
+  "authorizationHistory": [
+    {
+      "source": "direct human message in current thread",
+      "thread": "01a0b417-7528-71a3-b5fa-057f2ad8c388",
+      "recordedAt": "2026-10-04T07:56:56.010700+00:00",
+      "quote": "批准四位居民及植物三阶段的美术生成，首轮21次、总计最多42次，含失败和重试；先验证Avery，再继续其余内容，不购买新服务",
+      "scope": "Frozen plan unchanged; 21 planned / maximum42 POST, failures and retries included; Avery first; no purchase or deployment"
+    },
+    {
+      "source": "小小银 authorized relay from coordinator01a0ff79-c6a9-74f9-b4a0-1de1e4f8d0b3; not a fabricated direct human message",
+      "recordedAt": "2026-10-04T08:29:17.960037+00:00",
+      "humanMessageCited": "Sentinel_ad0cb92421f88191b8d0ea80c4f992ea",
+      "humanMessageTime": "2026-10-04T08:23Z",
+      "quote": "我看到它好像又停止了。 然后还提到什么额度之类的。你让他再开始吧。然后额度是什么东西。 是指生产美术素材的限额吗？这个最好不要有额度。",
+      "scope": "Resume corrected Avery inside original42 total incl original8; reallocate unused34, remove mechanical per-root2 stop; Avery AI source and real-scene gate before expansion; same service/model, no purchase/new credentials/deployment/43rd POST."
+    },
+    {
+      "source": "Human approval verified via read_thread native messages in 跟进海湾试运行终态, relayed by 小小银",
+      "thread": "01a0f63e-747b-74c8-a592-bb52c77c2017",
+      "questionNativeTurn": "01a10656-7834-73b0-8427-84f88edbc634",
+      "questionMessage": "Sentinel_56636e4ff9948191afae7a4f78626f23",
+      "approvalNativeMessage": "01a10667-fdbc-73e3-a874-3340ff95510c",
+      "approvalMessage": "Sentinel_40ba0bdb0b688191a5ff5f4cb2789a86",
+      "approvalQuote": "好的可以",
+      "approvedAt": "2026-10-04T10:14Z",
+      "scope": "Dani correction at most6 additional POST, total48 including failures, recovery, unknown; same existing media service; cost unknown acknowledged; no purchase or deployment; no PG install approval",
+      "recordedAt": "2026-10-04T10:18:14.995602+00:00"
+    },
+    {
+      "source": "direct human message in current owner chat",
+      "thread": "01a0b417-7528-71a3-b5fa-057f2ad8c388",
+      "quote": "批准居民美术追加最多6次，累计最多48次，费用未知，失败计入，不购买新服务。",
+      "recordedAt": "2026-10-04T10:43:29.593824+00:00",
+      "scope": "Dani correction within6 additional POST, total48 including failures/recoveries; same media service; no purchase/deployment"
+    },
+    {
+      "time": "2026-10-04T11:59:15.619233+00:00",
+      "source": "direct human message in owner chat",
+      "scope": "本批居民和植物累计最多72次，包含此前全部调用、失败和重试；现有服务费用未知、不购买；必要修正自主完成、做完停止、不必用满；继续整合验收交付可发布版本",
+      "actualPostsAtApproval": 46
+    }
+  ],
+  "batchStatus": "stopped-complete-local",
+  "stopReason": "Four resident families and fern complete locally at 46 actual calls; latest approved ceiling72; no further generation necessary.",
+  "batchHistory": [
+    {
+      "time": "2026-10-04T08:29:17.960037+00:00",
+      "previousStatus": "stopped-pilot-scene-rejected",
+      "previousStopReason": "Avery final family/scene style mismatch; identity task already used both permitted attempts; no expansion and no additional POST.",
+      "attemptCount": 8
+    }
+  ],
+  "budgetPolicy": {
+    "revision": 3,
+    "globalMaxPosts": 72,
+    "perJobMax": null,
+    "pilotMaxPosts": null,
+    "reason": "Explicit authorized relay of user resume directs reallocating same original total; no automatic retry or unlimited spending. Start with minimum new root then review before directions.",
+    "extensionStart": 42,
+    "extensionMaxPosts": 6,
+    "extensionJobs": [
+      "dani-side-contact-a",
+      "dani-side-stand",
+      "dani-side-contact-b"
+    ],
+    "additionalMaxPosts": 30
+  },
+  "generationOverrides": {
+    "avery-identity": {
+      "size": {
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    "samira-identity": {
+      "size": {
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    "owen-identity": {
+      "size": {
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    "dani-identity": {
+      "size": {
+        "width": 1024,
+        "height": 1024
+      }
+    }
+  },
+  "parameterRevisions": [
+    {
+      "time": "2026-10-04T08:37:04.306316+00:00",
+      "job": "avery-identity",
+      "change": "Root canvas1024x1536 to1024x1024 as original declared hero production format; same model, quality, promptv6, refs0; smaller area, no new service/purchase; within total42 correction scope"
+    },
+    {
+      "time": "2026-10-04T09:01:10.784091+00:00",
+      "jobs": [
+        "samira-identity",
+        "owen-identity",
+        "dani-identity"
+      ],
+      "change": "Apply locally verified Avery square root canvas and compact original text style to new residents; identity descriptions preserved. No reference images for roots; no model or quality changes."
+    }
+  ],
+  "rendererReviews": [
+    {
+      "time": "2026-10-04T09:38:56.793049+00:00",
+      "reviewer": "AI",
+      "actor": "samira",
+      "decision": "accepted",
+      "source": "raw/samira-side-3.webp",
+      "sourceRequestId": "10f73070-f468-4b8d-af0e-cb8e89019585",
+      "evidence": [
+        "qa-v3/samira/renderer-report.json",
+        "qa-v3/samira/actual-cycle-contact-sheet.png",
+        "qa-v2/roster/report.json"
+      ],
+      "reason": "Replacement source and actual both-side cycles checked; 8 four-direction/two-size motion cases, three-period roster tests passed. Human-rejected side-2 remains rejected. Local candidate only, not deployed."
+    },
+    {
+      "actor": "dani",
+      "time": "2026-10-04T10:56:53.735281+00:00",
+      "reviewer": "AI",
+      "decision": "AI-accepted-local",
+      "motion": "qa-v4/dani/renderer-report.json",
+      "roster": "qa-v4/roster/report.json",
+      "reason": "Actual 390/320 four-direction cycles and stops; same-scene hero scale; three daytime placements; small/enlarged portrait checked. Source A/B/stand independently reviewed. No iPhone device claim."
+    }
+  ],
+  "extensionPlanSha256": "8066277e8523672eab11e8195bce1bb2b655b8bc28ac931dfcce429c71b7e05a",
+  "approvalExecutionBlocks": [
+    {
+      "time": "2026-10-04T10:19:58.242039+00:00",
+      "job": "dani-side-contact-a",
+      "processStarted": false,
+      "postSent": false,
+      "sameCommandReviewCount": 2,
+      "reason": "Auto-review refused to treat native cross-thread approval as trusted despite direct user relay authorization",
+      "attemptCountRemains": 42
+    }
+  ],
+  "completedAt": "2026-10-04T10:56:53.735281+00:00"
 }

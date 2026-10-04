@@ -12,8 +12,6 @@ export const sheets:any[]=Object.values(rooms).flatMap(r=>[
 export const npcSheets=Object.keys(people).map(id=>({...heroSheet,id:'npc-'+id,image:`./art/npc-${people[id].art}.png`,textures:Object.fromEntries([['stand',1],['stride-0',0],['stride-1',1],['stride-2',2]].map(([name,col])=>[name,{animations:({direction}:{direction:Direction})=>[[{frameX:col,frameY:row(direction),time:0,anchor:[.5,122/128],scale:[56/108,56/108],x:0,y:0}]]}]))}));
 sheets.push(...npcSheets);
 
-// Local growth prototype: the same unpotted fern, at a fixed root anchor.
-// Distinct leaf-stage art is a separate requested production asset batch.
+// Three platform-generated growth stages, one shared image/world scale and root anchor.
 const growth=rooms.garden.props.find(p=>p.id==='growing-fern')!;
-const fd=dimensions[growth.art as keyof typeof dimensions];
-for(const [stage,mult] of [['young',.45],['unfurling',.7],['grown',1]] as const)sheets.push(graphic('prop-garden-growing-fern-'+stage,'./art/'+growth.art+'.png',fd.width,fd.height,[.5,1],growth.width/fd.width*mult));
+for(const stage of ['young','unfurling','grown'] as const)sheets.push(graphic('prop-garden-growing-fern-'+stage,'./art/fern-'+stage+'.png',256,256,[.5,1],growth.width/256));

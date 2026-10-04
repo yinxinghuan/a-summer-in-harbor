@@ -1,0 +1,32 @@
+✔ neutral initial questions, discovered bridge and prior answer gate follow-ups without reviving legacy topics (1.817208ms)
+✔ closed/reloaded midway response restores without modifying story; locale restarts same exchange and scopes reject other journeys/people (1.265292ms)
+✔ free dialogue is possible immediately after introduction; failure does not consume topic or count success (14.235292ms)
+✔ all introductions paginate into readable bilingual replies without dropping words (0.259333ms)
+✔ new player sees no unseen residents, places alone reveal nobody (1.389583ms)
+✔ legacy projection restores explicit encounters once without mutating saves (0.39725ms)
+✔ completed bag and lantern outrank old request text and absent inventory (0.128125ms)
+✔ bridge route and garden completion suppress stale next steps (0.125125ms)
+✔ current materials select exact next place and person links are known-only (0.227334ms)
+✔ casual conversation does not become unfinished assignment or numeric affection (0.10875ms)
+✔ optional authored appointment: untriggered hidden, upcoming, present, missed and done (0.2105ms)
+✔ resident schedules hidden before explicit routine conversation (0.079042ms)
+✔ routine hints require known person AND an explicitly consumed routine conversation (1.123833ms)
+✔ routine is learned via normal topic once, remains in history, and does not advance time or unlock maps (11.0315ms)
+✔ 20-minute arrival warning uses quick-travel semantics, suppresses same scene and locked destinations, never changes state (0.482667ms)
+✔ next period and invitation guidance show known facts and sleeping option without a real clock (0.13725ms)
+✔ old save defaults do not mutate it; clock monotonic with four periods and sleep catch-up (1.15875ms)
+✔ each resident occupies one location in each daytime period, none at night; full stroll and approach are reachable (379.40375ms)
+✔ local observed moving NPC footpoint is bounded, near admission follows it; absence is rejected before model (3.518167ms)
+✔ relationships emerge through follow-up conversation, evening opportunity recurs, rewards and examples use committed memories (5.126625ms)
+✔ fern grows from committed elapsed time, sleep skips catch up, repeated care is harmlessly rejected (0.243333ms)
+✔ SQLite restart and lost replies preserve clock/plant/memories; stale AI and other-owner writes cannot alter them (26.702833ms)
+✔ legacy saved feet overlapping any new resident can exit without moving the save or leaving the patrol corridor (5.445084ms)
+✔ all nine original NPCs retain task examples and follow up consumed life topics in examples and free-dialogue context (1.945375ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 809.420666

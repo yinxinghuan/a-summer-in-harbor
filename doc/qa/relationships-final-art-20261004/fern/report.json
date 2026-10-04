@@ -1,0 +1,78 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "stage": "young",
+      "actual": {
+        "x": 182,
+        "y": 390,
+        "graphics": [
+          "prop-garden-growing-fern-young"
+        ]
+      },
+      "assetSha256": "3841c917462614da0893b52ae826be5b38bb542f2d686b3a9eb0a55a8fa7eaf9"
+    },
+    {
+      "width": 320,
+      "stage": "unfurling",
+      "actual": {
+        "x": 182,
+        "y": 390,
+        "graphics": [
+          "prop-garden-growing-fern-unfurling"
+        ]
+      },
+      "assetSha256": "a049931c8638fb568627b38d87d44b499c5736ac595996ecc3da780f05effba5"
+    },
+    {
+      "width": 320,
+      "stage": "grown",
+      "actual": {
+        "x": 182,
+        "y": 390,
+        "graphics": [
+          "prop-garden-growing-fern-grown"
+        ]
+      },
+      "assetSha256": "70e5cfa8478159907b46007a1708a42dc39b5e509c9de491c3df0645012686c2"
+    },
+    {
+      "width": 390,
+      "stage": "young",
+      "actual": {
+        "x": 182,
+        "y": 390,
+        "graphics": [
+          "prop-garden-growing-fern-young"
+        ]
+      },
+      "assetSha256": "3841c917462614da0893b52ae826be5b38bb542f2d686b3a9eb0a55a8fa7eaf9"
+    },
+    {
+      "width": 390,
+      "stage": "unfurling",
+      "actual": {
+        "x": 182,
+        "y": 390,
+        "graphics": [
+          "prop-garden-growing-fern-unfurling"
+        ]
+      },
+      "assetSha256": "a049931c8638fb568627b38d87d44b499c5736ac595996ecc3da780f05effba5"
+    },
+    {
+      "width": 390,
+      "stage": "grown",
+      "actual": {
+        "x": 182,
+        "y": 390,
+        "graphics": [
+          "prop-garden-growing-fern-grown"
+        ]
+      },
+      "assetSha256": "70e5cfa8478159907b46007a1708a42dc39b5e509c9de491c3df0645012686c2"
+    }
+  ],
+  "errors": [],
+  "mode": "actual renderer; synthetic stage fixtures; not a repeat growth workflow"
+}

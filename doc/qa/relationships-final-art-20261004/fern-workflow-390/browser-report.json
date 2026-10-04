@@ -1,0 +1,127 @@
+{
+  "authority": "real local SQLite, synthetic player fixtures",
+  "externalModelCalls": 0,
+  "errors": [],
+  "cases": [
+    {
+      "name": "water, two naps, morning sleep, visible fern states",
+      "head": {
+        "townMinutes": 2000,
+        "id": "451062a5-d009-4dd9-857a-5b500a9fa149",
+        "version": 8,
+        "cursor": 8,
+        "mapVersion": 1,
+        "locale": "en",
+        "scene": "garden",
+        "position": {
+          "x": 210,
+          "y": 404
+        },
+        "flags": [
+          "key",
+          "unpacked",
+          "water-fern"
+        ],
+        "known": [],
+        "visited": [
+          "station",
+          "home",
+          "cafe",
+          "grocery",
+          "harbor",
+          "dock",
+          "workshop",
+          "gym",
+          "market",
+          "bazaar",
+          "secondhand",
+          "courtyard",
+          "coast",
+          "beach",
+          "path",
+          "lighthouse",
+          "hill",
+          "garden",
+          "camp",
+          "weather",
+          "workshop-annex-1",
+          "workshop-annex-2"
+        ],
+        "items": {
+          "key": 1
+        },
+        "energy": 100,
+        "cash": 25,
+        "standing": 0,
+        "relations": {},
+        "history": [
+          {
+            "id": "8be1714d-3914-4549-b3ae-73ef6f1c8518",
+            "kind": "action",
+            "text": [
+              "水渗进土里，小叶轻轻晃了晃。几个小时后再来看，不必守着它。",
+              "Water sinks into the soil. A small frond trembles. Come back in a few hours; you needn’t stay and watch."
+            ]
+          },
+          {
+            "id": "c049f413-e7fb-44cc-b9d4-4c6660676b79",
+            "kind": "action",
+            "text": [
+              "你沿熟悉的路抵达目的地。",
+              "You follow the familiar route back."
+            ]
+          },
+          {
+            "id": "5df2f13d-938b-41b0-b2db-e09e1b623e3e",
+            "kind": "action",
+            "text": [
+              "你睡了一小觉。窗外的光变了，体力也恢复了。",
+              "You take a nap. The light outside has shifted, and your energy returns."
+            ]
+          },
+          {
+            "id": "d54bef4a-ebf7-418d-87f0-004e77d0ddf0",
+            "kind": "action",
+            "text": [
+              "你睡了一小觉。窗外的光变了，体力也恢复了。",
+              "You take a nap. The light outside has shifted, and your energy returns."
+            ]
+          },
+          {
+            "id": "949c5ed4-e3c8-4364-b571-72a9488b7707",
+            "kind": "action",
+            "text": [
+              "你沿熟悉的路抵达目的地。",
+              "You follow the familiar route back."
+            ]
+          },
+          {
+            "id": "2dcf0b91-094d-4f9d-8b9d-a0edf7b2db0c",
+            "kind": "action",
+            "text": [
+              "你沿熟悉的路抵达目的地。",
+              "You follow the familiar route back."
+            ]
+          },
+          {
+            "id": "48f27f1b-2114-4311-a321-c46cd9b53903",
+            "kind": "action",
+            "text": [
+              "一觉醒来，窗外又有了晨光。今天可以慢慢开始。",
+              "You wake to morning light. There is room to start slowly today."
+            ]
+          },
+          {
+            "id": "db8f23c8-f2da-4ab8-87bc-36aa08b82608",
+            "kind": "action",
+            "text": [
+              "你沿熟悉的路抵达目的地。",
+              "You follow the familiar route back."
+            ]
+          }
+        ],
+        "fernStartedAt": 540
+      }
+    }
+  ]
+}

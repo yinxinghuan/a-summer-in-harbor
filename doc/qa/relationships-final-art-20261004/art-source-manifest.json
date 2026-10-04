@@ -1,0 +1,57 @@
+{
+  "base": "207ba803b2b370172c7c9357d9ffae3f5ca09d07",
+  "status": "AI-accepted-local-not-deployed",
+  "postCount": 46,
+  "approvedCap": 72,
+  "files": [
+    {
+      "path": "public/art/npc-avery.png",
+      "sha256": "07a3aca148d727b68c098e885985dd98eaeb32d77952be344fc90fc15ac27138"
+    },
+    {
+      "path": "public/art/avery-root-v2.png",
+      "sha256": "e186fbf204cfd80c198583523668a877648f1a1569ddc3977cfca0d5fe37d766"
+    },
+    {
+      "path": "public/art/npc-samira.png",
+      "sha256": "90f641147e9b30a3cd1ea8d2ef377e73895afc3df60e567efa08b1c40968d1f4"
+    },
+    {
+      "path": "public/art/samira-root-v2.png",
+      "sha256": "8d2252675ff57f5860bc7e359b88071c0207022dd1d6bb8e7fe5b0e662df2b74"
+    },
+    {
+      "path": "public/art/npc-owen.png",
+      "sha256": "f5e1594c83069bd1c3ea6b1654f5c3354edc5ef64c347f1fbc79a4dcbf806448"
+    },
+    {
+      "path": "public/art/owen-root-v2.png",
+      "sha256": "f59c97e679f92926a12b6fef98aaca6ae57cfd25e8e1a2d66f7d9c31f32b1219"
+    },
+    {
+      "path": "public/art/npc-dani.png",
+      "sha256": "3ba4d2d6337546c10e71954b1821d8cde90df5783d0b15d3ac98981f1c9a832c"
+    },
+    {
+      "path": "public/art/dani-root-v2.png",
+      "sha256": "05cdfd4903786935711abb40e562d56c8efa443d84e2b54c82dcce0bde581d8d"
+    },
+    {
+      "path": "public/art/fern-young.png",
+      "sha256": "3841c917462614da0893b52ae826be5b38bb542f2d686b3a9eb0a55a8fa7eaf9"
+    },
+    {
+      "path": "public/art/fern-unfurling.png",
+      "sha256": "a049931c8638fb568627b38d87d44b499c5736ac595996ecc3da780f05effba5"
+    },
+    {
+      "path": "public/art/fern-grown.png",
+      "sha256": "70e5cfa8478159907b46007a1708a42dc39b5e509c9de491c3df0645012686c2"
+    }
+  ],
+  "sourcePatchSha256": "b04e33ae36fc803b2fa2454eb63a533e1facf5169334fdf634f93547c6c053dc",
+  "dani": "dedicated accepted family, no proxy",
+  "fees": "unknown",
+  "newServicesPurchased": false,
+  "callsRemain": 26
+}

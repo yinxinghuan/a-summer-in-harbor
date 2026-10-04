@@ -120,3 +120,8 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 
 ### 已知日程与抵达估算
 `src/story/resident-guide.ts`集中管理日程话题、known+talk:routine双条件、当前/下一时段说明与visited快捷前往的+20分钟估算。`resident-life.ts`的一次性routine话题写原有对话历史；`main.tsx`手记仅设置mapFocus；`ui/Map.tsx`显示目的地提醒，保留原visited/busy/current可用性规则。无新计时器、存档写入者或地图解锁。`_qa/resident-guide.test.ts`覆盖4组规则；浏览器`_qa/run-resident-guide.mjs`覆盖5组，使用真实本地SQLite和合成玩家、固定模型回复，禁止外部请求；不代表平台账号或真实模型通过。
+
+
+## 2026-10-04 最终居民美术集成
+
+最终美术通过 residentPeople.art → NPC sheet/关系页肖像消费；植物通过 sheets.ts 的三阶段图形 id 消费。时间/约会权威模型沿用居民分支，关系 UI 不写入虚构亲密度。该批不依赖账号 PG 接入。
