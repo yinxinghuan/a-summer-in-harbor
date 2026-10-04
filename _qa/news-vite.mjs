@@ -1,1 +1,1 @@
-import {createServer} from 'vite';const server=await createServer({server:{host:'127.0.0.1',port:5270,strictPort:true,proxy:{'^/[0-9a-f-]{36}/api/':{target:'http://127.0.0.1:5271',rewrite:p=>p.replace(/^\/[0-9a-f-]{36}/,'')}}}});await server.listen();server.printUrls();
+import {createServer} from 'vite';const server=await createServer({server:{host:'127.0.0.1',port:5312,strictPort:true,proxy:{'^/[0-9a-f-]{36}/api/':{target:'http://127.0.0.1:5313',rewrite:p=>p.replace(/^\/[0-9a-f-]{36}/,'')}}}});await server.listen();server.printUrls();

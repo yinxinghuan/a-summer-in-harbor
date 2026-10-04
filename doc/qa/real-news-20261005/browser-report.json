@@ -1,0 +1,21 @@
+{
+  "input": "Previously captured official RSS headline; published 2026-09-16, fetched 2026-10-04T16:17:55.111Z; no new retrieval.",
+  "cases": [
+    {
+      "width": 320,
+      "sourceDatesVisible": true,
+      "persistentBudgetBranch": true,
+      "reloadRetainsOriginalEdition": true,
+      "errors": 0
+    },
+    {
+      "width": 390,
+      "sourceDatesVisible": true,
+      "persistentBudgetBranch": true,
+      "reloadRetainsOriginalEdition": true,
+      "errors": 0
+    }
+  ],
+  "errors": [],
+  "modelCalls": 0
+}

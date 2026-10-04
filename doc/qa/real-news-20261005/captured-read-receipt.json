@@ -1,0 +1,20 @@
+{
+  "status": "fetched-admissible",
+  "source": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+  "fetchedAt": "2026-10-04T16:17:55.111Z",
+  "httpDate": "Sun, 04 Oct 2026 16:17:55 GMT",
+  "bytes": 9645,
+  "responseSha256": "6ef9f8ee2019c031b583ee3a64eec38170840e2ff4229ec92e43f49702857855",
+  "eligibleCount": 2,
+  "rejectedCount": 13,
+  "newestEligible": {
+    "canonicalURL": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+    "title": "Federal Reserve issues FOMC statement",
+    "publishedAt": "2026-09-16T18:00:00.000Z",
+    "publishedRaw": "Wed, 16 Sep 2026 18:00:00 GMT"
+  },
+  "httpRequests": 1,
+  "modelCalls": 0,
+  "catalogWrites": 0,
+  "saveWrites": 0
+}

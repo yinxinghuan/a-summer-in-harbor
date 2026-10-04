@@ -14,7 +14,7 @@ export async function readOfficialFeed(){
  try{const addresses=await Promise.race([lookup(source.host,{family:4,all:true}),new Promise((_,reject)=>controller.signal.addEventListener('abort',()=>reject(Error('SOURCE_TIMEOUT')),{once:true}))]);
  if(!addresses.length||addresses.some(x=>!publicIPv4(x.address)))throw Error('SOURCE_ADDRESS_DENIED');
  return await new Promise((resolve,reject)=>{
- const req=https.get(source.url,{agent:false,signal:controller.signal,lookup:(_h,_opts,cb)=>cb(null,addresses[0].address,4),headers:{Accept:'application/rss+xml, application/xml, text/xml','Accept-Encoding':'identity','User-Agent':'HarborNewsLocalValidation/1.0'}},res=>{
+ const req=https.get(source.url,{agent:false,signal:controller.signal,lookup:(_h,opts,cb)=>opts?.all?cb(null,[{address:addresses[0].address,family:4}]):cb(null,addresses[0].address,4),headers:{Accept:'application/rss+xml, application/xml, text/xml','Accept-Encoding':'identity','User-Agent':'HarborNewsLocalValidation/1.0'}},res=>{
  if(res.statusCode!==200){res.resume();reject(Error('SOURCE_HTTP_'+res.statusCode));return}
  if(!/(xml|rss)/i.test(res.headers['content-type']??'')||res.headers['content-encoding']||Number(res.headers['content-length']??0)>LIMIT){res.destroy();reject(Error('SOURCE_TYPE_OR_SIZE'));return}
  const chunks=[];let bytes=0;res.on('data',c=>{bytes+=c.length;if(bytes>LIMIT){res.destroy();reject(Error('SOURCE_TOO_LARGE'))}else chunks.push(c)});res.on('error',reject);res.on('end',()=>resolve({xml:Buffer.concat(chunks).toString('utf8'),httpDate:res.headers.date,bytes,fetchedAt:new Date().toISOString()}));

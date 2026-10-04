@@ -142,3 +142,8 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 - `server/news/runtime.ts:withNewsRuntime` 只在本地QA显式接线，给新旅程选择一条当时有效来源；旧存档不静默替换。原authority事务保存edition和剧情选择。`projectNews`是只读状态投影，不改事件版本；正常游戏API的可选`newsProject`未在正式public入口启用。
 - 来源变化或找不到已固定版本：停止新的相关选择；单纯到期阻止开始新故事，已开始虚构故事可继续。已发生选择保留原来源snapshot。RSS未反映的正文更正不可检测，真实生产内容审核/更正传播仍需补足，不能宣称覆盖全部外部更正。
 - `_qa/news-server.ts`、`_qa/news-vite.mjs`只绑定5271/5270，`HARBOR_LOCAL_NEWS_CATALOG`明确选择本地catalog。合成测试路径与真实采集输出分开，87回归测试，320/390浏览器验收；没有模型、PG、ECS写入。
+
+
+## 2026-10-05 本地验证增量：资讯与作物
+
+仅独立候选、无部署。账号证据见doc/qa/account-pg-20261005（账号候选）；真实资讯证据见doc/qa/real-news-20261005、作物接入缺件见doc/crop-library-20261005（资讯候选）。不混淆账号验真、PG隔离、资讯模板与素材实际可用状态。未涉及另一候选的功能不标为本候选已集成。

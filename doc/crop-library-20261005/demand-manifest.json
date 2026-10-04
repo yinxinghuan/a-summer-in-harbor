@@ -1,0 +1,587 @@
+{
+  "schema": 1,
+  "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+  "sourceAudit": {
+    "at": "2026-10-04T19:39:03.525Z",
+    "path": "/Users/yin/code/games/rpg-asset-library/expansion/new-production-20261004-v1/next-original-local-plan-20261004-v1/manifest.json",
+    "sha256": "a273097f8a6ff9b600f741b839f70baa6450bf2e32c16b730c609279f17f582e",
+    "kind": "production plan only, not a usable art delivery"
+  },
+  "demands": [
+    {
+      "key": "crop-radish-young",
+      "crop": "radish",
+      "stage": "young",
+      "purpose": "garden-ground",
+      "family": "crop-radish",
+      "rootAnchor": "shared ground contact across stages",
+      "visibleWorldHeightTarget": 8,
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-1-radish-young",
+          "at": {
+            "x": 330,
+            "y": 620
+          },
+          "approach": {
+            "x": 322,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-2-radish-young",
+          "at": {
+            "x": 420,
+            "y": 620
+          },
+          "approach": {
+            "x": 412,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-3-radish-young",
+          "at": {
+            "x": 510,
+            "y": 620
+          },
+          "approach": {
+            "x": 502,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        }
+      ]
+    },
+    {
+      "key": "crop-radish-growing",
+      "crop": "radish",
+      "stage": "growing",
+      "purpose": "garden-ground",
+      "family": "crop-radish",
+      "rootAnchor": "shared ground contact across stages",
+      "visibleWorldHeightTarget": 14,
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-1-radish-growing",
+          "at": {
+            "x": 330,
+            "y": 620
+          },
+          "approach": {
+            "x": 322,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-2-radish-growing",
+          "at": {
+            "x": 420,
+            "y": 620
+          },
+          "approach": {
+            "x": 412,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-3-radish-growing",
+          "at": {
+            "x": 510,
+            "y": 620
+          },
+          "approach": {
+            "x": 502,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        }
+      ]
+    },
+    {
+      "key": "crop-radish-ready",
+      "crop": "radish",
+      "stage": "ready",
+      "purpose": "garden-ground",
+      "family": "crop-radish",
+      "rootAnchor": "shared ground contact across stages",
+      "visibleWorldHeightTarget": 18,
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-1-radish-ready",
+          "at": {
+            "x": 330,
+            "y": 620
+          },
+          "approach": {
+            "x": 322,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-2-radish-ready",
+          "at": {
+            "x": 420,
+            "y": 620
+          },
+          "approach": {
+            "x": 412,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-3-radish-ready",
+          "at": {
+            "x": 510,
+            "y": 620
+          },
+          "approach": {
+            "x": 502,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        }
+      ]
+    },
+    {
+      "key": "produce-radish",
+      "crop": "radish",
+      "stage": "harvest",
+      "purpose": "inventory-icon",
+      "family": "crop-radish",
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "inventory",
+          "slotId": "crop-radish",
+          "bindingStatus": "pending-source-and-ui-validation"
+        }
+      ]
+    },
+    {
+      "key": "crop-basil-young",
+      "crop": "basil",
+      "stage": "young",
+      "purpose": "garden-ground",
+      "family": "crop-basil",
+      "rootAnchor": "shared ground contact across stages",
+      "visibleWorldHeightTarget": 10,
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-1-basil-young",
+          "at": {
+            "x": 330,
+            "y": 620
+          },
+          "approach": {
+            "x": 322,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-2-basil-young",
+          "at": {
+            "x": 420,
+            "y": 620
+          },
+          "approach": {
+            "x": 412,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-3-basil-young",
+          "at": {
+            "x": 510,
+            "y": 620
+          },
+          "approach": {
+            "x": 502,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        }
+      ]
+    },
+    {
+      "key": "crop-basil-growing",
+      "crop": "basil",
+      "stage": "growing",
+      "purpose": "garden-ground",
+      "family": "crop-basil",
+      "rootAnchor": "shared ground contact across stages",
+      "visibleWorldHeightTarget": 21,
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-1-basil-growing",
+          "at": {
+            "x": 330,
+            "y": 620
+          },
+          "approach": {
+            "x": 322,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-2-basil-growing",
+          "at": {
+            "x": 420,
+            "y": 620
+          },
+          "approach": {
+            "x": 412,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-3-basil-growing",
+          "at": {
+            "x": 510,
+            "y": 620
+          },
+          "approach": {
+            "x": 502,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        }
+      ]
+    },
+    {
+      "key": "crop-basil-ready",
+      "crop": "basil",
+      "stage": "ready",
+      "purpose": "garden-ground",
+      "family": "crop-basil",
+      "rootAnchor": "shared ground contact across stages",
+      "visibleWorldHeightTarget": 28,
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-1-basil-ready",
+          "at": {
+            "x": 330,
+            "y": 620
+          },
+          "approach": {
+            "x": 322,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-2-basil-ready",
+          "at": {
+            "x": 420,
+            "y": 620
+          },
+          "approach": {
+            "x": 412,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-3-basil-ready",
+          "at": {
+            "x": 510,
+            "y": 620
+          },
+          "approach": {
+            "x": 502,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        }
+      ]
+    },
+    {
+      "key": "produce-basil",
+      "crop": "basil",
+      "stage": "harvest",
+      "purpose": "inventory-icon",
+      "family": "crop-basil",
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "inventory",
+          "slotId": "crop-basil",
+          "bindingStatus": "pending-source-and-ui-validation"
+        }
+      ]
+    },
+    {
+      "key": "crop-tomato-young",
+      "crop": "tomato",
+      "stage": "young",
+      "purpose": "garden-ground",
+      "family": "crop-tomato",
+      "rootAnchor": "shared ground contact across stages",
+      "visibleWorldHeightTarget": 12,
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-1-tomato-young",
+          "at": {
+            "x": 330,
+            "y": 620
+          },
+          "approach": {
+            "x": 322,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-2-tomato-young",
+          "at": {
+            "x": 420,
+            "y": 620
+          },
+          "approach": {
+            "x": 412,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-3-tomato-young",
+          "at": {
+            "x": 510,
+            "y": 620
+          },
+          "approach": {
+            "x": 502,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        }
+      ]
+    },
+    {
+      "key": "crop-tomato-growing",
+      "crop": "tomato",
+      "stage": "growing",
+      "purpose": "garden-ground",
+      "family": "crop-tomato",
+      "rootAnchor": "shared ground contact across stages",
+      "visibleWorldHeightTarget": 32,
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-1-tomato-growing",
+          "at": {
+            "x": 330,
+            "y": 620
+          },
+          "approach": {
+            "x": 322,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-2-tomato-growing",
+          "at": {
+            "x": 420,
+            "y": 620
+          },
+          "approach": {
+            "x": 412,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-3-tomato-growing",
+          "at": {
+            "x": 510,
+            "y": 620
+          },
+          "approach": {
+            "x": 502,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        }
+      ]
+    },
+    {
+      "key": "crop-tomato-ready",
+      "crop": "tomato",
+      "stage": "ready",
+      "purpose": "garden-ground",
+      "family": "crop-tomato",
+      "rootAnchor": "shared ground contact across stages",
+      "visibleWorldHeightTarget": 42,
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-1-tomato-ready",
+          "at": {
+            "x": 330,
+            "y": 620
+          },
+          "approach": {
+            "x": 322,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-2-tomato-ready",
+          "at": {
+            "x": 420,
+            "y": 620
+          },
+          "approach": {
+            "x": 412,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        },
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "garden",
+          "slotId": "crop-bed-3-tomato-ready",
+          "at": {
+            "x": 510,
+            "y": 620
+          },
+          "approach": {
+            "x": 502,
+            "y": 654
+          },
+          "collision": "use existing authored bed geometry; never infer from image bounds",
+          "bindingStatus": "pending-source-and-renderer-validation"
+        }
+      ]
+    },
+    {
+      "key": "produce-tomato",
+      "crop": "tomato",
+      "stage": "harvest",
+      "purpose": "inventory-icon",
+      "family": "crop-tomato",
+      "targets": [
+        {
+          "gameId": "e78df027-7ef4-4d49-82eb-ea91f03d9fb3",
+          "roomId": "inventory",
+          "slotId": "crop-tomato",
+          "bindingStatus": "pending-source-and-ui-validation"
+        }
+      ]
+    }
+  ],
+  "requiredSourceImages": 12,
+  "placementBindings": 30,
+  "readySourceImages": 0,
+  "missing": [
+    "crop-radish-young",
+    "crop-radish-growing",
+    "crop-radish-ready",
+    "produce-radish",
+    "crop-basil-young",
+    "crop-basil-growing",
+    "crop-basil-ready",
+    "produce-basil",
+    "crop-tomato-young",
+    "crop-tomato-growing",
+    "crop-tomato-ready",
+    "produce-tomato"
+  ],
+  "modelCalls": 0,
+  "productionGranted": false,
+  "inventoryWrites": 0,
+  "notes": [
+    "Existing decorative fern and mixed produce boxes cannot stand in for these crop species.",
+    "Image sizes/anchors/profile/geometry hashes can be fixed only after actual source delivery.",
+    "Each source must have current AI acceptance, permitted use and pinned hash; each target requires the library consumer binding and real renderer evidence.",
+    "No claim that global/cloud inventory is empty; only inspected local packages and production plan."
+  ]
+}

@@ -41,7 +41,7 @@ for(const [person,routes] of Object.entries(residentRoutes))for(const [i,route] 
 for(const [person,routes] of Object.entries(residentRoutes)){const room=rooms[routes[0].scene];cases['patrol-'+person]={scene:room.id,townMinutes:540,position:room.spawn,flags:['key','unpacked','bag-returned']}};
 for(const [stage,minutes] of Object.entries({young:540,unfurling:920,grown:1980}))cases['art-fern-'+stage]={scene:'garden',townMinutes:minutes,fernStartedAt:540,position:{x:210,y:404}};
 createServer(async(req,res)=>{try{
- const origin=req.headers.origin;if(origin&&!/^http:\/\/(localhost|127\.0\.0\.1):(5270|5271)$/.test(origin))return json(res,403,{error:'ORIGIN_REJECTED'});
+ const origin=req.headers.origin;if(origin&&!/^http:\/\/(localhost|127\.0\.0\.1):(5312|5313)$/.test(origin))return json(res,403,{error:'ORIGIN_REJECTED'});
  const path=new URL(req.url!,'http://localhost');
  if(path.pathname==='/qa/prepare'&&req.method==='POST'){
   const name=path.searchParams.get('case')??'opening';if(!cases[name])return json(res,404,{error:'CASE_UNKNOWN'});
@@ -54,4 +54,4 @@ createServer(async(req,res)=>{try{
  if(path.pathname==='/api/bootstrap'){if(!owner){owner=randomUUID();res.setHeader('Set-Cookie',`harbor_life_qa=${owner}; HttpOnly; SameSite=Strict; Path=/`)}return json(res,200,{mode:'local-synthetic-residents-qa'})}
  if(!owner)return json(res,401,{error:'LOCAL_QA_ONLY'});await api(req,res,owner);
  }catch(e:any){json(res,400,{error:e.code??e.message,terminal:true})}
-}).listen(5271,'127.0.0.1',()=>console.log('Residents QA SQLite authority 127.0.0.1:5271; synthetic players, no external model/media'));
+}).listen(5313,'127.0.0.1',()=>console.log('Residents QA SQLite authority 127.0.0.1:5313; synthetic players, no external model/media'));

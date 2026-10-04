@@ -1,0 +1,9 @@
+{
+  "source": "previous successful read receipt only; raw XML was not retained",
+  "receiptSHA256": "046eee707dc16ac85a91a5d620e1395d9f22a84d7ba36d8c72319bbe9ae706d5",
+  "originalFeedSHA256": "6ef9f8ee2019c031b583ee3a64eec38170840e2ff4229ec92e43f49702857855",
+  "contentHashBasis": "canonicalURL/title/publishedAt/publishedRaw only; NOT full RSS description hash",
+  "newFetches": 0,
+  "modelCalls": 0,
+  "story": "authored finance-budget-v1 fiction"
+}
