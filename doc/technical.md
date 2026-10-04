@@ -117,3 +117,6 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 - `dialogue-context.ts`提供已提交兴趣/相聚/关系；`question-examples.ts`只读当前可见/已知事实，示例不消耗模型。本地QA注入固定回复，不调用外部AI。
 - `_qa/residents-server.ts`仅127.0.0.1:5258，合成玩家和隔离SQLite；`_qa/residents.vite.ts`仅5257。不会修改原5234/5236服务。测试页面仍是真实App与RPGJS。
 - 扩展：日程在residentRoutes添加，话题在resident-life增加；植物按相同权威分钟导出，不加独立timer。生产账号接线属于另一个候选，本批保留正式版browser-capability边界。
+
+### 已知日程与抵达估算
+`src/story/resident-guide.ts`集中管理日程话题、known+talk:routine双条件、当前/下一时段说明与visited快捷前往的+20分钟估算。`resident-life.ts`的一次性routine话题写原有对话历史；`main.tsx`手记仅设置mapFocus；`ui/Map.tsx`显示目的地提醒，保留原visited/busy/current可用性规则。无新计时器、存档写入者或地图解锁。`_qa/resident-guide.test.ts`覆盖4组规则；浏览器`_qa/run-resident-guide.mjs`覆盖5组，使用真实本地SQLite和合成玩家、固定模型回复，禁止外部请求；不代表平台账号或真实模型通过。

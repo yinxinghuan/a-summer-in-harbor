@@ -1,0 +1,30 @@
+{
+  "authority": "real local SQLite, synthetic player fixtures",
+  "externalModelCalls": 0,
+  "errors": [],
+  "cases": [
+    {
+      "name": "learned routine without losing draft",
+      "width": 390,
+      "locale": "en"
+    },
+    {
+      "name": "arrival warning and locked destination",
+      "width": 390,
+      "locale": "en"
+    },
+    {
+      "name": "learned routine without losing draft",
+      "width": 320,
+      "locale": "zh"
+    },
+    {
+      "name": "arrival warning and locked destination",
+      "width": 320,
+      "locale": "zh"
+    },
+    {
+      "name": "no unlearned itinerary"
+    }
+  ]
+}

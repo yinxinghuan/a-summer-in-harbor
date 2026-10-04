@@ -1,0 +1,15 @@
+{
+  "authorization": {
+    "relayedBy": "小小银",
+    "sourceThread": "01a0ff79-c6a9-74f9-b4a0-1de1e4f8d0b3",
+    "userApproval": "Sentinel_6be2bb90a5bc8191907c97a3aa5d2188",
+    "replyTo": "Sentinel_4807dfd985f88191bc2c50da8ca4dda3",
+    "approvedAt": "2026-10-04T05:50:26Z",
+    "scope": "21 planned image jobs, 42 POST maximum, 2 per job, Avery gate before expansion, no purchases/deploy"
+  },
+  "planSha256": "ae6cbd1edfbf4f0cc610e684851b9d8315ee3e7e6c1e1b3bc122ff2cb798bad5",
+  "frozenAt": "2026-10-04T05:53:57.216411+00:00",
+  "attempts": [],
+  "reviews": [],
+  "pilotRendererApproved": false
+}
