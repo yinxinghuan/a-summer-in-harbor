@@ -1,0 +1,12 @@
+{
+  "planningConsistency": "pass",
+  "jobs": 21,
+  "independentFinalPoses": 36,
+  "assembledCells": 48,
+  "firstPassPosts": 21,
+  "pilotCap": 10,
+  "wholeCap": 42,
+  "actualPosts": 0,
+  "mediaQA": "not run; no media exists",
+  "referenceResolution": "pending accepted same-batch roots"
+}

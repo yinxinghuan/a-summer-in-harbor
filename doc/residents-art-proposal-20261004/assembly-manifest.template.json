@@ -1,0 +1,1015 @@
+{
+  "status": "unfilled-not-accepted",
+  "sheet": {
+    "width": 384,
+    "height": 512,
+    "cell": 128,
+    "columns": [
+      "contactA",
+      "stand",
+      "contactB"
+    ],
+    "rows": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "visibleHeightTarget": 108,
+    "anchor": [
+      0.5,
+      0.953125
+    ],
+    "rendererScale": 0.5185185185185185,
+    "note": "same-game initial assembly targets; validate perceptual adult scale in actual scene, no nonuniform stretching"
+  },
+  "frames": [
+    {
+      "actor": "avery",
+      "direction": "down",
+      "pose": "contactA",
+      "row": 0,
+      "col": 0,
+      "parentJob": "avery-down",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "col": 1,
+      "parentJob": "avery-down",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "down",
+      "pose": "contactB",
+      "row": 0,
+      "col": 2,
+      "parentJob": "avery-down",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "left",
+      "pose": "contactA",
+      "row": 1,
+      "col": 0,
+      "parentJob": "avery-side",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "col": 1,
+      "parentJob": "avery-side",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "left",
+      "pose": "contactB",
+      "row": 1,
+      "col": 2,
+      "parentJob": "avery-side",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "right",
+      "pose": "contactA",
+      "row": 2,
+      "col": 0,
+      "parentJob": "avery-side",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "col": 1,
+      "parentJob": "avery-side",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "right",
+      "pose": "contactB",
+      "row": 2,
+      "col": 2,
+      "parentJob": "avery-side",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "up",
+      "pose": "contactA",
+      "row": 3,
+      "col": 0,
+      "parentJob": "avery-up",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "col": 1,
+      "parentJob": "avery-up",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "avery",
+      "direction": "up",
+      "pose": "contactB",
+      "row": 3,
+      "col": 2,
+      "parentJob": "avery-up",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "down",
+      "pose": "contactA",
+      "row": 0,
+      "col": 0,
+      "parentJob": "samira-down",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "col": 1,
+      "parentJob": "samira-down",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "down",
+      "pose": "contactB",
+      "row": 0,
+      "col": 2,
+      "parentJob": "samira-down",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "left",
+      "pose": "contactA",
+      "row": 1,
+      "col": 0,
+      "parentJob": "samira-side",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "col": 1,
+      "parentJob": "samira-side",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "left",
+      "pose": "contactB",
+      "row": 1,
+      "col": 2,
+      "parentJob": "samira-side",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "right",
+      "pose": "contactA",
+      "row": 2,
+      "col": 0,
+      "parentJob": "samira-side",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "col": 1,
+      "parentJob": "samira-side",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "right",
+      "pose": "contactB",
+      "row": 2,
+      "col": 2,
+      "parentJob": "samira-side",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "up",
+      "pose": "contactA",
+      "row": 3,
+      "col": 0,
+      "parentJob": "samira-up",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "col": 1,
+      "parentJob": "samira-up",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "samira",
+      "direction": "up",
+      "pose": "contactB",
+      "row": 3,
+      "col": 2,
+      "parentJob": "samira-up",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "down",
+      "pose": "contactA",
+      "row": 0,
+      "col": 0,
+      "parentJob": "owen-down",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "col": 1,
+      "parentJob": "owen-down",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "down",
+      "pose": "contactB",
+      "row": 0,
+      "col": 2,
+      "parentJob": "owen-down",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "left",
+      "pose": "contactA",
+      "row": 1,
+      "col": 0,
+      "parentJob": "owen-side",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "col": 1,
+      "parentJob": "owen-side",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "left",
+      "pose": "contactB",
+      "row": 1,
+      "col": 2,
+      "parentJob": "owen-side",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "right",
+      "pose": "contactA",
+      "row": 2,
+      "col": 0,
+      "parentJob": "owen-side",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "col": 1,
+      "parentJob": "owen-side",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "right",
+      "pose": "contactB",
+      "row": 2,
+      "col": 2,
+      "parentJob": "owen-side",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "up",
+      "pose": "contactA",
+      "row": 3,
+      "col": 0,
+      "parentJob": "owen-up",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "col": 1,
+      "parentJob": "owen-up",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "owen",
+      "direction": "up",
+      "pose": "contactB",
+      "row": 3,
+      "col": 2,
+      "parentJob": "owen-up",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "down",
+      "pose": "contactA",
+      "row": 0,
+      "col": 0,
+      "parentJob": "dani-down",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "col": 1,
+      "parentJob": "dani-down",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "down",
+      "pose": "contactB",
+      "row": 0,
+      "col": 2,
+      "parentJob": "dani-down",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "left",
+      "pose": "contactA",
+      "row": 1,
+      "col": 0,
+      "parentJob": "dani-side",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "col": 1,
+      "parentJob": "dani-side",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "left",
+      "pose": "contactB",
+      "row": 1,
+      "col": 2,
+      "parentJob": "dani-side",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "right",
+      "pose": "contactA",
+      "row": 2,
+      "col": 0,
+      "parentJob": "dani-side",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "col": 1,
+      "parentJob": "dani-side",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "right",
+      "pose": "contactB",
+      "row": 2,
+      "col": 2,
+      "parentJob": "dani-side",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align",
+        "mirror-full-frame"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "up",
+      "pose": "contactA",
+      "row": 3,
+      "col": 0,
+      "parentJob": "dani-up",
+      "sourcePanel": 0,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "col": 1,
+      "parentJob": "dani-up",
+      "sourcePanel": 1,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    },
+    {
+      "actor": "dani",
+      "direction": "up",
+      "pose": "contactB",
+      "row": 3,
+      "col": 2,
+      "parentJob": "dani-up",
+      "sourcePanel": 2,
+      "sourcePath": null,
+      "sourceRect": null,
+      "sourceSha256": null,
+      "sourceFrameSha256": null,
+      "transform": [
+        "crop",
+        "color-key-reviewed",
+        "uniform-scale",
+        "foot-align"
+      ],
+      "sourceAccepted": false
+    }
+  ],
+  "fern": {
+    "groundAnchor": "retain current growing-fern prop at and approach",
+    "alpha": "color-key only after subject preservation review",
+    "scale": "one common pixels-to-world scale across stages; no independent normalization to equal plant height",
+    "sourceRects": [
+      null,
+      null,
+      null
+    ]
+  },
+  "qa": {
+    "mechanical": "not-run-no-images",
+    "visual": "not-run-no-images",
+    "renderer": "not-run-no-images"
+  }
+}
