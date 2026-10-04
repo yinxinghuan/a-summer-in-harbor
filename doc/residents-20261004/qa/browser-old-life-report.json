@@ -1,0 +1,39 @@
+{
+  "authority": "real local SQLite, synthetic player fixtures",
+  "externalModelCalls": 0,
+  "errors": [],
+  "cases": [
+    {
+      "width": 390,
+      "locale": "en",
+      "taskExample": "I have unpacked. How would you suggest getting to know the town?",
+      "personalExample": "You mentioned windowsill flowers. Has one made you stop lately?",
+      "committed": {
+        "id": "ef9ca72e-1716-496e-ad94-d8ae00e8f2fb",
+        "kind": "talk",
+        "person": "mara",
+        "question": "You mentioned windowsill flowers. Has one made you stop lately?",
+        "text": [
+          "这是本地测试回复，已收到当前小镇生活记录。",
+          "This local test reply received the current town-life context."
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "locale": "zh",
+      "taskExample": "行李放好了。想慢慢熟悉小镇，你有什么建议？",
+      "personalExample": "你说喜欢看窗台上的花，最近有哪一盆让你停下来？",
+      "committed": {
+        "id": "95ed1674-da5f-42ac-8059-7ae5f2ec2ac6",
+        "kind": "talk",
+        "person": "mara",
+        "question": "你说喜欢看窗台上的花，最近有哪一盆让你停下来？",
+        "text": [
+          "这是本地测试回复，已收到当前小镇生活记录。",
+          "This local test reply received the current town-life context."
+        ]
+      }
+    }
+  ]
+}

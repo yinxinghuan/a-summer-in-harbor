@@ -7,6 +7,7 @@ mkdirSync('.data',{recursive:true});const store=openAsyncSqliteAuthorityStore({p
 const contexts:any[]=[];const runtime=createRuntime(async(s,a)=>{contexts.push(dialogueContext(s,entityAt(s.scene,a.target)!.person!));return {topic:null,reply:['这是本地测试回复，已收到当前小镇生活记录。','This local test reply received the current town-life context.']}});
 const auth=new AsyncSessionAuthority(store,runtime);const api=createApiHandler({authority:auth,usage:{status:async()=>({resetAt:0,dialogue:{remaining:0,maximum:0,retryAt:null,pending:0}}),reserve:async()=>{},settle:async()=>{}},noteMedia:{}});
 const cases:Record<string,Partial<Save>>={
+ 'mara-life':{scene:'station',townMinutes:540,position:entityAt('station','mara')!.approach,known:['mara']},
  'legacy-overlap':{scene:'market',townMinutes:undefined,position:{x:542,y:424}},
  owen:{scene:'harbor',townMinutes:540,position:{x:672,y:582}},
  dani:{scene:'garden',townMinutes:540,position:{x:422,y:552}},
@@ -24,7 +25,7 @@ createServer(async(req,res)=>{try{
  if(path.pathname==='/qa/prepare'&&req.method==='POST'){
   const name=path.searchParams.get('case')??'opening';if(!cases[name])return json(res,404,{error:'CASE_UNKNOWN'});
   const owner=randomUUID();res.setHeader('Set-Cookie',`harbor_life_qa=${owner}; HttpOnly; SameSite=Strict; Path=/`);
-  const fixture={...runtime,initial:(locale:any,id:string)=>({...initial(locale,id),flags:['key','unpacked'],items:{key:1},visited:Object.keys(rooms),...cases[name]})};
+  const fixture={...runtime,initial:(locale:any,id:string)=>({...initial(locale,id),flags:name==='opening'?[]:['key','unpacked'],items:name==='opening'?{}:{key:1},visited:name==='opening'?['station']:Object.keys(rooms),...cases[name]})};
   return json(res,200,await new AsyncSessionAuthority(store,fixture).create(owner,randomUUID(),path.searchParams.get('locale')==='zh'?'zh':'en'));
  }
  if(path.pathname==='/qa/contexts')return json(res,200,contexts);

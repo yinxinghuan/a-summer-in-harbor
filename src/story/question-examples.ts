@@ -1,5 +1,5 @@
 import {lifeExamples} from './resident-life';
-import {residentHere} from '../world/residents';
+import {residentHere,residentPeople} from '../world/residents';
 import {rooms,tx,type Locale,type Words} from '../world/data';
 import type {Save} from './state';
 import {questProgress} from './progress';
@@ -44,7 +44,8 @@ export function questionExamples(save:Save,person:string,locale:Locale){
   case 'elena':options=[q.garden==='agreed-10-to-12'?example('elena-hours','约好十点到十二点通行了，怎样提醒大家遵守时间比较好？','We agreed on ten to twelve. What would help people respect those hours?'):example('elena-home','如果有人经过这里，你最希望他们注意什么？','What would you most like people passing through to keep in mind?'),example('elena-flowers','你照看的这些花，有什么特别喜欢的品种吗？','Do you have a favorite among the flowers you tend?')];break;
   case 'arthur':options=[q.trail==='mapped'?example('arthur-mapped','路线图拼好了，沿途有什么值得留意的？','The route map is together. What is worth noticing along the way?'):example('arthur-weather','只看眼前的天空，怎样判断天气会不会变？','How can you tell from the sky whether the weather will change?'),example('arthur-work','以前在气象站，一天通常是怎么过的？','What was an ordinary day at the weather station like?')];break;
  }
- if(local&&lifeExamples(save,person).length)options=lifeExamples(save,person).map((words,i)=>({id:'resident-'+i,words}));
+ const personal=local?lifeExamples(save,person).map((words,i)=>({id:'resident-'+i,words})):[];
+ if(personal.length)options=residentPeople[person]?personal:[...options.slice(0,1),...personal];
  if(!options.length)options=fallback;
  const candidates=options.map(o=>({id:o.id,text:tx(o.words,locale)}));
  // Changing person, journey, locale or relevant progress invalidates preview/cycling,

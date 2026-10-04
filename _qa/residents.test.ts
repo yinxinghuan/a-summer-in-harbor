@@ -1,7 +1,7 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import {randomUUID} from 'node:crypto';import {mkdtempSync,rmSync} from 'node:fs';import {tmpdir} from 'node:os';import {join} from 'node:path';
 import {initial,applyAction,availableTopics,type Save,type Action} from '../src/story/state';
 import {rooms,entityAt,world} from '../src/world/data';import {findPath,walkable} from '../src/engine/world';
-import {residentRoutes,residentClearOfPlayer,observedActor,residentHere,patrolRadius,townMinutes,townPeriod,fernStage,advanceTown,sleepToMorning} from '../src/world/residents';
+import {oldLife,residentRoutes,residentClearOfPlayer,observedActor,residentHere,patrolRadius,townMinutes,townPeriod,fernStage,advanceTown,sleepToMorning} from '../src/world/residents';
 import {runtime,createRuntime} from '../server/runtime';import {questionExamples} from '../src/story/question-examples';import {dialogueContext} from '../server/dialogue-context';
 // @ts-expect-error frozen runtime module
 import {AsyncSessionAuthority,openAsyncSqliteAuthorityStore} from '../vendor/dynamic-runtime/packages/authority-session/async.mjs';
@@ -65,5 +65,17 @@ test('legacy saved feet overlapping any new resident can exit without moving the
    const next=residentClearOfPlayer(e,current,player,world.actor,clear);observedActor(e,next);assert.deepEqual(player,before);
    assert.ok(!(player.x<next.x+9&&player.x+world.actor.w>next.x-9&&player.y<next.y&&player.y+world.actor.h>next.y-8),`${person}/${r.scene}/${offset}/${dx}`);
   }
+ }
+});
+
+test('all nine original NPCs retain task examples and follow up consumed life topics in examples and free-dialogue context',async()=>{
+ for(const person of Object.keys(oldLife)){
+  const room=Object.values(rooms).find(r=>r.entities.some(e=>e.person===person))!;let s=initial('en','fixture');s.scene=room.id;s.known=[person];s.flags=['key','unpacked'];
+  const before=questionExamples(s,person,'en');assert.equal(before.candidates.some(q=>q.id.startsWith('resident-')),false);
+  s=act(s,person,'talk:life');assert.equal(availableTopics(s,person).some(t=>t.id==='life'),false);assert.ok(s.history.some(h=>h.person===person));
+  const after=questionExamples(s,person,'en');assert.deepEqual(after.candidates[0],before.candidates[0]);assert.ok(after.candidates.some(q=>q.id==='resident-0'));assert.notEqual(after.key,before.key);
+  const zh=questionExamples(s,person,'zh');assert.notEqual(zh.candidates[1].text,after.candidates[1].text);
+  let calls=0;const rt=createRuntime(async(head,a)=>{calls++;const context=dialogueContext(head,person);assert.equal(context.residentLife.learnedInterest,true);assert.deepEqual(context.residentLife.personalDetail,oldLife[person].reply);assert.ok(context.historicalExchanges.some(h=>h.person===person));return {topic:null,reply:['本地回复','Local reply']}});
+  const a={...action(s,person,'ask'),payload:{text:after.candidates[1].text}};const response=await rt.prepare(s,a,undefined,{owner:'fixture'});assert.equal(calls,1);assert.equal(response.head.townMinutes,s.townMinutes);assert.equal(response.head.history.at(-1)?.question,after.candidates[1].text);
  }
 });
