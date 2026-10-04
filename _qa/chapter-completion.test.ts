@@ -36,7 +36,7 @@ for(const route of ['bridge','trail','garden'] as const)test(`chapter ${route}: 
   await go('bazaar');await command('notice','read-market');if(route!=='trail'){await go('path');await command('bridge','inspect-bridge');}
   if(route==='bridge'){await go('workshop');await command('june','introduce');await command('june','talk:tools');await go('beach');await command('driftwood','gather-wood');await go('path');await command('bridge','repair-bridge');}
   if(route==='trail'){await go('weather');await command('arthur','introduce');await command('arthur','talk:trail');await go('camp');await command('old-map','challenge-start:map');await command(s.activeChallenge!.id,'challenge-finish',{solution:[0,1,2,3]});}
-  if(route==='garden'){await go('courtyard');await command('elena','introduce');await command('elena','talk:quiet');await command('elena','talk:hours');}
+  if(route==='garden'){await go('home');await command('bed','sleep');await go('courtyard');await command('elena','introduce');await command('elena','talk:quiet');await command('elena','talk:hours');}
   assert.equal(chapterReview(s),null);assert.deepEqual(objectivePlace(s),{scene:'lighthouse',entity:'gate'});await go('lighthouse');await command('gate','open-route');assert.ok(has(s,'route-choice:'+route));assert.equal(chapterReview(s),null);
   await go('bazaar');const completed=await command('notice','open-market');assert.equal(objectivePlace(s),null);assert.match(objective(s)[1],/Summer continues/);const closed=structuredClone(s),review=chapterReview(s);assert.ok(review);assert.deepEqual(chapterReview(s),review);assert.deepEqual(s,closed);
   if(process.env.HARBOR_CHAPTER_FIXTURES==='1')writeFileSync(new URL('./chapter-'+route+'.json',import.meta.url),JSON.stringify(closed,null,2));

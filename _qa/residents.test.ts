@@ -70,7 +70,7 @@ test('legacy saved feet overlapping any new resident can exit without moving the
 
 test('all nine original NPCs retain task examples and follow up consumed life topics in examples and free-dialogue context',async()=>{
  for(const person of Object.keys(oldLife)){
-  const room=Object.values(rooms).find(r=>r.entities.some(e=>e.person===person))!;let s=initial('en','fixture');s.scene=room.id;s.known=[person];s.flags=['key','unpacked'];
+  const room=Object.values(rooms).find(r=>r.entities.some(e=>e.person===person)&&residentHere({townMinutes:540},person,r.id))!;let s=initial('en','fixture');s.scene=room.id;s.known=[person];s.flags=['key','unpacked'];
   const before=questionExamples(s,person,'en');assert.equal(before.candidates.some(q=>q.id.startsWith('resident-')),false);
   s=act(s,person,'talk:life');assert.equal(availableTopics(s,person).some(t=>t.id==='life'),false);assert.ok(s.history.some(h=>h.person===person));
   const after=questionExamples(s,person,'en');assert.deepEqual(after.candidates[0],before.candidates[0]);assert.ok(after.candidates.some(q=>q.id==='resident-0'));assert.notEqual(after.key,before.key);

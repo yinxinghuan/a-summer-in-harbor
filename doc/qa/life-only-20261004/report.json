@@ -1,0 +1,61 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "scenario": "day-street",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 390,
+      "scenario": "evening-street",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 390,
+      "scenario": "night-street",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 320,
+      "scenario": "night-street",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 1024,
+      "scenario": "night-street",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 1440,
+      "scenario": "night-street",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 320,
+      "scenario": "tired",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 390,
+      "scenario": "tired",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    },
+    {
+      "width": 390,
+      "scenario": "mara-life",
+      "result": "pass",
+      "input": "ordinary DOM buttons; synthetic initial fixture"
+    }
+  ],
+  "errors": [],
+  "failedAssets": [],
+  "environment": "local synthetic SQLite authority; no model/media calls, no production changes"
+}

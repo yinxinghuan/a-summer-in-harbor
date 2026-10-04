@@ -1,0 +1,123 @@
+{
+  "cases": [
+    {
+      "scenario": "patrol-dani",
+      "poses": [
+        {
+          "x": 443,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stride-1",
+          "direction": "right"
+        },
+        {
+          "x": 448,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stride-1",
+          "direction": "right"
+        },
+        {
+          "x": 453,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stride-1",
+          "direction": "right"
+        },
+        {
+          "x": 454,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 454,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 454,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 454,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 454,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 454,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 454,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 454,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 454,
+          "y": 510,
+          "graphics": [
+            "npc-dani"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "night-door",
+      "result": "pass"
+    }
+  ],
+  "errors": []
+}

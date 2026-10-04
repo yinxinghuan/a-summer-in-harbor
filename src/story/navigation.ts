@@ -1,3 +1,4 @@
+import {presentEntity} from '../world/residents';
 import {rooms,type Entity} from '../world/data';
 import {has,hasCoastRoute,type Save} from './state';
 export function objectivePlace(s:Save):{scene:string;entity:string}|null{
@@ -20,7 +21,7 @@ export function objectivePlace(s:Save):{scene:string;entity:string}|null{
 /** A walking hint to the next real entrance, never a teleport to an unseen room. */
 export function nextObjectiveEntrance(s:Save):Entity|undefined{
  const goal=objectivePlace(s);if(!goal)return;
- if(s.scene===goal.scene)return rooms[s.scene].entities.find(e=>e.id===goal.entity);
+ if(s.scene===goal.scene)return rooms[s.scene].entities.find(e=>e.id===goal.entity&&presentEntity(s,e));
  const queue=[s.scene],came=new Map<string,string>();came.set(s.scene,'');
  for(let i=0;i<queue.length;i++){
   const id=queue[i];if(id===goal.scene)break;

@@ -1,11 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {residentHere} from '../src/world/residents';
 import {initial} from '../src/story/state';
 import {rooms,people,type Locale} from '../src/world/data';
 import {questionExamples} from '../src/story/question-examples';
 
 function state(person:string,flags:string[]=[]){
- const s=initial('en','example-test');s.known=[person];s.scene=Object.values(rooms).find(r=>r.entities.some(e=>e.person===person))!.id;s.flags=flags;return s;
+ const s=initial('en','example-test');s.known=[person];s.scene=Object.values(rooms).find(r=>r.entities.some(e=>e.person===person)&&residentHere({...s,flags},person,r.id))!.id;s.flags=flags;return s;
 }
 test('every actual NPC input has multiple distinct, bilingual, bounded examples without mutating the save',()=>{
  for(const person of Object.keys(people))for(const locale of ['zh','en'] as Locale[]){

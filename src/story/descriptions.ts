@@ -1,8 +1,9 @@
-import {residentActivity,fernDescription} from '../world/residents';
+import {residentActivity,fernDescription,openingNotice} from '../world/residents';
 import type {Entity,Words} from '../world/data';
 import {has,type Save} from './state';
 export function description(s:Save,e:Entity):Words{
  if(e.id==='growing-fern')return fernDescription(s);
+ if(e.kind==='portal'&&e.destination&&openingNotice(e.destination,s))return openingNotice(e.destination,s)!;
  if(e.kind==='portal')return ['出口就在面前。准备好了，可以从这里前往下一处。','The way is right here. Leave when you are ready.'];
  if(e.person&&residentActivity(s,e.person))return residentActivity(s,e.person)!;
  if(e.person){const greetings:Record<string,Words>={mara:has(s,'key')?['玛拉转过身来，听你说话。','Mara turns to listen.']:['玛拉握着钥匙，听你说话。','Mara listens, the room key still in her hand.'],theo:['西奥把手里的杯子放回柜台。','Theo sets his cup down on the counter.'],june:['琼放下工具，给你留出说话的空当。','June puts her tools down to hear you.'],idris:['教练停下脚步，把练习的节奏留给你。','The coach stops and lets you set the pace.'],ruth:['钓鱼人抬起头，给你让出一点码头的位置。','The angler looks up and makes room beside her.'],luis:['店主从柜台后望过来。','The shopkeeper looks over from the counter.'],nell:['内尔把照片压在桌边，等待你的问题。','Nell keeps a finger on the photograph and waits.'],elena:['埃琳娜关小了水龙头，认真听你开口。','Elena turns down the tap and listens.'],arthur:['阿瑟擦干手上的水，扶了扶帽檐。','Arthur dries his hands and adjusts his cap.']};return greetings[e.person]}

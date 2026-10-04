@@ -1,0 +1,1373 @@
+{
+  "cases": [
+    {
+      "scenario": "patrol-mara",
+      "poses": [
+        {
+          "x": 588,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stride-1",
+          "direction": "right"
+        },
+        {
+          "x": 589,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 589,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 589,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 589,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 589,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 589,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 589,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 589,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 589,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 587,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 582,
+          "y": 685,
+          "graphics": [
+            "npc-mara"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-theo",
+      "poses": [
+        {
+          "x": 603,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 603,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 603,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 603,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 603,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 603,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 603,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 603,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 601,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 596,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 592,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 587,
+          "y": 330,
+          "graphics": [
+            "npc-theo"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-june",
+      "poses": [
+        {
+          "x": 534,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 529,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 523,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 518,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 512,
+          "y": 358,
+          "graphics": [
+            "npc-june"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-idris",
+      "poses": [
+        {
+          "x": 477,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stride-2",
+          "direction": "right"
+        },
+        {
+          "x": 483,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stride-1",
+          "direction": "right"
+        },
+        {
+          "x": 483,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 483,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 483,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 483,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 483,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 483,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 483,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 483,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 481,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 476,
+          "y": 380,
+          "graphics": [
+            "npc-idris"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-ruth",
+      "poses": [
+        {
+          "x": 414,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 414,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 414,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 414,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 414,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 414,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 414,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 409,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 403,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 398,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 392,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 387,
+          "y": 350,
+          "graphics": [
+            "npc-ruth"
+          ],
+          "pose": "stride-0",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-luis",
+      "poses": [
+        {
+          "x": 576,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 576,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 576,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 576,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 576,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 576,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 576,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 576,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 571,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 565,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 560,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 554,
+          "y": 376,
+          "graphics": [
+            "npc-luis"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-nell",
+      "poses": [
+        {
+          "x": 534,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 529,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 523,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 518,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 512,
+          "y": 380,
+          "graphics": [
+            "npc-nell"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-elena",
+      "poses": [
+        {
+          "x": 519,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 519,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 519,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 519,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 519,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 519,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 519,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 515,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 510,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 505,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 501,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 496,
+          "y": 370,
+          "graphics": [
+            "npc-elena"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-arthur",
+      "poses": [
+        {
+          "x": 534,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 534,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 532,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 527,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 521,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 516,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 511,
+          "y": 365,
+          "graphics": [
+            "npc-arthur"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-avery",
+      "poses": [
+        {
+          "x": 544,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 544,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 544,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 544,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 544,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 544,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 544,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 539,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 535,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 530,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 524,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 521,
+          "y": 490,
+          "graphics": [
+            "npc-avery"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-samira",
+      "poses": [
+        {
+          "x": 574,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 574,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 574,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 574,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 574,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 574,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 574,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 570,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 567,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 561,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 556,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 551,
+          "y": 430,
+          "graphics": [
+            "npc-samira"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "scenario": "patrol-owen",
+      "poses": [
+        {
+          "x": 704,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 704,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 704,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 704,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 704,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 704,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 704,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stand",
+          "direction": "right"
+        },
+        {
+          "x": 699,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 693,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stride-2",
+          "direction": "left"
+        },
+        {
+          "x": 690,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 684,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stride-1",
+          "direction": "left"
+        },
+        {
+          "x": 679,
+          "y": 540,
+          "graphics": [
+            "npc-owen"
+          ],
+          "pose": "stride-0",
+          "direction": "left"
+        }
+      ],
+      "result": "pass"
+    }
+  ],
+  "errors": []
+}

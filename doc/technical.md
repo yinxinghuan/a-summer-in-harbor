@@ -125,3 +125,7 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 ## 2026-10-04 最终居民美术集成
 
 最终美术通过 residentPeople.art → NPC sheet/关系页肖像消费；植物通过 sheets.ts 的三阶段图形 id 消费。时间/约会权威模型沿用居民分支，关系 UI 不写入虚构亲密度。该批不依赖账号 PG 接入。
+
+## 独立生活候选（2026-10-04，未发布）
+
+基于正式5fcc3f4，提取本地3c409374的居民日程/场所限定互动/夜景/疲劳。server/runtime.ts只追加可选awakeMinutes的非负安全整数校验；Save缺少该字段时消费端按0处理，upgrade仍不变更内容，mapVersion仍1。现有JSON存档容纳该可选字段，不需要DDL、批量迁移、重设版本或覆盖旧玩家进度。13人出场与巡游/碰撞共享residents.ts规则；state.ts负责权威时间与休息，fatigue.ts提供纯计算，UI/View渲染日程/灯光。无crops/town-news/collector依赖。SQLite旧save/CAS/丢回复/重启/owner隔离已验；正式PG与iPhone硬件未在本批复测。

@@ -1,0 +1,18 @@
+{
+  "status": "local-independent-life-verified-not-published",
+  "base": "5fcc3f411fb7b0160b7f2bd3bc590237260226dc",
+  "extractedFrom": "3c409374a6678be8d9c963d7518b40a820ddad81",
+  "tests": 79,
+  "rendererResidents": 13,
+  "browserCases": 9,
+  "newSaveFields": [
+    "awakeMinutes?"
+  ],
+  "ddl": false,
+  "migration": false,
+  "mediaCalls": 0,
+  "productionWrites": 0,
+  "deploymentApproved": false,
+  "rssDependency": false,
+  "cropDependency": false
+}

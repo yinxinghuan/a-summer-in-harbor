@@ -26,7 +26,12 @@ button,input,textarea,select{font-family:var(--font-ui);font-weight:400}strong,b
 
 /* Committed town period changes outdoor light only, never input or readability. */
 .harbor-world::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;transition:background-color .7s}
-.harbor-world[data-period="evening"]::after{background:rgba(170,91,38,.09)}
-.harbor-world[data-period="night"]::after{background:rgba(20,33,82,.23)}
+.harbor-world[data-period="evening"]::after{background:rgba(170,91,38,.18)}
+.harbor-world[data-period="night"]::after{background:rgba(10,20,62,.50)}
 .harbor-location{flex-wrap:wrap;gap:2px 10px}
 .harbor-location small{white-space:normal;text-align:right;font-size:11px}
+
+/* World-anchored entrance lighting; no new media assets. */
+.harbor-night-light{position:absolute;left:0;top:0;width:130px;height:110px;z-index:3;pointer-events:none;opacity:0;background:radial-gradient(ellipse,#ffdda177,transparent 67%);mix-blend-mode:screen}
+.harbor-world[data-period="night"] .harbor-night-light{opacity:1}
+.harbor-world[data-period="evening"] .harbor-night-light{opacity:.4}
