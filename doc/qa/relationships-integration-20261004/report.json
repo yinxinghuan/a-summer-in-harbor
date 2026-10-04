@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "scenario": "avery",
+      "result": "pass"
+    },
+    {
+      "width": 320,
+      "scenario": "samira",
+      "result": "pass"
+    },
+    {
+      "width": 320,
+      "scenario": "owen",
+      "result": "pass"
+    },
+    {
+      "width": 320,
+      "scenario": "dani",
+      "result": "pass",
+      "daniArt": "unchanged proxy; generation hold"
+    },
+    {
+      "width": 320,
+      "scenario": "schedule-known",
+      "result": "pass"
+    },
+    {
+      "width": 320,
+      "scenario": "evening",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "scenario": "avery",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "scenario": "samira",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "scenario": "owen",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "scenario": "dani",
+      "result": "pass",
+      "daniArt": "unchanged proxy; generation hold"
+    },
+    {
+      "width": 390,
+      "scenario": "schedule-known",
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "scenario": "evening",
+      "result": "pass"
+    }
+  ],
+  "errors": [],
+  "fixture": "Synthetic SQLite, actual residents runtime207ba80 + isolated relationship overlay; no media/model"
+}
