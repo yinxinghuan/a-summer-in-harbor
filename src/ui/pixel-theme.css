@@ -49,3 +49,9 @@ button,input,textarea,select{font-family:var(--font-ui);font-weight:400}strong,b
 .harbor-crop-bed span{top:auto;bottom:0;right:2px;min-width:14px;font-size:10px;background:#e9d5a4;border-width:1px}
 
 .harbor-crop-bed,.harbor-crop-bed[data-stage="growing"],.harbor-crop-bed[data-stage="ready"]{background:none;border:0;box-shadow:none;width:62px;height:32px}.harbor-crop-bed span{bottom:3px}.harbor-crop-bed[data-stage="ready"] span{background:#f9d46c}
+.harbor-journey-choices{width:min(100%,32rem);max-height:60dvh;overflow-y:auto;box-sizing:border-box;text-align:left;padding:12px;background:#fff5dc;color:#253d3a;border:3px solid #405950;box-shadow:4px 4px 0 #263f3b}
+.harbor-journey-choices button{display:block;width:100%;min-height:44px;margin:8px 0;white-space:normal;overflow-wrap:anywhere}
+.harbor-journey-choices article{padding:8px;border-top:2px solid #a7ac87}
+.harbor-account-switch{position:fixed;inset:0;z-index:1000;box-sizing:border-box;padding:24px 16px;background:#f3e8cf;color:#263f3b;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:auto}
+.harbor-account-switch h1{font-size:clamp(22px,6vw,34px)}
+[data-account-loading="true"]>*:not(.harbor-account-switch){visibility:hidden;pointer-events:none}

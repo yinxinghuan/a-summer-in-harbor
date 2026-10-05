@@ -7,10 +7,12 @@ export async function handleApi(request,env){
  const fail=(error,status)=>Response.json({error},{status,headers:{'Cache-Control':'no-store'}});
  const origin=env.HARBOR_PUBLIC_ORIGIN,base=env.HARBOR_GAME_BASE,upstream=env.HARBOR_UPSTREAM_ORIGIN,token=env.HARBOR_EDGE_TOKEN,expires=Number(env.HARBOR_EXPIRES_AT);
  const budgetOnly=env.HARBOR_TIME_POLICY==='user-approved-budget-only-20261001'&&env.HARBOR_EXPIRES_AT==='none';
- if(origin!=='https://game.aiwaves.tech'||!/^\/[a-f0-9-]{36}$/.test(base??'')||!/^https:\/\/[a-z0-9.-]+$/.test(upstream??'')||!/^[a-f0-9]{64}$/.test(token??'')||!(budgetOnly||(env.HARBOR_TIME_POLICY===undefined&&Number.isSafeInteger(expires)))||env.HARBOR_IDENTITY_MODE!=='browser-capability-v1')return fail('PUBLIC_DEPLOYMENT_UNCONFIGURED',503);
+ if(origin!=='https://game.aiwaves.tech'||!/^\/[a-f0-9-]{36}$/.test(base??'')||!/^https:\/\/[a-z0-9.-]+$/.test(upstream??'')||!/^[a-f0-9]{64}$/.test(token??'')||!(budgetOnly||(env.HARBOR_TIME_POLICY===undefined&&Number.isSafeInteger(expires)))||!['browser-capability-v1','temporary-unverified'].includes(env.HARBOR_IDENTITY_MODE))return fail('PUBLIC_DEPLOYMENT_UNCONFIGURED',503);
  if(!budgetOnly&&Date.now()>=expires)return fail('PLAY_WINDOW_CLOSED',410);
+ const demo=env.HARBOR_IDENTITY_MODE==='temporary-unverified';
  const url=new URL(request.url),path=url.pathname;
- if(!/^\/api\/(?:health|bootstrap|usage|sessions(?:\/[a-f0-9-]{36}(?:\/(?:action|checkpoint|events|assets\/(?:home|cafe|garden)\/(?:prepare|package|check|manifest|blob)|media\/workshop-annex-[12](?:\/(?:status|prepare))?))?)?)$/.test(path)||url.search&&!/^\?after=\d{1,12}$/.test(url.search))return fail('NOT_FOUND',404);
+ const demoRoute=demo&&['/api/account/legacy','/api/account/claim'].includes(path);
+ if(!demoRoute&&!/^\/api\/(?:health|bootstrap|usage|sessions(?:\/[a-f0-9-]{36}(?:\/(?:action|checkpoint|events|assets\/(?:home|cafe|garden)\/(?:prepare|package|check|manifest|blob)|media\/workshop-annex-[12](?:\/(?:status|prepare))?))?)?)$/.test(path)||url.search&&!/^\?after=\d{1,12}$/.test(url.search))return fail('NOT_FOUND',404);
  if(!['GET','POST'].includes(request.method))return fail('METHOD_NOT_ALLOWED',405);
  if(request.headers.get('Origin')&&request.headers.get('Origin')!==origin||request.headers.get('Sec-Fetch-Site')==='cross-site')return fail('ORIGIN_FORBIDDEN',403);
  if(request.method==='POST'&&(request.headers.get('Origin')!==origin||!request.headers.get('Content-Type')?.startsWith('application/json')))return fail('INVALID_WRITE_ORIGIN',403);
@@ -29,6 +31,7 @@ export async function handleApi(request,env){
  }
  const headers=new Headers({'X-Harbor-Edge':token,'X-Harbor-Owner':owner,'Origin':origin,'X-Harbor-Game':base.slice(1)});if(body)headers.set('Content-Type','application/json');
  if(request.headers.get('X-Harbor-Dynamic-Assets')==='1')headers.set('X-Harbor-Dynamic-Assets','1');
+ if(demo){const id=request.headers.get('X-Harbor-Telegram-Id');if(id!==null){if(!/^[1-9][0-9]{0,19}$/.test(id)||request.headers.get('X-Harbor-Identity-Mode')!=='temporary-unverified')return fail('INVALID_DEMO_IDENTITY',400);headers.set('X-Harbor-Telegram-Id',id);headers.set('X-Harbor-Identity-Mode','temporary-unverified')}}
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),120000);
- try{const r=await fetch(upstream+base+path+url.search,{method:request.method,headers,body,redirect:'manual',signal:controller.signal});if(r.status>=300&&r.status<400)return fail('UPSTREAM_REDIRECT_REFUSED',502);const out=new Headers({'Content-Type':r.headers.get('Content-Type')??'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});if(r.headers.get('X-Consumer-Grant'))out.set('X-Consumer-Grant',r.headers.get('X-Consumer-Grant'));if(setCookie&&r.ok)out.set('Set-Cookie',setCookie);return new Response(r.body,{status:r.status,headers:out})}catch{return fail('SERVICE_UNAVAILABLE',503)}finally{clearTimeout(timer)}
+ try{const r=await fetch(upstream+base+path+url.search,{method:request.method,headers,body,redirect:'manual',signal:AbortSignal.any([controller.signal,request.signal])});if(r.status>=300&&r.status<400)return fail('UPSTREAM_REDIRECT_REFUSED',502);const out=new Headers({'Content-Type':r.headers.get('Content-Type')??'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});if(r.headers.get('X-Consumer-Grant'))out.set('X-Consumer-Grant',r.headers.get('X-Consumer-Grant'));if(setCookie&&r.ok)out.set('Set-Cookie',setCookie);return new Response(r.body,{status:r.status,headers:out})}catch{return fail('SERVICE_UNAVAILABLE',503)}finally{clearTimeout(timer)}
 }

@@ -8,6 +8,8 @@ const id=v=>{if(typeof v!=='string'||!v.trim()||v.length>256)fail('ASYNC_STORE_S
 const schemaName=v=>{if(typeof v!=='string'||!/^kit_[a-z0-9_]{1,48}$/.test(v))fail('PG_INVALID_SCHEMA');return `"${v}"`;};
 const number=v=>{const n=Number(v);if(!Number.isSafeInteger(n)||n<0)fail('ASYNC_STORE_INTEGER');return n;};
 const ddl=(prefix,integer)=>[
+  `CREATE TABLE IF NOT EXISTS ${prefix}async_account_bindings(world TEXT NOT NULL,session TEXT NOT NULL,account TEXT NOT NULL,legacy TEXT NOT NULL,PRIMARY KEY(world,session))`,
+  `CREATE TABLE IF NOT EXISTS ${prefix}async_account_claims(world TEXT NOT NULL,account TEXT NOT NULL,id TEXT NOT NULL,digest TEXT NOT NULL,response TEXT NOT NULL,PRIMARY KEY(world,account,id))`,
   `CREATE TABLE IF NOT EXISTS ${prefix}async_player_usage(world TEXT NOT NULL,owner TEXT NOT NULL,kind TEXT NOT NULL,id TEXT NOT NULL,digest TEXT NOT NULL,created ${integer} NOT NULL,deadline ${integer} NOT NULL,status TEXT NOT NULL,PRIMARY KEY(world,owner,kind,id))`,
   `CREATE INDEX IF NOT EXISTS async_player_usage_time ON ${prefix}async_player_usage(world,owner,created)`,
   `CREATE TABLE IF NOT EXISTS ${prefix}async_journeys(world TEXT NOT NULL,id TEXT NOT NULL,owner TEXT NOT NULL,enrollment TEXT NOT NULL,enrollment_digest TEXT NOT NULL,data TEXT NOT NULL,cursor ${integer} NOT NULL,updated ${integer} NOT NULL,PRIMARY KEY(world,id),UNIQUE(world,owner,enrollment))`,
@@ -39,6 +41,11 @@ function repository(query,prefix,world,alive){
   const one=async(sql,values)=> (await rows(sql,values))[0];
   const normalized=r=>r?{...r,cursor:number(r.cursor),updated:number(r.updated)}:r;
   return Object.freeze({
+    accountBinding:session=>one('SELECT * FROM @async_account_bindings WHERE world=? AND session=?',[world,session]),
+    accountBindings:account=>rows('SELECT * FROM @async_account_bindings WHERE world=? AND account=? ORDER BY session',[world,account]),
+    addAccountBinding:(session,account,legacy)=>q('INSERT INTO @async_account_bindings(world,session,account,legacy) VALUES(?,?,?,?)',[world,session,account,legacy]),
+    accountClaim:(account,id)=>one('SELECT digest,response FROM @async_account_claims WHERE world=? AND account=? AND id=?',[world,account,id]),
+    addAccountClaim:(account,id,digest,response)=>q('INSERT INTO @async_account_claims(world,account,id,digest,response) VALUES(?,?,?,?,?)',[world,account,id,digest,JSON.stringify(response)]),
     usageRequest:(owner,kind,id)=>one('SELECT * FROM @async_player_usage WHERE world=? AND owner=? AND kind=? AND id=?',[world,owner,kind,id]),
     usageRequests:(owner,since)=>rows('SELECT * FROM @async_player_usage WHERE world=? AND owner=? AND created>=? ORDER BY created,id',[world,owner,since]),
     addUsageRequest:(owner,kind,id,digest,created,deadline)=>q("INSERT INTO @async_player_usage(world,owner,kind,id,digest,created,deadline,status) VALUES(?,?,?,?,?,?,?,'reserved')",[world,owner,kind,id,digest,created,deadline]),

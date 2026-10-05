@@ -1,3 +1,4 @@
+import {createTemporaryAccountTransport} from './account-transport';
 // @ts-expect-error bounded game adapter
 import {createDynamicAssets,assetHttpStatus} from './dynamic-assets/index.mjs';
 /** Public transport adapter. PG is the sole writer; no local DB fallback. */
@@ -13,16 +14,18 @@ const pool=new Pool({host:config.pgHost,database:config.database,user:config.use
 // relabel that as generic certification; public release needs the game's canary.
 const store=await openPgAuthorityStore({pool,schema:config.schema,worldId:GAME_UUID,gameId:GAME_UUID,environment:'test'});
 await mkdir('.data/rules',{recursive:true});
-const authority=new AsyncSessionAuthority(store,createRuntime(await createDialogueResolver(store),await createFieldNotes(store)));
+const runtime=createRuntime(await createDialogueResolver(store),await createFieldNotes(store));
+const authority=new AsyncSessionAuthority(store,runtime);
 const dynamicAssets=await createDynamicAssets({pool,authority,config,edgeToken:token});
-const api=createApiHandler({authority,dynamicAssets,usage:createPlayerUsage({store}),noteMedia:createNoteMedia(store)});
+const deps={store,runtime,dynamicAssets,usage:createPlayerUsage({store}),noteMedia:createNoteMedia(store)};
+const api=config.identityMode==='temporary-unverified'?createTemporaryAccountTransport({...deps,mode:config.identityMode,gameId:GAME_UUID}):createApiHandler({authority,...deps});
 const server=createServer({maxHeaderSize:8192},async(req,res)=>{try{
  const who=verifiedEdgeOwner(req,config,token);const path=new URL(req.url!,'http://localhost').pathname;
- if(path==='/api/health')return json(res,200,{ok:true,gameId:GAME_UUID,release:'harbor-public-r1',identity:'browser-capability-v1',persistence:'postgresql',runtimeCandidate:'2026-10-01.2'});
- if(path==='/api/bootstrap'&&req.method==='POST')return json(res,200,{mode:'browser-capability-v1'});
+ if(path==='/api/health')return json(res,200,{ok:true,gameId:GAME_UUID,release:'harbor-public-r1',identity:config.identityMode,platformIdentityVerified:false,persistence:'postgresql',runtimeCandidate:'2026-10-01.2'});
+ if(config.identityMode==='browser-capability-v1'&&path==='/api/bootstrap'&&req.method==='POST')return json(res,200,{mode:'browser-capability-v1'});
  if(!['GET','POST'].includes(req.method??''))return json(res,405,{error:'METHOD_NOT_ALLOWED'});
  return await api(req,res,who);
- }catch(e:any){const error=String(e.code??e.message??'REQUEST_FAILED');const known=/^[A-Z][A-Z0-9_]{1,90}$/.test(error);json(res,req.url?.includes('/assets/')?assetHttpStatus(e):error==='EDGE_IDENTITY_REQUIRED'?401:error==='PLAY_WINDOW_CLOSED'?410:400,{error:known?error:'SERVICE_UNAVAILABLE',terminal:error!=='MODEL_CALL_PENDING_OR_INTERRUPTED'})}});
+ }catch(e:any){const error=String(e.code??e.message??'REQUEST_FAILED');const known=/^[A-Z][A-Z0-9_]{1,90}$/.test(error);json(res,req.url?.includes('/assets/')?assetHttpStatus(e):e.status??(error==='EDGE_IDENTITY_REQUIRED'?401:error==='PLAY_WINDOW_CLOSED'?410:400),{error:known?error:'SERVICE_UNAVAILABLE',terminal:error!=='MODEL_CALL_PENDING_OR_INTERRUPTED'})}});
 server.requestTimeout=30000;server.headersTimeout=10000;server.keepAliveTimeout=5000;server.maxConnections=64;
 server.listen(config.port,'0.0.0.0',()=>console.log(JSON.stringify({ready:true,gameId:GAME_UUID,release:'harbor-public-r1'})));
 for(const signal of ['SIGTERM','SIGINT'])process.on(signal,()=>{server.close(async()=>{await store.close();await pool.end();process.exit(0)});setTimeout(()=>process.exit(1),130000).unref()});

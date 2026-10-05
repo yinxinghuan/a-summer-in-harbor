@@ -1,0 +1,16 @@
+{
+  "mode": "temporary-unverified",
+  "database": "actual isolated PostgreSQL 16.15",
+  "identity": "synthetic live shell, NOT authenticated platform",
+  "cases": [
+    "live login prompts; cancel retains old save; confirm claims without copy",
+    "second independent browser continues same journey",
+    "delayed A directory does not replace B after switch",
+    "lost action response stays in A scope; B unchanged; return A replays once",
+    "A-B-A and logout keep claimed account journey out of browser directory",
+    "Chinese 320x568 claim confirmation readable and scrollable"
+  ],
+  "errors": [],
+  "blockedExternalRequests": 4,
+  "allowedExternalRequests": 0
+}
