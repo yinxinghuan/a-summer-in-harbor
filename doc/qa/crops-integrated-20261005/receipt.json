@@ -1,0 +1,35 @@
+{
+  "status": "local-source-and-browser-verified",
+  "base": "fad8467",
+  "preservedFix": "c3558b07 main/Combat/combat.css and QA callback signatures",
+  "images": 12,
+  "worldStages": 9,
+  "inventoryImages": 3,
+  "localConsumerBindings": 30,
+  "ruleTests": 90,
+  "ruleFailures": 0,
+  "visualStates": 15,
+  "browserFullFlows": 2,
+  "browserErrors": 0,
+  "viewports": [
+    [
+      320,
+      568
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      1280,
+      800
+    ]
+  ],
+  "platformAccountsTested": false,
+  "iPhoneHardwareTested": false,
+  "productionPublished": false,
+  "newPaidCalls": 0,
+  "onlinePlayerWrites": 0,
+  "sourcePNGUnchanged": true,
+  "libraryInventoryMutated": false
+}

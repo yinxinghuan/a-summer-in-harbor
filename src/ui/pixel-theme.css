@@ -43,3 +43,9 @@ button,input,textarea,select{font-family:var(--font-ui);font-weight:400}strong,b
 .harbor-news-source a{display:inline-block;min-height:44px;padding:10px 0;color:#205d5b;text-decoration:underline}
 
 .harbor-news-source{scroll-margin-top:100px}.harbor-news-source .harbor-news-dates{font-size:12px;line-height:1.65;color:var(--text-muted)}
+
+.harbor-crop-icon{width:64px;height:64px;object-fit:contain;float:left;margin:0 12px 8px 0;image-rendering:pixelated;pointer-events:none}.harbor-item:has(.harbor-crop-icon){display:flow-root;min-height:82px}.harbor-crop-bed[data-stage="growing"],.harbor-crop-bed[data-stage="ready"]{background:repeating-linear-gradient(#75543b 0 5px,#5d402f 5px 7px)}
+
+.harbor-crop-bed span{top:auto;bottom:0;right:2px;min-width:14px;font-size:10px;background:#e9d5a4;border-width:1px}
+
+.harbor-crop-bed,.harbor-crop-bed[data-stage="growing"],.harbor-crop-bed[data-stage="ready"]{background:none;border:0;box-shadow:none;width:62px;height:32px}.harbor-crop-bed span{bottom:3px}.harbor-crop-bed[data-stage="ready"] span{background:#f9d46c}

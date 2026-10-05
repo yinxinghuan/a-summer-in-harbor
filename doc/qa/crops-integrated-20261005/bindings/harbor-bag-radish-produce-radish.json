@@ -1,0 +1,99 @@
+{
+  "format": "rpg-local-consumer-binding-v1",
+  "bindingId": "harbor-bag-radish-produce-radish",
+  "version": 1,
+  "status": "local-authoring-candidate",
+  "source": {
+    "pin": {
+      "renditionId": "harbor__produce-radish",
+      "assetId": "harbor__produce-radish",
+      "revision": null,
+      "hash": "59d31f158efc14a49099b22be8729f5db8ed0bc341b538e305df60b6577c3845"
+    },
+    "manifestFileSha256": "5d58d7932f9d1e17ca876e214f07597d24e2df8b494041a4a6ff698551770d8f",
+    "publicManifestHash": "8e261b526d3c28ebb3ceb1aca387ccc988afad05ec5e80000fc869f126749ae8",
+    "bytes": 24794,
+    "mime": "image/png",
+    "itemId": "produce-radish",
+    "category": "item",
+    "orientation": "front",
+    "width": 256,
+    "height": 256,
+    "view": "unmeasured",
+    "profile": null,
+    "originalViewContract": null,
+    "originalUses": []
+  },
+  "target": {
+    "gameId": "a-summer-in-harbor",
+    "geometry": {
+      "approach": null,
+      "depth": 0,
+      "footprint": [],
+      "image": {
+        "anchor": {
+          "x": 0,
+          "y": 0
+        },
+        "draw": {
+          "h": 64,
+          "w": 64,
+          "x": 0,
+          "y": 0
+        },
+        "height": 256,
+        "scale": 0.25,
+        "width": 256
+      },
+      "orientation": "front",
+      "projection": "harbor-inventory-closeup",
+      "requiredRenderer": {
+        "alpha": "r>110,b>100,r-g>60,b-g>60 only; original RGB preserved",
+        "codeSHA256": "fced2b84d21314ca901573909c29fec7eab626dac64024c92b7c2d04364f9a3d"
+      },
+      "roomId": "inventory",
+      "slotId": "bag-radish"
+    },
+    "orientation": "front",
+    "profile": {
+      "compatProfile": {
+        "density": {
+          "unit": "source-px/world-unit",
+          "value": 4
+        },
+        "lighting": "baked-daylight",
+        "paletteId": "harbor-crop-radish",
+        "pixelScale": {
+          "unit": "source-px/game-px",
+          "value": 4
+        },
+        "projection": "harbor-inventory-closeup"
+      },
+      "profileId": "produce-radish",
+      "styleFamilyId": "harbor-platform-pixel",
+      "version": 1,
+      "hash": "75357678dc8fd95fc9fb7d5110c658ce99606ce454fa302d60b76974714f5b61"
+    },
+    "purpose": "bag-produce",
+    "roomId": "inventory",
+    "slotId": "bag-radish",
+    "validation": {
+      "at": "2026-10-05T09:34:06.246Z",
+      "owner": "harbor-consumer-ai",
+      "records": [
+        {
+          "id": "crop-visual-review",
+          "sha256": "8e7cd0ca8b7aaa07106e3caffa90046d336db5f7b053a0f288c989d338c3ff93"
+        }
+      ],
+      "status": "owner-validated"
+    },
+    "geometryHash": "8ab5aa731157f352a2e9bd905571d919c71e7f63a0bb889090fd0b0de24bc95e"
+  },
+  "authorization": {
+    "productionGranted": false,
+    "inventoryRegistered": false,
+    "generationAuthorized": false
+  },
+  "hash": "ae186c75ff4a7a6173091759d31f34453e1601ad0f718bfa53b70cbc51b5b34f"
+}

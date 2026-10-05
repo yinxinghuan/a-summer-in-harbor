@@ -1,0 +1,102 @@
+{
+  "format": "rpg-local-consumer-binding-v1",
+  "bindingId": "harbor-crop-bed-3-crop-basil-young",
+  "version": 1,
+  "status": "local-authoring-candidate",
+  "source": {
+    "pin": {
+      "renditionId": "harbor__crop-basil-young",
+      "assetId": "harbor__crop-basil-young",
+      "revision": null,
+      "hash": "054503d86f582a6c3aef3949e9e46cf7362d9d5d961537378042b76e7d313892"
+    },
+    "manifestFileSha256": "6060ae2458d21640fbbab71e6ceb1e26e82e8ed53bced275ede72f54528d22ef",
+    "publicManifestHash": "cbc0aa2971a67bc2523af1f3d3efb11140358ce6df92ffe35a04d7bb728d7da0",
+    "bytes": 12223,
+    "mime": "image/png",
+    "itemId": "crop-basil-young",
+    "category": "plant",
+    "orientation": "front",
+    "width": 256,
+    "height": 256,
+    "view": "unmeasured",
+    "profile": null,
+    "originalViewContract": null,
+    "originalUses": []
+  },
+  "target": {
+    "gameId": "a-summer-in-harbor",
+    "geometry": {
+      "approach": {
+        "x": 762,
+        "y": 664
+      },
+      "depth": 620,
+      "footprint": [],
+      "image": {
+        "anchor": {
+          "x": 128,
+          "y": 226
+        },
+        "draw": {
+          "h": 37.72631578947368,
+          "w": 37.72631578947368,
+          "x": 751.1368421052632,
+          "y": 586.6947368421053
+        },
+        "height": 256,
+        "scale": 0.14736842105263157,
+        "width": 256
+      },
+      "orientation": "front",
+      "projection": "harbor-orthogonal-runtime-v1",
+      "requiredRenderer": {
+        "alpha": "r>110,b>100,r-g>60,b-g>60 only; original RGB preserved",
+        "codeSHA256": "fced2b84d21314ca901573909c29fec7eab626dac64024c92b7c2d04364f9a3d"
+      },
+      "roomId": "garden",
+      "slotId": "crop-bed-3"
+    },
+    "orientation": "front",
+    "profile": {
+      "compatProfile": {
+        "density": {
+          "unit": "source-px/world-unit",
+          "value": 6.7857142857142865
+        },
+        "lighting": "baked-daylight",
+        "paletteId": "harbor-crop-basil",
+        "pixelScale": {
+          "unit": "source-px/game-px",
+          "value": 6.7857142857142865
+        },
+        "projection": "harbor-orthogonal-runtime-v1"
+      },
+      "profileId": "crop-basil-young",
+      "styleFamilyId": "harbor-platform-pixel",
+      "version": 1,
+      "hash": "74f62a2b075d6feb7a2764be60ea6df1390f4e32230149b63bce88e3f326345d"
+    },
+    "purpose": "crop-growth",
+    "roomId": "garden",
+    "slotId": "crop-bed-3",
+    "validation": {
+      "at": "2026-10-05T09:34:06.250Z",
+      "owner": "harbor-consumer-ai",
+      "records": [
+        {
+          "id": "crop-visual-review",
+          "sha256": "8e7cd0ca8b7aaa07106e3caffa90046d336db5f7b053a0f288c989d338c3ff93"
+        }
+      ],
+      "status": "owner-validated"
+    },
+    "geometryHash": "3ff6da80a86215a4852a3274e5552bc127bf2fcc1a98a323406def30d2996b01"
+  },
+  "authorization": {
+    "productionGranted": false,
+    "inventoryRegistered": false,
+    "generationAuthorized": false
+  },
+  "hash": "4ba2b912f4e5ff00432120d065107d65a906359cd1bf16b37c1901d9a3b407c5"
+}

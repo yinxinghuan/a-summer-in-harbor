@@ -1,0 +1,102 @@
+{
+  "format": "rpg-local-consumer-binding-v1",
+  "bindingId": "harbor-crop-bed-2-crop-radish-growing",
+  "version": 1,
+  "status": "local-authoring-candidate",
+  "source": {
+    "pin": {
+      "renditionId": "harbor__crop-radish-growing",
+      "assetId": "harbor__crop-radish-growing",
+      "revision": null,
+      "hash": "da9375cb583d2fb2c2ac053fb72a6c3339de7b48e6136f70ca70b8001d9a79c9"
+    },
+    "manifestFileSha256": "c8a38c5470c54cfdae73922dc12c0842e56aceb2c9d01db0094847ee6884839e",
+    "publicManifestHash": "d54f85807ebfcae6e4fd48df5485c16ad44faea1e7c60fdd10e53861989b2a9f",
+    "bytes": 36540,
+    "mime": "image/png",
+    "itemId": "crop-radish-growing",
+    "category": "plant",
+    "orientation": "front",
+    "width": 256,
+    "height": 256,
+    "view": "unmeasured",
+    "profile": null,
+    "originalViewContract": null,
+    "originalUses": []
+  },
+  "target": {
+    "gameId": "a-summer-in-harbor",
+    "geometry": {
+      "approach": {
+        "x": 692,
+        "y": 664
+      },
+      "depth": 620,
+      "footprint": [],
+      "image": {
+        "anchor": {
+          "x": 128,
+          "y": 231
+        },
+        "draw": {
+          "h": 26.81904761904762,
+          "w": 26.81904761904762,
+          "x": 686.5904761904762,
+          "y": 595.8
+        },
+        "height": 256,
+        "scale": 0.10476190476190476,
+        "width": 256
+      },
+      "orientation": "front",
+      "projection": "harbor-orthogonal-runtime-v1",
+      "requiredRenderer": {
+        "alpha": "r>110,b>100,r-g>60,b-g>60 only; original RGB preserved",
+        "codeSHA256": "fced2b84d21314ca901573909c29fec7eab626dac64024c92b7c2d04364f9a3d"
+      },
+      "roomId": "garden",
+      "slotId": "crop-bed-2"
+    },
+    "orientation": "front",
+    "profile": {
+      "compatProfile": {
+        "density": {
+          "unit": "source-px/world-unit",
+          "value": 9.545454545454545
+        },
+        "lighting": "baked-daylight",
+        "paletteId": "harbor-crop-radish",
+        "pixelScale": {
+          "unit": "source-px/game-px",
+          "value": 9.545454545454545
+        },
+        "projection": "harbor-orthogonal-runtime-v1"
+      },
+      "profileId": "crop-radish-growing",
+      "styleFamilyId": "harbor-platform-pixel",
+      "version": 1,
+      "hash": "d5aea4317162853e060e54a7356737f3a7118660d32f1395c9a80fa9b42f93bf"
+    },
+    "purpose": "crop-growth",
+    "roomId": "garden",
+    "slotId": "crop-bed-2",
+    "validation": {
+      "at": "2026-10-05T09:34:06.240Z",
+      "owner": "harbor-consumer-ai",
+      "records": [
+        {
+          "id": "crop-visual-review",
+          "sha256": "8e7cd0ca8b7aaa07106e3caffa90046d336db5f7b053a0f288c989d338c3ff93"
+        }
+      ],
+      "status": "owner-validated"
+    },
+    "geometryHash": "4dcf0dd3333a7fcf51327a20be688d1ad31ab7085c88b07eabb483d63046d27e"
+  },
+  "authorization": {
+    "productionGranted": false,
+    "inventoryRegistered": false,
+    "generationAuthorized": false
+  },
+  "hash": "5252a224f02df04e2145debc54726cb92e6486168207956911834424c906ae9f"
+}

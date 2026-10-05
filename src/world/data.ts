@@ -215,7 +215,8 @@ export const world:World={width:1440,height:1088,step:12,actor:{w:16,h:12},scene
 const fern=rooms.garden.props.find(p=>p.art==='flora-fern-v1')!;fern.id='growing-fern';
 rooms.garden.entities.push({id:'growing-fern',kind:'object',label:['路边的小蕨','Pathside fern'],at:{...fern.at},approach:{x:fern.at.x+28,y:fern.at.y+14},actions:['water-fern']});
 for(const [person,routes] of Object.entries(residentRoutes))for(const route of routes){const existing=rooms[route.scene].entities.find(e=>e.person===person);if(existing){existing.at={...route.at};existing.approach={x:route.at.x-8,y:route.at.y+42}}else addPerson(route.scene,person,route.at.x,route.at.y);}
-for(let i=0;i<3;i++)object('garden','crop-bed-'+(i+1),['菜畦 '+(i+1),'Growing bed '+(i+1)],330+i*90,620,cropVerbs);
+const cropSideRose=rooms.garden.props.find(p=>p.art==='flora-rose-v1'&&p.at.x===742);if(cropSideRose)cropSideRose.at.x=850;
+for(let i=0;i<3;i++)object('garden','crop-bed-'+(i+1),['菜畦 '+(i+1),'Growing bed '+(i+1)],630+i*70,630,cropVerbs);
 rooms.garden.entities.push({id:'visitor-note',kind:'object',label:['游客便条','Visitor note'],at:{x:600,y:600},approach:{x:592,y:634},actions:[]});
 object('grocery','crop-counter',['种子与收获柜台','Seeds & harvest counter'],455,365,shopVerbs);
 export function entityAt(scene:string,id:string){return rooms[scene]?.entities.find(e=>e.id===id)}

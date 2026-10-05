@@ -1,0 +1,215 @@
+{
+  "count": 30,
+  "bindings": [
+    {
+      "id": "harbor-crop-bed-1-crop-radish-young",
+      "hash": "03f982f751aaf229b88a2a739f8bf9d65717aa552c209cc4ef21487a96bb1017",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-2-crop-radish-young",
+      "hash": "ef86f7c670321d16bb47b6dd477ce4ea1bc6ebfe2facc19a6d8a236f9b0bf287",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-3-crop-radish-young",
+      "hash": "beb11dc28c3195b227f045d2f9fc903cb89cc9c631234849c2ff45ae64b2217b",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-1-crop-radish-growing",
+      "hash": "facdb48cbf950a0042a224c36e0f4b6a374dd45dd75f868651a5499c90605758",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-2-crop-radish-growing",
+      "hash": "5252a224f02df04e2145debc54726cb92e6486168207956911834424c906ae9f",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-3-crop-radish-growing",
+      "hash": "e4bd153fa9947a7c5055bdef34239189a9cf929775a267c15a8f4eda058b3663",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-1-crop-radish-ready",
+      "hash": "2d291fc074c15181d7b7d6b5204ff017b5f0ac63cae6c5cb99b7f023b5c59d1d",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-2-crop-radish-ready",
+      "hash": "b281bcc960e8de84a1ed479635aa968c90dbe83a5f43b761814b888bc2bd94c8",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-3-crop-radish-ready",
+      "hash": "f42bcce2289c0655f5584448e6dfd7643d352e10a28e2d38e57139a0027ecbb2",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-bag-radish-produce-radish",
+      "hash": "ae186c75ff4a7a6173091759d31f34453e1601ad0f718bfa53b70cbc51b5b34f",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-1-crop-basil-young",
+      "hash": "ec33a71079dcf03dfce6c40b05adeea335c6978854099a9cc1fa774b83147954",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-2-crop-basil-young",
+      "hash": "0795f3876dc35080a98289654c6c9f48fb21cfb36718601af99095b3fee1eb41",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-3-crop-basil-young",
+      "hash": "4ba2b912f4e5ff00432120d065107d65a906359cd1bf16b37c1901d9a3b407c5",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-1-crop-basil-growing",
+      "hash": "26a6f07e6d06117cae3a1dcca26f8609d0704026a0624461502d97875855c0f6",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-2-crop-basil-growing",
+      "hash": "02d5e5a401ba9fa63fcfab87fda273fee566cac0f47c9f13b025f08601427210",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-3-crop-basil-growing",
+      "hash": "e8735778934a5ea03c6df6aebccc99bae96ce09fe689f451c05ff40bd9d72139",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-1-crop-basil-ready",
+      "hash": "c9cd41701a55301d3c786c76a6d8f2fa68413587057cf6c63cdef456cf1636fd",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-2-crop-basil-ready",
+      "hash": "758862dca53b16e3390350a52f0511c2f16b6466e1fe5810f60e0652d4847646",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-3-crop-basil-ready",
+      "hash": "4d8b26416d439af4ed3f1ea0bc67d7f8e5957791f68ab0b98db368871ab642bc",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-bag-basil-produce-basil",
+      "hash": "d420a40b7aed08780c558d58ce7fde67e802cb862eb647040d4cc23e30ab1146",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-1-crop-tomato-young",
+      "hash": "2214ff5bde98e4223827cdb2a5bc5706cbc1f945ccc5d9f1df85664ecc448140",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-2-crop-tomato-young",
+      "hash": "edab2b254c492c9299223f4c51217372e0d3ccbee24c91f92a0feaf4cbb57227",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-3-crop-tomato-young",
+      "hash": "fdb4e90c820b49f615d44f0ec088b6336bfa4c0c7fa3efac139cbace2b9ff7ae",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-1-crop-tomato-growing",
+      "hash": "7d0609cb70f4fe69d63cfe13c4f14f06e2e83bd936a89fb0a0fdc6d83c4519e4",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-2-crop-tomato-growing",
+      "hash": "4e4bf4ff6f243dafe620c31adda9de6682aec7db3aab2303c59761cd7234afb2",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-3-crop-tomato-growing",
+      "hash": "8b81d8c6d26298f70bb985ab0499569ed14a5cbc2de13db6ead2f308358c6201",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-1-crop-tomato-ready",
+      "hash": "9b92c9faada8e39c5d5b4d628cc66201bd168bd7676a6d8b3740bcb37797b249",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-2-crop-tomato-ready",
+      "hash": "d4394ef543eddb8af5e22169526f82f0e50653b9e26236d0908a5ed6d1195f71",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-crop-bed-3-crop-tomato-ready",
+      "hash": "f1939d42c1e3273efb6911d46830d2b2a6938b08379b795761d478aac3d4f383",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    },
+    {
+      "id": "harbor-bag-tomato-produce-tomato",
+      "hash": "8d28f0397bcb3de081b03fc5e698748dc1552b93b7777eebbfc9a7bc7478cf84",
+      "selected": true,
+      "byteVerified": true,
+      "productionGranted": false
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "format": "rpg-local-consumer-binding-v1",
+  "bindingId": "harbor-crop-bed-2-crop-tomato-ready",
+  "version": 1,
+  "status": "local-authoring-candidate",
+  "source": {
+    "pin": {
+      "renditionId": "harbor__crop-tomato-ready",
+      "assetId": "harbor__crop-tomato-ready",
+      "revision": null,
+      "hash": "3f6a035dac6d81a0255366f3e266af32ea56a8cd9dc44c666ec40a43da8d0101"
+    },
+    "manifestFileSha256": "9db1942b7afe66ccc2bc03e8d6096fd523f8de695343052adc6509bd57eb785b",
+    "publicManifestHash": "cb6e40ded11b308ecc330bdeb9afc72f8609192f132711e79fa4c0bea2a4556b",
+    "bytes": 61117,
+    "mime": "image/png",
+    "itemId": "crop-tomato-ready",
+    "category": "plant",
+    "orientation": "front",
+    "width": 256,
+    "height": 256,
+    "view": "unmeasured",
+    "profile": null,
+    "originalViewContract": null,
+    "originalUses": []
+  },
+  "target": {
+    "gameId": "a-summer-in-harbor",
+    "geometry": {
+      "approach": {
+        "x": 692,
+        "y": 664
+      },
+      "depth": 620,
+      "footprint": [],
+      "image": {
+        "anchor": {
+          "x": 128,
+          "y": 234
+        },
+        "draw": {
+          "h": 51.69230769230769,
+          "w": 51.69230769230769,
+          "x": 674.1538461538462,
+          "y": 572.75
+        },
+        "height": 256,
+        "scale": 0.20192307692307693,
+        "width": 256
+      },
+      "orientation": "front",
+      "projection": "harbor-orthogonal-runtime-v1",
+      "requiredRenderer": {
+        "alpha": "r>110,b>100,r-g>60,b-g>60 only; original RGB preserved",
+        "codeSHA256": "fced2b84d21314ca901573909c29fec7eab626dac64024c92b7c2d04364f9a3d"
+      },
+      "roomId": "garden",
+      "slotId": "crop-bed-2"
+    },
+    "orientation": "front",
+    "profile": {
+      "compatProfile": {
+        "density": {
+          "unit": "source-px/world-unit",
+          "value": 4.9523809523809526
+        },
+        "lighting": "baked-daylight",
+        "paletteId": "harbor-crop-tomato",
+        "pixelScale": {
+          "unit": "source-px/game-px",
+          "value": 4.9523809523809526
+        },
+        "projection": "harbor-orthogonal-runtime-v1"
+      },
+      "profileId": "crop-tomato-ready",
+      "styleFamilyId": "harbor-platform-pixel",
+      "version": 1,
+      "hash": "79bd88b35100e47ed219efe5a245905fc1a67f86d1629338cfb409ad123a8d5a"
+    },
+    "purpose": "crop-growth",
+    "roomId": "garden",
+    "slotId": "crop-bed-2",
+    "validation": {
+      "at": "2026-10-05T09:34:06.268Z",
+      "owner": "harbor-consumer-ai",
+      "records": [
+        {
+          "id": "crop-visual-review",
+          "sha256": "8e7cd0ca8b7aaa07106e3caffa90046d336db5f7b053a0f288c989d338c3ff93"
+        }
+      ],
+      "status": "owner-validated"
+    },
+    "geometryHash": "947397674c62d260ebb57aa0b469cfa66969a90ad8bc5e60b763259e526fb61a"
+  },
+  "authorization": {
+    "productionGranted": false,
+    "inventoryRegistered": false,
+    "generationAuthorized": false
+  },
+  "hash": "d4394ef543eddb8af5e22169526f82f0e50653b9e26236d0908a5ed6d1195f71"
+}

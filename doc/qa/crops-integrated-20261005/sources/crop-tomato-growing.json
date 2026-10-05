@@ -1,0 +1,56 @@
+{
+  "format": "rpg-local-reviewed-source-v1",
+  "assetId": "harbor__crop-tomato-growing",
+  "publishedRevision": null,
+  "sourceVersion": "mt_2c2afadf1d29a68efa7492f51004739a",
+  "semanticItemId": "crop-tomato-growing",
+  "category": "plant",
+  "orientation": "front",
+  "files": {
+    "consumer": {
+      "path": "./art/crops/crop-tomato-growing.png",
+      "sha256": "e786af8227861b64973c45a62ec66f97ff8585e1700d8a7f3b0e37f8c848b98e",
+      "bytes": 46441,
+      "width": 256,
+      "height": 256,
+      "mime": "image/png"
+    }
+  },
+  "license": {
+    "id": "alteru-project-use-confirmed-20261003",
+    "name": "AlterU project usage permission (business confirmation)",
+    "notice": "Generated through AlterU Media for this project. Recorded project permission covers technical processing, internal production, reuse across AlterU games and distribution with game source or builds. No additional attribution requirement was supplied in the business confirmation. This notice records project usage permission, not a universal open-source asset license. Source generation/task and local modifications remain in each manifest.",
+    "allowed": true
+  },
+  "rights": {
+    "documented": true,
+    "application": {
+      "sha256": "f48d2ec2b0ebf1450ace38368ae6779ba6566db87525e0d196d843a5fbd31348"
+    },
+    "sourceTaskId": "mt_2c2afadf1d29a68efa7492f51004739a",
+    "scope": {
+      "copy": true,
+      "transform": true,
+      "internal-agent-use": true,
+      "cross-alteru-game-use": true,
+      "source-and-build-distribution": true
+    }
+  },
+  "visualReview": {
+    "judgment": "pass",
+    "authority": "AI consumer review; no new human opinion",
+    "consumerSha256": "e786af8227861b64973c45a62ec66f97ff8585e1700d8a7f3b0e37f8c848b98e",
+    "evidenceSha256": "8e7cd0ca8b7aaa07106e3caffa90046d336db5f7b053a0f288c989d338c3ff93",
+    "reason": "Usable in this game only with required runtime alpha-key adapter and target geometry; raw source has enclosed magenta and is not a ready universal cutout."
+  },
+  "requiredRenderer": {
+    "id": "harbor-crop-key-v1",
+    "codeSHA256": "fced2b84d21314ca901573909c29fec7eab626dac64024c92b7c2d04364f9a3d"
+  },
+  "sourceProfile": null,
+  "sourceCameraCalibration": "unmeasured",
+  "inventoryRegistered": false,
+  "productionGranted": false,
+  "generationAuthorized": false,
+  "retainedLibraryStatus": "HOLD; not mutated"
+}

@@ -1,0 +1,102 @@
+{
+  "format": "rpg-local-consumer-binding-v1",
+  "bindingId": "harbor-crop-bed-1-crop-tomato-growing",
+  "version": 1,
+  "status": "local-authoring-candidate",
+  "source": {
+    "pin": {
+      "renditionId": "harbor__crop-tomato-growing",
+      "assetId": "harbor__crop-tomato-growing",
+      "revision": null,
+      "hash": "e786af8227861b64973c45a62ec66f97ff8585e1700d8a7f3b0e37f8c848b98e"
+    },
+    "manifestFileSha256": "e8073475eb7276f07566ce08a89be84bebc1915bfc5911d2a756fecc9d896fc6",
+    "publicManifestHash": "569884b38bbfee6fe7fa6cf273cde5a055ea2dc7c638aac08b0d9bd0eb5ab010",
+    "bytes": 46441,
+    "mime": "image/png",
+    "itemId": "crop-tomato-growing",
+    "category": "plant",
+    "orientation": "front",
+    "width": 256,
+    "height": 256,
+    "view": "unmeasured",
+    "profile": null,
+    "originalViewContract": null,
+    "originalUses": []
+  },
+  "target": {
+    "gameId": "a-summer-in-harbor",
+    "geometry": {
+      "approach": {
+        "x": 622,
+        "y": 664
+      },
+      "depth": 620,
+      "footprint": [],
+      "image": {
+        "anchor": {
+          "x": 128,
+          "y": 234
+        },
+        "draw": {
+          "h": 51.69230769230769,
+          "w": 51.69230769230769,
+          "x": 604.1538461538462,
+          "y": 572.75
+        },
+        "height": 256,
+        "scale": 0.20192307692307693,
+        "width": 256
+      },
+      "orientation": "front",
+      "projection": "harbor-orthogonal-runtime-v1",
+      "requiredRenderer": {
+        "alpha": "r>110,b>100,r-g>60,b-g>60 only; original RGB preserved",
+        "codeSHA256": "fced2b84d21314ca901573909c29fec7eab626dac64024c92b7c2d04364f9a3d"
+      },
+      "roomId": "garden",
+      "slotId": "crop-bed-1"
+    },
+    "orientation": "front",
+    "profile": {
+      "compatProfile": {
+        "density": {
+          "unit": "source-px/world-unit",
+          "value": 4.9523809523809526
+        },
+        "lighting": "baked-daylight",
+        "paletteId": "harbor-crop-tomato",
+        "pixelScale": {
+          "unit": "source-px/game-px",
+          "value": 4.9523809523809526
+        },
+        "projection": "harbor-orthogonal-runtime-v1"
+      },
+      "profileId": "crop-tomato-growing",
+      "styleFamilyId": "harbor-platform-pixel",
+      "version": 1,
+      "hash": "79bd88b35100e47ed219efe5a245905fc1a67f86d1629338cfb409ad123a8d5a"
+    },
+    "purpose": "crop-growth",
+    "roomId": "garden",
+    "slotId": "crop-bed-1",
+    "validation": {
+      "at": "2026-10-05T09:34:06.264Z",
+      "owner": "harbor-consumer-ai",
+      "records": [
+        {
+          "id": "crop-visual-review",
+          "sha256": "8e7cd0ca8b7aaa07106e3caffa90046d336db5f7b053a0f288c989d338c3ff93"
+        }
+      ],
+      "status": "owner-validated"
+    },
+    "geometryHash": "84da1d1ee08194589b228df3fc7b6066cd04e48a578730864e07f504c306a0be"
+  },
+  "authorization": {
+    "productionGranted": false,
+    "inventoryRegistered": false,
+    "generationAuthorized": false
+  },
+  "hash": "7d0609cb70f4fe69d63cfe13c4f14f06e2e83bd936a89fb0a0fdc6d83c4519e4"
+}

@@ -1,0 +1,230 @@
+[
+  {
+    "key": "crop-radish-young",
+    "crop": "radish",
+    "stage": "young",
+    "image": "./art/crops/crop-radish-young.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.10476190476190476,
+    "anchor": [
+      128,
+      215
+    ],
+    "sha256": "1c0db0fd473efa2c6cdb5d7002cec7d3cf367d44b5b6b46f3826a5399a22b7fe",
+    "bytes": 8144,
+    "libraryPath": "derived-v2/next-original__crop-radish--growth-sheet/young.png",
+    "sourceSHA256": "36cbabb4b67f61094ec050c8d504dace8e6d6eb310792b37e331a217abc31875",
+    "taskId": "mt_bbe94d50dd406bcc4502d1599109a57e",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791144969789-fqdsemjq9no.webp"
+  },
+  {
+    "key": "crop-radish-growing",
+    "crop": "radish",
+    "stage": "growing",
+    "image": "./art/crops/crop-radish-growing.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.10476190476190476,
+    "anchor": [
+      128,
+      231
+    ],
+    "sha256": "da9375cb583d2fb2c2ac053fb72a6c3339de7b48e6136f70ca70b8001d9a79c9",
+    "bytes": 36540,
+    "libraryPath": "derived-v2/next-original__crop-radish--growth-sheet/growing.png",
+    "sourceSHA256": "36cbabb4b67f61094ec050c8d504dace8e6d6eb310792b37e331a217abc31875",
+    "taskId": "mt_bbe94d50dd406bcc4502d1599109a57e",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791144969789-fqdsemjq9no.webp"
+  },
+  {
+    "key": "crop-radish-ready",
+    "crop": "radish",
+    "stage": "ready",
+    "image": "./art/crops/crop-radish-ready.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.10476190476190476,
+    "anchor": [
+      128,
+      239
+    ],
+    "sha256": "80c7fd737cf1b187beeeaca28f11a4667572f326cc8c8ef2b137f090af968f75",
+    "bytes": 50285,
+    "libraryPath": "derived-v2/next-original__crop-radish--growth-sheet/harvestable.png",
+    "sourceSHA256": "36cbabb4b67f61094ec050c8d504dace8e6d6eb310792b37e331a217abc31875",
+    "taskId": "mt_bbe94d50dd406bcc4502d1599109a57e",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791144969789-fqdsemjq9no.webp"
+  },
+  {
+    "key": "produce-radish",
+    "crop": "radish",
+    "stage": "harvest",
+    "image": "./art/crops/produce-radish.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.10476190476190476,
+    "anchor": [
+      128,
+      256
+    ],
+    "sha256": "59d31f158efc14a49099b22be8729f5db8ed0bc341b538e305df60b6577c3845",
+    "bytes": 24794,
+    "libraryPath": "derived-v2/next-original__crop-radish--harvest/consumer.png",
+    "sourceSHA256": "5e73fc28600d7dc40dba827f879a500439e171afef65316aa1a7d72f7ca04650",
+    "taskId": "mt_c83b9fb241a7d6e92141432c793955a5",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791146012838-5u3kc74oazn.webp"
+  },
+  {
+    "key": "crop-basil-young",
+    "crop": "basil",
+    "stage": "young",
+    "image": "./art/crops/crop-basil-young.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.14736842105263157,
+    "anchor": [
+      128,
+      226
+    ],
+    "sha256": "054503d86f582a6c3aef3949e9e46cf7362d9d5d961537378042b76e7d313892",
+    "bytes": 12223,
+    "libraryPath": "derived-v2/next-original__crop-basil--growth-sheet/young.png",
+    "sourceSHA256": "a27e846ed6b6bd95cbc155e449020fa0441d78cda6bb43fd57394141d3159ea6",
+    "taskId": "mt_6ed9dc678393aafad63f26addf708a42",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791144990397-hao2opkx60e.webp"
+  },
+  {
+    "key": "crop-basil-growing",
+    "crop": "basil",
+    "stage": "growing",
+    "image": "./art/crops/crop-basil-growing.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.14736842105263157,
+    "anchor": [
+      128,
+      226
+    ],
+    "sha256": "8d6f82b0166d676149f225aeff20c9b89296e8df91f207517ed9fd12c2f7849b",
+    "bytes": 39087,
+    "libraryPath": "derived-v2/next-original__crop-basil--growth-sheet/growing.png",
+    "sourceSHA256": "a27e846ed6b6bd95cbc155e449020fa0441d78cda6bb43fd57394141d3159ea6",
+    "taskId": "mt_6ed9dc678393aafad63f26addf708a42",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791144990397-hao2opkx60e.webp"
+  },
+  {
+    "key": "crop-basil-ready",
+    "crop": "basil",
+    "stage": "ready",
+    "image": "./art/crops/crop-basil-ready.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.14736842105263157,
+    "anchor": [
+      128,
+      226
+    ],
+    "sha256": "a711404a6949704df1cb906ff28cb8e7f4e4b2aa948f9a9e39edf950c5b9383d",
+    "bytes": 70568,
+    "libraryPath": "derived-v2/next-original__crop-basil--growth-sheet/harvestable.png",
+    "sourceSHA256": "a27e846ed6b6bd95cbc155e449020fa0441d78cda6bb43fd57394141d3159ea6",
+    "taskId": "mt_6ed9dc678393aafad63f26addf708a42",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791144990397-hao2opkx60e.webp"
+  },
+  {
+    "key": "produce-basil",
+    "crop": "basil",
+    "stage": "harvest",
+    "image": "./art/crops/produce-basil.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.14736842105263157,
+    "anchor": [
+      128,
+      256
+    ],
+    "sha256": "6e062ec48c2af7283a95263926e0a9ae3e318df8ac205e2b89a41b5f15ec7587",
+    "bytes": 44924,
+    "libraryPath": "derived-v2/next-original__crop-basil--harvest/consumer.png",
+    "sourceSHA256": "2d74c63a31c3b632aa138d7c481c83f45f611f7287e2a037af8cf034d439f985",
+    "taskId": "mt_9c5dcc62806fcf13d0c4aebe2b5c6e5d",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791146048157-2dh2n4rols6.webp"
+  },
+  {
+    "key": "crop-tomato-young",
+    "crop": "tomato",
+    "stage": "young",
+    "image": "./art/crops/crop-tomato-young.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.20192307692307693,
+    "anchor": [
+      128,
+      234
+    ],
+    "sha256": "e0e3bbbaa94a5c328664628c4e3ccb2a5922cadbc4023a7efee5e39530e9e75a",
+    "bytes": 13895,
+    "libraryPath": "derived-v2/next-original__crop-tomato--growth-sheet/young.png",
+    "sourceSHA256": "1ec51e23700bd8484224079d3d42e61d08a04742b176dbc98cb99640cdc6c540",
+    "taskId": "mt_2c2afadf1d29a68efa7492f51004739a",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791145012227-pruse1grug.webp"
+  },
+  {
+    "key": "crop-tomato-growing",
+    "crop": "tomato",
+    "stage": "growing",
+    "image": "./art/crops/crop-tomato-growing.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.20192307692307693,
+    "anchor": [
+      128,
+      234
+    ],
+    "sha256": "e786af8227861b64973c45a62ec66f97ff8585e1700d8a7f3b0e37f8c848b98e",
+    "bytes": 46441,
+    "libraryPath": "derived-v2/next-original__crop-tomato--growth-sheet/growing.png",
+    "sourceSHA256": "1ec51e23700bd8484224079d3d42e61d08a04742b176dbc98cb99640cdc6c540",
+    "taskId": "mt_2c2afadf1d29a68efa7492f51004739a",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791145012227-pruse1grug.webp"
+  },
+  {
+    "key": "crop-tomato-ready",
+    "crop": "tomato",
+    "stage": "ready",
+    "image": "./art/crops/crop-tomato-ready.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.20192307692307693,
+    "anchor": [
+      128,
+      234
+    ],
+    "sha256": "3f6a035dac6d81a0255366f3e266af32ea56a8cd9dc44c666ec40a43da8d0101",
+    "bytes": 61117,
+    "libraryPath": "derived-v2/next-original__crop-tomato--growth-sheet/harvestable.png",
+    "sourceSHA256": "1ec51e23700bd8484224079d3d42e61d08a04742b176dbc98cb99640cdc6c540",
+    "taskId": "mt_2c2afadf1d29a68efa7492f51004739a",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791145012227-pruse1grug.webp"
+  },
+  {
+    "key": "produce-tomato",
+    "crop": "tomato",
+    "stage": "harvest",
+    "image": "./art/crops/produce-tomato.png",
+    "width": 256,
+    "height": 256,
+    "scale": 0.20192307692307693,
+    "anchor": [
+      128,
+      256
+    ],
+    "sha256": "f03cb3c6c9906478454099c2669d20e7dd3aa4d17ecc8b345239f8bbac909c3e",
+    "bytes": 32945,
+    "libraryPath": "derived-v2/next-original__crop-tomato--harvest/consumer.png",
+    "sourceSHA256": "40ab09582ff988399a0de0b421abd26b28530066d3f0604ed68dfda8022db21a",
+    "taskId": "mt_d968341a8ee9cbc1c09c9e058a4181ca",
+    "sourceURL": "https://images.aiwaves.tech/uploads/1791146083435-j15br0gfoh.webp"
+  }
+]

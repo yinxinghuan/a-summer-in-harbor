@@ -1,0 +1,86 @@
+[
+  {
+    "key": "crop-radish-young",
+    "cachedPromise": true,
+    "keyed": 11,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "crop-radish-growing",
+    "cachedPromise": true,
+    "keyed": 487,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "crop-radish-ready",
+    "cachedPromise": true,
+    "keyed": 809,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "produce-radish",
+    "cachedPromise": true,
+    "keyed": 96,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "crop-basil-young",
+    "cachedPromise": true,
+    "keyed": 59,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "crop-basil-growing",
+    "cachedPromise": true,
+    "keyed": 468,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "crop-basil-ready",
+    "cachedPromise": true,
+    "keyed": 504,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "produce-basil",
+    "cachedPromise": true,
+    "keyed": 1,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "crop-tomato-young",
+    "cachedPromise": true,
+    "keyed": 145,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "crop-tomato-growing",
+    "cachedPromise": true,
+    "keyed": 733,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "crop-tomato-ready",
+    "cachedPromise": true,
+    "keyed": 1433,
+    "left": 0,
+    "coreChanged": 0
+  },
+  {
+    "key": "produce-tomato",
+    "cachedPromise": true,
+    "keyed": 3,
+    "left": 0,
+    "coreChanged": 0
+  }
+]

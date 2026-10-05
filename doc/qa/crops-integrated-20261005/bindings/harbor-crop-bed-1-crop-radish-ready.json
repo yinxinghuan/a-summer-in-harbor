@@ -1,0 +1,102 @@
+{
+  "format": "rpg-local-consumer-binding-v1",
+  "bindingId": "harbor-crop-bed-1-crop-radish-ready",
+  "version": 1,
+  "status": "local-authoring-candidate",
+  "source": {
+    "pin": {
+      "renditionId": "harbor__crop-radish-ready",
+      "assetId": "harbor__crop-radish-ready",
+      "revision": null,
+      "hash": "80c7fd737cf1b187beeeaca28f11a4667572f326cc8c8ef2b137f090af968f75"
+    },
+    "manifestFileSha256": "4c331964d6e3b9b057ba60cfa0bb2c84cc3c559f6044d5f02957b854b5c483eb",
+    "publicManifestHash": "6d4e71633c9661e86f035a9f05014f2a9ab3313e70963bf8b8722d3148c88e83",
+    "bytes": 50285,
+    "mime": "image/png",
+    "itemId": "crop-radish-ready",
+    "category": "plant",
+    "orientation": "front",
+    "width": 256,
+    "height": 256,
+    "view": "unmeasured",
+    "profile": null,
+    "originalViewContract": null,
+    "originalUses": []
+  },
+  "target": {
+    "gameId": "a-summer-in-harbor",
+    "geometry": {
+      "approach": {
+        "x": 622,
+        "y": 664
+      },
+      "depth": 620,
+      "footprint": [],
+      "image": {
+        "anchor": {
+          "x": 128,
+          "y": 239
+        },
+        "draw": {
+          "h": 26.81904761904762,
+          "w": 26.81904761904762,
+          "x": 616.5904761904762,
+          "y": 594.9619047619047
+        },
+        "height": 256,
+        "scale": 0.10476190476190476,
+        "width": 256
+      },
+      "orientation": "front",
+      "projection": "harbor-orthogonal-runtime-v1",
+      "requiredRenderer": {
+        "alpha": "r>110,b>100,r-g>60,b-g>60 only; original RGB preserved",
+        "codeSHA256": "fced2b84d21314ca901573909c29fec7eab626dac64024c92b7c2d04364f9a3d"
+      },
+      "roomId": "garden",
+      "slotId": "crop-bed-1"
+    },
+    "orientation": "front",
+    "profile": {
+      "compatProfile": {
+        "density": {
+          "unit": "source-px/world-unit",
+          "value": 9.545454545454545
+        },
+        "lighting": "baked-daylight",
+        "paletteId": "harbor-crop-radish",
+        "pixelScale": {
+          "unit": "source-px/game-px",
+          "value": 9.545454545454545
+        },
+        "projection": "harbor-orthogonal-runtime-v1"
+      },
+      "profileId": "crop-radish-ready",
+      "styleFamilyId": "harbor-platform-pixel",
+      "version": 1,
+      "hash": "d5aea4317162853e060e54a7356737f3a7118660d32f1395c9a80fa9b42f93bf"
+    },
+    "purpose": "crop-growth",
+    "roomId": "garden",
+    "slotId": "crop-bed-1",
+    "validation": {
+      "at": "2026-10-05T09:34:06.243Z",
+      "owner": "harbor-consumer-ai",
+      "records": [
+        {
+          "id": "crop-visual-review",
+          "sha256": "8e7cd0ca8b7aaa07106e3caffa90046d336db5f7b053a0f288c989d338c3ff93"
+        }
+      ],
+      "status": "owner-validated"
+    },
+    "geometryHash": "860e5053a89cbe02c71c0694380df1f036bb867777da5c5994683fbf92a79075"
+  },
+  "authorization": {
+    "productionGranted": false,
+    "inventoryRegistered": false,
+    "generationAuthorized": false
+  },
+  "hash": "2d291fc074c15181d7b7d6b5204ff017b5f0ac63cae6c5cb99b7f023b5c59d1d"
+}

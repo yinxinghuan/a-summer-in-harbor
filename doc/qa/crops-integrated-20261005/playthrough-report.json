@@ -1,0 +1,37 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "allThreePlantedWateredHarvested": true,
+      "dryTomatoRewatered": true,
+      "sleptAndTravelledThroughActualUI": true,
+      "threeBagIcons": true,
+      "refreshPreserved": true,
+      "soldAndReplanted": true,
+      "cash": 32,
+      "items": {
+        "key": 1,
+        "crop-radish": 1,
+        "crop-basil": 2,
+        "crop-tomato": 3
+      }
+    },
+    {
+      "width": 320,
+      "allThreePlantedWateredHarvested": true,
+      "dryTomatoRewatered": true,
+      "sleptAndTravelledThroughActualUI": true,
+      "threeBagIcons": true,
+      "refreshPreserved": true,
+      "soldAndReplanted": true,
+      "cash": 32,
+      "items": {
+        "key": 1,
+        "crop-radish": 1,
+        "crop-basil": 2,
+        "crop-tomato": 3
+      }
+    }
+  ],
+  "errors": []
+}

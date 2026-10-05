@@ -1,0 +1,339 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "young",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-young.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-young.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-young.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "growing",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "ready",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-ready.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-ready.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-ready.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "dry",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stage": "bag",
+      "rendered": [],
+      "icons": 3
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "stage": "young",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-young.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-young.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-young.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "stage": "growing",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "stage": "ready",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-ready.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-ready.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-ready.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "stage": "dry",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "stage": "bag",
+      "rendered": [],
+      "icons": 3
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "stage": "young",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-young.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-young.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-young.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "stage": "growing",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "stage": "ready",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-ready.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-ready.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-ready.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "stage": "dry",
+      "rendered": [
+        {
+          "label": "prop-garden-crop-radish-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.10476190476190476
+        },
+        {
+          "label": "prop-garden-crop-basil-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.14736842105263157
+        },
+        {
+          "label": "prop-garden-crop-tomato-growing.png",
+          "x": 0,
+          "y": 0,
+          "scale": 0.20192307692307693
+        }
+      ],
+      "icons": 0
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "stage": "bag",
+      "rendered": [],
+      "icons": 3
+    }
+  ],
+  "errors": [],
+  "failedArt": []
+}

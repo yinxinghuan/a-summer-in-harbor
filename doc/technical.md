@@ -147,3 +147,7 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 ## 2026-10-05 本地验证增量：资讯与作物
 
 仅独立候选、无部署。账号证据见doc/qa/account-pg-20261005（账号候选）；真实资讯证据见doc/qa/real-news-20261005、作物接入缺件见doc/crop-library-20261005（资讯候选）。不混淆账号验真、PG隔离、资讯模板与素材实际可用状态。未涉及另一候选的功能不标为本候选已集成。
+
+
+## 2026-10-05 作物12图集成（本地验收）
+`world/crop-art.json`固定12图、来源hash、每物种共享缩放与根部anchor；`crop-art.ts`首次解码强洋红透明并缓存data URL，原图不改。`sheets.ts`注册9阶段和原程序化土床标记；`View.tsx`将plots纳入latest ref、按plot key更新三个RPGJS事件，深度与主角共用空间引擎。仅状态变化setGraphic；没有逐帧图片加工或第二生长时钟。`ui/CropImage.tsx`将3产物以同一透明适配显示在原背包。菜畦移至道路右侧630/700/770,630，approach由原object生成；原plot ID不变、无新碰撞，现有存档位置仍合法。源码保留c3558b07训练销毁/恢复修复。回归与来源见doc/qa/crops-integrated-20261005/README.md；未部署，不包含账号及下一批6居民分支。

@@ -1,0 +1,99 @@
+{
+  "format": "rpg-local-consumer-binding-v1",
+  "bindingId": "harbor-bag-basil-produce-basil",
+  "version": 1,
+  "status": "local-authoring-candidate",
+  "source": {
+    "pin": {
+      "renditionId": "harbor__produce-basil",
+      "assetId": "harbor__produce-basil",
+      "revision": null,
+      "hash": "6e062ec48c2af7283a95263926e0a9ae3e318df8ac205e2b89a41b5f15ec7587"
+    },
+    "manifestFileSha256": "f4595f09b9df4dabdc976bc51868478cc6d0e9f3576697ad0d00e71357fb0ee3",
+    "publicManifestHash": "4d7fe6ddd756a01d3d8e090e49a314c66233addda82ee68f071420f66a5b20bf",
+    "bytes": 44924,
+    "mime": "image/png",
+    "itemId": "produce-basil",
+    "category": "item",
+    "orientation": "front",
+    "width": 256,
+    "height": 256,
+    "view": "unmeasured",
+    "profile": null,
+    "originalViewContract": null,
+    "originalUses": []
+  },
+  "target": {
+    "gameId": "a-summer-in-harbor",
+    "geometry": {
+      "approach": null,
+      "depth": 0,
+      "footprint": [],
+      "image": {
+        "anchor": {
+          "x": 0,
+          "y": 0
+        },
+        "draw": {
+          "h": 64,
+          "w": 64,
+          "x": 0,
+          "y": 0
+        },
+        "height": 256,
+        "scale": 0.25,
+        "width": 256
+      },
+      "orientation": "front",
+      "projection": "harbor-inventory-closeup",
+      "requiredRenderer": {
+        "alpha": "r>110,b>100,r-g>60,b-g>60 only; original RGB preserved",
+        "codeSHA256": "fced2b84d21314ca901573909c29fec7eab626dac64024c92b7c2d04364f9a3d"
+      },
+      "roomId": "inventory",
+      "slotId": "bag-basil"
+    },
+    "orientation": "front",
+    "profile": {
+      "compatProfile": {
+        "density": {
+          "unit": "source-px/world-unit",
+          "value": 4
+        },
+        "lighting": "baked-daylight",
+        "paletteId": "harbor-crop-basil",
+        "pixelScale": {
+          "unit": "source-px/game-px",
+          "value": 4
+        },
+        "projection": "harbor-inventory-closeup"
+      },
+      "profileId": "produce-basil",
+      "styleFamilyId": "harbor-platform-pixel",
+      "version": 1,
+      "hash": "a36659d005f63b0f4b7a9d32a489d2afc149f5c8f22ce0fefa7ffe1743e4d9af"
+    },
+    "purpose": "bag-produce",
+    "roomId": "inventory",
+    "slotId": "bag-basil",
+    "validation": {
+      "at": "2026-10-05T09:34:06.258Z",
+      "owner": "harbor-consumer-ai",
+      "records": [
+        {
+          "id": "crop-visual-review",
+          "sha256": "8e7cd0ca8b7aaa07106e3caffa90046d336db5f7b053a0f288c989d338c3ff93"
+        }
+      ],
+      "status": "owner-validated"
+    },
+    "geometryHash": "083f88e047c841177112a382c002c438a7a656c6bf975dd35c64d22f88d689af"
+  },
+  "authorization": {
+    "productionGranted": false,
+    "inventoryRegistered": false,
+    "generationAuthorized": false
+  },
+  "hash": "d420a40b7aed08780c558d58ce7fde67e802cb862eb647040d4cc23e30ab1146"
+}

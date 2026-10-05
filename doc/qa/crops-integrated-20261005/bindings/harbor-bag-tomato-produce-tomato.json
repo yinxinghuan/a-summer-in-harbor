@@ -1,0 +1,99 @@
+{
+  "format": "rpg-local-consumer-binding-v1",
+  "bindingId": "harbor-bag-tomato-produce-tomato",
+  "version": 1,
+  "status": "local-authoring-candidate",
+  "source": {
+    "pin": {
+      "renditionId": "harbor__produce-tomato",
+      "assetId": "harbor__produce-tomato",
+      "revision": null,
+      "hash": "f03cb3c6c9906478454099c2669d20e7dd3aa4d17ecc8b345239f8bbac909c3e"
+    },
+    "manifestFileSha256": "50ff80d5781714075c78d3a7ef9b2f2ad3950d0c6adcda91d8efbeb2bec31769",
+    "publicManifestHash": "b5665c30b6f5a94e7ff9c4c706b2af742b5cac19500d1aaa7cbc87d4e4c48664",
+    "bytes": 32945,
+    "mime": "image/png",
+    "itemId": "produce-tomato",
+    "category": "item",
+    "orientation": "front",
+    "width": 256,
+    "height": 256,
+    "view": "unmeasured",
+    "profile": null,
+    "originalViewContract": null,
+    "originalUses": []
+  },
+  "target": {
+    "gameId": "a-summer-in-harbor",
+    "geometry": {
+      "approach": null,
+      "depth": 0,
+      "footprint": [],
+      "image": {
+        "anchor": {
+          "x": 0,
+          "y": 0
+        },
+        "draw": {
+          "h": 64,
+          "w": 64,
+          "x": 0,
+          "y": 0
+        },
+        "height": 256,
+        "scale": 0.25,
+        "width": 256
+      },
+      "orientation": "front",
+      "projection": "harbor-inventory-closeup",
+      "requiredRenderer": {
+        "alpha": "r>110,b>100,r-g>60,b-g>60 only; original RGB preserved",
+        "codeSHA256": "fced2b84d21314ca901573909c29fec7eab626dac64024c92b7c2d04364f9a3d"
+      },
+      "roomId": "inventory",
+      "slotId": "bag-tomato"
+    },
+    "orientation": "front",
+    "profile": {
+      "compatProfile": {
+        "density": {
+          "unit": "source-px/world-unit",
+          "value": 4
+        },
+        "lighting": "baked-daylight",
+        "paletteId": "harbor-crop-tomato",
+        "pixelScale": {
+          "unit": "source-px/game-px",
+          "value": 4
+        },
+        "projection": "harbor-inventory-closeup"
+      },
+      "profileId": "produce-tomato",
+      "styleFamilyId": "harbor-platform-pixel",
+      "version": 1,
+      "hash": "d4094c3e4f4d577caf3f46ff71443dd383f5d324a2d914e4e949a3c48df5e2d4"
+    },
+    "purpose": "bag-produce",
+    "roomId": "inventory",
+    "slotId": "bag-tomato",
+    "validation": {
+      "at": "2026-10-05T09:34:06.271Z",
+      "owner": "harbor-consumer-ai",
+      "records": [
+        {
+          "id": "crop-visual-review",
+          "sha256": "8e7cd0ca8b7aaa07106e3caffa90046d336db5f7b053a0f288c989d338c3ff93"
+        }
+      ],
+      "status": "owner-validated"
+    },
+    "geometryHash": "a7c60f88e1a118aac80453516ff4f8d79d1639bdab6ad7979592e7a20adc55c5"
+  },
+  "authorization": {
+    "productionGranted": false,
+    "inventoryRegistered": false,
+    "generationAuthorized": false
+  },
+  "hash": "8d28f0397bcb3de081b03fc5e698748dc1552b93b7777eebbfc9a7bc7478cf84"
+}
