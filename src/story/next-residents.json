@@ -1,0 +1,614 @@
+[
+  {
+    "id": "rowan",
+    "name": [
+      "罗温",
+      "Rowan Ellis"
+    ],
+    "role": [
+      "烘焙师",
+      "Baker"
+    ],
+    "unknown": [
+      "尚未认识的来访者",
+      "Someone you have not met"
+    ],
+    "intro": [
+      "“罗温。我做面包，总忍不住多烤一点，收摊时又心疼。这个夏天想试试少做一点、认真听听别人要什么。”",
+      "“Rowan. I bake bread. I always make a little extra, then hate seeing it left at closing. This summer I want to bake less and listen more.”"
+    ],
+    "art": "luis",
+    "artPlan": "next-original__baker-cap-apron",
+    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "partner": "luis",
+    "partnerName": [
+      "路易斯",
+      "Luis"
+    ],
+    "routes": [
+      {
+        "scene": "market",
+        "at": {
+          "x": 490,
+          "y": 600
+        }
+      },
+      {
+        "scene": "cafe",
+        "at": {
+          "x": 365,
+          "y": 465
+        }
+      },
+      {
+        "scene": "market",
+        "at": {
+          "x": 490,
+          "y": 600
+        }
+      }
+    ],
+    "title": [
+      "一篮刚好的面包",
+      "Just enough bread"
+    ],
+    "question": [
+      "你为什么在数空篮子？",
+      "Why are you counting empty baskets?"
+    ],
+    "request": [
+      "“路易斯说周五有些街坊只想买半条。我还没问清楚。能去街角杂货铺问他：大家要的是更便宜，还是刚好吃得完？”",
+      "“Luis says some neighbors want half-loaves on Fridays. I haven’t asked why. At Corner Grocer, could you ask whether it is about price or finishing the loaf?”"
+    ],
+    "partnerQuestion": [
+      "Rowan想知道，半条面包解决什么问题？",
+      "Rowan asks: what problem would half-loaves solve?"
+    ],
+    "partnerReply": [
+      "“是吃不完，”路易斯说，“独居的人不想浪费。我愿意帮忙问数量，但别替人下订单。”你记下了这个区别。",
+      "“Finishing them,” Luis says. “People living alone hate waste. I can ask about quantities, but let’s not order for anyone.” You keep that distinction."
+    ],
+    "choices": [
+      {
+        "id": "choice-a",
+        "label": [
+          "先试做少量半条，不预售",
+          "Try a small batch of half-loaves"
+        ],
+        "reply": [
+          "“好，先少做，卖完就告诉大家明天再来。”你们定下了小批量计划；没有替任何人买面包。",
+          "“Good. A small batch. If it sells out, tomorrow is another day.” You agree on a plan without buying bread for anyone."
+        ]
+      },
+      {
+        "id": "choice-b",
+        "label": [
+          "先留下自愿登记的便条",
+          "Start with an optional interest note"
+        ],
+        "reply": [
+          "“让想要的人自己留名字，不保证销量。”罗温把空篮子挪到一边，准备先听意见。",
+          "“People can leave their own names. No guaranteed sales.” Rowan puts the basket aside and prepares to listen."
+        ]
+      }
+    ],
+    "recall": [
+      "“我还记得你提醒我：剩下的面包，不只是数字。今天先做刚刚好。”",
+      "“I remember your reminder: leftovers are not just numbers. Today I’ll aim for enough.”"
+    ],
+    "activity": [
+      "整理当天的面包清单。",
+      "Arranging today’s bread list."
+    ]
+  },
+  {
+    "id": "mira",
+    "name": [
+      "米拉",
+      "Mira Vale"
+    ],
+    "role": [
+      "档案修复师",
+      "Archive conservator"
+    ],
+    "unknown": [
+      "尚未认识的来访者",
+      "Someone you have not met"
+    ],
+    "intro": [
+      "“米拉，修复纸张和旧照片。我能补一条裂缝，却不能替照片里的人决定要不要被记住。”",
+      "“Mira. I conserve paper and old photographs. I can mend a tear. I can’t decide whether the people in a picture want to be remembered.”"
+    ],
+    "art": "dani",
+    "artPlan": "next-original__long-braid-dress",
+    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "partner": "nell",
+    "partnerName": [
+      "内尔",
+      "Nell"
+    ],
+    "routes": [
+      {
+        "scene": "market",
+        "at": {
+          "x": 780,
+          "y": 680
+        }
+      },
+      {
+        "scene": "secondhand",
+        "at": {
+          "x": 370,
+          "y": 430
+        }
+      },
+      {
+        "scene": "cafe",
+        "at": {
+          "x": 520,
+          "y": 470
+        }
+      }
+    ],
+    "title": [
+      "照片背后的空白",
+      "The blank back of a photo"
+    ],
+    "question": [
+      "这张照片为什么还没写说明？",
+      "Why does this photo still have no caption?"
+    ],
+    "request": [
+      "“旧物店的内尔借给我一张码头照片，背面没人名。去Second Chances问问：它能公开展示吗？修好了，也不代表可以替人公开。”",
+      "“Nell at Second Chances lent me a pier photograph with no names on the back. Could you ask whether it can be displayed? Repairing it doesn’t grant permission.”"
+    ],
+    "partnerQuestion": [
+      "Mira想确认旧照片的展示范围",
+      "Mira wants to check permission for the photograph"
+    ],
+    "partnerReply": [
+      "“捐赠者只同意修复，没同意公开人物身份。”内尔说，“可以展示不带姓名的纸张修复过程，原照也可以继续收着。”",
+      "“The donor agreed to conservation, not public identification,” Nell says. “We can show the repair process without names, or keep the original in the archive.”"
+    ],
+    "choices": [
+      {
+        "id": "choice-a",
+        "label": [
+          "展示修复过程，不标人物姓名",
+          "Show the repair process without names"
+        ],
+        "reply": [
+          "你和米拉写下展示边界：谈纸张和修复，不猜人物身份。原照的公开权限没有被扩大。",
+          "You and Mira record the boundary: paper and conservation, no guesses about identities. Permission for the original has not expanded."
+        ]
+      },
+      {
+        "id": "choice-b",
+        "label": [
+          "保留原照，只记一份修复笔记",
+          "Keep the original private; record the repair"
+        ],
+        "reply": [
+          "米拉把修复笔记收好：“不摆出来，也不等于没有价值。”照片继续留在原来的档案里。",
+          "Mira files the repair notes. “Being unseen does not make it worthless.” The photograph stays in its original archive."
+        ]
+      }
+    ],
+    "recall": [
+      "“谢谢你先问了许可。慢一点，让故事的主人还能做选择。”",
+      "“Thank you for asking permission first. Going slowly leaves the owner a choice.”"
+    ],
+    "activity": [
+      "翻看待修复照片的纸张笔记。",
+      "Reviewing paper-conservation notes."
+    ]
+  },
+  {
+    "id": "jordan",
+    "name": [
+      "乔丹",
+      "Jordan Pike"
+    ],
+    "role": [
+      "海岸巡检员",
+      "Coast maintenance inspector"
+    ],
+    "unknown": [
+      "尚未认识的来访者",
+      "Someone you have not met"
+    ],
+    "intro": [
+      "“乔丹。我巡查海边的栏杆和路牌。发现问题先记下来，不能因为看了一眼就说已经修好了。”",
+      "“Jordan. I inspect coastal rails and signs. I record problems first. Looking at something doesn’t mean I’ve fixed it.”"
+    ],
+    "art": "june",
+    "artPlan": "next-original__rain-poncho-boots",
+    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "partner": "june",
+    "partnerName": [
+      "琼",
+      "June"
+    ],
+    "routes": [
+      {
+        "scene": "dock",
+        "at": {
+          "x": 640,
+          "y": 570
+        }
+      },
+      {
+        "scene": "coast",
+        "at": {
+          "x": 740,
+          "y": 640
+        }
+      },
+      {
+        "scene": "harbor",
+        "at": {
+          "x": 440,
+          "y": 740
+        }
+      }
+    ],
+    "title": [
+      "风里的方向牌",
+      "A sign in the wind"
+    ],
+    "question": [
+      "记录本上画的箭头是什么意思？",
+      "What is the arrow in your notebook?"
+    ],
+    "request": [
+      "“海风把一块方向牌吹得难读。我想问修理铺的琼，是先整理指路信息，还是先检查固定件。帮我带去这个问题？不用碰栏杆和桥。”",
+      "“The wind has made a direction sign hard to read. Could you ask June at the workshop whether to clarify the route first or inspect the fastenings first? No need to touch the rails or bridge.”"
+    ],
+    "partnerQuestion": [
+      "Jordan想给方向牌排维修顺序",
+      "Jordan asks how to prioritize the direction sign"
+    ],
+    "partnerReply": [
+      "“两件都要安排，”琼说，“现在先记下路口位置。指路说明能先写，固定件要留给工作时检查，别让游客自己爬上去。”",
+      "“Both need arranging,” June says. “Record the junction first. We can draft directions now; fastenings need a work inspection. No visitors climbing up.”"
+    ],
+    "choices": [
+      {
+        "id": "choice-a",
+        "label": [
+          "先起草清楚的临时指路说明",
+          "Draft clear temporary directions first"
+        ],
+        "reply": [
+          "乔丹记下临时说明草稿，还给固定件留了一栏。你们只是安排了检查，没有宣布桥或栏杆已经安全。",
+          "Jordan records the draft directions and leaves space for the fastenings. You have planned checks, not declared bridges or rails safe."
+        ]
+      },
+      {
+        "id": "choice-b",
+        "label": [
+          "先把固定件检查列进工作单",
+          "Put the fastening check on the work list first"
+        ],
+        "reply": [
+          "乔丹把固定件检查排在前面：“没查过，就别打勾。”方向说明也留在同一张工作单上。",
+          "Jordan puts the fastening check first. “No tick before we’ve checked.” The directions remain on the same work list."
+        ]
+      }
+    ],
+    "recall": [
+      "“有一张不夸大的记录，比满页完成标记有用。”乔丹又把铅笔削尖。",
+      "“An honest record is more useful than a page of ticks.” Jordan sharpens the pencil."
+    ],
+    "activity": [
+      "核对海岸路牌的工作记录。",
+      "Checking the coastal sign work list."
+    ]
+  },
+  {
+    "id": "leila",
+    "name": [
+      "莱拉",
+      "Leila Hart"
+    ],
+    "role": [
+      "休假医生",
+      "Doctor on holiday"
+    ],
+    "unknown": [
+      "尚未认识的来访者",
+      "Someone you have not met"
+    ],
+    "intro": [
+      "“莱拉。我是医生，不过这星期在休假。今天最大的计划是把茶喝完，不在凉掉以后才想起来。”",
+      "“Leila. I’m a doctor, but this week I’m on holiday. Today’s big plan is to finish my tea before I remember it has gone cold.”"
+    ],
+    "art": "samira",
+    "artPlan": "next-original__high-bun-tracksuit",
+    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "partner": "idris",
+    "partnerName": [
+      "伊德里斯",
+      "Idris"
+    ],
+    "routes": [
+      {
+        "scene": "garden",
+        "at": {
+          "x": 650,
+          "y": 620
+        }
+      },
+      {
+        "scene": "coast",
+        "at": {
+          "x": 780,
+          "y": 500
+        }
+      },
+      {
+        "scene": "harbor",
+        "at": {
+          "x": 600,
+          "y": 740
+        }
+      }
+    ],
+    "title": [
+      "没有待办的一小时",
+      "An hour without a to-do list"
+    ],
+    "question": [
+      "休假也很难停下来吗？",
+      "Is slowing down difficult even on holiday?"
+    ],
+    "request": [
+      "“我总把散步也写成任务。伊德里斯说拳馆外有适合坐一会儿的地方。能去Harbor Boxing Club问问他，有没有完全不用完成什么的休息方式？”",
+      "“I turn even a walk into a task. Idris mentioned places to sit near the gym. Could you ask at Harbor Boxing Club about a break with nothing to complete?”"
+    ],
+    "partnerQuestion": [
+      "Leila想找不计成绩的休息方式",
+      "Leila is looking for a break with no score"
+    ],
+    "partnerReply": [
+      "“坐着听船，或者走一小段就回来。”伊德里斯说，“这不是训练，更不是治疗。想停就停，不用向我交成绩。”",
+      "“Sit and listen to boats, or take a short walk and return,” Idris says. “Not training, not treatment. Stop whenever you like. No score to bring me.”"
+    ],
+    "choices": [
+      {
+        "id": "choice-a",
+        "label": [
+          "约一小段随时可以结束的散步",
+          "Suggest a short walk with no finish line"
+        ],
+        "reply": [
+          "“可以随时结束，这句我喜欢。”莱拉把清单折起来。你们约的是普通散步，没有医疗建议，也不替别人安排训练。",
+          "“No finish line. I like that.” Leila folds the list. It is an ordinary walk, not medical advice or a training prescription."
+        ]
+      },
+      {
+        "id": "choice-b",
+        "label": [
+          "约坐一会儿，不安排任何项目",
+          "Suggest sitting with nothing scheduled"
+        ],
+        "reply": [
+          "莱拉笑了：“那我今天不必把休息做得很优秀。”你们保留一段没有安排的时间。",
+          "Leila smiles. “Then I don’t have to be excellent at resting today.” You leave a little time unplanned."
+        ]
+      }
+    ],
+    "recall": [
+      "“那杯茶终于喝完了。谢谢你没有再给我加一张清单。”",
+      "“I finished the tea. Thank you for not giving me another list.”"
+    ],
+    "activity": [
+      "收好手机，给休假留一点空白。",
+      "Putting the phone away for a quiet holiday."
+    ]
+  },
+  {
+    "id": "casey",
+    "name": [
+      "凯西",
+      "Casey Morgan"
+    ],
+    "role": [
+      "软件工程师",
+      "Software engineer"
+    ],
+    "unknown": [
+      "尚未认识的来访者",
+      "Someone you have not met"
+    ],
+    "intro": [
+      "“凯西，写软件的。电脑留在住处了。我想看看不用加一个应用程序，事情能不能也变简单。”",
+      "“Casey. I build software. My laptop is back at the room. I want to see whether things can get simpler without adding another app.”"
+    ],
+    "art": "avery",
+    "artPlan": "next-original__bob-pleated-skirt",
+    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "partner": "dani",
+    "partnerName": [
+      "丹妮",
+      "Dani"
+    ],
+    "routes": [
+      {
+        "scene": "cafe",
+        "at": {
+          "x": 640,
+          "y": 515
+        }
+      },
+      {
+        "scene": "harbor",
+        "at": {
+          "x": 790,
+          "y": 720
+        }
+      },
+      {
+        "scene": "market",
+        "at": {
+          "x": 760,
+          "y": 710
+        }
+      }
+    ],
+    "title": [
+      "一张不需要下载的表",
+      "A form without a download"
+    ],
+    "question": [
+      "这张空表格是做什么的？",
+      "What is this empty form for?"
+    ],
+    "request": [
+      "“丹妮想给小集市留一张自愿帮忙的登记纸。能先问她真正需要知道什么吗？别一上来就收电话和住址。”",
+      "“Dani wants a voluntary helper sheet for the little market. Could you first ask what she actually needs to know? Let’s not start by collecting phone numbers and addresses.”"
+    ],
+    "partnerQuestion": [
+      "Casey问志愿登记真正需要哪些信息",
+      "Casey asks what a helper sheet actually needs"
+    ],
+    "partnerReply": [
+      "“我只需要知道哪个时段可能有人来。”丹妮说，“可以用昵称，也可以只选时段；不想留下信息就当面告诉我。”",
+      "“Only which times might have help,” Dani says. “A nickname is fine, or just a time. Anyone who prefers no record can tell me in person.”"
+    ],
+    "choices": [
+      {
+        "id": "choice-a",
+        "label": [
+          "只列时段，愿意的人自行打勾",
+          "List time slots with optional ticks"
+        ],
+        "reply": [
+          "凯西划掉了多余的栏：“少一个必须填的格，就少一次为难。”这是纸上方案，还没有收集任何人的资料。",
+          "Casey crosses out the extra fields. “One less required box, one less awkward moment.” It is a paper plan; nobody’s information has been collected."
+        ]
+      },
+      {
+        "id": "choice-b",
+        "label": [
+          "昵称加时段，保留当面报名",
+          "Offer nickname and time, plus in-person sign-up"
+        ],
+        "reply": [
+          "你们保留昵称和时段两栏，也写上可以当面说。凯西没有把表自动上传，更没有替街坊填写。",
+          "You keep nickname and time fields, with an in-person option. Casey neither uploads the sheet nor fills it in for neighbors."
+        ]
+      }
+    ],
+    "recall": [
+      "“这回没有新应用程序，问题反而清楚了。”凯西把纸夹好。",
+      "“No new app this time. The problem is clearer already.” Casey clips the paper together."
+    ],
+    "activity": [
+      "在纸上删掉登记表多余的格子。",
+      "Crossing extra fields off a paper form."
+    ]
+  },
+  {
+    "id": "grant",
+    "name": [
+      "格兰特",
+      "Grant Cole"
+    ],
+    "role": [
+      "退休金融从业者",
+      "Retired finance professional"
+    ],
+    "unknown": [
+      "尚未认识的来访者",
+      "Someone you have not met"
+    ],
+    "intro": [
+      "“格兰特。以前在金融行业，每件事都喜欢算值不值得。退休后发现，邻居请吃午饭不用先做一张报表。”",
+      "“Grant. I used to work in finance and calculate whether everything was worthwhile. Retirement is teaching me that lunch with a neighbor needs no spreadsheet.”"
+    ],
+    "art": "owen",
+    "artPlan": "next-original__senior-bald-waistcoat",
+    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "partner": "elena",
+    "partnerName": [
+      "埃琳娜",
+      "Elena"
+    ],
+    "routes": [
+      {
+        "scene": "dock",
+        "at": {
+          "x": 610,
+          "y": 360
+        }
+      },
+      {
+        "scene": "market",
+        "at": {
+          "x": 450,
+          "y": 730
+        }
+      },
+      {
+        "scene": "courtyard",
+        "at": {
+          "x": 675,
+          "y": 600
+        }
+      }
+    ],
+    "title": [
+      "不用算回报的午餐",
+      "Lunch without a return calculation"
+    ],
+    "question": [
+      "你在替午餐算什么？",
+      "What are you calculating for lunch?"
+    ],
+    "request": [
+      "“我想和埃琳娜聊一顿邻里午餐，预算只有$12，但还没问她愿不愿意。能先问问她想要什么？这不是投资，也不收任何人的钱。”",
+      "“I’m considering a neighborhood lunch with Elena and a $12 limit, but haven’t asked if she wants one. Could you ask what she would enjoy first? No investment, no money collected.”"
+    ],
+    "partnerQuestion": [
+      "Grant想先问你对邻里午餐的想法",
+      "Grant wants to hear your thoughts about a neighborly lunch"
+    ],
+    "partnerReply": [
+      "“简单一些，不要让我妈妈午睡时太吵。”埃琳娜说，“大家愿意的话，各自带一点；不带东西也欢迎。别保证每个人都能来。”",
+      "“Simple, and quiet while my mother naps,” Elena says. “People can bring a little if they wish. Empty hands are welcome too. No promises that everyone can come.”"
+    ],
+    "choices": [
+      {
+        "id": "choice-a",
+        "label": [
+          "建议花$9，留下$3应对临时需要",
+          "Suggest $9 of supplies and a $3 reserve"
+        ],
+        "reply": [
+          "格兰特在纸上留了$3：“数字是上限，不是催人花完的目标。”午餐仍待大家同意，你的钱包不变。",
+          "Grant leaves $3 on paper. “A limit is not a target to spend.” Lunch still needs everyone’s agreement. Your wallet is unchanged."
+        ]
+      },
+      {
+        "id": "choice-b",
+        "label": [
+          "先征求是否愿意参加，再决定开销",
+          "Ask who wants to join before planning costs"
+        ],
+        "reply": [
+          "格兰特收起计算纸：“先听人说话。”你们把邀请和花钱分成两件事，没有替邻居作承诺。",
+          "Grant puts away the calculation. “People first.” You separate inviting from spending, without making promises for anyone."
+        ]
+      }
+    ],
+    "recall": [
+      "“今天有一件事不用算回报：有人愿意坐下来听我说话。”",
+      "“One thing needs no return calculation today: someone was willing to sit and listen.”"
+    ],
+    "activity": [
+      "把午餐预算折起来，先听街坊说话。",
+      "Folding the lunch budget and listening to neighbors."
+    ]
+  }
+]

@@ -1,3 +1,4 @@
+import {nextRoutes,nextResidents} from './next-residents';
 import type {Words,Entity} from './data';
 export type TownState={townMinutes?:number;scene:string;flags:string[];known:string[];relations:Record<string,number>};
 export const townMinutes=(s:Pick<TownState,'townMinutes'>)=>s.townMinutes??540;
@@ -17,7 +18,7 @@ export const residentPeople:Record<string,{name:Words;unknown:Words;intro:Words;
  owen:{name:['欧文','Owen Price'],unknown:['侧耳听海鸟的居民','Resident listening for birds'],intro:['“欧文。以前修公交车，现在练习分清海鸟的叫声。两样都得先听，别急着拆。”','“Owen. Used to repair buses. Now I try to tell seabirds apart. Both start with listening, before taking anything to pieces.”'],art:'owen'},
  dani:{name:['丹妮','Dani Costa'],unknown:['收好一片叶子的居民','Resident saving a fallen leaf'],intro:['“丹妮，在图书馆工作。我想做本小册子，收一点街坊种花的故事。今天这页只有一片叶子，也挺好。”','“Dani. I work at the library. I’m making a little book of neighbors’ garden stories. Today’s page has just one leaf. That’s fine too.”'],art:'dani'},
 };
-export const residentRoutes:Record<string,{scene:string;at:{x:number;y:number}}[]>={
+export const residentRoutes:Record<string,{scene:string;at:{x:number;y:number}}[]>={...nextRoutes,
  mara:[{scene:'station',at:{x:565,y:685}},{scene:'courtyard',at:{x:365,y:500}},{scene:'market',at:{x:560,y:650}}],
  theo:[{scene:'cafe',at:{x:579,y:330}},{scene:'cafe',at:{x:579,y:330}},{scene:'harbor',at:{x:500,y:640}}],
  june:[{scene:'workshop',at:{x:510,y:358}},{scene:'workshop',at:{x:510,y:358}},{scene:'dock',at:{x:370,y:490}}],
@@ -40,7 +41,7 @@ const activities:Record<string,Words[]>={
  owen:[['欧文在分辨头顶两种不同的鸟叫。','Owen listens for two different calls overhead.'],['欧文停在路边，让一只小鸟先过去。','Owen pauses at the path edge to let a small bird pass.'],['欧文合上记录本，最后看了一眼海面。','Owen closes his notebook and takes one last look at the sea.']],
  dani:[['丹妮把落叶夹进本子，没有摘下还活着的叶子。','Dani presses a fallen leaf into the book, leaving living leaves alone.'],['丹妮在旧街记下刚刚听到的一个小故事。','Dani writes down a small story heard along Market Lane.'],['丹妮在院子里小声说话，留出住户休息的安静。','Dani speaks softly in the courtyard, leaving room for the residents’ quiet.']],
 };
-export function residentActivity(s:Pick<TownState,'townMinutes'>&{scene?:string;flags?:string[]},person:string):Words|undefined{if(person==='dani'&&s.flags?.includes('news:checked'))return ['丹妮把你核对过的营业便条留在本子里，另抄了一份贴在花园告示板上。','Dani keeps your checked hours in the notebook, with a copy on the garden noticeboard.'];const specific=activities[person]?.[['morning','afternoon','evening'].indexOf(townPeriod(s))];if(specific)return specific;if(!residentRoutes[person])return;return ['对方停下手里的事，转身听你说话。','They pause what they are doing and turn to listen.']}
+export function residentActivity(s:Pick<TownState,'townMinutes'>&{scene?:string;flags?:string[]},person:string):Words|undefined{const added=nextResidents.find(p=>p.id===person);if(added&&residentHere(s,person,s.scene??''))return added.activity;if(person==='dani'&&s.flags?.includes('news:checked'))return ['丹妮把你核对过的营业便条留在本子里，另抄了一份贴在花园告示板上。','Dani keeps your checked hours in the notebook, with a copy on the garden noticeboard.'];const specific=activities[person]?.[['morning','afternoon','evening'].indexOf(townPeriod(s))];if(specific)return specific;if(!residentRoutes[person])return;return ['对方停下手里的事，转身听你说话。','They pause what they are doing and turn to listen.']}
 export const shopScenes=['cafe','grocery','workshop','gym','secondhand'];
 export function openingNotice(scene:string,s:Pick<TownState,'townMinutes'>):Words|undefined{if(!shopScenes.includes(scene))return;const open=['morning','afternoon'].includes(townPeriod(s));return open?['营业至17:00。傍晚店主外出，明早06:00回来。','Open until 17:00. The owner goes out in the evening and returns at 06:00.']:['店主已休息，明早06:00恢复营业。可以先回家睡到09:00，再来办事。','The owner is away. Business resumes at 06:00. Sleep at home until 09:00 and return.']}
 

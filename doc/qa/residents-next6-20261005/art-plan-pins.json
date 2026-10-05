@@ -1,0 +1,49 @@
+{
+  "planPath": "/Users/yin/code/games/rpg-asset-library/expansion/new-production-20261004-v1/next-original-local-plan-20261004-v1/manifest.json",
+  "planSha256": "a273097f8a6ff9b600f741b839f70baa6450bf2e32c16b730c609279f17f582e",
+  "mapping": [
+    {
+      "person": "rowan",
+      "plannedLibraryIdentity": "next-original__baker-cap-apron",
+      "temporaryQAArt": "luis",
+      "status": "awaiting-library; existing sprite QA placeholder only"
+    },
+    {
+      "person": "mira",
+      "plannedLibraryIdentity": "next-original__long-braid-dress",
+      "temporaryQAArt": "dani",
+      "status": "awaiting-library; existing sprite QA placeholder only"
+    },
+    {
+      "person": "jordan",
+      "plannedLibraryIdentity": "next-original__rain-poncho-boots",
+      "temporaryQAArt": "june",
+      "status": "awaiting-library; existing sprite QA placeholder only"
+    },
+    {
+      "person": "leila",
+      "plannedLibraryIdentity": "next-original__high-bun-tracksuit",
+      "temporaryQAArt": "samira",
+      "status": "awaiting-library; existing sprite QA placeholder only"
+    },
+    {
+      "person": "casey",
+      "plannedLibraryIdentity": "next-original__bob-pleated-skirt",
+      "temporaryQAArt": "avery",
+      "status": "awaiting-library; existing sprite QA placeholder only"
+    },
+    {
+      "person": "grant",
+      "plannedLibraryIdentity": "next-original__senior-bald-waistcoat",
+      "temporaryQAArt": "owen",
+      "status": "awaiting-library; existing sprite QA placeholder only"
+    }
+  ],
+  "readOnlyReview": {
+    "path": "/Users/yin/code/games/rpg-asset-library/expansion/new-production-20261004-v1/production-execution-20261005-v1/reviews/first-character-complete-suite-admission.json",
+    "sha256": "ed261966fd8b1baaa356c11a4c4242b2ca978e366c97a0bbcf96723261645568",
+    "result": "FAIL-P1 left/right gait; available false; do not consume"
+  },
+  "generationCallsThisTask": 0,
+  "productionReady": false
+}

@@ -1,3 +1,4 @@
+import {nextTopicIds} from './next-neighbors';
 import {newsTopicIds} from './town-news';
 import {lifeTopicIds} from './resident-life';
 import {presentEntity,observedActor,residentRoutes} from '../world/residents';
@@ -9,7 +10,7 @@ import {GAME_UUID} from '../game-id';
 const key=(scene:string,entity:string,verb:string)=>scene+'/'+entity+'/'+verb;
 function verbs(e:Entity):string[]{
  if(e.kind==='portal')return ['travel'];
- if(e.person)return ['introduce','ask',...(e.person==='june'&&rooms.workshop.entities.includes(e)?['notes-generate']:[]),...(topics[e.person]??[]).map(t=>'talk:'+t.id),...lifeTopicIds(e.person).map(id=>'talk:'+id),...(e.person==='dani'?newsTopicIds.map(id=>'talk:'+id):[]),...(e.person==='idris'?['sparring','footwork','endurance']:e.person==='ruth'?['fishing']:[]).map(id=>'challenge-start:'+id)];
+ if(e.person)return ['introduce','ask',...(e.person==='june'&&rooms.workshop.entities.includes(e)?['notes-generate']:[]),...(topics[e.person]??[]).map(t=>'talk:'+t.id),...[...lifeTopicIds(e.person),...nextTopicIds(e.person)].map(id=>'talk:'+id),...(e.person==='idris'?['talk:class-invite']:[]),...(e.person==='dani'?newsTopicIds.map(id=>'talk:'+id):[]),...(e.person==='idris'?['sparring','footwork','endurance']:e.person==='ruth'?['fishing']:[]).map(id=>'challenge-start:'+id)];
  return [...(e.actions??[]),...(e.id==='terrace'?['challenge-start:repair']:e.id==='old-map'?['challenge-start:map']:[])];
 }
 const entityDefs=Object.values(rooms).flatMap(r=>r.entities.map(e=>({
@@ -30,7 +31,7 @@ export const spatialBinding=compileSpatialBinding({id:GAME_UUID,initialMap,chara
 },(scene,p)=>walkable(world,scene,p));
 export const spatialSnapshot=(s:Save):SpatialSnapshot=>({cartridgeId:GAME_UUID,map:initialMap.map(r=>({id:r.id,current:r.id===s.scene})),characters:s.known.map(id=>({id}))});
 export function admitSpatialAction(s:Save,a:Action){
- if(['travel-map','challenge-finish'].includes(a.action))return null; // domain-specific gates remain authoritative
+ if(a.action.startsWith('battle-')||a.action==='snack-eat'||['travel-map','challenge-finish'].includes(a.action))return null; // domain-specific gates remain authoritative
  const e=rooms[s.scene].entities.find(e=>e.id===a.target);if(e&&!presentEntity(s,e))throw Error('PERSON_AWAY');
  const actionKey=key(s.scene,a.target,a.action);
  const at=e?observedActor(e,a.actorPosition):null;const offset=e&&at?{x:at.x-e.at.x,y:at.y-e.at.y}:{x:0,y:0};

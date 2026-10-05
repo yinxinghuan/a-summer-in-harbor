@@ -1,0 +1,78 @@
+{
+  "base": "c3558b07",
+  "newResidents": 6,
+  "totalResidents": 19,
+  "art": "existing sprites used explicitly as QA placeholders; library plan pending",
+  "modelCalls": 0,
+  "cases": [
+    {
+      "person": "rowan",
+      "width": 390,
+      "storyCompleted": true,
+      "partner": "luis",
+      "outcome": "a",
+      "scheduleLearned": true,
+      "refresh": true,
+      "relationshipPanel": true,
+      "historyRetainedByAuthority": true
+    },
+    {
+      "person": "mira",
+      "width": 320,
+      "storyCompleted": true,
+      "partner": "nell",
+      "outcome": "b",
+      "scheduleLearned": true,
+      "refresh": true,
+      "relationshipPanel": true,
+      "historyRetainedByAuthority": true
+    },
+    {
+      "person": "jordan",
+      "width": 390,
+      "storyCompleted": true,
+      "partner": "june",
+      "outcome": "a",
+      "scheduleLearned": true,
+      "refresh": true,
+      "relationshipPanel": true,
+      "historyRetainedByAuthority": true
+    },
+    {
+      "person": "leila",
+      "width": 320,
+      "storyCompleted": true,
+      "partner": "idris",
+      "outcome": "b",
+      "scheduleLearned": true,
+      "refresh": true,
+      "relationshipPanel": true,
+      "historyRetainedByAuthority": true
+    },
+    {
+      "person": "casey",
+      "width": 390,
+      "storyCompleted": true,
+      "partner": "dani",
+      "outcome": "a",
+      "scheduleLearned": true,
+      "refresh": true,
+      "relationshipPanel": true,
+      "historyRetainedByAuthority": true
+    },
+    {
+      "person": "grant",
+      "width": 320,
+      "storyCompleted": true,
+      "partner": "elena",
+      "outcome": "b",
+      "scheduleLearned": true,
+      "refresh": true,
+      "relationshipPanel": true,
+      "historyRetainedByAuthority": true
+    }
+  ],
+  "errors": [],
+  "failedArt": [],
+  "externalAllowed": 0
+}

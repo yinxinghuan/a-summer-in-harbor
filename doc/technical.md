@@ -151,3 +151,24 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 
 ## 2026-10-05 作物12图集成（本地验收）
 `world/crop-art.json`固定12图、来源hash、每物种共享缩放与根部anchor；`crop-art.ts`首次解码强洋红透明并缓存data URL，原图不改。`sheets.ts`注册9阶段和原程序化土床标记；`View.tsx`将plots纳入latest ref、按plot key更新三个RPGJS事件，深度与主角共用空间引擎。仅状态变化setGraphic；没有逐帧图片加工或第二生长时钟。`ui/CropImage.tsx`将3产物以同一透明适配显示在原背包。菜畦移至道路右侧630/700/770,630，approach由原object生成；原plot ID不变、无新碰撞，现有存档位置仍合法。源码保留c3558b07训练销毁/恢复修复。回归与来源见doc/qa/crops-integrated-20261005/README.md；未部署，不包含账号及下一批6居民分支。
+
+返回以同步 ref 防重并立即冻结模拟/输入；真实 authority 确认后卸载。请求结果不明时，继续通过现有 pending 请求 ID/connect 恢复；不创建第二次奖励请求。挑战期间停发世界 checkpoint，刷新保留服务器 activeChallenge 并要求重新显式开始。规则、确定性回放和服务器奖励不变。
+
+
+## 2026-10-05 新增6位居民本地候选
+
+明确范围、人物表、规则、82项回归与6条浏览器流程、素材待交付边界见`doc/qa/residents-next6-20261005/PLAN.md`和`README.md`。19人候选只在本地验证，原c3558b07线上保持。人物计划不等于合格美术，临时图不进入发布验收。
+
+## 2026-10-05 新闻／19居民／回合制本地整合（当前状态，以本节为准）
+
+基于发布3295fbd建立隔离工作副本，保留账号、12张作物图与c3558b07即时训练修复。a28eb286的六位居民功能按文件合入，冲突处同时保留news/crops/nextTopics；不是以旧分支覆盖当前发布源码。旧文档中“13人／未接账号／作物未交付”是历史阶段，不代表此整合版。
+
+- `server/news/configured.ts`：可选`HARBOR_NEWS_CATALOG`读取<=512KiB冻结JSON，校验后每进程固定快照；`public.ts`与账号transport传递同一runtime和只读newsProject。未设置则原行为保留，不自动抓取。新旅程初始化及旧未读旅程第一次留言行动固定版本；旧已读故事不替换。创建、读、行动和checkpoint的响应都投影当前可用状态，版本不因此变化。更换来源快照需重启服务，未建立自动更正传播。
+- `src/story/next-residents.json`、`next-neighbors.ts`：6人作息、独立三步故事、双结局、回顾、关系，合计19人。新6人artStatus保持QA临时复用素材，未宣称美术发布通过。
+- `src/turn-combat/core.ts`：确定性单人对单人规则，意图、出招、防守、反击、恢复、补给、轮数上限。没有身份、金钱或小镇依赖；还不是通用多人/队伍系统。
+- `src/story/turn-battle.ts`：海湾准入、旧奖励共用、点心、暂停/恢复、游戏时钟、首次报酬与满钱包延领。可选turnBattle保存固定schema/config、实例、phase和逐轮日志。server/runtime在读取和行动处验证；原authority的幂等和CAS为唯一写入者，未改数据库DDL和线上旧档。
+- `src/ui/TurnBattle.tsx`：普通React面板覆盖保留的RPGJS地图；不创建/销毁Pixi应用。输入确认后展示结果，暂停允许世界继续；重读沿原pending意图恢复。c3558b07旧Combat纹理销毁合同保留。新动作通过state/binding受服务端验证，客户端不传伤害或胜利。
+- 暂停局阻止另开小游戏，但不阻止居民、种植、旅行和休息；双方本场状态与小镇体力分开。新补给仅packed-snack，作物和任务物不作为战斗消耗品。
+- 本地测试入口`_qa/next-batch-server.ts`、`_qa/next-batch-vite.mjs`只监听5331/5330。可在`/qa/start`创建合成测试旅程；不应部署QA服务。免费问答使用本地固定回复，不调用模型。
+
+证据与限制见`doc/qa/next-batch-20261005/README.md`。未发布，未新增付费生成，未变更生产账号存档；临时前端ID身份的既有安全局限不变。
