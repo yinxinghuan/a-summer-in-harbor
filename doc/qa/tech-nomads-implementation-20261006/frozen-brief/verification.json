@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-06T08:37:21.320254+00:00",
+  "ownerThreadId": "01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "status": "local production brief completeness and fixed-source checks PASS; no new art or runtime QA claim",
+  "threeRolesAndCompleteAppearances": true,
+  "storiesAnd24hSchedulesEmbedded": true,
+  "portraitComposition": "new unified19 square,1024 native/256avatar/512portrait, same source",
+  "mapContract": "384x512,128cells,9independent full sources,3whole-side mirrors,NPCoffset0",
+  "referencedFileHashesVerified": 75,
+  "actual19ConsumerAndNativeHashesVerified": true,
+  "recordedStyleSourceRequestTaskUrlsVerified": true,
+  "oldPlanManifestUnchanged": true,
+  "animalCandidateCommitUnchanged": true,
+  "businessCodeChanged": false,
+  "newMediaPosts": 0,
+  "newNetworkCalls": 0,
+  "newNewsFetches": 0,
+  "newLibraryMutations": 0,
+  "pushDeploy": false,
+  "productionTasksStartedByThisOwner": false,
+  "generationPriceOrBudgetApprovedHere": false,
+  "realMiniAppOrPhonePassedHere": false
+}

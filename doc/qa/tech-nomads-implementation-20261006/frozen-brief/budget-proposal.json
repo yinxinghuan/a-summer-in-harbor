@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "status": "EXACT_BATCH_PROPOSAL_FOR_COORDINATOR_DISPATCH_NOT_SPENDING_AUTHORIZATION",
+  "batch": "harbor-tech-nomads-20261006",
+  "modelAlias": "gpt-image-2.5-sunburst",
+  "service": "existing AlterU Media APIv1",
+  "targets": {
+    "residents": 3,
+    "mapIndependentFullPosesPerResident": 9,
+    "portraitNativePerResident": 1,
+    "successfulGenerationTargets": 30,
+    "avatarAnd512SquarePortrait": "deterministic derivations from each new1024square portrait;0additional generation",
+    "rightDirectionFrames": "3whole-side mirrors per resident;0additional generation"
+  },
+  "proposedActualPostCap": 42,
+  "failureRevisionRecoveryReserve": 12,
+  "initialPilot": {
+    "resident": "harper",
+    "target": "1map down-stand +1unified square portrait",
+    "targetPosts": 2,
+    "maximumActualPostsBeforeFirstGate": 4,
+    "gate": "AI identity/map camera and new19-series portrait style/matte acceptance before expansion"
+  },
+  "sequence": [
+    "Harper pilot",
+    "Harper8remaining full poses and complete320/390 renderer suite",
+    "Tess10targets and complete renderer/profile-source suite",
+    "Noor10targets and complete renderer/profile-source suite"
+  ],
+  "ledger": "single new batch CALL_LEDGER; every real POST including failed transport/server responses and same-ID recovery counted",
+  "unknownResult": "query original task through regular public GET; no blind new-ID resend. If approved window ends while task remains running, report exact task and wait/limited recheck; do not invent failure.",
+  "cost": "unit/totalcost unknown; no invented dollar estimate; coordinator relays exact cap and unknown-price fact to user",
+  "otherBatchRemainderTransfer": false,
+  "stopWhenQualified": true,
+  "newServicePurchase": false,
+  "lowDiskStopGiB": 15,
+  "currentTaskActualPosts": 0,
+  "currentTaskMediaNetworkCalls": 0,
+  "currentTaskBudgetConsumed": 0
+}

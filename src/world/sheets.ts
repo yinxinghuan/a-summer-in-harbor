@@ -1,3 +1,4 @@
+import {techNomadAdmitted} from './tech-nomads';
 import {cropArt,soilTextureId} from './crop-art';
 import mapDimensions from './map-dimensions.json';
 import type {Direction} from '@rpgjs/common';import dimensions from './art-dimensions.json';import {rooms,people,type Prop} from './data';
@@ -10,7 +11,7 @@ export const sheets:any[]=Object.values(rooms).flatMap(r=>[
  ...['base','north','side','front'].flatMap(layer=>{const d=mapDimensions[(r.id+'-'+layer) as keyof typeof mapDimensions];return d.empty?[]:[graphic(`${layer}-${r.id}`,`./map/${r.id}-${layer}.png`,d.width,d.height,[0,layer==='front'?1:0],1)]}),
  ...r.props.filter(p=>!p.floorDecoration).flatMap(p=>[p.art,...(p.state?[p.state.art]:[])].map((art,index)=>{const d=dimensions[art as keyof typeof dimensions];return graphic(propId(r.id,p)+(index?'-active':''),`./art/${art}.png`,d.width,d.height,[.5,1],p.width/d.width)}))]);
 
-export const npcSheets=Object.keys(people).map(id=>({...heroSheet,id:'npc-'+id,image:`./art/npc-${people[id].mapArt??people[id].art}.png`,textures:Object.fromEntries([['stand',1],['stride-0',0],['stride-1',1],['stride-2',2]].map(([name,col])=>[name,{animations:({direction}:{direction:Direction})=>[[{frameX:col,frameY:row(direction),time:0,anchor:[.5,122/128],scale:[56/108,56/108],x:0,y:0}]]}]))}));
+export const npcSheets=Object.keys(people).filter(techNomadAdmitted).map(id=>({...heroSheet,id:'npc-'+id,image:`./art/npc-${people[id].mapArt??people[id].art}.png`,textures:Object.fromEntries([['stand',1],['stride-0',0],['stride-1',1],['stride-2',2]].map(([name,col])=>[name,{animations:({direction}:{direction:Direction})=>[[{frameX:col,frameY:row(direction),time:0,anchor:[.5,122/128],scale:[56/108,56/108],x:0,y:0}]]}]))}));
 sheets.push(...npcSheets);
 
 // Three platform-generated growth stages, one shared image/world scale and root anchor.

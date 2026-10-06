@@ -1,0 +1,1025 @@
+{
+  "schemaVersion": 1,
+  "batch": "harbor-tech-nomads-20261006",
+  "ownerThreadId": "01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "coordinatorThreadId": "01a0f63e-747b-74c8-a592-bb52c77c2017",
+  "createdAt": "2026-10-06T08:35:20.577785+00:00",
+  "status": "FIXED_LOCAL_PRODUCTION_BRIEF_NOT_GENERATED",
+  "authority": "Latest coordinator asks for concrete3-person production/implementation dispatch. Names/appearance are owner-authored fictional production choices; no invented existing user photograph or nationality.",
+  "professionsSelectedByCoordinator": [
+    "AI应用开发",
+    "开源文档/社区维护",
+    "科技产品研究"
+  ],
+  "baselinePlanManifest": {
+    "path": "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-plan-20261006-01a10d0d/manifest.json",
+    "sha256": "53868a2ed1dcba4bfcb82dc2e3088baa47ac82f14935f6d0d99026db75356a2b",
+    "purpose": "immutable prior profession/story/schedule source"
+  },
+  "gameBaselineCommit": "f6e6be82ee10e6422892754a1fc624147e217c2c",
+  "currentPeople": 19,
+  "targetPeople": 22,
+  "caseyUnchanged": true,
+  "roles": [
+    {
+      "id": "harper",
+      "name": [
+        "哈珀",
+        "Harper Quinn"
+      ],
+      "proposedAge": 31,
+      "role": [
+        "AI应用开发者",
+        "AI application developer"
+      ],
+      "workContext": [
+        "在分布式小团队做面向小型组织的AI应用，按约定时段远程协作；无真实雇主或客户绑定。",
+        "Builds AI applications for small organizations with a distributed team; keeps agreed remote work hours. No real employer or client is implied."
+      ],
+      "unknown": [
+        "把写满的本子合上的来访者",
+        "A visitor closing a crowded notebook"
+      ],
+      "intro": [
+        "“哈珀。我做AI应用，总想着下一版该加什么。来海湾后，想先学会看清今天已经长出来的东西。”",
+        "“Harper. I build AI apps and keep thinking about the next version. Here, I’m trying to notice what has already grown today.”"
+      ],
+      "personality": [
+        "认真、容易把休息也做成清单，能承认自己判断过快。",
+        "Careful, prone to turning rest into a checklist, and able to admit a rushed judgment."
+      ],
+      "personalLife": {
+        "reasonForStay": [
+          "短住海湾，保持工作，也给连续赶版本后的生活留空白。",
+          "A short stay that leaves room for life after a run of hurried releases, while keeping a job."
+        ],
+        "interest": [
+          "看植物新叶、沿海散步，不以植物生长当效率指标。",
+          "New leaves and walks by the sea, without making growth a productivity score."
+        ],
+        "fatigueAndRest": [
+          "午前伸展手腕，下午离屏，傍晚不接工作话题；仅为分时生活表现，不新增体能数值。",
+          "Stretches wrists before lunch, takes an afternoon screen break, and leaves work talk behind in the evening. Authored activity, not a new stamina statistic."
+        ],
+        "moneyAndPlants": [
+          "保留普通住客消费背景；若聊到种植，只观察或约定下次来看，不替玩家播种、收获或出售。",
+          "An ordinary paying guest; garden conversation records an observation or a return plan, not planting, harvesting or selling for the player."
+        ],
+        "boundaries": [
+          "工作专注时可约11:00后再聊；休息日可以只说生活。",
+          "Can ask to talk after 11:00 during focus time, or keep a day-off conversation about life."
+        ],
+        "lodging": "off-screen guest accommodation, not a new map, not the player's room"
+      },
+      "periodRoutes": [
+        {
+          "period": "morning",
+          "scene": "cafe",
+          "footpoint": null
+        },
+        {
+          "period": "afternoon",
+          "scene": "garden",
+          "footpoint": null
+        },
+        {
+          "period": "evening",
+          "scene": "coast",
+          "footpoint": null
+        }
+      ],
+      "schedule": [
+        {
+          "start": 0,
+          "end": 360,
+          "scene": null,
+          "state": "night-rest",
+          "activity": [
+            "住处休息，地图不出现。",
+            "Resting off-screen; absent from the map."
+          ],
+          "talk": "unavailable"
+        },
+        {
+          "start": 360,
+          "end": 480,
+          "scene": "cafe",
+          "state": "breakfast",
+          "activity": [
+            "慢慢吃早餐，先问Theo哪里落座不会挡路。",
+            "Breakfast, asking Theo where sitting will leave the room clear."
+          ],
+          "talk": "brief",
+          "permission": "proposed scene consent, not already obtained"
+        },
+        {
+          "start": 480,
+          "end": 660,
+          "scene": "cafe",
+          "state": "focused-work",
+          "activity": [
+            "安静整理已准备的应用说明与失败例子，不占用网络会议。",
+            "Quietly organizing prepared app notes and failure examples, without a network meeting."
+          ],
+          "talk": "defer-until-11"
+        },
+        {
+          "start": 660,
+          "end": 720,
+          "scene": "cafe",
+          "state": "stretch-and-close",
+          "activity": [
+            "合上工作本，伸展手腕；可以聊生活。",
+            "Closes the work notebook and stretches; there is room to talk about life."
+          ],
+          "talk": "available"
+        },
+        {
+          "start": 720,
+          "end": 840,
+          "scene": "garden",
+          "state": "screen-break",
+          "activity": [
+            "看叶片与光线，不把花园当测试数据。",
+            "Looks at leaves and light, without treating the garden as test data."
+          ],
+          "talk": "available"
+        },
+        {
+          "start": 840,
+          "end": 1020,
+          "scene": "garden",
+          "state": "neighbor-time",
+          "activity": [
+            "遇见Elena时问问那片新叶，给正在浇水的人留出路。",
+            "Asks Elena about a new leaf, keeping the watering route clear."
+          ],
+          "talk": "available"
+        },
+        {
+          "start": 1020,
+          "end": 1260,
+          "scene": "coast",
+          "state": "off-duty-walk",
+          "activity": [
+            "在海岸散步，今天不再比较版本。",
+            "Walks by the coast; no more comparing versions today."
+          ],
+          "talk": "life-only-by-default"
+        },
+        {
+          "start": 1260,
+          "end": 1440,
+          "scene": null,
+          "state": "night-rest",
+          "activity": [
+            "离场休息，未完成的相约明天还在。",
+            "Leaves to rest; tomorrow still holds the unfinished plan."
+          ],
+          "talk": "unavailable"
+        }
+      ],
+      "professionalTopics": [
+        {
+          "label": [
+            "一次失败和一次没说清楚的失败有什么不同？",
+            "What separates a failure from an unexplained failure?"
+          ],
+          "scope": "personal work judgment, not generated implementation or a claimed new benchmark"
+        },
+        {
+          "label": [
+            "哪些东西你宁可不自动化？",
+            "What would you rather leave unautomated?"
+          ],
+          "scope": "connects work to rest and plant care; player choices do not change crop mechanics"
+        }
+      ],
+      "relations": [
+        {
+          "person": "elena",
+          "kind": "main everyday story partner",
+          "overlap": "garden afternoon"
+        },
+        {
+          "person": "casey",
+          "kind": "optional professional contrast, still on holiday",
+          "overlap": "cafe morning, no forced coding session"
+        }
+      ],
+      "personalStory": {
+        "proposedId": "nomads-v1-harper-leaf",
+        "title": [
+          "新叶不需要进度条",
+          "No progress bar for a new leaf"
+        ],
+        "start": [
+          "Harper准备把每日植物照片排成进度表，又觉得哪里不对，想听Elena怎么等待。",
+          "Harper starts planning a daily plant-photo chart, then wonders what is missing and wants to hear how Elena waits."
+        ],
+        "partner": "elena",
+        "consultPrompt": [
+          "你愿意每次都给新叶记一个数字吗？",
+          "Would you want a number for each new leaf?"
+        ],
+        "proposedPartnerReply": [
+          "“我想记住那天，不是赶它快一点。先问愿不愿意被记录。”",
+          "“I want to remember the day, not hurry the leaf. Ask before making a record.”"
+        ],
+        "choices": [
+          {
+            "id": "notice",
+            "label": [
+              "只记一句自己看到的变化",
+              "Write one thing you noticed"
+            ],
+            "outcome": [
+              "约定下次回来看看，不制造成长或照片。",
+              "Agree to look again next time; no growth or photograph is manufactured."
+            ]
+          },
+          {
+            "id": "leave-space",
+            "label": [
+              "今天不记录，留一页空白",
+              "Leave a blank page today"
+            ],
+            "outcome": [
+              "Harper接受休息也可以没有成绩，不扣关系。",
+              "Harper accepts rest without a score; no relationship penalty."
+            ]
+          }
+        ],
+        "recall": [
+          "“那页还空着。我记得你说：回来看看，也是一个计划。”",
+          "“That page is still blank. I remember you saying that coming back to look is a plan too.”"
+        ],
+        "notDoneByConversation": [
+          "photograph taken",
+          "plant planted",
+          "plant harvested",
+          "AI app shipped",
+          "work income received"
+        ],
+        "missingNewsBehavior": "personal story remains available"
+      },
+      "newsStory": {
+        "sourceRequirement": "ai-app-release",
+        "proposedTemplate": "ai-app-boundary-v1",
+        "verifiedFactLayer": "a narrow published model/API or application release change, after separate admission",
+        "fictionalReaction": "Harper chooses whether to narrow a promised demonstration; Casey may discuss leaving work behind; Elena supplies an everyday perspective",
+        "allowedOutcome": "a conversation choice and revisit intention only",
+        "status": "no admitted tech article"
+      },
+      "art": {
+        "status": "NOT_GENERATED",
+        "requiredNativeMapPoses": 9,
+        "derivedSideFrames": 3,
+        "requiredNativePortraits": 1,
+        "squarePortraitBaseline": "new unified19, not legacy512x640 full-body portrait",
+        "formalUiAcceptance": "owner separately verifies actual game profile and site layout",
+        "reuseOtherResidentAsFinalIdentity": false
+      },
+      "appearance": {
+        "pronouns": "they/them",
+        "build": [
+          "中等偏高、偏瘦，肩线自然",
+          "Medium-tall, lean, natural shoulders"
+        ],
+        "face": [
+          "31岁成人面部，暖中等橄榄肤色、深棕眼、平直眉；细深蓝矩形眼镜，无胡须",
+          "Adult age31, warm medium olive complexion, dark-brown eyes and straight brows; thin dark-navy rectangular glasses, no facial hair"
+        ],
+        "hair": [
+          "深棕不对称短卷发，顶部松卷、耳侧短；不是Casey钝bob或Dani齐颈bob",
+          "Dark-brown short asymmetric curls, loose on top and shorter around the ears; neither Casey blunt bob nor Dani neck-length bob"
+        ],
+        "upperClothes": [
+          "灰蓝薄衬衣敞穿、袖口卷至前臂，内搭无字砖红圆领衫",
+          "Open slate-blue light overshirt with sleeves rolled to the forearms over a plain brick-red crew-neck shirt"
+        ],
+        "lowerClothes": [
+          "炭灰直筒长裤，暖灰步行鞋、奶油色鞋底",
+          "Charcoal straight trousers, warm-gray walking shoes with cream soles"
+        ],
+        "poseTone": [
+          "略拘谨但愿意听人说话；站姿双手自然放松，步行摆臂清楚",
+          "A little reserved but ready to listen; relaxed hands when standing and readable arm swing when walking"
+        ],
+        "forbidden": [
+          "帽子/围裙/实验服/科技装甲",
+          "角色持电脑遮住身体",
+          "复制既有居民脸或衣着"
+        ],
+        "englishIdentityPrompt": "Harper Quinn, an original 31-year-old adult with a warm medium olive complexion, dark-brown eyes, thin dark-navy rectangular glasses, no facial hair, short asymmetric dark-brown curls, medium-tall lean build. Open slate-blue overshirt with sleeves rolled to the forearms, plain brick-red crew-neck shirt, charcoal straight trousers, warm-gray walking shoes with cream soles. Natural friendly reserve. No hat, apron, lab coat, armor, logo, text, laptop, phone or occupational prop."
+      },
+      "fixedProductionId": "harbor-tech-nomads-20261006/harper",
+      "deliverables": {
+        "atlas": {
+          "path": "assets/harper.png",
+          "dimensions": [
+            384,
+            512
+          ],
+          "suggestedGameTarget": "public/art/npc-harper.png"
+        },
+        "portraitNative": {
+          "path": "assets/native/harper.png",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "composition": "new unified19 head-to-upper-waist square portrait"
+        },
+        "avatar": {
+          "path": "assets/harper-avatar.png",
+          "dimensions": [
+            256,
+            256
+          ],
+          "derivation": "deterministic nearest from portraitNative, same complete square composition",
+          "suggestedGameTarget": "public/art/npc-harper-avatar.png"
+        },
+        "portrait": {
+          "path": "assets/harper-portrait.png",
+          "dimensions": [
+            512,
+            512
+          ],
+          "derivation": "deterministic nearest from portraitNative; no extra generation",
+          "suggestedGameTarget": "public/art/npc-harper-root-v2.png"
+        }
+      }
+    },
+    {
+      "id": "tess",
+      "name": [
+        "苔丝",
+        "Tess Moreno"
+      ],
+      "proposedAge": 43,
+      "role": [
+        "开源文档与社区维护者",
+        "Open-source documentation and community maintainer"
+      ],
+      "workContext": [
+        "为虚构开源团队受薪维护入门文档、贡献说明与社区答复，异步协作；不绑定真实仓库、基金会或项目。",
+        "Paid documentation and community work for a fictional open-source team: onboarding, contribution notes and asynchronous replies. No real repository, foundation or project is implied."
+      ],
+      "unknown": [
+        "夹着一张空白明信片的来访者",
+        "A visitor with a blank postcard"
+      ],
+      "intro": [
+        "“苔丝。我的工作是把大家卡住的地方写清楚。自己这张明信片倒一直没开头。”",
+        "“Tess. I write down the places where people get stuck. My own postcard still has no first line.”"
+      ],
+      "personality": [
+        "耐心、留意没被听见的人，也会因不断答复而疲惫。",
+        "Patient, attentive to people left unheard, and tired sometimes by the endless need to reply."
+      ],
+      "personalLife": {
+        "reasonForStay": [
+          "在海湾短住，保留异步工作，也想与很久没联系的朋友重新说话。",
+          "A short stay with asynchronous work, and room to speak again with an old friend."
+        ],
+        "interest": [
+          "挑旧明信片、听码头的水声和没唱完的歌。",
+          "Old postcards, the sound of the pier, and songs that need not be finished."
+        ],
+        "fatigueAndRest": [
+          "下午答复窗口有结尾，离开咖啡馆后不做社区值班。",
+          "The afternoon reply window ends; leaving the café also ends community duty."
+        ],
+        "moneyAndPlants": [
+          "买东西只是角色生活背景，不从玩家现金扣款；可参与Dani花园册子的自愿一句话，不摘花或收人资料。",
+          "Shopping is character context, not a deduction from player cash. Can offer one voluntary line to Dani's garden book without picking flowers or collecting people's details."
+        ],
+        "boundaries": [
+          "可以稍后回复，也可以不把私人关系当待关闭的工单。",
+          "Can reply later, and can keep a private relationship from becoming a ticket to close."
+        ],
+        "lodging": "off-screen guest accommodation, not a new map, not the player's room"
+      },
+      "periodRoutes": [
+        {
+          "period": "morning",
+          "scene": "market",
+          "footpoint": null
+        },
+        {
+          "period": "afternoon",
+          "scene": "cafe",
+          "footpoint": null
+        },
+        {
+          "period": "evening",
+          "scene": "dock",
+          "footpoint": null
+        }
+      ],
+      "schedule": [
+        {
+          "start": 0,
+          "end": 360,
+          "scene": null,
+          "state": "night-rest",
+          "activity": [
+            "关闭答复窗口，住处休息。",
+            "The reply window is closed; resting off-screen."
+          ],
+          "talk": "unavailable"
+        },
+        {
+          "start": 360,
+          "end": 540,
+          "scene": "market",
+          "state": "breakfast-and-errands",
+          "activity": [
+            "慢慢经过旧街，把自己的早餐排在答复前面。",
+            "Moves slowly along Market Lane; breakfast comes before replies."
+          ],
+          "talk": "brief"
+        },
+        {
+          "start": 540,
+          "end": 720,
+          "scene": "market",
+          "state": "postcard-and-neighbors",
+          "activity": [
+            "翻看空白明信片，愿意听一个与工作无关的小故事。",
+            "Looks at a blank postcard and makes room for a story unrelated to work."
+          ],
+          "talk": "available"
+        },
+        {
+          "start": 720,
+          "end": 780,
+          "scene": "cafe",
+          "state": "lunch-and-consent",
+          "activity": [
+            "吃午饭，问Theo短时安静整理是否合适。",
+            "Lunch, asking Theo whether a short quiet work session fits."
+          ],
+          "talk": "brief",
+          "permission": "proposed scene consent, not already obtained"
+        },
+        {
+          "start": 780,
+          "end": 960,
+          "scene": "cafe",
+          "state": "focused-work",
+          "activity": [
+            "离线改写已准备的入门说明，给尚未确定的问题留标记。",
+            "Revises prepared onboarding notes offline, marking what is still uncertain."
+          ],
+          "talk": "defer-until-16"
+        },
+        {
+          "start": 960,
+          "end": 1020,
+          "scene": "cafe",
+          "state": "work-close",
+          "activity": [
+            "写下稍后异步答复的边界，17:00前结束。",
+            "Sets boundaries for later asynchronous replies and finishes before 17:00."
+          ],
+          "talk": "available"
+        },
+        {
+          "start": 1020,
+          "end": 1260,
+          "scene": "dock",
+          "state": "off-duty-listening",
+          "activity": [
+            "听水声与Samira的调子，不替别人把歌补完。",
+            "Listens to the water and Samira's tune, without finishing the song for someone else."
+          ],
+          "talk": "life-only-by-default"
+        },
+        {
+          "start": 1260,
+          "end": 1440,
+          "scene": null,
+          "state": "night-rest",
+          "activity": [
+            "离场休息，私人明信片可以明天继续。",
+            "Leaves to rest; the private postcard can wait until tomorrow."
+          ],
+          "talk": "unavailable"
+        }
+      ],
+      "professionalTopics": [
+        {
+          "label": [
+            "一份文档怎样留得下提问的人？",
+            "How can documentation leave room for the person asking?"
+          ],
+          "scope": "community participation and credit, not actual repository maintenance"
+        },
+        {
+          "label": [
+            "你什么时候会说：我明天再答？",
+            "When do you say: I will answer tomorrow?"
+          ],
+          "scope": "work boundaries and personal rest"
+        }
+      ],
+      "relations": [
+        {
+          "person": "nell",
+          "kind": "main everyday story partner",
+          "overlap": "not simultaneous: consult at secondhand during open hours or courtyard evening, then revisit Tess"
+        },
+        {
+          "person": "samira",
+          "kind": "optional off-duty companionship",
+          "overlap": "dock evening"
+        },
+        {
+          "person": "dani",
+          "kind": "optional voluntary garden-book conversation",
+          "overlap": "market morning/afternoon do not coincide; later scene visit required, no fabricated meeting"
+        }
+      ],
+      "personalStory": {
+        "proposedId": "nomads-v1-tess-postcard",
+        "title": [
+          "不用立刻回复",
+          "No reply required today"
+        ],
+        "start": [
+          "Tess不知道明信片该解释多年沉默，还是只告诉朋友今天看到的海。想问Nell为什么留着那张空白卡。",
+          "Tess wonders whether a postcard must explain years of silence or simply share today's sea, and wants to ask Nell about her blank card."
+        ],
+        "partner": "nell",
+        "consultPrompt": [
+          "一张明信片能不能不要求回信？",
+          "Can a postcard ask for no reply?"
+        ],
+        "proposedPartnerReply": [
+          "“可以。写你愿意说的那一点，留不留、寄不寄，仍是你自己的决定。”",
+          "“Yes. Write the little bit you want to say. Keeping it or sending it is still your decision.”"
+        ],
+        "choices": [
+          {
+            "id": "one-line",
+            "label": [
+              "先写一句今天的海",
+              "Draft one line about today's sea"
+            ],
+            "outcome": [
+              "只决定草稿，不宣称已寄达或收到回信。",
+              "Choose a draft; no delivered postcard or reply is claimed."
+            ]
+          },
+          {
+            "id": "keep-card",
+            "label": [
+              "先保留卡片，不催自己",
+              "Keep the card without a deadline"
+            ],
+            "outcome": [
+              "保留以后说话的余地，不当关系失败。",
+              "Leave room to speak later; no relationship failure."
+            ]
+          }
+        ],
+        "recall": [
+          "“我记得那句不必立刻回复。也许我先对自己这样说。”",
+          "“I remember: no reply required today. Perhaps I should say that to myself first.”"
+        ],
+        "notDoneByConversation": [
+          "postcard sent",
+          "private message sent",
+          "real issue closed",
+          "repository edited",
+          "friend replied"
+        ],
+        "missingNewsBehavior": "personal story remains available"
+      },
+      "newsStory": {
+        "sourceRequirement": "oss-docs-release",
+        "proposedTemplate": "oss-welcome-credit-v1",
+        "verifiedFactLayer": "a project-published documentation/contribution or governance change, after separate admission",
+        "fictionalReaction": "Tess considers an optional welcome note; Nell asks what a person wants preserved, and Samira may prefer listening to another instruction",
+        "allowedOutcome": "a choice about invitation and credit, no actual contribution or contact",
+        "status": "no admitted tech article"
+      },
+      "art": {
+        "status": "NOT_GENERATED",
+        "requiredNativeMapPoses": 9,
+        "derivedSideFrames": 3,
+        "requiredNativePortraits": 1,
+        "squarePortraitBaseline": "new unified19, not legacy512x640 full-body portrait",
+        "formalUiAcceptance": "owner separately verifies actual game profile and site layout",
+        "reuseOtherResidentAsFinalIdentity": false
+      },
+      "appearance": {
+        "pronouns": "they/them",
+        "build": [
+          "中等偏矮、柔和肩线与稍宽躯干，不做年轻瘦肩模板",
+          "Medium-short, soft shoulders and a slightly fuller torso; preserve mature proportions"
+        ],
+        "face": [
+          "43岁成人面部，暖深棕肤色、深棕眼、自然笑纹；无眼镜、无胡须",
+          "Adult age43, warm deep-brown complexion, dark-brown eyes and natural smile lines; no glasses or facial hair"
+        ],
+        "hair": [
+          "棕黑头发扎低马尾，两侧太阳穴少量银发；不复制Nell银bob或Mira长辫",
+          "Brown-black low ponytail, a little silver at both temples; neither Nell silver bob nor Mira long braid"
+        ],
+        "upperClothes": [
+          "无纹陶土红开衫，内搭浅蓝V领亚麻上衣；无需职业徽章",
+          "Plain terracotta cardigan over a pale-blue V-neck linen top; no occupational badge"
+        ],
+        "lowerClothes": [
+          "深靛蓝直筒长裤、赭棕平底步行鞋",
+          "Deep-indigo straight trousers and russet-brown flat walking shoes"
+        ],
+        "poseTone": [
+          "耐心暖笑，休息时肩膀放松；不是永远拿着工单的客服",
+          "A patient warm smile and relaxed off-duty shoulders; not a permanent support-desk pose"
+        ],
+        "forbidden": [
+          "明信片上的伪字/审核标签",
+          "职业耳麦",
+          "复制既有居民脸或服装"
+        ],
+        "englishIdentityPrompt": "Tess Moreno, an original 43-year-old adult with warm deep-brown skin, dark-brown eyes, natural smile lines, no glasses and no facial hair. Brown-black hair in a low ponytail with a little silver at both temples. Medium-short with soft shoulders and a slightly fuller torso. Plain terracotta cardigan over a pale-blue V-neck linen top, deep-indigo straight trousers, russet-brown flat walking shoes. A patient warm smile. No headset, badge, logo, text, postcard prop, laptop or phone."
+      },
+      "fixedProductionId": "harbor-tech-nomads-20261006/tess",
+      "deliverables": {
+        "atlas": {
+          "path": "assets/tess.png",
+          "dimensions": [
+            384,
+            512
+          ],
+          "suggestedGameTarget": "public/art/npc-tess.png"
+        },
+        "portraitNative": {
+          "path": "assets/native/tess.png",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "composition": "new unified19 head-to-upper-waist square portrait"
+        },
+        "avatar": {
+          "path": "assets/tess-avatar.png",
+          "dimensions": [
+            256,
+            256
+          ],
+          "derivation": "deterministic nearest from portraitNative, same complete square composition",
+          "suggestedGameTarget": "public/art/npc-tess-avatar.png"
+        },
+        "portrait": {
+          "path": "assets/tess-portrait.png",
+          "dimensions": [
+            512,
+            512
+          ],
+          "derivation": "deterministic nearest from portraitNative; no extra generation",
+          "suggestedGameTarget": "public/art/npc-tess-root-v2.png"
+        }
+      }
+    },
+    {
+      "id": "noor",
+      "name": [
+        "努尔",
+        "Noor Bennett"
+      ],
+      "proposedAge": 35,
+      "role": [
+        "科技产品研究者",
+        "Technology product researcher"
+      ],
+      "workContext": [
+        "为虚构分布式产品团队整理公开材料与既有匿名研究结论；并非来海湾招募受试者。",
+        "Organizes public material and existing anonymized research findings for a fictional distributed product team. The stay is not a study-recruitment visit."
+      ],
+      "unknown": [
+        "把问题划掉又重新坐下的来访者",
+        "A visitor crossing out a question and sitting again"
+      ],
+      "intro": [
+        "“努尔。我研究人们怎样使用科技产品。到海湾第一天就列了十个问题，后来发现还没问过谁想一起坐一会儿。”",
+        "“Noor. I study how people use technology. On my first day here I wrote ten questions, before asking whether anyone wanted company.”"
+      ],
+      "personality": [
+        "敏锐、好奇，正在学习不把每次遇见都变成访谈。",
+        "Observant and curious, learning not to turn every meeting into an interview."
+      ],
+      "personalLife": {
+        "reasonForStay": [
+          "轮换住处的远程工作者，希望建立能再见面的朋友，而不只是记录一次观察。",
+          "A remote worker between short stays, hoping for friends to meet again rather than a single recorded observation."
+        ],
+        "interest": [
+          "旧纸书、二手物件和安静坐着的陪伴。",
+          "Old paper books, secondhand objects, and quiet company."
+        ],
+        "fatigueAndRest": [
+          "上午走路离屏，下午有阅读间歇，傍晚把研究本收起。",
+          "A screen-free morning walk, breaks from afternoon reading, and a closed research notebook in the evening."
+        ],
+        "moneyAndPlants": [
+          "可以聊选择与浪费，不替玩家下订单、评估投资或出售作物；共享种植与销售仍走既有游戏动作。",
+          "Can discuss choice and waste without ordering, evaluating investments or selling crops for the player; planting and sales remain existing game actions."
+        ],
+        "boundaries": [
+          "先问愿不愿意聊；拒绝后不追问，也不把玩家输入当研究数据。",
+          "Asks whether conversation is welcome, accepts refusal, and does not treat player input as research data."
+        ],
+        "lodging": "off-screen guest accommodation, not a new map, not the player's room"
+      },
+      "periodRoutes": [
+        {
+          "period": "morning",
+          "scene": "coast",
+          "footpoint": null
+        },
+        {
+          "period": "afternoon",
+          "scene": "secondhand",
+          "footpoint": null
+        },
+        {
+          "period": "evening",
+          "scene": "courtyard",
+          "footpoint": null
+        }
+      ],
+      "schedule": [
+        {
+          "start": 0,
+          "end": 360,
+          "scene": null,
+          "state": "night-rest",
+          "activity": [
+            "住处休息，不记录夜间访谈。",
+            "Resting off-screen; no overnight interviews."
+          ],
+          "talk": "unavailable"
+        },
+        {
+          "start": 360,
+          "end": 540,
+          "scene": "coast",
+          "state": "morning-walk",
+          "activity": [
+            "看潮水，今天先不列问题。",
+            "Watches the tide, leaving the questions unwritten for now."
+          ],
+          "talk": "brief"
+        },
+        {
+          "start": 540,
+          "end": 720,
+          "scene": "coast",
+          "state": "quiet-observation",
+          "activity": [
+            "让海风吹过空白页，愿意闲聊，不做观察记录。",
+            "Lets the sea breeze turn a blank page; casual conversation, without recording observations."
+          ],
+          "talk": "available"
+        },
+        {
+          "start": 720,
+          "end": 780,
+          "scene": "secondhand",
+          "state": "browse-and-consent",
+          "activity": [
+            "看看旧书，问Nell短时阅读是否会妨碍营业。",
+            "Browses old books and asks Nell whether a short reading visit will interfere with business."
+          ],
+          "talk": "brief",
+          "permission": "proposed scene consent, not already obtained"
+        },
+        {
+          "start": 780,
+          "end": 900,
+          "scene": "secondhand",
+          "state": "focused-work",
+          "activity": [
+            "安静整理已准备的公开产品材料；没有现场招募或录音。",
+            "Quietly organizes prepared public product material; no recruitment or recording."
+          ],
+          "talk": "defer-until-15"
+        },
+        {
+          "start": 900,
+          "end": 1020,
+          "scene": "secondhand",
+          "state": "reading-break-and-close",
+          "activity": [
+            "收起研究笔记，读几页不需要做结论的书，17:00前离开。",
+            "Puts away research notes, reads a few pages without a conclusion, and leaves before 17:00."
+          ],
+          "talk": "available"
+        },
+        {
+          "start": 1020,
+          "end": 1260,
+          "scene": "courtyard",
+          "state": "quiet-company",
+          "activity": [
+            "先问是否愿意一起坐，尊重住户的安静。",
+            "Asks whether company is welcome and respects the courtyard's quiet."
+          ],
+          "talk": "consent-first"
+        },
+        {
+          "start": 1260,
+          "end": 1440,
+          "scene": null,
+          "state": "night-rest",
+          "activity": [
+            "离场休息，不把没回答的问题视为失败。",
+            "Leaves to rest; unanswered questions are not a failure."
+          ],
+          "talk": "unavailable"
+        }
+      ],
+      "professionalTopics": [
+        {
+          "label": [
+            "没有回答的问题，也能告诉你些什么？",
+            "What can an unanswered question tell you?"
+          ],
+          "scope": "consent and limits of interpretation, no diagnosis or fabricated statistics"
+        },
+        {
+          "label": [
+            "一个产品方便了谁，又让谁多走一步？",
+            "Who gains convenience, and who has to take another step?"
+          ],
+          "scope": "a source-bounded product discussion, no implied user study"
+        }
+      ],
+      "relations": [
+        {
+          "person": "grant",
+          "kind": "main everyday story partner, not finance consultation",
+          "overlap": "courtyard evening"
+        },
+        {
+          "person": "nell",
+          "kind": "shared quiet reading and scene consent",
+          "overlap": "secondhand afternoon"
+        },
+        {
+          "person": "dani",
+          "kind": "optional distinction between keeping stories and collecting people",
+          "overlap": "courtyard evening"
+        }
+      ],
+      "personalStory": {
+        "proposedId": "nomads-v1-noor-company",
+        "title": [
+          "先一起坐一会儿",
+          "Company before questions"
+        ],
+        "start": [
+          "Noor想听Grant聊退休后怎样不把每件事都算回报，却先想知道：对方今天是否想说过去。",
+          "Noor wants to hear how retirement helped Grant stop measuring every return, but first wonders whether he wants to speak about the past today."
+        ],
+        "partner": "grant",
+        "consultPrompt": [
+          "今天想聊它，还是只坐一会儿？",
+          "Would you like to talk about it, or just sit awhile?"
+        ],
+        "proposedPartnerReply": [
+          "“今天先坐坐。明天想起哪一小段，我自己会说。别替我算成一个结论。”",
+          "“Let's sit today. Tomorrow I may tell a little part myself. Don't turn me into a conclusion.”"
+        ],
+        "choices": [
+          {
+            "id": "quiet",
+            "label": [
+              "留一段安静，不记录",
+              "Keep a quiet moment, without notes"
+            ],
+            "outcome": [
+              "记住对方的边界，不记研究材料或模拟付款。",
+              "Remember the boundary, without creating research material or a payment."
+            ]
+          },
+          {
+            "id": "return",
+            "label": [
+              "约下次自愿再聊",
+              "Leave a voluntary invitation for another day"
+            ],
+            "outcome": [
+              "只保留相约，不保证Grant以后同意。",
+              "Keep an invitation, without guaranteeing later consent."
+            ]
+          }
+        ],
+        "recall": [
+          "“那天没得出什么结论，可我终于觉得自己是来交朋友的。”",
+          "“There was no conclusion that day. At last I felt I had come to make a friend.”"
+        ],
+        "notDoneByConversation": [
+          "interview recorded",
+          "research participant recruited",
+          "survey submitted",
+          "private financial facts collected",
+          "product purchased"
+        ],
+        "missingNewsBehavior": "personal story remains available"
+      },
+      "newsStory": {
+        "sourceRequirement": "tech-product-release",
+        "proposedTemplate": "product-choice-access-v1",
+        "verifiedFactLayer": "a publisher's concrete feature/accessibility or support change, after separate admission",
+        "fictionalReaction": "Noor considers whether an optional explanation helps; Grant may choose familiar tools and Dani asks whose perspective was omitted",
+        "allowedOutcome": "a discussion and voluntary later conversation, no real study, purchase or investment recommendation",
+        "status": "no admitted tech article"
+      },
+      "art": {
+        "status": "NOT_GENERATED",
+        "requiredNativeMapPoses": 9,
+        "derivedSideFrames": 3,
+        "requiredNativePortraits": 1,
+        "squarePortraitBaseline": "new unified19, not legacy512x640 full-body portrait",
+        "formalUiAcceptance": "owner separately verifies actual game profile and site layout",
+        "reuseOtherResidentAsFinalIdentity": false
+      },
+      "appearance": {
+        "pronouns": "they/them",
+        "build": [
+          "中等偏高、窄肩但自然成人比例，轻松站立",
+          "Medium-tall with narrower shoulders and natural adult proportions, an easy stance"
+        ],
+        "face": [
+          "35岁成人面部，暖棕肤色、深棕眼、略长圆脸；无眼镜、无胡须",
+          "Adult age35, warm-brown complexion, dark-brown eyes and a softly elongated face; no glasses or facial hair"
+        ],
+        "hair": [
+          "黑色扭发向后束成低盘，完整发际线；不同于Leila/Elena高髻",
+          "Black twists swept back into a low coil with a complete hairline; distinct from Leila and Elena high buns"
+        ],
+        "upperClothes": [
+          "莓紫无纹立领短袖上衣，自然布料结构；不是Leila运动拉链外套",
+          "Plain berry-plum short-sleeved stand-collar shirt with natural cloth structure; not Leila zipped sports jacket"
+        ],
+        "lowerClothes": [
+          "沙色直筒长裤、深棕封闭平底步行鞋",
+          "Sand-colored straight trousers and dark-brown closed flat walking shoes"
+        ],
+        "poseTone": [
+          "好奇但留有距离，手自然松开，不做采访录音姿势",
+          "Curious with room for others; naturally open relaxed hands, no interview-recording pose"
+        ],
+        "forbidden": [
+          "录音设备/相机/研究白大褂",
+          "长发遮住整张脸",
+          "复制既有居民脸或服装"
+        ],
+        "englishIdentityPrompt": "Noor Bennett, an original 35-year-old adult with warm-brown skin, dark-brown eyes, a softly elongated face, no glasses and no facial hair. Black twists swept back into a low coil, complete hairline, not a high bun. Medium-tall with narrower shoulders and natural adult proportions. Plain berry-plum short-sleeved stand-collar shirt, sand-colored straight trousers, dark-brown closed flat walking shoes. Curious but unintrusive. No recorder, camera, lab coat, badge, logo, text, laptop or phone."
+      },
+      "fixedProductionId": "harbor-tech-nomads-20261006/noor",
+      "deliverables": {
+        "atlas": {
+          "path": "assets/noor.png",
+          "dimensions": [
+            384,
+            512
+          ],
+          "suggestedGameTarget": "public/art/npc-noor.png"
+        },
+        "portraitNative": {
+          "path": "assets/native/noor.png",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "composition": "new unified19 head-to-upper-waist square portrait"
+        },
+        "avatar": {
+          "path": "assets/noor-avatar.png",
+          "dimensions": [
+            256,
+            256
+          ],
+          "derivation": "deterministic nearest from portraitNative, same complete square composition",
+          "suggestedGameTarget": "public/art/npc-noor-avatar.png"
+        },
+        "portrait": {
+          "path": "assets/noor-portrait.png",
+          "dimensions": [
+            512,
+            512
+          ],
+          "derivation": "deterministic nearest from portraitNative; no extra generation",
+          "suggestedGameTarget": "public/art/npc-noor-root-v2.png"
+        }
+      }
+    }
+  ]
+}

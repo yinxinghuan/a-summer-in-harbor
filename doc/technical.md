@@ -201,3 +201,18 @@ nextPeople现在分别转发art（既有root-v2肖像路径）、avatarArt（关
 - 两PNG保持制作方SHA和锚点／等比scale0.5，不在消费端重画或变形。候选art.json的technical accepted限定为本作本地集成开发的消费合同；制作方审核v2、通用库runtime/libraryEligible=false和权利／profile待核状态另存原件，不转写为正式上架。正式发布仍需主端审阅本批差量／验收与剩余门禁。
 
 本地QA服务 `_qa/animals-owner-server.ts` 仅回环5425、独立SQLite合成旅程，5424开发预览与5426固定dist预览；均不可部署。验证日志与原始失败/修复记录在 `doc/qa/animals-integration-20261006/`。真实MiniApp新闻／回合QA仍按独立合同等待用户正常打开，不由动物改动替代。真实iPhone、跨设备、第二真实账号与玩家理解没有新增证明。
+
+## 2026-10-06 科技数字游民独立实现（基于动物候选 f6e6be82）
+
+本节是独立副本增量，不改上述发布记录。配置总数22；新3人的 `artAdmission` 保持 pending，因此当前可渲染/可交互人物仍为19人。正式图集和两个资料消费图由唯一集成 owner 接入；当前9个路径缺项不记为可用图。
+
+- 技术栈和运行方式保持 React/TypeScript/Vite、RPGJS/Pixi、既有 AsyncSessionAuthority 与 SQLite/PG 适配器；无新服务、模型、网络采集或数据库DDL。
+- `src/world/tech-nomads.json` 保存3人固定身份、24h半开时间段、9个业务脚点、双语文案、职业观点、故事两选项和美术缺项。`tech-nomads.ts` 投影角色/路线，依据唯一游戏分钟解析活动、专注婉拒、下一可聊时间和美术准入。未认识伙伴的名字在活动、日程提示和上下文中替换为邻居。
+- `src/story/tech-nomads.ts` 使用独立 `nomads-v1-*` 话题和故事flag，不修改 B1 life 模块或 `neighbors2`。Save仅增可选 `techNomadsV1:{schema:1,stories:{[id]:{choice,completedAt,recalledAt?}}}`；旧字段缺省不初始化、不迁移或清空。故事要求既有 introduction 和伙伴生活事实；选择互斥、本人及伙伴各+1关系，60游戏分钟后可回忆一次且不再奖励。只保存真实话题/个人选择，不创建B1尚未挂载的收藏物。
+- `state.ts` 复用 existing topic/action 提交；`binding.ts` 登记动作但仍验证当前人物/场景/距离；`runtime.ts` 验证可选记忆并在专注时直接提交已作者化婉拒，保留提问历史，不调用 resolver、不误标一次自由AI对话体验。版本、幂等、CAS、owner隔离和receipt仍由原authority事务负责。
+- `data.ts` 增配置实体，`sheets.ts` 只为美术已准入者注册图集；`View.tsx`、故事动作和 `animals/game.ts` 共用 `presentEntity`。pending、夜间和不在当前场景时图形/热点/居民碰撞同时缺席。未来三人使用原NPC锚点、等比缩放、24单位巡游和原遮挡排序；没有另一renderer或改主角偏移。
+- `relationships.ts`、`resident-guide.ts`、`question-examples.ts` 和 `server/dialogue-context.ts` 复用现有关系、手记、历史与问答入口。关系不依赖临时UI状态；日程提示只在认识且学习routine后开放。`newsStory` 仅保存冻结来源准入要求和拟议模板；无已准入科技文章、无当日新闻断言，不接入旧经济资讯的采集或来源pin。
+
+扩展点：调日程/职业观点/故事文字/脚点修改 `world/tech-nomads.json`；调故事前提、关系和回访修改 `story/tech-nomads.ts`；未来真实科技来源由owner先完成原来源审核及固定版本后另接模板。正式人物启用须先核对3类实际PNG尺寸与SHA、完成原renderer证据，再由owner更新对应 `artAdmission`；不能只改status绕过缺项。
+
+确定性验证入口 `_qa/run-tech-nomads-offline.mjs`；三居民两分支两语言、1440分钟日程、旧档、SQLite重开/重放/CAS、未来22人动态几何与3猫4鸥见 `_qa/tech-nomads.test.ts`。`_qa/tech-nomads-pending-browser.ts` 只拦截读取独立dist和合成旧Save，不监听端口，外网全部abort；320×568/390×844双语验证原19人、猫、移动、关系历史和pending缺席。它不证明新图、真实手机、MiniApp、实际PG或玩家理解。只读美术审计 `scripts/audit-tech-nomads-art.mjs` 目前预期退出1并报告HOLD。

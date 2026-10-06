@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "status": "CONCRETE_TASK_SPLIT_READY_FOR_PARENT_ASSIGNMENT",
+  "waitForB1": false,
+  "briefRoleManifest": "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-production-brief-20261006-01a10d0d/role-manifest.json",
+  "workstreams": [
+    {
+      "id": "art",
+      "assignee": "coordinator assigns one dedicated art producer, not this turn",
+      "writeRoot": "/Users/yin/code/games/harbor-tech-nomads-art-20261006/",
+      "readInputs": [
+        "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-production-brief-20261006-01a10d0d/role-manifest.json",
+        "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-production-brief-20261006-01a10d0d/renderer-contract.json",
+        "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-production-brief-20261006-01a10d0d/source-references.json",
+        "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-production-brief-20261006-01a10d0d/budget-proposal.json"
+      ],
+      "work": "single serial media writer and ledger; Harper pilot then complete map/profile-source family, Tess then Noor; native/source requests and rejection history retained",
+      "writesGameOrLibraryOrSite": false,
+      "publishes": false,
+      "cloudLibraryUpload": "not part of batch",
+      "deliver": [
+        "3map atlases",
+        "3native1024 square portraits",
+        "3avatars256square",
+        "3portraits512square derived from same native",
+        "pose-plans and provenance/request/task/hash manifest",
+        "AI source/family/matte/series reviews",
+        "320/390 actual frozen original renderer cycles/stop evidence",
+        "single exact POST ledger and failures"
+      ],
+      "handoff": "send first Harper pilot and final manifest directly to coordinator and integration owner; profile-source pass is not formal game UI pass"
+    },
+    {
+      "id": "content",
+      "assignee": "coordinator assigns one independent character/content implementation worker",
+      "writeRoot": "/Users/yin/code/games/harbor-tech-nomads-content-20261006/",
+      "baseline": "f6e6be8 read-only snapshot; coordinator fixes exact copy before work; do not edit original dirtymaster or animal candidate",
+      "readInputs": [
+        "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-production-brief-20261006-01a10d0d/role-manifest.json",
+        "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-plan-20261006-01a10d0d/source-requirements.json",
+        "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-plan-20261006-01a10d0d/implementation-seams.md"
+      ],
+      "work": "implement3 unique profiles, subperiod availability/activity, ordinary life/partner/revisit/recall and optional news templates in an independent copy; Harper complete slice first, then Tess/Noor; can run while art producer works",
+      "constraints": [
+        "Casey holiday and prior19/animals unchanged",
+        "No new maps/identity/auth",
+        "No new media calls or news scraping; no current tech article invented",
+        "Source requirements stay unadmitted until separately finite verification; personal stories work offline",
+        "No original player saves/session database",
+        "Optional versioned additive facts, preserve old neighbors2 and authority/CAS/receipt/replay",
+        "No real contact, repository operation, survey data or work completion from prose"
+      ],
+      "deliver": [
+        "focused source patch/bundle and base/commit",
+        "additive content/version contracts",
+        "meaningful local scenario/old-save/clock/availability/replay checks",
+        "requirements/visual/technical updated in independent copy",
+        "asset slots and actual missing-source behavior, not officially admitted placeholders"
+      ],
+      "publishes": false
+    },
+    {
+      "id": "integration",
+      "assignee": "existing sole game integration/release owner01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+      "writeRoot": "future independent integration copy chosen by owner; no writes in this docs turn",
+      "work": "review producer/content packages, apply to approved baseline in independent copy; admit22-resident footpoints with actual current dynamic objects/animals/portals/crop approaches; verify all3real profile UI and daily story/state paths",
+      "constraints": [
+        "Does not wait for B1 completion to review nomad inputs",
+        "No mixing into exactf6 animal update",
+        "Coordinate later B1 merge with precise base/versions instead of altering B1 scope",
+        "Use existing guest shell/front-end ID trust; no fake platform identity",
+        "normalMiniAppQA only with ordinary user window, no original save mutation",
+        "Formal deployment separately bounded and both main/Pages frontend same commit"
+      ],
+      "deliver": [
+        "actual320/390 game renderer/portrait UI proof",
+        "old save compatibility and ordinary action/relationship/return behavior",
+        "news source/expiry/correction acceptance only for verified admitted records",
+        "exact release delta and required validation"
+      ]
+    }
+  ],
+  "siteFollowup": "existing Siteowner may receive same new256/native square portraits only after character art/identity acceptance; actual Site320/390/desktop QA separate. Art-only19 baseline is not proof of Site integration."
+}

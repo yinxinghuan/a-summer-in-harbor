@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 1,
+  "noNetworkFetchThisTask": true,
+  "originalPlanReferences": [
+    {
+      "path": "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-plan-20261006-01a10d0d/residents.json",
+      "sha256": "cc7f7a1c607f4dad0d7d95e08ca7922bb6d288556307ea72f3b84697d4ee757c",
+      "purpose": "immutable prior role/story/day-plan/source requirements"
+    },
+    {
+      "path": "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-plan-20261006-01a10d0d/source-requirements.json",
+      "sha256": "b358b5b7d6bc0b2c30c3b70d54e743eeb1ae08bd6ae9fd636b14586d3e963fb6",
+      "purpose": "immutable prior role/story/day-plan/source requirements"
+    },
+    {
+      "path": "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-plan-20261006-01a10d0d/implementation-seams.md",
+      "sha256": "45f6f24a3ca26a320bacdbafd13904548dae093d7683c0657de71490c585f44b",
+      "purpose": "immutable prior role/story/day-plan/source requirements"
+    },
+    {
+      "path": "/Users/yin/code/games/a-summer-in-harbor/doc/qa/tech-nomads-plan-20261006-01a10d0d/manifest.json",
+      "sha256": "53868a2ed1dcba4bfcb82dc2e3088baa47ac82f14935f6d0d99026db75356a2b",
+      "purpose": "immutable prior role/story/day-plan/source requirements"
+    }
+  ],
+  "mapStyleAndIdentitySeparation": [
+    {
+      "id": "rowan-map-down-stand-v3",
+      "purpose": "map camera/body-size/pixel-style only; do not transfer Rowan identity or apron",
+      "sourcePath": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/rowan-down-stand-v3/source.webp",
+      "sourceSHA256": "0d415d5680a9537bcdae0adc6688bfe2e195a181b2693487b3db2c298b1f66f5",
+      "publicUrlFromRecordedResponse": "https://images.aiwaves.tech/uploads/1791226126941-dxes4jyv4gg.webp",
+      "requestId": "1e2d9de9-89df-4ee6-8028-af36951310a5",
+      "taskId": "mt_9e7c45eeef230a53f1efff6e9724eb6b",
+      "responseRecord": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/rowan-down-stand-v3/response.json",
+        "sha256": "96ddaeb2d1de58f758774daf1954f15247d47a5e49f1f28312a0b239927e5362",
+        "purpose": "recorded successful public source URL, not fetched this task"
+      },
+      "useAsIdentityOfNewResident": false
+    },
+    {
+      "id": "rowan-unified-portrait-style",
+      "purpose": "portrait pixel/light/head-to-waist square composition only; do not transfer face/hat/striped apron",
+      "sourcePath": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/rowan/avatar/source.webp",
+      "sourceSHA256": "a8955f713e1cd145152e05a0b8bdabf048825d83c385f30d21cca44435bc8a06",
+      "publicUrlFromRecordedResponse": "https://images.aiwaves.tech/uploads/1791142835377-a7ivjczhud.webp",
+      "requestId": "03a0000f-5459-5e13-a7e1-091245198648",
+      "taskId": "mt_431f64ce38bd299409a2568a053172ce",
+      "responseRecord": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/rowan/avatar/response.json",
+        "sha256": "c462c1b722702fd89441fe0990748cf06218e52ebbe8a190f6474ed90e3ec879",
+        "purpose": "recorded successful public source URL, not fetched this task"
+      },
+      "useAsIdentityOfNewResident": false
+    }
+  ],
+  "generationReferenceRecipe": {
+    "firstMapRoot": "new role English identity text + fixed Rowan down-stand style reference; complete head-to-foot figure, same authored map camera/proportions. Reference identity must not leak into new role.",
+    "portraitPilot": "new role approved map-root public source for identity + fixed Rowan square portrait raw source for style only;2 distinct explicit reference roles. Compare against newly unified19 actual series.",
+    "otherMapDirectionsAndContactA": "same person approved root as identity reference; complete figure each time",
+    "contactB": "same person same-direction approved A, changing the whole arm/leg contact pose",
+    "referenceTransport": "only recorded public HTTPS source URLs or successful new task URLs; local PNG paths are not server-fetchable refs. No upload required for the existing two raw style sources.",
+    "contract": "existing AlterU Media APIv1 and gpt-image-2.5-sunburst alias; GPT v0.5 text0refs/edit1–8deduplicated refs, no direct-provider credentials or new service"
+  },
+  "newUnified19": {
+    "root": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006",
+    "handoff": {
+      "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/site-owner-handoff.json",
+      "sha256": "9595d969812a9040a6785b74fc0de48d3372465e387232e83d66854762f6aa3d",
+      "purpose": "actual fixed19 source/dimension/right/review handoff"
+    },
+    "direction": {
+      "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/docs/art-direction.md",
+      "sha256": "481d7e0f8fa8126d2986de423a4206b15a64de1e439d32ab92b38c1854af971b",
+      "purpose": "unified square portrait art direction"
+    },
+    "sourceReview": {
+      "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/docs/source-review.md",
+      "sha256": "d191762561586ac1ba2aae6da0a301697e3824b41468b010cf89eb97a8e600bc",
+      "purpose": "19 identities/style reading"
+    },
+    "seriesReview": {
+      "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/19-residents-series-v1.json",
+      "sha256": "0ea475cd36e88b0ad579731141baf501ffcda5517a7843380e2f4ed1332da4db",
+      "purpose": "AI actual series review, not actual Site QA"
+    },
+    "seriesOverview": {
+      "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/evidence/19-residents-asset-proof-desktop-not-Site.png",
+      "sha256": "db9dd075a6a87fd770a01aef744b2994d4aeb98b89de9e17735e946ea623538b",
+      "purpose": "viewed this task; portrait style comparison only, not generator multi-person input or real Site QA"
+    },
+    "portraits": [
+      {
+        "id": "mara",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/mara.png",
+          "sha256": "3bb21b34070e3f19ce993579649d63a5f740cc1b13146097b92871ae2752fdec",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/mara.png",
+          "sha256": "f5c26d9bffddf59b3dcaa05c0ac98bec224576f09decd864dffdfed8110bff9c",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/mara-v1-final-v1.json",
+          "sha256": "1ef96269d8c4835affa566a5b04f0601c0588cee9f0268e8614692c222600699",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "theo",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/theo.png",
+          "sha256": "e53ec6ac1df44ae068f46bb2fa0b47ad4f20bdb92eb78a825d58260f4aad897b",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/theo.png",
+          "sha256": "1b63fecabef5a884042e3cc8ab28bd2689ec3844641737b33020509d13f14786",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/theo-v1-final-v1.json",
+          "sha256": "705408c625931a6ba83ab9e673385cb4cd54256dc4080793ecec48f9d8908194",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "june",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/june.png",
+          "sha256": "1ef05191ea00363b0e71a1b29d1d966f8c1da79c4bf8a268c2dc9fff3ad07e55",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/june.png",
+          "sha256": "7994355e136cf3ed6e52afe3bace6cfa3ccd55dd3f7cc873360243876369034d",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/june-v1-final-v1.json",
+          "sha256": "1fe7e1063d23fd7d5dd25a35189ea1f526ef39c968e6c0e3d997c03f87d9f2ef",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "idris",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/idris.png",
+          "sha256": "dcdcc33dfcc757dce38fdfe4f5e3f3e8f68d684b5c2514deda6364dd536ae117",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/idris.png",
+          "sha256": "e80975349e8624b6b794d2c6d67f729554f26e9d137269310a925226414d19e5",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/idris-v1-final-v1.json",
+          "sha256": "0306bec20aaca30428c85a4d56247d62206f51c5b23ec001c1bf77af6a639e64",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "ruth",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/ruth.png",
+          "sha256": "2fc1b1e6233cdb6a90efa933f28571cd5850b7639d370a697a726d997cad9a8e",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/ruth.png",
+          "sha256": "9dd49eff8f258f8c0adfc7c7f535d50353a34c47037cd6c62a9861b8b03cc870",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/ruth-v1-final-v1.json",
+          "sha256": "83947b830b2096b21f8eff493cc04345c7c8e7a95a50d3796e692e530a783c11",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "luis",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/luis.png",
+          "sha256": "0d7ca2bacdb1ded2c01a3389e77d144465de0f1bda9434853405a965f5970127",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/luis.png",
+          "sha256": "5c479c3af963b7402b151e3cfbff900282c88aefbc093505674fb19c53b87bc8",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/luis-v1-final-v1.json",
+          "sha256": "78c6efcf566b542a88680119aa69c82e02e8eb6c8afea7cccac1efe144cd1249",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "nell",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/nell.png",
+          "sha256": "ca6dfb8b64ea4ea8ecff384cf7aa81242952fe8c6b752e0a8fbf128c538db70d",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/nell.png",
+          "sha256": "84781f1133dcc1bc0c522877de59f98bef1ed323b15172c9d5c89c9f79fc748a",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/nell-v2-final-v1.json",
+          "sha256": "fdff676cc916f62a61f8e45e94c9fbec105414a01c16610e7aeb52a45e72d366",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "elena",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/elena.png",
+          "sha256": "9a7600be41296f9274a4b1aadce7aa46ba81e80ba369e8f90b12f885fedf4542",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/elena.png",
+          "sha256": "237c0caec8beaaf418b1fdf48bcecdf64940cfa2fcf1beba3ea372f4b3910460",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/elena-v1-final-v1.json",
+          "sha256": "94daa4e71270e3e4c7f9d84e3b0f1f778f623867e96fbacdc4cb2beea64c7008",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "arthur",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/arthur.png",
+          "sha256": "a11e92ca529c6c14f68421b41bd5b4ac02e9c1a959190f44f94326d47d1f6856",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/arthur.png",
+          "sha256": "0e220cb50c2dc5d7bce74b8965041a6d1fa521599949786e434f263a03174ae0",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/arthur-v1-final-v1.json",
+          "sha256": "074cf0fdf0b5609f1ea4a6e50b228c3068cded11e56c06f71be62789725328e3",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "avery",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/avery.png",
+          "sha256": "b38286d43ae2aa54f1bc1817058cda1f851abe386bf781af54374275085dd569",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/avery.png",
+          "sha256": "f3afc32b4e924f611db0816946b1f0be040016d4176c71ca30fd8fd2e86f96e6",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/avery-v1-final-v1.json",
+          "sha256": "696a873991d8ff157ebc36526346d44f0a21e3799009eb55a615297596885918",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "samira",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/samira.png",
+          "sha256": "f574a49af4c8ea4985644c5513660886be61462b9cf7f53b85448a532200392c",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/samira.png",
+          "sha256": "f40134570b92910de0ec5fa5afcf739c11a9a74bc328997c7d8f14da8b242a50",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/samira-v1-final-v1.json",
+          "sha256": "e37f83d1750bdf1da5ba5a17479a3e5434c62e51d108898e454339311cd42153",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "owen",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/owen.png",
+          "sha256": "d17dd043c7fa8309154dda2a5d3c307fbfe5480b61d8bbfaf74ad955af8182a7",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/owen.png",
+          "sha256": "6c4d7f70d489e14c127404f563839d2cf7dd3e7600c22f2954eff7f7e3a4952d",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/owen-v1-final-v1.json",
+          "sha256": "ce24ef127e68205ace1165b53821935b159c498c32dc383ad935cce6ec56707e",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "dani",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/dani.png",
+          "sha256": "f40ea733c58032b618a09d1272889eff59f1bbd74bad56fa057b8c8854cffabd",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/dani.png",
+          "sha256": "b56075711573e154dd7378bcf799222730e37b303844b027448bb20d233a0795",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/dani-v1-final-v1.json",
+          "sha256": "f71afeb903b3a31ed6a10d7efc69d36d6690408a0fed02493e3ea13b7d0e9139",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "rowan",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/rowan.png",
+          "sha256": "54a443fef18b1571f2743149e34784a13cda2414513b3338eecc99eec834dd9b",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/rowan.png",
+          "sha256": "b4fbd0e5c699b7ff99d04b86747098ddfa3dc38834f1e4093e5705dfcea3365c",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/rowan-source-v1.json",
+          "sha256": "f154806ca9cc267cf9ccec649a016eeb3e003a1c8dbc3507b758f48fc534e17c",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "mira",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/mira.png",
+          "sha256": "1fd003f4a36000b2b777170b47621dbdb864a30bda5f78ccb69e9f2cbe8c11f8",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/mira.png",
+          "sha256": "50a53835131c135ca59e3f042fada5d408babff3f9ef1194b4d7aa6edc060389",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/mira-source-v1.json",
+          "sha256": "e25d6c5dbec094d919e63fe79db23b47dfbc23a7fd8a5a22cd2ebaa211f21769",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "jordan",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/jordan.png",
+          "sha256": "d2f65216f0a1b6e3e04cf72dbc2c9b2eec25e69d4cb0b865f31a3119a8f2fa1c",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/jordan.png",
+          "sha256": "37f283ea0eb291c751f499b2a192709ebe401e46d0f61db14612eb7b9699210a",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/jordan-source-v1.json",
+          "sha256": "63727c8071d86118070efed755f09e01d23e36e674faee9b114e57d9d8577125",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "leila",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/leila.png",
+          "sha256": "db64d2d10d74c2526373be13d675669ed3597a90797cd6b225ce042c89fa7a5a",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/leila.png",
+          "sha256": "e4ee4bd56e11ba58f11f5ba578395cdcc2f5853367c6e65d5e15e14f3482e608",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/leila-source-v1.json",
+          "sha256": "d5701216a3de700021950c69ee1138af51d804a96d5571a4ba5006a50bdf98ce",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "casey",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/casey.png",
+          "sha256": "66841e539a7815f11c8f1e475d2420955ec33be1576cfa11f18da2f177a4961e",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/casey.png",
+          "sha256": "9d1c9168471c2c2d10e47dbb18c882246c5f561d8255175327812eff6276095c",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/casey-source-v1.json",
+          "sha256": "4d4809ac835424b9aa4ac704f8fed12303147765ee6e9d68405665f95d4cc22b",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      },
+      {
+        "id": "grant",
+        "consumer": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/unified/grant.png",
+          "sha256": "3c1321555920ee04c94c23269a055093124fe1b3200357db86d1504afbce2cbe",
+          "purpose": "fixed19-series256-square reference"
+        },
+        "native": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/assets/native/grant.png",
+          "sha256": "8f1c1d69a6dc5eebbcc104e5269fbc9cdf28c55a919203cf31d365add0eba1bf",
+          "purpose": "fixed19-series1024-square reference"
+        },
+        "review": {
+          "path": "/Users/yin/code/games/harbor-resident-portraits-unified-20261006/reviews/grant-source-v1.json",
+          "sha256": "62bc9ef8a72dc87c7d68a4fc7cd8bd9c595b5b7eab4efa18677fca9356c85aec",
+          "purpose": "existing AI single-source/final judgment"
+        },
+        "actualSiteQA": "owner pending"
+      }
+    ],
+    "all19NativeAndConsumerHashesVerified": true,
+    "newRoleIdentityCopiedFromExistingPerson": false
+  },
+  "projectSource": {
+    "commit": "f6e6be82ee10e6422892754a1fc624147e217c2c",
+    "oldResidentsRemainUnchanged": true,
+    "sourceReadOnly": true
+  }
+}

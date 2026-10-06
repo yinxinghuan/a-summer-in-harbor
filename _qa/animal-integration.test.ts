@@ -22,8 +22,8 @@ const seed=(id:string=randomUUID()):Save=>({...initial('en',id),townMinutes:780,
 const observed=(s:Save,id='harbor-cat-1')=>createAnimalRuntime(acceptedAnimals).tick(0,gameAnimalContext(s,s.position)).find(a=>a.id===id)!;
 const command=(s:Save,verb='animal-pet'):Action=>{const a=observed(s);return {action_id:randomUUID(),expected_version:s.version,scene:s.scene,position:{x:a.foot.x-8,y:a.foot.y+34},target:a.id,action:verb,actorPosition:a.foot}};
 const stable=(s:Save)=>{const copy:any=structuredClone(s);for(const k of ['animalsV1','version','cursor','position','history'])delete copy[k];return copy};
-test('current configuration is 19 people including Mira and seven separate animal objects',()=>{
- assert.equal(Object.keys(people).length,19);assert.equal(Object.keys(residentRoutes).length,19);assert.equal(acceptedAnimals.length,7);
+test('current configuration is 22 identities including Mira, pending nomads, and seven animal objects',()=>{
+ assert.equal(Object.keys(people).length,22);assert.equal(Object.keys(residentRoutes).length,22);assert.equal(acceptedAnimals.length,7);
  for(const minute of [540,780,1080])assert.ok(animalPeople({townMinutes:minute,flags:[]}).mira);
  assert.deepEqual(acceptedAnimals.map(d=>d.species).sort(),['cat','cat','cat','gull','gull','gull','gull']);
  for(const r of Object.values(rooms))for(const e of r.entities.filter(e=>e.animalId)){assert.equal(e.kind,'object');assert.equal(e.person,undefined);assert.ok(!people[e.id])}
@@ -49,7 +49,7 @@ test('sleep, wrong scene, missing or invented foot, gull actions and bad verbs r
  for(const a of cases){const before=structuredClone(s);await assert.rejects(runtime.prepare(s,a));assert.deepEqual(s,before)}
  const asleep={...s,scene:'courtyard',townMinutes:1300,position:{x:558,y:515}},a=observed(asleep);await assert.rejects(runtime.prepare(asleep,{...valid,scene:'courtyard',position:asleep.position,actorPosition:a.foot}),/ANIMAL_RESTING/);
 });
-test('current dynamic geometry and all 19 daily residents keep animals, portals and crop regions safe',()=>{
+test('current dynamic geometry and all admitted daily residents keep animals, portals and crop regions safe',()=>{
  let frames=0;for(const dynamic of [false,true])for(const minutes of [540,780,1080,1300])for(const scene of [...new Set(acceptedAnimals.flatMap(d=>Object.values(d.schedule).map(s=>s.scene)))]){
   const s={...seed(),scene,townMinutes:minutes,position:rooms[scene].spawn},ctx=gameAnimalContext(s,s.position,{world:dynamicWorld(s.flags,dynamic)}),r=createAnimalRuntime(acceptedAnimals);
   for(let i=0;i<240;i++){const states=r.tick(1/60,ctx);for(const a of states.filter(a=>a.visible)){assert.ok(pointClear(a.foot,a.slot!,profiles[a.species],ctx,states.filter(o=>o.id!==a.id)));assert.ok(!Object.values(ctx.people).filter(p=>p.scene===scene).some(p=>overlaps(bodyAt(a.foot,profiles[a.species]),p.body)));frames++;}}

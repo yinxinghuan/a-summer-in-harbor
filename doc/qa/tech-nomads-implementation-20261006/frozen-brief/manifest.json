@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "ownerThreadId": "01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "batch": "harbor-tech-nomads-20261006",
+  "status": "local-production-dispatch-brief-not-generated-not-deployed",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7266,
+      "sha256": "ed4c1480df5ecd33e9599146d544cdbfecf4e64ec960ef83ac41b651bf757a2b"
+    },
+    {
+      "path": "budget-proposal.json",
+      "bytes": 1893,
+      "sha256": "c7707e699246ab1437b730ee359de833b0d3184d9fe4d73a555b73b9127ddc4f"
+    },
+    {
+      "path": "dispatch.json",
+      "bytes": 5353,
+      "sha256": "d7b07a07a33ff90c12613e34dc6d9ba821de271da2527a90af5909ec9b7b81af"
+    },
+    {
+      "path": "renderer-contract.json",
+      "bytes": 5217,
+      "sha256": "2ddb1b1f6a7f83fb7522f77d710331bc964ed325ce6e7ba30bdb5537af83970c"
+    },
+    {
+      "path": "role-manifest.json",
+      "bytes": 41214,
+      "sha256": "5f957328465c3ef3d0b47a8fff303508df03d45f02f2158e8cb6c289f351cd0b"
+    },
+    {
+      "path": "source-references.json",
+      "bytes": 24285,
+      "sha256": "3bb321d31f4b470b1347753b71dffb1e58120b344ad3a31f67a677ee7dbc1f8c"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 1010,
+      "sha256": "8eaecb0bff5419db29906cf1640878ec3df5793a3095b364539ac16dd405f5c7"
+    }
+  ]
+}

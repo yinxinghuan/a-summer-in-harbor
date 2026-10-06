@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "f6e6be82ee10e6422892754a1fc624147e217c2c",
+  "renderer": "actual existing RPGJS/Pixi, not a hand-drawn replacement",
+  "sourceReferences": [
+    {
+      "path": "/private/tmp/harbor-animals-integration-20261006/source/src/world/sheets.ts",
+      "sha256": "7413de01f7bbc1e0731f474565b107714726741313acef99838df03282fbf915",
+      "purpose": "actual NPC sprite dimensions/anchor/scale/offset"
+    },
+    {
+      "path": "/private/tmp/harbor-animals-integration-20261006/source/src/world/View.tsx",
+      "sha256": "7eae8399bf7bd5d7d472c3e4626af7647c55bcf93479cc32de5a85caf60c3240",
+      "purpose": "actual NPC patrol, pose distance, collision and hotspot projection"
+    },
+    {
+      "path": "/private/tmp/harbor-animals-integration-20261006/source/src/engine/rpg-space.ts",
+      "sha256": "71b77539edd10807e73059392699c447012c216ae5c64d2da5f722a419cbb295",
+      "purpose": "actual hero diagnostic distance cycle; do not copy hero offsets to NPC"
+    },
+    {
+      "path": "/Users/yin/code/games/harbor-residents-art-20261006/manifest.json",
+      "sha256": "3eb55e08b06dcef1d12d43eb09cfa5ce2d1ed46a79d36a3f29009ee33269ba57",
+      "purpose": "accepted six-resident production contract and source chains"
+    }
+  ],
+  "atlas": {
+    "dimensions": [
+      384,
+      512
+    ],
+    "grid": [
+      3,
+      4
+    ],
+    "cell": [
+      128,
+      128
+    ],
+    "rows": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "columns": [
+      "contactA",
+      "stand",
+      "contactB"
+    ],
+    "nativeSources": {
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "countPerPerson": 9,
+      "directions": [
+        "down",
+        "left",
+        "up"
+      ],
+      "poses": [
+        "contactA",
+        "stand",
+        "contactB"
+      ],
+      "mustBeIndependentCompleteFigures": true
+    },
+    "derivedRight": "exact mirror of the whole final left cell for each of the3 poses, following existing accepted assembly; no local limb mirror/repaint",
+    "visibleFigureHeightPixels": 108,
+    "groundBaselinePixels": 122,
+    "nominalFootAnchorPixels": [
+      64,
+      122
+    ],
+    "rendererAnchor": [
+      0.5,
+      0.953125
+    ],
+    "uniformWorldScale": 0.5185185185185185,
+    "visibleWorldHeight": 56,
+    "npcSpriteOffsets": [
+      0,
+      0
+    ],
+    "diagnosticHeroOffsetsOnly": [
+      8,
+      12
+    ],
+    "textureSampling": "nearest",
+    "alpha": "transparent RGBA; no visible magenta key remnants"
+  },
+  "cycle": {
+    "sequence": [
+      "contactA",
+      "stand",
+      "contactB",
+      "stand"
+    ],
+    "actualNpcWorldDistancePerPhase": 12,
+    "actualNpcPause": "existing boundary/obstacle pauses and near-player stand",
+    "npcCurrentCorridor": {
+      "horizontalRadius": 24,
+      "sameY": true,
+      "collisionFootprint": [
+        18,
+        8
+      ],
+      "newFootpoint": "game owner admits against actual22-resident/animal/dynamic geometry; art producer must not choose business coordinates"
+    },
+    "heroDiagnosticOnly": {
+      "speed": 112,
+      "fullStrideDistance": 48,
+      "distancePerPhase": 12
+    },
+    "stand": "each of4 facing directions, retaining direction after stop"
+  },
+  "poseReview": "A/B must exchange near/far arm and leg contact/occlusion as complete figures; matching face/hair/garments/body/camera across9 sources. B references approved same-direction A. A and B cannot be duplicated or made by local leg operations.",
+  "portrait": {
+    "styleBaseline": "new unified19 fixed below in source-references.json",
+    "nativeDimensions": [
+      1024,
+      1024
+    ],
+    "consumerAvatar": [
+      256,
+      256
+    ],
+    "consumerPortrait": [
+      512,
+      512
+    ],
+    "sameNativeSource": true,
+    "framing": "full hair and adult neck/shoulders/chest to upper waist, garment continues naturally to bottom edge; eye-level front view",
+    "light": "soft warm upper-left",
+    "stageColor": "#fff4d9",
+    "paint": "fine deliberate retro pixel blocks, restrained dark-brown outlines, stepped skin/cloth shades; preserve different shoulder widths and ages",
+    "noGroundOrTools": true,
+    "noTextLabelsBorderLogo": true,
+    "noRoundFaceCropOrAspectStretch": true,
+    "legacyPortrait512x640": "not the new3-person composition contract; square native/consumers intentionally follow unified19"
+  },
+  "gates": [
+    "Harper accepted map down-stand plus square portrait pilot; actual local view/comparison required",
+    "Harper full nine-source family plus12-cell atlas;320x568/390x844 original renderer four-direction cycles and stops, then same order Tess/Noor",
+    "AI source, family, matte/technical and target-scene judgments separate, with history retained",
+    "Formal game NPC routes, collision/occlusion, journal/story/recall and actual profile UI by owner; site UI by existing Site owner",
+    "Isolated browser and viewport passes do not claim true phone or MiniApp identity/session QA"
+  ],
+  "postProcessing": "existing deterministic matte including individually AI-confirmed closed magenta holes, protected opaque-core RGB unchanged, transparent edges checked on3 backgrounds, nearest sampling; no painting limbs or inventing sources"
+}
