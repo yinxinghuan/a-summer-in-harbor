@@ -1,0 +1,440 @@
+{
+  "authority": "automated synthetic regression",
+  "fixture": "unloaded synthetic frame, no media calls",
+  "ownerReproductionIncluded": true,
+  "cases": [
+    {
+      "name": "missing",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "null",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "empty",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "array",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "string",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "boolean",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "inherited",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "extra field",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "symbol field",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "getter",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "missing singleImage",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "singleImage invalid hold",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "singleImage invalid rejected",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "singleImage invalid pass",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "singleImage invalid unknown",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "singleImage invalid undefined",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "singleImage invalid null",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "singleImage invalid 0",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "singleImage invalid true",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "singleImage invalid [object Object]",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "singleImage invalid ",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "missing family",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "family invalid hold",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "family invalid rejected",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "family invalid pass",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "family invalid unknown",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "family invalid undefined",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "family invalid null",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "family invalid 0",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "family invalid true",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "family invalid [object Object]",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "family invalid ",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "missing targetScene",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "targetScene invalid hold",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "targetScene invalid rejected",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "targetScene invalid pass",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "targetScene invalid unknown",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "targetScene invalid undefined",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "targetScene invalid null",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "targetScene invalid 0",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "targetScene invalid true",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "targetScene invalid [object Object]",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "targetScene invalid ",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "missing technical",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "technical invalid hold",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "technical invalid rejected",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "technical invalid pass",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "technical invalid unknown",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "technical invalid undefined",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "technical invalid null",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "technical invalid 0",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "technical invalid true",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "technical invalid [object Object]",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    },
+    {
+      "name": "technical invalid ",
+      "renderAccepted": false,
+      "sheetAccepted": false,
+      "visuals": 0,
+      "collisions": 0,
+      "targets": 0
+    }
+  ],
+  "caseCount": 54
+}

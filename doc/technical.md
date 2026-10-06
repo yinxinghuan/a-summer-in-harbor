@@ -188,3 +188,16 @@ nextPeople现在分别转发art（既有root-v2肖像路径）、avatarArt（关
 
 ## 2026-10-06 五居民／新闻／回合发布候选（覆盖前述本地六人状态）
 `nextResidents`只将五位已准入居民投影为 playable people/routes/topics，18人总数。Mira JSON及既有存档known/关系/历史/事实原样保留，dialogueContext和spatialSnapshot只投影当前存在人物，未做迁移或删除。暂停回合、作物与旧新闻pin在真实SQLite重开、CAS和重放下验证。冻结复核目录完整复制至server/news/frozen-catalog-20261006.json，bundler复制到dist-server/news，部署明确设HARBOR_NEWS_CATALOG；无采集器。最后复核2026-10-05T18:59:16.076Z，到期2026-10-08T18:59:16.076Z，原发布2026-09-16T18:00:00.000Z。release marker=harbor-five-news-turn-20261006，同源health新增sourceRelease。具体验证与实际部署状态见releases/five-news-turn-20261006/README.md，不能将候选构建当线上成功。
+
+## 2026-10-06 动物一期本地接线（基于已发布19人10c0983）
+
+本段覆盖此前18人／Mira待接入的历史描述。当前发布基线19人，动物改动只在 `codex/animals-integration-20261006` 独立工作树开发，未上线，未修改正式存档或身份合同。
+
+- `src/animals/`：制作方8模块原样接入；新增 `art.ts` 固定两图集／40方向帧来源并共同筛选启用个体，`game.ts` 从当前 rooms、19名 residentRoutes、游戏时间及 dynamicWorld 构建场景ctx和互动准入。3猫／4鸥，狗只是独立算法夹具，蟹未实现。
+- transient运动复用单一createAnimalRuntime，真实RPGJS帧驱动步态／地面避让／翼拍／落地。主角、居民和动物共享场景足点：客户端读取实际NPC脚点，权威端保守保留居民合法巡游走廊，避免将未持久化位置误作可信服务端事实。动物原子投影统一图形、地面碰撞与热点；flight只上移graphic，排序仍用地面foot。
+- `world/data.ts`只为已准入个体加入object实体；不加入people、known或人物关系。`binding.ts`先做同一动物互动准入，再以可信slot中已验证的actorPosition偏移进行原spatialBinding距离检查，无豁免整个动物类别。
+- Save可选 `animalsV1`，读取时缺字段保持原样，非法schema、未知catID、非法熟悉度或未来抚摸时刻拒绝。call/pet仅在原authority.prepare→CAS→head/history/cursor/receipt事务写入，没有新的数据库、DDL、后台计时器或AI调用。原时间、现金、物品、居民关系、新闻pin与战斗状态保留；熟悉度0–3，每日首次pet最多+1。
+- Main传持久动物记忆给View，只有服务器回执成功才触发短时注意反馈，熟悉猫标签取自保存结果。map touch仅approach，动物44px以上触控目标随当前foot同步；同一目标位置变化仍刷新near。scene/journey/读档reset暂态，clock提交reconcile；暂停dt0，旧档重叠只移动动物。
+- 两PNG保持制作方SHA和锚点／等比scale0.5，不在消费端重画或变形。候选art.json的technical accepted限定为本作本地集成开发的消费合同；制作方审核v2、通用库runtime/libraryEligible=false和权利／profile待核状态另存原件，不转写为正式上架。正式发布仍需主端审阅本批差量／验收与剩余门禁。
+
+本地QA服务 `_qa/animals-owner-server.ts` 仅回环5425、独立SQLite合成旅程，5424开发预览与5426固定dist预览；均不可部署。验证日志与原始失败/修复记录在 `doc/qa/animals-integration-20261006/`。真实MiniApp新闻／回合QA仍按独立合同等待用户正常打开，不由动物改动替代。真实iPhone、跨设备、第二真实账号与玩家理解没有新增证明。

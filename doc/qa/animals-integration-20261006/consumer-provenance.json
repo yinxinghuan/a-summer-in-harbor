@@ -1,0 +1,95 @@
+{
+  "ownerThreadId": "01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "sourceBase": "10c098326f91526e00b97c814c5f3b10f3c6a7ab",
+  "candidateBranch": "codex/animals-integration-20261006",
+  "producer": "/Users/yin/code/games/harbor-animals-phase1-20261006",
+  "scope": "local game consumer development and QA; not published, not library admission",
+  "producerRuntimeEligible": false,
+  "producerLibraryEligible": false,
+  "ownerFormalReleaseEligible": false,
+  "mediaPostsByOwner": 0,
+  "mediaPostsReportedByProducer": 43,
+  "newAnimals": {
+    "cat": 3,
+    "gull": 4,
+    "dog": 0,
+    "crab": 0
+  },
+  "atlases": [
+    {
+      "visualVersion": "domestic-cat-v1",
+      "path": "public/animals/cat-atlas.png",
+      "sha256": "7b298237af7be8ec95635f9b0b55fe7e4880aad4df0751b46730ab7fb493972a",
+      "frames": 20,
+      "atlas": {
+        "w": 800,
+        "h": 576
+      },
+      "sourcePoseHashes": [
+        "09a4db51064ea1a1291a820edcbe71e404b2db6c7fc176d6978d7ace2ce7dfc9",
+        "0bac40c5d35e8626ceb05b2c3571ff66d208654e5e2ed587696cde40f954d72e",
+        "2684cdb098e541049124350073d63b64b9e6da3104e91bcdc58f6a1b6389226a",
+        "2fc73163820ce26c10a633d5b4232a0a47858a918f2dcee1d1a86e5b2bc90c65",
+        "50a3428667fc3cc00da593c060b2f9c5657d25559e80f4d908e4ec9c622e5c63",
+        "5ef339664d2b073b22c6cd848831b583582304d7568e273ec18bc9c8e2675f7c",
+        "6829b5c8a0a17dca6c7ee9a9dbfb72f078b325ebbefedc90583fc20d0ec146b5",
+        "84b3af0657d04a26610d0cf2108546b896b74036be8fbf64852f796cc65414b4",
+        "af0ca0864b883c5e4dc3f4b65c11131a09b49eab80cda21be036b040f3e5dc01",
+        "b7fc208ecc5a98d392db301343190c73a3dac0842e213fef7976f3cafd22dd74",
+        "c72b00178f6dbdfcb2b41abf83a806eb69ca6c5b0a857617f632fa2d87c86bfa",
+        "ccb6be95757e5ec2f706b394abda6befafd18d544886274a7cce304b57a1be81",
+        "cd812553009f6cd5afc8d5ea74f91c4fecda9c61a9a6c7aeb6b20533269fc620",
+        "ce056b6acadaec798fd368bacac5e46879db3c18ea4166f2ebe1d202e0869980",
+        "dec200b19d097e9204982482d7b4ea91f0f82fadf97d9f9512ba8fad24924669"
+      ]
+    },
+    {
+      "visualVersion": "coastal-gull-v1",
+      "path": "public/animals/gull-atlas.png",
+      "sha256": "0c3e6577e769eb26edcb42fccee17a11a58641e39c27299b8e7e7975df704802",
+      "frames": 20,
+      "atlas": {
+        "w": 1120,
+        "h": 640
+      },
+      "sourcePoseHashes": [
+        "13a46de3209362a7c4a1df551b1af671edae7625d9eb05fe29534846760a57d0",
+        "1b05897a994d87f70936105331228a479ed419b2770c44b268ed7c1cf76670f7",
+        "5c3382c9e0f5125651c501efb06137f24564715578f95796bbda4080c78ea184",
+        "5d907953652710c51ef35529acb42efb28e56a628a77e96c6bbd54f452f5ba00",
+        "721e83872cb3d859caf89fa156c5957144ceb0d8eb4ea603bc7aecc0425b8693",
+        "774a9745c38fa6000cb4931cbdd88c21a90b47afff4a0a4e5d50517c9b98083e",
+        "9d5eaeeb934a15cc578821a9cdb67ec9595b732da9b40c2ff7696b523bf11dfb",
+        "a0d981c7c8140e7965f4395fadf3a239260f66b2120454c970098df8dd35ca62",
+        "a3b305c09d1c6192674d220e12b930966bd21dd16f2f4288569d5c11bb4a8d9a",
+        "a4cad8f458bd4dd90c43b92d45019d641f3398431dd5138fc608bd8a9534f08f",
+        "ca1677b41c6787c9ec905b2105d483dc5f52e708733466affabec8c7dec393ab",
+        "e15fd5ffa5c9a1918c5298106dfd8b3764e23ed24ca59c3a0c48df212f81e0e9",
+        "e9c238903f361edbaf0525ffc0027b246b4f3d85f8f660971740d6851bcd1393",
+        "f73216b476db75d5fc724b6b2681b47b5fe71cf63e133d9e409d9b1e60f3f2dc",
+        "fe7641a2c62a8615586b13c34d8f58f6aa9f029307cc08caa07af10172894ed1"
+      ]
+    }
+  ],
+  "fixedBundle": [
+    {
+      "file": "dist/assets/index-CTLgQvtZ.js",
+      "sha256": "750fed5673ec4144cd56c28810c0e85af523dc9a6cc2b7ba5699203ea2af9931"
+    },
+    {
+      "file": "dist/assets/index-CwBNwg6X.css",
+      "sha256": "7fdc779a624623b8fef2b98c5d8733b197f22b1c9cec85be8263c8477b0d5f19"
+    }
+  ],
+  "previousFixedBundle": [
+    {
+      "file": "dist/assets/index-UA34hsC-.js",
+      "sha256": "14153427705d88d60a12f8634b0ed4003906c2340e9882c50ed93545c73a1288"
+    },
+    {
+      "file": "dist/assets/index-CwBNwg6X.css",
+      "sha256": "7fdc779a624623b8fef2b98c5d8733b197f22b1c9cec85be8263c8477b0d5f19"
+    }
+  ],
+  "localOnlySceneFix": "View hot-spot refresh no longer assigns captured first scene; animalScene stays current rendered id"
+}

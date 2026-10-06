@@ -1,0 +1,1 @@
+{"passed":true,"releaseTarget":"playable","sessionShape":"chapter","journeys":"single","persistence":"local-session","conversation":"hybrid","capabilities":13}

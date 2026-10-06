@@ -1,0 +1,10 @@
+import {writeFileSync} from 'node:fs';
+import {rooms} from '../src/world/data';
+import {residentRoutes} from '../src/world/residents';
+import {dynamicWorld} from '../src/dynamic-assets/layout';
+import {animalPeople,gameAnimalContext} from '../src/animals/game';
+const worlds=[{name:'base',flags:[],enabled:false},{name:'unlocked',flags:['bridge-fixed'],enabled:false},{name:'dynamic',flags:['bridge-fixed'],enabled:true}].map(x=>({...x,world:dynamicWorld(x.flags,x.enabled)}));
+const people=Object.fromEntries([540,720,1020,1260].map(m=>[m,animalPeople({townMinutes:m,flags:[]})]));
+const forbidden=gameAnimalContext({scene:'station',flags:[],townMinutes:540},rooms.station.spawn).forbidden;
+writeFileSync('doc/qa/animals-integration-20261006/geometry.json',JSON.stringify({capturedAt:new Date().toISOString(),sourceCommit:'10c0983+local animal integration',residentCount:Object.keys(residentRoutes).length,worlds,people,forbidden,residentRoutes,rooms}));
+console.log(JSON.stringify({residentCount:Object.keys(residentRoutes).length,mira:people[540].mira,worlds:worlds.map(x=>x.name)}));

@@ -1,0 +1,14 @@
+{
+  "testedAt": "2026-10-06T07:38:10.064Z",
+  "metrics": {
+    "scheduleCases": 72,
+    "bodySafetyFrames": 4320,
+    "reachablePortalRoutes": 72,
+    "occupiedOldSaveCases": 24,
+    "clockJumpCases": 7,
+    "actualGullRetreatCases": 12,
+    "rendererTestedByThisSuite": false,
+    "generatedImagesUsedByThisSuite": 0
+  },
+  "scope": "Node behavioral + captured actual map geometry, no renderer, no human comprehension, no phone device"
+}

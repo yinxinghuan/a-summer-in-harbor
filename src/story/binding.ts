@@ -7,6 +7,8 @@ import {rooms,world,people,type Entity} from '../world/data';
 import {walkable} from '../engine/world';
 import {topics,type Save,type Action} from './state';
 import {GAME_UUID} from '../game-id';
+import {gameAnimalInteraction} from '../animals/game';
+import type {World} from '../engine/world';
 const key=(scene:string,entity:string,verb:string)=>scene+'/'+entity+'/'+verb;
 function verbs(e:Entity):string[]{
  if(e.kind==='portal')return ['travel'];
@@ -31,11 +33,12 @@ export const spatialBinding=compileSpatialBinding({id:GAME_UUID,initialMap,chara
 },(scene,p)=>walkable(world,scene,p));
 // A deferred resident can remain in an old save without belonging to this release's map.
 export const spatialSnapshot=(s:Save):SpatialSnapshot=>({cartridgeId:GAME_UUID,map:initialMap.map(r=>({id:r.id,current:r.id===s.scene})),characters:s.known.filter(id=>people[id]).map(id=>({id}))});
-export function admitSpatialAction(s:Save,a:Action){
+export function admitSpatialAction(s:Save,a:Action,spatialWorld?:World){
  if(a.action.startsWith('battle-')||a.action==='snack-eat'||['travel-map','challenge-finish'].includes(a.action))return null; // domain-specific gates remain authoritative
  const e=rooms[s.scene].entities.find(e=>e.id===a.target);if(e&&!presentEntity(s,e))throw Error('PERSON_AWAY');
  const actionKey=key(s.scene,a.target,a.action);
- const at=e?observedActor(e,a.actorPosition):null;const offset=e&&at?{x:at.x-e.at.x,y:at.y-e.at.y}:{x:0,y:0};
+ if(e?.animalId)gameAnimalInteraction(s,a,spatialWorld);
+ const at=e?.animalId?a.actorPosition:e?observedActor(e,a.actorPosition):null;const offset=e&&at?{x:at.x-e.at.x,y:at.y-e.at.y}:{x:0,y:0};
  if(!spatialBinding.admits(actionKey,s.scene+'/'+a.target,s.scene,{x:a.position.x-offset.x,y:a.position.y-offset.y}))throw Error('SPATIAL_ACTION_NOT_ADMITTED');
  return actionKey;
 }

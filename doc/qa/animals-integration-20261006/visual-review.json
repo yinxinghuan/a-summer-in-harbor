@@ -1,0 +1,80 @@
+{
+  "reviewerThreadId": "01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "reviewedAt": "2026-10-06T07:42:51.799043+00:00",
+  "version": 1,
+  "decision": "AI usable in this local game consumer; formal release and library admission remain HOLD",
+  "scope": "actual 19-resident production Main/View/RPGJS fixed local build, not producer isolation fixture or real iPhone",
+  "scores": {
+    "hierarchy": 4,
+    "coherence": 4,
+    "readability": 4,
+    "gameFeel": 4,
+    "assetQuality": 4,
+    "responsiveUX": 4,
+    "polish": 4
+  },
+  "average": 4,
+  "openLocalP0P1": [],
+  "inspectedEvidence": [
+    "ui-fixed-build-v2/cat-walk-320-first-platform-layout.png",
+    "ui-fixed-build-v2/cat-walk-1280-first-platform-layout.png",
+    "ui-fixed-build-v2/gull-390-motion-platform-layout.png",
+    "ui-fixed-build-v2/cat-rest-390-called-platform-layout.png",
+    "ui-fixed-build-v2/cat-sleep-320-sleep-panel-platform-layout.png",
+    "ui-fixed-build-v2/cat-rest-320-returned-platform-layout.png",
+    "ui-fixed-build-v2/cat-walk-390-restored-platform-layout.png",
+    "ui-mira-walk/cat-mira-390-second-platform-layout.png",
+    "motion-review/gull-320-wing-up.png",
+    "motion-review/gull-390-wing-down.png",
+    "external-guest-v5/cat-320-loaded-shell-platform-layout.png",
+    "external-guest-v5/cat-panel-390-external-guest.png",
+    "ui-final-build-v3/gull-390-motion-platform-layout.png",
+    "ui-final-build-v3/cat-walk-320-pet-platform-layout.png",
+    "ui-final-mira-walk/cat-mira-390-second-platform-layout.png",
+    "external-guest-final-v6/cat-320-loaded-shell-platform-layout.png",
+    "ui-map-collision-v2/station-320-stopped.png"
+  ],
+  "findings": [
+    {
+      "severity": "P1",
+      "observation": "Object CSS disabled pointer events on the new animal hotspots; initial ordinary click timed out.",
+      "fix": "Animal-only pointer-events:auto; same moving hotspot drives approach, never implicit action.",
+      "verification": "Matched narrow/wide screenshots plus actual elementFromPoint and mouse click in final fixed-build browser harness."
+    },
+    {
+      "severity": "P1",
+      "observation": "Periodic hotspot refresh assigned the captured initial scene to collision scene after travel.",
+      "fix": "Keep the per-frame rendered scene assignment; periodic UI refresh changes only targets.",
+      "verification": "ui-map-collision-v2: ordinary Market Lane to Station Street travel then prolonged Up input; 320 and 390 player stops at cat foot y644, cat remains x756 y644; 267 rAF observations without body overlap."
+    },
+    {
+      "severity": "intentional",
+      "observation": "Trees may occlude an animal at the initial Market Lane camera; normal walking exposes the complete cat and Mira at 390.",
+      "verification": "Actual foreground tree remains; ui-mira-walk and final matched evidence. No hide-tree/camera surgery."
+    },
+    {
+      "severity": "intentional",
+      "observation": "Managed public visitor banner overlays external-only header.",
+      "verification": "Actual public scripts installed at 320/390; animal panel call/close clear. QA-only hide rule captures platform composition. Production markup/style unchanged."
+    }
+  ],
+  "limitations": [
+    "No true phone/touch/native MiniApp or human comprehension result.",
+    "Public guest shell CTA is visible; login/create-game/navigation flow and external analytics are not exercised.",
+    "Pixi worldAlpha is unavailable in the capture API; no numeric alpha assertion claimed; actual composited RGBA screens were inspected.",
+    "Extracted video frames are selected by approximate video/performance timing; filename phase labels do not prove exact decoded phase timing.",
+    "Library rights, calibration/profile and admission are separate owner work."
+  ],
+  "iteration": "All initial failures retained. After scene fix: rebuilt CTLgQvtZ, 179/179 tests, 12 fixed-build scenes +2 Mira +2 real contact after travel +2 loaded public-shell views passed. Final images inspected, no remaining local P0/P1.",
+  "finalReviewedAt": "2026-10-06T07:48:05.680013+00:00",
+  "finalFixedBundle": [
+    {
+      "file": "dist/assets/index-CTLgQvtZ.js",
+      "sha256": "750fed5673ec4144cd56c28810c0e85af523dc9a6cc2b7ba5699203ea2af9931"
+    },
+    {
+      "file": "dist/assets/index-CwBNwg6X.css",
+      "sha256": "7fdc779a624623b8fef2b98c5d8733b197f22b1c9cec85be8263c8477b0d5f19"
+    }
+  ]
+}

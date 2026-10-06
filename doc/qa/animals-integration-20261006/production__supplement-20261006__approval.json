@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "batch": "supplement-20261006",
+  "approvedActualPostCap": 12,
+  "targetFrames": 6,
+  "failureRevisionReserve": 6,
+  "modelAlias": "gpt-image-2.5-sunburst",
+  "feesUnknownAccepted": true,
+  "relay": "01a0f63e-747b-74c8-a592-bb52c77c2017",
+  "userEvidence": {
+    "time": "2026-10-06T06:13UTC",
+    "id": "Sentinel_7b4bb71822ac81918035df722bc4697c",
+    "quote": "批准",
+    "proposalId": "Sentinel_0ba551c4be18819193656920875b5b02",
+    "proposalTime": "2026-10-06T06:13:14UTC"
+  },
+  "scope": "Correct cat down/left contacts, complete cat/gull upB; existing models/service only. Stop when qualified. No root recreation, dogs/crabs/variants/library/game publication.",
+  "originalLedgerSha256": "ef6215478347c38db14944c8ed77af148f732df90f7e8bea89b0937579bd71c2",
+  "originalActualPosts": 35,
+  "oldRootSlotTransfer": false
+}

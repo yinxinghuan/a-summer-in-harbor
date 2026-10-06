@@ -1,0 +1,264 @@
+{
+  "passed": true,
+  "source": "doc/qa/animals-integration-20261006/ui-final-build-v3/browser-report.json",
+  "cases": [
+    {
+      "name": "cat-walk",
+      "width": 320,
+      "maxFootSyncError": 0.46915127546424173,
+      "checkedMotionPoints": 770,
+      "actualTextures": 1,
+      "motion": [
+        {
+          "id": "animal-harbor-cat-1",
+          "uniquePositions": 159,
+          "animationCoverage": [
+            "stand-down",
+            "stand-left",
+            "stand-right",
+            "walkA-down",
+            "walkA-left",
+            "walkA-right",
+            "walkB-down",
+            "walkB-left",
+            "walkB-right"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gull",
+      "width": 320,
+      "maxFootSyncError": 0.11746797749968053,
+      "checkedMotionPoints": 1948,
+      "actualTextures": 2,
+      "motion": [
+        {
+          "id": "animal-harbor-gull-3",
+          "uniquePositions": 165,
+          "animationCoverage": [
+            "stand-down",
+            "stand-left",
+            "stand-right",
+            "stand-up",
+            "walkA-down",
+            "walkA-left",
+            "walkA-right",
+            "walkB-down",
+            "walkB-left",
+            "walkB-right",
+            "wing-down-left",
+            "wing-down-up",
+            "wing-up-left",
+            "wing-up-up"
+          ]
+        },
+        {
+          "id": "animal-harbor-gull-4",
+          "uniquePositions": 235,
+          "animationCoverage": [
+            "stand-down",
+            "stand-left",
+            "stand-up",
+            "walkA-down",
+            "walkA-left",
+            "walkB-down",
+            "walkB-left",
+            "wing-down-down",
+            "wing-down-left",
+            "wing-down-right",
+            "wing-down-up",
+            "wing-up-down",
+            "wing-up-left",
+            "wing-up-right",
+            "wing-up-up"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cat-walk",
+      "width": 390,
+      "maxFootSyncError": 0.23595127546377626,
+      "checkedMotionPoints": 431,
+      "actualTextures": 1,
+      "motion": [
+        {
+          "id": "animal-harbor-cat-1",
+          "uniquePositions": 161,
+          "animationCoverage": [
+            "stand-down",
+            "stand-left",
+            "stand-right",
+            "walkA-down",
+            "walkA-left",
+            "walkA-right",
+            "walkB-down",
+            "walkB-left",
+            "walkB-right"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gull",
+      "width": 390,
+      "maxFootSyncError": 0.3789648071329452,
+      "checkedMotionPoints": 1058,
+      "actualTextures": 2,
+      "motion": [
+        {
+          "id": "animal-harbor-gull-3",
+          "uniquePositions": 148,
+          "animationCoverage": [
+            "stand-down",
+            "stand-left",
+            "stand-right",
+            "stand-up",
+            "walkA-down",
+            "walkA-left",
+            "walkA-right",
+            "walkB-down",
+            "walkB-left",
+            "walkB-right",
+            "wing-down-left",
+            "wing-down-up",
+            "wing-up-left",
+            "wing-up-up"
+          ]
+        },
+        {
+          "id": "animal-harbor-gull-4",
+          "uniquePositions": 204,
+          "animationCoverage": [
+            "stand-down",
+            "stand-left",
+            "stand-up",
+            "walkA-left",
+            "walkB-down",
+            "walkB-left",
+            "wing-down-down",
+            "wing-down-left",
+            "wing-down-right",
+            "wing-down-up",
+            "wing-up-down",
+            "wing-up-left",
+            "wing-up-right",
+            "wing-up-up"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cat-walk",
+      "width": 1280,
+      "maxFootSyncError": 0.15995127546443655,
+      "checkedMotionPoints": 156,
+      "actualTextures": 1,
+      "motion": [
+        {
+          "id": "animal-harbor-cat-1",
+          "uniquePositions": 108,
+          "animationCoverage": [
+            "stand-down",
+            "stand-right",
+            "walkA-down",
+            "walkA-right",
+            "walkB-down",
+            "walkB-right"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gull",
+      "width": 1280,
+      "maxFootSyncError": 0.36839606750640996,
+      "checkedMotionPoints": 394,
+      "actualTextures": 2,
+      "motion": [
+        {
+          "id": "animal-harbor-gull-3",
+          "uniquePositions": 109,
+          "animationCoverage": [
+            "stand-down",
+            "stand-left",
+            "stand-right",
+            "stand-up",
+            "walkA-down",
+            "walkA-left",
+            "walkA-right",
+            "walkB-down",
+            "walkB-left",
+            "walkB-right",
+            "wing-down-left",
+            "wing-down-up",
+            "wing-up-left",
+            "wing-up-up"
+          ]
+        },
+        {
+          "id": "animal-harbor-gull-4",
+          "uniquePositions": 142,
+          "animationCoverage": [
+            "stand-down",
+            "stand-left",
+            "walkA-down",
+            "walkA-left",
+            "walkB-left"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cat-rest",
+      "width": 320,
+      "maxFootSyncError": 0,
+      "checkedMotionPoints": 0,
+      "actualTextures": 1,
+      "motion": []
+    },
+    {
+      "name": "cat-rest",
+      "width": 390,
+      "maxFootSyncError": 0,
+      "checkedMotionPoints": 0,
+      "actualTextures": 1,
+      "motion": []
+    },
+    {
+      "name": "cat-sleep",
+      "width": 320,
+      "maxFootSyncError": 0,
+      "checkedMotionPoints": 0,
+      "actualTextures": 3,
+      "motion": []
+    },
+    {
+      "name": "cat-mira",
+      "width": 390,
+      "maxFootSyncError": 0.6097051981161469,
+      "checkedMotionPoints": 0,
+      "actualTextures": 1,
+      "motion": []
+    },
+    {
+      "name": "overlap",
+      "width": 390,
+      "maxFootSyncError": 0.39804872453589724,
+      "checkedMotionPoints": 0,
+      "actualTextures": 1,
+      "motion": []
+    },
+    {
+      "name": "home-nap",
+      "width": 390,
+      "maxFootSyncError": 0.19859606750037528,
+      "checkedMotionPoints": 0,
+      "actualTextures": 1,
+      "motion": []
+    }
+  ],
+  "uncapturedTextureField": "worldAlpha is not exposed by this Pixi version; no alpha-value assertion claimed",
+  "scope": "actual client event+Pixi texture and DOM targets; current 19-resident geometry clearance. Motion audit does not replace visual review or real phone."
+}

@@ -1,0 +1,47 @@
+{
+  "landed_main": {
+    "exit": 0,
+    "output": "86:  try{const r=await send(save,{action_id:crypto.randomUUID(),expected_version:save.version,scene:save.scene,position:position.current,target:targetId??e?.id??'',action,payload,...( [... omitted end of long line]\n113: <div className=\"harbor-location\"><span>{tx(fieldTitles[save.scene]??rooms[save.scene].title,locale)}</span><small>{tx(townTimeLabel(save),locale)}</small>{(save.awakeMinutes??0)>= [... omitted end of long line]\n",
+    "stderr": ""
+  },
+  "landed_view": {
+    "exit": 0,
+    "output": "4:import {animalPresentation} from '../animals/render-contract';\n36:  const animalActors=new Map<string,RpgPlayer>();let animalProjection=animalPresentation([],animalArts,scene),animalUiTick=0,animalScene=scene;\n40:  const collisionWorld=(id:string)=>({...baseWorld(),scenes:{...baseWorld().scenes,[id]:{...baseWorld().scenes[id],obstacles:[...baseWorld().scenes[id].obstacles,...(id===animalSce [... omitted end of long line]\n75:    animalScene=id;animalProjection=animalPresentation(animalStates,animalArts,id);\n84:    animalUiTick+=dt;if(animalUiTick>.08){animalUiTick=0;setAnimalTargets(memoryTargets)}\n",
+    "stderr": ""
+  },
+  "landed_css": {
+    "exit": 0,
+    "output": "62:.harbor-target--animal{pointer-events:auto}\n",
+    "stderr": ""
+  },
+  "scroll_pointer": {
+    "exit": 0,
+    "output": "src/main.tsx:114: {!challenge&&!turnActive&&!showIntro&&!dynamicPending&&panel==='none'&&<div className=\"harbor-controls\"><Joystick label={tx(['移动','Move'],locale)} onMove={(x,y)=>handle.current?.m [... omitted end of long line]\nsrc/main.tsx:115: {panel!=='none'&&!challenge&&!turnActive&&<div className=\"harbor-backdrop\" onPointerDown={e=>{if(e.target===e.currentTarget)close()}}><section className={'harbor-panel harbor-pane [... omitted end of long line]\nsrc/ui/Map.tsx:20: return <><div className=\"harbor-map-tabs\" role=\"group\" aria-label={tx(['地图区域','Map areas'],locale)}>{['all',...regions].map(id=><button key={id} className={area===id?'is-selected' [... omitted end of long line]\nsrc/ui/Joystick.tsx:2:export function Joystick({onMove,label}:{onMove:(x:number,y:number)=>void;label:string}){const ref=useRef<HTMLDivElement>(null),active=useRef<number|null>(null);const [p,setP]=useS [... omitted end of long line]\nsrc/ui/Fishing.tsx:34:    {finished?<button className=\"harbor-primary harbor-wide\" onClick={()=>onFinish(runs.current)}>{tx(['收好鱼竿','Put the rod away'],locale)}</button>:<button className=\"harbor-primar [... omitted end of long line]\nsrc/ui/Combat.tsx:113:   <div className=\"harbor-combat__controls\"><div className=\"harbor-combat__move\"><Joystick label={tx(['移动','Move'],locale)} onMove={(x,y)=>{if(!exitMode.current){inputs.current.x=x [... omitted end of long line]\n",
+    "stderr": ""
+  },
+  "stale_mirror": {
+    "exit": 1,
+    "output": "",
+    "stderr": ""
+  },
+  "avatar_symptoms": {
+    "exit": 1,
+    "output": "",
+    "stderr": ""
+  },
+  "profile_symptoms": {
+    "exit": 1,
+    "output": "",
+    "stderr": ""
+  },
+  "avatar_missing": [],
+  "profile_missing": [],
+  "scroll_skips": {
+    "src/main.tsx": "direct held controls and outside-panel backdrop; no scrollable-row action on down",
+    "src/ui/Map.tsx": "pan/pinch canvas uses existing drag-vs-tap gesture guard",
+    "src/ui/Joystick.tsx": "held directional control",
+    "src/ui/Combat.tsx": "held movement and immediate combat control",
+    "src/ui/Fishing.tsx": "continuous hold/release challenge"
+  },
+  "library_inventory_scope": "Exactly approved three cats/four gulls; not an entire library completeness claim. 30 actual source hashes and two atlases verified against producer fixed v2 manifest."
+}

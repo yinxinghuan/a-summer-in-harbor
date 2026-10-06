@@ -1,0 +1,161 @@
+{
+  "version": 2,
+  "authority": "AI",
+  "at": "2026-10-06T06:51:56.154Z",
+  "previousReview": "reviews/history/family-v1-before-supplement.json",
+  "singleSources": {
+    "decision": "pass",
+    "selectedSources": 30,
+    "scope": "Selected individual complete generated sources; all prior rejection/hold records retained, no human override"
+  },
+  "families": {
+    "cat": {
+      "decision": "pass",
+      "directions": {
+        "down": {
+          "decision": "pass",
+          "reason": "替换两张完整接触源图后，站姿到A/B的猫头宽与躯干尺度保持；前后爪接触交换，320/390/桌面连续循环可辨。"
+        },
+        "left": {
+          "decision": "pass",
+          "reason": "新A与修订B形成相反近侧前/后肢关系，四爪与肩髋自然连贯；没有局部反射或重画。"
+        },
+        "right": {
+          "decision": "pass",
+          "reason": "无文字、项圈或身份非对称冲突；整帧镜像左向并镜像锚点，实际连续右行自然。"
+        },
+        "up": {
+          "decision": "pass",
+          "reason": "补齐B后A/B的左右前后爪接触交换，头背、尾与四足连贯，无过头爪。"
+        }
+      }
+    },
+    "gull": {
+      "decision": "pass",
+      "directions": {
+        "down": {
+          "decision": "pass",
+          "reason": "两脚交替且身体尺度稳定；上下拍翼与鸟体一体，起飞/落地复位。"
+        },
+        "left": {
+          "decision": "pass",
+          "reason": "接触A/B可辨、短腿与足趾完整；侧向整鸟翼拍无脱离翼根。"
+        },
+        "right": {
+          "decision": "pass",
+          "reason": "无身份非对称冲突；整帧镜像左向，连续走动与飞行自然。"
+        },
+        "up": {
+          "decision": "pass",
+          "reason": "B与A交换左右脚高低接触，上向双翼/鸟体连贯，落地回完整stand。"
+        }
+      }
+    }
+  },
+  "targetScene": {
+    "roots": "pass AI frozen actual Harbor renderer",
+    "completeFamily": "pass AI independent frozen actual Harbor renderer",
+    "formalGame": "hold pending sole-owner integration",
+    "scope": "320×568,390×844,1280×800 diagnostic spectator camera at native animal/world scale; original map layers retained; QA human graphics hidden while logical avoidance remains; not formal platform-layout/external-guest acceptance",
+    "evidence": [
+      "evidence/root-scenes-v3/capture.json",
+      "evidence/runtime-scenes-v2/capture.json",
+      "evidence/continuous-summary.json"
+    ],
+    "continuousCases": [
+      {
+        "species": "cat",
+        "width": 320,
+        "height": 568,
+        "report": "evidence/continuous-supplement-v1/report-320-cat.json",
+        "reportSha256": "5734b8b8807b7b1539a4df757c0b367b1077ca71bb32d53c3bd364ac93377ad0",
+        "video": {
+          "file": "platform-layout-320-cat-continuous.webm",
+          "sha256": "1d84a30c6ef0303f09d95c77c481d0264ada7972fd234109a1440056f185b899",
+          "path": "evidence/continuous-supplement-v1/platform-layout-320-cat-continuous.webm"
+        }
+      },
+      {
+        "species": "cat",
+        "width": 390,
+        "height": 844,
+        "report": "evidence/continuous-supplement-v1/report-390-cat.json",
+        "reportSha256": "c855bf55c629c0a1685f2d85139b1c4233a517e8c033688c7f9491f83ca4e8f8",
+        "video": {
+          "file": "platform-layout-390-cat-continuous.webm",
+          "sha256": "acf3b820aba6a38066b712d4de44a5b61fa9369500f558d86b2740b82a2e374b",
+          "path": "evidence/continuous-supplement-v1/platform-layout-390-cat-continuous.webm"
+        }
+      },
+      {
+        "species": "cat",
+        "width": 1280,
+        "height": 800,
+        "report": "evidence/continuous-supplement-v2/report-1280-cat.json",
+        "reportSha256": "d09c013de7aeb26d02a22659243dfa35f50c395b4c5993d157748341d1bc4a45",
+        "video": {
+          "file": "platform-layout-1280-cat-continuous.webm",
+          "sha256": "67bcc99d35b87da14191270e27f5bcb6b15294d3519c489a3fe9662059f14b09",
+          "path": "evidence/continuous-supplement-v2/platform-layout-1280-cat-continuous.webm"
+        }
+      },
+      {
+        "species": "gull",
+        "width": 320,
+        "height": 568,
+        "report": "evidence/continuous-supplement-v2/report-320-gull.json",
+        "reportSha256": "5c5dfd9a1cb760653afd30000c93b2540174c593bb27a24e45cf84221630480b",
+        "video": {
+          "file": "platform-layout-320-gull-continuous.webm",
+          "sha256": "c1da459e4146f450282168266fc017a81f86927ac8a912b606b4bd5a2cf6ae29",
+          "path": "evidence/continuous-supplement-v2/platform-layout-320-gull-continuous.webm"
+        }
+      },
+      {
+        "species": "gull",
+        "width": 390,
+        "height": 844,
+        "report": "evidence/continuous-supplement-v2/report-390-gull.json",
+        "reportSha256": "a1e342caf58786f1b57bfe9431f39e20ccdf2279812e4aefece74790b84ea549",
+        "video": {
+          "file": "platform-layout-390-gull-continuous.webm",
+          "sha256": "5ce384a64b84877e8d2001e40de89fe4924c5369b8b922fcbc44c564ee6ef483",
+          "path": "evidence/continuous-supplement-v2/platform-layout-390-gull-continuous.webm"
+        }
+      },
+      {
+        "species": "gull",
+        "width": 1280,
+        "height": 800,
+        "report": "evidence/continuous-supplement-v2/report-1280-gull.json",
+        "reportSha256": "e7e71b000df0310250dbf92d47682adf80482f9d5061f7979046a99300b89213",
+        "video": {
+          "file": "platform-layout-1280-gull-continuous.webm",
+          "sha256": "c070993160a701ccf7f1dbef6c3347f2b99bf47e641f10a39042c0388af380d2",
+          "path": "evidence/continuous-supplement-v2/platform-layout-1280-gull-continuous.webm"
+        }
+      }
+    ]
+  },
+  "technical": {
+    "provenanceGeometryAssembly": "mechanical pass",
+    "fullLibraryAdmission": "hold",
+    "formalGameIntegration": "hold",
+    "reason": "camera/profile calibration unmeasured; source rights/service policy and library metadata mapping pending owner verification; formal server/save/binding wiring and current 19-resident dynamic geometry verification pending"
+  },
+  "content": {
+    "domestic-cat-v1": {
+      "atlasSha256": "7b298237af7be8ec95635f9b0b55fe7e4880aad4df0751b46730ab7fb493972a",
+      "frames": 20
+    },
+    "coastal-gull-v1": {
+      "atlasSha256": "0c3e6577e769eb26edcb42fccee17a11a58641e39c27299b8e7e7975df704802",
+      "frames": 20
+    }
+  },
+  "humanOverride": null,
+  "runtimeEligible": false,
+  "libraryEligible": false,
+  "realIPhone": false,
+  "comprehension": "unverified"
+}

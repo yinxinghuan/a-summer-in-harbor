@@ -1,0 +1,13 @@
+import type {Point,Rect,World} from '../engine/world';
+export type Period='morning'|'afternoon'|'evening'|'night';
+export type Facing='down'|'left'|'right'|'up';
+export type Species='cat'|'gull'|'dog';
+export type Pose='stand'|'walkA'|'walkB'|'sun-rest'|'sleep'|'wing-up'|'wing-down';
+export type Phase='idle'|'walk'|'sun-rest'|'sleep'|'attention'|'follow'|'flight'|'hidden';
+export type Slot={scene:string;region:Rect;points:readonly Point[];activity:'wander'|'sun-rest'|'sleep'|'follow'};
+export type AnimalDef={id:string;species:Species;visualVersion:string;ownerId?:string;schedule:Partial<Record<Period,Slot>>};
+export type SpeciesProfile={collision:{w:number;h:number};speed:number;stride:number;retreatDistance:number;landingDistance:number;flightSpeed:number;flightHeight:number;wingHz:number;cooldown:number;followStop:number;followMax:number};
+export type AnimalMemory={familiarity:number;lastPetMinute?:number};
+export type AnimalSave={schema:1;individuals:Record<string,AnimalMemory>};
+export type Context={world:World;scene:string;townMinutes:number;player:Rect;people:Record<string,{scene:string;foot:Point;body:Rect}>;forbidden:Record<string,Rect[]>;paused:boolean};
+export type AnimalState={id:string;species:Species;visualVersion:string;scene:string|null;slot:Slot|null;foot:Point;direction:Facing;pose:Pose;phase:Phase;visible:boolean;reason?:string;distance:number;elevation:number;attention:number;cooldown:number;route:Point[];flightDistance:number;flightTotal:number;wingTime:number;waypoint:number;wait:number};

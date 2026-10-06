@@ -1,0 +1,18 @@
+{
+  "schema":1,
+  "receivedAtUTC":"2026-10-06T05:06Z",
+  "sourceThreadId":"01a0f63e-747b-74c8-a592-bb52c77c2017",
+  "approvalKind":"user approval relayed by authorized 小小银, not an invented direct statement in this task",
+  "userEvidence":{"time":"2026-10-06T05:06UTC","sentinel":"Sentinel_3e1093c626d481918a031ed8dc1d05b2","quote":"批准"},
+  "proposalEvidence":{"time":"2026-10-06T04:57UTC","sentinel":"Sentinel_8592caace0b8819198f0311469409103","scope":"猫与海鸥最多36次生成POST，含失败/修订；先最多4次两根图，真实海湾场景通过再扩完整动作；费用未知已披露，不挪居民额度"},
+  "approvedActualPostCap":36,
+  "stage1Cap":4,
+  "stage2Cap":32,
+  "modelAlias":"gpt-image-2.5-sunburst",
+  "endpoint":"https://game.aiwaves.tech/alteru-media/api/v1/images/generations",
+  "actualPostsAtApproval":0,
+  "dogCrabGenerationApproved":false,
+  "noNewServiceOrPackage":true,
+  "unknownRequestPolicy":"GET original task first; every actual replay POST counts; no new-ID blind retry",
+  "approvalRejectionPolicy":"retry the same tool once with same original evidence; second refusal report and stop, do not change route"
+}

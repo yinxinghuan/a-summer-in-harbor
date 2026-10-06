@@ -1,4 +1,6 @@
 import {nextPeople} from './next-residents';
+import {acceptedAnimals} from '../animals/art';
+import {authoredAnimalEntities} from '../animals/harbor-adapter';
 import {cropVerbs,shopVerbs} from '../story/crops';
 import {residentPeople,residentRoutes} from './residents';
 import {enrichPlanting} from './planting';
@@ -9,7 +11,7 @@ import type {Point,Rect,World} from '../engine/world';
 export type Words=[string,string];export type Locale='zh'|'en';
 export const tx=(w:Words,locale:Locale)=>w[locale==='zh'?0:1];
 export type Prop={id:string;art:string;at:Point;width:number;footprint?:Rect;floorDecoration?:boolean;foreground?:boolean;state?:{flag:string;art:string};visibleWhen?:string};
-export type Entity={id:string;label:Words;kind:'person'|'portal'|'object';at:Point;approach:Point;person?:string;destination?:string;actions?:string[];passage?:{side:'N'|'S'|'E'|'W';sign:Point}};
+export type Entity={id:string;label:Words;kind:'person'|'portal'|'object';at:Point;approach:Point;person?:string;animalId?:string;destination?:string;actions?:string[];passage?:{side:'N'|'S'|'E'|'W';sign:Point}};
 export const entityLabel=(e:Entity,flags:string[]):Words=>e.id==='bridge'&&flags.includes('bridge-fixed')?['修好的小桥','Repaired footbridge']:e.id==='terrace'&&flags.includes('terrace-fixed')?['露台灯','Terrace lantern']:e.label;
 export type Room={id:string;title:Words;area:string;outdoor:boolean;spawn:Point;interior:Rect;props:Prop[];entities:Entity[];neighbors:string[];map:Point};
 const labels:Record<string,Words>={station:['车站街','Station Street'],harbor:['港口','The Harbor'],market:['旧街','Market Lane'],coast:['海岸','The Coast'],hill:['山坡','The Hill'],home:['你的租屋','Your Room'],cafe:['潮间咖啡馆','Tide & Table'],grocery:['街角杂货铺','Corner Grocer'],dock:['钓鱼码头','Fishing Pier'],workshop:['琼的修理铺','June’s Workshop'],gym:['港口拳馆','Harbor Boxing Club'],bazaar:['集市广场','Market Square'],secondhand:['旧物店','Second Chances'],courtyard:['住户庭院','Residents’ Courtyard'],beach:['贝壳海滩','Shell Beach'],path:['滨海道','Coastal Path'],lighthouse:['灯塔','The Lighthouse'],garden:['山坡花园','Hillside Garden'],camp:['松林营地','Pine Camp'],weather:['旧气象站','Weather Station']};
@@ -220,6 +222,7 @@ const cropSideRose=rooms.garden.props.find(p=>p.art==='flora-rose-v1'&&p.at.x===
 for(let i=0;i<3;i++)object('garden','crop-bed-'+(i+1),['菜畦 '+(i+1),'Growing bed '+(i+1)],630+i*70,630,cropVerbs);
 rooms.garden.entities.push({id:'visitor-note',kind:'object',label:['游客便条','Visitor note'],at:{x:600,y:600},approach:{x:592,y:634},actions:[]});
 object('grocery','crop-counter',['种子与收获柜台','Seeds & harvest counter'],455,365,shopVerbs);
+for(const {scene,entity} of authoredAnimalEntities(acceptedAnimals))rooms[scene].entities.push(entity);
 export function entityAt(scene:string,id:string){return rooms[scene]?.entities.find(e=>e.id===id)}
 
 export function worldWithFlags(flags:string[]):World {

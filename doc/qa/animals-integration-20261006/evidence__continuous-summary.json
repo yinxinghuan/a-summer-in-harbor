@@ -1,0 +1,428 @@
+{
+  "at": "2026-10-06T06:54:12.931Z",
+  "reports": [
+    {
+      "species": "cat",
+      "width": 320,
+      "height": 568,
+      "source": "unmodified frozen Harbor renderer + independent production animal runtime on real requestAnimationFrame",
+      "camera": "QA spectator follows actual runtime animal; human graphics hidden, logical player explicitly separate",
+      "report": "evidence/continuous-supplement-v1/report-320-cat.json",
+      "reportSha256": "5734b8b8807b7b1539a4df757c0b367b1077ca71bb32d53c3bd364ac93377ad0",
+      "video": {
+        "file": "platform-layout-320-cat-continuous.webm",
+        "sha256": "1d84a30c6ef0303f09d95c77c481d0264ada7972fd234109a1440056f185b899",
+        "path": "evidence/continuous-supplement-v1/platform-layout-320-cat-continuous.webm"
+      },
+      "groundCoverage": [
+        "right:walkA",
+        "right:stand",
+        "right:walkB",
+        "down:walkA",
+        "down:stand",
+        "down:walkB",
+        "left:walkB",
+        "left:stand",
+        "left:walkA",
+        "up:walkA",
+        "up:stand",
+        "up:walkB"
+      ],
+      "wingCoverage": [],
+      "missingGround": [],
+      "missingWings": [],
+      "groundTicks": 1521,
+      "totalRafTicks": 2112,
+      "groundDurationSeconds": 12.935200000047685,
+      "maxGroundStepError": 6.389333506717776e-14,
+      "events": [
+        {
+          "event": "sun-rest",
+          "phase": "sun-rest",
+          "direction": "up"
+        },
+        {
+          "event": "called-stand",
+          "phase": "attention",
+          "direction": "down"
+        },
+        {
+          "event": "returned-sun-rest",
+          "phase": "sun-rest",
+          "direction": "down"
+        },
+        {
+          "event": "night-sleep",
+          "phase": "sleep",
+          "direction": "down"
+        },
+        {
+          "event": "awake-next-period",
+          "phase": "walk",
+          "direction": "right"
+        }
+      ],
+      "pageErrors": [],
+      "mechanicalContinuousEvidencePassed": true,
+      "AIVisualDecision": "pass",
+      "AIReviewFile": "reviews/current-family-review.json",
+      "realIPhone": false,
+      "formalServerIntegration": false
+    },
+    {
+      "species": "cat",
+      "width": 390,
+      "height": 844,
+      "source": "unmodified frozen Harbor renderer + independent production animal runtime on real requestAnimationFrame",
+      "camera": "QA spectator follows actual runtime animal; human graphics hidden, logical player explicitly separate",
+      "report": "evidence/continuous-supplement-v1/report-390-cat.json",
+      "reportSha256": "c855bf55c629c0a1685f2d85139b1c4233a517e8c033688c7f9491f83ca4e8f8",
+      "video": {
+        "file": "platform-layout-390-cat-continuous.webm",
+        "sha256": "acf3b820aba6a38066b712d4de44a5b61fa9369500f558d86b2740b82a2e374b",
+        "path": "evidence/continuous-supplement-v1/platform-layout-390-cat-continuous.webm"
+      },
+      "groundCoverage": [
+        "right:walkA",
+        "right:stand",
+        "right:walkB",
+        "down:walkA",
+        "down:stand",
+        "down:walkB",
+        "left:stand",
+        "left:walkA",
+        "left:walkB",
+        "up:walkA",
+        "up:stand",
+        "up:walkB"
+      ],
+      "wingCoverage": [],
+      "missingGround": [],
+      "missingWings": [],
+      "groundTicks": 1518,
+      "totalRafTicks": 2111,
+      "groundDurationSeconds": 12.888100000023842,
+      "maxGroundStepError": 7.308043059595093e-14,
+      "events": [
+        {
+          "event": "sun-rest",
+          "phase": "sun-rest",
+          "direction": "up"
+        },
+        {
+          "event": "called-stand",
+          "phase": "attention",
+          "direction": "down"
+        },
+        {
+          "event": "returned-sun-rest",
+          "phase": "sun-rest",
+          "direction": "down"
+        },
+        {
+          "event": "night-sleep",
+          "phase": "sleep",
+          "direction": "down"
+        },
+        {
+          "event": "awake-next-period",
+          "phase": "walk",
+          "direction": "right"
+        }
+      ],
+      "pageErrors": [],
+      "mechanicalContinuousEvidencePassed": true,
+      "AIVisualDecision": "pass",
+      "AIReviewFile": "reviews/current-family-review.json",
+      "realIPhone": false,
+      "formalServerIntegration": false
+    },
+    {
+      "species": "cat",
+      "width": 1280,
+      "height": 800,
+      "source": "unmodified frozen Harbor renderer + independent production animal runtime on real requestAnimationFrame",
+      "camera": "QA spectator follows actual runtime animal; human graphics hidden, logical player explicitly separate",
+      "report": "evidence/continuous-supplement-v2/report-1280-cat.json",
+      "reportSha256": "d09c013de7aeb26d02a22659243dfa35f50c395b4c5993d157748341d1bc4a45",
+      "video": {
+        "file": "platform-layout-1280-cat-continuous.webm",
+        "sha256": "67bcc99d35b87da14191270e27f5bcb6b15294d3519c489a3fe9662059f14b09",
+        "path": "evidence/continuous-supplement-v2/platform-layout-1280-cat-continuous.webm"
+      },
+      "groundCoverage": [
+        "right:walkA",
+        "right:stand",
+        "right:walkB",
+        "down:walkA",
+        "down:stand",
+        "down:walkB",
+        "left:walkB",
+        "left:stand",
+        "left:walkA",
+        "up:stand",
+        "up:walkB",
+        "up:walkA"
+      ],
+      "wingCoverage": [],
+      "missingGround": [],
+      "missingWings": [],
+      "groundTicks": 1584,
+      "totalRafTicks": 2218,
+      "groundDurationSeconds": 13.445400000035763,
+      "maxGroundStepError": 6.761258219967203e-14,
+      "events": [
+        {
+          "event": "sun-rest",
+          "phase": "sun-rest",
+          "direction": "up"
+        },
+        {
+          "event": "called-stand",
+          "phase": "attention",
+          "direction": "down"
+        },
+        {
+          "event": "returned-sun-rest",
+          "phase": "sun-rest",
+          "direction": "down"
+        },
+        {
+          "event": "night-sleep",
+          "phase": "sleep",
+          "direction": "down"
+        },
+        {
+          "event": "awake-next-period",
+          "phase": "walk",
+          "direction": "right"
+        }
+      ],
+      "pageErrors": [],
+      "mechanicalContinuousEvidencePassed": true,
+      "AIVisualDecision": "pass",
+      "AIReviewFile": "reviews/current-family-review.json",
+      "realIPhone": false,
+      "formalServerIntegration": false
+    },
+    {
+      "species": "gull",
+      "width": 320,
+      "height": 568,
+      "source": "unmodified frozen Harbor renderer + independent production animal runtime on real requestAnimationFrame",
+      "camera": "QA spectator follows actual runtime animal; human graphics hidden, logical player explicitly separate",
+      "report": "evidence/continuous-supplement-v2/report-320-gull.json",
+      "reportSha256": "5c5dfd9a1cb760653afd30000c93b2540174c593bb27a24e45cf84221630480b",
+      "video": {
+        "file": "platform-layout-320-gull-continuous.webm",
+        "sha256": "c1da459e4146f450282168266fc017a81f86927ac8a912b606b4bd5a2cf6ae29",
+        "path": "evidence/continuous-supplement-v2/platform-layout-320-gull-continuous.webm"
+      },
+      "groundCoverage": [
+        "down:walkA",
+        "down:stand",
+        "down:walkB",
+        "left:stand",
+        "left:walkB",
+        "left:walkA",
+        "right:stand",
+        "right:walkB",
+        "right:walkA",
+        "up:stand",
+        "up:walkB",
+        "up:walkA"
+      ],
+      "wingCoverage": [
+        "right:wing-up",
+        "right:wing-down",
+        "down:wing-up",
+        "down:wing-down",
+        "up:wing-up",
+        "left:wing-up",
+        "left:wing-down",
+        "up:wing-down"
+      ],
+      "missingGround": [],
+      "missingWings": [],
+      "groundTicks": 3257,
+      "totalRafTicks": 9877,
+      "groundDurationSeconds": 27.137299999952315,
+      "maxGroundStepError": 7.005507285384738e-14,
+      "events": [
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "right"
+        },
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "right"
+        },
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "up"
+        },
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "up"
+        }
+      ],
+      "pageErrors": [],
+      "mechanicalContinuousEvidencePassed": true,
+      "AIVisualDecision": "pass",
+      "AIReviewFile": "reviews/current-family-review.json",
+      "realIPhone": false,
+      "formalServerIntegration": false
+    },
+    {
+      "species": "gull",
+      "width": 390,
+      "height": 844,
+      "source": "unmodified frozen Harbor renderer + independent production animal runtime on real requestAnimationFrame",
+      "camera": "QA spectator follows actual runtime animal; human graphics hidden, logical player explicitly separate",
+      "report": "evidence/continuous-supplement-v2/report-390-gull.json",
+      "reportSha256": "a1e342caf58786f1b57bfe9431f39e20ccdf2279812e4aefece74790b84ea549",
+      "video": {
+        "file": "platform-layout-390-gull-continuous.webm",
+        "sha256": "5ce384a64b84877e8d2001e40de89fe4924c5369b8b922fcbc44c564ee6ef483",
+        "path": "evidence/continuous-supplement-v2/platform-layout-390-gull-continuous.webm"
+      },
+      "groundCoverage": [
+        "down:walkA",
+        "down:stand",
+        "down:walkB",
+        "left:stand",
+        "left:walkB",
+        "left:walkA",
+        "right:walkA",
+        "right:stand",
+        "right:walkB",
+        "up:walkA",
+        "up:stand",
+        "up:walkB"
+      ],
+      "wingCoverage": [
+        "right:wing-up",
+        "right:wing-down",
+        "down:wing-up",
+        "down:wing-down",
+        "up:wing-up",
+        "left:wing-up",
+        "left:wing-down",
+        "up:wing-down"
+      ],
+      "missingGround": [],
+      "missingWings": [],
+      "groundTicks": 3199,
+      "totalRafTicks": 9895,
+      "groundDurationSeconds": 26.70369999998808,
+      "maxGroundStepError": 5.639932965095795e-14,
+      "events": [
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "right"
+        },
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "right"
+        },
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "up"
+        },
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "up"
+        }
+      ],
+      "pageErrors": [],
+      "mechanicalContinuousEvidencePassed": true,
+      "AIVisualDecision": "pass",
+      "AIReviewFile": "reviews/current-family-review.json",
+      "realIPhone": false,
+      "formalServerIntegration": false
+    },
+    {
+      "species": "gull",
+      "width": 1280,
+      "height": 800,
+      "source": "unmodified frozen Harbor renderer + independent production animal runtime on real requestAnimationFrame",
+      "camera": "QA spectator follows actual runtime animal; human graphics hidden, logical player explicitly separate",
+      "report": "evidence/continuous-supplement-v2/report-1280-gull.json",
+      "reportSha256": "e7e71b000df0310250dbf92d47682adf80482f9d5061f7979046a99300b89213",
+      "video": {
+        "file": "platform-layout-1280-gull-continuous.webm",
+        "sha256": "c070993160a701ccf7f1dbef6c3347f2b99bf47e641f10a39042c0388af380d2",
+        "path": "evidence/continuous-supplement-v2/platform-layout-1280-gull-continuous.webm"
+      },
+      "groundCoverage": [
+        "down:walkA",
+        "down:stand",
+        "down:walkB",
+        "left:stand",
+        "left:walkB",
+        "left:walkA",
+        "right:stand",
+        "right:walkB",
+        "right:walkA",
+        "up:stand",
+        "up:walkB",
+        "up:walkA"
+      ],
+      "wingCoverage": [
+        "right:wing-up",
+        "right:wing-down",
+        "down:wing-up",
+        "down:wing-down",
+        "up:wing-up",
+        "left:wing-up",
+        "left:wing-down",
+        "up:wing-down"
+      ],
+      "missingGround": [],
+      "missingWings": [],
+      "groundTicks": 3268,
+      "totalRafTicks": 9883,
+      "groundDurationSeconds": 27.2525,
+      "maxGroundStepError": 5.639932965095795e-14,
+      "events": [
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "right"
+        },
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "right"
+        },
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "up"
+        },
+        {
+          "event": "retreat-landed",
+          "phase": "idle",
+          "direction": "up"
+        }
+      ],
+      "pageErrors": [],
+      "mechanicalContinuousEvidencePassed": true,
+      "AIVisualDecision": "pass",
+      "AIReviewFile": "reviews/current-family-review.json",
+      "realIPhone": false,
+      "formalServerIntegration": false
+    }
+  ],
+  "mechanicalPassed": true,
+  "visualReviewIsSeparate": true,
+  "formalGameAccepted": false
+}

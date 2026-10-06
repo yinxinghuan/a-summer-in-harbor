@@ -1,3 +1,5 @@
+import type {AnimalSave} from '../animals/types';
+import {gameAnimalInteraction} from '../animals/game';
 import {applyBattle,battleLocksWorld,battleItems,battleTopics,applyBattleTopic,type TurnBattle} from './turn-battle';
 import {nextTopics,applyNextTopic} from './next-neighbors';
 import {advanceTown,presentEntity,sleepToMorning,townMinutes,observedActor} from '../world/residents';
@@ -7,13 +9,13 @@ import {advanceAwake} from './fatigue';
 import {lifeTopics,applyLifeTopic} from './resident-life';
 import {replayFishing,type FishingRun} from '../challenges/fishing';
 import {rooms,people,entityAt,tx,type Words,type Locale} from '../world/data';
-import {walkable,type Point} from '../engine/world';import {world,worldWithFlags} from '../world/data';
+import {walkable,type Point,type World} from '../engine/world';import {world,worldWithFlags} from '../world/data';
 import {encounterPresets} from '../combat/presets';import {replayEncounter,type InputRun} from '../combat/core';
 export type Entry={id:string;kind:'talk'|'action';person?:string;question?:string;text:Words};
 import type {FieldNotes} from './fieldnotes-types';
 import {questProgress} from './progress';
 import type {NewsState} from './news-edition';
-export type Save=NewsState&{turnBattle?:TurnBattle;awakeMinutes?:number;plots?:Record<string,Plot>;townMinutes?:number;fernStartedAt?:number;dynamicAssetRooms?:string[];roomAssetAttachments?:any[];dynamicAssetAvailable?:boolean;fieldNotes?:FieldNotes;id:string;version:number;cursor:number;mapVersion:1;locale:Locale;scene:string;position:Point;flags:string[];known:string[];visited:string[];items:Record<string,number>;energy:number;cash:number;standing:number;relations:Record<string,number>;history:Entry[];activeChallenge?:{id:string;kind:string;scene:string};};
+export type Save=NewsState&{animalsV1?:AnimalSave;turnBattle?:TurnBattle;awakeMinutes?:number;plots?:Record<string,Plot>;townMinutes?:number;fernStartedAt?:number;dynamicAssetRooms?:string[];roomAssetAttachments?:any[];dynamicAssetAvailable?:boolean;fieldNotes?:FieldNotes;id:string;version:number;cursor:number;mapVersion:1;locale:Locale;scene:string;position:Point;flags:string[];known:string[];visited:string[];items:Record<string,number>;energy:number;cash:number;standing:number;relations:Record<string,number>;history:Entry[];activeChallenge?:{id:string;kind:string;scene:string};};
 export type Action={action_id:string;expected_version:number;scene:string;position:Point;target:string;action:string;payload?:unknown;actorPosition?:Point};
 export const has=(s:Save,id:string)=>s.flags.includes(id);
 export function initial(locale:Locale,id:string):Save{return {townMinutes:540,id,version:0,cursor:0,mapVersion:1,locale,scene:'station',position:{...rooms.station.spawn},flags:[],known:[],visited:['station'],items:{},energy:100,cash:25,standing:0,relations:{},history:[]}}
@@ -71,8 +73,8 @@ export function validateQuestion(s:Save,a:Action){
  requireState(a.expected_version===s.version,'VERSION_CONFLICT');requireState(a.scene===s.scene&&walkable(worldWithFlags(s.flags),s.scene,a.position),'INVALID_POSITION');requireState(!s.activeChallenge&&!battleLocksWorld(s),'CHALLENGE_ACTIVE');const e=entityAt(s.scene,a.target);requireState(e?.person&&s.known.includes(e.person),'INTRODUCE_FIRST');requireState(presentEntity(s,e!),'PERSON_AWAY');requireState(Math.hypot(a.position.x+8-observedActor(e!,a.actorPosition).x,a.position.y+6-observedActor(e!,a.actorPosition).y)<=75,'TOO_FAR');const text=(a.payload as {text?:unknown})?.text;requireState(typeof text==='string'&&text.trim().length>0&&text.length<=400,'INVALID_QUESTION');return {person:e!.person!,question:(text as string).trim()};
 }
 export type DialogueResolution={topic:string|null;reply:Words};
-export function applyAction(before:Save,a:Action,resolution?:DialogueResolution):{head:Save;text:Words}{
- requireState(a.expected_version===before.version,'VERSION_CONFLICT');requireState(a.scene===before.scene,'WRONG_SCENE');requireState(walkable(worldWithFlags(before.flags),before.scene,a.position),'INVALID_POSITION');
+export function applyAction(before:Save,a:Action,resolution?:DialogueResolution,spatialWorld:World=worldWithFlags(before.flags)):{head:Save;text:Words}{
+ requireState(a.expected_version===before.version,'VERSION_CONFLICT');requireState(a.scene===before.scene,'WRONG_SCENE');requireState(walkable(spatialWorld,before.scene,a.position),'INVALID_POSITION');
  if(!a.action.startsWith('battle-')&&a.action!=='snack-eat')requireState(!battleLocksWorld(before),'BATTLE_ACTIVE');
  if(a.action==='ask'){const {person,question}=validateQuestion(before,a);requireState(resolution,'DIALOGUE_RESOLUTION_REQUIRED');if(resolution!.topic){const result=applyAction(before,{...a,action:'talk:'+resolution!.topic});result.head.history.at(-1)!.question=question;flag(result.head,'free-dialogue-experienced');return result}const next=structuredClone(before);flag(next,'free-dialogue-experienced');next.position={...a.position};next.version++;next.cursor++;next.history.push({id:a.action_id,kind:'talk',person,question,text:resolution!.reply});next.history=next.history.slice(-500);return {head:next,text:resolution!.reply};}
  const s=structuredClone(before);s.position={...a.position};let text:Words=['完成了。','Done.'];const e=entityAt(s.scene,a.target);
@@ -90,6 +92,8 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution)
    requireState(JSON.stringify(p.solution)==='[0,1,2,3]','PUZZLE_NOT_SOLVED');flag(s,'alternative-route');give(s,'route');text=['小路连起来了。它从气象站下方绕到海边，不经过私人庭院。','The trail comes together. It runs below the weather station to the coast, clear of the private garden.'];
   }else if(active.kind==='fishing'){const result=replayFishing(p.fishing!);requireState(result.result!=='playing','CHALLENGE_NOT_FINISHED');if(result.result==='caught'){give(s,'fish');s.energy=Math.max(0,s.energy-2);relate(s,'ruth',1);text=['鱼进了桶。露丝点点头：拿去咖啡馆，或者留着当晚饭。','The fish lands in the bucket. Ruth nods. Take it to the café, or keep it for supper.']}else text=['鱼游走了。露丝递给你一杯水，下次还可以再试。','The fish slips away. Ruth offers you water. There is always another try.']}
   delete s.activeChallenge;
+ }else if(e?.animalId){
+  requireState(!s.activeChallenge,'CHALLENGE_ACTIVE');const result=gameAnimalInteraction(before,a,spatialWorld);s.animalsV1=result.memory;text=result.text;
  }else{
   requireState(!s.activeChallenge,'CHALLENGE_ACTIVE');requireState(e,'UNKNOWN_TARGET');requireState(presentEntity(s,e!),'PERSON_AWAY');requireState(Math.hypot(s.position.x+8-observedActor(e!,a.actorPosition).x,s.position.y+6-observedActor(e!,a.actorPosition).y)<=75,'TOO_FAR');
   if(a.action==='travel'){

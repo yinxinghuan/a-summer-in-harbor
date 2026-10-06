@@ -1,0 +1,1 @@
+game API base audit ok: source · API_BASE=/<GAME_ID> · no fixed backend env/url · no bare /api fetch

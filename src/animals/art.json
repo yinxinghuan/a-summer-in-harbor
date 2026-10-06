@@ -1,0 +1,1506 @@
+{
+  "domestic-cat-v1": {
+    "species": "cat",
+    "visualVersion": "domestic-cat-v1",
+    "image": "./animals/cat-atlas.png",
+    "atlas": {
+      "w": 800,
+      "h": 576
+    },
+    "frames": {
+      "stand": {
+        "down": {
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "cd812553009f6cd5afc8d5ea74f91c4fecda9c61a9a6c7aeb6b20533269fc620",
+          "requestId": "452c298d-e19f-4411-9423-ed2429795bbe",
+          "taskId": "mt_57d89861efd5a4732ce99c9fbf73534f",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791263862944-clywstuakbt.webp",
+          "sourcePath": "tasks/cat-down-stand-v2/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            500,
+            826
+          ],
+          "sourceToAtlasScale": 0.08763693270735524,
+          "sourceBounds": [
+            298,
+            191,
+            806,
+            830
+          ],
+          "visiblePixels": [
+            45,
+            56
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-down-stand-v2.json"
+        },
+        "left": {
+          "x": 0,
+          "y": 144,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "5ef339664d2b073b22c6cd848831b583582304d7568e273ec18bc9c8e2675f7c",
+          "requestId": "2695fc10-c20e-40f5-acc4-8af3278ea683",
+          "taskId": "mt_6d6a5b87107f6da684920fe2a67df3fd",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264366245-0vzkd0y2wto.webp",
+          "sourcePath": "tasks/cat-left-stand-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            520,
+            782
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            137,
+            235,
+            893,
+            788
+          ],
+          "visiblePixels": [
+            66,
+            48
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-left-stand-v1.json"
+        },
+        "right": {
+          "x": 0,
+          "y": 288,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.49375,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "5ef339664d2b073b22c6cd848831b583582304d7568e273ec18bc9c8e2675f7c",
+          "requestId": "2695fc10-c20e-40f5-acc4-8af3278ea683",
+          "taskId": "mt_6d6a5b87107f6da684920fe2a67df3fd",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264366245-0vzkd0y2wto.webp",
+          "sourcePath": "tasks/cat-left-stand-v1/source.webp",
+          "wholeFrameMirror": true,
+          "mirrorFrom": "left",
+          "sourceFoot": [
+            520,
+            782
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            137,
+            235,
+            893,
+            788
+          ],
+          "visiblePixels": [
+            66,
+            48
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-left-stand-v1.json"
+        },
+        "up": {
+          "x": 0,
+          "y": 432,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "84b3af0657d04a26610d0cf2108546b896b74036be8fbf64852f796cc65414b4",
+          "requestId": "42292b31-56a9-4ccc-9477-cf43c9be3a37",
+          "taskId": "mt_d083458e3288a9552d0b02e3632e5429",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264441851-3tlt2eouwqj.webp",
+          "sourcePath": "tasks/cat-up-stand-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            510,
+            850
+          ],
+          "sourceToAtlasScale": 0.0785,
+          "sourceBounds": [
+            357,
+            135,
+            787,
+            855
+          ],
+          "visiblePixels": [
+            34,
+            57
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-up-stand-v1.json"
+        }
+      },
+      "walkA": {
+        "down": {
+          "x": 160,
+          "y": 0,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "af0ca0864b883c5e4dc3f4b65c11131a09b49eab80cda21be036b040f3e5dc01",
+          "requestId": "952645ce-9309-4f2f-b7ed-bd710cf49818",
+          "taskId": "mt_c370e44400e8065d492a85ab24ddf289",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791267441542-sfxubhkvut.webp",
+          "sourcePath": "tasks/cat-down-walkA-v2/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            500,
+            851
+          ],
+          "sourceToAtlasScale": 0.08763693270735524,
+          "sourceBounds": [
+            298,
+            191,
+            805,
+            856
+          ],
+          "visiblePixels": [
+            44,
+            58
+          ],
+          "calibrationReason": "supplement complete source manually inspected; ground support back edge, uniform same-direction standing scale; no anatomy edit",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-down-walkA-v2.json"
+        },
+        "left": {
+          "x": 160,
+          "y": 144,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "2684cdb098e541049124350073d63b64b9e6da3104e91bcdc58f6a1b6389226a",
+          "requestId": "410f0408-5fea-49b7-92e8-455cd9906e34",
+          "taskId": "mt_f940c19dfeaafa28f5c3e82f8a7dcce8",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791267650744-t15l7rbcmf.webp",
+          "sourcePath": "tasks/cat-left-walkA-v3/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            500,
+            754
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            137,
+            235,
+            893,
+            760
+          ],
+          "visiblePixels": [
+            66,
+            46
+          ],
+          "calibrationReason": "supplement complete source manually inspected; ground support back edge, uniform same-direction standing scale; no anatomy edit",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-left-walkA-v3.json"
+        },
+        "right": {
+          "x": 160,
+          "y": 288,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.49375,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "2684cdb098e541049124350073d63b64b9e6da3104e91bcdc58f6a1b6389226a",
+          "requestId": "410f0408-5fea-49b7-92e8-455cd9906e34",
+          "taskId": "mt_f940c19dfeaafa28f5c3e82f8a7dcce8",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791267650744-t15l7rbcmf.webp",
+          "sourcePath": "tasks/cat-left-walkA-v3/source.webp",
+          "wholeFrameMirror": true,
+          "mirrorFrom": "left",
+          "sourceFoot": [
+            500,
+            754
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            137,
+            235,
+            893,
+            760
+          ],
+          "visiblePixels": [
+            66,
+            46
+          ],
+          "calibrationReason": "supplement complete source manually inspected; ground support back edge, uniform same-direction standing scale; no anatomy edit",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-left-walkA-v3.json"
+        },
+        "up": {
+          "x": 160,
+          "y": 432,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "2fc73163820ce26c10a633d5b4232a0a47858a918f2dcee1d1a86e5b2bc90c65",
+          "requestId": "ad885ff4-93c4-42d4-b8ad-623f84600b0a",
+          "taskId": "mt_01348eb63caa9457b35db541e062b7da",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265439505-tm1rel3ras.webp",
+          "sourcePath": "tasks/cat-up-walkA-v2/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            510,
+            844
+          ],
+          "sourceToAtlasScale": 0.0785,
+          "sourceBounds": [
+            357,
+            135,
+            787,
+            848
+          ],
+          "visiblePixels": [
+            34,
+            56
+          ],
+          "calibrationReason": "four paw support back edge and same upstand head scale",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-up-walkA-v2.json"
+        }
+      },
+      "walkB": {
+        "down": {
+          "x": 320,
+          "y": 0,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "09a4db51064ea1a1291a820edcbe71e404b2db6c7fc176d6978d7ace2ce7dfc9",
+          "requestId": "b1bf47c8-1796-4da3-a226-8d0984c01efe",
+          "taskId": "mt_1363db7b7b29079c38d9b8a3c41d1c6f",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791267523339-s2on56wrjm.webp",
+          "sourcePath": "tasks/cat-down-walkB-v2/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            500,
+            850
+          ],
+          "sourceToAtlasScale": 0.08763693270735524,
+          "sourceBounds": [
+            298,
+            191,
+            805,
+            855
+          ],
+          "visiblePixels": [
+            44,
+            58
+          ],
+          "calibrationReason": "supplement complete source manually inspected; ground support back edge, uniform same-direction standing scale; no anatomy edit",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-down-walkB-v2.json"
+        },
+        "left": {
+          "x": 320,
+          "y": 144,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "50a3428667fc3cc00da593c060b2f9c5657d25559e80f4d908e4ec9c622e5c63",
+          "requestId": "d2ecd3a9-c6fd-4a17-bcb7-4a31ad8261e9",
+          "taskId": "mt_6ee0c19ad27d08cc4ab36189d44d0c23",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791267831207-j62wtez6em.webp",
+          "sourcePath": "tasks/cat-left-walkB-v4/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            500,
+            782
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            137,
+            235,
+            893,
+            788
+          ],
+          "visiblePixels": [
+            66,
+            48
+          ],
+          "calibrationReason": "supplement complete source manually inspected; ground support back edge, uniform same-direction standing scale; no anatomy edit",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-left-walkB-v4.json"
+        },
+        "right": {
+          "x": 320,
+          "y": 288,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.49375,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "50a3428667fc3cc00da593c060b2f9c5657d25559e80f4d908e4ec9c622e5c63",
+          "requestId": "d2ecd3a9-c6fd-4a17-bcb7-4a31ad8261e9",
+          "taskId": "mt_6ee0c19ad27d08cc4ab36189d44d0c23",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791267831207-j62wtez6em.webp",
+          "sourcePath": "tasks/cat-left-walkB-v4/source.webp",
+          "wholeFrameMirror": true,
+          "mirrorFrom": "left",
+          "sourceFoot": [
+            500,
+            782
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            137,
+            235,
+            893,
+            788
+          ],
+          "visiblePixels": [
+            66,
+            48
+          ],
+          "calibrationReason": "supplement complete source manually inspected; ground support back edge, uniform same-direction standing scale; no anatomy edit",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-left-walkB-v4.json"
+        },
+        "up": {
+          "x": 320,
+          "y": 432,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "ce056b6acadaec798fd368bacac5e46879db3c18ea4166f2ebe1d202e0869980",
+          "requestId": "82a66c31-380f-40f1-81a7-61e6cad8d4da",
+          "taskId": "mt_1eb154846995f5a004d9623c24d6bd8e",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791267989127-xe35ei61vrf.webp",
+          "sourcePath": "tasks/cat-up-walkB-v2/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            510,
+            866
+          ],
+          "sourceToAtlasScale": 0.0785,
+          "sourceBounds": [
+            357,
+            135,
+            787,
+            870
+          ],
+          "visiblePixels": [
+            34,
+            58
+          ],
+          "calibrationReason": "supplement complete source manually inspected; ground support back edge, uniform same-direction standing scale; no anatomy edit",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-up-walkB-v2.json"
+        }
+      },
+      "sun-rest": {
+        "down": {
+          "x": 480,
+          "y": 0,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "b7fc208ecc5a98d392db301343190c73a3dac0842e213fef7976f3cafd22dd74",
+          "requestId": "76e2b43b-32b1-4087-9254-025cceba945d",
+          "taskId": "mt_16c1603329d449984f8c5da2437a58f6",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264944148-li1z88rhjxm.webp",
+          "sourcePath": "tasks/cat-down-sun-rest-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            500,
+            805
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            314,
+            280,
+            790,
+            809
+          ],
+          "visiblePixels": [
+            42,
+            46
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-down-sun-rest-v1.json"
+        },
+        "left": {
+          "x": 480,
+          "y": 144,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "0bac40c5d35e8626ceb05b2c3571ff66d208654e5e2ed587696cde40f954d72e",
+          "requestId": "66c449a0-bb3c-46cd-bcf7-92defecc79cf",
+          "taskId": "mt_9d40565e4a3f38aef99329024e9ff252",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265009477-p8rwcjdc1b.webp",
+          "sourcePath": "tasks/cat-left-sun-rest-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            500,
+            689
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            130,
+            277,
+            913,
+            692
+          ],
+          "visiblePixels": [
+            69,
+            36
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-left-sun-rest-v1.json"
+        },
+        "right": {
+          "x": 480,
+          "y": 288,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.49375,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "0bac40c5d35e8626ceb05b2c3571ff66d208654e5e2ed587696cde40f954d72e",
+          "requestId": "66c449a0-bb3c-46cd-bcf7-92defecc79cf",
+          "taskId": "mt_9d40565e4a3f38aef99329024e9ff252",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265009477-p8rwcjdc1b.webp",
+          "sourcePath": "tasks/cat-left-sun-rest-v1/source.webp",
+          "wholeFrameMirror": true,
+          "mirrorFrom": "left",
+          "sourceFoot": [
+            500,
+            689
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            130,
+            277,
+            913,
+            692
+          ],
+          "visiblePixels": [
+            69,
+            36
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-left-sun-rest-v1.json"
+        },
+        "up": {
+          "x": 480,
+          "y": 432,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "ccb6be95757e5ec2f706b394abda6befafd18d544886274a7cce304b57a1be81",
+          "requestId": "a4cf1f47-151f-4048-b536-c8737a418283",
+          "taskId": "mt_1da7d2d2f907a9d2510abd7a6474d002",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265074406-yj45uk757r.webp",
+          "sourcePath": "tasks/cat-up-sun-rest-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            510,
+            757
+          ],
+          "sourceToAtlasScale": 0.0785,
+          "sourceBounds": [
+            341,
+            147,
+            787,
+            852
+          ],
+          "visiblePixels": [
+            35,
+            55
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-up-sun-rest-v1.json"
+        }
+      },
+      "sleep": {
+        "down": {
+          "x": 640,
+          "y": 0,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "6829b5c8a0a17dca6c7ee9a9dbfb72f078b325ebbefedc90583fc20d0ec146b5",
+          "requestId": "2b69efb2-e15c-4980-9327-724e8825f485",
+          "taskId": "mt_9e44fd39d1d50a7cb7edd2bbd426f286",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264975440-xik070vd2ij.webp",
+          "sourcePath": "tasks/cat-down-sleep-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            500,
+            749
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            272,
+            314,
+            789,
+            756
+          ],
+          "visiblePixels": [
+            45,
+            39
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-down-sleep-v1.json"
+        },
+        "left": {
+          "x": 640,
+          "y": 144,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "c72b00178f6dbdfcb2b41abf83a806eb69ca6c5b0a857617f632fa2d87c86bfa",
+          "requestId": "16c16f19-58f2-4644-88d4-9cc0d9f6b6af",
+          "taskId": "mt_6fd92a59fdb86b15943b8aa2d43e8807",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265041324-7t9dt5e35nh.webp",
+          "sourcePath": "tasks/cat-left-sleep-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            500,
+            706
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            149,
+            337,
+            866,
+            711
+          ],
+          "visiblePixels": [
+            63,
+            33
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-left-sleep-v1.json"
+        },
+        "right": {
+          "x": 640,
+          "y": 288,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.49375,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "c72b00178f6dbdfcb2b41abf83a806eb69ca6c5b0a857617f632fa2d87c86bfa",
+          "requestId": "16c16f19-58f2-4644-88d4-9cc0d9f6b6af",
+          "taskId": "mt_6fd92a59fdb86b15943b8aa2d43e8807",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265041324-7t9dt5e35nh.webp",
+          "sourcePath": "tasks/cat-left-sleep-v1/source.webp",
+          "wholeFrameMirror": true,
+          "mirrorFrom": "left",
+          "sourceFoot": [
+            500,
+            706
+          ],
+          "sourceToAtlasScale": 0.0876,
+          "sourceBounds": [
+            149,
+            337,
+            866,
+            711
+          ],
+          "visiblePixels": [
+            63,
+            33
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-left-sleep-v1.json"
+        },
+        "up": {
+          "x": 640,
+          "y": 432,
+          "w": 160,
+          "h": 144,
+          "anchor": [
+            0.5,
+            0.7222222222222222
+          ],
+          "scale": 0.5,
+          "sourceSha256": "dec200b19d097e9204982482d7b4ea91f0f82fadf97d9f9512ba8fad24924669",
+          "requestId": "02f6fac2-ffb3-4390-ba57-ac5256c8efc6",
+          "taskId": "mt_0bd54be02aa54455f709bc8c26bb654f",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265106627-min6o83us7i.webp",
+          "sourcePath": "tasks/cat-up-sleep-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            510,
+            751
+          ],
+          "sourceToAtlasScale": 0.0785,
+          "sourceBounds": [
+            268,
+            281,
+            725,
+            750
+          ],
+          "visiblePixels": [
+            36,
+            37
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/cat-up-sleep-v1.json"
+        }
+      }
+    },
+    "review": {
+      "singleImage": "accepted",
+      "family": "accepted",
+      "targetScene": "accepted",
+      "technical": "accepted"
+    },
+    "diagnosticOnly": true,
+    "contentSha256": "7b298237af7be8ec95635f9b0b55fe7e4880aad4df0751b46730ab7fb493972a",
+    "effectiveReview": "reviews/current-family-review.json",
+    "runtimeEligible": false,
+    "libraryEligible": false
+  },
+  "coastal-gull-v1": {
+    "species": "gull",
+    "visualVersion": "coastal-gull-v1",
+    "image": "./animals/gull-atlas.png",
+    "atlas": {
+      "w": 1120,
+      "h": 640
+    },
+    "frames": {
+      "stand": {
+        "down": {
+          "x": 0,
+          "y": 0,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "1b05897a994d87f70936105331228a479ed419b2770c44b268ed7c1cf76670f7",
+          "requestId": "dc8ab425-9d5f-438c-9b7c-145664213f7c",
+          "taskId": "mt_268e5d46fd236377cb39f8f14a5eab2e",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791263504921-d5gpfarlaze.webp",
+          "sourcePath": "tasks/gull-down-stand-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            512,
+            944
+          ],
+          "sourceToAtlasScale": 0.058361391694725026,
+          "sourceBounds": [
+            293,
+            57,
+            732,
+            948
+          ],
+          "visiblePixels": [
+            26,
+            52
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-down-stand-v1.json"
+        },
+        "left": {
+          "x": 0,
+          "y": 160,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "721e83872cb3d859caf89fa156c5957144ceb0d8eb4ea603bc7aecc0425b8693",
+          "requestId": "7a4f879d-afb6-4853-9a96-3c4240c34c18",
+          "taskId": "mt_722f5a5cd55bdbf3e40f01439bc7ba1a",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264485374-tnwylyij1l.webp",
+          "sourcePath": "tasks/gull-left-stand-v2/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            425,
+            825
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            67,
+            231,
+            978,
+            837
+          ],
+          "visiblePixels": [
+            53,
+            35
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-left-stand-v2.json"
+        },
+        "right": {
+          "x": 0,
+          "y": 320,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.4955357142857143,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "721e83872cb3d859caf89fa156c5957144ceb0d8eb4ea603bc7aecc0425b8693",
+          "requestId": "7a4f879d-afb6-4853-9a96-3c4240c34c18",
+          "taskId": "mt_722f5a5cd55bdbf3e40f01439bc7ba1a",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264485374-tnwylyij1l.webp",
+          "sourcePath": "tasks/gull-left-stand-v2/source.webp",
+          "wholeFrameMirror": true,
+          "mirrorFrom": "left",
+          "sourceFoot": [
+            425,
+            825
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            67,
+            231,
+            978,
+            837
+          ],
+          "visiblePixels": [
+            53,
+            35
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-left-stand-v2.json"
+        },
+        "up": {
+          "x": 0,
+          "y": 480,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "a0d981c7c8140e7965f4395fadf3a239260f66b2120454c970098df8dd35ca62",
+          "requestId": "b62d3cdb-59ba-4a2e-9ba6-6962e82ef7b5",
+          "taskId": "mt_1a17c5331d5a81c13d45a70569f5db6c",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264521043-7w98u7fj2a3.webp",
+          "sourcePath": "tasks/gull-up-stand-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            512,
+            800
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            314,
+            61,
+            710,
+            943
+          ],
+          "visiblePixels": [
+            23,
+            51
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-up-stand-v1.json"
+        }
+      },
+      "walkA": {
+        "down": {
+          "x": 224,
+          "y": 0,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "a3b305c09d1c6192674d220e12b930966bd21dd16f2f4288569d5c11bb4a8d9a",
+          "requestId": "1a5708ae-f0af-49ed-b259-32fb455c9ffb",
+          "taskId": "mt_bb529447c7e9a8056e8177a4ed9dbd7c",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264878502-5zxf0aew5ny.webp",
+          "sourcePath": "tasks/gull-down-walkA-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            470,
+            952
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            292,
+            57,
+            732,
+            961
+          ],
+          "visiblePixels": [
+            26,
+            53
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-down-walkA-v1.json"
+        },
+        "left": {
+          "x": 224,
+          "y": 160,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "ca1677b41c6787c9ec905b2105d483dc5f52e708733466affabec8c7dec393ab",
+          "requestId": "41191612-ce3a-423d-bfd2-94fabaadbb0e",
+          "taskId": "mt_6d5d1cc0405660cd45e03958dc070fc5",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264619649-mydqs3excoo.webp",
+          "sourcePath": "tasks/gull-left-walkA-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            390,
+            808
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            54,
+            230,
+            977,
+            819
+          ],
+          "visiblePixels": [
+            54,
+            34
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-left-walkA-v1.json"
+        },
+        "right": {
+          "x": 224,
+          "y": 320,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.4955357142857143,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "ca1677b41c6787c9ec905b2105d483dc5f52e708733466affabec8c7dec393ab",
+          "requestId": "41191612-ce3a-423d-bfd2-94fabaadbb0e",
+          "taskId": "mt_6d5d1cc0405660cd45e03958dc070fc5",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791264619649-mydqs3excoo.webp",
+          "sourcePath": "tasks/gull-left-walkA-v1/source.webp",
+          "wholeFrameMirror": true,
+          "mirrorFrom": "left",
+          "sourceFoot": [
+            390,
+            808
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            54,
+            230,
+            977,
+            819
+          ],
+          "visiblePixels": [
+            54,
+            34
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-left-walkA-v1.json"
+        },
+        "up": {
+          "x": 224,
+          "y": 480,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "5d907953652710c51ef35529acb42efb28e56a628a77e96c6bbd54f452f5ba00",
+          "requestId": "d28db14a-608c-4e9a-ad33-39356b5be269",
+          "taskId": "mt_6e60076b33ca926997730e59a8b4cf1e",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265471020-h4ym1x0yifm.webp",
+          "sourcePath": "tasks/gull-up-walkA-v2/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            510,
+            890
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            319,
+            58,
+            702,
+            943
+          ],
+          "visiblePixels": [
+            22,
+            52
+          ],
+          "calibrationReason": "short intact ankles; support back edge, same upstand body pixel scale",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-up-walkA-v2.json"
+        }
+      },
+      "walkB": {
+        "down": {
+          "x": 448,
+          "y": 0,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "5c3382c9e0f5125651c501efb06137f24564715578f95796bbda4080c78ea184",
+          "requestId": "9f61e3ad-7188-4f0d-ac14-f26000ae50c3",
+          "taskId": "mt_a2867493c2fc3c7b8b67a9865451c3ae",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265538364-lsv35dqkb8.webp",
+          "sourcePath": "tasks/gull-down-walkB-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            540,
+            952
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            292,
+            56,
+            732,
+            960
+          ],
+          "visiblePixels": [
+            26,
+            53
+          ],
+          "calibrationReason": "alternating two-foot support back edge, same downstand body pixel scale",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-down-walkB-v1.json"
+        },
+        "left": {
+          "x": 448,
+          "y": 160,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "fe7641a2c62a8615586b13c34d8f58f6aa9f029307cc08caa07af10172894ed1",
+          "requestId": "ceb05e41-d9e8-4752-b6e3-a08c512fd260",
+          "taskId": "mt_0f9119f91109a8f22835957c90195fdb",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265408640-3ajbvt7r52b.webp",
+          "sourcePath": "tasks/gull-left-walkB-v2/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            450,
+            820
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            54,
+            230,
+            977,
+            828
+          ],
+          "visiblePixels": [
+            54,
+            35
+          ],
+          "calibrationReason": "near advancing foot / far trailing foot support edge, same left reference torso scale",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-left-walkB-v2.json"
+        },
+        "right": {
+          "x": 448,
+          "y": 320,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.4955357142857143,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "fe7641a2c62a8615586b13c34d8f58f6aa9f029307cc08caa07af10172894ed1",
+          "requestId": "ceb05e41-d9e8-4752-b6e3-a08c512fd260",
+          "taskId": "mt_0f9119f91109a8f22835957c90195fdb",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265408640-3ajbvt7r52b.webp",
+          "sourcePath": "tasks/gull-left-walkB-v2/source.webp",
+          "wholeFrameMirror": true,
+          "mirrorFrom": "left",
+          "sourceFoot": [
+            450,
+            820
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            54,
+            230,
+            977,
+            828
+          ],
+          "visiblePixels": [
+            54,
+            35
+          ],
+          "calibrationReason": "near advancing foot / far trailing foot support edge, same left reference torso scale",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-left-walkB-v2.json"
+        },
+        "up": {
+          "x": 448,
+          "y": 480,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "13a46de3209362a7c4a1df551b1af671edae7625d9eb05fe29534846760a57d0",
+          "requestId": "58cf415d-34de-4f5e-a27f-8f684a7e231b",
+          "taskId": "mt_1d1f9e2658352f692fe60cc1832f45e8",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791268053795-gisu5rfhbfm.webp",
+          "sourcePath": "tasks/gull-up-walkB-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            510,
+            844
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            320,
+            61,
+            711,
+            943
+          ],
+          "visiblePixels": [
+            23,
+            51
+          ],
+          "calibrationReason": "supplement complete source manually inspected; ground support back edge, uniform same-direction standing scale; no anatomy edit",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-up-walkB-v1.json"
+        }
+      },
+      "wing-up": {
+        "down": {
+          "x": 672,
+          "y": 0,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "774a9745c38fa6000cb4931cbdd88c21a90b47afff4a0a4e5d50517c9b98083e",
+          "requestId": "de81198a-6f95-422f-950a-a8f207ed7393",
+          "taskId": "mt_a12073d745d122fc2a2086976d157a63",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265144001-4c1b2esl7p8.webp",
+          "sourcePath": "tasks/gull-down-wing-up-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            512,
+            905
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            27,
+            25,
+            998,
+            912
+          ],
+          "visiblePixels": [
+            57,
+            52
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-down-wing-up-v1.json"
+        },
+        "left": {
+          "x": 672,
+          "y": 160,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "e9c238903f361edbaf0525ffc0027b246b4f3d85f8f660971740d6851bcd1393",
+          "requestId": "21b664dc-88e0-4b3e-808b-6a16459ddce4",
+          "taskId": "mt_dbb3f13c753d8057dfb1575d1c7a230a",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265178805-92dwvqptt0s.webp",
+          "sourcePath": "tasks/gull-left-wing-up-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            650,
+            872
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            59,
+            61,
+            956,
+            880
+          ],
+          "visiblePixels": [
+            52,
+            48
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-left-wing-up-v1.json"
+        },
+        "right": {
+          "x": 672,
+          "y": 320,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.4955357142857143,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "e9c238903f361edbaf0525ffc0027b246b4f3d85f8f660971740d6851bcd1393",
+          "requestId": "21b664dc-88e0-4b3e-808b-6a16459ddce4",
+          "taskId": "mt_dbb3f13c753d8057dfb1575d1c7a230a",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265178805-92dwvqptt0s.webp",
+          "sourcePath": "tasks/gull-left-wing-up-v1/source.webp",
+          "wholeFrameMirror": true,
+          "mirrorFrom": "left",
+          "sourceFoot": [
+            650,
+            872
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            59,
+            61,
+            956,
+            880
+          ],
+          "visiblePixels": [
+            52,
+            48
+          ],
+          "calibrationReason": "manual full-source support back-edge / pelvis review; uniform nearest scale from same-direction stand head/torso pixel scale; no local anatomy edits",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-left-wing-up-v1.json"
+        },
+        "up": {
+          "x": 672,
+          "y": 480,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "e15fd5ffa5c9a1918c5298106dfd8b3764e23ed24ca59c3a0c48df212f81e0e9",
+          "requestId": "e65892fb-676f-4f50-97a0-bd140c77d947",
+          "taskId": "mt_39e8aeae6b1e2948eb82b1450590e1ea",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265214647-50k6dsn9kqr.webp",
+          "sourcePath": "tasks/gull-up-wing-up-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            512,
+            775
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            37,
+            57,
+            987,
+            925
+          ],
+          "visiblePixels": [
+            55,
+            51
+          ],
+          "calibrationReason": "tucked foot/pelvis support back edge, same-direction stand body pixel scale, uniform nearest resize only",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-up-wing-up-v1.json"
+        }
+      },
+      "wing-down": {
+        "down": {
+          "x": 896,
+          "y": 0,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "9d5eaeeb934a15cc578821a9cdb67ec9595b732da9b40c2ff7696b523bf11dfb",
+          "requestId": "53656a19-a748-47c6-a055-65878a884ac1",
+          "taskId": "mt_4bffa09eb3509e95978591c1a71987ae",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265571411-j8eh3fq5ms.webp",
+          "sourcePath": "tasks/gull-down-wing-down-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            512,
+            896
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            23,
+            229,
+            1000,
+            930
+          ],
+          "visiblePixels": [
+            57,
+            41
+          ],
+          "calibrationReason": "tucked feet/pelvis back edge, same-direction reference torso pixel scale; image-only vertical elevation handled in renderer",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-down-wing-down-v1.json"
+        },
+        "left": {
+          "x": 896,
+          "y": 160,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "f73216b476db75d5fc724b6b2681b47b5fe71cf63e133d9e409d9b1e60f3f2dc",
+          "requestId": "9eeef14a-f831-434b-bee3-c821b20bb87f",
+          "taskId": "mt_ecd77b569413a6bc55fbf16bfbd1faad",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265607266-9szrh3qytu.webp",
+          "sourcePath": "tasks/gull-left-wing-down-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            740,
+            580
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            64,
+            247,
+            979,
+            899
+          ],
+          "visiblePixels": [
+            53,
+            38
+          ],
+          "calibrationReason": "tucked feet/pelvis back edge, same-direction reference torso pixel scale; image-only vertical elevation handled in renderer",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-left-wing-down-v1.json"
+        },
+        "right": {
+          "x": 896,
+          "y": 320,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.4955357142857143,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "f73216b476db75d5fc724b6b2681b47b5fe71cf63e133d9e409d9b1e60f3f2dc",
+          "requestId": "9eeef14a-f831-434b-bee3-c821b20bb87f",
+          "taskId": "mt_ecd77b569413a6bc55fbf16bfbd1faad",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265607266-9szrh3qytu.webp",
+          "sourcePath": "tasks/gull-left-wing-down-v1/source.webp",
+          "wholeFrameMirror": true,
+          "mirrorFrom": "left",
+          "sourceFoot": [
+            740,
+            580
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            64,
+            247,
+            979,
+            899
+          ],
+          "visiblePixels": [
+            53,
+            38
+          ],
+          "calibrationReason": "tucked feet/pelvis back edge, same-direction reference torso pixel scale; image-only vertical elevation handled in renderer",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-left-wing-down-v1.json"
+        },
+        "up": {
+          "x": 896,
+          "y": 480,
+          "w": 224,
+          "h": 160,
+          "anchor": [
+            0.5,
+            0.65
+          ],
+          "scale": 0.5,
+          "sourceSha256": "a4cad8f458bd4dd90c43b92d45019d641f3398431dd5138fc608bd8a9534f08f",
+          "requestId": "5cd31536-ffad-43d2-8656-137f29127c87",
+          "taskId": "mt_ed90dfc596d9e645209e74e7d1ba7ec8",
+          "sourceUrl": "https://images.aiwaves.tech/uploads/1791265641659-ma9bo2e4kx.webp",
+          "sourcePath": "tasks/gull-up-wing-down-v1/source.webp",
+          "wholeFrameMirror": false,
+          "mirrorFrom": null,
+          "sourceFoot": [
+            512,
+            733
+          ],
+          "sourceToAtlasScale": 0.05836,
+          "sourceBounds": [
+            43,
+            128,
+            981,
+            882
+          ],
+          "visiblePixels": [
+            55,
+            44
+          ],
+          "calibrationReason": "tucked feet/pelvis back edge, same-direction reference torso pixel scale; image-only vertical elevation handled in renderer",
+          "sourceDecision": "pass",
+          "reviewFile": "reviews/gull-up-wing-down-v1.json"
+        }
+      }
+    },
+    "review": {
+      "singleImage": "accepted",
+      "family": "accepted",
+      "targetScene": "accepted",
+      "technical": "accepted"
+    },
+    "diagnosticOnly": true,
+    "contentSha256": "0c3e6577e769eb26edcb42fccee17a11a58641e39c27299b8e7e7975df704802",
+    "effectiveReview": "reviews/current-family-review.json",
+    "runtimeEligible": false,
+    "libraryEligible": false
+  }
+}

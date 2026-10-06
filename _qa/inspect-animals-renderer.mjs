@@ -1,0 +1,8 @@
+import {chromium} from 'playwright';
+const browser=await chromium.launch({headless:true,executablePath:'/Users/yin/Library/Caches/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-mac-arm64/chrome-headless-shell',args:['--use-angle=swiftshader']});
+const c=await browser.newContext({viewport:{width:390,height:844},locale:'en-US'});await c.route('**/*',r=>['127.0.0.1','localhost'].includes(new URL(r.request().url()).hostname)||/^(blob|data):/.test(r.request().url())?r.continue():r.abort());
+const save=await(await c.request.post('http://127.0.0.1:5425/qa/prepare?case=cat-walk')).json();
+await c.addInitScript(id=>addEventListener('DOMContentLoaded',()=>{window.alteruLocalStorage?.setItem('harbor-opening:'+id,'3');window.alteruLocalStorage?.setItem('harbor-locale','en');window.alteruLocalStorage?.setItem('harbor-muted','1')}),save.id);
+const p=await c.newPage();p.on('pageerror',e=>console.log('ERROR',String(e)));await p.goto('http://127.0.0.1:5424/?debug=1');await p.waitForFunction(()=>document.querySelector('#rpg')?.__rpgClient?.getCurrentPlayer()&&!document.querySelector('.harbor-loading'));await p.waitForTimeout(1000);
+console.log(JSON.stringify(await p.evaluate(()=>{const client=document.querySelector('#rpg').__rpgClient,player=client.getCurrentPlayer();return {playerEventsKeys:Object.keys(player.events),playerEvents:JSON.stringify(player.events).slice(0,1200),sceneRoom:typeof client.sceneRoom==='function'?Object.keys(client.sceneRoom()??{}):null,sceneMapKeys:Object.keys(client.sceneMap??{}),sceneMapComponentKeys:Object.keys(client.sceneMapComponent()??{})}})));
+await p.screenshot({path:'doc/qa/animals-integration-20261006/first-cat-390-platform-layout.png'});await browser.close();
