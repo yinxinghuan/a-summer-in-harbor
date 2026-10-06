@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "at": "2026-10-05T19:33:54.386682+00:00",
+  "authority": "AI",
+  "decision": "pass",
+  "reason": "三方向九独立完整姿态身份/镜头一致；侧B近臂前、近腿后相对A交换可辨，双鞋尖始终随左向，无倒鞋；背向无脸，雨披/hood四向连续。320/390原renderer全phase与停步通过，无跨格碎片。",
+  "singleImages": "pass",
+  "familyDirectionsAndGait": "pass",
+  "isolatedTargetRenderer": "pass",
+  "geometryAndAlpha": "pass",
+  "rendererEvidence": [
+    "evidence/jordan-walk/capture.json",
+    "evidence/jordan-contact-sheet.png"
+  ],
+  "atlasSHA256": "8beef34c8b406b7dc61ecea550acbb46f95edbd8c325c14d921c3e6685e50b6c",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "humanOverride": null,
+  "realIPhone": false
+}

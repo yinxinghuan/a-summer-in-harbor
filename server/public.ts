@@ -1,4 +1,5 @@
 import {configuredNews} from './news/configured';
+import {RELEASE} from '../src/release';
 import {createTemporaryAccountTransport} from './account-transport';
 // @ts-expect-error bounded game adapter
 import {createDynamicAssets,assetHttpStatus} from './dynamic-assets/index.mjs';
@@ -22,7 +23,7 @@ const deps={store,runtime,newsProject,dynamicAssets,usage:createPlayerUsage({sto
 const api=config.identityMode==='temporary-unverified'?createTemporaryAccountTransport({...deps,mode:config.identityMode,gameId:GAME_UUID}):createApiHandler({authority,...deps});
 const server=createServer({maxHeaderSize:8192},async(req,res)=>{try{
  const who=verifiedEdgeOwner(req,config,token);const path=new URL(req.url!,'http://localhost').pathname;
- if(path==='/api/health')return json(res,200,{ok:true,gameId:GAME_UUID,release:'harbor-public-r1',identity:config.identityMode,platformIdentityVerified:false,persistence:'postgresql',runtimeCandidate:'2026-10-01.2'});
+ if(path==='/api/health')return json(res,200,{ok:true,gameId:GAME_UUID,release:'harbor-public-r1',sourceRelease:RELEASE,identity:config.identityMode,platformIdentityVerified:false,persistence:'postgresql',runtimeCandidate:'2026-10-01.2'});
  if(config.identityMode==='browser-capability-v1'&&path==='/api/bootstrap'&&req.method==='POST')return json(res,200,{mode:'browser-capability-v1'});
  if(!['GET','POST'].includes(req.method??''))return json(res,405,{error:'METHOD_NOT_ALLOWED'});
  return await api(req,res,who);

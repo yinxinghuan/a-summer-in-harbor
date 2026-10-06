@@ -1,0 +1,320 @@
+{
+  "source": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/rowan/portrait/source.webp",
+    "bytes": 839222,
+    "sha256": "e14f1861f5ff410fb8e3bcb1a2accd3bf19c947668b50105733b06e56902b269"
+  },
+  "sourceDimensions": [
+    1024,
+    1280
+  ],
+  "sourceCropBounds": [
+    0,
+    0,
+    1024,
+    1280
+  ],
+  "nativeCropDimensions": [
+    1024,
+    1280
+  ],
+  "nominalUniformNearestScale": 0.5,
+  "actualIntegerDimensionRatios": [
+    0.5,
+    0.5
+  ],
+  "dimensionRoundingErrorPixels": [
+    0.0,
+    0.0
+  ],
+  "consumerDimensions": [
+    512,
+    640
+  ],
+  "imageAnchorPx": [
+    252.5,
+    626.5
+  ],
+  "imageAnchorNormalized": [
+    0.4931640625,
+    0.97890625
+  ],
+  "sourceGroundBaseline": 1253,
+  "groundX": 505.0,
+  "sourceSupportExtentX": [
+    406,
+    604
+  ],
+  "worldGeometryApproved": false,
+  "footprint": null,
+  "sourceProtectedCoreRGBSha256": "75655a52ef15575683424553d3653c83a85f9746bf667b2eb0b1baac16777363",
+  "nativeProtectedCoreRGBSha256": "75655a52ef15575683424553d3653c83a85f9746bf667b2eb0b1baac16777363",
+  "protectedCoreMaskSha256": "c63f676bbd783c495076de67ab510621ce007dd0adb1e0703144d1725339fcce",
+  "protectedCorePixelCount": 305327,
+  "coreUnchanged": true,
+  "removedBackgroundPixelCount": 993258,
+  "confirmedHoles": [
+    {
+      "seedXY": [
+        592,
+        181
+      ],
+      "pixels": 55,
+      "bbox": [
+        592,
+        181,
+        597,
+        200
+      ]
+    },
+    {
+      "seedXY": [
+        402,
+        189
+      ],
+      "pixels": 55,
+      "bbox": [
+        399,
+        189,
+        404,
+        207
+      ]
+    },
+    {
+      "seedXY": [
+        456,
+        233
+      ],
+      "pixels": 19,
+      "bbox": [
+        456,
+        233,
+        462,
+        237
+      ]
+    },
+    {
+      "seedXY": [
+        544,
+        233
+      ],
+      "pixels": 16,
+      "bbox": [
+        542,
+        233,
+        548,
+        237
+      ]
+    },
+    {
+      "seedXY": [
+        594,
+        453
+      ],
+      "pixels": 294,
+      "bbox": [
+        589,
+        453,
+        604,
+        498
+      ]
+    },
+    {
+      "seedXY": [
+        410,
+        454
+      ],
+      "pixels": 2251,
+      "bbox": [
+        351,
+        454,
+        418,
+        668
+      ]
+    },
+    {
+      "seedXY": [
+        604,
+        500
+      ],
+      "pixels": 1669,
+      "bbox": [
+        604,
+        500,
+        658,
+        670
+      ]
+    },
+    {
+      "seedXY": [
+        645,
+        683
+      ],
+      "pixels": 6,
+      "bbox": [
+        645,
+        683,
+        646,
+        689
+      ]
+    },
+    {
+      "seedXY": [
+        664,
+        689
+      ],
+      "pixels": 31,
+      "bbox": [
+        664,
+        689,
+        666,
+        705
+      ]
+    },
+    {
+      "seedXY": [
+        343,
+        690
+      ],
+      "pixels": 14,
+      "bbox": [
+        343,
+        690,
+        344,
+        704
+      ]
+    },
+    {
+      "seedXY": [
+        661,
+        709
+      ],
+      "pixels": 2,
+      "bbox": [
+        661,
+        709,
+        662,
+        711
+      ]
+    },
+    {
+      "seedXY": [
+        359,
+        713
+      ],
+      "pixels": 48,
+      "bbox": [
+        354,
+        713,
+        362,
+        723
+      ]
+    },
+    {
+      "seedXY": [
+        656,
+        713
+      ],
+      "pixels": 9,
+      "bbox": [
+        656,
+        713,
+        659,
+        716
+      ]
+    },
+    {
+      "seedXY": [
+        648,
+        716
+      ],
+      "pixels": 36,
+      "bbox": [
+        648,
+        716,
+        655,
+        724
+      ]
+    },
+    {
+      "seedXY": [
+        648,
+        728
+      ],
+      "pixels": 1,
+      "bbox": [
+        648,
+        728,
+        649,
+        729
+      ]
+    },
+    {
+      "seedXY": [
+        648,
+        730
+      ],
+      "pixels": 1,
+      "bbox": [
+        648,
+        730,
+        649,
+        731
+      ]
+    }
+  ],
+  "edgeBandPixels": 12135,
+  "edgeModifiedPixels": 3073,
+  "edgeClearedPixels": 0,
+  "edgeWithoutCoreReference": 0,
+  "edgeSourcePixelWidth": 2,
+  "nearestSamplingVerified": true,
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 248394,
+  "partialAlphaPixels": 652,
+  "visibleStrongMagentaPixels": 0,
+  "status": "processed-local-candidate",
+  "humanApproved": false,
+  "sceneValidated": false,
+  "rights": "project-scope-applies-see-rights-record",
+  "registered": false,
+  "published": false,
+  "resident": "rowan",
+  "component": "portrait",
+  "sourceTaskId": "mt_a542cbb5328e0695c576e1cd245d75e9",
+  "sourceRequestId": "54692fe0-b201-5e57-9bab-d39a7b482980",
+  "sourceReuse": "historical independent identity-approved original, never failed atlas",
+  "parameters": {
+    "backgroundMinRed": 180,
+    "backgroundMinBlue": 180,
+    "backgroundMaxGreen": 110,
+    "backgroundMinMinRBMinusG": 80,
+    "edgeBandSourcePixels": 2,
+    "foregroundReferenceRadius": 7,
+    "matteFitMaximumResidual": 24,
+    "minimumMagentaExcessOverForeground": 20,
+    "cropPaddingSourcePixels": 1280,
+    "consumerMaximumSide": 640,
+    "resampling": "NEAREST"
+  },
+  "processingScriptSHA256": "281d4d3f4355b0f0cfe6ccad2ac7da4dbdcbab27fb54f9337dcbca8bf4f2884c",
+  "aiConfirmedHoleReview": "reviews/rowan-portrait-holes.json",
+  "native": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/poses/rowan/portrait-native.png",
+    "sha256": "590679bbbcb961aa75d91398901ef829ba7cb374d86d14b7b916e94ab21f635e"
+  },
+  "consumer": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/rowan-portrait.png",
+    "sha256": "e473b3e511f6ec089f5760ec38be4c94cbd44f969c707e210fc88dbf7368e27e",
+    "dimensions": [
+      512,
+      640
+    ]
+  },
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted"
+}

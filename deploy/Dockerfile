@@ -7,6 +7,6 @@ WORKDIR /opt/harbor
 COPY dist-server/ ./
 RUN mkdir -p .data && chown -R 1000:1000 /opt/harbor && node --version && python3 -c 'from PIL import Image; print(Image.__version__)'
 USER 1000:1000
-ENV NODE_ENV=production SWIPL=swipl HARBOR_PYTHON=python3
+ENV NODE_ENV=production SWIPL=swipl HARBOR_PYTHON=python3 HARBOR_NEWS_CATALOG=/opt/harbor/news/frozen-catalog-20261006.json
 ENTRYPOINT []
 CMD ["node", "public.mjs"]

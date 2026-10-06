@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "authority": "AI",
+  "decision": "pass",
+  "at": "2026-10-05T19:39:06.382578+00:00",
+  "scope": "processed individual consumer identity/alpha/edges; map family and actual owner UI admission separate",
+  "reason": "固定原件身份、服装与用户冻结要求一致；marked-hole诊断及海湾浅/深/绿背景处理图复查，没有可见品红孔洞、边缘显著色污或剪掉人物。0强品红、opaque core RGB不变、nearest采样验证。",
+  "evidence": [
+    "evidence/profiles-all-dark-review.png",
+    "evidence/mira-portrait-matte-review.png",
+    "assets/mira-portrait.json"
+  ],
+  "sourceSHA256": "46786b22e6d4b97bf48390ff5aa848dd984026e6308ed7919eae94d10a7958bb",
+  "consumerSHA256": "1e451750a02ca39ef9f0d0f68af27f7acccaf1cff1461324a6755320e4244a5b",
+  "humanOverride": null,
+  "actualGameIntegration": "owner pending"
+}

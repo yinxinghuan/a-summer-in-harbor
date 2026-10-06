@@ -1,0 +1,644 @@
+{
+  "residentId": "casey",
+  "atlas": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/casey.png",
+    "sha256": "63b66e28d3854c7b23d473552a68f34c42300eef17d5fb981fd4dd85dafcef13",
+    "dimensions": [
+      384,
+      512
+    ],
+    "grid": [
+      3,
+      4
+    ],
+    "cell": [
+      128,
+      128
+    ],
+    "rowOrder": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "columnOrder": [
+      "contactA",
+      "stand",
+      "contactB"
+    ],
+    "anchor": [
+      0.5,
+      0.953125
+    ],
+    "worldScale": 0.5185185185185185,
+    "visibleWorldHeight": 56
+  },
+  "frames": [
+    {
+      "direction": "down",
+      "pose": "a",
+      "row": 0,
+      "col": 0,
+      "taskKey": "casey-down-a-v1",
+      "requestId": "6cdc9878-b906-4ce8-9c12-fe02bcff9241",
+      "taskId": "mt_ac0f6b55d9066a1841b4e1d3212df434",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-down-a-v1/source.webp",
+        "sha256": "9c0237228513b7900881a91e2f0329b1c79919564febf1ca40354d39a2439d5f",
+        "bytes": 670786,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        324,
+        104,
+        689,
+        926
+      ],
+      "uniformScale": 0.13138686131386862,
+      "visibleSize": [
+        48,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "540de33ac3da1571384139c2e7b249a6de2542a5d022025ba1e119239d036080",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 847295,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "col": 1,
+      "taskKey": "casey-down-stand-v1",
+      "requestId": "31659292-4e39-4159-ad8d-d1cc1fcd0d48",
+      "taskId": "mt_b98569f69bfb9b7a796571046503b4be",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-down-stand-v1/source.webp",
+        "sha256": "4d4f38fa89ba948a774e288ad4d8a4683f1b6c3d9b71440c873c62537ff5d321",
+        "bytes": 669044,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        317,
+        104,
+        686,
+        921
+      ],
+      "uniformScale": 0.13219094247246022,
+      "visibleSize": [
+        49,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "45a7f48e6f2d9caedcfdcda949f54660279f28810683d7166e37c0440df59125",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 825142,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "down",
+      "pose": "b",
+      "row": 0,
+      "col": 2,
+      "taskKey": "casey-down-b-v1",
+      "requestId": "ec177259-dc1c-44cf-bf6d-9360433201a8",
+      "taskId": "mt_0894e966542d79339886c9adebfc5f3b",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-down-b-v1/source.webp",
+        "sha256": "508f1f35bb1df2f7927d7dd9a989722d62b3f33289d3ca6530fc97258c40bdb2",
+        "bytes": 683880,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        309,
+        103,
+        682,
+        925
+      ],
+      "uniformScale": 0.13138686131386862,
+      "visibleSize": [
+        49,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "b44fb8eac59e4098d53864c1ebc47acbdf9fafb3588a42ff249f11719a3ebd43",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 847591,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "a",
+      "row": 1,
+      "col": 0,
+      "taskKey": "casey-left-a-v1",
+      "requestId": "1bf9cfe8-0374-4ca2-84cc-d67982933fb1",
+      "taskId": "mt_d24056ddca070396554aa7f3874a3b67",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-left-a-v1/source.webp",
+        "sha256": "1e59d3feb0f433f0ff85a53b6bfc3e87ff3e39603c5ebc85f2a1e1c77de51bf0",
+        "bytes": 671312,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        298,
+        123,
+        678,
+        900
+      ],
+      "uniformScale": 0.138996138996139,
+      "visibleSize": [
+        53,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "d15fb2465d82c26ba1f4dc5d23e6c25dd77f096aa13699495aca611e8e85201f",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 855847,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "col": 1,
+      "taskKey": "casey-left-stand-v1",
+      "requestId": "eff42b31-4366-41d8-89d0-a71228c964da",
+      "taskId": "mt_21103c218c0fedeaec69e2b406393515",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-left-stand-v1/source.webp",
+        "sha256": "463e9e57ac071c295ece3a5e80199e5f34797ceb3322f060848e6e901a84ec15",
+        "bytes": 647816,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        344,
+        150,
+        666,
+        911
+      ],
+      "uniformScale": 0.14191852825229961,
+      "visibleSize": [
+        46,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "35cb4f7cb2448c3f60af0cc750f56b818d703cf2bc5c2080d863db8bd50ef3e4",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 892666,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "b",
+      "row": 1,
+      "col": 2,
+      "taskKey": "casey-left-b-v1",
+      "requestId": "ac52f57c-6e4d-4e56-bc7f-7c6a69161eb0",
+      "taskId": "mt_37b9d2f1694a5e724d7ac8ad88285bcd",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-left-b-v1/source.webp",
+        "sha256": "0de37b8da615c52f8c0fc1f160fe6903c18d89c3dfeee788a8134b106a7bbbfc",
+        "bytes": 662056,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        298,
+        124,
+        683,
+        900
+      ],
+      "uniformScale": 0.13917525773195877,
+      "visibleSize": [
+        54,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "4860d9a8869242a1b34fcc8c8dc6a0cdb1d1a8dc28e606b1a51b897bcee2aa9e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 867956,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "a",
+      "row": 2,
+      "col": 0,
+      "taskKey": "casey-left-a-v1",
+      "requestId": "1bf9cfe8-0374-4ca2-84cc-d67982933fb1",
+      "taskId": "mt_d24056ddca070396554aa7f3874a3b67",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-left-a-v1/source.webp",
+        "sha256": "1e59d3feb0f433f0ff85a53b6bfc3e87ff3e39603c5ebc85f2a1e1c77de51bf0",
+        "bytes": 671312,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        298,
+        123,
+        678,
+        900
+      ],
+      "uniformScale": 0.138996138996139,
+      "visibleSize": [
+        53,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "0b1b2c1926b7e9839293f6da1bb1e4b32db7b3453460b7f22d2c6b0e35289e9a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 855847,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "col": 1,
+      "taskKey": "casey-left-stand-v1",
+      "requestId": "eff42b31-4366-41d8-89d0-a71228c964da",
+      "taskId": "mt_21103c218c0fedeaec69e2b406393515",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-left-stand-v1/source.webp",
+        "sha256": "463e9e57ac071c295ece3a5e80199e5f34797ceb3322f060848e6e901a84ec15",
+        "bytes": 647816,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        344,
+        150,
+        666,
+        911
+      ],
+      "uniformScale": 0.14191852825229961,
+      "visibleSize": [
+        46,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "ce2e2d0c4df54a0399b1c6dd10562ac673415411c70a0383ec7285525d77b67e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 892666,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "b",
+      "row": 2,
+      "col": 2,
+      "taskKey": "casey-left-b-v1",
+      "requestId": "ac52f57c-6e4d-4e56-bc7f-7c6a69161eb0",
+      "taskId": "mt_37b9d2f1694a5e724d7ac8ad88285bcd",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-left-b-v1/source.webp",
+        "sha256": "0de37b8da615c52f8c0fc1f160fe6903c18d89c3dfeee788a8134b106a7bbbfc",
+        "bytes": 662056,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        298,
+        124,
+        683,
+        900
+      ],
+      "uniformScale": 0.13917525773195877,
+      "visibleSize": [
+        54,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "ce0c04cab70d35f3a125dee3709577c7e329099e561e899787154a60f4f5405a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 867956,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "a",
+      "row": 3,
+      "col": 0,
+      "taskKey": "casey-up-a-v1",
+      "requestId": "30b47abc-9251-4319-9d8e-2a13ae290eca",
+      "taskId": "mt_50e7b448ba16a43c9325b42bc8d9837c",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-up-a-v1/source.webp",
+        "sha256": "944c29f02652763e26cc1df1805a4991c1e01bf7c4808661a27b222538b9632c",
+        "bytes": 642612,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        343,
+        133,
+        669,
+        890
+      ],
+      "uniformScale": 0.142668428005284,
+      "visibleSize": [
+        47,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "10fa8eb1316b7c3abffb872c538a923f3ea0397871faf026c89ef00880db2bef",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 889637,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "col": 1,
+      "taskKey": "casey-up-stand-v1",
+      "requestId": "cf9cc446-4082-43fd-81bd-4b66fff84e47",
+      "taskId": "mt_4fdf7c467f53b168dfc4993c8553a5f8",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-up-stand-v1/source.webp",
+        "sha256": "73fe641f8f16834d4ba35ac4b46a0e02f23e9e5fd6a1bdf1a75824b84ab3d2c8",
+        "bytes": 629582,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        350,
+        157,
+        667,
+        842
+      ],
+      "uniformScale": 0.15766423357664233,
+      "visibleSize": [
+        50,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "e902d2369af2a81ff20ad4f35415bbda6dca16720bf9af4624fa10c22b7993c9",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 893479,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "b",
+      "row": 3,
+      "col": 2,
+      "taskKey": "casey-up-b-v1",
+      "requestId": "97772e8f-b524-4a38-8fcc-0392ceaf922a",
+      "taskId": "mt_6f2d9691beb7ee811059ff4f12781315",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/casey-up-b-v1/source.webp",
+        "sha256": "851bc3e8733126cc979e9d7c573b63c9701086e5a0377ab5a8b01abfed75b73a",
+        "bytes": 624292,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        345,
+        132,
+        668,
+        877
+      ],
+      "uniformScale": 0.14496644295302014,
+      "visibleSize": [
+        47,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "3dfa20d5d630fe32a208dacb4149859b621ce7a356a828529bf5c5bc70d66538",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 892597,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    }
+  ],
+  "complete": true,
+  "processing": "existing Harbor strong-magenta key, full-body tight crop, uniform nearest resampling, foot-bottom alignment, whole side frame mirror; no limb editing/repainting",
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "published": false
+}

@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "status": "accepted",
+  "actorId": "casey",
+  "sourceService": "AlterU Media Service",
+  "generatedDirections": {
+    "down": {
+      "stand": {
+        "requestId": "31659292-4e39-4159-ad8d-d1cc1fcd0d48",
+        "taskId": "mt_b98569f69bfb9b7a796571046503b4be",
+        "sha256": "4d4f38fa89ba948a774e288ad4d8a4683f1b6c3d9b71440c873c62537ff5d321",
+        "sourcePath": "tasks/casey-down-stand-v1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "6cdc9878-b906-4ce8-9c12-fe02bcff9241",
+        "taskId": "mt_ac0f6b55d9066a1841b4e1d3212df434",
+        "sha256": "9c0237228513b7900881a91e2f0329b1c79919564febf1ca40354d39a2439d5f",
+        "sourcePath": "tasks/casey-down-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "ec177259-dc1c-44cf-bf6d-9360433201a8",
+        "taskId": "mt_0894e966542d79339886c9adebfc5f3b",
+        "sha256": "508f1f35bb1df2f7927d7dd9a989722d62b3f33289d3ca6530fc97258c40bdb2",
+        "sourcePath": "tasks/casey-down-b-v1/source.webp",
+        "referenceTaskId": "mt_ac0f6b55d9066a1841b4e1d3212df434"
+      }
+    },
+    "side": {
+      "stand": {
+        "requestId": "eff42b31-4366-41d8-89d0-a71228c964da",
+        "taskId": "mt_21103c218c0fedeaec69e2b406393515",
+        "sha256": "463e9e57ac071c295ece3a5e80199e5f34797ceb3322f060848e6e901a84ec15",
+        "sourcePath": "tasks/casey-left-stand-v1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "1bf9cfe8-0374-4ca2-84cc-d67982933fb1",
+        "taskId": "mt_d24056ddca070396554aa7f3874a3b67",
+        "sha256": "1e59d3feb0f433f0ff85a53b6bfc3e87ff3e39603c5ebc85f2a1e1c77de51bf0",
+        "sourcePath": "tasks/casey-left-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "ac52f57c-6e4d-4e56-bc7f-7c6a69161eb0",
+        "taskId": "mt_37b9d2f1694a5e724d7ac8ad88285bcd",
+        "sha256": "0de37b8da615c52f8c0fc1f160fe6903c18d89c3dfeee788a8134b106a7bbbfc",
+        "sourcePath": "tasks/casey-left-b-v1/source.webp",
+        "referenceTaskId": "mt_d24056ddca070396554aa7f3874a3b67"
+      }
+    },
+    "up": {
+      "stand": {
+        "requestId": "cf9cc446-4082-43fd-81bd-4b66fff84e47",
+        "taskId": "mt_4fdf7c467f53b168dfc4993c8553a5f8",
+        "sha256": "73fe641f8f16834d4ba35ac4b46a0e02f23e9e5fd6a1bdf1a75824b84ab3d2c8",
+        "sourcePath": "tasks/casey-up-stand-v1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "30b47abc-9251-4319-9d8e-2a13ae290eca",
+        "taskId": "mt_50e7b448ba16a43c9325b42bc8d9837c",
+        "sha256": "944c29f02652763e26cc1df1805a4991c1e01bf7c4808661a27b222538b9632c",
+        "sourcePath": "tasks/casey-up-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "97772e8f-b524-4a38-8fcc-0392ceaf922a",
+        "taskId": "mt_6f2d9691beb7ee811059ff4f12781315",
+        "sha256": "851bc3e8733126cc979e9d7c573b63c9701086e5a0377ab5a8b01abfed75b73a",
+        "sourcePath": "tasks/casey-up-b-v1/source.webp",
+        "referenceTaskId": "mt_50e7b448ba16a43c9325b42bc8d9837c"
+      }
+    }
+  },
+  "derivedDirection": {
+    "direction": "right",
+    "from": "side",
+    "transform": "mirror-full-frame"
+  },
+  "evidence": [
+    {
+      "viewport": "390x844",
+      "direction": "down",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/casey-walk/capture.json",
+      "videoPath": "evidence/casey-walk/7f1a89828dea3db716e349aee3194620.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "down",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/casey-walk/capture.json",
+      "videoPath": "evidence/casey-walk/8005af49c02edd8e22da6e8b18fb85cc.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "390x844",
+      "direction": "side",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/casey-walk/capture.json",
+      "videoPath": "evidence/casey-walk/7f1a89828dea3db716e349aee3194620.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "side",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/casey-walk/capture.json",
+      "videoPath": "evidence/casey-walk/8005af49c02edd8e22da6e8b18fb85cc.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "390x844",
+      "direction": "up",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/casey-walk/capture.json",
+      "videoPath": "evidence/casey-walk/7f1a89828dea3db716e349aee3194620.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "up",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/casey-walk/capture.json",
+      "videoPath": "evidence/casey-walk/8005af49c02edd8e22da6e8b18fb85cc.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    }
+  ]
+}

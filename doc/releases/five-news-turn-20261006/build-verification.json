@@ -1,0 +1,20 @@
+{
+  "sourceRelease": "harbor-five-news-turn-20261006",
+  "frontend": {
+    "script": "./assets/index-CmDQMX5w.js",
+    "scriptSHA256": "2f51d1ae33cf0eace18025205b2e630f4b44a9ec401b40e13adfb79eca745e92",
+    "css": "./assets/index-CYA_hn9o.css",
+    "cssSHA256": "78d3bda74609949a532f3e25e08f216952192a1279ec5708db2684bcc025ed8a"
+  },
+  "backendBundleSHA256": "21a43b25557f4d241d3eabbd6bd1f31a291efd36f06e793fd787c85b738b52a0",
+  "catalogSHA256": "56ce0e4f8b1264c6841b251a969407ab79dd342314a1939ff1379c3b5d7b32ab",
+  "noticeSHA256": "48f4ec94460aa1e95828d800daf83652e5fe47e2d85a5cf0c6a84d7723342475",
+  "consumptionPNGVerified": 15,
+  "UUIDUnchanged": true,
+  "storageScopePresent": true,
+  "unscopedStorageFindings": [],
+  "guestShellPresent": true,
+  "productionCredentialsScanned": true,
+  "actualPublish": false,
+  "normalPlatformEntry": "blocked current tools unavailable"
+}

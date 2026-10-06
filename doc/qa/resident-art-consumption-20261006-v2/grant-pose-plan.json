@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "status": "accepted",
+  "actorId": "grant",
+  "sourceService": "AlterU Media Service",
+  "generatedDirections": {
+    "down": {
+      "stand": {
+        "requestId": "c6b7a044-7fb7-448b-aad7-7ee55fe6970f",
+        "taskId": "mt_40e56eeef9899537f2f873b9c8df041e",
+        "sha256": "5d7006156b76a230ef8a158ff24912f5de0a5a14ed24315ca4010231974b853b",
+        "sourcePath": "tasks/grant-down-stand-v2/recovery-1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "c1bdca73-15e0-4f6e-bbf2-e0a16ef8f611",
+        "taskId": "mt_7ad7c1914a5e891267169f2ed2c6fd62",
+        "sha256": "0715b6ddab481a85fd8cd4bf64abfce78b9d9132988edf143fc126465af1b54e",
+        "sourcePath": "tasks/grant-down-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "309496b6-6ccd-4288-a7dc-614c30c03591",
+        "taskId": "mt_0677c6b3815658cec3c18e9bbaf0d1d9",
+        "sha256": "a42ef5d280cf6201d2656f781cae1a38e15e9b393def4a08d8b83c90f8a8bf7c",
+        "sourcePath": "tasks/grant-down-b-v1/source.webp",
+        "referenceTaskId": "mt_7ad7c1914a5e891267169f2ed2c6fd62"
+      }
+    },
+    "side": {
+      "stand": {
+        "requestId": "70f2ed34-77e9-4989-8ed9-a8c59408c873",
+        "taskId": "mt_9784722a63291d061d495c2e19c0a274",
+        "sha256": "bf45a2f8011300baebdca6a747b6308468a964739053c068cfe1893937d7a954",
+        "sourcePath": "tasks/grant-left-stand-v1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "9514cc24-aa08-4a50-b369-17170f2841ff",
+        "taskId": "mt_8cd178b4d3030eb8d16b719e4fdbbf0c",
+        "sha256": "e38620a0cf004a68da3f8717c9606d058d15fe7a5480efa11a3edacea30bd5e7",
+        "sourcePath": "tasks/grant-left-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "4ad7a4c8-c07b-4bdc-aac7-b159bbe69e95",
+        "taskId": "mt_88de14163b50633b00c3b145c135bbbf",
+        "sha256": "6dbe4b86a4a4ea805e29ea352803192bf209717649ddf3ef7c193dcf77aaa96d",
+        "sourcePath": "tasks/grant-left-b-v1/source.webp",
+        "referenceTaskId": "mt_8cd178b4d3030eb8d16b719e4fdbbf0c"
+      }
+    },
+    "up": {
+      "stand": {
+        "requestId": "e3f1f983-2753-4906-a72f-e1ba928fdf5c",
+        "taskId": "mt_9f80b63fcccbddaf4ee7565887117f63",
+        "sha256": "044025a802981f65c6327a9ab309136de3e84a138e94203f5ede41108b8ab597",
+        "sourcePath": "tasks/grant-up-stand-v1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "586bbfac-209e-42d8-bb53-66ef41f6afab",
+        "taskId": "mt_214f8ce5d5ceb709cf50faf7b035fe50",
+        "sha256": "f5a71d01c39b1dc93cff3d4ee7a481042bb5d6e694aacd9ec67d4b5f741915a2",
+        "sourcePath": "tasks/grant-up-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "c0f51818-9bf9-4764-b8f0-90d733ac3de6",
+        "taskId": "mt_6b81d32f6f71da201f52756df6069566",
+        "sha256": "b45b072d30ed55ec1e840a5006f9097a3bc5675f1e95da53d0f60913b76e51fe",
+        "sourcePath": "tasks/grant-up-b-v1/source.webp",
+        "referenceTaskId": "mt_214f8ce5d5ceb709cf50faf7b035fe50"
+      }
+    }
+  },
+  "derivedDirection": {
+    "direction": "right",
+    "from": "side",
+    "transform": "mirror-full-frame"
+  },
+  "evidence": [
+    {
+      "viewport": "390x844",
+      "direction": "down",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/grant-walk/capture.json",
+      "videoPath": "evidence/grant-walk/22b8f8435a75c44d6752ab0817284c01.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "down",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/grant-walk/capture.json",
+      "videoPath": "evidence/grant-walk/c7c7788743e3a8065ea8f1fca2e5df29.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "390x844",
+      "direction": "side",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/grant-walk/capture.json",
+      "videoPath": "evidence/grant-walk/22b8f8435a75c44d6752ab0817284c01.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "side",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/grant-walk/capture.json",
+      "videoPath": "evidence/grant-walk/c7c7788743e3a8065ea8f1fca2e5df29.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "390x844",
+      "direction": "up",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/grant-walk/capture.json",
+      "videoPath": "evidence/grant-walk/22b8f8435a75c44d6752ab0817284c01.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "up",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/grant-walk/capture.json",
+      "videoPath": "evidence/grant-walk/c7c7788743e3a8065ea8f1fca2e5df29.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    }
+  ]
+}

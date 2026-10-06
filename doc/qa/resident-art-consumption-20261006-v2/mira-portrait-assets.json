@@ -1,0 +1,268 @@
+{
+  "source": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/mira/portrait/source.webp",
+    "bytes": 815636,
+    "sha256": "46786b22e6d4b97bf48390ff5aa848dd984026e6308ed7919eae94d10a7958bb"
+  },
+  "sourceDimensions": [
+    1024,
+    1280
+  ],
+  "sourceCropBounds": [
+    0,
+    0,
+    1024,
+    1280
+  ],
+  "nativeCropDimensions": [
+    1024,
+    1280
+  ],
+  "nominalUniformNearestScale": 0.5,
+  "actualIntegerDimensionRatios": [
+    0.5,
+    0.5
+  ],
+  "dimensionRoundingErrorPixels": [
+    0.0,
+    0.0
+  ],
+  "consumerDimensions": [
+    512,
+    640
+  ],
+  "imageAnchorPx": [
+    251.5,
+    618.0
+  ],
+  "imageAnchorNormalized": [
+    0.4912109375,
+    0.965625
+  ],
+  "sourceGroundBaseline": 1236,
+  "groundX": 503.0,
+  "sourceSupportExtentX": [
+    430,
+    576
+  ],
+  "worldGeometryApproved": false,
+  "footprint": null,
+  "sourceProtectedCoreRGBSha256": "67f3322e383a021bc54c39c171a29982c58f73604341eb158547a34578c349de",
+  "nativeProtectedCoreRGBSha256": "67f3322e383a021bc54c39c171a29982c58f73604341eb158547a34578c349de",
+  "protectedCoreMaskSha256": "8d3796ce6875c3f06584e75d673a820033cb3ca9f5af5a11502e017a42357d48",
+  "protectedCorePixelCount": 288701,
+  "coreUnchanged": true,
+  "removedBackgroundPixelCount": 1012104,
+  "confirmedHoles": [
+    {
+      "seedXY": [
+        422,
+        119
+      ],
+      "pixels": 2,
+      "bbox": [
+        422,
+        119,
+        424,
+        120
+      ]
+    },
+    {
+      "seedXY": [
+        440,
+        161
+      ],
+      "pixels": 8,
+      "bbox": [
+        439,
+        161,
+        441,
+        167
+      ]
+    },
+    {
+      "seedXY": [
+        425,
+        375
+      ],
+      "pixels": 1258,
+      "bbox": [
+        411,
+        375,
+        438,
+        480
+      ]
+    },
+    {
+      "seedXY": [
+        566,
+        390
+      ],
+      "pixels": 716,
+      "bbox": [
+        560,
+        390,
+        582,
+        473
+      ]
+    },
+    {
+      "seedXY": [
+        583,
+        478
+      ],
+      "pixels": 1,
+      "bbox": [
+        583,
+        478,
+        584,
+        479
+      ]
+    },
+    {
+      "seedXY": [
+        409,
+        480
+      ],
+      "pixels": 3,
+      "bbox": [
+        409,
+        480,
+        410,
+        483
+      ]
+    },
+    {
+      "seedXY": [
+        381,
+        562
+      ],
+      "pixels": 12,
+      "bbox": [
+        381,
+        562,
+        383,
+        569
+      ]
+    },
+    {
+      "seedXY": [
+        378,
+        570
+      ],
+      "pixels": 124,
+      "bbox": [
+        370,
+        570,
+        381,
+        611
+      ]
+    },
+    {
+      "seedXY": [
+        654,
+        619
+      ],
+      "pixels": 7,
+      "bbox": [
+        653,
+        619,
+        655,
+        623
+      ]
+    },
+    {
+      "seedXY": [
+        359,
+        649
+      ],
+      "pixels": 42,
+      "bbox": [
+        358,
+        649,
+        361,
+        667
+      ]
+    },
+    {
+      "seedXY": [
+        632,
+        651
+      ],
+      "pixels": 19,
+      "bbox": [
+        631,
+        651,
+        633,
+        667
+      ]
+    },
+    {
+      "seedXY": [
+        361,
+        668
+      ],
+      "pixels": 1,
+      "bbox": [
+        361,
+        668,
+        362,
+        669
+      ]
+    }
+  ],
+  "edgeBandPixels": 9915,
+  "edgeModifiedPixels": 2173,
+  "edgeClearedPixels": 0,
+  "edgeWithoutCoreReference": 16,
+  "edgeSourcePixelWidth": 2,
+  "nearestSamplingVerified": true,
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 253039,
+  "partialAlphaPixels": 518,
+  "visibleStrongMagentaPixels": 0,
+  "status": "processed-local-candidate",
+  "humanApproved": false,
+  "sceneValidated": false,
+  "rights": "project-scope-applies-see-rights-record",
+  "registered": false,
+  "published": false,
+  "resident": "mira",
+  "component": "portrait",
+  "sourceTaskId": "mt_7252924f6161a433ac151ab4f67e2867",
+  "sourceRequestId": "b89556dd-1fb5-5630-b377-27bd12d8e232",
+  "sourceReuse": "historical independent identity-approved original, never failed atlas",
+  "parameters": {
+    "backgroundMinRed": 180,
+    "backgroundMinBlue": 180,
+    "backgroundMaxGreen": 110,
+    "backgroundMinMinRBMinusG": 80,
+    "edgeBandSourcePixels": 2,
+    "foregroundReferenceRadius": 7,
+    "matteFitMaximumResidual": 24,
+    "minimumMagentaExcessOverForeground": 20,
+    "cropPaddingSourcePixels": 1280,
+    "consumerMaximumSide": 640,
+    "resampling": "NEAREST"
+  },
+  "processingScriptSHA256": "281d4d3f4355b0f0cfe6ccad2ac7da4dbdcbab27fb54f9337dcbca8bf4f2884c",
+  "aiConfirmedHoleReview": "reviews/mira-portrait-holes.json",
+  "native": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/poses/mira/portrait-native.png",
+    "sha256": "3266ef4fcf3f5b5e25e3b962b33560cedbe66536c53add2dcbc969217a5197e2"
+  },
+  "consumer": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/mira-portrait.png",
+    "sha256": "1e451750a02ca39ef9f0d0f68af27f7acccaf1cff1461324a6755320e4244a5b",
+    "dimensions": [
+      512,
+      640
+    ]
+  },
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted"
+}

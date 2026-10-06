@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "at": "2026-10-05T19:45:05.385019+00:00",
+  "authority": "AI",
+  "decision": "pass",
+  "reason": "bob、针织毛衣、百褶裙、锈袜与低鞋跨向一致；A/B近腿大小/遮挡和摆臂共同换相，侧向鞋尖始终随身体，两腿无遮挡完整无反折。320/390原renderer各方向A/stand/B及停止stand均通过；尺寸透明边界与整帧镜像校验通过。",
+  "singleImages": "pass",
+  "familyDirectionsAndGait": "pass",
+  "isolatedTargetRenderer": "pass",
+  "geometryAndAlpha": "pass",
+  "rendererEvidence": [
+    "evidence/casey-walk/capture.json",
+    "evidence/casey-contact-sheet.png"
+  ],
+  "atlasSHA256": "63b66e28d3854c7b23d473552a68f34c42300eef17d5fb981fd4dd85dafcef13",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "humanOverride": null,
+  "realIPhone": false
+}

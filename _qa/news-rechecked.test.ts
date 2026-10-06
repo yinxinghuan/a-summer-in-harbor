@@ -1,0 +1,60 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash,randomUUID} from 'node:crypto';
+import {configuredNews} from '../server/news/configured';
+import {createRuntime} from '../server/runtime';
+import {entityAt} from '../src/world/data';
+
+const oldPath='doc/qa/real-news-20261005/catalog.json';
+const path='doc/qa/real-news-rechecked-20261006/catalog.json';
+const oldBytes=readFileSync(oldPath);
+const old=JSON.parse(oldBytes.toString());
+const refreshed=JSON.parse(readFileSync(path,'utf8'));
+
+test('identical official RSS recheck changes only checked time and expiry of the same story',()=>{
+ const receipt=JSON.parse(readFileSync('doc/qa/real-news-rechecked-20261006/receipt.json','utf8'));
+ const raw=readFileSync('doc/qa/real-news-rechecked-20261006/raw.xml');
+ assert.equal(createHash('sha256').update(raw).digest('hex'),receipt.responseSha256);
+ assert.equal(receipt.rawIdenticalToPriorSuccessfulFeed,true);
+ assert.equal(refreshed.records.length,old.records.length);
+ const {lastCheckedAt,expiresAt,...identity}=refreshed.records[0];
+ const {lastCheckedAt:oldChecked,expiresAt:oldExpiry,...oldIdentity}=old.records[0];
+ assert.deepEqual(identity,oldIdentity);
+ assert.equal(lastCheckedAt,receipt.fetchedAt);
+ assert.equal(refreshed.lastFetchAt,receipt.fetchedAt);
+ assert.equal(Date.parse(expiresAt),Date.parse(lastCheckedAt)+72*3600000);
+ assert.notEqual(lastCheckedAt,oldChecked);
+ assert.notEqual(expiresAt,oldExpiry);
+ assert.deepEqual(readFileSync(oldPath),oldBytes);
+});
+
+test('explicit new configuration extends verification without repinning an already-started story',async()=>{
+ const base=createRuntime();
+ assert.equal(configuredNews(base).runtime,base);
+ let now=Date.parse(old.records[0].expiresAt);
+ const oldConfig=configuredNews(base,oldPath,()=>now);
+ assert.equal(oldConfig.runtime.initial('en',randomUUID()).newsEdition,undefined);
+ const current=configuredNews(base,path,()=>now);
+ const unread={...current.runtime.initial('en',randomUUID()),scene:'garden',known:['dani'],position:entityAt('garden','dani')!.approach};
+ assert.equal(current.newsProject!(unread).newsAvailability,'current');
+ assert.equal(unread.newsEdition.publishedAt,'2026-09-16T18:00:00.000Z');
+ assert.equal(unread.newsEdition.fetchedAt,old.records[0].fetchedAt);
+ assert.equal(unread.newsEdition.lastCheckedAt,'2026-10-05T18:59:16.076Z');
+ const a={action_id:randomUUID(),expected_version:unread.version,scene:unread.scene,position:unread.position,target:'dani',action:'talk:visitor-news'};
+ const started=(await current.runtime.prepare(unread,a)).head;
+ const pinned=structuredClone(started.newsEdition);
+ now=Date.parse(refreshed.records[0].expiresAt)-1;
+ assert.equal(current.newsProject!(unread).newsAvailability,'current');
+ now++;
+ assert.equal(current.newsProject!(unread).newsAvailability,'expired');
+ assert.equal(current.runtime.initial('en',randomUUID()).newsEdition,undefined);
+ await assert.rejects(current.runtime.prepare(unread,{...a,action_id:randomUUID()}),/NEWS_SOURCE_UNAVAILABLE/);
+ const continued=(await current.runtime.prepare(started,{...a,action_id:randomUUID(),expected_version:started.version,action:'talk:visitor-test'})).head;
+ assert.deepEqual(continued.newsEdition,pinned);
+ assert.equal(continued.cash,unread.cash);
+ const oldStarted={...started,newsEdition:old.records[0]};
+ const oldContinued=(await current.runtime.prepare(oldStarted,{...a,action_id:randomUUID(),expected_version:oldStarted.version,action:'talk:visitor-test'})).head;
+ assert.deepEqual(oldContinued.newsEdition,old.records[0]);
+ assert.deepEqual(readFileSync(oldPath),oldBytes);
+});

@@ -1,0 +1,15 @@
+{
+  "source": "successful bounded ECS official RSS recheck; exact raw XML retained",
+  "classification": "rechecked-existing-facts-no-new-news",
+  "checkedAt": "2026-10-05T18:59:16.076Z",
+  "responseSha256": "6ef9f8ee2019c031b583ee3a64eec38170840e2ff4229ec92e43f49702857855",
+  "oldCatalogSha256": "925028e59d28e539a9d6870c69df520bf147ef03f7d85e3a44bfc19a773caecf",
+  "oldSnapshotUnchanged": true,
+  "recordPolicy": "retain original single admitted fact, id, revision, headline, source URL, original publication instant, first fetchedAt, legacy contentHash and finance-budget-v1; update lastCheckedAt/expiresAt plus catalog.lastFetchAt only",
+  "legacyContentHashBasis": "canonicalURL/title/publishedAt/publishedRaw only",
+  "currentParserHash": "d50cf0754e82b6baf8050d1b3de810001b21a3d96b17154a00ad87c91f5292ed",
+  "currentParserHashBasis": "title/description/publishedAt; separate evidence, not a new edition or factual change",
+  "runtimeDatasetDoesNotAddSecondEligibleItem": true,
+  "modelCalls": 0,
+  "newNetworkCallsDuringIntegration": 0
+}

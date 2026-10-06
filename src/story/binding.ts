@@ -29,7 +29,8 @@ export const spatialBinding=compileSpatialBinding({id:GAME_UUID,initialMap,chara
   position:rooms[e.destination!].entities.find(back=>back.destination===r.id)?.approach??rooms[e.destination!].spawn,
  }))),
 },(scene,p)=>walkable(world,scene,p));
-export const spatialSnapshot=(s:Save):SpatialSnapshot=>({cartridgeId:GAME_UUID,map:initialMap.map(r=>({id:r.id,current:r.id===s.scene})),characters:s.known.map(id=>({id}))});
+// A deferred resident can remain in an old save without belonging to this release's map.
+export const spatialSnapshot=(s:Save):SpatialSnapshot=>({cartridgeId:GAME_UUID,map:initialMap.map(r=>({id:r.id,current:r.id===s.scene})),characters:s.known.filter(id=>people[id]).map(id=>({id}))});
 export function admitSpatialAction(s:Save,a:Action){
  if(a.action.startsWith('battle-')||a.action==='snack-eat'||['travel-map','challenge-finish'].includes(a.action))return null; // domain-specific gates remain authoritative
  const e=rooms[s.scene].entities.find(e=>e.id===a.target);if(e&&!presentEntity(s,e))throw Error('PERSON_AWAY');

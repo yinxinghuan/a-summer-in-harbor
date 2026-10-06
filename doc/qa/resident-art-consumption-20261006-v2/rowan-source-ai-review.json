@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "at": "2026-10-05T19:11:03.982500+00:00",
+  "authority": "AI",
+  "decision": "pass",
+  "reason": "四方向接触A/站姿/B步幅自然，A/B支撑腿和反向摆臂可辨；侧向鞋尖一致、B近臂过围裙向前，整体镜像逐像素一致。紧凑大头与俯视帽冠、肩顶、鞋面符合最终英雄相机；320/390原renderer全部phase和停步复位通过，无跨格碎片。",
+  "singleImages": "pass",
+  "familyDirectionsAndGait": "pass",
+  "isolatedTargetRenderer": "pass",
+  "geometryAndAlpha": "pass",
+  "rendererEvidence": [
+    "evidence/rowan-walk/capture.json",
+    "evidence/rowan-contact-sheet.png"
+  ],
+  "atlasSHA256": "fc57b296b829e43a4d2d52d925d263e0d093ea882cba77911b814b0767e85b28",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "humanOverride": null,
+  "realIPhone": false
+}

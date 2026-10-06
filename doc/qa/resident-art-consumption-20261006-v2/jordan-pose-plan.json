@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "status": "accepted",
+  "actorId": "jordan",
+  "sourceService": "AlterU Media Service",
+  "generatedDirections": {
+    "down": {
+      "stand": {
+        "requestId": "e322e769-91d9-4860-b9ef-9088562c14ef",
+        "taskId": "mt_009d080a2f27a4fedc81591f36a37f41",
+        "sha256": "3ea9debff7d78399caa765528d7a0493fe8cdd59a2dca565d6e6195a7b3c5b33",
+        "sourcePath": "tasks/jordan-down-stand-v1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "d88e9cc6-8b59-479c-aebc-e89daaa936b8",
+        "taskId": "mt_0fda475195ae43e06a009f6dd95ec9b9",
+        "sha256": "e423921b4267099c533c329b674c0a5b4e8f12f1c523b2aca9d9c7c0ccb67d76",
+        "sourcePath": "tasks/jordan-down-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "28a61df7-2f8e-49f3-b9ac-e5d3849abd8d",
+        "taskId": "mt_ebb6b18360ec2c0f4e9448e6840d8e6e",
+        "sha256": "1437b0f3d8ebc7b1ba36be2e3fa69fe13bef6411165ddfe5473f14bfdebdde51",
+        "sourcePath": "tasks/jordan-down-b-v1/source.webp",
+        "referenceTaskId": "mt_0fda475195ae43e06a009f6dd95ec9b9"
+      }
+    },
+    "side": {
+      "stand": {
+        "requestId": "8d51074d-72f2-496d-aae9-09c96dccb1c2",
+        "taskId": "mt_2bb5b683698bf6cccc973809338c9cf2",
+        "sha256": "e54fa53ad51cca8ab6c8447882e0807d39a287309e89ba29498d932944c1adc3",
+        "sourcePath": "tasks/jordan-left-stand-v1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "5202eadf-e7f1-475d-b7f2-c9d945e5a25c",
+        "taskId": "mt_bb780359ee9d5708fd0c50c7f3ee0ff7",
+        "sha256": "25d39e40dc9e9f6caf6c6b48e52dcc9986ea6d8853a04f2fc7e7f6f0694da072",
+        "sourcePath": "tasks/jordan-left-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "d6b80763-847e-447a-8695-b62eacc50418",
+        "taskId": "mt_773da2aa5834ed3e8684af8a1eb6bdf9",
+        "sha256": "b579f1b300655d6a127ff5046f19d6019d18e0952b8cc6e5373886038dd676ea",
+        "sourcePath": "tasks/jordan-left-b-v1/source.webp",
+        "referenceTaskId": "mt_bb780359ee9d5708fd0c50c7f3ee0ff7"
+      }
+    },
+    "up": {
+      "stand": {
+        "requestId": "52624352-2ba4-40da-aa17-29a1773b6890",
+        "taskId": "mt_6a55217bbffc86c2764d915767af5ef9",
+        "sha256": "91fd7c678135f4c58c2b83919f646a20f7ca37f43efe3275ae7163457e67800a",
+        "sourcePath": "tasks/jordan-up-stand-v1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "e0918a28-32d2-41d6-bb8e-29627361f4b0",
+        "taskId": "mt_f71b862ecbb463e01ed4ec38a6feeddd",
+        "sha256": "2d23a9d64f060aae4986805bd5ce968746b23dff7229a3ef5d42b4bcb9bac082",
+        "sourcePath": "tasks/jordan-up-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "eef6f583-60ba-43f4-bec1-b7dd0625247b",
+        "taskId": "mt_8795f3a49505547a74c1f2bed518340e",
+        "sha256": "f6aa2e3576ba95a89b9b72c9c06ac3570986b14da69fc46110ca1ca22c1d2992",
+        "sourcePath": "tasks/jordan-up-b-v1/source.webp",
+        "referenceTaskId": "mt_f71b862ecbb463e01ed4ec38a6feeddd"
+      }
+    }
+  },
+  "derivedDirection": {
+    "direction": "right",
+    "from": "side",
+    "transform": "mirror-full-frame"
+  },
+  "evidence": [
+    {
+      "viewport": "390x844",
+      "direction": "down",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/jordan-walk/capture.json",
+      "videoPath": "evidence/jordan-walk/9fc320d8c326e1c0517cfafe450b2da8.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "down",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/jordan-walk/capture.json",
+      "videoPath": "evidence/jordan-walk/d09da42dca138ba894164212ce028869.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "390x844",
+      "direction": "side",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/jordan-walk/capture.json",
+      "videoPath": "evidence/jordan-walk/9fc320d8c326e1c0517cfafe450b2da8.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "side",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/jordan-walk/capture.json",
+      "videoPath": "evidence/jordan-walk/d09da42dca138ba894164212ce028869.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "390x844",
+      "direction": "up",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/jordan-walk/capture.json",
+      "videoPath": "evidence/jordan-walk/9fc320d8c326e1c0517cfafe450b2da8.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "up",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/jordan-walk/capture.json",
+      "videoPath": "evidence/jordan-walk/d09da42dca138ba894164212ce028869.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    }
+  ]
+}

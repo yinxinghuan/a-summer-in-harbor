@@ -172,3 +172,19 @@ src/world/planting.ts在organizeDailyLife之后添加/替换植物；_qa/plantin
 - 本地测试入口`_qa/next-batch-server.ts`、`_qa/next-batch-vite.mjs`只监听5331/5330。可在`/qa/start`创建合成测试旅程；不应部署QA服务。免费问答使用本地固定回复，不调用模型。
 
 证据与限制见`doc/qa/next-batch-20261005/README.md`。未发布，未新增付费生成，未变更生产账号存档；临时前端ID身份的既有安全局限不变。
+
+## 2026-10-06 本地收口增量
+
+`src/main.tsx`保留封存的柜台描述去重修复，并区分菜单即时切磋和回合练习说明；`src/ui/TurnBattle.tsx`首屏使用短指引，展开区保留归零和回拳馆续局说明。无新规则、数据库DDL、身份合同或新闻采集器。`_qa/news-configured.test.ts`注入测试时钟证明到期前1毫秒可开始、准确到期阻止未读、已开始可继续完成，同一冻结文件和日期不变。
+
+本轮以12ef2cf为固定基础，增量patch包含原先未提交的柜台修复一次，不能再叠加旧patch。12项新闻/回合定向测试与1项HTTP账号新闻测试通过；历史137项仅为交接证据，不重复宣称为新整批结果。Vite构建、UI静态检查、公开凭据和API路径检查通过。普通浏览器本地fixture不证明Telegram账号绑定；详情、可复现基础和限制见`qa/takeover-closeout-20261006/README.md`。
+
+
+### 2026-10-06 本地后续差量
+本地next-batch QA明确采用doc/qa/real-news-rechecked-20261006/catalog.json；仅更新同一事实核对/有效期，首次抓取及原发布时间保持。生产仍是显式HARBOR_NEWS_CATALOG opt-in。Rowan.mapArt独立绑定合格动作图集；资料图art仍为显式QA占位，完整UI消费图未准入。详情doc/qa/rowan-local-integration-20261006/README.md。未发布。
+
+### 2026-10-06 组件分别消费，五地图/十二资料图
+nextPeople现在分别转发art（既有root-v2肖像路径）、avatarArt（关系列表256方头像）、mapArt（NPC图集）。六人art/avatarArt绑定独立身份；五人mapArt绑定独立图集，Mira.mapArt沿旧占位，避免资料通过导致请求不存在的地图PNG。原13人fallback不变。NPC anchor[.5,122/128]、scale56/108、偏移0/0和16 phase/方向合同保留；英雄8/12偏移不抄给NPC。17消费PNG源/候选/dist SHA及57固定原件映射核对，11项居民/关系测试和最终build通过。当前仅本地合成账号UI，无iPhone或正式平台本批验证。
+
+## 2026-10-06 五居民／新闻／回合发布候选（覆盖前述本地六人状态）
+`nextResidents`只将五位已准入居民投影为 playable people/routes/topics，18人总数。Mira JSON及既有存档known/关系/历史/事实原样保留，dialogueContext和spatialSnapshot只投影当前存在人物，未做迁移或删除。暂停回合、作物与旧新闻pin在真实SQLite重开、CAS和重放下验证。冻结复核目录完整复制至server/news/frozen-catalog-20261006.json，bundler复制到dist-server/news，部署明确设HARBOR_NEWS_CATALOG；无采集器。最后复核2026-10-05T18:59:16.076Z，到期2026-10-08T18:59:16.076Z，原发布2026-09-16T18:00:00.000Z。release marker=harbor-five-news-turn-20261006，同源health新增sourceRelease。具体验证与实际部署状态见releases/five-news-turn-20261006/README.md，不能将候选构建当线上成功。

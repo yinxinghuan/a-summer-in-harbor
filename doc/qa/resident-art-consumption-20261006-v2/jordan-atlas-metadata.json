@@ -1,0 +1,644 @@
+{
+  "residentId": "jordan",
+  "atlas": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/jordan.png",
+    "sha256": "8beef34c8b406b7dc61ecea550acbb46f95edbd8c325c14d921c3e6685e50b6c",
+    "dimensions": [
+      384,
+      512
+    ],
+    "grid": [
+      3,
+      4
+    ],
+    "cell": [
+      128,
+      128
+    ],
+    "rowOrder": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "columnOrder": [
+      "contactA",
+      "stand",
+      "contactB"
+    ],
+    "anchor": [
+      0.5,
+      0.953125
+    ],
+    "worldScale": 0.5185185185185185,
+    "visibleWorldHeight": 56
+  },
+  "frames": [
+    {
+      "direction": "down",
+      "pose": "a",
+      "row": 0,
+      "col": 0,
+      "taskKey": "jordan-down-a-v1",
+      "requestId": "d88e9cc6-8b59-479c-aebc-e89daaa936b8",
+      "taskId": "mt_0fda475195ae43e06a009f6dd95ec9b9",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-down-a-v1/source.webp",
+        "sha256": "e423921b4267099c533c329b674c0a5b4e8f12f1c523b2aca9d9c7c0ccb67d76",
+        "bytes": 643752,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        303,
+        128,
+        723,
+        904
+      ],
+      "uniformScale": 0.13917525773195877,
+      "visibleSize": [
+        58,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "3e7a505ee277821278a44b4a6b6fa8d47c6c020978ce0dc40e78ada7b778ffe9",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 850489,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "col": 1,
+      "taskKey": "jordan-down-stand-v1",
+      "requestId": "e322e769-91d9-4860-b9ef-9088562c14ef",
+      "taskId": "mt_009d080a2f27a4fedc81591f36a37f41",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-down-stand-v1/source.webp",
+        "sha256": "3ea9debff7d78399caa765528d7a0493fe8cdd59a2dca565d6e6195a7b3c5b33",
+        "bytes": 639296,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        296,
+        125,
+        724,
+        872
+      ],
+      "uniformScale": 0.14457831325301204,
+      "visibleSize": [
+        62,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "c2a0c42f6ebbfd5dfe125beb1f660fd8f6ce4070b01045377abd11583d91e297",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 842640,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "down",
+      "pose": "b",
+      "row": 0,
+      "col": 2,
+      "taskKey": "jordan-down-b-v1",
+      "requestId": "28a61df7-2f8e-49f3-b9ac-e5d3849abd8d",
+      "taskId": "mt_ebb6b18360ec2c0f4e9448e6840d8e6e",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-down-b-v1/source.webp",
+        "sha256": "1437b0f3d8ebc7b1ba36be2e3fa69fe13bef6411165ddfe5473f14bfdebdde51",
+        "bytes": 651330,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        287,
+        128,
+        707,
+        907
+      ],
+      "uniformScale": 0.1386392811296534,
+      "visibleSize": [
+        58,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "385ebe3440e984d6d1f89873c7e5beed8fab57056b2235d73f89ba505eb69d50",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 853947,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "a",
+      "row": 1,
+      "col": 0,
+      "taskKey": "jordan-left-a-v1",
+      "requestId": "5202eadf-e7f1-475d-b7f2-c9d945e5a25c",
+      "taskId": "mt_bb780359ee9d5708fd0c50c7f3ee0ff7",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-left-a-v1/source.webp",
+        "sha256": "25d39e40dc9e9f6caf6c6b48e52dcc9986ea6d8853a04f2fc7e7f6f0694da072",
+        "bytes": 619044,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        320,
+        145,
+        687,
+        852
+      ],
+      "uniformScale": 0.15275813295615276,
+      "visibleSize": [
+        56,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "85511935deb49e2f171427602402027e3d18d74f439be9120aab6586d960c454",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 871682,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "col": 1,
+      "taskKey": "jordan-left-stand-v1",
+      "requestId": "8d51074d-72f2-496d-aae9-09c96dccb1c2",
+      "taskId": "mt_2bb5b683698bf6cccc973809338c9cf2",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-left-stand-v1/source.webp",
+        "sha256": "e54fa53ad51cca8ab6c8447882e0807d39a287309e89ba29498d932944c1adc3",
+        "bytes": 609374,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        360,
+        177,
+        648,
+        869
+      ],
+      "uniformScale": 0.15606936416184972,
+      "visibleSize": [
+        45,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "a92c466b4b171598d6b034af6d3b1bdb2f95f6d3c35140e70a445d4cc84fcbed",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 896102,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "b",
+      "row": 1,
+      "col": 2,
+      "taskKey": "jordan-left-b-v1",
+      "requestId": "d6b80763-847e-447a-8695-b62eacc50418",
+      "taskId": "mt_773da2aa5834ed3e8684af8a1eb6bdf9",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-left-b-v1/source.webp",
+        "sha256": "b579f1b300655d6a127ff5046f19d6019d18e0952b8cc6e5373886038dd676ea",
+        "bytes": 625112,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        315,
+        145,
+        696,
+        850
+      ],
+      "uniformScale": 0.15319148936170213,
+      "visibleSize": [
+        58,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "0e2bff933f4e71d20639c964e515df10b40112e89423400932a1a2bc3bb16670",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 879157,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "a",
+      "row": 2,
+      "col": 0,
+      "taskKey": "jordan-left-a-v1",
+      "requestId": "5202eadf-e7f1-475d-b7f2-c9d945e5a25c",
+      "taskId": "mt_bb780359ee9d5708fd0c50c7f3ee0ff7",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-left-a-v1/source.webp",
+        "sha256": "25d39e40dc9e9f6caf6c6b48e52dcc9986ea6d8853a04f2fc7e7f6f0694da072",
+        "bytes": 619044,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        320,
+        145,
+        687,
+        852
+      ],
+      "uniformScale": 0.15275813295615276,
+      "visibleSize": [
+        56,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "4c54cadb9733fdc9c6a787648ea72253976a7a5961cf3669798f2ff24f043ae6",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 871682,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "col": 1,
+      "taskKey": "jordan-left-stand-v1",
+      "requestId": "8d51074d-72f2-496d-aae9-09c96dccb1c2",
+      "taskId": "mt_2bb5b683698bf6cccc973809338c9cf2",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-left-stand-v1/source.webp",
+        "sha256": "e54fa53ad51cca8ab6c8447882e0807d39a287309e89ba29498d932944c1adc3",
+        "bytes": 609374,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        360,
+        177,
+        648,
+        869
+      ],
+      "uniformScale": 0.15606936416184972,
+      "visibleSize": [
+        45,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "6ad4f9074b2dd9bf1365184dfe25d6510ad461a70622f0740d6a259884df768e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 896102,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "b",
+      "row": 2,
+      "col": 2,
+      "taskKey": "jordan-left-b-v1",
+      "requestId": "d6b80763-847e-447a-8695-b62eacc50418",
+      "taskId": "mt_773da2aa5834ed3e8684af8a1eb6bdf9",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-left-b-v1/source.webp",
+        "sha256": "b579f1b300655d6a127ff5046f19d6019d18e0952b8cc6e5373886038dd676ea",
+        "bytes": 625112,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        315,
+        145,
+        696,
+        850
+      ],
+      "uniformScale": 0.15319148936170213,
+      "visibleSize": [
+        58,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "f933710cdef38fe20b547542f47569f674f4950244e81d94675c27108e767360",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 879157,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "a",
+      "row": 3,
+      "col": 0,
+      "taskKey": "jordan-up-a-v1",
+      "requestId": "e0918a28-32d2-41d6-bb8e-29627361f4b0",
+      "taskId": "mt_f71b862ecbb463e01ed4ec38a6feeddd",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-up-a-v1/source.webp",
+        "sha256": "2d23a9d64f060aae4986805bd5ce968746b23dff7229a3ef5d42b4bcb9bac082",
+        "bytes": 610520,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        320,
+        140,
+        683,
+        847
+      ],
+      "uniformScale": 0.15275813295615276,
+      "visibleSize": [
+        55,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "3885e7616b06315ef3991c04c2146efc4b19b70de10c8c28bcd830556b4c02ec",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 894315,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "col": 1,
+      "taskKey": "jordan-up-stand-v1",
+      "requestId": "52624352-2ba4-40da-aa17-29a1773b6890",
+      "taskId": "mt_6a55217bbffc86c2764d915767af5ef9",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-up-stand-v1/source.webp",
+        "sha256": "91fd7c678135f4c58c2b83919f646a20f7ca37f43efe3275ae7163457e67800a",
+        "bytes": 628744,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        314,
+        153,
+        709,
+        850
+      ],
+      "uniformScale": 0.15494978479196556,
+      "visibleSize": [
+        61,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "19431ea27868785ee0323878af3c08dcacf7bc1617d67b2e579e5bc24e35e184",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 873428,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "b",
+      "row": 3,
+      "col": 2,
+      "taskKey": "jordan-up-b-v1",
+      "requestId": "eef6f583-60ba-43f4-bec1-b7dd0625247b",
+      "taskId": "mt_8795f3a49505547a74c1f2bed518340e",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/jordan-up-b-v1/source.webp",
+        "sha256": "f6aa2e3576ba95a89b9b72c9c06ac3570986b14da69fc46110ca1ca22c1d2992",
+        "bytes": 616866,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        328,
+        139,
+        689,
+        848
+      ],
+      "uniformScale": 0.152327221438646,
+      "visibleSize": [
+        55,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "c60e25697d3f6ec58fc885a53f71949dc4a869321e9467f0e1e638d67495f749",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 896401,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    }
+  ],
+  "complete": true,
+  "processing": "existing Harbor strong-magenta key, full-body tight crop, uniform nearest resampling, foot-bottom alignment, whole side frame mirror; no limb editing/repainting",
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "published": false
+}

@@ -1,0 +1,8 @@
+{
+  "oldPid": 78995,
+  "signal": "SIGTERM",
+  "oldCommand": "node --import tsx _qa/next-batch-server.ts",
+  "cwd": "/private/tmp/harbor-next-20261005",
+  "closedLoopbackPort": true,
+  "scope": "only owned candidate synthetic QA API5331; no production/browser/PG/other service signal"
+}

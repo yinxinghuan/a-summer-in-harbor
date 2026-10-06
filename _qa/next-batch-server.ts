@@ -8,11 +8,12 @@ import {createApiHandler,json} from '../server/http';import {createRuntime} from
 import {AsyncSessionAuthority,openAsyncSqliteAuthorityStore} from '../vendor/dynamic-runtime/packages/authority-session/async.mjs';
 mkdirSync('.data',{recursive:true});const store=openAsyncSqliteAuthorityStore({path:'.data/next-batch-qa.sqlite',worldId:'residents-qa',gameId:'residents-qa'});
 const contexts:any[]=[];const runtime=createRuntime(async(s,a)=>{contexts.push(dialogueContext(s,entityAt(s.scene,a.target)!.person!));return {topic:null,reply:['这是本地测试回复，已收到当前小镇生活记录。','This local test reply received the current town-life context.']}});
-const catalogPath=process.env.HARBOR_LOCAL_NEWS_CATALOG;const catalog=()=>catalogPath?JSON.parse(readFileSync(catalogPath,'utf8')):{schema:1,records:[]};const newsRuntime=withNewsRuntime(runtime,catalog);
+const catalogPath=process.env.HARBOR_LOCAL_NEWS_CATALOG??'doc/qa/real-news-rechecked-20261006/catalog.json';const catalog=()=>catalogPath?JSON.parse(readFileSync(catalogPath,'utf8')):{schema:1,records:[]};const newsRuntime=withNewsRuntime(runtime,catalog);
 const auth=new AsyncSessionAuthority(store,catalogPath?newsRuntime:runtime);const api=createApiHandler({authority:auth,newsProject:(s:Save)=>projectNews(s,catalog()),usage:{status:async()=>({resetAt:0,dialogue:{remaining:0,maximum:0,retryAt:null,pending:0}}),reserve:async()=>{},settle:async()=>{}},noteMedia:{}});
 const cases:Record<string,Partial<Save>>={
  'turn-training':{scene:'gym',position:entityAt('gym','idris')!.approach,known:['idris'],flags:['key','unpacked','market-known','battle:class:accepted'],items:{key:1,'packed-snack':2}},
  'six-residents':{scene:'market',position:entityAt('market','rowan')!.approach,known:['rowan'],flags:['key','unpacked','bag-returned']},
+ 'six-profile-review':{scene:'market',position:entityAt('market','rowan')!.approach,known:['rowan','jordan','leila','casey','grant'],flags:['key','unpacked','bag-returned']},
 
  'night-door':{scene:'station',townMinutes:1300,position:rooms.station.entities.find(e=>e.destination==='cafe')!.approach,flags:['key','unpacked','bag-returned']},
  'news':{scene:'garden',townMinutes:540,position:entityAt('garden','dani')!.approach,known:['dani']},

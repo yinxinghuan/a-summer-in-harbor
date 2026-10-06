@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "authority": "AI",
+  "decision": "pass",
+  "at": "2026-10-05T19:39:06.383977+00:00",
+  "scope": "processed individual consumer identity/alpha/edges; map family and actual owner UI admission separate",
+  "reason": "固定原件身份、服装与用户冻结要求一致；marked-hole诊断及海湾浅/深/绿背景处理图复查，没有可见品红孔洞、边缘显著色污或剪掉人物。0强品红、opaque core RGB不变、nearest采样验证。",
+  "evidence": [
+    "evidence/profiles-all-dark-review.png",
+    "evidence/jordan-portrait-matte-review.png",
+    "assets/jordan-portrait.json"
+  ],
+  "sourceSHA256": "3df39a818b5e90d77bddcfecd2e73c3a864db2d855619a8b0aa96f38a68be5cb",
+  "consumerSHA256": "9d85c837d13d47bcbcc2e515fcc968d56a38cfc111b466cb34afa6234f20790f",
+  "humanOverride": null,
+  "actualGameIntegration": "owner pending"
+}

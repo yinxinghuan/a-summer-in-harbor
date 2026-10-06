@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "at": "2026-10-05T19:41:29.088569+00:00",
+  "authority": "AI",
+  "decision": "pass",
+  "reason": "高髻、紫奶油运动服身份跨向一致；A/B反向摆臂与支撑腿清楚，侧向近腿遮挡交换、鞋尖与行进同向。大头短躯干与俯视顶面延续英雄风格。320/390原renderer全部phase及停步通过，整侧镜像逐像素一致，无跨格碎片。",
+  "singleImages": "pass",
+  "familyDirectionsAndGait": "pass",
+  "isolatedTargetRenderer": "pass",
+  "geometryAndAlpha": "pass",
+  "rendererEvidence": [
+    "evidence/leila-walk/capture.json",
+    "evidence/leila-contact-sheet.png"
+  ],
+  "atlasSHA256": "d9f514c3b986d8458b1ea3952f56766cd1c0aef13229285aa4f344c7bd47e3d4",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "humanOverride": null,
+  "realIPhone": false
+}

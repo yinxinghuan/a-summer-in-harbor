@@ -1,0 +1,242 @@
+{
+  "source": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/casey/avatar/source.webp",
+    "bytes": 814908,
+    "sha256": "fe1c50b9fb8e5230b15937777362f0d2f77fc00ce13aa627699e01ede7e3cb6e"
+  },
+  "sourceDimensions": [
+    1024,
+    1024
+  ],
+  "sourceCropBounds": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "nativeCropDimensions": [
+    1024,
+    1024
+  ],
+  "nominalUniformNearestScale": 0.25,
+  "actualIntegerDimensionRatios": [
+    0.25,
+    0.25
+  ],
+  "dimensionRoundingErrorPixels": [
+    0.0,
+    0.0
+  ],
+  "consumerDimensions": [
+    256,
+    256
+  ],
+  "imageAnchorPx": [
+    128.0,
+    256.0
+  ],
+  "imageAnchorNormalized": [
+    0.5,
+    1.0
+  ],
+  "sourceGroundBaseline": 1024,
+  "groundX": 512.0,
+  "sourceSupportExtentX": [
+    64,
+    960
+  ],
+  "worldGeometryApproved": false,
+  "footprint": null,
+  "sourceProtectedCoreRGBSha256": "c19870b8bf488d01a13fbd65d6ac56f1232943ebb432deed0234ecc92b02a244",
+  "nativeProtectedCoreRGBSha256": "c19870b8bf488d01a13fbd65d6ac56f1232943ebb432deed0234ecc92b02a244",
+  "protectedCoreMaskSha256": "d2bb926b4ba979a65b83dd38f642c3d51db9c040e1b80c3ed19cfe3d6adafe55",
+  "protectedCorePixelCount": 512244,
+  "coreUnchanged": true,
+  "removedBackgroundPixelCount": 526278,
+  "confirmedHoles": [
+    {
+      "seedXY": [
+        757,
+        389
+      ],
+      "pixels": 55,
+      "bbox": [
+        757,
+        389,
+        761,
+        406
+      ]
+    },
+    {
+      "seedXY": [
+        251,
+        391
+      ],
+      "pixels": 25,
+      "bbox": [
+        251,
+        391,
+        255,
+        398
+      ]
+    },
+    {
+      "seedXY": [
+        246,
+        401
+      ],
+      "pixels": 1477,
+      "bbox": [
+        221,
+        401,
+        251,
+        545
+      ]
+    },
+    {
+      "seedXY": [
+        760,
+        408
+      ],
+      "pixels": 1149,
+      "bbox": [
+        760,
+        408,
+        786,
+        544
+      ]
+    },
+    {
+      "seedXY": [
+        750,
+        551
+      ],
+      "pixels": 96,
+      "bbox": [
+        750,
+        551,
+        754,
+        575
+      ]
+    },
+    {
+      "seedXY": [
+        363,
+        601
+      ],
+      "pixels": 47,
+      "bbox": [
+        363,
+        601,
+        368,
+        611
+      ]
+    },
+    {
+      "seedXY": [
+        418,
+        606
+      ],
+      "pixels": 15,
+      "bbox": [
+        418,
+        606,
+        421,
+        611
+      ]
+    },
+    {
+      "seedXY": [
+        368,
+        611
+      ],
+      "pixels": 20,
+      "bbox": [
+        368,
+        611,
+        373,
+        615
+      ]
+    },
+    {
+      "seedXY": [
+        393,
+        611
+      ],
+      "pixels": 6,
+      "bbox": [
+        393,
+        611,
+        395,
+        615
+      ]
+    },
+    {
+      "seedXY": [
+        635,
+        611
+      ],
+      "pixels": 16,
+      "bbox": [
+        635,
+        611,
+        639,
+        615
+      ]
+    }
+  ],
+  "edgeBandPixels": 10054,
+  "edgeModifiedPixels": 2510,
+  "edgeClearedPixels": 0,
+  "edgeWithoutCoreReference": 32,
+  "edgeSourcePixelWidth": 2,
+  "nearestSamplingVerified": true,
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 32846,
+  "partialAlphaPixels": 203,
+  "visibleStrongMagentaPixels": 0,
+  "status": "processed-local-candidate",
+  "humanApproved": false,
+  "sceneValidated": false,
+  "rights": "project-scope-applies-see-rights-record",
+  "registered": false,
+  "published": false,
+  "resident": "casey",
+  "component": "avatar",
+  "sourceTaskId": "mt_33468c66239f19cd321edac0803eec88",
+  "sourceRequestId": "c8b8fee0-df72-5ba3-8f79-b7c46f75a333",
+  "sourceReuse": "historical independent identity-approved original, never failed atlas",
+  "parameters": {
+    "backgroundMinRed": 180,
+    "backgroundMinBlue": 180,
+    "backgroundMaxGreen": 110,
+    "backgroundMinMinRBMinusG": 80,
+    "edgeBandSourcePixels": 2,
+    "foregroundReferenceRadius": 7,
+    "matteFitMaximumResidual": 24,
+    "minimumMagentaExcessOverForeground": 20,
+    "cropPaddingSourcePixels": 1280,
+    "consumerMaximumSide": 256,
+    "resampling": "NEAREST"
+  },
+  "processingScriptSHA256": "281d4d3f4355b0f0cfe6ccad2ac7da4dbdcbab27fb54f9337dcbca8bf4f2884c",
+  "aiConfirmedHoleReview": "reviews/casey-avatar-holes.json",
+  "native": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/poses/casey/avatar-native.png",
+    "sha256": "9d1c9168471c2c2d10e47dbb18c882246c5f561d8255175327812eff6276095c"
+  },
+  "consumer": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/casey-avatar.png",
+    "sha256": "66841e539a7815f11c8f1e475d2420955ec33be1576cfa11f18da2f177a4961e",
+    "dimensions": [
+      256,
+      256
+    ]
+  },
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted"
+}

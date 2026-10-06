@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "recordedByThread": "01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "basis": "User approval relayed by 小小银 under CORE_RULES; preserved from delegated parent handoff, not a direct user message in this thread",
+  "proposal": {
+    "messageId": "Sentinel_06be933580f4819183daf62cff4da3af",
+    "timestampUTC": "2026-10-05T20:00:59.168804Z",
+    "scope": "Publish five ready residents / 18 total, defer Mira map, include completed frozen news and turn-based functions"
+  },
+  "approval": {
+    "messageId": "Sentinel_ac65b5326b008191b70f0052f184073e",
+    "timestampUTC": "2026-10-06T03:17:49.315360Z",
+    "text": "同意",
+    "verifiedAndRelayedByParent": "01a0f63e-747b-74c8-a592-bb52c77c2017"
+  },
+  "allowed": [
+    "five resident publish",
+    "frozen official-news edition",
+    "completed turn-based training/rehearsal",
+    "existing same-UUID official backend/frontend plus Pages workflow",
+    "targeted checks",
+    "existing save preservation"
+  ],
+  "excluded": [
+    "Mira map publish",
+    "new image POST",
+    "new auth scheme",
+    "second shared backend or database",
+    "original player save manipulation",
+    "library mutation",
+    "phase two development"
+  ],
+  "requiredBeforeExposure": [
+    "targeted tests/build/save compatibility",
+    "normal existing AlterU Published→Play read-only entry verification"
+  ],
+  "normalEntryStatus": "blocked: no CUA/Telegram tools in current execution tool catalog; parent result requested; prior known independent QA proof retained"
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "authority": "AI",
+  "decision": "pass",
+  "at": "2026-10-05T19:39:06.385942+00:00",
+  "scope": "processed individual consumer identity/alpha/edges; map family and actual owner UI admission separate",
+  "reason": "固定原件身份、服装与用户冻结要求一致；marked-hole诊断及海湾浅/深/绿背景处理图复查，没有可见品红孔洞、边缘显著色污或剪掉人物。0强品红、opaque core RGB不变、nearest采样验证。",
+  "evidence": [
+    "evidence/profiles-all-dark-review.png",
+    "evidence/casey-avatar-matte-review.png",
+    "assets/casey-avatar.json"
+  ],
+  "sourceSHA256": "fe1c50b9fb8e5230b15937777362f0d2f77fc00ce13aa627699e01ede7e3cb6e",
+  "consumerSHA256": "66841e539a7815f11c8f1e475d2420955ec33be1576cfa11f18da2f177a4961e",
+  "humanOverride": null,
+  "actualGameIntegration": "owner pending"
+}

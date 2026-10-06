@@ -1,0 +1,1886 @@
+{
+  "people": 19,
+  "newResidents": 6,
+  "mapFamilies": 5,
+  "profileImages": 12,
+  "checks": [
+    {
+      "who": "rowan",
+      "portrait": "rowan",
+      "avatar": "rowan",
+      "map": "rowan",
+      "mapAIAdmitted": true,
+      "phaseDirectionChecks": [
+        {
+          "name": "stand",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "down",
+          "frame": {
+            "frameX": 0,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "left",
+          "frame": {
+            "frameX": 0,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "right",
+          "frame": {
+            "frameX": 0,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "up",
+          "frame": {
+            "frameX": 0,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "down",
+          "frame": {
+            "frameX": 2,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "left",
+          "frame": {
+            "frameX": 2,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "right",
+          "frame": {
+            "frameX": 2,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "up",
+          "frame": {
+            "frameX": 2,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "who": "mira",
+      "portrait": "mira",
+      "avatar": "mira",
+      "map": "dani",
+      "mapAIAdmitted": false,
+      "phaseDirectionChecks": [
+        {
+          "name": "stand",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "down",
+          "frame": {
+            "frameX": 0,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "left",
+          "frame": {
+            "frameX": 0,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "right",
+          "frame": {
+            "frameX": 0,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "up",
+          "frame": {
+            "frameX": 0,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "down",
+          "frame": {
+            "frameX": 2,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "left",
+          "frame": {
+            "frameX": 2,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "right",
+          "frame": {
+            "frameX": 2,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "up",
+          "frame": {
+            "frameX": 2,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "who": "jordan",
+      "portrait": "jordan",
+      "avatar": "jordan",
+      "map": "jordan",
+      "mapAIAdmitted": true,
+      "phaseDirectionChecks": [
+        {
+          "name": "stand",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "down",
+          "frame": {
+            "frameX": 0,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "left",
+          "frame": {
+            "frameX": 0,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "right",
+          "frame": {
+            "frameX": 0,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "up",
+          "frame": {
+            "frameX": 0,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "down",
+          "frame": {
+            "frameX": 2,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "left",
+          "frame": {
+            "frameX": 2,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "right",
+          "frame": {
+            "frameX": 2,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "up",
+          "frame": {
+            "frameX": 2,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "who": "leila",
+      "portrait": "leila",
+      "avatar": "leila",
+      "map": "leila",
+      "mapAIAdmitted": true,
+      "phaseDirectionChecks": [
+        {
+          "name": "stand",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "down",
+          "frame": {
+            "frameX": 0,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "left",
+          "frame": {
+            "frameX": 0,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "right",
+          "frame": {
+            "frameX": 0,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "up",
+          "frame": {
+            "frameX": 0,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "down",
+          "frame": {
+            "frameX": 2,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "left",
+          "frame": {
+            "frameX": 2,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "right",
+          "frame": {
+            "frameX": 2,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "up",
+          "frame": {
+            "frameX": 2,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "who": "casey",
+      "portrait": "casey",
+      "avatar": "casey",
+      "map": "casey",
+      "mapAIAdmitted": true,
+      "phaseDirectionChecks": [
+        {
+          "name": "stand",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "down",
+          "frame": {
+            "frameX": 0,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "left",
+          "frame": {
+            "frameX": 0,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "right",
+          "frame": {
+            "frameX": 0,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "up",
+          "frame": {
+            "frameX": 0,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "down",
+          "frame": {
+            "frameX": 2,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "left",
+          "frame": {
+            "frameX": 2,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "right",
+          "frame": {
+            "frameX": 2,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "up",
+          "frame": {
+            "frameX": 2,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "who": "grant",
+      "portrait": "grant",
+      "avatar": "grant",
+      "map": "grant",
+      "mapAIAdmitted": true,
+      "phaseDirectionChecks": [
+        {
+          "name": "stand",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stand",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "down",
+          "frame": {
+            "frameX": 0,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "left",
+          "frame": {
+            "frameX": 0,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "right",
+          "frame": {
+            "frameX": 0,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-0",
+          "direction": "up",
+          "frame": {
+            "frameX": 0,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "down",
+          "frame": {
+            "frameX": 1,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "left",
+          "frame": {
+            "frameX": 1,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "right",
+          "frame": {
+            "frameX": 1,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-1",
+          "direction": "up",
+          "frame": {
+            "frameX": 1,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "down",
+          "frame": {
+            "frameX": 2,
+            "frameY": 0,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "left",
+          "frame": {
+            "frameX": 2,
+            "frameY": 1,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "right",
+          "frame": {
+            "frameX": 2,
+            "frameY": 2,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "stride-2",
+          "direction": "up",
+          "frame": {
+            "frameX": 2,
+            "frameY": 3,
+            "time": 0,
+            "anchor": [
+              0.5,
+              0.953125
+            ],
+            "scale": [
+              0.5185185185185185,
+              0.5185185185185185
+            ],
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    }
+  ]
+}

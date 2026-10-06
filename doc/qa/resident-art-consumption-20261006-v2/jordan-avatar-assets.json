@@ -1,0 +1,111 @@
+{
+  "source": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/jordan/avatar/source.webp",
+    "bytes": 733384,
+    "sha256": "438542df744d551fffa667eb5579b7a2d9ce50150bd7cc04f2a6e6f2ece72671"
+  },
+  "sourceDimensions": [
+    1024,
+    1024
+  ],
+  "sourceCropBounds": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "nativeCropDimensions": [
+    1024,
+    1024
+  ],
+  "nominalUniformNearestScale": 0.25,
+  "actualIntegerDimensionRatios": [
+    0.25,
+    0.25
+  ],
+  "dimensionRoundingErrorPixels": [
+    0.0,
+    0.0
+  ],
+  "consumerDimensions": [
+    256,
+    256
+  ],
+  "imageAnchorPx": [
+    128.0,
+    256.0
+  ],
+  "imageAnchorNormalized": [
+    0.5,
+    1.0
+  ],
+  "sourceGroundBaseline": 1024,
+  "groundX": 512.0,
+  "sourceSupportExtentX": [
+    0,
+    1024
+  ],
+  "worldGeometryApproved": false,
+  "footprint": null,
+  "sourceProtectedCoreRGBSha256": "058255798593906b8f69563b1bcfc8b57a2c7cf7871a3a3c541c4bfd4076e1e0",
+  "nativeProtectedCoreRGBSha256": "058255798593906b8f69563b1bcfc8b57a2c7cf7871a3a3c541c4bfd4076e1e0",
+  "protectedCoreMaskSha256": "1fe9f144f8789dee77c0cb70f6d36eedd7b2b24e844739a6f7a858137d582515",
+  "protectedCorePixelCount": 600220,
+  "coreUnchanged": true,
+  "removedBackgroundPixelCount": 442898,
+  "confirmedHoles": [],
+  "edgeBandPixels": 5458,
+  "edgeModifiedPixels": 1115,
+  "edgeClearedPixels": 0,
+  "edgeWithoutCoreReference": 0,
+  "edgeSourcePixelWidth": 2,
+  "nearestSamplingVerified": true,
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 27656,
+  "partialAlphaPixels": 61,
+  "visibleStrongMagentaPixels": 0,
+  "status": "processed-local-candidate",
+  "humanApproved": false,
+  "sceneValidated": false,
+  "rights": "project-scope-applies-see-rights-record",
+  "registered": false,
+  "published": false,
+  "resident": "jordan",
+  "component": "avatar",
+  "sourceTaskId": "mt_31883ee94f8676f09d2ef00bb6c6f56a",
+  "sourceRequestId": "3e5d9371-28aa-511c-9208-5c5a562cd83a",
+  "sourceReuse": "historical independent identity-approved original, never failed atlas",
+  "parameters": {
+    "backgroundMinRed": 180,
+    "backgroundMinBlue": 180,
+    "backgroundMaxGreen": 110,
+    "backgroundMinMinRBMinusG": 80,
+    "edgeBandSourcePixels": 2,
+    "foregroundReferenceRadius": 7,
+    "matteFitMaximumResidual": 24,
+    "minimumMagentaExcessOverForeground": 20,
+    "cropPaddingSourcePixels": 1280,
+    "consumerMaximumSide": 256,
+    "resampling": "NEAREST"
+  },
+  "processingScriptSHA256": "281d4d3f4355b0f0cfe6ccad2ac7da4dbdcbab27fb54f9337dcbca8bf4f2884c",
+  "aiConfirmedHoleReview": "reviews/jordan-avatar-holes.json",
+  "native": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/poses/jordan/avatar-native.png",
+    "sha256": "37f283ea0eb291c751f499b2a192709ebe401e46d0f61db14612eb7b9699210a"
+  },
+  "consumer": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/jordan-avatar.png",
+    "sha256": "d2f65216f0a1b6e3e04cf72dbc2c9b2eec25e69d4cb0b865f31a3119a8f2fa1c",
+    "dimensions": [
+      256,
+      256
+    ]
+  },
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted"
+}

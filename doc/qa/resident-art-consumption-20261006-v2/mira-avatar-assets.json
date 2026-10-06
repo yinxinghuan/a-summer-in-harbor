@@ -1,0 +1,177 @@
+{
+  "source": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/mira/avatar/source.webp",
+    "bytes": 792290,
+    "sha256": "68e49260f43725e275339475980a98571b528ed1c54a893be3e9bef559335a62"
+  },
+  "sourceDimensions": [
+    1024,
+    1024
+  ],
+  "sourceCropBounds": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "nativeCropDimensions": [
+    1024,
+    1024
+  ],
+  "nominalUniformNearestScale": 0.25,
+  "actualIntegerDimensionRatios": [
+    0.25,
+    0.25
+  ],
+  "dimensionRoundingErrorPixels": [
+    0.0,
+    0.0
+  ],
+  "consumerDimensions": [
+    256,
+    256
+  ],
+  "imageAnchorPx": [
+    131.375,
+    256.0
+  ],
+  "imageAnchorNormalized": [
+    0.51318359375,
+    1.0
+  ],
+  "sourceGroundBaseline": 1024,
+  "groundX": 525.5,
+  "sourceSupportExtentX": [
+    140,
+    911
+  ],
+  "worldGeometryApproved": false,
+  "footprint": null,
+  "sourceProtectedCoreRGBSha256": "4596e53c2ce43f4ede8b5fd65659c99027b045d14e0c3a3fc6b8fe6933b2a80f",
+  "nativeProtectedCoreRGBSha256": "4596e53c2ce43f4ede8b5fd65659c99027b045d14e0c3a3fc6b8fe6933b2a80f",
+  "protectedCoreMaskSha256": "a977e537a81198e575aa62f5b3b208f25d262e7284d20f37bad56e6d49ac5c68",
+  "protectedCorePixelCount": 452280,
+  "coreUnchanged": true,
+  "removedBackgroundPixelCount": 586753,
+  "confirmedHoles": [
+    {
+      "seedXY": [
+        363,
+        329
+      ],
+      "pixels": 254,
+      "bbox": [
+        358,
+        329,
+        369,
+        366
+      ]
+    },
+    {
+      "seedXY": [
+        647,
+        343
+      ],
+      "pixels": 4,
+      "bbox": [
+        647,
+        343,
+        648,
+        347
+      ]
+    },
+    {
+      "seedXY": [
+        375,
+        359
+      ],
+      "pixels": 6,
+      "bbox": [
+        375,
+        359,
+        377,
+        362
+      ]
+    },
+    {
+      "seedXY": [
+        572,
+        470
+      ],
+      "pixels": 66,
+      "bbox": [
+        572,
+        470,
+        579,
+        491
+      ]
+    },
+    {
+      "seedXY": [
+        580,
+        496
+      ],
+      "pixels": 7,
+      "bbox": [
+        580,
+        496,
+        583,
+        499
+      ]
+    }
+  ],
+  "edgeBandPixels": 9543,
+  "edgeModifiedPixels": 3271,
+  "edgeClearedPixels": 0,
+  "edgeWithoutCoreReference": 18,
+  "edgeSourcePixelWidth": 2,
+  "nearestSamplingVerified": true,
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 36691,
+  "partialAlphaPixels": 158,
+  "visibleStrongMagentaPixels": 0,
+  "status": "processed-local-candidate",
+  "humanApproved": false,
+  "sceneValidated": false,
+  "rights": "project-scope-applies-see-rights-record",
+  "registered": false,
+  "published": false,
+  "resident": "mira",
+  "component": "avatar",
+  "sourceTaskId": "mt_6b445e974075988bcdda13392adce085",
+  "sourceRequestId": "a253c5d3-9eff-5940-af5e-45a8404fa5f8",
+  "sourceReuse": "historical independent identity-approved original, never failed atlas",
+  "parameters": {
+    "backgroundMinRed": 180,
+    "backgroundMinBlue": 180,
+    "backgroundMaxGreen": 110,
+    "backgroundMinMinRBMinusG": 80,
+    "edgeBandSourcePixels": 2,
+    "foregroundReferenceRadius": 7,
+    "matteFitMaximumResidual": 24,
+    "minimumMagentaExcessOverForeground": 20,
+    "cropPaddingSourcePixels": 1280,
+    "consumerMaximumSide": 256,
+    "resampling": "NEAREST"
+  },
+  "processingScriptSHA256": "281d4d3f4355b0f0cfe6ccad2ac7da4dbdcbab27fb54f9337dcbca8bf4f2884c",
+  "aiConfirmedHoleReview": "reviews/mira-avatar-holes.json",
+  "native": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/poses/mira/avatar-native.png",
+    "sha256": "50a53835131c135ca59e3f042fada5d408babff3f9ef1194b4d7aa6edc060389"
+  },
+  "consumer": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/mira-avatar.png",
+    "sha256": "1fd003f4a36000b2b777170b47621dbdb864a30bda5f78ccb69e9f2cbe8c11f8",
+    "dimensions": [
+      256,
+      256
+    ]
+  },
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted"
+}

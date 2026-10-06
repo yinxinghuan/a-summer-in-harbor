@@ -1,0 +1,644 @@
+{
+  "residentId": "leila",
+  "atlas": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/leila.png",
+    "sha256": "d9f514c3b986d8458b1ea3952f56766cd1c0aef13229285aa4f344c7bd47e3d4",
+    "dimensions": [
+      384,
+      512
+    ],
+    "grid": [
+      3,
+      4
+    ],
+    "cell": [
+      128,
+      128
+    ],
+    "rowOrder": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "columnOrder": [
+      "contactA",
+      "stand",
+      "contactB"
+    ],
+    "anchor": [
+      0.5,
+      0.953125
+    ],
+    "worldScale": 0.5185185185185185,
+    "visibleWorldHeight": 56
+  },
+  "frames": [
+    {
+      "direction": "down",
+      "pose": "a",
+      "row": 0,
+      "col": 0,
+      "taskKey": "leila-down-a-v1",
+      "requestId": "78bb91d9-28cd-45fc-ad5f-2be1397b699b",
+      "taskId": "mt_4f559b6ffb7cffeec38f686d13d359c3",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-down-a-v1/source.webp",
+        "sha256": "04c9c352a13a970f3033a8ba4db004924800538ed5e54b6459510bae4ee52f31",
+        "bytes": 643576,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        337,
+        85,
+        679,
+        927
+      ],
+      "uniformScale": 0.12826603325415678,
+      "visibleSize": [
+        44,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "7f706ee348efe61839587452a429b018e08e25f2b47152db3612d01792e35361",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 863483,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "col": 1,
+      "taskKey": "leila-down-stand-v1",
+      "requestId": "0f777e31-af33-4d43-a084-71a1c8eb80f9",
+      "taskId": "mt_d370d0895edf634e19473a936032a639",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-down-stand-v1/source.webp",
+        "sha256": "efa2ad5ba82d37f902049d71151752f37f0d70aec2a4d7ef41fc7441c983603c",
+        "bytes": 659780,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        319,
+        80,
+        684,
+        921
+      ],
+      "uniformScale": 0.12841854934601665,
+      "visibleSize": [
+        47,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "91e326990259f7fb947c1dcaac48d4de4680175eba9f56adac0414b2d3193b42",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 839309,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "down",
+      "pose": "b",
+      "row": 0,
+      "col": 2,
+      "taskKey": "leila-down-b-v1",
+      "requestId": "3efcc08f-b877-406b-a85c-95b928b85e8f",
+      "taskId": "mt_5aa934ae9c10bf5d21de7366dddd64c2",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-down-b-v1/source.webp",
+        "sha256": "8c17a045b88a72b59712a4d7620ecac9e16108485276cd8ef52833095bafdcb8",
+        "bytes": 646686,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        323,
+        82,
+        664,
+        931
+      ],
+      "uniformScale": 0.127208480565371,
+      "visibleSize": [
+        43,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "0bc1914d9a0dbba64c2d1cc6e11b808db9c42c14598cffd9de0c65eba72f4214",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 864680,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "a",
+      "row": 1,
+      "col": 0,
+      "taskKey": "leila-left-a-v1",
+      "requestId": "2140564b-894e-4259-813e-48d13f37d4b0",
+      "taskId": "mt_827bef5b9e0412fe55c64cdb3afc031c",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-left-a-v1/source.webp",
+        "sha256": "4aaf7df056583d92f0b9e6d7e4485fd17e4286b1a66c5a69db94be52761f9119",
+        "bytes": 666474,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        320,
+        89,
+        681,
+        916
+      ],
+      "uniformScale": 0.13059250302297462,
+      "visibleSize": [
+        47,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "2a813a65427b936ff27dd9b8443030e50df5af1f5105a73d5d9c69489fc92f1f",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 852574,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "col": 1,
+      "taskKey": "leila-left-stand-v1",
+      "requestId": "42ef235a-1787-44d6-859f-76fadd84d8bd",
+      "taskId": "mt_91c3f03d3a3961d33f4a9d40d8640bb3",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-left-stand-v1/source.webp",
+        "sha256": "724c6e6dbcb6463c60385b2c3e04647cc4e03e59f7d79e2ce658fca3fa54f3fd",
+        "bytes": 637874,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        327,
+        85,
+        668,
+        935
+      ],
+      "uniformScale": 0.12705882352941175,
+      "visibleSize": [
+        43,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "55c1b0ec084c57caf71736e2d102bcb1473771bb039509a2ee41c647c03d9775",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 865602,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "b",
+      "row": 1,
+      "col": 2,
+      "taskKey": "leila-left-b-v1",
+      "requestId": "915ac893-690b-4c61-8ee4-a947f5a39019",
+      "taskId": "mt_ea4f356486ff9ce43663827fe8e5912a",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-left-b-v1/source.webp",
+        "sha256": "8541dec4db456a3ab8819966e900060e587be16d6441da746c3843940f7906ec",
+        "bytes": 640618,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        323,
+        89,
+        692,
+        904
+      ],
+      "uniformScale": 0.1325153374233129,
+      "visibleSize": [
+        49,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "388dd26c87a86ebec741b15c7827abc63ed6f7cc9274ab1c30d2cea0db04c7ed",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 863929,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "a",
+      "row": 2,
+      "col": 0,
+      "taskKey": "leila-left-a-v1",
+      "requestId": "2140564b-894e-4259-813e-48d13f37d4b0",
+      "taskId": "mt_827bef5b9e0412fe55c64cdb3afc031c",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-left-a-v1/source.webp",
+        "sha256": "4aaf7df056583d92f0b9e6d7e4485fd17e4286b1a66c5a69db94be52761f9119",
+        "bytes": 666474,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        320,
+        89,
+        681,
+        916
+      ],
+      "uniformScale": 0.13059250302297462,
+      "visibleSize": [
+        47,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "28bf91af1bdfa2b35fe9e081007750905f44ce8340bbef43ef29e006e663a884",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 852574,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "col": 1,
+      "taskKey": "leila-left-stand-v1",
+      "requestId": "42ef235a-1787-44d6-859f-76fadd84d8bd",
+      "taskId": "mt_91c3f03d3a3961d33f4a9d40d8640bb3",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-left-stand-v1/source.webp",
+        "sha256": "724c6e6dbcb6463c60385b2c3e04647cc4e03e59f7d79e2ce658fca3fa54f3fd",
+        "bytes": 637874,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        327,
+        85,
+        668,
+        935
+      ],
+      "uniformScale": 0.12705882352941175,
+      "visibleSize": [
+        43,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "8d4386a12d36b5fc99f2f9da9df7a9590431e7780843716c70721aae41b13e9d",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 865602,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "b",
+      "row": 2,
+      "col": 2,
+      "taskKey": "leila-left-b-v1",
+      "requestId": "915ac893-690b-4c61-8ee4-a947f5a39019",
+      "taskId": "mt_ea4f356486ff9ce43663827fe8e5912a",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-left-b-v1/source.webp",
+        "sha256": "8541dec4db456a3ab8819966e900060e587be16d6441da746c3843940f7906ec",
+        "bytes": 640618,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        323,
+        89,
+        692,
+        904
+      ],
+      "uniformScale": 0.1325153374233129,
+      "visibleSize": [
+        49,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "3b7850528b6e6790d775c8ecfef4bbd4a7c659883570009c87b208786662de0b",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 863929,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "a",
+      "row": 3,
+      "col": 0,
+      "taskKey": "leila-up-a-v1",
+      "requestId": "05b0ffa0-897c-4c0e-8480-dcbcd28b7d49",
+      "taskId": "mt_9b7df136d308c9972ac73288bb63da3e",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-up-a-v1/source.webp",
+        "sha256": "3fabe27498da0f9a5cb908d19e10c91bf77e1fa60278b54529d59e7a82fc56ea",
+        "bytes": 614552,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        338,
+        102,
+        678,
+        893
+      ],
+      "uniformScale": 0.13653603034134007,
+      "visibleSize": [
+        46,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "bcbdaec287264639ad28cf145a108ac43430a79fd5c2752a80555c402e2727a9",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 883251,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "col": 1,
+      "taskKey": "leila-up-stand-v1",
+      "requestId": "17d72bfa-dbf3-4f50-830c-0b53b524db7c",
+      "taskId": "mt_7127a3bc8909e7cdda46e68083e84cf9",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-up-stand-v1/source.webp",
+        "sha256": "cc277de628e2c2527870f604aaba916a8f960c4358e09df47b557b7641a81fda",
+        "bytes": 629174,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        320,
+        133,
+        672,
+        884
+      ],
+      "uniformScale": 0.14380825565912117,
+      "visibleSize": [
+        51,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "1c04af4c63b5501c399c150d23241740ea1a001efde72c27729adb34cd00d59e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 872038,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "b",
+      "row": 3,
+      "col": 2,
+      "taskKey": "leila-up-b-v1",
+      "requestId": "2c643949-8540-40a1-867f-d629602d0fb6",
+      "taskId": "mt_55a3e0e8ddd30e47c2fe334968c2b71b",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/leila-up-b-v1/source.webp",
+        "sha256": "11174bd0abde75cadc2628cf41d049d30e9dc05ae4faac19039e9f0a22f0ff21",
+        "bytes": 609638,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        316,
+        102,
+        650,
+        872
+      ],
+      "uniformScale": 0.14025974025974025,
+      "visibleSize": [
+        47,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "7d53a4716181c4a381842fae4a2f07408d8c9a04ffad59f215457a46ef134106",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 888182,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    }
+  ],
+  "complete": true,
+  "processing": "existing Harbor strong-magenta key, full-body tight crop, uniform nearest resampling, foot-bottom alignment, whole side frame mirror; no limb editing/repainting",
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "published": false
+}

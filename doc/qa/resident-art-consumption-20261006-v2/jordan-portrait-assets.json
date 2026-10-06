@@ -1,0 +1,138 @@
+{
+  "source": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/jordan/portrait/source.webp",
+    "bytes": 851866,
+    "sha256": "3df39a818b5e90d77bddcfecd2e73c3a864db2d855619a8b0aa96f38a68be5cb"
+  },
+  "sourceDimensions": [
+    1024,
+    1280
+  ],
+  "sourceCropBounds": [
+    0,
+    0,
+    1024,
+    1280
+  ],
+  "nativeCropDimensions": [
+    1024,
+    1280
+  ],
+  "nominalUniformNearestScale": 0.5,
+  "actualIntegerDimensionRatios": [
+    0.5,
+    0.5
+  ],
+  "dimensionRoundingErrorPixels": [
+    0.0,
+    0.0
+  ],
+  "consumerDimensions": [
+    512,
+    640
+  ],
+  "imageAnchorPx": [
+    253.5,
+    626.5
+  ],
+  "imageAnchorNormalized": [
+    0.4951171875,
+    0.97890625
+  ],
+  "sourceGroundBaseline": 1253,
+  "groundX": 507.0,
+  "sourceSupportExtentX": [
+    348,
+    666
+  ],
+  "worldGeometryApproved": false,
+  "footprint": null,
+  "sourceProtectedCoreRGBSha256": "64daa8d6533f380dac371711c7c9327473d08970b8d811e2c9980dce5585da39",
+  "nativeProtectedCoreRGBSha256": "64daa8d6533f380dac371711c7c9327473d08970b8d811e2c9980dce5585da39",
+  "protectedCoreMaskSha256": "73e4aedf8cd5732c80105a9be84655c6e90ce270252d6e99aee88277da6b03ca",
+  "protectedCorePixelCount": 435035,
+  "coreUnchanged": true,
+  "removedBackgroundPixelCount": 865225,
+  "confirmedHoles": [
+    {
+      "seedXY": [
+        439,
+        1216
+      ],
+      "pixels": 2,
+      "bbox": [
+        439,
+        1216,
+        440,
+        1218
+      ]
+    },
+    {
+      "seedXY": [
+        334,
+        1244
+      ],
+      "pixels": 1,
+      "bbox": [
+        334,
+        1244,
+        335,
+        1245
+      ]
+    }
+  ],
+  "edgeBandPixels": 10460,
+  "edgeModifiedPixels": 2799,
+  "edgeClearedPixels": 0,
+  "edgeWithoutCoreReference": 7,
+  "edgeSourcePixelWidth": 2,
+  "nearestSamplingVerified": true,
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 216385,
+  "partialAlphaPixels": 600,
+  "visibleStrongMagentaPixels": 0,
+  "status": "processed-local-candidate",
+  "humanApproved": false,
+  "sceneValidated": false,
+  "rights": "project-scope-applies-see-rights-record",
+  "registered": false,
+  "published": false,
+  "resident": "jordan",
+  "component": "portrait",
+  "sourceTaskId": "mt_f827d6c102dabc8b78711a76daddd368",
+  "sourceRequestId": "35e0f358-5b96-5b56-b411-8aca58647640",
+  "sourceReuse": "historical independent identity-approved original, never failed atlas",
+  "parameters": {
+    "backgroundMinRed": 180,
+    "backgroundMinBlue": 180,
+    "backgroundMaxGreen": 110,
+    "backgroundMinMinRBMinusG": 80,
+    "edgeBandSourcePixels": 2,
+    "foregroundReferenceRadius": 7,
+    "matteFitMaximumResidual": 24,
+    "minimumMagentaExcessOverForeground": 20,
+    "cropPaddingSourcePixels": 1280,
+    "consumerMaximumSide": 640,
+    "resampling": "NEAREST"
+  },
+  "processingScriptSHA256": "281d4d3f4355b0f0cfe6ccad2ac7da4dbdcbab27fb54f9337dcbca8bf4f2884c",
+  "aiConfirmedHoleReview": "reviews/jordan-portrait-holes.json",
+  "native": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/poses/jordan/portrait-native.png",
+    "sha256": "f13e38dbf9e47900f97d1e15e18d48234edc21d6c5c1d28f18b62ea8bb7fa5d2"
+  },
+  "consumer": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/jordan-portrait.png",
+    "sha256": "9d85c837d13d47bcbcc2e515fcc968d56a38cfc111b466cb34afa6234f20790f",
+    "dimensions": [
+      512,
+      640
+    ]
+  },
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted"
+}

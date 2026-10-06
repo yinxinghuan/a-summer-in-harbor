@@ -1,0 +1,102 @@
+[
+  {
+    "resident": "jordan",
+    "width": 320,
+    "layout": {
+      "canvases": 1,
+      "height": 568,
+      "scrollWidth": 320,
+      "width": 320
+    }
+  },
+  {
+    "resident": "rowan",
+    "width": 320,
+    "layout": {
+      "canvases": 1,
+      "height": 568,
+      "scrollWidth": 320,
+      "width": 320
+    }
+  },
+  {
+    "resident": "leila",
+    "width": 320,
+    "layout": {
+      "canvases": 1,
+      "height": 568,
+      "scrollWidth": 320,
+      "width": 320
+    }
+  },
+  {
+    "resident": "casey",
+    "width": 320,
+    "layout": {
+      "canvases": 1,
+      "height": 568,
+      "scrollWidth": 320,
+      "width": 320
+    }
+  },
+  {
+    "resident": "grant",
+    "width": 320,
+    "layout": {
+      "canvases": 1,
+      "height": 568,
+      "scrollWidth": 320,
+      "width": 320
+    }
+  },
+  {
+    "resident": "rowan",
+    "width": 390,
+    "layout": {
+      "canvases": 1,
+      "height": 844,
+      "scrollWidth": 390,
+      "width": 390
+    }
+  },
+  {
+    "resident": "jordan",
+    "width": 390,
+    "layout": {
+      "canvases": 1,
+      "height": 844,
+      "scrollWidth": 390,
+      "width": 390
+    }
+  },
+  {
+    "resident": "leila",
+    "width": 390,
+    "layout": {
+      "canvases": 1,
+      "height": 844,
+      "scrollWidth": 390,
+      "width": 390
+    }
+  },
+  {
+    "resident": "casey",
+    "width": 390,
+    "layout": {
+      "canvases": 1,
+      "height": 844,
+      "scrollWidth": 390,
+      "width": 390
+    }
+  },
+  {
+    "resident": "grant",
+    "width": 390,
+    "layout": {
+      "canvases": 1,
+      "height": 844,
+      "scrollWidth": 390,
+      "width": 390
+    }
+  }
+]

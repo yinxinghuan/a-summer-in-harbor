@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "authority": "AI",
+  "decision": "pass",
+  "at": "2026-10-05T19:39:06.387276+00:00",
+  "scope": "processed individual consumer identity/alpha/edges; map family and actual owner UI admission separate",
+  "reason": "固定原件身份、服装与用户冻结要求一致；marked-hole诊断及海湾浅/深/绿背景处理图复查，没有可见品红孔洞、边缘显著色污或剪掉人物。0强品红、opaque core RGB不变、nearest采样验证。",
+  "evidence": [
+    "evidence/profiles-all-dark-review.png",
+    "evidence/grant-avatar-matte-review.png",
+    "assets/grant-avatar.json"
+  ],
+  "sourceSHA256": "a464c3018ea0b70ec29612cc1d31177cc62b17f9d78f9a02b0f5ace3a8444375",
+  "consumerSHA256": "3c1321555920ee04c94c23269a055093124fe1b3200357db86d1504afbce2cbe",
+  "humanOverride": null,
+  "actualGameIntegration": "owner pending"
+}

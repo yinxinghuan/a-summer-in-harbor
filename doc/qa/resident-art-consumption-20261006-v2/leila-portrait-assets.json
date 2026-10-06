@@ -1,0 +1,294 @@
+{
+  "source": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/leila/portrait/source.webp",
+    "bytes": 871156,
+    "sha256": "268ea5391d0a4800b92fd74f7804e2cbe3a055d4713a7d8ba14c7914e0eca66c"
+  },
+  "sourceDimensions": [
+    1024,
+    1280
+  ],
+  "sourceCropBounds": [
+    0,
+    0,
+    1024,
+    1280
+  ],
+  "nativeCropDimensions": [
+    1024,
+    1280
+  ],
+  "nominalUniformNearestScale": 0.5,
+  "actualIntegerDimensionRatios": [
+    0.5,
+    0.5
+  ],
+  "dimensionRoundingErrorPixels": [
+    0.0,
+    0.0
+  ],
+  "consumerDimensions": [
+    512,
+    640
+  ],
+  "imageAnchorPx": [
+    259.0,
+    622.5
+  ],
+  "imageAnchorNormalized": [
+    0.505859375,
+    0.97265625
+  ],
+  "sourceGroundBaseline": 1245,
+  "groundX": 518.0,
+  "sourceSupportExtentX": [
+    342,
+    694
+  ],
+  "worldGeometryApproved": false,
+  "footprint": null,
+  "sourceProtectedCoreRGBSha256": "5c17efcbd49cd6320244703296b9999a545050321908fed4ad3ce76694143d93",
+  "nativeProtectedCoreRGBSha256": "5c17efcbd49cd6320244703296b9999a545050321908fed4ad3ce76694143d93",
+  "protectedCoreMaskSha256": "0085300db8facc8f05c6ed070b8a91d326acf63f28c72aafca2d7547489985d4",
+  "protectedCorePixelCount": 293254,
+  "coreUnchanged": true,
+  "removedBackgroundPixelCount": 1003654,
+  "confirmedHoles": [
+    {
+      "seedXY": [
+        521,
+        24
+      ],
+      "pixels": 44,
+      "bbox": [
+        521,
+        24,
+        530,
+        33
+      ]
+    },
+    {
+      "seedXY": [
+        473,
+        45
+      ],
+      "pixels": 8,
+      "bbox": [
+        472,
+        45,
+        475,
+        48
+      ]
+    },
+    {
+      "seedXY": [
+        543,
+        45
+      ],
+      "pixels": 8,
+      "bbox": [
+        543,
+        45,
+        546,
+        48
+      ]
+    },
+    {
+      "seedXY": [
+        546,
+        48
+      ],
+      "pixels": 18,
+      "bbox": [
+        546,
+        48,
+        549,
+        54
+      ]
+    },
+    {
+      "seedXY": [
+        463,
+        67
+      ],
+      "pixels": 74,
+      "bbox": [
+        457,
+        67,
+        471,
+        77
+      ]
+    },
+    {
+      "seedXY": [
+        573,
+        164
+      ],
+      "pixels": 22,
+      "bbox": [
+        573,
+        164,
+        576,
+        172
+      ]
+    },
+    {
+      "seedXY": [
+        438,
+        166
+      ],
+      "pixels": 49,
+      "bbox": [
+        438,
+        166,
+        445,
+        180
+      ]
+    },
+    {
+      "seedXY": [
+        572,
+        172
+      ],
+      "pixels": 1,
+      "bbox": [
+        572,
+        172,
+        573,
+        173
+      ]
+    },
+    {
+      "seedXY": [
+        599,
+        424
+      ],
+      "pixels": 476,
+      "bbox": [
+        592,
+        424,
+        610,
+        483
+      ]
+    },
+    {
+      "seedXY": [
+        413,
+        428
+      ],
+      "pixels": 490,
+      "bbox": [
+        403,
+        428,
+        422,
+        480
+      ]
+    },
+    {
+      "seedXY": [
+        615,
+        519
+      ],
+      "pixels": 1363,
+      "bbox": [
+        609,
+        519,
+        658,
+        673
+      ]
+    },
+    {
+      "seedXY": [
+        668,
+        680
+      ],
+      "pixels": 103,
+      "bbox": [
+        668,
+        680,
+        673,
+        704
+      ]
+    },
+    {
+      "seedXY": [
+        340,
+        682
+      ],
+      "pixels": 108,
+      "bbox": [
+        339,
+        682,
+        345,
+        706
+      ]
+    },
+    {
+      "seedXY": [
+        346,
+        709
+      ],
+      "pixels": 8,
+      "bbox": [
+        346,
+        709,
+        349,
+        712
+      ]
+    }
+  ],
+  "edgeBandPixels": 13812,
+  "edgeModifiedPixels": 3418,
+  "edgeClearedPixels": 0,
+  "edgeWithoutCoreReference": 151,
+  "edgeSourcePixelWidth": 2,
+  "nearestSamplingVerified": true,
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 250908,
+  "partialAlphaPixels": 875,
+  "visibleStrongMagentaPixels": 0,
+  "status": "processed-local-candidate",
+  "humanApproved": false,
+  "sceneValidated": false,
+  "rights": "project-scope-applies-see-rights-record",
+  "registered": false,
+  "published": false,
+  "resident": "leila",
+  "component": "portrait",
+  "sourceTaskId": "mt_37a4859d5a5596ef36bee4261e995130",
+  "sourceRequestId": "198a1825-6fbf-585e-aa99-76312155f19f",
+  "sourceReuse": "historical independent identity-approved original, never failed atlas",
+  "parameters": {
+    "backgroundMinRed": 180,
+    "backgroundMinBlue": 180,
+    "backgroundMaxGreen": 110,
+    "backgroundMinMinRBMinusG": 80,
+    "edgeBandSourcePixels": 2,
+    "foregroundReferenceRadius": 7,
+    "matteFitMaximumResidual": 24,
+    "minimumMagentaExcessOverForeground": 20,
+    "cropPaddingSourcePixels": 1280,
+    "consumerMaximumSide": 640,
+    "resampling": "NEAREST"
+  },
+  "processingScriptSHA256": "281d4d3f4355b0f0cfe6ccad2ac7da4dbdcbab27fb54f9337dcbca8bf4f2884c",
+  "aiConfirmedHoleReview": "reviews/leila-portrait-holes.json",
+  "native": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/poses/leila/portrait-native.png",
+    "sha256": "8bec15532007c6d55f6c32e44e4417f26db7a41cdf348bb5d5edc836518eca56"
+  },
+  "consumer": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/leila-portrait.png",
+    "sha256": "012ab7ed3b2b78724715d43a4578b46d779123e54d9a70b0f231df29610e024d",
+    "dimensions": [
+      512,
+      640
+    ]
+  },
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted"
+}

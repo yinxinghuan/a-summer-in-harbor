@@ -7,3 +7,7 @@ await mkdir('dist-server',{recursive:true});
 for(const [name,entry] of Object.entries({public:'server/public.ts',migrate:'scripts/migrate-public.ts','pg-canary':'scripts/pg-canary.ts'}))await build({entryPoints:[entry],outfile:`dist-server/${name}.mjs`,bundle:true,platform:'node',format:'esm',target:'node22',external:['pg-native'],plugins:[{name:'preserve-rule-runtime',setup(b){b.onResolve({filter:/vendor\/dynamic-runtime/},a=>({path:'./'+relative(root,resolve(a.resolveDir,a.path)),external:true}))}}],banner:{js:"import { createRequire as harborCreateRequire } from 'node:module'; const require = harborCreateRequire(import.meta.url);"}});
 await cp('vendor','dist-server/vendor',{recursive:true});
 console.log('Harbor server bundles prepared without private configuration');
+
+// Explicit user-approved frozen official-news edition; no runtime collector.
+await mkdir('dist-server/news',{recursive:true});
+await cp('server/news/frozen-catalog-20261006.json','dist-server/news/frozen-catalog-20261006.json');

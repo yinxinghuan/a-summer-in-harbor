@@ -17,9 +17,10 @@
       "“罗温。我做面包，总忍不住多烤一点，收摊时又心疼。这个夏天想试试少做一点、认真听听别人要什么。”",
       "“Rowan. I bake bread. I always make a little extra, then hate seeing it left at closing. This summer I want to bake less and listen more.”"
     ],
-    "art": "luis",
+    "art": "rowan",
+    "mapArt": "rowan",
     "artPlan": "next-original__baker-cap-apron",
-    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "artStatus": "independent local portrait/avatar and map family admitted; not library-admitted or published",
     "partner": "luis",
     "partnerName": [
       "路易斯",
@@ -99,7 +100,8 @@
     "activity": [
       "整理当天的面包清单。",
       "Arranging today’s bread list."
-    ]
+    ],
+    "avatarArt": "rowan"
   },
   {
     "id": "mira",
@@ -119,9 +121,9 @@
       "“米拉，修复纸张和旧照片。我能补一条裂缝，却不能替照片里的人决定要不要被记住。”",
       "“Mira. I conserve paper and old photographs. I can mend a tear. I can’t decide whether the people in a picture want to be remembered.”"
     ],
-    "art": "dani",
+    "art": "mira",
     "artPlan": "next-original__long-braid-dress",
-    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "artStatus": "independent local portrait/avatar admitted; map remains explicit QA placeholder pending family; not library-admitted or published",
     "partner": "nell",
     "partnerName": [
       "内尔",
@@ -201,7 +203,9 @@
     "activity": [
       "翻看待修复照片的纸张笔记。",
       "Reviewing paper-conservation notes."
-    ]
+    ],
+    "mapArt": "dani",
+    "avatarArt": "mira"
   },
   {
     "id": "jordan",
@@ -221,9 +225,9 @@
       "“乔丹。我巡查海边的栏杆和路牌。发现问题先记下来，不能因为看了一眼就说已经修好了。”",
       "“Jordan. I inspect coastal rails and signs. I record problems first. Looking at something doesn’t mean I’ve fixed it.”"
     ],
-    "art": "june",
+    "art": "jordan",
     "artPlan": "next-original__rain-poncho-boots",
-    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "artStatus": "independent local portrait/avatar and map family admitted; not library-admitted or published",
     "partner": "june",
     "partnerName": [
       "琼",
@@ -303,7 +307,9 @@
     "activity": [
       "核对海岸路牌的工作记录。",
       "Checking the coastal sign work list."
-    ]
+    ],
+    "mapArt": "jordan",
+    "avatarArt": "jordan"
   },
   {
     "id": "leila",
@@ -323,9 +329,9 @@
       "“莱拉。我是医生，不过这星期在休假。今天最大的计划是把茶喝完，不在凉掉以后才想起来。”",
       "“Leila. I’m a doctor, but this week I’m on holiday. Today’s big plan is to finish my tea before I remember it has gone cold.”"
     ],
-    "art": "samira",
+    "art": "leila",
     "artPlan": "next-original__high-bun-tracksuit",
-    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "artStatus": "independent local portrait/avatar and map family admitted; not library-admitted or published",
     "partner": "idris",
     "partnerName": [
       "伊德里斯",
@@ -405,7 +411,9 @@
     "activity": [
       "收好手机，给休假留一点空白。",
       "Putting the phone away for a quiet holiday."
-    ]
+    ],
+    "mapArt": "leila",
+    "avatarArt": "leila"
   },
   {
     "id": "casey",
@@ -425,9 +433,9 @@
       "“凯西，写软件的。电脑留在住处了。我想看看不用加一个应用程序，事情能不能也变简单。”",
       "“Casey. I build software. My laptop is back at the room. I want to see whether things can get simpler without adding another app.”"
     ],
-    "art": "avery",
+    "art": "casey",
     "artPlan": "next-original__bob-pleated-skirt",
-    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "artStatus": "independent local portrait/avatar and map family admitted; not library-admitted or published",
     "partner": "dani",
     "partnerName": [
       "丹妮",
@@ -507,7 +515,9 @@
     "activity": [
       "在纸上删掉登记表多余的格子。",
       "Crossing extra fields off a paper form."
-    ]
+    ],
+    "mapArt": "casey",
+    "avatarArt": "casey"
   },
   {
     "id": "grant",
@@ -527,9 +537,9 @@
       "“格兰特。以前在金融行业，每件事都喜欢算值不值得。退休后发现，邻居请吃午饭不用先做一张报表。”",
       "“Grant. I used to work in finance and calculate whether everything was worthwhile. Retirement is teaching me that lunch with a neighbor needs no spreadsheet.”"
     ],
-    "art": "owen",
+    "art": "grant",
     "artPlan": "next-original__senior-bald-waistcoat",
-    "artStatus": "awaiting-library; existing sprite QA placeholder only",
+    "artStatus": "independent local portrait/avatar and map family admitted; not library-admitted or published",
     "partner": "elena",
     "partnerName": [
       "埃琳娜",
@@ -609,6 +619,8 @@
     "activity": [
       "把午餐预算折起来，先听街坊说话。",
       "Folding the lunch budget and listening to neighbors."
-    ]
+    ],
+    "mapArt": "grant",
+    "avatarArt": "grant"
   }
 ]

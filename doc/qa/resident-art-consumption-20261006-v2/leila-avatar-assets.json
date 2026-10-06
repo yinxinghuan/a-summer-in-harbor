@@ -1,0 +1,203 @@
+{
+  "source": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/leila/avatar/source.webp",
+    "bytes": 748990,
+    "sha256": "c4ed6e32d0c4d5beac9ba415f58aa50cfc8d0d4a006993bd6a41ab7acc8b098b"
+  },
+  "sourceDimensions": [
+    1024,
+    1024
+  ],
+  "sourceCropBounds": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "nativeCropDimensions": [
+    1024,
+    1024
+  ],
+  "nominalUniformNearestScale": 0.25,
+  "actualIntegerDimensionRatios": [
+    0.25,
+    0.25
+  ],
+  "dimensionRoundingErrorPixels": [
+    0.0,
+    0.0
+  ],
+  "consumerDimensions": [
+    256,
+    256
+  ],
+  "imageAnchorPx": [
+    126.125,
+    256.0
+  ],
+  "imageAnchorNormalized": [
+    0.49267578125,
+    1.0
+  ],
+  "sourceGroundBaseline": 1024,
+  "groundX": 504.5,
+  "sourceSupportExtentX": [
+    49,
+    960
+  ],
+  "worldGeometryApproved": false,
+  "footprint": null,
+  "sourceProtectedCoreRGBSha256": "de379e43bc97ad055c2c55dc7595d551353f254da8e661bdb4710878666d014e",
+  "nativeProtectedCoreRGBSha256": "de379e43bc97ad055c2c55dc7595d551353f254da8e661bdb4710878666d014e",
+  "protectedCoreMaskSha256": "1b7b27c6be110cf3562cdbd51464782f0f37d5e5318c05982dc96d8bf4d438f5",
+  "protectedCorePixelCount": 460161,
+  "coreUnchanged": true,
+  "removedBackgroundPixelCount": 578876,
+  "confirmedHoles": [
+    {
+      "seedXY": [
+        464,
+        50
+      ],
+      "pixels": 35,
+      "bbox": [
+        464,
+        50,
+        471,
+        55
+      ]
+    },
+    {
+      "seedXY": [
+        418,
+        79
+      ],
+      "pixels": 108,
+      "bbox": [
+        410,
+        79,
+        428,
+        95
+      ]
+    },
+    {
+      "seedXY": [
+        590,
+        83
+      ],
+      "pixels": 216,
+      "bbox": [
+        590,
+        83,
+        607,
+        118
+      ]
+    },
+    {
+      "seedXY": [
+        402,
+        107
+      ],
+      "pixels": 24,
+      "bbox": [
+        401,
+        107,
+        405,
+        115
+      ]
+    },
+    {
+      "seedXY": [
+        382,
+        150
+      ],
+      "pixels": 544,
+      "bbox": [
+        371,
+        150,
+        406,
+        172
+      ]
+    },
+    {
+      "seedXY": [
+        684,
+        404
+      ],
+      "pixels": 294,
+      "bbox": [
+        670,
+        404,
+        689,
+        449
+      ]
+    },
+    {
+      "seedXY": [
+        320,
+        407
+      ],
+      "pixels": 503,
+      "bbox": [
+        315,
+        407,
+        340,
+        457
+      ]
+    }
+  ],
+  "edgeBandPixels": 9539,
+  "edgeModifiedPixels": 2218,
+  "edgeClearedPixels": 0,
+  "edgeWithoutCoreReference": 63,
+  "edgeSourcePixelWidth": 2,
+  "nearestSamplingVerified": true,
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 36145,
+  "partialAlphaPixels": 151,
+  "visibleStrongMagentaPixels": 0,
+  "status": "processed-local-candidate",
+  "humanApproved": false,
+  "sceneValidated": false,
+  "rights": "project-scope-applies-see-rights-record",
+  "registered": false,
+  "published": false,
+  "resident": "leila",
+  "component": "avatar",
+  "sourceTaskId": "mt_76f3efe8676aa8a4a0366658a8b409cc",
+  "sourceRequestId": "7b938ee4-68ad-512e-86d7-7e5043e90cb6",
+  "sourceReuse": "historical independent identity-approved original, never failed atlas",
+  "parameters": {
+    "backgroundMinRed": 180,
+    "backgroundMinBlue": 180,
+    "backgroundMaxGreen": 110,
+    "backgroundMinMinRBMinusG": 80,
+    "edgeBandSourcePixels": 2,
+    "foregroundReferenceRadius": 7,
+    "matteFitMaximumResidual": 24,
+    "minimumMagentaExcessOverForeground": 20,
+    "cropPaddingSourcePixels": 1280,
+    "consumerMaximumSide": 256,
+    "resampling": "NEAREST"
+  },
+  "processingScriptSHA256": "281d4d3f4355b0f0cfe6ccad2ac7da4dbdcbab27fb54f9337dcbca8bf4f2884c",
+  "aiConfirmedHoleReview": "reviews/leila-avatar-holes.json",
+  "native": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/poses/leila/avatar-native.png",
+    "sha256": "e4ee4bd56e11ba58f11f5ba578395cdcc2f5853367c6e65d5e15e14f3482e608"
+  },
+  "consumer": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/leila-avatar.png",
+    "sha256": "db64d2d10d74c2526373be13d675669ed3597a90797cd6b225ce042c89fa7a5a",
+    "dimensions": [
+      256,
+      256
+    ]
+  },
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted"
+}

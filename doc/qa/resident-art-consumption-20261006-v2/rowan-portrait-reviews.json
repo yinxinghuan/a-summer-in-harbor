@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "authority": "AI",
+  "decision": "pass",
+  "at": "2026-10-05T19:33:54.213056+00:00",
+  "scope": "processed individual consumer image identity, alpha and edge review; owner profile UI integration pending",
+  "reason": "原件身份一致；全部已确认发丝/手指/肘臂纯品红孔洞已去除，三个海湾实际配色背景可见完整轮廓与发丝，没有品红残留或明显光圈，opaque core RGB与nearest采样均验证。头像256方、肖像512×640。",
+  "evidence": [
+    "evidence/rowan-portrait-matte-review.png",
+    "assets/rowan-portrait.json"
+  ],
+  "sourceSHA256": "e14f1861f5ff410fb8e3bcb1a2accd3bf19c947668b50105733b06e56902b269",
+  "consumerSHA256": "e473b3e511f6ec089f5760ec38be4c94cbd44f969c707e210fc88dbf7368e27e",
+  "humanOverride": null,
+  "actualGameIntegration": "owner pending"
+}

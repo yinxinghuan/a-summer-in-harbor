@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "at": "2026-10-05T19:47:30.511024+00:00",
+  "authority": "AI",
+  "decision": "pass",
+  "reason": "年长无胡须、秃头薄侧发、细眼镜、马甲与棕裤跨向身份一致；侧A/B近腿前后重叠和近臂反向同时交换，两鞋尖一致，背向无脸。双手机视口原renderer全phase与停步通过、镜像逐像素一致；单图和图集前景/透明边界保持。",
+  "singleImages": "pass",
+  "familyDirectionsAndGait": "pass",
+  "isolatedTargetRenderer": "pass",
+  "geometryAndAlpha": "pass",
+  "rendererEvidence": [
+    "evidence/grant-walk/capture.json",
+    "evidence/grant-contact-sheet.png"
+  ],
+  "atlasSHA256": "21acdf3db06a7aff9968feb95732793e2ccb62736bd5ffac66884d690c017044",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "humanOverride": null,
+  "realIPhone": false
+}

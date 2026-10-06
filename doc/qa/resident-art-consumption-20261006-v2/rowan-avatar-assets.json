@@ -1,0 +1,229 @@
+{
+  "source": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/reuse-sources/rowan/avatar/source.webp",
+    "bytes": 766352,
+    "sha256": "a8955f713e1cd145152e05a0b8bdabf048825d83c385f30d21cca44435bc8a06"
+  },
+  "sourceDimensions": [
+    1024,
+    1024
+  ],
+  "sourceCropBounds": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "nativeCropDimensions": [
+    1024,
+    1024
+  ],
+  "nominalUniformNearestScale": 0.25,
+  "actualIntegerDimensionRatios": [
+    0.25,
+    0.25
+  ],
+  "dimensionRoundingErrorPixels": [
+    0.0,
+    0.0
+  ],
+  "consumerDimensions": [
+    256,
+    256
+  ],
+  "imageAnchorPx": [
+    128.0,
+    256.0
+  ],
+  "imageAnchorNormalized": [
+    0.5,
+    1.0
+  ],
+  "sourceGroundBaseline": 1024,
+  "groundX": 512.0,
+  "sourceSupportExtentX": [
+    144,
+    880
+  ],
+  "worldGeometryApproved": false,
+  "footprint": null,
+  "sourceProtectedCoreRGBSha256": "c5d9c1c2de77dfc91900a845a89ff0f2547c299126d79fdc92b3befb2a296346",
+  "nativeProtectedCoreRGBSha256": "c5d9c1c2de77dfc91900a845a89ff0f2547c299126d79fdc92b3befb2a296346",
+  "protectedCoreMaskSha256": "54f70acdff059c787a7689c41564eb2d37b4217f7e08b196bc36614f6d502dab",
+  "protectedCorePixelCount": 477490,
+  "coreUnchanged": true,
+  "removedBackgroundPixelCount": 561261,
+  "confirmedHoles": [
+    {
+      "seedXY": [
+        313,
+        311
+      ],
+      "pixels": 23,
+      "bbox": [
+        312,
+        311,
+        316,
+        317
+      ]
+    },
+    {
+      "seedXY": [
+        307,
+        318
+      ],
+      "pixels": 23,
+      "bbox": [
+        307,
+        318,
+        312,
+        323
+      ]
+    },
+    {
+      "seedXY": [
+        698,
+        367
+      ],
+      "pixels": 1,
+      "bbox": [
+        698,
+        367,
+        699,
+        368
+      ]
+    },
+    {
+      "seedXY": [
+        699,
+        370
+      ],
+      "pixels": 71,
+      "bbox": [
+        699,
+        370,
+        704,
+        385
+      ]
+    },
+    {
+      "seedXY": [
+        291,
+        381
+      ],
+      "pixels": 13,
+      "bbox": [
+        291,
+        381,
+        294,
+        386
+      ]
+    },
+    {
+      "seedXY": [
+        704,
+        385
+      ],
+      "pixels": 134,
+      "bbox": [
+        704,
+        385,
+        710,
+        409
+      ]
+    },
+    {
+      "seedXY": [
+        287,
+        386
+      ],
+      "pixels": 43,
+      "bbox": [
+        286,
+        386,
+        291,
+        398
+      ]
+    },
+    {
+      "seedXY": [
+        282,
+        398
+      ],
+      "pixels": 56,
+      "bbox": [
+        282,
+        398,
+        286,
+        412
+      ]
+    },
+    {
+      "seedXY": [
+        295,
+        408
+      ],
+      "pixels": 18,
+      "bbox": [
+        295,
+        408,
+        298,
+        414
+      ]
+    }
+  ],
+  "edgeBandPixels": 9825,
+  "edgeModifiedPixels": 3309,
+  "edgeClearedPixels": 0,
+  "edgeWithoutCoreReference": 0,
+  "edgeSourcePixelWidth": 2,
+  "nearestSamplingVerified": true,
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 35038,
+  "partialAlphaPixels": 248,
+  "visibleStrongMagentaPixels": 0,
+  "status": "processed-local-candidate",
+  "humanApproved": false,
+  "sceneValidated": false,
+  "rights": "project-scope-applies-see-rights-record",
+  "registered": false,
+  "published": false,
+  "resident": "rowan",
+  "component": "avatar",
+  "sourceTaskId": "mt_431f64ce38bd299409a2568a053172ce",
+  "sourceRequestId": "03a0000f-5459-5e13-a7e1-091245198648",
+  "sourceReuse": "historical independent identity-approved original, never failed atlas",
+  "parameters": {
+    "backgroundMinRed": 180,
+    "backgroundMinBlue": 180,
+    "backgroundMaxGreen": 110,
+    "backgroundMinMinRBMinusG": 80,
+    "edgeBandSourcePixels": 2,
+    "foregroundReferenceRadius": 7,
+    "matteFitMaximumResidual": 24,
+    "minimumMagentaExcessOverForeground": 20,
+    "cropPaddingSourcePixels": 1280,
+    "consumerMaximumSide": 256,
+    "resampling": "NEAREST"
+  },
+  "processingScriptSHA256": "281d4d3f4355b0f0cfe6ccad2ac7da4dbdcbab27fb54f9337dcbca8bf4f2884c",
+  "aiConfirmedHoleReview": "reviews/rowan-avatar-holes.json",
+  "native": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/poses/rowan/avatar-native.png",
+    "sha256": "b4fbd0e5c699b7ff99d04b86747098ddfa3dc38834f1e4093e5705dfcea3365c"
+  },
+  "consumer": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/rowan-avatar.png",
+    "sha256": "54a443fef18b1571f2743149e34784a13cda2414513b3338eecc99eec834dd9b",
+    "dimensions": [
+      256,
+      256
+    ]
+  },
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted"
+}

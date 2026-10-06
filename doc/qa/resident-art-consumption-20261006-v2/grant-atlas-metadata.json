@@ -1,0 +1,644 @@
+{
+  "residentId": "grant",
+  "atlas": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/grant.png",
+    "sha256": "21acdf3db06a7aff9968feb95732793e2ccb62736bd5ffac66884d690c017044",
+    "dimensions": [
+      384,
+      512
+    ],
+    "grid": [
+      3,
+      4
+    ],
+    "cell": [
+      128,
+      128
+    ],
+    "rowOrder": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "columnOrder": [
+      "contactA",
+      "stand",
+      "contactB"
+    ],
+    "anchor": [
+      0.5,
+      0.953125
+    ],
+    "worldScale": 0.5185185185185185,
+    "visibleWorldHeight": 56
+  },
+  "frames": [
+    {
+      "direction": "down",
+      "pose": "a",
+      "row": 0,
+      "col": 0,
+      "taskKey": "grant-down-a-v1",
+      "requestId": "c1bdca73-15e0-4f6e-bbf2-e0a16ef8f611",
+      "taskId": "mt_7ad7c1914a5e891267169f2ed2c6fd62",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-down-a-v1/source.webp",
+        "sha256": "0715b6ddab481a85fd8cd4bf64abfce78b9d9132988edf143fc126465af1b54e",
+        "bytes": 638104,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        319,
+        134,
+        706,
+        903
+      ],
+      "uniformScale": 0.14044213263979194,
+      "visibleSize": [
+        54,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "c079c78af1a92d42c7c39c0533a34a439fbb028e6b91dc2b45a25bd0ed6ddae2",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 849661,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "col": 1,
+      "taskKey": "grant-down-stand-v2",
+      "requestId": "c6b7a044-7fb7-448b-aad7-7ee55fe6970f",
+      "taskId": "mt_40e56eeef9899537f2f873b9c8df041e",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-down-stand-v2/recovery-1/source.webp",
+        "sha256": "5d7006156b76a230ef8a158ff24912f5de0a5a14ed24315ca4010231974b853b",
+        "bytes": 638504,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        312,
+        140,
+        702,
+        884
+      ],
+      "uniformScale": 0.14516129032258066,
+      "visibleSize": [
+        57,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "4c712b86a23992f556648960a3d815b1d5db65ce9b124b2d738d87b08c53cd31",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 841758,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "down",
+      "pose": "b",
+      "row": 0,
+      "col": 2,
+      "taskKey": "grant-down-b-v1",
+      "requestId": "309496b6-6ccd-4288-a7dc-614c30c03591",
+      "taskId": "mt_0677c6b3815658cec3c18e9bbaf0d1d9",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-down-b-v1/source.webp",
+        "sha256": "a42ef5d280cf6201d2656f781cae1a38e15e9b393def4a08d8b83c90f8a8bf7c",
+        "bytes": 647790,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        302,
+        134,
+        688,
+        903
+      ],
+      "uniformScale": 0.14044213263979194,
+      "visibleSize": [
+        54,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "e9bf2f5a077acd313ebefad77c3cf59533138e8583a1a8f4566b30dcbba8a583",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 852827,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "a",
+      "row": 1,
+      "col": 0,
+      "taskKey": "grant-left-a-v1",
+      "requestId": "9514cc24-aa08-4a50-b369-17170f2841ff",
+      "taskId": "mt_8cd178b4d3030eb8d16b719e4fdbbf0c",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-left-a-v1/source.webp",
+        "sha256": "e38620a0cf004a68da3f8717c9606d058d15fe7a5480efa11a3edacea30bd5e7",
+        "bytes": 612538,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        321,
+        170,
+        700,
+        859
+      ],
+      "uniformScale": 0.1567489114658926,
+      "visibleSize": [
+        59,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "b06fd9c8dacb7e5869af670847d7bcb75d23002a9558b871c121627ced9a3459",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 880787,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "col": 1,
+      "taskKey": "grant-left-stand-v1",
+      "requestId": "70f2ed34-77e9-4989-8ed9-a8c59408c873",
+      "taskId": "mt_9784722a63291d061d495c2e19c0a274",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-left-stand-v1/source.webp",
+        "sha256": "bf45a2f8011300baebdca6a747b6308468a964739053c068cfe1893937d7a954",
+        "bytes": 600552,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        350,
+        151,
+        648,
+        880
+      ],
+      "uniformScale": 0.14814814814814814,
+      "visibleSize": [
+        44,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "376af68a8b86fa21a7eed2841cf47432147013d5630f40d9c61d46619f316b5b",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 896154,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "b",
+      "row": 1,
+      "col": 2,
+      "taskKey": "grant-left-b-v1",
+      "requestId": "4ad7a4c8-c07b-4bdc-aac7-b159bbe69e95",
+      "taskId": "mt_88de14163b50633b00c3b145c135bbbf",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-left-b-v1/source.webp",
+        "sha256": "6dbe4b86a4a4ea805e29ea352803192bf209717649ddf3ef7c193dcf77aaa96d",
+        "bytes": 606526,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        334,
+        170,
+        670,
+        849
+      ],
+      "uniformScale": 0.15905743740795286,
+      "visibleSize": [
+        53,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "a34525f7fab0a0b333af755148d3dc46cd8e8bb26ba5cf87c6e3daa53be70491",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 893533,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "a",
+      "row": 2,
+      "col": 0,
+      "taskKey": "grant-left-a-v1",
+      "requestId": "9514cc24-aa08-4a50-b369-17170f2841ff",
+      "taskId": "mt_8cd178b4d3030eb8d16b719e4fdbbf0c",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-left-a-v1/source.webp",
+        "sha256": "e38620a0cf004a68da3f8717c9606d058d15fe7a5480efa11a3edacea30bd5e7",
+        "bytes": 612538,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        321,
+        170,
+        700,
+        859
+      ],
+      "uniformScale": 0.1567489114658926,
+      "visibleSize": [
+        59,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "8f2eb4b4ab52fadf20e1dca35c0e8cb502271d4ec5026f157fdc0a10c384bdaa",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 880787,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "col": 1,
+      "taskKey": "grant-left-stand-v1",
+      "requestId": "70f2ed34-77e9-4989-8ed9-a8c59408c873",
+      "taskId": "mt_9784722a63291d061d495c2e19c0a274",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-left-stand-v1/source.webp",
+        "sha256": "bf45a2f8011300baebdca6a747b6308468a964739053c068cfe1893937d7a954",
+        "bytes": 600552,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        350,
+        151,
+        648,
+        880
+      ],
+      "uniformScale": 0.14814814814814814,
+      "visibleSize": [
+        44,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "ea713e96246745f875042193eb9b3a20245220fcd715195f632d0ca65a584716",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 896154,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "b",
+      "row": 2,
+      "col": 2,
+      "taskKey": "grant-left-b-v1",
+      "requestId": "4ad7a4c8-c07b-4bdc-aac7-b159bbe69e95",
+      "taskId": "mt_88de14163b50633b00c3b145c135bbbf",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-left-b-v1/source.webp",
+        "sha256": "6dbe4b86a4a4ea805e29ea352803192bf209717649ddf3ef7c193dcf77aaa96d",
+        "bytes": 606526,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        334,
+        170,
+        670,
+        849
+      ],
+      "uniformScale": 0.15905743740795286,
+      "visibleSize": [
+        53,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "3147a33b7c1ddc09f8f2d3fef2491d20bb113c3e5c3fa712353d857dd60647aa",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 893533,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "a",
+      "row": 3,
+      "col": 0,
+      "taskKey": "grant-up-a-v1",
+      "requestId": "586bbfac-209e-42d8-bb53-66ef41f6afab",
+      "taskId": "mt_214f8ce5d5ceb709cf50faf7b035fe50",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-up-a-v1/source.webp",
+        "sha256": "f5a71d01c39b1dc93cff3d4ee7a481042bb5d6e694aacd9ec67d4b5f741915a2",
+        "bytes": 605026,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        337,
+        129,
+        697,
+        846
+      ],
+      "uniformScale": 0.1506276150627615,
+      "visibleSize": [
+        54,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "e7109fdf37e3e094a41eaeaf6fae3757595317a7e86744d249bcbb077dfb1980",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 881974,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "col": 1,
+      "taskKey": "grant-up-stand-v1",
+      "requestId": "e3f1f983-2753-4906-a72f-e1ba928fdf5c",
+      "taskId": "mt_9f80b63fcccbddaf4ee7565887117f63",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-up-stand-v1/source.webp",
+        "sha256": "044025a802981f65c6327a9ab309136de3e84a138e94203f5ede41108b8ab597",
+        "bytes": 611338,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        321,
+        129,
+        693,
+        817
+      ],
+      "uniformScale": 0.1569767441860465,
+      "visibleSize": [
+        58,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "ac2b84dfad4fb1fdc000be911f78948018865c1d7d3dcfff551a52af0d67bef5",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 868609,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "b",
+      "row": 3,
+      "col": 2,
+      "taskKey": "grant-up-b-v1",
+      "requestId": "c0f51818-9bf9-4764-b8f0-90d733ac3de6",
+      "taskId": "mt_6b81d32f6f71da201f52756df6069566",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/grant-up-b-v1/source.webp",
+        "sha256": "b45b072d30ed55ec1e840a5006f9097a3bc5675f1e95da53d0f60913b76e51fe",
+        "bytes": 608230,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        317,
+        129,
+        672,
+        842
+      ],
+      "uniformScale": 0.1514726507713885,
+      "visibleSize": [
+        54,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "c555b132cd3366f2e620ed3cda7f8cac6619cc4a951ddfa0d8bcc3f16a0a7c45",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 885836,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    }
+  ],
+  "complete": true,
+  "processing": "existing Harbor strong-magenta key, full-body tight crop, uniform nearest resampling, foot-bottom alignment, whole side frame mirror; no limb editing/repainting",
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "published": false
+}

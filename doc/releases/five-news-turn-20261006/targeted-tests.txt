@@ -1,0 +1,36 @@
+✔ only five admitted residents are playable; unfinished Mira facts remain readable (2.520833ms)
+✔ 13-resident-era bilingual saves reopen unchanged; CAS and replay preserve deferred facts (13.232458ms)
+✔ production frozen edition is exactly the admitted recheck; deployment explicitly opts in (0.54ms)
+✔ exact expiry boundary stops an unread edition but preserves an already-started story (3.3625ms)
+✔ frozen news config opt-in retains source dates; expiry is not silently refreshed (0.328667ms)
+✔ expired/unavailable stories reject free-dialogue topic resolution too (0.396042ms)
+✔ an existing unread journey pins real news at its next notebook action; read legacy story stays intact (0.357791ms)
+✔ identical official RSS recheck changes only checked time and expiry of the same story (0.963666ms)
+✔ explicit new configuration extends verification without repinning an already-started story (2.533458ms)
+✔ five published occupations, 18 total, no unseen spoilers; all offline outcomes preserve mainline and wallet (8.807041ms)
+✔ waiting stories persist through missed schedules and night; delayed consultation cannot be skipped (0.384916ms)
+✔ actual local authority: completion response replay, restart and owner isolation (8.542875ms)
+✔ new player sees no unseen residents, places alone reveal nobody (1.247959ms)
+✔ legacy projection restores explicit encounters once without mutating saves (0.35ms)
+✔ completed bag and lantern outrank old request text and absent inventory (0.11625ms)
+✔ bridge route and garden completion suppress stale next steps (0.116334ms)
+✔ current materials select exact next place and person links are known-only (0.226416ms)
+✔ casual conversation does not become unfinished assignment or numeric affection (0.101375ms)
+✔ optional authored appointment: untriggered hidden, upcoming, present, missed and done (0.174459ms)
+✔ resident schedules hidden before explicit routine conversation (0.065333ms)
+✔ pure rules: readable winning paths, non-dominant spam, terminal hit has no retaliation (1.184ms)
+✔ training costs nothing, old spar reward cannot repeat, tutorial completion is distinct (1.424917ms)
+✔ mission once-only fee/reward, full purse defers without losing payment, repeat earns nothing (1.861959ms)
+✔ pause allows harvesting and resident stories; resume retains latest inventory, clock and relationships (1.110792ms)
+✔ supplies are explicit, consumed once, training cannot spend; unrelated items preserved (0.371083ms)
+✔ world lock, coexistence, admission, stale rounds and malformed save are rejected (0.402ms)
+✔ SQLite: response-loss replay, CAS, restart and owner isolation preserve one turn/reward (16.324208ms)
+✔ all five published resident stories complete through ordinary reducer actions during a paused bout (2.044541ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 184.158125

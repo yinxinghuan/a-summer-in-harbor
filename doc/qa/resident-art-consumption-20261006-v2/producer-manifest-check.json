@@ -1,0 +1,125 @@
+{
+  "manifestSHA256": "a73528706a8f898f1927a19250c1331646c42e65379d4fda1a94f62af0f9dee6",
+  "componentsChecked": [
+    {
+      "resident": "rowan",
+      "component": "atlas",
+      "path": "assets/rowan.png",
+      "sha256": "fc57b296b829e43a4d2d52d925d263e0d093ea882cba77911b814b0767e85b28"
+    },
+    {
+      "resident": "rowan",
+      "component": "avatar",
+      "path": "assets/rowan-avatar.png",
+      "sha256": "54a443fef18b1571f2743149e34784a13cda2414513b3338eecc99eec834dd9b"
+    },
+    {
+      "resident": "rowan",
+      "component": "portrait",
+      "path": "assets/rowan-portrait.png",
+      "sha256": "e473b3e511f6ec089f5760ec38be4c94cbd44f969c707e210fc88dbf7368e27e"
+    },
+    {
+      "resident": "mira",
+      "component": "avatar",
+      "path": "assets/mira-avatar.png",
+      "sha256": "1fd003f4a36000b2b777170b47621dbdb864a30bda5f78ccb69e9f2cbe8c11f8"
+    },
+    {
+      "resident": "mira",
+      "component": "portrait",
+      "path": "assets/mira-portrait.png",
+      "sha256": "1e451750a02ca39ef9f0d0f68af27f7acccaf1cff1461324a6755320e4244a5b"
+    },
+    {
+      "resident": "jordan",
+      "component": "atlas",
+      "path": "assets/jordan.png",
+      "sha256": "8beef34c8b406b7dc61ecea550acbb46f95edbd8c325c14d921c3e6685e50b6c"
+    },
+    {
+      "resident": "jordan",
+      "component": "avatar",
+      "path": "assets/jordan-avatar.png",
+      "sha256": "d2f65216f0a1b6e3e04cf72dbc2c9b2eec25e69d4cb0b865f31a3119a8f2fa1c"
+    },
+    {
+      "resident": "jordan",
+      "component": "portrait",
+      "path": "assets/jordan-portrait.png",
+      "sha256": "9d85c837d13d47bcbcc2e515fcc968d56a38cfc111b466cb34afa6234f20790f"
+    },
+    {
+      "resident": "leila",
+      "component": "atlas",
+      "path": "assets/leila.png",
+      "sha256": "d9f514c3b986d8458b1ea3952f56766cd1c0aef13229285aa4f344c7bd47e3d4"
+    },
+    {
+      "resident": "leila",
+      "component": "avatar",
+      "path": "assets/leila-avatar.png",
+      "sha256": "db64d2d10d74c2526373be13d675669ed3597a90797cd6b225ce042c89fa7a5a"
+    },
+    {
+      "resident": "leila",
+      "component": "portrait",
+      "path": "assets/leila-portrait.png",
+      "sha256": "012ab7ed3b2b78724715d43a4578b46d779123e54d9a70b0f231df29610e024d"
+    },
+    {
+      "resident": "casey",
+      "component": "atlas",
+      "path": "assets/casey.png",
+      "sha256": "63b66e28d3854c7b23d473552a68f34c42300eef17d5fb981fd4dd85dafcef13"
+    },
+    {
+      "resident": "casey",
+      "component": "avatar",
+      "path": "assets/casey-avatar.png",
+      "sha256": "66841e539a7815f11c8f1e475d2420955ec33be1576cfa11f18da2f177a4961e"
+    },
+    {
+      "resident": "casey",
+      "component": "portrait",
+      "path": "assets/casey-portrait.png",
+      "sha256": "60c1122b49f570d04ed2f176d7a08c792454e29d3fb1ebb0034999efc4da428e"
+    },
+    {
+      "resident": "grant",
+      "component": "atlas",
+      "path": "assets/grant.png",
+      "sha256": "21acdf3db06a7aff9968feb95732793e2ccb62736bd5ffac66884d690c017044"
+    },
+    {
+      "resident": "grant",
+      "component": "avatar",
+      "path": "assets/grant-avatar.png",
+      "sha256": "3c1321555920ee04c94c23269a055093124fe1b3200357db86d1504afbce2cbe"
+    },
+    {
+      "resident": "grant",
+      "component": "portrait",
+      "path": "assets/grant-portrait.png",
+      "sha256": "6e8e851c9fad5b9dcd3434ef1172606379bc4303043acedacd0d02b91a504ecc"
+    }
+  ],
+  "fixedSourceMappingsChecked": 57,
+  "POSTConsumed": 54,
+  "POSTRemaining": 24,
+  "MiraBlocker": [
+    {
+      "resident": "mira",
+      "reason": "Original ankle-length dress root v1 rejected; corrective root v2 outcome remains unknown/running beyond documented 240s window. No new ID retry; no valid root for action family.",
+      "taskId": "mt_8cbaa6eecd3ef2a93d491a6c2ad4c4ff",
+      "requestId": "846f0c57-9ffa-4f29-afb4-c374cbae41c6",
+      "lastTaskCheck": {
+        "at": "2026-10-05T19:42:57.499706+00:00",
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-down-stand-v2/status-history/1791229376328499000.json",
+        "status": "running"
+      },
+      "serviceTimeoutSeconds": 240,
+      "publicReadOnlyRoute": "GET /v1/tasks/{task_id}"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "status": "accepted",
+  "actorId": "rowan",
+  "sourceService": "AlterU Media Service",
+  "generatedDirections": {
+    "down": {
+      "stand": {
+        "requestId": "1e2d9de9-89df-4ee6-8028-af36951310a5",
+        "taskId": "mt_9e7c45eeef230a53f1efff6e9724eb6b",
+        "sha256": "0d415d5680a9537bcdae0adc6688bfe2e195a181b2693487b3db2c298b1f66f5",
+        "sourcePath": "tasks/rowan-down-stand-v3/source.webp"
+      },
+      "seedContact": {
+        "requestId": "b7470b21-55d6-4e12-8e84-081cd784bbc3",
+        "taskId": "mt_dd671bf6fc0c7c290e859982d0e2b631",
+        "sha256": "5a23824f50c88fdab52fef7aecfbbaa7a8ae190d24006db70fb596cbbbd4e57a",
+        "sourcePath": "tasks/rowan-down-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "8481a54b-b810-498d-8126-a43b11374b9b",
+        "taskId": "mt_6dcef7b65afb0eb47860baa9a4978406",
+        "sha256": "fabee445d4ccb837154bd4078964c1b4b4849442e739c9923d6433ab5a6a4165",
+        "sourcePath": "tasks/rowan-down-b-v1/source.webp",
+        "referenceTaskId": "mt_dd671bf6fc0c7c290e859982d0e2b631"
+      }
+    },
+    "side": {
+      "stand": {
+        "requestId": "a6f8e6bc-ff9f-443a-88d3-0a0aaaa84b88",
+        "taskId": "mt_53026c703a8e7ed18706aed358bf0f23",
+        "sha256": "8ab2f7494b35413608fb32975cc0b58351b741ed17a36d0a719e7f5bc14d8eb2",
+        "sourcePath": "tasks/rowan-left-stand-v1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "ef386f8a-2d95-4c65-9ada-b9a12741eb52",
+        "taskId": "mt_33b6df3c194420b08f3f128ac0c57433",
+        "sha256": "dd64d86e0c556414cd1d8a3b907447af4526e47c6e9df6a60de4f7be615d74ab",
+        "sourcePath": "tasks/rowan-left-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "92823b55-4125-46bd-90f2-23ee187e376a",
+        "taskId": "mt_e4b3a5dce2dd551ad84743329ad0ea25",
+        "sha256": "570f135529ec2c6b1f729483b5db1366dabb374403eae8c957f28d32dcb2ef50",
+        "sourcePath": "tasks/rowan-left-b-v2/source.webp",
+        "referenceTaskId": "mt_33b6df3c194420b08f3f128ac0c57433"
+      }
+    },
+    "up": {
+      "stand": {
+        "requestId": "d267f5be-9510-4b67-965e-26d6590da545",
+        "taskId": "mt_345f0f36baee08ffc86d4ff66ba428e0",
+        "sha256": "26e85ce0cb5f6943d1c3a00805311912cc4bda211bec2fda143f12dec4fb3ea1",
+        "sourcePath": "tasks/rowan-up-stand-v1/source.webp"
+      },
+      "seedContact": {
+        "requestId": "7fb3b6c3-a187-4778-b73e-5f77e16ed3d0",
+        "taskId": "mt_1f8fc182c43fb0e40df35ce9777494bb",
+        "sha256": "648ac85bbcd99c79b5bd2f259043065c15468d6cad81a948b9298a92c6d5cd14",
+        "sourcePath": "tasks/rowan-up-a-v1/source.webp"
+      },
+      "oppositeContact": {
+        "requestId": "13acfbd1-dc21-4379-9441-87a3b44232e4",
+        "taskId": "mt_aae5ea4bd4a875332f620cb0e82b6bcb",
+        "sha256": "6917ad3b9e395c20c4619b7a23e95d872e20bee4d62ad26d87bf212f0ade2c95",
+        "sourcePath": "tasks/rowan-up-b-v1/source.webp",
+        "referenceTaskId": "mt_1f8fc182c43fb0e40df35ce9777494bb"
+      }
+    }
+  },
+  "derivedDirection": {
+    "direction": "right",
+    "from": "side",
+    "transform": "mirror-full-frame"
+  },
+  "evidence": [
+    {
+      "viewport": "390x844",
+      "direction": "down",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/rowan-walk/capture.json",
+      "videoPath": "evidence/rowan-walk/f5c70d8f4ad268cfb4be82692251f789.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "down",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/rowan-walk/capture.json",
+      "videoPath": "evidence/rowan-walk/eec102565aa3569a35c5600adb5b52c6.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "390x844",
+      "direction": "side",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/rowan-walk/capture.json",
+      "videoPath": "evidence/rowan-walk/f5c70d8f4ad268cfb4be82692251f789.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "side",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/rowan-walk/capture.json",
+      "videoPath": "evidence/rowan-walk/eec102565aa3569a35c5600adb5b52c6.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "390x844",
+      "direction": "up",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/rowan-walk/capture.json",
+      "videoPath": "evidence/rowan-walk/f5c70d8f4ad268cfb4be82692251f789.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    },
+    {
+      "viewport": "320x568",
+      "direction": "up",
+      "renderer": "actual",
+      "cycle": "contact-stand-opposite-stand",
+      "path": "evidence/rowan-walk/capture.json",
+      "videoPath": "evidence/rowan-walk/eec102565aa3569a35c5600adb5b52c6.webm",
+      "scope": "isolated original renderer snapshot, actual game owner integration pending"
+    }
+  ]
+}

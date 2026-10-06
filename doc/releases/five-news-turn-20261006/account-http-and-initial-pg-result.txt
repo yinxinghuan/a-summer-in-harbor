@@ -1,0 +1,39 @@
+✔ account HTTP news projection covers create/read/action without persisting derived availability (45.075291ms)
+✖ actual PG turn CAS/response replay/reopen preserves paused crop and neighbor state (11.097875ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 215.7025
+
+✖ failing tests:
+
+test at _qa/turn-pg.test.ts:1:923
+✖ actual PG turn CAS/response replay/reopen preserves paused crop and neighbor state (11.097875ms)
+  error: role "yin" does not exist
+      at /Users/yin/code/games/a-summer-in-harbor/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async TestContext.<anonymous> (/private/tmp/harbor-five-release-20261006/source/_qa/turn-pg.test.ts:7:2124)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    length: 95,
+    severity: 'FATAL',
+    code: '28000',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'miscinit.c',
+    line: '801',
+    routine: 'InitializeSessionUserId'
+  }

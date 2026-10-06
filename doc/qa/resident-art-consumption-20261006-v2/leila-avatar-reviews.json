@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "authority": "AI",
+  "decision": "pass",
+  "at": "2026-10-05T19:39:06.384613+00:00",
+  "scope": "processed individual consumer identity/alpha/edges; map family and actual owner UI admission separate",
+  "reason": "固定原件身份、服装与用户冻结要求一致；marked-hole诊断及海湾浅/深/绿背景处理图复查，没有可见品红孔洞、边缘显著色污或剪掉人物。0强品红、opaque core RGB不变、nearest采样验证。",
+  "evidence": [
+    "evidence/profiles-all-dark-review.png",
+    "evidence/leila-avatar-matte-review.png",
+    "assets/leila-avatar.json"
+  ],
+  "sourceSHA256": "c4ed6e32d0c4d5beac9ba415f58aa50cfc8d0d4a006993bd6a41ab7acc8b098b",
+  "consumerSHA256": "db64d2d10d74c2526373be13d675669ed3597a90797cd6b225ce042c89fa7a5a",
+  "humanOverride": null,
+  "actualGameIntegration": "owner pending"
+}

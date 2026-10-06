@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "title": "Federal Reserve issues FOMC statement",
+      "canonicalURL": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "publishedAt": "2026-09-16T18:00:00.000Z",
+      "publishedRaw": "Wed, 16 Sep 2026 18:00:00 GMT",
+      "id": "rss-da3bcbb85f4595d6b859363d",
+      "sourceId": "fed-monetary",
+      "source": "Federal Reserve Board",
+      "publishedPrecision": "instant",
+      "publishedTimezone": "UTC",
+      "contentHash": "a219bcd87299474b6543f42d2d464c2012292fc0ee1d6dfa4e62c3c50cc1b28d",
+      "template": "finance-budget-v1",
+      "revision": 1,
+      "fetchedAt": "2026-10-04T16:17:55.111Z",
+      "lastCheckedAt": "2026-10-05T18:59:16.076Z",
+      "expiresAt": "2026-10-08T18:59:16.076Z",
+      "status": "admitted"
+    }
+  ],
+  "lastFetchAt": "2026-10-05T18:59:16.076Z"
+}

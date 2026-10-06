@@ -1,0 +1,500 @@
+[
+  {
+    "width": 390,
+    "view": "list",
+    "geometry": {
+      "images": [
+        {
+          "complete": true,
+          "height": 64,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/rowan-avatar.png",
+          "width": 64
+        },
+        {
+          "complete": true,
+          "height": 64,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/mira-avatar.png",
+          "width": 64
+        },
+        {
+          "complete": true,
+          "height": 64,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/jordan-avatar.png",
+          "width": 64
+        },
+        {
+          "complete": true,
+          "height": 64,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/leila-avatar.png",
+          "width": 64
+        },
+        {
+          "complete": true,
+          "height": 64,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/casey-avatar.png",
+          "width": 64
+        },
+        {
+          "complete": true,
+          "height": 64,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/grant-avatar.png",
+          "width": 64
+        },
+        {
+          "complete": true,
+          "height": 88,
+          "naturalHeight": 766,
+          "naturalWidth": 414,
+          "src": "./art/mara-root-v2.png",
+          "width": 64
+        }
+      ],
+      "scrollWidth": 390,
+      "width": 390
+    }
+  },
+  {
+    "width": 390,
+    "id": "rowan",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 371.875,
+        "width": 297.5,
+        "x": 46.25,
+        "y": 236.0625
+      },
+      "scrollWidth": 390,
+      "src": "./art/rowan-root-v2.png",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "id": "mira",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 371.875,
+        "width": 297.5,
+        "x": 46.25,
+        "y": 236.0625
+      },
+      "scrollWidth": 390,
+      "src": "./art/mira-root-v2.png",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "id": "jordan",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 371.875,
+        "width": 297.5,
+        "x": 46.25,
+        "y": 236.0625
+      },
+      "scrollWidth": 390,
+      "src": "./art/jordan-root-v2.png",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "id": "leila",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 371.875,
+        "width": 297.5,
+        "x": 46.25,
+        "y": 236.0625
+      },
+      "scrollWidth": 390,
+      "src": "./art/leila-root-v2.png",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "id": "casey",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 371.875,
+        "width": 297.5,
+        "x": 46.25,
+        "y": 236.0625
+      },
+      "scrollWidth": 390,
+      "src": "./art/casey-root-v2.png",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "id": "grant",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 371.875,
+        "width": 297.5,
+        "x": 46.25,
+        "y": 236.0625
+      },
+      "scrollWidth": 390,
+      "src": "./art/grant-root-v2.png",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "view": "list",
+    "geometry": {
+      "images": [
+        {
+          "complete": true,
+          "height": 56,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/rowan-avatar.png",
+          "width": 56
+        },
+        {
+          "complete": true,
+          "height": 56,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/mira-avatar.png",
+          "width": 56
+        },
+        {
+          "complete": true,
+          "height": 56,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/jordan-avatar.png",
+          "width": 56
+        },
+        {
+          "complete": true,
+          "height": 56,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/leila-avatar.png",
+          "width": 56
+        },
+        {
+          "complete": true,
+          "height": 56,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/casey-avatar.png",
+          "width": 56
+        },
+        {
+          "complete": true,
+          "height": 56,
+          "naturalHeight": 256,
+          "naturalWidth": 256,
+          "src": "./art/grant-avatar.png",
+          "width": 56
+        },
+        {
+          "complete": true,
+          "height": 80,
+          "naturalHeight": 766,
+          "naturalWidth": 414,
+          "src": "./art/mara-root-v2.png",
+          "width": 56
+        }
+      ],
+      "scrollWidth": 320,
+      "width": 320
+    }
+  },
+  {
+    "width": 320,
+    "id": "rowan",
+    "view": "card",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "panelScrollWidth": 290,
+      "panelWidth": 290,
+      "scrollWidth": 320,
+      "src": "./art/rowan-root-v2.png"
+    }
+  },
+  {
+    "width": 320,
+    "id": "rowan",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 314.4921875,
+        "width": 251.59375,
+        "x": 34.203125,
+        "y": 126.75
+      },
+      "scrollWidth": 320,
+      "src": "./art/rowan-root-v2.png",
+      "viewport": [
+        320,
+        568
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "id": "mira",
+    "view": "card",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "panelScrollWidth": 290,
+      "panelWidth": 290,
+      "scrollWidth": 320,
+      "src": "./art/mira-root-v2.png"
+    }
+  },
+  {
+    "width": 320,
+    "id": "mira",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 314.4921875,
+        "width": 251.59375,
+        "x": 34.203125,
+        "y": 126.75
+      },
+      "scrollWidth": 320,
+      "src": "./art/mira-root-v2.png",
+      "viewport": [
+        320,
+        568
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "id": "jordan",
+    "view": "card",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "panelScrollWidth": 290,
+      "panelWidth": 290,
+      "scrollWidth": 320,
+      "src": "./art/jordan-root-v2.png"
+    }
+  },
+  {
+    "width": 320,
+    "id": "jordan",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 314.4921875,
+        "width": 251.59375,
+        "x": 34.203125,
+        "y": 126.75
+      },
+      "scrollWidth": 320,
+      "src": "./art/jordan-root-v2.png",
+      "viewport": [
+        320,
+        568
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "id": "leila",
+    "view": "card",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "panelScrollWidth": 290,
+      "panelWidth": 290,
+      "scrollWidth": 320,
+      "src": "./art/leila-root-v2.png"
+    }
+  },
+  {
+    "width": 320,
+    "id": "leila",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 314.4921875,
+        "width": 251.59375,
+        "x": 34.203125,
+        "y": 126.75
+      },
+      "scrollWidth": 320,
+      "src": "./art/leila-root-v2.png",
+      "viewport": [
+        320,
+        568
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "id": "casey",
+    "view": "card",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "panelScrollWidth": 290,
+      "panelWidth": 290,
+      "scrollWidth": 320,
+      "src": "./art/casey-root-v2.png"
+    }
+  },
+  {
+    "width": 320,
+    "id": "casey",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 314.4921875,
+        "width": 251.59375,
+        "x": 34.203125,
+        "y": 126.75
+      },
+      "scrollWidth": 320,
+      "src": "./art/casey-root-v2.png",
+      "viewport": [
+        320,
+        568
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "id": "grant",
+    "view": "card",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "panelScrollWidth": 290,
+      "panelWidth": 290,
+      "scrollWidth": 320,
+      "src": "./art/grant-root-v2.png"
+    }
+  },
+  {
+    "width": 320,
+    "id": "grant",
+    "view": "enlarged",
+    "geometry": {
+      "natural": [
+        512,
+        640
+      ],
+      "rect": {
+        "height": 314.4921875,
+        "width": 251.59375,
+        "x": 34.203125,
+        "y": 126.75
+      },
+      "scrollWidth": 320,
+      "src": "./art/grant-root-v2.png",
+      "viewport": [
+        320,
+        568
+      ]
+    }
+  }
+]
