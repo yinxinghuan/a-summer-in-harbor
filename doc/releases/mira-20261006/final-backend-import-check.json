@@ -1,0 +1,7 @@
+{
+  "priorContractExactlyPreserved": true,
+  "dependenciesBundled": true,
+  "vendorPathsPreserved": true,
+  "createRequireBridge": true,
+  "bundleSHA256": "2891847d8f40d85900ab2d0f2731f69711ce0a96bb2513225a35dcfdd4e76017"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "Failed",
+  "exit": 1,
+  "markers": [],
+  "outputBytes": 181,
+  "diagnosticLines": [
+    "Traceback (most recent call last):",
+    "  File \"<stdin>\", line 50, in <module>",
+    "AssertionError: Health failed before exposure"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "Success",
+  "exit": 0,
+  "markers": [
+    "HARBOR_CHECK {\"oldBackendRunning\": true, \"health\": {\"ok\": true, \"sourceRelease\": \"harbor-five-news-turn-20261006\", \"persistence\": \"postgresql\"}, \"oldCmd\": [\"node\", \"public.mjs\"], \"newCmd\": [\"node\", \"public.mjs\"], \"oldEntrypoint\": null, \"newEntrypoint\": null, \"newBundleSyntaxOK\": true, \"safeSyntaxError\": \"\", \"environmentKeysPreserved\": false, \"runningWriters\": [\"harbor-runtime\"]}"
+  ],
+  "outputBytes": 382,
+  "diagnosticLines": []
+}
