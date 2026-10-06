@@ -1,0 +1,165 @@
+{
+  "scope": "READ_ONLY_ART_ADMISSION_NO_VISUAL_JUDGMENT",
+  "productionReady": true,
+  "roles": [
+    {
+      "id": "harper",
+      "status": "METADATA_AND_BYTES_PASS_STILL_REVIEW_RENDERER_EVIDENCE",
+      "rendererEvidence": "doc/qa/tech-nomads-owner-20261006/harper-admission.json",
+      "missing": [],
+      "files": [
+        {
+          "kind": "atlas",
+          "path": "public/art/npc-harper.png",
+          "status": "BYTES_MATCH",
+          "expectedDimensions": [
+            384,
+            512
+          ],
+          "dimensions": [
+            384,
+            512
+          ],
+          "hash": "fdaa1f360e9776ce7dc9ae2d65e5d4a439f9ef3f6166aa819fd07827dda950db",
+          "expectedHash": "fdaa1f360e9776ce7dc9ae2d65e5d4a439f9ef3f6166aa819fd07827dda950db"
+        },
+        {
+          "kind": "avatar",
+          "path": "public/art/npc-harper-avatar.png",
+          "status": "BYTES_MATCH",
+          "expectedDimensions": [
+            256,
+            256
+          ],
+          "dimensions": [
+            256,
+            256
+          ],
+          "hash": "bbde72ee79948d40835eca0ff85486641b81dca2f3fb03c42ef12c1ae6b611a4",
+          "expectedHash": "bbde72ee79948d40835eca0ff85486641b81dca2f3fb03c42ef12c1ae6b611a4"
+        },
+        {
+          "kind": "portrait",
+          "path": "public/art/npc-harper-root-v2.png",
+          "status": "BYTES_MATCH",
+          "expectedDimensions": [
+            512,
+            512
+          ],
+          "dimensions": [
+            512,
+            512
+          ],
+          "hash": "60679d1f58737cdd9b8ad1a66943ef54a8dd01ed252ee302a70a4b316c42cb0b",
+          "expectedHash": "60679d1f58737cdd9b8ad1a66943ef54a8dd01ed252ee302a70a4b316c42cb0b"
+        }
+      ]
+    },
+    {
+      "id": "tess",
+      "status": "METADATA_AND_BYTES_PASS_STILL_REVIEW_RENDERER_EVIDENCE",
+      "rendererEvidence": "doc/qa/tech-nomads-owner-20261006/tess-admission.json",
+      "missing": [],
+      "files": [
+        {
+          "kind": "atlas",
+          "path": "public/art/npc-tess.png",
+          "status": "BYTES_MATCH",
+          "expectedDimensions": [
+            384,
+            512
+          ],
+          "dimensions": [
+            384,
+            512
+          ],
+          "hash": "c70515c7d5332b33f7e8f557878509f3f6b8065d181f7956c6b980d552f770cc",
+          "expectedHash": "c70515c7d5332b33f7e8f557878509f3f6b8065d181f7956c6b980d552f770cc"
+        },
+        {
+          "kind": "avatar",
+          "path": "public/art/npc-tess-avatar.png",
+          "status": "BYTES_MATCH",
+          "expectedDimensions": [
+            256,
+            256
+          ],
+          "dimensions": [
+            256,
+            256
+          ],
+          "hash": "8e7d7e1129ee98468b19ca08822def23aecb9d47673e715ace614becf960a92a",
+          "expectedHash": "8e7d7e1129ee98468b19ca08822def23aecb9d47673e715ace614becf960a92a"
+        },
+        {
+          "kind": "portrait",
+          "path": "public/art/npc-tess-root-v2.png",
+          "status": "BYTES_MATCH",
+          "expectedDimensions": [
+            512,
+            512
+          ],
+          "dimensions": [
+            512,
+            512
+          ],
+          "hash": "f7a9f36b606d2d80aa76f6d33fdb9933c05e6bdc2e7a946d72d2d59bcb3e8a90",
+          "expectedHash": "f7a9f36b606d2d80aa76f6d33fdb9933c05e6bdc2e7a946d72d2d59bcb3e8a90"
+        }
+      ]
+    },
+    {
+      "id": "noor",
+      "status": "METADATA_AND_BYTES_PASS_STILL_REVIEW_RENDERER_EVIDENCE",
+      "rendererEvidence": "doc/qa/tech-nomads-owner-20261006/noor-admission.json",
+      "missing": [],
+      "files": [
+        {
+          "kind": "atlas",
+          "path": "public/art/npc-noor.png",
+          "status": "BYTES_MATCH",
+          "expectedDimensions": [
+            384,
+            512
+          ],
+          "dimensions": [
+            384,
+            512
+          ],
+          "hash": "f6a7709b666a2862eaca5cc5e3116c208a63a57386c064e8ecf84109f6c19753",
+          "expectedHash": "f6a7709b666a2862eaca5cc5e3116c208a63a57386c064e8ecf84109f6c19753"
+        },
+        {
+          "kind": "avatar",
+          "path": "public/art/npc-noor-avatar.png",
+          "status": "BYTES_MATCH",
+          "expectedDimensions": [
+            256,
+            256
+          ],
+          "dimensions": [
+            256,
+            256
+          ],
+          "hash": "b463bbe3c5d1503b042ddc28b515c0f6154d8918ed25bfc10f421d1ba80797a7",
+          "expectedHash": "b463bbe3c5d1503b042ddc28b515c0f6154d8918ed25bfc10f421d1ba80797a7"
+        },
+        {
+          "kind": "portrait",
+          "path": "public/art/npc-noor-root-v2.png",
+          "status": "BYTES_MATCH",
+          "expectedDimensions": [
+            512,
+            512
+          ],
+          "dimensions": [
+            512,
+            512
+          ],
+          "hash": "6ef81c954c1cdaef467f94b20c5e37bdb10c67fc711c481da3c188c7efb51f85",
+          "expectedHash": "6ef81c954c1cdaef467f94b20c5e37bdb10c67fc711c481da3c188c7efb51f85"
+        }
+      ]
+    }
+  ]
+}

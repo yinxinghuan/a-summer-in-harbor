@@ -1,0 +1,293 @@
+{
+  "at": "2026-10-06T11:23:11.216624+00:00",
+  "rawEvidenceRoot": "/private/tmp/harbor-tech-nomads-owner-20261006/evidence",
+  "rawLogsAndFailureScreensRetained": true,
+  "failuresNotDiscarded": [
+    "First node targeted test TMPDIR sandbox denied; rerun with approved /tmp",
+    "Mac Chromium default sandbox MachPort denied; exact local QA with require_escalated approved",
+    "Pillow x86_64 _imaging on arm64 import failed; no install, read-only stdlib PNG decoder used",
+    "Initial Harper QA mid-conversation/focus/history/square-button sizing assertions; corrected UI image box and ordinary QA reading/open-state handling before final matrix",
+    "Tess initial nearest resident was Rowan and later walking path blocked by patrol; QA now chooses normal closer walking and replans against current bodies",
+    "Noor initial walk path similarly needed ordinary closer approach",
+    "Initial strict final build equality failed only intentionally appended rights notice; application code and assets unchanged",
+    "ps -axo pid,ppid,comm denied by sandbox: zsh operation not permitted: ps. No retry/escalation or global process-inventory claim. Read-only lsof listener check succeeded."
+  ],
+  "autoReviewRejectionsInThisOwnerTask": 0,
+  "files": [
+    {
+      "path": "api-base-audit.log",
+      "bytes": 104,
+      "sha256": "5bc24fd5626b31ce387cb40e94b6471f2d4cb0fef0d7c46e427cfd381757400c"
+    },
+    {
+      "path": "build-first.log",
+      "bytes": 1534,
+      "sha256": "2216ef2e00dfdd722f360d524ddb8453cddcd3525ceda4d6675ee19d205c8caf"
+    },
+    {
+      "path": "build-nomads22-final.log",
+      "bytes": 1534,
+      "sha256": "419ece387852fdba8dc1f4a26aad4a9eddbda3e82e05dedfcfd9e7373d244b2d"
+    },
+    {
+      "path": "build-nomads22.log",
+      "bytes": 1534,
+      "sha256": "490ed2b2895a384a487959c8fc5426c601212488bcd94868f66e313b77822408"
+    },
+    {
+      "path": "build-square-border-fix.log",
+      "bytes": 1534,
+      "sha256": "fcf38420b29182a8f3462e3c8af364483773b06b97b93965f994800825f35995"
+    },
+    {
+      "path": "history/fifth-scoped-320-en-failure.png",
+      "bytes": 43212,
+      "sha256": "23c30985a052df71d254f49e72115c5f92433c5996cae9336fbc6c6ed176cbce"
+    },
+    {
+      "path": "history/first-scoped-320-en-failure.png",
+      "bytes": 66590,
+      "sha256": "a0885344167bd7a7844f71d48bf3c7ce94ae8258406e2eb756a73547c795da83"
+    },
+    {
+      "path": "history/fourth-scoped-320-en-failure.png",
+      "bytes": 56207,
+      "sha256": "033bd33f6f753221b564fd410545639e3944a611992fc1380c51f64d7bf7c187"
+    },
+    {
+      "path": "history/harper-owner-browser-stage20.ts",
+      "bytes": 15925,
+      "sha256": "f8fcc6920488b683b52c6e42ac0ac69e319dba27f56ad985f5905ded82685101"
+    },
+    {
+      "path": "history/second-scoped-320-en-failure.png",
+      "bytes": 172264,
+      "sha256": "e187dea802f69795141bcae0e7fedc66d904abadba15477aabf06edc7c30beac"
+    },
+    {
+      "path": "history/sixth-scoped-320-en-failure.png",
+      "bytes": 33521,
+      "sha256": "8bb738260bf17ef316c8df23bc29c7039b27cccfd713bdcbce100530519d507c"
+    },
+    {
+      "path": "history/third-scoped-320-en-failure.png",
+      "bytes": 43019,
+      "sha256": "e2f03fd0f5aaa9c5cc229edd3349c9a19d8b02d9e003b348a7f3863730a3a00c"
+    },
+    {
+      "path": "matrix-initial/320-en-failure.png",
+      "bytes": 33521,
+      "sha256": "8bb738260bf17ef316c8df23bc29c7039b27cccfd713bdcbce100530519d507c"
+    },
+    {
+      "path": "matrix-initial/320-zh-failure.png",
+      "bytes": 59412,
+      "sha256": "7cd6576c931daafedabdb2eb16adf225affd4ab868c265a199c662a11da91d97"
+    },
+    {
+      "path": "matrix-remaining-first/390-en-failure.png",
+      "bytes": 87925,
+      "sha256": "fdee1d225cb085bdc194b6cf6475ccf565e3e2ea6288c6155fd7958bd17fc3fb"
+    },
+    {
+      "path": "nomads22-api-base-audit.log",
+      "bytes": 104,
+      "sha256": "5bc24fd5626b31ce387cb40e94b6471f2d4cb0fef0d7c46e427cfd381757400c"
+    },
+    {
+      "path": "nomads22-final-api-base-audit.log",
+      "bytes": 104,
+      "sha256": "5bc24fd5626b31ce387cb40e94b6471f2d4cb0fef0d7c46e427cfd381757400c"
+    },
+    {
+      "path": "nomads22-final-secret-audit.log",
+      "bytes": 75,
+      "sha256": "8fa32a0dea31aedda5fe58baf21409cc6657ac17f7fdd950ed329b5cd81f1680"
+    },
+    {
+      "path": "nomads22-harper-maps.log",
+      "bytes": 463,
+      "sha256": "8450fb70ce3917eaa3abe23ba25d19490fc2eae68254d7fb1ba1e5a560670fc7"
+    },
+    {
+      "path": "nomads22-harper-ui.log",
+      "bytes": 323,
+      "sha256": "7267ca136b3e4b6fbd26839c57fb3d9a251898c5ec0fd82a01281f93d0e71a0d"
+    },
+    {
+      "path": "nomads22-noor-maps.log",
+      "bytes": 455,
+      "sha256": "b8f679b8236f5be7c3684c05579cd8d01fb37e271cf2d57e6317bf2875065317"
+    },
+    {
+      "path": "nomads22-noor-ui-fourth.log",
+      "bytes": 305,
+      "sha256": "bb9605e31adba779be0b471eba2f5e6d2c172251dfc9927c5c8530feae7fdfa5"
+    },
+    {
+      "path": "nomads22-offline-runner.log",
+      "bytes": 1972,
+      "sha256": "3d90608541d35ebcfc3f6c57474a45308da1080d6647de5e9ec118603b3624f8"
+    },
+    {
+      "path": "nomads22-secret-audit.log",
+      "bytes": 75,
+      "sha256": "8fa32a0dea31aedda5fe58baf21409cc6657ac17f7fdd950ed329b5cd81f1680"
+    },
+    {
+      "path": "nomads22-targeted-tests.log",
+      "bytes": 3089,
+      "sha256": "593c70822eccf0d751b662586c1d9d8465e83dd5f5af64ddca069fef26fa3c80"
+    },
+    {
+      "path": "nomads22-tess-maps.log",
+      "bytes": 435,
+      "sha256": "d7fa9c461b492adbcec5ec8dc3134bcdf0b445a4480d0e68d696cfecec494f13"
+    },
+    {
+      "path": "nomads22-tess-ui/tess-320-en-failure.png",
+      "bytes": 175975,
+      "sha256": "4159e1b1e5606908ae6e4ceee0b1cbf0edba5bee40113d8a2e878457030d81fb"
+    },
+    {
+      "path": "nomads22-tess-ui-first/tess-320-en-failure.png",
+      "bytes": 45574,
+      "sha256": "1ed4cc44db835080bf1d2fed644b551c9bb0faf3f7ca4887077c7704083e8d1d"
+    },
+    {
+      "path": "nomads22-tess-ui-fourth.log",
+      "bytes": 305,
+      "sha256": "428609164a3ae96acee5c1fdd786a4a4a79227e91c756d44d200d0b1a74570ab"
+    },
+    {
+      "path": "nomads22-tess-ui-second/tess-320-en-failure.png",
+      "bytes": 180148,
+      "sha256": "e968b20f1a048ed55d9767153dad1094619400a55bae79ba91ba291b9dd3f7f5"
+    },
+    {
+      "path": "nomads22-tess-ui-second.log",
+      "bytes": 565,
+      "sha256": "965c43cc19911e53625e2c279ee919edfbe3714e4c2fe0d70a8bc8af475268d6"
+    },
+    {
+      "path": "nomads22-tess-ui-third/tess-320-en-failure.png",
+      "bytes": 175975,
+      "sha256": "4159e1b1e5606908ae6e4ceee0b1cbf0edba5bee40113d8a2e878457030d81fb"
+    },
+    {
+      "path": "nomads22-tess-ui-third.log",
+      "bytes": 565,
+      "sha256": "6f4564a97306a8aa5f1ed541100114f65ba5f8eccafcaaa5d8e73d4afc2c8e65"
+    },
+    {
+      "path": "nomads22-tess-ui.log",
+      "bytes": 475,
+      "sha256": "ca44a0c7376a4bff9bcdce45ee098a8a953f8d98fd9cf8d738868b02873675d0"
+    },
+    {
+      "path": "owner-browser-fifth-scoped.log",
+      "bytes": 486,
+      "sha256": "8162a533eae0d552c05b957c7a92273955c8010786b42c5717670a6dcc0249c5"
+    },
+    {
+      "path": "owner-browser-first-scoped.log",
+      "bytes": 1862,
+      "sha256": "bc39e7c428c54a8c3a7beb653cf0717ed210c33754574269b26d81cbdb9fbbb6"
+    },
+    {
+      "path": "owner-browser-fourth-scoped.log",
+      "bytes": 476,
+      "sha256": "17af821a0b6ebdb6eb2c0607b93aa21be3c26431edcc1a1a1a073d9b519fecb8"
+    },
+    {
+      "path": "owner-browser-full-matrix.log",
+      "bytes": 442,
+      "sha256": "ec16860e69c5eef4e9c9631fa932c7e81d6dcd637e8767a6605e702836eac8f5"
+    },
+    {
+      "path": "owner-browser-initial.log",
+      "bytes": 5571,
+      "sha256": "75dd840e31116970d153cce2a7a4da361ce4a1ac0bafb05e9039785538fbebd8"
+    },
+    {
+      "path": "owner-browser-remaining-matrix-second.log",
+      "bytes": 237,
+      "sha256": "d666741da3a42c484a6f037bdac043cabe0064f8416d8da36ecdc9db4d069ab2"
+    },
+    {
+      "path": "owner-browser-remaining-matrix.log",
+      "bytes": 522,
+      "sha256": "eb7a03eeab01bb5f6204f630ee60612b9e1684babad13b2062dfccc0831d5262"
+    },
+    {
+      "path": "owner-browser-second-scoped.log",
+      "bytes": 1823,
+      "sha256": "594d59c8db0345e7fce0c9cebe372e47d12263a4dbe727582309c672ad5ddae6"
+    },
+    {
+      "path": "owner-browser-seventh-scoped.log",
+      "bytes": 157,
+      "sha256": "111783facd5856754da0cee9ce95b37913637e9c82c3e3b98b30bab6516f5bb0"
+    },
+    {
+      "path": "owner-browser-sixth-scoped.log",
+      "bytes": 450,
+      "sha256": "705f4236a3cf67ad1339c98b70fac34dc42b3a2d571abf167493b435e22a01e6"
+    },
+    {
+      "path": "owner-browser-third-scoped.log",
+      "bytes": 599,
+      "sha256": "711733f80530b425a158e1227d3bbbe51ff085ada30b18d39966e0e75db59855"
+    },
+    {
+      "path": "owner-consumer-pixel-audit.log",
+      "bytes": 97,
+      "sha256": "476862370ae6afd838fc93aade4b268c75695c9c93405cd9c0cfd5c5b57c4bda"
+    },
+    {
+      "path": "owner-map-closeups.log",
+      "bytes": 305,
+      "sha256": "d94e38854740f83a14c031514d66582cc0536ad4ff2a290f88a9d7009afbd5ca"
+    },
+    {
+      "path": "owner-ui/320-en-failure.png",
+      "bytes": 33521,
+      "sha256": "8bb738260bf17ef316c8df23bc29c7039b27cccfd713bdcbce100530519d507c"
+    },
+    {
+      "path": "owner-ui/320-zh-failure.png",
+      "bytes": 59412,
+      "sha256": "7cd6576c931daafedabdb2eb16adf225affd4ab868c265a199c662a11da91d97"
+    },
+    {
+      "path": "owner-ui-rest/390-en-failure.png",
+      "bytes": 87925,
+      "sha256": "fdee1d225cb085bdc194b6cf6475ccf565e3e2ea6288c6155fd7958bd17fc3fb"
+    },
+    {
+      "path": "pilot-pass/320-en-failure.png",
+      "bytes": 33521,
+      "sha256": "8bb738260bf17ef316c8df23bc29c7039b27cccfd713bdcbce100530519d507c"
+    },
+    {
+      "path": "secret-audit.log",
+      "bytes": 75,
+      "sha256": "8fa32a0dea31aedda5fe58baf21409cc6657ac17f7fdd950ed329b5cd81f1680"
+    },
+    {
+      "path": "targeted-tests-final.log",
+      "bytes": 3095,
+      "sha256": "2ba1e6c9f20c3047306cbaa5b7af6fa7ea3b5738804090d1d400710ba8f966a9"
+    },
+    {
+      "path": "targeted-tests-first-temp-denied.log",
+      "bytes": 7311,
+      "sha256": "270ce3a013d6d79f7695b01ec8804c17322b56771d869f54fcd40d7de1938f40"
+    },
+    {
+      "path": "targeted-tests.log",
+      "bytes": 3095,
+      "sha256": "1854c598d6955106665eaa9006bfd878f1fbacdb6b680f074b04672d75bab7e4"
+    }
+  ]
+}

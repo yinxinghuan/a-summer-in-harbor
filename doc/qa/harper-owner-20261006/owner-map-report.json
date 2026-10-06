@@ -1,0 +1,394 @@
+{
+  "scope": "Actual local fixed-build Main/View/RPGJS and HTTP handler with isolated SQLite authority; synthetic legacy seed only. No identity injection, listener, external network, production save or deployment.",
+  "cases": [
+    {
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "scene": "cafe",
+      "minute": 630,
+      "actualNPC": {
+        "player": {
+          "x": 367,
+          "y": 422
+        },
+        "harper": {
+          "x": 375,
+          "y": 380,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-theo",
+            "graphics": [
+              "npc-theo"
+            ],
+            "x": 592,
+            "y": 330
+          },
+          {
+            "id": "person-rowan",
+            "graphics": [],
+            "x": 365,
+            "y": 465
+          },
+          {
+            "id": "person-mira",
+            "graphics": [],
+            "x": 520,
+            "y": 470
+          },
+          {
+            "id": "person-casey",
+            "graphics": [
+              "npc-casey"
+            ],
+            "x": 653,
+            "y": 515
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 375,
+            "y": 380
+          }
+        ],
+        "targets": [
+          "exit",
+          "theo",
+          "terrace",
+          "casey",
+          "harper"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "scene": "cafe",
+      "minute": 630,
+      "actualNPC": {
+        "player": {
+          "x": 367,
+          "y": 422
+        },
+        "harper": {
+          "x": 375,
+          "y": 380,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-theo",
+            "graphics": [
+              "npc-theo"
+            ],
+            "x": 590,
+            "y": 330
+          },
+          {
+            "id": "person-rowan",
+            "graphics": [],
+            "x": 365,
+            "y": 465
+          },
+          {
+            "id": "person-mira",
+            "graphics": [],
+            "x": 520,
+            "y": 470
+          },
+          {
+            "id": "person-casey",
+            "graphics": [
+              "npc-casey"
+            ],
+            "x": 651,
+            "y": 515
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 375,
+            "y": 380
+          }
+        ],
+        "targets": [
+          "exit",
+          "theo",
+          "terrace",
+          "casey",
+          "harper"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "scene": "coast",
+      "minute": 1070,
+      "actualNPC": {
+        "player": {
+          "x": 737,
+          "y": 577
+        },
+        "harper": {
+          "x": 745,
+          "y": 535,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 745,
+            "y": 535
+          },
+          {
+            "id": "person-idris",
+            "graphics": [
+              "npc-idris"
+            ],
+            "x": 670,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [
+              "npc-ruth"
+            ],
+            "x": 533,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [
+              "npc-owen"
+            ],
+            "x": 613,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 633,
+            "y": 774
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 633,
+            "y": 622
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 874,
+            "y": 634
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 867,
+            "y": 766
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "harper",
+          "idris",
+          "ruth",
+          "owen",
+          "harbor-gull-1",
+          "harbor-gull-2",
+          "harbor-gull-3",
+          "harbor-gull-4"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "scene": "coast",
+      "minute": 1070,
+      "actualNPC": {
+        "player": {
+          "x": 737,
+          "y": 577
+        },
+        "harper": {
+          "x": 745,
+          "y": 535,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 745,
+            "y": 535
+          },
+          {
+            "id": "person-idris",
+            "graphics": [
+              "npc-idris"
+            ],
+            "x": 670,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [
+              "npc-ruth"
+            ],
+            "x": 531,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [
+              "npc-owen"
+            ],
+            "x": 611,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 632,
+            "y": 774
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 632,
+            "y": 622
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 874,
+            "y": 634
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 867,
+            "y": 766
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "harper",
+          "idris",
+          "ruth",
+          "owen",
+          "harbor-gull-1",
+          "harbor-gull-2",
+          "harbor-gull-3",
+          "harbor-gull-4"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    }
+  ],
+  "errors": [],
+  "missingAssets": [],
+  "blockedExternal": [
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js"
+  ],
+  "modelCalls": 0,
+  "mediaPosts": 0,
+  "realPhone": false,
+  "miniApp": false,
+  "TessNoor": "HOLD"
+}

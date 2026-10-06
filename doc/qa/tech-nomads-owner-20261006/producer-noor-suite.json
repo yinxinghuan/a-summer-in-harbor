@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "reviewer": "AI",
+  "at": "2026-10-06T10:44:18.935247+00:00",
+  "decision": "pass",
+  "person": "noor",
+  "singleSources": "pass",
+  "family": "pass",
+  "technical": "pass",
+  "isolatedTargetScene": "pass",
+  "atlasSHA256": "f6a7709b666a2862eaca5cc5e3116c208a63a57386c064e8ecf84109f6c19753",
+  "nativeIndependentCount": 9,
+  "nativeSourceCountIncludingRejected": 10,
+  "portraitNativeCount": 1,
+  "selectedRevision": "down-A-v2; v1 retained rejected",
+  "reason": "逐张实际查看9合格地图原源、12格2倍/三底及原f6 RPGJS320/390完整连续行走/停步。低盘扭发/暖棕较长脸/莓紫短袖立领与沙色长裤身份连续；下/侧/背A/B双臂轮廓及双腿反相，侧向近远遮挡交换，右向整格镜像。每尺寸四向各132–168真实rAF样本全部相位，停步回stand保留朝向；全24人尺寸方向轨迹另外证明A/stand/B/stand完整顺序49轮。背向静立发冠略宽于步态，在56世界高和实际两尺寸连续截图中仍是同一低盘扭发，无严重视角/结构跳变，未以任意百分比阈值或顶面积推算相机。透明无洋红，与原主角Rowan同场比例/脚点匹配。",
+  "evidence": [
+    "evidence/noor-atlas-2x.png",
+    "evidence/noor-atlas-three-backgrounds.png",
+    "evidence/noor-walk/320-actual-cycle-contact-sheet.png",
+    "evidence/noor-walk/390-actual-cycle-contact-sheet.png",
+    "evidence/noor-walk/capture.json",
+    "reviews/noor-mechanical.json",
+    "reviews/continuous-motion-order-v1.json",
+    "reviews/noor-portrait-final-v1.json",
+    "reviews/noor-root-scene-v1.json",
+    "evidence/three-nomads-overview.png"
+  ],
+  "actualPhone": "not tested",
+  "formalGameNPCAndProfileUI": "owner pending",
+  "formalSiteUI": "Site owner pending",
+  "humanReview": null
+}

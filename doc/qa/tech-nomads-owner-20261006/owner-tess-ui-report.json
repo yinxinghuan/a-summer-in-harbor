@@ -1,0 +1,1851 @@
+{
+  "scope": "Actual local fixed-build Main/View/RPGJS and HTTP handler with isolated SQLite authority; synthetic legacy seed only. No identity injection, listener, external network, production save or deployment.",
+  "cases": [
+    {
+      "person": "tess",
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "garden": {
+        "player": {
+          "x": 477,
+          "y": 557
+        },
+        "resident": {
+          "x": 485,
+          "y": 515,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-rowan",
+            "graphics": [
+              "npc-rowan"
+            ],
+            "x": 490,
+            "y": 600
+          },
+          {
+            "id": "person-mira",
+            "graphics": [
+              "npc-mira"
+            ],
+            "x": 791,
+            "y": 680
+          },
+          {
+            "id": "person-casey",
+            "graphics": [],
+            "x": 760,
+            "y": 710
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 450,
+            "y": 730
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 485,
+            "y": 515
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 560,
+            "y": 650
+          },
+          {
+            "id": "person-luis",
+            "graphics": [],
+            "x": 690,
+            "y": 650
+          },
+          {
+            "id": "person-avery",
+            "graphics": [],
+            "x": 650,
+            "y": 520
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 561,
+            "y": 430
+          },
+          {
+            "id": "person-dani",
+            "graphics": [],
+            "x": 730,
+            "y": 580
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [
+              "animal-domestic-cat-v1"
+            ],
+            "x": 622,
+            "y": 822
+          }
+        ],
+        "targets": [
+          "to-bazaar",
+          "to-secondhand",
+          "to-courtyard",
+          "road-station",
+          "road-hill",
+          "rowan",
+          "mira",
+          "tess",
+          "samira",
+          "harbor-cat-3"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 460,
+          "y": 540
+        },
+        "resident": {
+          "x": 425,
+          "y": 555,
+          "pose": "stand",
+          "direction": "right",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 390,
+            "y": 350
+          },
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 640,
+            "y": 570
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 610,
+            "y": 360
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 425,
+            "y": 555
+          },
+          {
+            "id": "person-june",
+            "graphics": [
+              "npc-june"
+            ],
+            "x": 372,
+            "y": 490
+          },
+          {
+            "id": "person-avery",
+            "graphics": [
+              "npc-avery"
+            ],
+            "x": 562,
+            "y": 450
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 505,
+            "y": 450
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          }
+        ],
+        "targets": [
+          "exit",
+          "tess",
+          "june",
+          "avery",
+          "samira"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          56,
+          56
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "f6120a26-d2ed-4d87-8085-be59ef9aba6d",
+          "expected_version": 0,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 526.3007999999996
+          },
+          "target": "tess",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 485,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "f07ac9b5-1eab-4a9c-ba6a-98e413a94bd5",
+          "expected_version": 1,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 526.3007999999996
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 485,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "2205cb5a-c39b-4c88-9407-109a69e3343c",
+          "expected_version": 2,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 526.3007999999996
+          },
+          "target": "secondhand",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "2eb9b527-d702-43df-8e58-a853a9edd3f0",
+          "expected_version": 3,
+          "scene": "secondhand",
+          "position": {
+            "x": 506.6480000000001,
+            "y": 390.60319999999996
+          },
+          "target": "nell",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 534,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "84364087-d34f-453d-9300-6752c1c7d5f3",
+          "expected_version": 4,
+          "scene": "secondhand",
+          "position": {
+            "x": 506.6480000000001,
+            "y": 390.60319999999996
+          },
+          "target": "nell",
+          "action": "talk:life",
+          "actorPosition": {
+            "x": 534,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "1e5e4a7b-8144-4131-a063-d0fc9ca24ce6",
+          "expected_version": 5,
+          "scene": "secondhand",
+          "position": {
+            "x": 506.6480000000001,
+            "y": 390.60319999999996
+          },
+          "target": "nell",
+          "action": "talk:nomads-v1-tess-consult",
+          "actorPosition": {
+            "x": 534,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "9d6144e8-e9c2-4531-9793-d0f82dd414dd",
+          "expected_version": 6,
+          "scene": "secondhand",
+          "position": {
+            "x": 506.6480000000001,
+            "y": 390.60319999999996
+          },
+          "target": "market",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "35ad86ce-f8fe-4db4-8240-39cb7175e9eb",
+          "expected_version": 7,
+          "scene": "market",
+          "position": {
+            "x": 482.30240000000066,
+            "y": 524.0864000000003
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-one-line",
+          "actorPosition": {
+            "x": 481.99999999999983,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "ff217ef5-5259-4626-b3fa-23fc3a49ce36",
+          "expected_version": 8,
+          "scene": "market",
+          "position": {
+            "x": 482.30240000000066,
+            "y": 524.0864000000003
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "c7b27e5d-eeff-44b2-8f07-20ed0448d83e",
+          "expected_version": 9,
+          "scene": "home",
+          "position": {
+            "x": 374.2975999999997,
+            "y": 412.1519999999987
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "15c7ebd2-de72-4c9e-8588-10ccf4e74005",
+          "expected_version": 10,
+          "scene": "home",
+          "position": {
+            "x": 374.2975999999997,
+            "y": 412.1519999999987
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "c719e2f4-37f4-48cf-a5d9-d024eff84aa2",
+          "expected_version": 11,
+          "scene": "home",
+          "position": {
+            "x": 374.2975999999997,
+            "y": 412.1519999999987
+          },
+          "target": "dock",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "c3238fde-b7ae-4555-bb44-b5e3d41417ed",
+          "expected_version": 12,
+          "scene": "dock",
+          "position": {
+            "x": 419.22079999999943,
+            "y": 562.5679999999998
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 425,
+            "y": 555
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 7,
+          "sceneId": "market",
+          "position": {
+            "x": 518.545600000001,
+            "y": 865.2496000000002
+          }
+        }
+      ],
+      "final": {
+        "version": 13,
+        "minute": 1040,
+        "relations": {
+          "mira": 2,
+          "tess": 1,
+          "nell": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "tess": {
+              "choice": "one-line",
+              "completedAt": 640,
+              "recalledAt": 1040
+            }
+          }
+        }
+      }
+    },
+    {
+      "person": "tess",
+      "width": 320,
+      "height": 568,
+      "locale": "zh",
+      "garden": {
+        "player": {
+          "x": 477,
+          "y": 557
+        },
+        "resident": {
+          "x": 485,
+          "y": 515,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-rowan",
+            "graphics": [
+              "npc-rowan"
+            ],
+            "x": 490,
+            "y": 600
+          },
+          {
+            "id": "person-mira",
+            "graphics": [
+              "npc-mira"
+            ],
+            "x": 793,
+            "y": 680
+          },
+          {
+            "id": "person-casey",
+            "graphics": [],
+            "x": 760,
+            "y": 710
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 450,
+            "y": 730
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 485,
+            "y": 515
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 560,
+            "y": 650
+          },
+          {
+            "id": "person-luis",
+            "graphics": [],
+            "x": 690,
+            "y": 650
+          },
+          {
+            "id": "person-avery",
+            "graphics": [],
+            "x": 650,
+            "y": 520
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 563,
+            "y": 430
+          },
+          {
+            "id": "person-dani",
+            "graphics": [],
+            "x": 730,
+            "y": 580
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [
+              "animal-domestic-cat-v1"
+            ],
+            "x": 622,
+            "y": 822
+          }
+        ],
+        "targets": [
+          "to-bazaar",
+          "to-secondhand",
+          "to-courtyard",
+          "road-station",
+          "road-hill",
+          "rowan",
+          "mira",
+          "tess",
+          "samira",
+          "harbor-cat-3"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 460,
+          "y": 540
+        },
+        "resident": {
+          "x": 425,
+          "y": 555,
+          "pose": "stand",
+          "direction": "right",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 390,
+            "y": 350
+          },
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 640,
+            "y": 570
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 610,
+            "y": 360
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 425,
+            "y": 555
+          },
+          {
+            "id": "person-june",
+            "graphics": [
+              "npc-june"
+            ],
+            "x": 370,
+            "y": 490
+          },
+          {
+            "id": "person-avery",
+            "graphics": [
+              "npc-avery"
+            ],
+            "x": 560,
+            "y": 450
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 505,
+            "y": 450
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          }
+        ],
+        "targets": [
+          "exit",
+          "tess",
+          "june",
+          "avery",
+          "samira"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          56,
+          56
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "ed32fc9f-5849-4025-8110-7d3c28f635d9",
+          "expected_version": 0,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 524.0944000000003
+          },
+          "target": "tess",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 485,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "5f5dc08a-67db-4a18-ac51-d63157f36508",
+          "expected_version": 1,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 524.0944000000003
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 485,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "c3bcf987-d7b6-49a0-9532-2d4380a78053",
+          "expected_version": 2,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 524.0944000000003
+          },
+          "target": "secondhand",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "2c219214-5671-495e-9c76-130c61e7e98a",
+          "expected_version": 3,
+          "scene": "secondhand",
+          "position": {
+            "x": 499.6255999999998,
+            "y": 386.8512000000004
+          },
+          "target": "nell",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 534,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "b696ad7c-3d72-412f-8a59-2cf4ffc8b7ed",
+          "expected_version": 4,
+          "scene": "secondhand",
+          "position": {
+            "x": 499.6255999999998,
+            "y": 386.8512000000004
+          },
+          "target": "nell",
+          "action": "talk:life",
+          "actorPosition": {
+            "x": 534,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "d95665b8-500e-450a-aa03-f63cc344a82a",
+          "expected_version": 5,
+          "scene": "secondhand",
+          "position": {
+            "x": 499.6255999999998,
+            "y": 386.8512000000004
+          },
+          "target": "nell",
+          "action": "talk:nomads-v1-tess-consult",
+          "actorPosition": {
+            "x": 534,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "1bc3fe9d-9d36-4bcd-9266-98173c296286",
+          "expected_version": 6,
+          "scene": "secondhand",
+          "position": {
+            "x": 499.6255999999998,
+            "y": 386.8512000000004
+          },
+          "target": "market",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "b4d97edf-c9c1-4e04-b1a4-3ac51d40af66",
+          "expected_version": 7,
+          "scene": "market",
+          "position": {
+            "x": 481.2720000000004,
+            "y": 527.2447999999997
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-keep-card",
+          "actorPosition": {
+            "x": 485.59999999999985,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "aaee2e99-d404-4b11-8be1-f900438749d1",
+          "expected_version": 8,
+          "scene": "market",
+          "position": {
+            "x": 481.2720000000004,
+            "y": 527.2447999999997
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "a50e862a-2021-446f-9997-ae9b7b1f4d9d",
+          "expected_version": 9,
+          "scene": "home",
+          "position": {
+            "x": 372.97599999999966,
+            "y": 411.06560000000053
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "5c922ed2-234a-41af-966c-2b334828bc38",
+          "expected_version": 10,
+          "scene": "home",
+          "position": {
+            "x": 372.97599999999966,
+            "y": 411.06560000000053
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "599fefa0-5ed2-499f-8a2a-2ec5e2a515a1",
+          "expected_version": 11,
+          "scene": "home",
+          "position": {
+            "x": 372.97599999999966,
+            "y": 411.06560000000053
+          },
+          "target": "dock",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "7859b6ba-f58a-4059-8806-2cd3dccf49fd",
+          "expected_version": 12,
+          "scene": "dock",
+          "position": {
+            "x": 419.6687999999998,
+            "y": 561.2799999999996
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 425,
+            "y": 555
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 3,
+          "sceneId": "secondhand",
+          "position": {
+            "x": 494.3503999999999,
+            "y": 434.3168000000002
+          }
+        },
+        {
+          "expected_version": 7,
+          "sceneId": "market",
+          "position": {
+            "x": 502.7088000000003,
+            "y": 697.4847999999993
+          }
+        },
+        {
+          "expected_version": 9,
+          "sceneId": "home",
+          "position": {
+            "x": 383.3471999999998,
+            "y": 471.81440000000043
+          }
+        }
+      ],
+      "final": {
+        "version": 13,
+        "minute": 1040,
+        "relations": {
+          "mira": 2,
+          "tess": 1,
+          "nell": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "tess": {
+              "choice": "keep-card",
+              "completedAt": 640,
+              "recalledAt": 1040
+            }
+          }
+        }
+      }
+    },
+    {
+      "person": "tess",
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "garden": {
+        "player": {
+          "x": 477,
+          "y": 557
+        },
+        "resident": {
+          "x": 485,
+          "y": 515,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-rowan",
+            "graphics": [
+              "npc-rowan"
+            ],
+            "x": 490,
+            "y": 600
+          },
+          {
+            "id": "person-mira",
+            "graphics": [
+              "npc-mira"
+            ],
+            "x": 791,
+            "y": 680
+          },
+          {
+            "id": "person-casey",
+            "graphics": [],
+            "x": 760,
+            "y": 710
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 450,
+            "y": 730
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 485,
+            "y": 515
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 560,
+            "y": 650
+          },
+          {
+            "id": "person-luis",
+            "graphics": [],
+            "x": 690,
+            "y": 650
+          },
+          {
+            "id": "person-avery",
+            "graphics": [],
+            "x": 650,
+            "y": 520
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 561,
+            "y": 430
+          },
+          {
+            "id": "person-dani",
+            "graphics": [],
+            "x": 730,
+            "y": 580
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [
+              "animal-domestic-cat-v1"
+            ],
+            "x": 622,
+            "y": 822
+          }
+        ],
+        "targets": [
+          "to-bazaar",
+          "to-secondhand",
+          "to-courtyard",
+          "road-station",
+          "road-hill",
+          "rowan",
+          "mira",
+          "tess",
+          "samira",
+          "harbor-cat-3"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 460,
+          "y": 540
+        },
+        "resident": {
+          "x": 425,
+          "y": 555,
+          "pose": "stand",
+          "direction": "right",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 390,
+            "y": 350
+          },
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 640,
+            "y": 570
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 610,
+            "y": 360
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 425,
+            "y": 555
+          },
+          {
+            "id": "person-june",
+            "graphics": [
+              "npc-june"
+            ],
+            "x": 372,
+            "y": 490
+          },
+          {
+            "id": "person-avery",
+            "graphics": [
+              "npc-avery"
+            ],
+            "x": 562,
+            "y": 450
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 505,
+            "y": 450
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          }
+        ],
+        "targets": [
+          "exit",
+          "tess",
+          "june",
+          "avery",
+          "samira"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          64,
+          64
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "6d0a5417-daff-46c6-8ccd-06e3675b3fdb",
+          "expected_version": 0,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 522.5039999999992
+          },
+          "target": "tess",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 485,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "df843b59-433e-49a1-b071-3b2f8e21f514",
+          "expected_version": 1,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 522.5039999999992
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 485,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "fa058c99-97e4-42f4-b4e0-a248016fa753",
+          "expected_version": 2,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 522.5039999999992
+          },
+          "target": "secondhand",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "92f79680-60ce-4e38-b94b-9d28e971b932",
+          "expected_version": 3,
+          "scene": "secondhand",
+          "position": {
+            "x": 506.3232000000001,
+            "y": 388.49760000000015
+          },
+          "target": "nell",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 534,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "4f52249f-aca8-4659-95a3-c415ea3494b6",
+          "expected_version": 4,
+          "scene": "secondhand",
+          "position": {
+            "x": 506.3232000000001,
+            "y": 388.49760000000015
+          },
+          "target": "nell",
+          "action": "talk:life",
+          "actorPosition": {
+            "x": 534,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "19c05218-82f3-4a5f-a812-60f2c2cd170d",
+          "expected_version": 5,
+          "scene": "secondhand",
+          "position": {
+            "x": 506.3232000000001,
+            "y": 388.49760000000015
+          },
+          "target": "nell",
+          "action": "talk:nomads-v1-tess-consult",
+          "actorPosition": {
+            "x": 534,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "dd408a40-368c-4271-a76b-c8ddea130096",
+          "expected_version": 6,
+          "scene": "secondhand",
+          "position": {
+            "x": 506.3232000000001,
+            "y": 388.49760000000015
+          },
+          "target": "market",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "79a7002b-6815-4a73-ab62-c19b30893574",
+          "expected_version": 7,
+          "scene": "market",
+          "position": {
+            "x": 478.4272000000004,
+            "y": 526.4197333333337
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-one-line",
+          "actorPosition": {
+            "x": 487.39999999999986,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "c550a33f-8f3c-488d-85ff-872561d55ec2",
+          "expected_version": 8,
+          "scene": "market",
+          "position": {
+            "x": 478.4272000000004,
+            "y": 526.4197333333337
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "62c9052c-85fd-4231-b0ea-3548fb018557",
+          "expected_version": 9,
+          "scene": "home",
+          "position": {
+            "x": 373.3119999999993,
+            "y": 412.6112000000004
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "b467ce72-eae5-423f-9c9e-a573bd76a6be",
+          "expected_version": 10,
+          "scene": "home",
+          "position": {
+            "x": 373.3119999999993,
+            "y": 412.6112000000004
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "6ac86e33-927e-402a-a688-3c19cc6af36d",
+          "expected_version": 11,
+          "scene": "home",
+          "position": {
+            "x": 373.3119999999993,
+            "y": 412.6112000000004
+          },
+          "target": "dock",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "ce55a564-d975-4727-9cc6-67c33c80a2b8",
+          "expected_version": 12,
+          "scene": "dock",
+          "position": {
+            "x": 417.19359999999983,
+            "y": 561.3696
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 425,
+            "y": 555
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 3,
+          "sceneId": "secondhand",
+          "position": {
+            "x": 488.43680000000006,
+            "y": 465.84480000000036
+          }
+        },
+        {
+          "expected_version": 7,
+          "sceneId": "market",
+          "position": {
+            "x": 503.86240000000055,
+            "y": 742.1840000000001
+          }
+        },
+        {
+          "expected_version": 9,
+          "sceneId": "home",
+          "position": {
+            "x": 449.9087999999999,
+            "y": 531.4207999999996
+          }
+        }
+      ],
+      "final": {
+        "version": 13,
+        "minute": 1040,
+        "relations": {
+          "mira": 2,
+          "tess": 1,
+          "nell": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "tess": {
+              "choice": "one-line",
+              "completedAt": 640,
+              "recalledAt": 1040
+            }
+          }
+        }
+      }
+    },
+    {
+      "person": "tess",
+      "width": 390,
+      "height": 844,
+      "locale": "zh",
+      "garden": {
+        "player": {
+          "x": 477,
+          "y": 557
+        },
+        "resident": {
+          "x": 485,
+          "y": 515,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-rowan",
+            "graphics": [
+              "npc-rowan"
+            ],
+            "x": 490,
+            "y": 600
+          },
+          {
+            "id": "person-mira",
+            "graphics": [
+              "npc-mira"
+            ],
+            "x": 791,
+            "y": 680
+          },
+          {
+            "id": "person-casey",
+            "graphics": [],
+            "x": 760,
+            "y": 710
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 450,
+            "y": 730
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 485,
+            "y": 515
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 560,
+            "y": 650
+          },
+          {
+            "id": "person-luis",
+            "graphics": [],
+            "x": 690,
+            "y": 650
+          },
+          {
+            "id": "person-avery",
+            "graphics": [],
+            "x": 650,
+            "y": 520
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 561,
+            "y": 430
+          },
+          {
+            "id": "person-dani",
+            "graphics": [],
+            "x": 730,
+            "y": 580
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [
+              "animal-domestic-cat-v1"
+            ],
+            "x": 622,
+            "y": 822
+          }
+        ],
+        "targets": [
+          "to-bazaar",
+          "to-secondhand",
+          "to-courtyard",
+          "road-station",
+          "road-hill",
+          "rowan",
+          "mira",
+          "tess",
+          "samira",
+          "harbor-cat-3"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 460,
+          "y": 540
+        },
+        "resident": {
+          "x": 425,
+          "y": 555,
+          "pose": "stand",
+          "direction": "right",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 390,
+            "y": 350
+          },
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 640,
+            "y": 570
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 610,
+            "y": 360
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 425,
+            "y": 555
+          },
+          {
+            "id": "person-june",
+            "graphics": [
+              "npc-june"
+            ],
+            "x": 370,
+            "y": 490
+          },
+          {
+            "id": "person-avery",
+            "graphics": [
+              "npc-avery"
+            ],
+            "x": 560,
+            "y": 450
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 505,
+            "y": 450
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          }
+        ],
+        "targets": [
+          "exit",
+          "tess",
+          "june",
+          "avery",
+          "samira"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          64,
+          64
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "7b867f84-2de3-42ec-963e-63c296b1b422",
+          "expected_version": 0,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 523.3439999999997
+          },
+          "target": "tess",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 485,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "1824eff8-5def-42f5-8dac-e843a3683598",
+          "expected_version": 1,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 523.3439999999997
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 485,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "def30331-7f26-45d0-aa11-e51853c83e6f",
+          "expected_version": 2,
+          "scene": "market",
+          "position": {
+            "x": 477,
+            "y": 523.3439999999997
+          },
+          "target": "secondhand",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "469ef605-6830-49d9-ae10-f4dec387f943",
+          "expected_version": 3,
+          "scene": "secondhand",
+          "position": {
+            "x": 500.9023999999998,
+            "y": 387.27679999999975
+          },
+          "target": "nell",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 533.3999999999995,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "6ea72659-da76-4f7e-9a17-401b59912e95",
+          "expected_version": 4,
+          "scene": "secondhand",
+          "position": {
+            "x": 500.9023999999998,
+            "y": 387.27679999999975
+          },
+          "target": "nell",
+          "action": "talk:life",
+          "actorPosition": {
+            "x": 533.3999999999995,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "1b1d405f-1b10-4c03-a059-5cdcff1a1ba5",
+          "expected_version": 5,
+          "scene": "secondhand",
+          "position": {
+            "x": 500.9023999999998,
+            "y": 387.27679999999975
+          },
+          "target": "nell",
+          "action": "talk:nomads-v1-tess-consult",
+          "actorPosition": {
+            "x": 533.3999999999995,
+            "y": 380
+          }
+        },
+        {
+          "action_id": "915fa9d8-c54d-4e3f-a367-ecaed0877834",
+          "expected_version": 6,
+          "scene": "secondhand",
+          "position": {
+            "x": 500.9023999999998,
+            "y": 387.27679999999975
+          },
+          "target": "market",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "2a628922-eafd-42a0-9929-5c7ece0d2ed1",
+          "expected_version": 7,
+          "scene": "market",
+          "position": {
+            "x": 478.7295999999982,
+            "y": 523.5935999999999
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-keep-card",
+          "actorPosition": {
+            "x": 487.39999999999986,
+            "y": 515
+          }
+        },
+        {
+          "action_id": "1810d607-48e2-4f99-9456-4fbffc899adc",
+          "expected_version": 8,
+          "scene": "market",
+          "position": {
+            "x": 478.7295999999982,
+            "y": 523.5935999999999
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "e1a46f5c-6ab7-4ff0-a3d8-edc480da099d",
+          "expected_version": 9,
+          "scene": "home",
+          "position": {
+            "x": 372.7631999999999,
+            "y": 411.2895999999995
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "ef1419a0-0b91-432f-82d9-29936caff3b0",
+          "expected_version": 10,
+          "scene": "home",
+          "position": {
+            "x": 372.7631999999999,
+            "y": 411.2895999999995
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "a584023d-9a35-4c3d-ab7c-7206d4fea2a0",
+          "expected_version": 11,
+          "scene": "home",
+          "position": {
+            "x": 372.7631999999999,
+            "y": 411.2895999999995
+          },
+          "target": "dock",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "22db082b-1d9d-4c8f-bd15-102f7b6dbeb4",
+          "expected_version": 12,
+          "scene": "dock",
+          "position": {
+            "x": 414.3039999999997,
+            "y": 561.5375999999997
+          },
+          "target": "tess",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 425,
+            "y": 555
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 3,
+          "sceneId": "secondhand",
+          "position": {
+            "x": 489.6015999999998,
+            "y": 461.70079999999973
+          }
+        },
+        {
+          "expected_version": 7,
+          "sceneId": "market",
+          "position": {
+            "x": 506.4719999999986,
+            "y": 736.3487999999998
+          }
+        },
+        {
+          "expected_version": 9,
+          "sceneId": "home",
+          "position": {
+            "x": 419.63519999999994,
+            "y": 529.7071999999998
+          }
+        }
+      ],
+      "final": {
+        "version": 13,
+        "minute": 1040,
+        "relations": {
+          "mira": 2,
+          "tess": 1,
+          "nell": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "tess": {
+              "choice": "keep-card",
+              "completedAt": 640,
+              "recalledAt": 1040
+            }
+          }
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "missingAssets": [],
+  "blockedExternal": [
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js"
+  ],
+  "modelCalls": 0,
+  "mediaPosts": 0,
+  "realPhone": false,
+  "miniApp": false,
+  "configuredResidents": 22,
+  "admittedResidents": 22
+}

@@ -1,0 +1,183 @@
+{
+  "person": "tess",
+  "dimensions": [
+    384,
+    512
+  ],
+  "cell": [
+    128,
+    128
+  ],
+  "rows": [
+    "down",
+    "left",
+    "right",
+    "up"
+  ],
+  "columns": [
+    "contactA",
+    "stand",
+    "contactB"
+  ],
+  "footAnchor": [
+    64,
+    122
+  ],
+  "scale": 0.5185185185185185,
+  "NPCOffsets": [
+    0,
+    0
+  ],
+  "complete": true,
+  "independentSources": 9,
+  "provisionalRootOnly": false,
+  "frames": [
+    {
+      "direction": "down",
+      "pose": "a",
+      "row": 0,
+      "column": 0,
+      "taskKey": "tess-down-a-v1",
+      "requestId": "38ac9f8a-3e11-4850-92b6-e469de29ca30",
+      "taskId": "mt_09316b3f14cbb34c2ed3b76d6a4e2f85",
+      "sourceSHA256": "a83053b5a42aa39b6f99ce61dca96c6e28a5e82288d8d553bd40b7d3042976b5",
+      "wholeFrameMirror": false,
+      "cellSHA256": "f8becc63bd344e4ce6f17160472be1cb5dff4be9d0d4a68beb905ec3ed4187f3"
+    },
+    {
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "column": 1,
+      "taskKey": "tess-down-stand-v2",
+      "requestId": "acfc554b-aea3-4183-8b9a-821e26fee4d0",
+      "taskId": "mt_a2ea5ce82fb39ee3711c1018de3e585a",
+      "sourceSHA256": "3d33a465205d8a6adb8cc6c2b5cd53fcc5b8e20196797134154939832c21d65d",
+      "wholeFrameMirror": false,
+      "cellSHA256": "ad01589f809ed6e16505d6ff37736ff613ea837ccf6a3ac1a54d1bdfd95624c3"
+    },
+    {
+      "direction": "down",
+      "pose": "b",
+      "row": 0,
+      "column": 2,
+      "taskKey": "tess-down-b-v3",
+      "requestId": "b348a22c-6daf-4c3b-b4d5-608d2e56b246",
+      "taskId": "mt_26214939ec58f63553380f8027ef51f9",
+      "sourceSHA256": "0538a860ced3bb317f5264c0d8ed74ec0c25b1d5df28b9cea2d4e897e7629f3e",
+      "wholeFrameMirror": false,
+      "cellSHA256": "aa6e1dd9cb8624300b707cfb79f1e3f3b066efe3ba082d1d8b9d89c026616be4"
+    },
+    {
+      "direction": "left",
+      "pose": "a",
+      "row": 1,
+      "column": 0,
+      "taskKey": "tess-left-a-v1",
+      "requestId": "8519aa70-4204-40f1-9368-ffe357977c5b",
+      "taskId": "mt_d6472e7a7d7d22399aea953ab5446f90",
+      "sourceSHA256": "10bc85fc767db1af8a4d4b522a541d53f22ff69c15ac98c8d97826001cd8a1c7",
+      "wholeFrameMirror": false,
+      "cellSHA256": "5f566f658350d75efec4ab23c4fde950af895f4abf897724e7fb8eb800e01bc4"
+    },
+    {
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "column": 1,
+      "taskKey": "tess-left-stand-v1",
+      "requestId": "f6f6d499-c4ca-451d-83fb-c419902e6a27",
+      "taskId": "mt_36d59278317601c7f1f1dc55944b5b76",
+      "sourceSHA256": "ee353561db38a0f4b4fa18144e7778073cf0679513a51f35201ff846f5d0f147",
+      "wholeFrameMirror": false,
+      "cellSHA256": "5506b31ec99eae4fc09a59a7cd9763ab3d76358ddebaf6587c91792104ce1366"
+    },
+    {
+      "direction": "left",
+      "pose": "b",
+      "row": 1,
+      "column": 2,
+      "taskKey": "tess-left-b-v1",
+      "requestId": "21d28a9a-605f-4db0-bfef-415e3250eb00",
+      "taskId": "mt_4a41059866b8f8be3e53cda6cb012b64",
+      "sourceSHA256": "81a910d22b1d3d6acc482a4aabf7ec87cad73e65cb610ee6e01002af994a8b87",
+      "wholeFrameMirror": false,
+      "cellSHA256": "be9d118f69154d49b3ea2c0c1f9761c4afd89327b33fcfcea149b4c675cf44f8"
+    },
+    {
+      "direction": "right",
+      "pose": "a",
+      "row": 2,
+      "column": 0,
+      "taskKey": "tess-left-a-v1",
+      "requestId": "8519aa70-4204-40f1-9368-ffe357977c5b",
+      "taskId": "mt_d6472e7a7d7d22399aea953ab5446f90",
+      "sourceSHA256": "10bc85fc767db1af8a4d4b522a541d53f22ff69c15ac98c8d97826001cd8a1c7",
+      "wholeFrameMirror": true,
+      "cellSHA256": "0685eb1c1a9e918327a9ec4ac523a4bf50b64b4aeeb39875addf7ed308aa83dc"
+    },
+    {
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "column": 1,
+      "taskKey": "tess-left-stand-v1",
+      "requestId": "f6f6d499-c4ca-451d-83fb-c419902e6a27",
+      "taskId": "mt_36d59278317601c7f1f1dc55944b5b76",
+      "sourceSHA256": "ee353561db38a0f4b4fa18144e7778073cf0679513a51f35201ff846f5d0f147",
+      "wholeFrameMirror": true,
+      "cellSHA256": "f991eddc86ac31ac25c877dda1aa099d32d3781d78826523ece82f3dc718faa0"
+    },
+    {
+      "direction": "right",
+      "pose": "b",
+      "row": 2,
+      "column": 2,
+      "taskKey": "tess-left-b-v1",
+      "requestId": "21d28a9a-605f-4db0-bfef-415e3250eb00",
+      "taskId": "mt_4a41059866b8f8be3e53cda6cb012b64",
+      "sourceSHA256": "81a910d22b1d3d6acc482a4aabf7ec87cad73e65cb610ee6e01002af994a8b87",
+      "wholeFrameMirror": true,
+      "cellSHA256": "15eabbc6fe3b30949bce85629a2c3b05aee6d679573fc3a8fa6e3c04cc87e3fc"
+    },
+    {
+      "direction": "up",
+      "pose": "a",
+      "row": 3,
+      "column": 0,
+      "taskKey": "tess-up-a-v1",
+      "requestId": "8ff68e4f-c3cf-426d-b3be-881aae11b8fc",
+      "taskId": "mt_d31fd8dc540fe1915ea0d377e60bc764",
+      "sourceSHA256": "c8fee0eee31a1fea4af57201f0c125b1d63ec414b1a0e7b451b977d9168e670a",
+      "wholeFrameMirror": false,
+      "cellSHA256": "6f9539ce17b4288051ce2a384e8f3e54acd03e1fb29e7b015325bcd037eabf1c"
+    },
+    {
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "column": 1,
+      "taskKey": "tess-up-stand-v1",
+      "requestId": "67e5a357-7ea7-4733-82d3-28d6e7f80fb8",
+      "taskId": "mt_06241587b5fb09b18e75fec84639b178",
+      "sourceSHA256": "2eb0a3c9b860641036d29a0f139a8ca395afaaaf6eeb80978712b9b1d09097f8",
+      "wholeFrameMirror": false,
+      "cellSHA256": "5a843a8a2bbe93a1623ce8b55bb967675fd414270abcee099172f06d8bfcc769"
+    },
+    {
+      "direction": "up",
+      "pose": "b",
+      "row": 3,
+      "column": 2,
+      "taskKey": "tess-up-b-v1",
+      "requestId": "40ee115e-c45c-4ead-a4b0-4ed90850b789",
+      "taskId": "mt_947ef85122dbc79d9f457dc61a47a229",
+      "sourceSHA256": "aba182f6c6b211a1fce9bc02d47841dcee3876d351a5de03d00644a02893b594",
+      "wholeFrameMirror": false,
+      "cellSHA256": "11ad2824604f161080f5b9c2ff57d7b9ce0de5021311418cdea75cf3020e80d8"
+    }
+  ],
+  "sha256": "c70515c7d5332b33f7e8f557878509f3f6b8065d181f7956c6b980d552f770cc",
+  "familyReview": "pending",
+  "gameIntegration": "owner pending"
+}

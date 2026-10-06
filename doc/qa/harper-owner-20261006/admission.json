@@ -1,0 +1,47 @@
+{
+  "status": "AI_LOCAL_OWNER_ACCEPTED_NOT_RELEASED",
+  "sourceHandoffSHA256": "fc07dae2f963b976fc98bf441e651ed8fd97d4482fbf499f9a6fe3c218269be5",
+  "producerSingleFamilyTechnicalAndIsolatedRenderer": "AI_PASS",
+  "ownerVisualSourceReview": "PASS: actually viewed atlas,512 profile and256 avatar; preserved source bytes",
+  "ownerFormalNPCAndProfile": "LOCAL_PASS: Main/View/RPGJS actual consumer, 4 width/locale story+profile cases; cafe/coast 4 map closeups",
+  "portraitContract": [
+    512,
+    512
+  ],
+  "avatarContract": [
+    256,
+    256
+  ],
+  "atlasContract": [
+    384,
+    512
+  ],
+  "NPCOffsets": [
+    0,
+    0
+  ],
+  "TessNoor": "HOLD unchanged",
+  "newMediaPosts": 0,
+  "deployments": 0,
+  "libraryMutation": false,
+  "at": "2026-10-06T10:45:27.473122+00:00",
+  "ownerThreadId": "01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "ownerStoryAcceptance": {
+    "introductionAndPartnerPremise": true,
+    "choiceSaved": true,
+    "actualRevisitAtMinute1070": true,
+    "relationRewardEachOnce": true,
+    "refreshPreserved": true,
+    "profileViewsBusinessActions": 0
+  },
+  "uiReport": "doc/qa/harper-owner-20261006/owner-ui-report.json",
+  "mapReport": "doc/qa/harper-owner-20261006/owner-map-report.json",
+  "realPhone": false,
+  "normalMiniApp": false,
+  "livePlatformIdentity": false,
+  "playerComprehension": "UNVERIFIED",
+  "SiteUI": "NOT_TESTED",
+  "TessProducerHandoffSHA256": "97527ce5562a5e66879e2339dd0b7c205e43e6039cb28ecc1694a0377560ffc5",
+  "TessOwnerUI": "NOT_TESTED_KEEP_HOLD",
+  "NoorOwnerUI": "NOT_TESTED_KEEP_HOLD"
+}

@@ -1,0 +1,625 @@
+{
+  "scope": "Actual local fixed-build Main/View/RPGJS and HTTP handler with isolated SQLite authority; synthetic legacy seed only. No identity injection, listener, external network, production save or deployment.",
+  "cases": [
+    {
+      "person": "tess",
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "scene": "market",
+      "minute": 420,
+      "actualNPC": {
+        "player": {
+          "x": 477,
+          "y": 557
+        },
+        "resident": {
+          "x": 485,
+          "y": 515,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-rowan",
+            "graphics": [
+              "npc-rowan"
+            ],
+            "x": 490,
+            "y": 600
+          },
+          {
+            "id": "person-mira",
+            "graphics": [
+              "npc-mira"
+            ],
+            "x": 793,
+            "y": 680
+          },
+          {
+            "id": "person-casey",
+            "graphics": [],
+            "x": 760,
+            "y": 710
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 450,
+            "y": 730
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 485,
+            "y": 515
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 560,
+            "y": 650
+          },
+          {
+            "id": "person-luis",
+            "graphics": [],
+            "x": 690,
+            "y": 650
+          },
+          {
+            "id": "person-avery",
+            "graphics": [],
+            "x": 650,
+            "y": 520
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 563,
+            "y": 430
+          },
+          {
+            "id": "person-dani",
+            "graphics": [],
+            "x": 730,
+            "y": 580
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [
+              "animal-domestic-cat-v1"
+            ],
+            "x": 622,
+            "y": 822
+          }
+        ],
+        "targets": [
+          "to-bazaar",
+          "to-secondhand",
+          "to-courtyard",
+          "road-station",
+          "road-hill",
+          "rowan",
+          "mira",
+          "tess",
+          "samira",
+          "harbor-cat-3"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "person": "tess",
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "scene": "market",
+      "minute": 420,
+      "actualNPC": {
+        "player": {
+          "x": 477,
+          "y": 557
+        },
+        "resident": {
+          "x": 485,
+          "y": 515,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-rowan",
+            "graphics": [
+              "npc-rowan"
+            ],
+            "x": 490,
+            "y": 600
+          },
+          {
+            "id": "person-mira",
+            "graphics": [
+              "npc-mira"
+            ],
+            "x": 789,
+            "y": 680
+          },
+          {
+            "id": "person-casey",
+            "graphics": [],
+            "x": 760,
+            "y": 710
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 450,
+            "y": 730
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 485,
+            "y": 515
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 560,
+            "y": 650
+          },
+          {
+            "id": "person-luis",
+            "graphics": [],
+            "x": 690,
+            "y": 650
+          },
+          {
+            "id": "person-avery",
+            "graphics": [],
+            "x": 650,
+            "y": 520
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 559,
+            "y": 430
+          },
+          {
+            "id": "person-dani",
+            "graphics": [],
+            "x": 730,
+            "y": 580
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 766
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [
+              "animal-domestic-cat-v1"
+            ],
+            "x": 622,
+            "y": 822
+          }
+        ],
+        "targets": [
+          "to-bazaar",
+          "to-secondhand",
+          "to-courtyard",
+          "road-station",
+          "road-hill",
+          "rowan",
+          "mira",
+          "tess",
+          "samira",
+          "harbor-cat-3"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "person": "tess",
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "scene": "cafe",
+      "minute": 780,
+      "actualNPC": {
+        "player": {
+          "x": 367,
+          "y": 422
+        },
+        "resident": {
+          "x": 375,
+          "y": 380,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-theo",
+            "graphics": [
+              "npc-theo"
+            ],
+            "x": 590,
+            "y": 330
+          },
+          {
+            "id": "person-rowan",
+            "graphics": [
+              "npc-rowan"
+            ],
+            "x": 365,
+            "y": 465
+          },
+          {
+            "id": "person-mira",
+            "graphics": [],
+            "x": 520,
+            "y": 470
+          },
+          {
+            "id": "person-casey",
+            "graphics": [],
+            "x": 640,
+            "y": 515
+          },
+          {
+            "id": "person-harper",
+            "graphics": [],
+            "x": 375,
+            "y": 380
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 375,
+            "y": 380
+          }
+        ],
+        "targets": [
+          "exit",
+          "theo",
+          "terrace",
+          "rowan",
+          "tess"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "person": "tess",
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "scene": "cafe",
+      "minute": 780,
+      "actualNPC": {
+        "player": {
+          "x": 367,
+          "y": 422
+        },
+        "resident": {
+          "x": 375,
+          "y": 380,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-theo",
+            "graphics": [
+              "npc-theo"
+            ],
+            "x": 590,
+            "y": 330
+          },
+          {
+            "id": "person-rowan",
+            "graphics": [
+              "npc-rowan"
+            ],
+            "x": 365,
+            "y": 465
+          },
+          {
+            "id": "person-mira",
+            "graphics": [],
+            "x": 520,
+            "y": 470
+          },
+          {
+            "id": "person-casey",
+            "graphics": [],
+            "x": 640,
+            "y": 515
+          },
+          {
+            "id": "person-harper",
+            "graphics": [],
+            "x": 375,
+            "y": 380
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 375,
+            "y": 380
+          }
+        ],
+        "targets": [
+          "exit",
+          "theo",
+          "terrace",
+          "rowan",
+          "tess"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "person": "tess",
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "scene": "dock",
+      "minute": 1080,
+      "actualNPC": {
+        "player": {
+          "x": 417,
+          "y": 597
+        },
+        "resident": {
+          "x": 425,
+          "y": 555,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 390,
+            "y": 350
+          },
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 640,
+            "y": 570
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 610,
+            "y": 360
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 425,
+            "y": 555
+          },
+          {
+            "id": "person-june",
+            "graphics": [
+              "npc-june"
+            ],
+            "x": 381,
+            "y": 490
+          },
+          {
+            "id": "person-avery",
+            "graphics": [
+              "npc-avery"
+            ],
+            "x": 571,
+            "y": 450
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 516,
+            "y": 450
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          }
+        ],
+        "targets": [
+          "exit",
+          "tess",
+          "june",
+          "avery",
+          "samira"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "person": "tess",
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "scene": "dock",
+      "minute": 1080,
+      "actualNPC": {
+        "player": {
+          "x": 417,
+          "y": 597
+        },
+        "resident": {
+          "x": 425,
+          "y": 555,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-tess"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 390,
+            "y": 350
+          },
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 640,
+            "y": 570
+          },
+          {
+            "id": "person-grant",
+            "graphics": [],
+            "x": 610,
+            "y": 360
+          },
+          {
+            "id": "person-tess",
+            "graphics": [
+              "npc-tess"
+            ],
+            "x": 425,
+            "y": 555
+          },
+          {
+            "id": "person-june",
+            "graphics": [
+              "npc-june"
+            ],
+            "x": 379,
+            "y": 490
+          },
+          {
+            "id": "person-avery",
+            "graphics": [
+              "npc-avery"
+            ],
+            "x": 569,
+            "y": 450
+          },
+          {
+            "id": "person-samira",
+            "graphics": [
+              "npc-samira"
+            ],
+            "x": 514,
+            "y": 450
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 351,
+            "y": 416
+          }
+        ],
+        "targets": [
+          "exit",
+          "tess",
+          "june",
+          "avery",
+          "samira"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    }
+  ],
+  "errors": [],
+  "missingAssets": [],
+  "blockedExternal": [
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js"
+  ],
+  "modelCalls": 0,
+  "mediaPosts": 0,
+  "realPhone": false,
+  "miniApp": false,
+  "configuredResidents": 22,
+  "admittedResidents": 22
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "reviewer": "AI",
+  "at": "2026-10-06T09:46:28.403673+00:00",
+  "decision": "pass",
+  "person": "harper",
+  "singleSources": "pass",
+  "family": "pass",
+  "technical": "pass",
+  "isolatedTargetScene": "pass",
+  "atlasSHA256": "fdaa1f360e9776ce7dc9ae2d65e5d4a439f9ef3f6166aa819fd07827dda950db",
+  "nativeIndependentCount": 9,
+  "nativeSourceCountIncludingRejected": 10,
+  "portraitNativeCount": 1,
+  "selectedRevision": "up-B-v2; v1 rejected and retained",
+  "reason": "逐张实际看9合格源、12格三底及2倍图集，脸发眼镜/衣装连续；下/侧/背A/B均完整反相，侧向近远臂腿遮挡交换，右帧为整侧镜像。原f6RPGJS两尺寸各四向连续rAF轨迹119–137帧，真实多状态截图可见摆臂/步幅变化，停步回stand保留方向；相机/脚点/比例与原主角及Rowan匹配，无严重视角结构跳变或透明残留。",
+  "evidence": [
+    "evidence/harper-atlas-2x.png",
+    "evidence/harper-atlas-three-backgrounds.png",
+    "evidence/harper-walk/320-actual-cycle-contact-sheet.png",
+    "evidence/harper-walk/390-actual-cycle-contact-sheet.png",
+    "evidence/harper-walk/capture.json",
+    "reviews/harper-mechanical.json",
+    "reviews/harper-portrait-final-v1.json"
+  ],
+  "actualPhone": "not tested",
+  "formalGameNPCAndProfileUI": "owner pending",
+  "formalSiteUI": "Site owner pending",
+  "humanReview": null
+}

@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-06T09:46:28.403673+00:00",
+  "status": "HARPER_COMPLETE_AI_PASS_OWNER_ADMISSION_PENDING",
+  "files": [
+    {
+      "path": "assets/harper.png",
+      "sha256": "fdaa1f360e9776ce7dc9ae2d65e5d4a439f9ef3f6166aa819fd07827dda950db",
+      "bytes": 119527
+    },
+    {
+      "path": "assets/harper-atlas.json",
+      "sha256": "46d7bdda0eaf535ac0fa1c97845a7d0f1f2194799bc044087a64a1fbd1c739a9",
+      "bytes": 6056
+    },
+    {
+      "path": "assets/harper-portrait-native.png",
+      "sha256": "03f5d30ab909f0df33399b32a88f8d2db7da88899ca90981512c0cc122373d4d",
+      "bytes": 722370
+    },
+    {
+      "path": "assets/harper-avatar.png",
+      "sha256": "bbde72ee79948d40835eca0ff85486641b81dca2f3fb03c42ef12c1ae6b611a4",
+      "bytes": 70138
+    },
+    {
+      "path": "assets/harper-profile.png",
+      "sha256": "60679d1f58737cdd9b8ad1a66943ef54a8dd01ed252ee302a70a4b316c42cb0b",
+      "bytes": 227950
+    }
+  ],
+  "suite": "reviews/harper-suite.json",
+  "totalPOSTUsed": 11,
+  "cap": 42,
+  "oneVisualRejectedPreserved": "harper-up-b-v1",
+  "formalUIAndFootpointByOwner": true,
+  "gameOrSiteModified": false,
+  "published": false
+}

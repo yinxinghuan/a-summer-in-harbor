@@ -2,7 +2,7 @@ import {useEffect,useRef,useState} from 'react';
 import {residentGuide} from '../story/resident-guide';
 import {relationshipStory,type StoryLead} from '../story/relationships';
 import type {Save} from '../story/state';
-import {rooms,tx,type Locale,type Words} from '../world/data';
+import {rooms,people,tx,type Locale,type Words} from '../world/data';
 import {Icon} from './icons';
 import './relationships.css';
 
@@ -14,7 +14,7 @@ export function Relationships({save,locale,initialPerson,onMap,onPortrait}:{save
  useEffect(()=>{heading.current?.focus();heading.current?.closest('.harbor-panel__body')?.scrollTo(0,0)},[selected,tab]);
  const card=(lead:StoryLead)=><article className="harbor-rel__story" key={lead.id} data-story={lead.id}><small>{tx(status[lead.state],locale)}</small><h4>{tx(lead.title,locale)}</h4><p>{tx(lead.summary,locale)}</p>{lead.next&&<p className="harbor-rel__next">{tx(lead.next,locale)}</p>}{lead.place&&<button className="harbor-rel__place" onClick={()=>onMap(lead.place!,person?.id)}><Icon name="map"/>{tx(rooms[lead.place].title,locale)} · {tx(['查看地图','View map'],locale)}</button>}<div className="harbor-rel__links">{lead.people.filter(id=>id!==person?.id).map(id=><button key={id} onClick={()=>open(id)}>{tx(model.people.find(p=>p.id===id)!.name,locale)}<Icon name="arrow"/></button>)}</div></article>;
  return <div className="harbor-rel">
- {person?<><button className="harbor-link" onClick={()=>{setSelected(undefined);setShowHistory(false)}}>{tx(['返回列表','Back to list'],locale)}</button><div className="harbor-rel__identity"><button aria-label={tx(['放大人物肖像','Enlarge portrait'],locale)} onClick={()=>onPortrait(person.id)}><img src={`./art/${person.art}-root-v2.png`} alt={tx(person.name,locale)} draggable={false}/></button><div><h3 ref={heading} tabIndex={-1}>{tx(person.name,locale)}</h3><small>{tx(person.stage,locale)}</small><p>{tx(person.role,locale)}</p></div></div>
+ {person?<><button className="harbor-link" onClick={()=>{setSelected(undefined);setShowHistory(false)}}>{tx(['返回列表','Back to list'],locale)}</button><div className="harbor-rel__identity"><button aria-label={tx(['放大人物肖像','Enlarge portrait'],locale)} onClick={()=>onPortrait(person.id)}><img className={people[person.id].portraitShape==='square'?"harbor-rel__portrait-square":undefined} src={`./art/${person.art}-root-v2.png`} alt={tx(person.name,locale)} draggable={false}/></button><div><h3 ref={heading} tabIndex={-1}>{tx(person.name,locale)}</h3><small>{tx(person.stage,locale)}</small><p>{tx(person.role,locale)}</p></div></div>
  {(()=>{const g=residentGuide(save,person.id);return g?<section className="harbor-resident-guide"><p>{tx(g.now,locale)}</p><p>{tx(g.then,locale)}</p>{g.mapScene&&<button onClick={()=>onMap(g.mapScene!,person.id)}>{tx(['查看日程地点','View routine location'],locale)}</button>}</section>:null})()}
  <h3>{tx(['相关事情' ,'Stories together'],locale)}</h3>{person.related.length?person.related.slice().sort((a,b)=>Number(a.state==='done')-Number(b.state==='done')).map(card):<p>{tx(['还没有一起处理的事情。见面时，可以聊聊彼此的生活。','No shared errands yet. You can simply talk about life when you meet.'],locale)}</p>}
  {person.places.length>0&&<section><h3>{tx(['熟悉的去处','Familiar places'],locale)}</h3><p>{tx(['这些是熟悉的去处，不表示对方此刻一定在这里。','These are familiar places, not a live location.'],locale)}</p><div className="harbor-rel__links">{person.places.map(id=><button key={id} onClick={()=>onMap(id,person.id)}>{tx(rooms[id].title,locale)}<Icon name="map"/></button>)}</div></section>}

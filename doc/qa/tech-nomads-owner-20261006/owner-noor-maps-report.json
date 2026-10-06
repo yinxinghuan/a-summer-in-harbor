@@ -1,0 +1,557 @@
+{
+  "scope": "Actual local fixed-build Main/View/RPGJS and HTTP handler with isolated SQLite authority; synthetic legacy seed only. No identity injection, listener, external network, production save or deployment.",
+  "cases": [
+    {
+      "person": "noor",
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "scene": "coast",
+      "minute": 420,
+      "actualNPC": {
+        "player": {
+          "x": 577,
+          "y": 557
+        },
+        "resident": {
+          "x": 585,
+          "y": 515,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [],
+            "x": 745,
+            "y": 535
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 585,
+            "y": 515
+          },
+          {
+            "id": "person-idris",
+            "graphics": [],
+            "x": 670,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 520,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [],
+            "x": 600,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 632,
+            "y": 774
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 634,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "noor",
+          "harbor-gull-1",
+          "harbor-gull-2"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "person": "noor",
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "scene": "coast",
+      "minute": 420,
+      "actualNPC": {
+        "player": {
+          "x": 577,
+          "y": 557
+        },
+        "resident": {
+          "x": 585,
+          "y": 515,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [],
+            "x": 745,
+            "y": 535
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 585,
+            "y": 515
+          },
+          {
+            "id": "person-idris",
+            "graphics": [],
+            "x": 670,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 520,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [],
+            "x": 600,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 632,
+            "y": 774
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 634,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "noor",
+          "harbor-gull-1",
+          "harbor-gull-2"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "person": "noor",
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "scene": "secondhand",
+      "minute": 780,
+      "actualNPC": {
+        "player": {
+          "x": 467,
+          "y": 502
+        },
+        "resident": {
+          "x": 475,
+          "y": 460,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-nell",
+            "graphics": [
+              "npc-nell"
+            ],
+            "x": 523,
+            "y": 380
+          },
+          {
+            "id": "person-mira",
+            "graphics": [
+              "npc-mira"
+            ],
+            "x": 383,
+            "y": 430
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 475,
+            "y": 460
+          }
+        ],
+        "targets": [
+          "exit",
+          "nell",
+          "mira",
+          "noor"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "person": "noor",
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "scene": "secondhand",
+      "minute": 780,
+      "actualNPC": {
+        "player": {
+          "x": 467,
+          "y": 502
+        },
+        "resident": {
+          "x": 475,
+          "y": 460,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-nell",
+            "graphics": [
+              "npc-nell"
+            ],
+            "x": 521,
+            "y": 380
+          },
+          {
+            "id": "person-mira",
+            "graphics": [
+              "npc-mira"
+            ],
+            "x": 381,
+            "y": 430
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 475,
+            "y": 460
+          }
+        ],
+        "targets": [
+          "exit",
+          "nell",
+          "mira",
+          "noor"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "person": "noor",
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "scene": "courtyard",
+      "minute": 1080,
+      "actualNPC": {
+        "player": {
+          "x": 617,
+          "y": 517
+        },
+        "resident": {
+          "x": 625,
+          "y": 475,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-elena",
+            "graphics": [
+              "npc-elena"
+            ],
+            "x": 506,
+            "y": 370
+          },
+          {
+            "id": "person-grant",
+            "graphics": [
+              "npc-grant"
+            ],
+            "x": 675,
+            "y": 600
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 625,
+            "y": 475
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 365,
+            "y": 500
+          },
+          {
+            "id": "person-nell",
+            "graphics": [
+              "npc-nell"
+            ],
+            "x": 361,
+            "y": 500
+          },
+          {
+            "id": "person-dani",
+            "graphics": [
+              "npc-dani"
+            ],
+            "x": 540,
+            "y": 480
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          }
+        ],
+        "targets": [
+          "exit",
+          "elena",
+          "grant",
+          "noor",
+          "nell",
+          "dani"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    },
+    {
+      "person": "noor",
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "scene": "courtyard",
+      "minute": 1080,
+      "actualNPC": {
+        "player": {
+          "x": 617,
+          "y": 517
+        },
+        "resident": {
+          "x": 625,
+          "y": 475,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-elena",
+            "graphics": [
+              "npc-elena"
+            ],
+            "x": 504,
+            "y": 370
+          },
+          {
+            "id": "person-grant",
+            "graphics": [
+              "npc-grant"
+            ],
+            "x": 675,
+            "y": 600
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 625,
+            "y": 475
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 365,
+            "y": 500
+          },
+          {
+            "id": "person-nell",
+            "graphics": [
+              "npc-nell"
+            ],
+            "x": 359,
+            "y": 500
+          },
+          {
+            "id": "person-dani",
+            "graphics": [
+              "npc-dani"
+            ],
+            "x": 540,
+            "y": 480
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          }
+        ],
+        "targets": [
+          "exit",
+          "elena",
+          "grant",
+          "noor",
+          "nell",
+          "dani"
+        ],
+        "overflow": false
+      },
+      "readOnlyMapFixture": true,
+      "actions": 0
+    }
+  ],
+  "errors": [],
+  "missingAssets": [],
+  "blockedExternal": [
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js"
+  ],
+  "modelCalls": 0,
+  "mediaPosts": 0,
+  "realPhone": false,
+  "miniApp": false,
+  "configuredResidents": 22,
+  "admittedResidents": 22
+}

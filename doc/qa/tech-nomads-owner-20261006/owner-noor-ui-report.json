@@ -1,0 +1,1607 @@
+{
+  "scope": "Actual local fixed-build Main/View/RPGJS and HTTP handler with isolated SQLite authority; synthetic legacy seed only. No identity injection, listener, external network, production save or deployment.",
+  "cases": [
+    {
+      "person": "noor",
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "garden": {
+        "player": {
+          "x": 617,
+          "y": 517
+        },
+        "resident": {
+          "x": 625,
+          "y": 475,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-elena",
+            "graphics": [
+              "npc-elena"
+            ],
+            "x": 506,
+            "y": 370
+          },
+          {
+            "id": "person-grant",
+            "graphics": [
+              "npc-grant"
+            ],
+            "x": 675,
+            "y": 600
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 625,
+            "y": 475
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 365,
+            "y": 500
+          },
+          {
+            "id": "person-nell",
+            "graphics": [
+              "npc-nell"
+            ],
+            "x": 361,
+            "y": 500
+          },
+          {
+            "id": "person-dani",
+            "graphics": [
+              "npc-dani"
+            ],
+            "x": 540,
+            "y": 480
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          }
+        ],
+        "targets": [
+          "exit",
+          "elena",
+          "grant",
+          "noor",
+          "nell",
+          "dani"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 110,
+          "y": 475
+        },
+        "resident": {
+          "x": 589,
+          "y": 515,
+          "pose": "stride-0",
+          "direction": "right",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [],
+            "x": 745,
+            "y": 535
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 589,
+            "y": 515
+          },
+          {
+            "id": "person-idris",
+            "graphics": [],
+            "x": 670,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 520,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [],
+            "x": 600,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 628,
+            "y": 776
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 629,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "noor",
+          "harbor-gull-1",
+          "harbor-gull-2"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          56,
+          56
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "f810e5b8-0ea1-4e1e-ae02-361fb96f8e9d",
+          "expected_version": 0,
+          "scene": "courtyard",
+          "position": {
+            "x": 616.1264,
+            "y": 483.55680000000024
+          },
+          "target": "noor",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 625,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "e1509f48-f439-4a91-8f3c-a6d88d99eb49",
+          "expected_version": 1,
+          "scene": "courtyard",
+          "position": {
+            "x": 616.1264,
+            "y": 483.55680000000024
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 625,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "d655f21c-ede7-4a09-ae6f-42d0ba4b267b",
+          "expected_version": 2,
+          "scene": "courtyard",
+          "position": {
+            "x": 669.9984000000007,
+            "y": 606.7008000000003
+          },
+          "target": "grant",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 689.3999999999996,
+            "y": 600
+          }
+        },
+        {
+          "action_id": "a4c829b4-ae94-445b-9a00-1b50b85a87ca",
+          "expected_version": 3,
+          "scene": "courtyard",
+          "position": {
+            "x": 669.9984000000007,
+            "y": 606.7008000000003
+          },
+          "target": "grant",
+          "action": "talk:nomads-v1-noor-consult",
+          "actorPosition": {
+            "x": 689.3999999999996,
+            "y": 600
+          }
+        },
+        {
+          "action_id": "10f70aa8-a108-4d72-a4c5-0966cd4864ba",
+          "expected_version": 4,
+          "scene": "courtyard",
+          "position": {
+            "x": 633.3856000000004,
+            "y": 486.6144000000005
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-quiet",
+          "actorPosition": {
+            "x": 649,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "8851b1ad-f0f2-4b69-a2dd-bad8e0e8a7c5",
+          "expected_version": 5,
+          "scene": "courtyard",
+          "position": {
+            "x": 633.3856000000004,
+            "y": 486.6144000000005
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "1da5e415-990f-4268-82f5-8d31269a1fed",
+          "expected_version": 6,
+          "scene": "home",
+          "position": {
+            "x": 373.3456,
+            "y": 408.9599999999996
+          },
+          "target": "bed",
+          "action": "sleep"
+        },
+        {
+          "action_id": "710c3b63-914c-46ae-aadf-3f4a80493cab",
+          "expected_version": 7,
+          "scene": "home",
+          "position": {
+            "x": 373.3456,
+            "y": 408.9599999999996
+          },
+          "target": "coast",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "be35839a-1e2a-48a3-ac44-8ce8b235a2a2",
+          "expected_version": 8,
+          "scene": "coast",
+          "position": {
+            "x": 580.9936000000006,
+            "y": 521.1328
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 583.8000000000006,
+            "y": 515
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 2,
+          "sceneId": "courtyard",
+          "position": {
+            "x": 644.2384000000002,
+            "y": 496.4816000000003
+          }
+        },
+        {
+          "expected_version": 8,
+          "sceneId": "coast",
+          "position": {
+            "x": 251.51199999999992,
+            "y": 488.5072
+          }
+        }
+      ],
+      "final": {
+        "version": 9,
+        "minute": 2000,
+        "relations": {
+          "mira": 2,
+          "noor": 1,
+          "grant": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "noor": {
+              "choice": "quiet",
+              "completedAt": 1080,
+              "recalledAt": 2000
+            }
+          }
+        }
+      }
+    },
+    {
+      "person": "noor",
+      "width": 320,
+      "height": 568,
+      "locale": "zh",
+      "garden": {
+        "player": {
+          "x": 617,
+          "y": 517
+        },
+        "resident": {
+          "x": 625,
+          "y": 475,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-elena",
+            "graphics": [
+              "npc-elena"
+            ],
+            "x": 508,
+            "y": 370
+          },
+          {
+            "id": "person-grant",
+            "graphics": [
+              "npc-grant"
+            ],
+            "x": 675,
+            "y": 600
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 625,
+            "y": 475
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 365,
+            "y": 500
+          },
+          {
+            "id": "person-nell",
+            "graphics": [
+              "npc-nell"
+            ],
+            "x": 363,
+            "y": 500
+          },
+          {
+            "id": "person-dani",
+            "graphics": [
+              "npc-dani"
+            ],
+            "x": 540,
+            "y": 480
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          }
+        ],
+        "targets": [
+          "exit",
+          "elena",
+          "grant",
+          "noor",
+          "nell",
+          "dani"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 110,
+          "y": 475
+        },
+        "resident": {
+          "x": 587,
+          "y": 515,
+          "pose": "stride-0",
+          "direction": "right",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [],
+            "x": 745,
+            "y": 535
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 587,
+            "y": 515
+          },
+          {
+            "id": "person-idris",
+            "graphics": [],
+            "x": 670,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 520,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [],
+            "x": 600,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 777
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "noor",
+          "harbor-gull-1",
+          "harbor-gull-2"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          56,
+          56
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "5ead20dc-0241-4f6e-9e9e-57ba65113a7f",
+          "expected_version": 0,
+          "scene": "courtyard",
+          "position": {
+            "x": 616.9888000000001,
+            "y": 484.3071999999999
+          },
+          "target": "noor",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 625,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "7d62298b-408e-4513-a65e-06ca772ad778",
+          "expected_version": 1,
+          "scene": "courtyard",
+          "position": {
+            "x": 616.9888000000001,
+            "y": 484.3071999999999
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 625,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "960c0f57-2044-4032-a761-0390dbb78bb9",
+          "expected_version": 2,
+          "scene": "courtyard",
+          "position": {
+            "x": 671.219200000001,
+            "y": 605.4016000000001
+          },
+          "target": "grant",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 691.1999999999996,
+            "y": 600
+          }
+        },
+        {
+          "action_id": "53428575-20a8-4f3b-b79e-ab15ce31a580",
+          "expected_version": 3,
+          "scene": "courtyard",
+          "position": {
+            "x": 671.219200000001,
+            "y": 605.4016000000001
+          },
+          "target": "grant",
+          "action": "talk:nomads-v1-noor-consult",
+          "actorPosition": {
+            "x": 691.1999999999996,
+            "y": 600
+          }
+        },
+        {
+          "action_id": "bcac185f-3336-485a-a6a4-5fa4123ffe3a",
+          "expected_version": 4,
+          "scene": "courtyard",
+          "position": {
+            "x": 632.3552000000008,
+            "y": 485.6288000000002
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-return",
+          "actorPosition": {
+            "x": 649,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "c6183eb5-aec8-40f6-bdd5-5bf11edccef7",
+          "expected_version": 5,
+          "scene": "courtyard",
+          "position": {
+            "x": 632.3552000000008,
+            "y": 485.6288000000002
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "946e6efb-7798-4d9d-837c-accb791d7fe4",
+          "expected_version": 6,
+          "scene": "home",
+          "position": {
+            "x": 372.28159999999997,
+            "y": 408.4112000000002
+          },
+          "target": "bed",
+          "action": "sleep"
+        },
+        {
+          "action_id": "21db3751-8490-4ca0-89ea-05eeb54298c5",
+          "expected_version": 7,
+          "scene": "home",
+          "position": {
+            "x": 372.28159999999997,
+            "y": 408.4112000000002
+          },
+          "target": "coast",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "4d01ad95-dc85-467d-8d34-0d70ead3524d",
+          "expected_version": 8,
+          "scene": "coast",
+          "position": {
+            "x": 580.2096000000001,
+            "y": 521.8159999999999
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 583.8000000000006,
+            "y": 515
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 6,
+          "sceneId": "home",
+          "position": {
+            "x": 384.55679999999984,
+            "y": 486.7552000000004
+          }
+        },
+        {
+          "expected_version": 8,
+          "sceneId": "coast",
+          "position": {
+            "x": 474.69440000000003,
+            "y": 491.8112
+          }
+        }
+      ],
+      "final": {
+        "version": 9,
+        "minute": 2000,
+        "relations": {
+          "mira": 2,
+          "noor": 1,
+          "grant": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "noor": {
+              "choice": "return",
+              "completedAt": 1080,
+              "recalledAt": 2000
+            }
+          }
+        }
+      }
+    },
+    {
+      "person": "noor",
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "garden": {
+        "player": {
+          "x": 617,
+          "y": 517
+        },
+        "resident": {
+          "x": 625,
+          "y": 475,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-elena",
+            "graphics": [
+              "npc-elena"
+            ],
+            "x": 506,
+            "y": 370
+          },
+          {
+            "id": "person-grant",
+            "graphics": [
+              "npc-grant"
+            ],
+            "x": 675,
+            "y": 600
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 625,
+            "y": 475
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 365,
+            "y": 500
+          },
+          {
+            "id": "person-nell",
+            "graphics": [
+              "npc-nell"
+            ],
+            "x": 361,
+            "y": 500
+          },
+          {
+            "id": "person-dani",
+            "graphics": [
+              "npc-dani"
+            ],
+            "x": 540,
+            "y": 480
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          }
+        ],
+        "targets": [
+          "exit",
+          "elena",
+          "grant",
+          "noor",
+          "nell",
+          "dani"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 110,
+          "y": 475
+        },
+        "resident": {
+          "x": 587,
+          "y": 515,
+          "pose": "stride-0",
+          "direction": "right",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [],
+            "x": 745,
+            "y": 535
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 587,
+            "y": 515
+          },
+          {
+            "id": "person-idris",
+            "graphics": [],
+            "x": 670,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 520,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [],
+            "x": 600,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 777
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 628,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "noor",
+          "harbor-gull-1",
+          "harbor-gull-2"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          64,
+          64
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "f55eeb70-0b3e-441e-a4cc-09cf614a9d2a",
+          "expected_version": 0,
+          "scene": "courtyard",
+          "position": {
+            "x": 617.0895999999999,
+            "y": 483.2992
+          },
+          "target": "noor",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 625,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "cb63cef3-375e-4854-b9b2-127d2e1ffeea",
+          "expected_version": 1,
+          "scene": "courtyard",
+          "position": {
+            "x": 617.0895999999999,
+            "y": 483.2992
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 625,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "aeebfc02-7e65-48d1-8bc7-fdf604c27487",
+          "expected_version": 2,
+          "scene": "courtyard",
+          "position": {
+            "x": 665.9831999999993,
+            "y": 598.5696000000003
+          },
+          "target": "grant",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 691.1999999999996,
+            "y": 600
+          }
+        },
+        {
+          "action_id": "a45290ea-0d9a-4f06-bbd8-6046a9761be0",
+          "expected_version": 3,
+          "scene": "courtyard",
+          "position": {
+            "x": 665.9831999999993,
+            "y": 598.5696000000003
+          },
+          "target": "grant",
+          "action": "talk:nomads-v1-noor-consult",
+          "actorPosition": {
+            "x": 691.1999999999996,
+            "y": 600
+          }
+        },
+        {
+          "action_id": "af3b1fed-9a0d-40f1-8ea8-741b7eddc6c8",
+          "expected_version": 4,
+          "scene": "courtyard",
+          "position": {
+            "x": 599.7128,
+            "y": 487.376
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-quiet",
+          "actorPosition": {
+            "x": 601,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "c1f2d77f-1622-48ed-bf38-260b07ecad42",
+          "expected_version": 5,
+          "scene": "courtyard",
+          "position": {
+            "x": 599.7128,
+            "y": 487.376
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "2b960756-7793-47cf-bf10-35fcfe7331c5",
+          "expected_version": 6,
+          "scene": "home",
+          "position": {
+            "x": 374.5999999999996,
+            "y": 411.8383999999999
+          },
+          "target": "bed",
+          "action": "sleep"
+        },
+        {
+          "action_id": "f48fbcd2-e6f4-4a4f-b611-431b68f52b29",
+          "expected_version": 7,
+          "scene": "home",
+          "position": {
+            "x": 374.5999999999996,
+            "y": 411.8383999999999
+          },
+          "target": "coast",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "1f8e482d-0d90-4543-81cb-0faeb0731ba2",
+          "expected_version": 8,
+          "scene": "coast",
+          "position": {
+            "x": 581.2064000000022,
+            "y": 521.8813333333337
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 585.6000000000006,
+            "y": 515
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 2,
+          "sceneId": "courtyard",
+          "position": {
+            "x": 665.5856,
+            "y": 598.5696000000003
+          }
+        },
+        {
+          "expected_version": 4,
+          "sceneId": "courtyard",
+          "position": {
+            "x": 650.1351999999997,
+            "y": 592.0400000000004
+          }
+        },
+        {
+          "expected_version": 6,
+          "sceneId": "home",
+          "position": {
+            "x": 381.94719999999967,
+            "y": 472.5312000000001
+          }
+        },
+        {
+          "expected_version": 8,
+          "sceneId": "coast",
+          "position": {
+            "x": 468.4224000000013,
+            "y": 491.9792
+          }
+        }
+      ],
+      "final": {
+        "version": 9,
+        "minute": 2000,
+        "relations": {
+          "mira": 2,
+          "noor": 1,
+          "grant": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "noor": {
+              "choice": "quiet",
+              "completedAt": 1080,
+              "recalledAt": 2000
+            }
+          }
+        }
+      }
+    },
+    {
+      "person": "noor",
+      "width": 390,
+      "height": 844,
+      "locale": "zh",
+      "garden": {
+        "player": {
+          "x": 617,
+          "y": 517
+        },
+        "resident": {
+          "x": 625,
+          "y": 475,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-elena",
+            "graphics": [
+              "npc-elena"
+            ],
+            "x": 508,
+            "y": 370
+          },
+          {
+            "id": "person-grant",
+            "graphics": [
+              "npc-grant"
+            ],
+            "x": 675,
+            "y": 600
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 625,
+            "y": 475
+          },
+          {
+            "id": "person-mara",
+            "graphics": [],
+            "x": 365,
+            "y": 500
+          },
+          {
+            "id": "person-nell",
+            "graphics": [
+              "npc-nell"
+            ],
+            "x": 363,
+            "y": 500
+          },
+          {
+            "id": "person-dani",
+            "graphics": [
+              "npc-dani"
+            ],
+            "x": 540,
+            "y": 480
+          },
+          {
+            "id": "animal-harbor-cat-1",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-2",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          },
+          {
+            "id": "animal-harbor-cat-3",
+            "graphics": [],
+            "x": 566,
+            "y": 481
+          }
+        ],
+        "targets": [
+          "exit",
+          "elena",
+          "grant",
+          "noor",
+          "nell",
+          "dani"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 110,
+          "y": 475
+        },
+        "resident": {
+          "x": 587,
+          "y": 515,
+          "pose": "stride-0",
+          "direction": "right",
+          "graphics": [
+            "npc-noor"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [],
+            "x": 745,
+            "y": 535
+          },
+          {
+            "id": "person-noor",
+            "graphics": [
+              "npc-noor"
+            ],
+            "x": 587,
+            "y": 515
+          },
+          {
+            "id": "person-idris",
+            "graphics": [],
+            "x": 670,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [],
+            "x": 520,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [],
+            "x": 600,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 626,
+            "y": 778
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [],
+            "x": 626,
+            "y": 626
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "noor",
+          "harbor-gull-1",
+          "harbor-gull-2"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          64,
+          64
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "a0279722-dfd8-4c31-906e-1cf1c0015911",
+          "expected_version": 0,
+          "scene": "courtyard",
+          "position": {
+            "x": 616.1151999999998,
+            "y": 481.7199999999998
+          },
+          "target": "noor",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 625,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "ef6097a5-9835-4332-9851-eeec50797667",
+          "expected_version": 1,
+          "scene": "courtyard",
+          "position": {
+            "x": 616.1151999999998,
+            "y": 481.7199999999998
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 625,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "aeccc131-22d6-4d04-aaa2-c015e6c9b644",
+          "expected_version": 2,
+          "scene": "courtyard",
+          "position": {
+            "x": 677.8234666666665,
+            "y": 608.8847999999995
+          },
+          "target": "grant",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 691.1999999999996,
+            "y": 600
+          }
+        },
+        {
+          "action_id": "ab53234d-dc12-4d05-a2a1-d2a3ebe2e4f5",
+          "expected_version": 3,
+          "scene": "courtyard",
+          "position": {
+            "x": 677.8234666666665,
+            "y": 608.8847999999995
+          },
+          "target": "grant",
+          "action": "talk:nomads-v1-noor-consult",
+          "actorPosition": {
+            "x": 691.1999999999996,
+            "y": 600
+          }
+        },
+        {
+          "action_id": "f7e9999f-d93c-49c0-ae28-f47d8c18fd64",
+          "expected_version": 4,
+          "scene": "courtyard",
+          "position": {
+            "x": 632.0490666666664,
+            "y": 480.9359999999993
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-return",
+          "actorPosition": {
+            "x": 649,
+            "y": 475
+          }
+        },
+        {
+          "action_id": "83dc5ea4-a2c1-437d-9093-f56a089b2950",
+          "expected_version": 5,
+          "scene": "courtyard",
+          "position": {
+            "x": 632.0490666666664,
+            "y": 480.9359999999993
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "8bd92778-d627-4b33-929c-55a1e4718aaf",
+          "expected_version": 6,
+          "scene": "home",
+          "position": {
+            "x": 371.10559999999975,
+            "y": 408.0416000000003
+          },
+          "target": "bed",
+          "action": "sleep"
+        },
+        {
+          "action_id": "d8f153b9-3330-4c9f-a725-de29f33f3697",
+          "expected_version": 7,
+          "scene": "home",
+          "position": {
+            "x": 371.10559999999975,
+            "y": 408.0416000000003
+          },
+          "target": "coast",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "b7ebd56c-594d-41d0-ae31-346e7e218954",
+          "expected_version": 8,
+          "scene": "coast",
+          "position": {
+            "x": 579.8959999999998,
+            "y": 521.9951999999996
+          },
+          "target": "noor",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 585.6000000000006,
+            "y": 515
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 2,
+          "sceneId": "courtyard",
+          "position": {
+            "x": 645.1343999999997,
+            "y": 590.8079999999993
+          }
+        },
+        {
+          "expected_version": 6,
+          "sceneId": "home",
+          "position": {
+            "x": 454.5455999999998,
+            "y": 537.9839999999999
+          }
+        },
+        {
+          "expected_version": 8,
+          "sceneId": "coast",
+          "position": {
+            "x": 300.4112000000002,
+            "y": 492.4719999999998
+          }
+        }
+      ],
+      "final": {
+        "version": 9,
+        "minute": 2000,
+        "relations": {
+          "mira": 2,
+          "noor": 1,
+          "grant": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "noor": {
+              "choice": "return",
+              "completedAt": 1080,
+              "recalledAt": 2000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "missingAssets": [],
+  "blockedExternal": [
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js"
+  ],
+  "modelCalls": 0,
+  "mediaPosts": 0,
+  "realPhone": false,
+  "miniApp": false,
+  "configuredResidents": 22,
+  "admittedResidents": 22
+}

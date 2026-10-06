@@ -1,0 +1,1699 @@
+{
+  "scope": "Actual local fixed-build Main/View/RPGJS and HTTP handler with isolated SQLite authority; synthetic legacy seed only. No identity injection, listener, external network, production save or deployment.",
+  "cases": [
+    {
+      "person": "harper",
+      "width": 320,
+      "height": 568,
+      "locale": "en",
+      "garden": {
+        "player": {
+          "x": 577,
+          "y": 477
+        },
+        "resident": {
+          "x": 585,
+          "y": 435,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 650,
+            "y": 620
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 585,
+            "y": 435
+          },
+          {
+            "id": "person-elena",
+            "graphics": [
+              "npc-elena"
+            ],
+            "x": 535,
+            "y": 510
+          },
+          {
+            "id": "person-dani",
+            "graphics": [],
+            "x": 430,
+            "y": 510
+          }
+        ],
+        "targets": [
+          "exit",
+          "gate-hours",
+          "growing-fern",
+          "harper",
+          "elena",
+          "crop-bed-1",
+          "crop-bed-2",
+          "crop-bed-3"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 110,
+          "y": 475
+        },
+        "resident": {
+          "x": 747,
+          "y": 535,
+          "pose": "stride-0",
+          "direction": "right",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 747,
+            "y": 535
+          },
+          {
+            "id": "person-noor",
+            "graphics": [],
+            "x": 585,
+            "y": 515
+          },
+          {
+            "id": "person-idris",
+            "graphics": [
+              "npc-idris"
+            ],
+            "x": 672,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [
+              "npc-ruth"
+            ],
+            "x": 522,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [
+              "npc-owen"
+            ],
+            "x": 602,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 777
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 625
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 874,
+            "y": 627
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 873,
+            "y": 768
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "harper",
+          "idris",
+          "ruth",
+          "owen"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          56,
+          56
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "5e6f7a0f-32dd-42fc-ad8d-7da0afea226b",
+          "expected_version": 0,
+          "scene": "garden",
+          "position": {
+            "x": 577,
+            "y": 477
+          },
+          "target": "harper",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "747b5b7a-f827-4035-b656-8aa4a03860be",
+          "expected_version": 1,
+          "scene": "garden",
+          "position": {
+            "x": 577,
+            "y": 477
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "0a442354-cd30-4b6a-87f4-7e2372633095",
+          "expected_version": 2,
+          "scene": "garden",
+          "position": {
+            "x": 542.7168000000004,
+            "y": 489.6783999999999
+          },
+          "target": "elena",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "79e8f6b9-7561-41e1-b753-97a3c2ba6ddc",
+          "expected_version": 3,
+          "scene": "garden",
+          "position": {
+            "x": 542.7168000000004,
+            "y": 489.6783999999999
+          },
+          "target": "elena",
+          "action": "talk:life",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "92c0ed9e-062d-4b9a-a962-0dc5127b3aad",
+          "expected_version": 4,
+          "scene": "garden",
+          "position": {
+            "x": 542.7168000000004,
+            "y": 489.6783999999999
+          },
+          "target": "elena",
+          "action": "talk:nomads-v1-harper-consult",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "0df596bf-1e74-45b7-acf2-062e723fe6e2",
+          "expected_version": 5,
+          "scene": "garden",
+          "position": {
+            "x": 578.1312000000003,
+            "y": 479.40800000000013
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-notice",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "ca84ec40-2922-43a2-aaea-9c6bbd73020a",
+          "expected_version": 6,
+          "scene": "garden",
+          "position": {
+            "x": 578.1312000000003,
+            "y": 479.40800000000013
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "98db535b-3235-4341-bf68-e36516d63cf9",
+          "expected_version": 7,
+          "scene": "home",
+          "position": {
+            "x": 372.1696000000001,
+            "y": 411.0655999999997
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "bb3021cd-c5a9-4944-8878-72b13d406894",
+          "expected_version": 8,
+          "scene": "home",
+          "position": {
+            "x": 372.1696000000001,
+            "y": 411.0655999999997
+          },
+          "target": "coast",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "f4598772-bb51-41ce-9fb6-3b990be0ee14",
+          "expected_version": 9,
+          "scene": "coast",
+          "position": {
+            "x": 736.6735999999987,
+            "y": 575.6319999999994
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 721,
+            "y": 535
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 542.7168000000004,
+            "y": 489.6783999999999
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 542.7168000000004,
+            "y": 489.6783999999999
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 542.7168000000004,
+            "y": 489.6783999999999
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 542.7168000000004,
+            "y": 489.6783999999999
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 542.7168000000004,
+            "y": 489.6783999999999
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 542.7168000000004,
+            "y": 489.6783999999999
+          }
+        },
+        {
+          "expected_version": 7,
+          "sceneId": "home",
+          "position": {
+            "x": 382.8544000000002,
+            "y": 500.69919999999996
+          }
+        },
+        {
+          "expected_version": 9,
+          "sceneId": "coast",
+          "position": {
+            "x": 448.0944000000016,
+            "y": 491.11680000000007
+          }
+        }
+      ],
+      "final": {
+        "version": 10,
+        "minute": 1070,
+        "relations": {
+          "mira": 2,
+          "harper": 1,
+          "elena": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "harper": {
+              "choice": "notice",
+              "completedAt": 850,
+              "recalledAt": 1070
+            }
+          }
+        }
+      }
+    },
+    {
+      "person": "harper",
+      "width": 320,
+      "height": 568,
+      "locale": "zh",
+      "garden": {
+        "player": {
+          "x": 577,
+          "y": 477
+        },
+        "resident": {
+          "x": 585,
+          "y": 435,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 650,
+            "y": 620
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 585,
+            "y": 435
+          },
+          {
+            "id": "person-elena",
+            "graphics": [
+              "npc-elena"
+            ],
+            "x": 535,
+            "y": 510
+          },
+          {
+            "id": "person-dani",
+            "graphics": [],
+            "x": 430,
+            "y": 510
+          }
+        ],
+        "targets": [
+          "exit",
+          "gate-hours",
+          "growing-fern",
+          "harper",
+          "elena",
+          "crop-bed-1",
+          "crop-bed-2",
+          "crop-bed-3"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 110,
+          "y": 475
+        },
+        "resident": {
+          "x": 747,
+          "y": 535,
+          "pose": "stride-0",
+          "direction": "right",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 747,
+            "y": 535
+          },
+          {
+            "id": "person-noor",
+            "graphics": [],
+            "x": 585,
+            "y": 515
+          },
+          {
+            "id": "person-idris",
+            "graphics": [
+              "npc-idris"
+            ],
+            "x": 672,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [
+              "npc-ruth"
+            ],
+            "x": 522,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [
+              "npc-owen"
+            ],
+            "x": 602,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 777
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 625
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 874,
+            "y": 628
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 872,
+            "y": 768
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "harper",
+          "idris",
+          "ruth",
+          "owen",
+          "harbor-gull-1",
+          "harbor-gull-2",
+          "harbor-gull-3",
+          "harbor-gull-4"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          56,
+          56
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "3ae4c04b-aace-4e6b-b7cd-cff8240da2ef",
+          "expected_version": 0,
+          "scene": "garden",
+          "position": {
+            "x": 577,
+            "y": 477
+          },
+          "target": "harper",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "536b9a7e-2963-4804-8718-520a9cd7fae1",
+          "expected_version": 1,
+          "scene": "garden",
+          "position": {
+            "x": 577,
+            "y": 477
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "a126dd2a-c37f-4861-a4c0-77e37283669d",
+          "expected_version": 2,
+          "scene": "garden",
+          "position": {
+            "x": 527.917866666667,
+            "y": 547.5711999999996
+          },
+          "target": "elena",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "7e79d06e-f1f4-451a-af3d-012ca2f1c581",
+          "expected_version": 3,
+          "scene": "garden",
+          "position": {
+            "x": 527.917866666667,
+            "y": 547.5711999999996
+          },
+          "target": "elena",
+          "action": "talk:life",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "bc6eacaf-2b2f-4963-baf7-24a120292eb0",
+          "expected_version": 4,
+          "scene": "garden",
+          "position": {
+            "x": 527.917866666667,
+            "y": 547.5711999999996
+          },
+          "target": "elena",
+          "action": "talk:nomads-v1-harper-consult",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "39acfd6c-4df2-439e-8091-3880f0e3b011",
+          "expected_version": 5,
+          "scene": "garden",
+          "position": {
+            "x": 581.6666666666671,
+            "y": 480.3039999999995
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-leave-space",
+          "actorPosition": {
+            "x": 602.9999999999995,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "cb4deadf-0fd5-424a-80e8-653c5d310552",
+          "expected_version": 6,
+          "scene": "garden",
+          "position": {
+            "x": 581.6666666666671,
+            "y": 480.3039999999995
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "8c7103ab-8321-4cea-b509-8fd81554cbc4",
+          "expected_version": 7,
+          "scene": "home",
+          "position": {
+            "x": 373.75999999999993,
+            "y": 412.3871999999992
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "771efb93-9fc9-4d73-b4ed-d62ce16ac75a",
+          "expected_version": 8,
+          "scene": "home",
+          "position": {
+            "x": 373.75999999999993,
+            "y": 412.3871999999992
+          },
+          "target": "coast",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "30642e82-74fe-4338-91fb-5b4974aab94f",
+          "expected_version": 9,
+          "scene": "coast",
+          "position": {
+            "x": 742.4079999999987,
+            "y": 575.4639999999998
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 721,
+            "y": 535
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 7,
+          "sceneId": "home",
+          "position": {
+            "x": 385.8672,
+            "y": 478.24319999999966
+          }
+        },
+        {
+          "expected_version": 9,
+          "sceneId": "coast",
+          "position": {
+            "x": 414.8863999999999,
+            "y": 492.4832000000002
+          }
+        }
+      ],
+      "final": {
+        "version": 10,
+        "minute": 1070,
+        "relations": {
+          "mira": 2,
+          "harper": 1,
+          "elena": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "harper": {
+              "choice": "leave-space",
+              "completedAt": 850,
+              "recalledAt": 1070
+            }
+          }
+        }
+      }
+    },
+    {
+      "person": "harper",
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "garden": {
+        "player": {
+          "x": 577,
+          "y": 477
+        },
+        "resident": {
+          "x": 585,
+          "y": 435,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 650,
+            "y": 620
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 585,
+            "y": 435
+          },
+          {
+            "id": "person-elena",
+            "graphics": [
+              "npc-elena"
+            ],
+            "x": 535,
+            "y": 510
+          },
+          {
+            "id": "person-dani",
+            "graphics": [],
+            "x": 430,
+            "y": 510
+          }
+        ],
+        "targets": [
+          "exit",
+          "gate-hours",
+          "growing-fern",
+          "harper",
+          "elena",
+          "crop-bed-1",
+          "crop-bed-2",
+          "crop-bed-3"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 110,
+          "y": 475
+        },
+        "resident": {
+          "x": 747,
+          "y": 535,
+          "pose": "stride-0",
+          "direction": "right",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 747,
+            "y": 535
+          },
+          {
+            "id": "person-noor",
+            "graphics": [],
+            "x": 585,
+            "y": 515
+          },
+          {
+            "id": "person-idris",
+            "graphics": [
+              "npc-idris"
+            ],
+            "x": 672,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [
+              "npc-ruth"
+            ],
+            "x": 522,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [
+              "npc-owen"
+            ],
+            "x": 602,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 777
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 625
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 874,
+            "y": 627
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 873,
+            "y": 768
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "harper",
+          "idris",
+          "ruth",
+          "owen",
+          "harbor-gull-1",
+          "harbor-gull-2",
+          "harbor-gull-3",
+          "harbor-gull-4"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          64,
+          64
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "9e3eb413-4daa-4bd9-a197-b44358734e0e",
+          "expected_version": 0,
+          "scene": "garden",
+          "position": {
+            "x": 577,
+            "y": 477
+          },
+          "target": "harper",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "dfccfd19-6f7d-4364-8918-5f3497c3f822",
+          "expected_version": 1,
+          "scene": "garden",
+          "position": {
+            "x": 577,
+            "y": 477
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "abe4b1d6-1e27-4d42-a02f-76883fa3f5e6",
+          "expected_version": 2,
+          "scene": "garden",
+          "position": {
+            "x": 538.8864000000004,
+            "y": 489.544
+          },
+          "target": "elena",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "724627e7-6976-4a24-ade6-795a576027f6",
+          "expected_version": 3,
+          "scene": "garden",
+          "position": {
+            "x": 538.8864000000004,
+            "y": 489.544
+          },
+          "target": "elena",
+          "action": "talk:life",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "a775322d-9173-4d13-89a4-5980fd983d79",
+          "expected_version": 4,
+          "scene": "garden",
+          "position": {
+            "x": 538.8864000000004,
+            "y": 489.544
+          },
+          "target": "elena",
+          "action": "talk:nomads-v1-harper-consult",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "c57718d3-d43b-4dc7-ba1e-9a6ffd9e7740",
+          "expected_version": 5,
+          "scene": "garden",
+          "position": {
+            "x": 577.9183999999998,
+            "y": 478.5791999999996
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-notice",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "4a83474c-db19-4b39-b335-648054744978",
+          "expected_version": 6,
+          "scene": "garden",
+          "position": {
+            "x": 577.9183999999998,
+            "y": 478.5791999999996
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "8656753c-c3da-4249-a578-e3f6986e97f1",
+          "expected_version": 7,
+          "scene": "home",
+          "position": {
+            "x": 371.34079999999994,
+            "y": 410.65119999999996
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "343fbed9-c14d-4298-81e7-456d132374dc",
+          "expected_version": 8,
+          "scene": "home",
+          "position": {
+            "x": 371.34079999999994,
+            "y": 410.65119999999996
+          },
+          "target": "coast",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "aefaa153-6a02-466c-87fb-bfb701fcc604",
+          "expected_version": 9,
+          "scene": "coast",
+          "position": {
+            "x": 738.4767999999981,
+            "y": 577.5807999999997
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 721,
+            "y": 535
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 538.8864000000004,
+            "y": 489.544
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 538.8864000000004,
+            "y": 489.544
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 538.8864000000004,
+            "y": 489.544
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 538.8864000000004,
+            "y": 489.544
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 538.8864000000004,
+            "y": 489.544
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 538.8864000000004,
+            "y": 489.544
+          }
+        },
+        {
+          "expected_version": 7,
+          "sceneId": "home",
+          "position": {
+            "x": 384.5679999999997,
+            "y": 446.9392
+          }
+        },
+        {
+          "expected_version": 9,
+          "sceneId": "coast",
+          "position": {
+            "x": 471.5920000000006,
+            "y": 492.7631999999998
+          }
+        }
+      ],
+      "final": {
+        "version": 10,
+        "minute": 1070,
+        "relations": {
+          "mira": 2,
+          "harper": 1,
+          "elena": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "harper": {
+              "choice": "notice",
+              "completedAt": 850,
+              "recalledAt": 1070
+            }
+          }
+        }
+      }
+    },
+    {
+      "person": "harper",
+      "width": 390,
+      "height": 844,
+      "locale": "zh",
+      "garden": {
+        "player": {
+          "x": 577,
+          "y": 477
+        },
+        "resident": {
+          "x": 585,
+          "y": 435,
+          "pose": "stand",
+          "direction": "down",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 650,
+            "y": 620
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 585,
+            "y": 435
+          },
+          {
+            "id": "person-elena",
+            "graphics": [
+              "npc-elena"
+            ],
+            "x": 535,
+            "y": 510
+          },
+          {
+            "id": "person-dani",
+            "graphics": [],
+            "x": 430,
+            "y": 510
+          }
+        ],
+        "targets": [
+          "exit",
+          "gate-hours",
+          "growing-fern",
+          "harper",
+          "elena",
+          "crop-bed-1",
+          "crop-bed-2",
+          "crop-bed-3"
+        ],
+        "overflow": false
+      },
+      "coast": {
+        "player": {
+          "x": 110,
+          "y": 475
+        },
+        "resident": {
+          "x": 747,
+          "y": 535,
+          "pose": "stride-0",
+          "direction": "right",
+          "graphics": [
+            "npc-harper"
+          ]
+        },
+        "events": [
+          {
+            "id": "person-jordan",
+            "graphics": [],
+            "x": 740,
+            "y": 640
+          },
+          {
+            "id": "person-leila",
+            "graphics": [],
+            "x": 780,
+            "y": 500
+          },
+          {
+            "id": "person-harper",
+            "graphics": [
+              "npc-harper"
+            ],
+            "x": 747,
+            "y": 535
+          },
+          {
+            "id": "person-noor",
+            "graphics": [],
+            "x": 585,
+            "y": 515
+          },
+          {
+            "id": "person-idris",
+            "graphics": [
+              "npc-idris"
+            ],
+            "x": 672,
+            "y": 580
+          },
+          {
+            "id": "person-ruth",
+            "graphics": [
+              "npc-ruth"
+            ],
+            "x": 522,
+            "y": 650
+          },
+          {
+            "id": "person-owen",
+            "graphics": [
+              "npc-owen"
+            ],
+            "x": 602,
+            "y": 600
+          },
+          {
+            "id": "animal-harbor-gull-1",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 777
+          },
+          {
+            "id": "animal-harbor-gull-2",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 627,
+            "y": 625
+          },
+          {
+            "id": "animal-harbor-gull-3",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 874,
+            "y": 627
+          },
+          {
+            "id": "animal-harbor-gull-4",
+            "graphics": [
+              "animal-coastal-gull-v1"
+            ],
+            "x": 873,
+            "y": 768
+          }
+        ],
+        "targets": [
+          "to-beach",
+          "to-path",
+          "to-lighthouse",
+          "road-harbor",
+          "road-hill",
+          "harper",
+          "idris",
+          "ruth",
+          "owen",
+          "harbor-gull-1",
+          "harbor-gull-2",
+          "harbor-gull-3",
+          "harbor-gull-4"
+        ],
+        "overflow": false
+      },
+      "card": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          48,
+          48
+        ],
+        "fit": "contain"
+      },
+      "avatar": {
+        "natural": [
+          256,
+          256
+        ],
+        "fit": "contain"
+      },
+      "profile": {
+        "natural": [
+          512,
+          512
+        ],
+        "box": [
+          64,
+          64
+        ],
+        "fit": "contain"
+      },
+      "storyCompleted": true,
+      "actualRevisit": true,
+      "reloadPreservesStory": true,
+      "actions": [
+        {
+          "action_id": "ce50e7b0-7d4c-47ac-8e79-92da5bed7fd9",
+          "expected_version": 0,
+          "scene": "garden",
+          "position": {
+            "x": 577,
+            "y": 477
+          },
+          "target": "harper",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "9ca4b118-b7e7-42ff-ba3d-3f986fe510c5",
+          "expected_version": 1,
+          "scene": "garden",
+          "position": {
+            "x": 577,
+            "y": 477
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-start",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "8cfb2d69-ee4f-4905-852b-fac6ca69e06f",
+          "expected_version": 2,
+          "scene": "garden",
+          "position": {
+            "x": 541.4959999999994,
+            "y": 489.97520000000003
+          },
+          "target": "elena",
+          "action": "introduce",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "00db520d-2b70-4ddc-b28a-230a0c3b2332",
+          "expected_version": 3,
+          "scene": "garden",
+          "position": {
+            "x": 541.4959999999994,
+            "y": 489.97520000000003
+          },
+          "target": "elena",
+          "action": "talk:life",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "1e4ca37c-f191-4e9f-a797-6be7d489b2c7",
+          "expected_version": 4,
+          "scene": "garden",
+          "position": {
+            "x": 541.4959999999994,
+            "y": 489.97520000000003
+          },
+          "target": "elena",
+          "action": "talk:nomads-v1-harper-consult",
+          "actorPosition": {
+            "x": 535,
+            "y": 510
+          }
+        },
+        {
+          "action_id": "72fefad2-1d08-4357-bb0a-5fd55c026aeb",
+          "expected_version": 5,
+          "scene": "garden",
+          "position": {
+            "x": 576.3279999999995,
+            "y": 479.03280000000024
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-leave-space",
+          "actorPosition": {
+            "x": 585,
+            "y": 435
+          }
+        },
+        {
+          "action_id": "2bfb10dd-4846-4722-8c59-6dddd09ca8a3",
+          "expected_version": 6,
+          "scene": "garden",
+          "position": {
+            "x": 576.3279999999995,
+            "y": 479.03280000000024
+          },
+          "target": "home",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "4a2dab15-027b-4a18-a4c9-c7fad7ec29be",
+          "expected_version": 7,
+          "scene": "home",
+          "position": {
+            "x": 372.5167999999993,
+            "y": 410.0800000000005
+          },
+          "target": "bed",
+          "action": "rest"
+        },
+        {
+          "action_id": "f8530794-1e0f-41ab-a687-10f75cf9c102",
+          "expected_version": 8,
+          "scene": "home",
+          "position": {
+            "x": 372.5167999999993,
+            "y": 410.0800000000005
+          },
+          "target": "coast",
+          "action": "travel-map"
+        },
+        {
+          "action_id": "9f265742-5e1e-40e6-8cce-aede5d7adf2a",
+          "expected_version": 9,
+          "scene": "coast",
+          "position": {
+            "x": 735.6543999999986,
+            "y": 576.8751999999993
+          },
+          "target": "harper",
+          "action": "talk:nomads-v1-recall",
+          "actorPosition": {
+            "x": 721,
+            "y": 535
+          }
+        }
+      ],
+      "checkpoints": [
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 541.4959999999994,
+            "y": 489.97520000000003
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 541.4959999999994,
+            "y": 489.97520000000003
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 541.4959999999994,
+            "y": 489.97520000000003
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 541.4959999999994,
+            "y": 489.97520000000003
+          }
+        },
+        {
+          "expected_version": 2,
+          "sceneId": "garden",
+          "position": {
+            "x": 541.4959999999994,
+            "y": 489.97520000000003
+          }
+        },
+        {
+          "expected_version": 7,
+          "sceneId": "home",
+          "position": {
+            "x": 384.7135999999994,
+            "y": 442.68320000000034
+          }
+        },
+        {
+          "expected_version": 9,
+          "sceneId": "coast",
+          "position": {
+            "x": 483.9904000000006,
+            "y": 491.77759999999955
+          }
+        }
+      ],
+      "final": {
+        "version": 10,
+        "minute": 1070,
+        "relations": {
+          "mira": 2,
+          "harper": 1,
+          "elena": 1
+        },
+        "memory": {
+          "schema": 1,
+          "stories": {
+            "harper": {
+              "choice": "leave-space",
+              "completedAt": 850,
+              "recalledAt": 1070
+            }
+          }
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "missingAssets": [],
+  "blockedExternal": [
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js",
+    "https://images.aiwaves.tech/alteru/guest-shell.js"
+  ],
+  "modelCalls": 0,
+  "mediaPosts": 0,
+  "realPhone": false,
+  "miniApp": false,
+  "configuredResidents": 22,
+  "admittedResidents": 22
+}

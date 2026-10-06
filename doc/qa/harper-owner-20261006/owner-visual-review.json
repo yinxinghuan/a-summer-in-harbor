@@ -1,0 +1,72 @@
+{
+  "decision": "AI_LOCAL_PASS",
+  "reviewer": "game owner AI thread 01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "at": "2026-10-06T10:45:27.473122+00:00",
+  "humanReview": false,
+  "scope": [
+    "actually viewed fixed atlas/256 avatar/512 profile",
+    "actually viewed 320/390 en/zh conversation and profile screenshots and enlarged portrait",
+    "actually viewed cafe/coast 320/390 near-foot NPC screenshots"
+  ],
+  "evidence": [
+    "screenshots/320-en-choice-saved.png",
+    "screenshots/320-en-coast-map.png",
+    "screenshots/320-en-conversation-portrait.png",
+    "screenshots/320-en-garden-map.png",
+    "screenshots/320-en-people-list.png",
+    "screenshots/320-en-profile-enlarged.png",
+    "screenshots/320-en-profile-history.png",
+    "screenshots/320-en-profile.png",
+    "screenshots/320-en-revisit.png",
+    "screenshots/320-zh-choice-saved.png",
+    "screenshots/320-zh-coast-map.png",
+    "screenshots/320-zh-conversation-portrait.png",
+    "screenshots/320-zh-garden-map.png",
+    "screenshots/320-zh-people-list.png",
+    "screenshots/320-zh-profile-enlarged.png",
+    "screenshots/320-zh-profile-history.png",
+    "screenshots/320-zh-profile.png",
+    "screenshots/320-zh-revisit.png",
+    "screenshots/390-en-choice-saved.png",
+    "screenshots/390-en-coast-map.png",
+    "screenshots/390-en-conversation-portrait.png",
+    "screenshots/390-en-garden-map.png",
+    "screenshots/390-en-people-list.png",
+    "screenshots/390-en-profile-enlarged.png",
+    "screenshots/390-en-profile-history.png",
+    "screenshots/390-en-profile.png",
+    "screenshots/390-en-revisit.png",
+    "screenshots/390-zh-choice-saved.png",
+    "screenshots/390-zh-coast-map.png",
+    "screenshots/390-zh-conversation-portrait.png",
+    "screenshots/390-zh-garden-map.png",
+    "screenshots/390-zh-people-list.png",
+    "screenshots/390-zh-profile-enlarged.png",
+    "screenshots/390-zh-profile-history.png",
+    "screenshots/390-zh-profile.png",
+    "screenshots/390-zh-revisit.png",
+    "screenshots/cafe-320-en-npc-map.png",
+    "screenshots/cafe-390-en-npc-map.png",
+    "screenshots/coast-320-en-npc-map.png",
+    "screenshots/coast-390-en-npc-map.png"
+  ],
+  "reasons": [
+    "Same curls/glasses/slate-blue overshirt/red tee identity in map and profile; warm Harbor pixel vocabulary preserved.",
+    "Whole square bust is contained in conversation content 48x48 and relationship card 56/64 square; no stretched or cropped head, visible magenta edge or missing neckline.",
+    "Actual NPC footpoints: garden585/435, cafe375/380, coast745/535 at near fixture; normal patrol stays within contract. NPC offset0/0, anchor64/122 on128cells, scale56/108.",
+    "World depth at cafe permits natural partial overlap with the neighbor behind Harper; faces remain distinguishable and the expected Interact target is reachable.",
+    "Profile and story pages scroll at narrow viewport, close/enlarge controls remain usable and text has no horizontal overflow."
+  ],
+  "limits": [
+    "At320 the existing HUD can cover a small part of upper curls in the coastal near view; face and body remain readable. No claim of an unobscured map at every possible player position.",
+    "Producer isolated continuous four-direction atlas loop remains separate from owner actual consumer map/profile/story acceptance.",
+    "Normal MiniApp, real phone, live account/cross-device isolation, SiteUI and new-player comprehension are untested; source tech news remains NO_ADMITTED_TECH_ARTICLE."
+  ],
+  "counts": {
+    "ownerModelCalls": 0,
+    "ownerMediaPosts": 0,
+    "ownerLibraryMutations": 0,
+    "deployments": 0
+  },
+  "rejectionHistory": "Producer up-Bv1 rejection preserved in producer-suite; owner initial browser/test failures retained in external evidence history."
+}

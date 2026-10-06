@@ -7,7 +7,7 @@ export type TechNomad={id:string;name:Words;role:Words;unknown:Words;intro:Words
 export const techNomads=source as unknown as TechNomad[];
 export const techNomad=(id:string)=>techNomads.find(p=>p.id===id);
 export const techRoutes=Object.fromEntries(techNomads.map(p=>[p.id,p.routes]));
-export const techPeople=Object.fromEntries(techNomads.map(p=>[p.id,{name:p.name,unknown:p.unknown,intro:p.intro,art:p.art,mapArt:p.mapArt,avatarArt:p.avatarArt}]));
+export const techPeople=Object.fromEntries(techNomads.map(p=>[p.id,{name:p.name,unknown:p.unknown,intro:p.intro,art:p.art,mapArt:p.mapArt,avatarArt:p.avatarArt,portraitShape:'square' as const}]));
 export const techRoles=Object.fromEntries(techNomads.map(p=>[p.id,p.role]));
 /** Pending metadata is never a character. Owner supplies admitted bytes and real renderer evidence. */
 export function techNomadAdmitted(id:string){const p=techNomad(id);return !p||p.artAdmission.status==='accepted'&&p.artAdmission.missing.length===0&&!!p.artAdmission.rendererEvidence&&[p.artAdmission.atlas,p.artAdmission.avatar,p.artAdmission.portrait].every(a=>!!a.sha256&&/^[a-f0-9]{64}$/.test(a.sha256));}

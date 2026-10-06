@@ -1,0 +1,726 @@
+{
+  "version": 1,
+  "at": "2026-10-06T09:26:42.486267+00:00",
+  "basisPath": "/Users/yin/code/games/harbor-residents-art-20261006/historical-rights-scope-application.json",
+  "basisSHA256": "f48d2ec2b0ebf1450ace38368ae6779ba6566db87525e0d196d843a5fbd31348",
+  "existingRule": {
+    "path": "/Users/yin/code/games/rpg-asset-library/admission-candidates/harbor-three-accepted-20261003-v1/execution-v1/rights-confirmation.json",
+    "sha256": "5dd8c051aaa4d9ec538dc63eed7d23db26a1c41fd7d6db4f706366ecc90f5f75",
+    "coveredTaskIdsAsOriginallyRecorded": [
+      "mt_6b75312ace8dd7ab508e13852856da51",
+      "mt_f798b127dfa061177ef4dba6a76655fb",
+      "mt_2599053ccb9958cd12a13258a511677b"
+    ]
+  },
+  "existingBusinessRuleBasis": {
+    "path": "/Users/yin/code/games/rpg-asset-library/admission-candidates/harbor-three-accepted-20261003-v1/execution-v1/authority.json",
+    "sha256": "63cb09e7e71c093cc451571501fe8416a4432696cc2ba759a51de3eec0487ab9",
+    "humanMessageId": "01a100e2-41e5-7226-9b54-1597d0a75b38",
+    "proposalItem": "exec-3ded4f0c-c2f2-4b8d-a1a0-b7dcb6d87d73"
+  },
+  "scope": {
+    "copy": true,
+    "transform": true,
+    "internal-agent-use": true,
+    "cross-alteru-game-use": true,
+    "source-and-build-distribution": true
+  },
+  "license": {
+    "id": "alteru-project-use-confirmed-20261003",
+    "name": "AlterU project usage permission (business confirmation)",
+    "notice": "Generated through AlterU Media for this project. Recorded project permission covers technical processing, internal production, reuse across AlterU games and distribution with game source or builds. No additional attribution requirement was supplied in the business confirmation. This notice records project usage permission, not a universal open-source asset license. Source generation/task and local modifications remain in each manifest.",
+    "allowed": true
+  },
+  "interpretation": {
+    "sameServiceSameProjectExistingStandardUses": true,
+    "AIApplicabilityAssessmentNotNewHumanLegalStatement": true,
+    "oldRecordDoesNotLiterallyListNewHarperTessNoorTasks": true,
+    "notUniversalOpenLicense": true,
+    "noLibraryMutationUploadOrPublication": true
+  },
+  "sourceMappings": [
+    {
+      "person": "harper",
+      "taskKey": "harper-down-a-v1",
+      "requestId": "3f7e7851-445b-45af-bf00-5b4efce0ab04",
+      "taskId": "mt_6e7f6e16aca4855fbe9bb93b857b9eb9",
+      "sourcePath": "tasks/harper-down-a-v1/source.webp",
+      "sourceSHA256": "e076f86af5f9d770541df5de8587f0cbc9acb1294118d8492516fad604507507",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791278964860-45pa2k9bvpq.webp",
+      "sourceReview": "reviews/harper-down-a-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "harper",
+      "taskKey": "harper-down-b-v1",
+      "requestId": "c2eee548-fc6a-4189-868c-d660c29bebee",
+      "taskId": "mt_03b7a15f42c2454f7e5d97cba6adc9e8",
+      "sourcePath": "tasks/harper-down-b-v1/source.webp",
+      "sourceSHA256": "6215ca957b8aa84cf76b0523958772f869b897e99c14983371a172ef9d777edd",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279072708-emrw0tlxnf6.webp",
+      "sourceReview": "reviews/harper-down-b-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "harper",
+      "taskKey": "harper-down-stand-v1",
+      "requestId": "6c2517cf-e969-47e6-ab00-72ca2bd101b6",
+      "taskId": "mt_5206fb73bf5c0eb98bc8708922df1b12",
+      "sourcePath": "tasks/harper-down-stand-v1/source.webp",
+      "sourceSHA256": "483a57b6440d3363dabcb49bce49c8c7cb8d65bd417ae98d60ce63e0edc9facc",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791278497630-wdl3qkie9j.webp",
+      "sourceReview": "reviews/harper-down-stand-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "harper",
+      "taskKey": "harper-left-a-v1",
+      "requestId": "b472ab60-b504-41bd-8e9b-febc4ebfae6e",
+      "taskId": "mt_9639b836e3bbf3a45135455c8c0767d2",
+      "sourcePath": "tasks/harper-left-a-v1/source.webp",
+      "sourceSHA256": "e301a827c00274e303fc141ef48610312ea64d4075e34b45070d778a9dbf97be",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279172389-o66fmgukq3e.webp",
+      "sourceReview": "reviews/harper-left-a-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "harper",
+      "taskKey": "harper-left-b-v1",
+      "requestId": "68db57d2-2368-4827-b6bc-4a4dd309ea41",
+      "taskId": "mt_1518e4a956846343a9d432f83b6ecfc6",
+      "sourcePath": "tasks/harper-left-b-v1/source.webp",
+      "sourceSHA256": "fe5cbd5f34518c7ba122607f05f850463d43dd88df5d8bb88b00b43c1d824853",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279256265-cmpdzw559sc.webp",
+      "sourceReview": "reviews/harper-left-b-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "harper",
+      "taskKey": "harper-left-stand-v1",
+      "requestId": "314b8f87-1bab-47e0-bf36-395171641130",
+      "taskId": "mt_6a6ad3689bf87ff07f2ab632ddef9f5d",
+      "sourcePath": "tasks/harper-left-stand-v1/source.webp",
+      "sourceSHA256": "a17bd0c2c72b2a1706db7fda212e4008f0b354a5630fcd8d74ff531770b09a87",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279347579-d7us5wgl8qw.webp",
+      "sourceReview": "reviews/harper-left-stand-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "harper",
+      "taskKey": "harper-up-a-v1",
+      "requestId": "96ca8f68-9ed9-41a6-a37c-2850bc39732c",
+      "taskId": "mt_bf0c69c9ea07d156d92929a6a26eff9e",
+      "sourcePath": "tasks/harper-up-a-v1/source.webp",
+      "sourceSHA256": "28cae3ef76b05bfa0fce156c26d6e46d2109e1883b287ba2262c6b1b8576200b",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279498068-9lpaiqy2d28.webp",
+      "sourceReview": "reviews/harper-up-a-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "harper",
+      "taskKey": "harper-up-b-v2",
+      "requestId": "68918b70-26fa-41c5-afd5-da56bc1faaad",
+      "taskId": "mt_7bde6d73ab8b33b69dde8b6d4bfafb28",
+      "sourcePath": "tasks/harper-up-b-v2/source.webp",
+      "sourceSHA256": "46cb4fcea06d54c21d0f3262a27578646513cc3c7dd27f68a86b96b3033ccde6",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279704544-khlubpyf1d.webp",
+      "sourceReview": "reviews/harper-up-b-v2.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "harper",
+      "taskKey": "harper-up-stand-v1",
+      "requestId": "17bf5d8d-d15b-44e7-bd6e-567d6e81684f",
+      "taskId": "mt_2723b82c1fe5cda48ba2083b0cd240b8",
+      "sourcePath": "tasks/harper-up-stand-v1/source.webp",
+      "sourceSHA256": "119d29a99759be2544c28a2d22f841a6ea06e287d4232e82368bbae7cfedbd04",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279849452-j9nbszsoo4q.webp",
+      "sourceReview": "reviews/harper-up-stand-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "harper",
+      "taskKey": "harper-portrait-square-v1",
+      "requestId": "7ac3deb2-48c4-4399-8671-ea7d88ebc069",
+      "taskId": "mt_13d065863087d3a7a61f0edcbf31fdb3",
+      "sourcePath": "tasks/harper-portrait-square-v1/source.webp",
+      "sourceSHA256": "d471b67a96af427c8f685225b761f2ab3782571a033b9e2011457c151ff38a94",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791278800423-gewa7y9vrd.webp",
+      "sourceReview": "reviews/harper-portrait-square-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "tess",
+      "taskKey": "tess-down-a-v1",
+      "requestId": "38ac9f8a-3e11-4850-92b6-e469de29ca30",
+      "taskId": "mt_09316b3f14cbb34c2ed3b76d6a4e2f85",
+      "sourcePath": "tasks/tess-down-a-v1/source.webp",
+      "sourceSHA256": "a83053b5a42aa39b6f99ce61dca96c6e28a5e82288d8d553bd40b7d3042976b5",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281106183-si940ths3hj.webp",
+      "sourceReview": "reviews/tess-down-a-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "tess",
+      "taskKey": "tess-down-b-v3",
+      "requestId": "b348a22c-6daf-4c3b-b4d5-608d2e56b246",
+      "taskId": "mt_26214939ec58f63553380f8027ef51f9",
+      "sourcePath": "tasks/tess-down-b-v3/source.webp",
+      "sourceSHA256": "0538a860ced3bb317f5264c0d8ed74ec0c25b1d5df28b9cea2d4e897e7629f3e",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281381607-v5of3xv1md8.webp",
+      "sourceReview": "reviews/tess-down-b-v3.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "tess",
+      "taskKey": "tess-down-stand-v2",
+      "requestId": "acfc554b-aea3-4183-8b9a-821e26fee4d0",
+      "taskId": "mt_a2ea5ce82fb39ee3711c1018de3e585a",
+      "sourcePath": "tasks/tess-down-stand-v2/source.webp",
+      "sourceSHA256": "3d33a465205d8a6adb8cc6c2b5cd53fcc5b8e20196797134154939832c21d65d",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791280253432-2hq4czn6mdt.webp",
+      "sourceReview": "reviews/tess-down-stand-v2.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "tess",
+      "taskKey": "tess-left-a-v1",
+      "requestId": "8519aa70-4204-40f1-9368-ffe357977c5b",
+      "taskId": "mt_d6472e7a7d7d22399aea953ab5446f90",
+      "sourcePath": "tasks/tess-left-a-v1/source.webp",
+      "sourceSHA256": "10bc85fc767db1af8a4d4b522a541d53f22ff69c15ac98c8d97826001cd8a1c7",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281453159-lh5k66poqvs.webp",
+      "sourceReview": "reviews/tess-left-a-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "tess",
+      "taskKey": "tess-left-b-v1",
+      "requestId": "21d28a9a-605f-4db0-bfef-415e3250eb00",
+      "taskId": "mt_4a41059866b8f8be3e53cda6cb012b64",
+      "sourcePath": "tasks/tess-left-b-v1/source.webp",
+      "sourceSHA256": "81a910d22b1d3d6acc482a4aabf7ec87cad73e65cb610ee6e01002af994a8b87",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281559689-xg4s5wdqpy9.webp",
+      "sourceReview": "reviews/tess-left-b-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "tess",
+      "taskKey": "tess-left-stand-v1",
+      "requestId": "f6f6d499-c4ca-451d-83fb-c419902e6a27",
+      "taskId": "mt_36d59278317601c7f1f1dc55944b5b76",
+      "sourcePath": "tasks/tess-left-stand-v1/source.webp",
+      "sourceSHA256": "ee353561db38a0f4b4fa18144e7778073cf0679513a51f35201ff846f5d0f147",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281631202-q3jcdxywop.webp",
+      "sourceReview": "reviews/tess-left-stand-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "tess",
+      "taskKey": "tess-up-a-v1",
+      "requestId": "8ff68e4f-c3cf-426d-b3be-881aae11b8fc",
+      "taskId": "mt_d31fd8dc540fe1915ea0d377e60bc764",
+      "sourcePath": "tasks/tess-up-a-v1/source.webp",
+      "sourceSHA256": "c8fee0eee31a1fea4af57201f0c125b1d63ec414b1a0e7b451b977d9168e670a",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281702355-d6ap2ook98d.webp",
+      "sourceReview": "reviews/tess-up-a-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "tess",
+      "taskKey": "tess-up-b-v1",
+      "requestId": "40ee115e-c45c-4ead-a4b0-4ed90850b789",
+      "taskId": "mt_947ef85122dbc79d9f457dc61a47a229",
+      "sourcePath": "tasks/tess-up-b-v1/source.webp",
+      "sourceSHA256": "aba182f6c6b211a1fce9bc02d47841dcee3876d351a5de03d00644a02893b594",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281793226-zsbvd67942e.webp",
+      "sourceReview": "reviews/tess-up-b-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "tess",
+      "taskKey": "tess-up-stand-v1",
+      "requestId": "67e5a357-7ea7-4733-82d3-28d6e7f80fb8",
+      "taskId": "mt_06241587b5fb09b18e75fec84639b178",
+      "sourcePath": "tasks/tess-up-stand-v1/source.webp",
+      "sourceSHA256": "2eb0a3c9b860641036d29a0f139a8ca395afaaaf6eeb80978712b9b1d09097f8",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281887084-zcn8vwgjfl.webp",
+      "sourceReview": "reviews/tess-up-stand-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "tess",
+      "taskKey": "tess-portrait-square-v1",
+      "requestId": "a022ba2a-7742-4a12-af43-ef3822b90faa",
+      "taskId": "mt_66e0b27fdcc50f8d94840f3329fa14be",
+      "sourcePath": "tasks/tess-portrait-square-v1/source.webp",
+      "sourceSHA256": "7faa874e4afaa434ec301934555684c09f60703515c46cd41a9b8942a030e0e7",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281018673-sxfst28njk.webp",
+      "sourceReview": "reviews/tess-portrait-square-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "noor",
+      "taskKey": "noor-down-a-v2",
+      "requestId": "f2e2e83f-3733-4b32-a03c-3cb6bd0e2bb0",
+      "taskId": "mt_85d3388c8afc57863ba00d8afe2518f0",
+      "sourcePath": "tasks/noor-down-a-v2/source.webp",
+      "sourceSHA256": "0abcaf0588a48b974e8e4d1c19a97cce9e4074e03e0b435044462ac608477838",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282498320-1225e0neu4ba.webp",
+      "sourceReview": "reviews/noor-down-a-v2.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "noor",
+      "taskKey": "noor-down-b-v1",
+      "requestId": "45f83b68-4add-4478-827c-8aa3fc6120ef",
+      "taskId": "mt_c373594c671b9bf4c6f41d419b65b219",
+      "sourcePath": "tasks/noor-down-b-v1/source.webp",
+      "sourceSHA256": "4d5fa9186c09f576d2486d7a302d37a891194a964313e51f2075075a69c4052f",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282659526-ir3m2navyc.webp",
+      "sourceReview": "reviews/noor-down-b-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "noor",
+      "taskKey": "noor-down-stand-v1",
+      "requestId": "6e707101-06b0-4d2f-a3b5-984757bc6f56",
+      "taskId": "mt_90f1e98c254cbd6386217199979f685e",
+      "sourcePath": "tasks/noor-down-stand-v1/source.webp",
+      "sourceSHA256": "7d2a80195fd130a850324b6a4647c978bc38e294259f17e78ef5d3f87bb0adfc",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282112332-b81b7euvsu4.webp",
+      "sourceReview": "reviews/noor-down-stand-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "noor",
+      "taskKey": "noor-left-a-v1",
+      "requestId": "728b19f9-c568-4d73-901b-857102a51cf7",
+      "taskId": "mt_61ef038dd97809870e95ce6c2640dfcc",
+      "sourcePath": "tasks/noor-left-a-v1/source.webp",
+      "sourceSHA256": "0d576a09c502713da3bc7d9a02e74373e27486ce490730399e01df3cb2f901b1",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282753348-cvba7mkt.webp",
+      "sourceReview": "reviews/noor-left-a-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "noor",
+      "taskKey": "noor-left-b-v1",
+      "requestId": "945482ef-7595-4c68-8426-16f7b548a8df",
+      "taskId": "mt_a4b8691f35302785ab317b557203b514",
+      "sourcePath": "tasks/noor-left-b-v1/source.webp",
+      "sourceSHA256": "72cfad1833f0b1127fa8f4900964b1dbba4481adc180f4c911fb4de04be234a2",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282831819-2c7c8yb2cj1.webp",
+      "sourceReview": "reviews/noor-left-b-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "noor",
+      "taskKey": "noor-left-stand-v1",
+      "requestId": "f252495f-af98-4f9d-9cbe-30b0458ee80a",
+      "taskId": "mt_c534292b400ceab2a2dff3dc5085b2c1",
+      "sourcePath": "tasks/noor-left-stand-v1/source.webp",
+      "sourceSHA256": "0ca4eafa356aaa2f98cac07dde558b3e0084162ac206cf258c1599d9e888973b",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282912599-1p53rydgdhr.webp",
+      "sourceReview": "reviews/noor-left-stand-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "noor",
+      "taskKey": "noor-up-a-v1",
+      "requestId": "0e899b96-5b3b-4ea7-ad6b-32622d161b51",
+      "taskId": "mt_7f8ca75ce85afdb9aed1534f65e89e16",
+      "sourcePath": "tasks/noor-up-a-v1/source.webp",
+      "sourceSHA256": "9453dd19e309d3f236c1feba91c8877adbc153e4a62bbb09612a264036b5bf64",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282997703-rssyizm4g6.webp",
+      "sourceReview": "reviews/noor-up-a-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "noor",
+      "taskKey": "noor-up-b-v1",
+      "requestId": "de57fc5a-753b-4471-a1a4-56ba3f7725bf",
+      "taskId": "mt_bdac51cfd0fc723495455ab6a1226b96",
+      "sourcePath": "tasks/noor-up-b-v1/source.webp",
+      "sourceSHA256": "23874defabf0b8fbfaf2c291e78705f524ed6602be5ff3afe1a9aa9ba963c74a",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791283147488-i091d0exy7l.webp",
+      "sourceReview": "reviews/noor-up-b-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "noor",
+      "taskKey": "noor-up-stand-v1",
+      "requestId": "bcc15e49-e0ed-437e-8775-9986e3588ebb",
+      "taskId": "mt_8ceec21bb46c1ee178f1b4afc5711ab3",
+      "sourcePath": "tasks/noor-up-stand-v1/source.webp",
+      "sourceSHA256": "b5b27c9479d9291a11423968711f0378626ed1750e87c1f6c3739748f4ba02ca",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791283246046-2i4x3imd9pu.webp",
+      "sourceReview": "reviews/noor-up-stand-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    },
+    {
+      "person": "noor",
+      "taskKey": "noor-portrait-square-v1",
+      "requestId": "6704af5f-a4c8-4943-a91e-c985610cba7a",
+      "taskId": "mt_2a536bf0614c7fcd17575c82e5d46b3e",
+      "sourcePath": "tasks/noor-portrait-square-v1/source.webp",
+      "sourceSHA256": "35ea828ded65c2dadd0a1e96f89e685e1d26c1d240a3963cf32c6a6a567ba05e",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282254268-4rbnyzmii1.webp",
+      "sourceReview": "reviews/noor-portrait-square-v1.json",
+      "rightsBasis": "rights-scope-application.json"
+    }
+  ],
+  "allGeneratedSourcesIncludingRejected": [
+    {
+      "taskKey": "harper-down-stand-v1",
+      "taskId": "mt_5206fb73bf5c0eb98bc8708922df1b12",
+      "requestId": "6c2517cf-e969-47e6-ab00-72ca2bd101b6",
+      "sourcePath": "tasks/harper-down-stand-v1/source.webp",
+      "sourceSHA256": "483a57b6440d3363dabcb49bce49c8c7cb8d65bd417ae98d60ce63e0edc9facc",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791278497630-wdl3qkie9j.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "harper-portrait-square-v1",
+      "taskId": "mt_13d065863087d3a7a61f0edcbf31fdb3",
+      "requestId": "7ac3deb2-48c4-4399-8671-ea7d88ebc069",
+      "sourcePath": "tasks/harper-portrait-square-v1/source.webp",
+      "sourceSHA256": "d471b67a96af427c8f685225b761f2ab3782571a033b9e2011457c151ff38a94",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791278800423-gewa7y9vrd.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "harper-down-a-v1",
+      "taskId": "mt_6e7f6e16aca4855fbe9bb93b857b9eb9",
+      "requestId": "3f7e7851-445b-45af-bf00-5b4efce0ab04",
+      "sourcePath": "tasks/harper-down-a-v1/source.webp",
+      "sourceSHA256": "e076f86af5f9d770541df5de8587f0cbc9acb1294118d8492516fad604507507",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791278964860-45pa2k9bvpq.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "harper-down-b-v1",
+      "taskId": "mt_03b7a15f42c2454f7e5d97cba6adc9e8",
+      "requestId": "c2eee548-fc6a-4189-868c-d660c29bebee",
+      "sourcePath": "tasks/harper-down-b-v1/source.webp",
+      "sourceSHA256": "6215ca957b8aa84cf76b0523958772f869b897e99c14983371a172ef9d777edd",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279072708-emrw0tlxnf6.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "harper-left-a-v1",
+      "taskId": "mt_9639b836e3bbf3a45135455c8c0767d2",
+      "requestId": "b472ab60-b504-41bd-8e9b-febc4ebfae6e",
+      "sourcePath": "tasks/harper-left-a-v1/source.webp",
+      "sourceSHA256": "e301a827c00274e303fc141ef48610312ea64d4075e34b45070d778a9dbf97be",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279172389-o66fmgukq3e.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "harper-left-b-v1",
+      "taskId": "mt_1518e4a956846343a9d432f83b6ecfc6",
+      "requestId": "68db57d2-2368-4827-b6bc-4a4dd309ea41",
+      "sourcePath": "tasks/harper-left-b-v1/source.webp",
+      "sourceSHA256": "fe5cbd5f34518c7ba122607f05f850463d43dd88df5d8bb88b00b43c1d824853",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279256265-cmpdzw559sc.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "harper-left-stand-v1",
+      "taskId": "mt_6a6ad3689bf87ff07f2ab632ddef9f5d",
+      "requestId": "314b8f87-1bab-47e0-bf36-395171641130",
+      "sourcePath": "tasks/harper-left-stand-v1/source.webp",
+      "sourceSHA256": "a17bd0c2c72b2a1706db7fda212e4008f0b354a5630fcd8d74ff531770b09a87",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279347579-d7us5wgl8qw.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "harper-up-a-v1",
+      "taskId": "mt_bf0c69c9ea07d156d92929a6a26eff9e",
+      "requestId": "96ca8f68-9ed9-41a6-a37c-2850bc39732c",
+      "sourcePath": "tasks/harper-up-a-v1/source.webp",
+      "sourceSHA256": "28cae3ef76b05bfa0fce156c26d6e46d2109e1883b287ba2262c6b1b8576200b",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279498068-9lpaiqy2d28.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "harper-up-b-v1",
+      "taskId": "mt_73428a51fd19f0a5d250281ae3e55094",
+      "requestId": "eeae031f-8f37-4857-a3fe-f36107f1528c",
+      "sourcePath": "tasks/harper-up-b-v1/source.webp",
+      "sourceSHA256": "7cd05a4bbf23d03e566ddd67141c10ac17fb6a6c0eb536eec3e046db6d6153b2",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279585146-3n9jiwhwg1o.webp",
+      "selectedForConsumer": false,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "harper-up-b-v2",
+      "taskId": "mt_7bde6d73ab8b33b69dde8b6d4bfafb28",
+      "requestId": "68918b70-26fa-41c5-afd5-da56bc1faaad",
+      "sourcePath": "tasks/harper-up-b-v2/source.webp",
+      "sourceSHA256": "46cb4fcea06d54c21d0f3262a27578646513cc3c7dd27f68a86b96b3033ccde6",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279704544-khlubpyf1d.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "harper-up-stand-v1",
+      "taskId": "mt_2723b82c1fe5cda48ba2083b0cd240b8",
+      "requestId": "17bf5d8d-d15b-44e7-bd6e-567d6e81684f",
+      "sourcePath": "tasks/harper-up-stand-v1/source.webp",
+      "sourceSHA256": "119d29a99759be2544c28a2d22f841a6ea06e287d4232e82368bbae7cfedbd04",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791279849452-j9nbszsoo4q.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-down-stand-v1",
+      "taskId": "mt_ed7d0c2fac85dd19b5a70216d8bc40a3",
+      "requestId": "562cc50d-6a01-44ad-9510-d5a3fd2d21dd",
+      "sourcePath": "tasks/tess-down-stand-v1/source.webp",
+      "sourceSHA256": "c901a9df6e16e45a71a9289e5985716448421ad50057c7445dd9b17933634c2c",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791280066413-1lac88vg82g.webp",
+      "selectedForConsumer": false,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-down-stand-v2",
+      "taskId": "mt_a2ea5ce82fb39ee3711c1018de3e585a",
+      "requestId": "acfc554b-aea3-4183-8b9a-821e26fee4d0",
+      "sourcePath": "tasks/tess-down-stand-v2/source.webp",
+      "sourceSHA256": "3d33a465205d8a6adb8cc6c2b5cd53fcc5b8e20196797134154939832c21d65d",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791280253432-2hq4czn6mdt.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-portrait-square-v1",
+      "taskId": "mt_66e0b27fdcc50f8d94840f3329fa14be",
+      "requestId": "a022ba2a-7742-4a12-af43-ef3822b90faa",
+      "sourcePath": "tasks/tess-portrait-square-v1/source.webp",
+      "sourceSHA256": "7faa874e4afaa434ec301934555684c09f60703515c46cd41a9b8942a030e0e7",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281018673-sxfst28njk.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-down-a-v1",
+      "taskId": "mt_09316b3f14cbb34c2ed3b76d6a4e2f85",
+      "requestId": "38ac9f8a-3e11-4850-92b6-e469de29ca30",
+      "sourcePath": "tasks/tess-down-a-v1/source.webp",
+      "sourceSHA256": "a83053b5a42aa39b6f99ce61dca96c6e28a5e82288d8d553bd40b7d3042976b5",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281106183-si940ths3hj.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-down-b-v1",
+      "taskId": "mt_1d79d4d4bccdc586f040de4beff1ed39",
+      "requestId": "a7243c69-f1c9-49e4-ac5c-1bd9007a49aa",
+      "sourcePath": "tasks/tess-down-b-v1/source.webp",
+      "sourceSHA256": "a2a930e50aa2946ca6faf6e142446001f4c9a1a3b0469b41e7afc4cc9506c4a0",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281192403-xp6h90pj9pr.webp",
+      "selectedForConsumer": false,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-down-b-v2",
+      "taskId": "mt_3a1de527a8df799f56614ca62ba6c5aa",
+      "requestId": "ffc5df65-75e7-47b1-9f7e-7231f558966a",
+      "sourcePath": "tasks/tess-down-b-v2/source.webp",
+      "sourceSHA256": "eea64a08b181ee3eaf316574e9c68e1e877bb631a3a27c27270602be69f2e86b",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281278326-49x8q2rnuhb.webp",
+      "selectedForConsumer": false,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-down-b-v3",
+      "taskId": "mt_26214939ec58f63553380f8027ef51f9",
+      "requestId": "b348a22c-6daf-4c3b-b4d5-608d2e56b246",
+      "sourcePath": "tasks/tess-down-b-v3/source.webp",
+      "sourceSHA256": "0538a860ced3bb317f5264c0d8ed74ec0c25b1d5df28b9cea2d4e897e7629f3e",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281381607-v5of3xv1md8.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-left-a-v1",
+      "taskId": "mt_d6472e7a7d7d22399aea953ab5446f90",
+      "requestId": "8519aa70-4204-40f1-9368-ffe357977c5b",
+      "sourcePath": "tasks/tess-left-a-v1/source.webp",
+      "sourceSHA256": "10bc85fc767db1af8a4d4b522a541d53f22ff69c15ac98c8d97826001cd8a1c7",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281453159-lh5k66poqvs.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-left-b-v1",
+      "taskId": "mt_4a41059866b8f8be3e53cda6cb012b64",
+      "requestId": "21d28a9a-605f-4db0-bfef-415e3250eb00",
+      "sourcePath": "tasks/tess-left-b-v1/source.webp",
+      "sourceSHA256": "81a910d22b1d3d6acc482a4aabf7ec87cad73e65cb610ee6e01002af994a8b87",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281559689-xg4s5wdqpy9.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-left-stand-v1",
+      "taskId": "mt_36d59278317601c7f1f1dc55944b5b76",
+      "requestId": "f6f6d499-c4ca-451d-83fb-c419902e6a27",
+      "sourcePath": "tasks/tess-left-stand-v1/source.webp",
+      "sourceSHA256": "ee353561db38a0f4b4fa18144e7778073cf0679513a51f35201ff846f5d0f147",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281631202-q3jcdxywop.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-up-a-v1",
+      "taskId": "mt_d31fd8dc540fe1915ea0d377e60bc764",
+      "requestId": "8ff68e4f-c3cf-426d-b3be-881aae11b8fc",
+      "sourcePath": "tasks/tess-up-a-v1/source.webp",
+      "sourceSHA256": "c8fee0eee31a1fea4af57201f0c125b1d63ec414b1a0e7b451b977d9168e670a",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281702355-d6ap2ook98d.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-up-b-v1",
+      "taskId": "mt_947ef85122dbc79d9f457dc61a47a229",
+      "requestId": "40ee115e-c45c-4ead-a4b0-4ed90850b789",
+      "sourcePath": "tasks/tess-up-b-v1/source.webp",
+      "sourceSHA256": "aba182f6c6b211a1fce9bc02d47841dcee3876d351a5de03d00644a02893b594",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281793226-zsbvd67942e.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "tess-up-stand-v1",
+      "taskId": "mt_06241587b5fb09b18e75fec84639b178",
+      "requestId": "67e5a357-7ea7-4733-82d3-28d6e7f80fb8",
+      "sourcePath": "tasks/tess-up-stand-v1/source.webp",
+      "sourceSHA256": "2eb0a3c9b860641036d29a0f139a8ca395afaaaf6eeb80978712b9b1d09097f8",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791281887084-zcn8vwgjfl.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-down-stand-v1",
+      "taskId": "mt_90f1e98c254cbd6386217199979f685e",
+      "requestId": "6e707101-06b0-4d2f-a3b5-984757bc6f56",
+      "sourcePath": "tasks/noor-down-stand-v1/source.webp",
+      "sourceSHA256": "7d2a80195fd130a850324b6a4647c978bc38e294259f17e78ef5d3f87bb0adfc",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282112332-b81b7euvsu4.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-portrait-square-v1",
+      "taskId": "mt_2a536bf0614c7fcd17575c82e5d46b3e",
+      "requestId": "6704af5f-a4c8-4943-a91e-c985610cba7a",
+      "sourcePath": "tasks/noor-portrait-square-v1/source.webp",
+      "sourceSHA256": "35ea828ded65c2dadd0a1e96f89e685e1d26c1d240a3963cf32c6a6a567ba05e",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282254268-4rbnyzmii1.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-down-a-v1",
+      "taskId": "mt_1675c7672b4d2915b8d93a6b33c738d4",
+      "requestId": "2b4df6a7-376e-44a1-a44a-f51d0b230480",
+      "sourcePath": "tasks/noor-down-a-v1/source.webp",
+      "sourceSHA256": "95e3787b11519bf70cca0b97b45efd37f8d43ff7e49eac468f5adc894c7c2235",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282358743-2jfs2irclhb.webp",
+      "selectedForConsumer": false,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-down-a-v2",
+      "taskId": "mt_85d3388c8afc57863ba00d8afe2518f0",
+      "requestId": "f2e2e83f-3733-4b32-a03c-3cb6bd0e2bb0",
+      "sourcePath": "tasks/noor-down-a-v2/source.webp",
+      "sourceSHA256": "0abcaf0588a48b974e8e4d1c19a97cce9e4074e03e0b435044462ac608477838",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282498320-1225e0neu4ba.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-down-b-v1",
+      "taskId": "mt_c373594c671b9bf4c6f41d419b65b219",
+      "requestId": "45f83b68-4add-4478-827c-8aa3fc6120ef",
+      "sourcePath": "tasks/noor-down-b-v1/source.webp",
+      "sourceSHA256": "4d5fa9186c09f576d2486d7a302d37a891194a964313e51f2075075a69c4052f",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282659526-ir3m2navyc.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-left-a-v1",
+      "taskId": "mt_61ef038dd97809870e95ce6c2640dfcc",
+      "requestId": "728b19f9-c568-4d73-901b-857102a51cf7",
+      "sourcePath": "tasks/noor-left-a-v1/source.webp",
+      "sourceSHA256": "0d576a09c502713da3bc7d9a02e74373e27486ce490730399e01df3cb2f901b1",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282753348-cvba7mkt.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-left-b-v1",
+      "taskId": "mt_a4b8691f35302785ab317b557203b514",
+      "requestId": "945482ef-7595-4c68-8426-16f7b548a8df",
+      "sourcePath": "tasks/noor-left-b-v1/source.webp",
+      "sourceSHA256": "72cfad1833f0b1127fa8f4900964b1dbba4481adc180f4c911fb4de04be234a2",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282831819-2c7c8yb2cj1.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-left-stand-v1",
+      "taskId": "mt_c534292b400ceab2a2dff3dc5085b2c1",
+      "requestId": "f252495f-af98-4f9d-9cbe-30b0458ee80a",
+      "sourcePath": "tasks/noor-left-stand-v1/source.webp",
+      "sourceSHA256": "0ca4eafa356aaa2f98cac07dde558b3e0084162ac206cf258c1599d9e888973b",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282912599-1p53rydgdhr.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-up-a-v1",
+      "taskId": "mt_7f8ca75ce85afdb9aed1534f65e89e16",
+      "requestId": "0e899b96-5b3b-4ea7-ad6b-32622d161b51",
+      "sourcePath": "tasks/noor-up-a-v1/source.webp",
+      "sourceSHA256": "9453dd19e309d3f236c1feba91c8877adbc153e4a62bbb09612a264036b5bf64",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791282997703-rssyizm4g6.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-up-b-v1",
+      "taskId": "mt_bdac51cfd0fc723495455ab6a1226b96",
+      "requestId": "de57fc5a-753b-4471-a1a4-56ba3f7725bf",
+      "sourcePath": "tasks/noor-up-b-v1/source.webp",
+      "sourceSHA256": "23874defabf0b8fbfaf2c291e78705f524ed6602be5ff3afe1a9aa9ba963c74a",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791283147488-i091d0exy7l.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    },
+    {
+      "taskKey": "noor-up-stand-v1",
+      "taskId": "mt_8ceec21bb46c1ee178f1b4afc5711ab3",
+      "requestId": "bcc15e49-e0ed-437e-8775-9986e3588ebb",
+      "sourcePath": "tasks/noor-up-stand-v1/source.webp",
+      "sourceSHA256": "b5b27c9479d9291a11423968711f0378626ed1750e87c1f6c3739748f4ba02ca",
+      "sourceURL": "https://images.aiwaves.tech/uploads/1791283246046-2i4x3imd9pu.webp",
+      "selectedForConsumer": true,
+      "applicability": "same service same project existing business rule; AI application, not new human legal statement"
+    }
+  ],
+  "finalizedAt": "2026-10-06T10:44:19.046604+00:00"
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "at": "2026-10-06T11:18:24.179889+00:00",
+  "ownerThreadId": "01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "person": "tess",
+  "status": "AI_LOCAL_OWNER_ACCEPTED_NOT_RELEASED",
+  "manifestSHA256": "3c4124720a6598ae4fa00c17067b836073aeef3bafdd93fd9a1c8cd44a5e5bb2",
+  "ownerActualUI": "AI_PASS_LOCAL_SYNTHETIC_AUTHORITY",
+  "ownerUIReport": "owner-tess-ui-report.json",
+  "ownerMapReport": "owner-tess-maps-report.json",
+  "ownerUIFullStoryCases": 4,
+  "ownerActualScheduleMapCases": 6,
+  "consumers": [
+    {
+      "path": "public/art/npc-tess.png",
+      "kind": "atlas",
+      "dimensions": [
+        384,
+        512
+      ],
+      "sha256": "c70515c7d5332b33f7e8f557878509f3f6b8065d181f7956c6b980d552f770cc"
+    },
+    {
+      "path": "public/art/npc-tess-avatar.png",
+      "kind": "avatar",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sha256": "8e7d7e1129ee98468b19ca08822def23aecb9d47673e715ace614becf960a92a"
+    },
+    {
+      "path": "public/art/npc-tess-root-v2.png",
+      "kind": "profile",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sha256": "f7a9f36b606d2d80aa76f6d33fdb9933c05e6bdc2e7a946d72d2d59bcb3e8a90"
+    }
+  ],
+  "producerIsolation": "AI_PASS_SEPARATE_SCOPE",
+  "technicalAudit": "owner-consumer-pixel-audit.json",
+  "rightsVerdict": "owner-rights-review.json",
+  "ownerNewMediaPosts": 0,
+  "modelCalls": 0,
+  "libraryAdmission": false,
+  "published": false,
+  "unverified": [
+    "normal AlterU MiniApp/current real platform identity",
+    "real iPhone/Android",
+    "cross-device and second-account isolation",
+    "website profile UI",
+    "new-player comprehension",
+    "new candidate PostgreSQL and HTTP listener suites"
+  ],
+  "ownerContinuousFourDirectionWalkClaim": false
+}

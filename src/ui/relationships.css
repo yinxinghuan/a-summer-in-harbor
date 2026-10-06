@@ -2,3 +2,5 @@
 @media(max-width:360px){.harbor-rel__person{gap:8px;padding:8px}.harbor-rel__person>svg{display:none}.harbor-rel img{width:56px;height:80px}}
 
 .harbor-rel img.harbor-rel__avatar{height:64px;object-fit:contain}@media(max-width:360px){.harbor-rel img.harbor-rel__avatar{height:56px}}
+
+.harbor-rel img.harbor-rel__portrait-square{height:64px;object-fit:contain}@media(max-width:360px){.harbor-rel img.harbor-rel__portrait-square{height:56px}}

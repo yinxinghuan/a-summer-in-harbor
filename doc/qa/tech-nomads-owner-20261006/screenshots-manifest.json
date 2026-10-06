@@ -1,0 +1,698 @@
+{
+  "at": "2026-10-06T11:18:24.179889+00:00",
+  "scope": "Selected successful current22 screenshots; failures retained in external raw evidence directories and logs.",
+  "files": [
+    {
+      "path": "screenshots/harper-ui/harper-320-en-choice-saved.png",
+      "sha256": "92acefbc7a86a4a88340c827618e74689265e64b2dadca3444112673bc770513",
+      "bytes": 42990
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-en-conversation-portrait.png",
+      "sha256": "ffbc5134fc20e0da6fd5a5a19e138deebef34c720b2dfebf46d64dbc124b079b",
+      "bytes": 43218
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-en-initial-map.png",
+      "sha256": "e187dea802f69795141bcae0e7fedc66d904abadba15477aabf06edc7c30beac",
+      "bytes": 172264
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-en-near-npc.png",
+      "sha256": "e187dea802f69795141bcae0e7fedc66d904abadba15477aabf06edc7c30beac",
+      "bytes": 172264
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-en-people-list.png",
+      "sha256": "fe5928f7d65759a11a194fd768516bd63aeddf469beaeb0c142a19d08550f67b",
+      "bytes": 58537
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-en-profile-enlarged.png",
+      "sha256": "f08d2f760799d89ada11c1c2d223e1c29b546ef51b5578a47c3f256849c73cf8",
+      "bytes": 97349
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-en-profile-history.png",
+      "sha256": "b3a32ea930ec91793f10e968296b976619586ead7cb56f644e98d0eafd4fdf45",
+      "bytes": 39975
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-en-profile.png",
+      "sha256": "d869294db8121dab72094bdc236cf5072307ff9fcb13ecd52e93626c444048e8",
+      "bytes": 44987
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-en-revisit-near-npc.png",
+      "sha256": "b6949989b73f458c8819c79e61d5e2027441457b3cce63bff3e240e9636e2339",
+      "bytes": 186402
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-en-revisit.png",
+      "sha256": "1098725a3c3576c4f3103d983878680f052f5141b54dddb38466a6bbb2b96353",
+      "bytes": 46585
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-zh-choice-saved.png",
+      "sha256": "6f8fe3e824d3194d9bf39cd7bafcc21dba03e823dc79e48728147bd65bed9e71",
+      "bytes": 46636
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-zh-conversation-portrait.png",
+      "sha256": "df3a642cfcf769cb22b258230dd5f1ef7ea8275923bc4e7c47542ebafa2129bd",
+      "bytes": 47567
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-zh-initial-map.png",
+      "sha256": "7a2767362eb89b0fecdb4fe029221bfcff9f43841712415d4ddbdb0c9458c369",
+      "bytes": 181597
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-zh-near-npc.png",
+      "sha256": "7a2767362eb89b0fecdb4fe029221bfcff9f43841712415d4ddbdb0c9458c369",
+      "bytes": 181597
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-zh-people-list.png",
+      "sha256": "0f1c1fade5d5df1babbea04d8e9816977bddd574f0ac89c59422f6e70d7c9605",
+      "bytes": 58501
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-zh-profile-enlarged.png",
+      "sha256": "05b59e600cdc820a643215e50a5a1edb4cfaa52c7a564389f017e2c26156ba83",
+      "bytes": 99797
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-zh-profile-history.png",
+      "sha256": "05a8a3f7b6041e77d6a372bb841b35fd2c4db2f779308f0149a1fbfad2ca2ac6",
+      "bytes": 45158
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-zh-profile.png",
+      "sha256": "bfc797af0afcf12405c55b5317d68dd021121dcfdd07cdcc14d4c06027302a03",
+      "bytes": 47939
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-zh-revisit-near-npc.png",
+      "sha256": "ddd3717d246c3226341ef77bb929f7a08bd40f5f1cc68bcc1541020cc8845ded",
+      "bytes": 195364
+    },
+    {
+      "path": "screenshots/harper-ui/harper-320-zh-revisit.png",
+      "sha256": "d16bd023b50abfb901d7262e59dff85dc3106eb267b78930529e5cf8f9305038",
+      "bytes": 49421
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-en-choice-saved.png",
+      "sha256": "47055f049917165313a2cfac3802eb6e5bbd970fc34cd38194b0ff7972248fe1",
+      "bytes": 79019
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-en-conversation-portrait.png",
+      "sha256": "29790e44651d09ac9bf315c29440bbe6263d2abb74fbf5f8516771943b76645c",
+      "bytes": 78564
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-en-initial-map.png",
+      "sha256": "abe619bb606bb3be698a9f0b1222a5841d2278d7bfb69eae3cd1d11df8181bcf",
+      "bytes": 332420
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-en-near-npc.png",
+      "sha256": "abe619bb606bb3be698a9f0b1222a5841d2278d7bfb69eae3cd1d11df8181bcf",
+      "bytes": 332420
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-en-people-list.png",
+      "sha256": "b234e692b8baadf1cbe51b46dd87acf6e327aa8e20d36ea7f44e95ad76769574",
+      "bytes": 110827
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-en-profile-enlarged.png",
+      "sha256": "143a77cdbb9c1a8d72dbf8bb44bd5755288601e739581e3289f347089fafa936",
+      "bytes": 152656
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-en-profile-history.png",
+      "sha256": "1c2e238dc44ac1dd0bc2baeed80c42b608d0cf2c090966fbd85e95c2ddb33d5d",
+      "bytes": 82037
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-en-profile.png",
+      "sha256": "466fc6a9ecd72467c825df84e2cc3c83912e528d6bec70fa653c541a5d958651",
+      "bytes": 85027
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-en-revisit-near-npc.png",
+      "sha256": "659a9cb75f6540f4021e49bcff62ddfccf460eb9447851659aaa8f1a2bdd3459",
+      "bytes": 332135
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-en-revisit.png",
+      "sha256": "775683ff33b56b8736d6f9dfc284551c71fb0695d2c4c1a3166e4a16826bd2ab",
+      "bytes": 99081
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-zh-choice-saved.png",
+      "sha256": "dfb77bc9354bc6c187654b9f9d1e4e3f8fbe738952ef12283cf1bebc3d3e471f",
+      "bytes": 86642
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-zh-conversation-portrait.png",
+      "sha256": "93207726a6d3862a6534ec8d23a062b8f38a054a7ecdf0651eb110a9734a17fa",
+      "bytes": 86530
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-zh-initial-map.png",
+      "sha256": "be9825b2317a01bf677a5729cd1578fd32ab749e4657cf802145934c771e40f2",
+      "bytes": 346350
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-zh-near-npc.png",
+      "sha256": "be9825b2317a01bf677a5729cd1578fd32ab749e4657cf802145934c771e40f2",
+      "bytes": 346350
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-zh-people-list.png",
+      "sha256": "b4184751866898a8874c555841b6e660897e61ba36a391d10c93bffbb7b450cc",
+      "bytes": 121797
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-zh-profile-enlarged.png",
+      "sha256": "139c50b94a67f0bdfd7c1ece1a4f1facc54db6ee1247826cfd9f9c278ba26662",
+      "bytes": 157331
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-zh-profile-history.png",
+      "sha256": "861a8f27d2d5a17b09ce676c3fbd6508dbff691ff909688b097b6c7b90558c85",
+      "bytes": 91062
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-zh-profile.png",
+      "sha256": "07010a36256688ea0bfd7183b2f6b284c9c6e50b73e83264e3028b7ca66b6531",
+      "bytes": 92233
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-zh-revisit-near-npc.png",
+      "sha256": "648ec09e6ace708cd6df24344d08cfa961666981759dbe35c2237e996b1e6104",
+      "bytes": 353791
+    },
+    {
+      "path": "screenshots/harper-ui/harper-390-zh-revisit.png",
+      "sha256": "3e16476410a3c445e17560a6f87d03e23a22ed907ee317f5011edf616b740c19",
+      "bytes": 111327
+    },
+    {
+      "path": "screenshots/harper-maps/harper-cafe-320-en-initial-map.png",
+      "sha256": "c6fb40f5d3cfd56eee2af8621fd11a54568865c703cb34b16ce666717a9c89f9",
+      "bytes": 164835
+    },
+    {
+      "path": "screenshots/harper-maps/harper-cafe-390-en-initial-map.png",
+      "sha256": "25daae2d9044b6c56caf219c327b46fc6fa90e4445adfa524820e75d61c8ff47",
+      "bytes": 316109
+    },
+    {
+      "path": "screenshots/harper-maps/harper-coast-320-en-initial-map.png",
+      "sha256": "a44199b4cb3bd059641801b3bee139c5ab9f1a60e82f62f175caf80849e63f28",
+      "bytes": 185464
+    },
+    {
+      "path": "screenshots/harper-maps/harper-coast-390-en-initial-map.png",
+      "sha256": "99a40490360d869813eb3f0f3f1f15acf5ab5b83daf0abbf6a4db26cffec8739",
+      "bytes": 345586
+    },
+    {
+      "path": "screenshots/harper-maps/harper-garden-320-en-initial-map.png",
+      "sha256": "7eb3d28ea57ce44be43b8f956b77c54ab491a059c01aed1e59cf2b8c762de2ed",
+      "bytes": 172325
+    },
+    {
+      "path": "screenshots/harper-maps/harper-garden-390-en-initial-map.png",
+      "sha256": "98d86c204517afa20f56c7a20e32067cab90daa3350a927a5e9a00e8d44949a0",
+      "bytes": 332466
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-en-choice-saved.png",
+      "sha256": "4229282d9cc4d01998fbe773443ee5851cce4ac7c7babe96d91cba5a0a2b492b",
+      "bytes": 45618
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-en-conversation-portrait.png",
+      "sha256": "3db11047a68720f37acecbf165091212eecb3e6728d1f9fa11c5297934715402",
+      "bytes": 45966
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-en-initial-map.png",
+      "sha256": "07b79f1e34b8e90060bacef4a1527d19e73dc846f96b27517223e04d1d26150c",
+      "bytes": 186808
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-en-near-npc.png",
+      "sha256": "022e24a43acf3df15472cc838de6c466d53c486c009cc76d71c3557a1f7d64e1",
+      "bytes": 185905
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-en-people-list.png",
+      "sha256": "6ca69fcc8b882cf260f091bf22b727e73a0929cf3aabb72c52f8fe866e363228",
+      "bytes": 55646
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-en-profile-enlarged.png",
+      "sha256": "993d24b8bb844cf874a184525f9cfe3173d441f8b05062dfb66eedd803f65f7f",
+      "bytes": 98636
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-en-profile-history.png",
+      "sha256": "8c5f88918bc44f875fd062e31a4c4127269dc3403457d130b19a62f2240846b9",
+      "bytes": 43105
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-en-profile.png",
+      "sha256": "e4e9ba39a348c9112b2e3f65fc06cc3859bd76e9cc8e5bb1913c1b60947c2a6d",
+      "bytes": 46196
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-en-revisit-near-npc.png",
+      "sha256": "b04a97578d8e0849728b9b0551b43b129c3fdc916aae3a48376d3f13b0bd71f2",
+      "bytes": 160110
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-en-revisit.png",
+      "sha256": "5d973f5aa2250959c26490596ccdb3cdd53cc2c93db0da1a76fb62fb645fd131",
+      "bytes": 45944
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-zh-choice-saved.png",
+      "sha256": "7aa7be7f85fb9978e97be884c84d84d7f5f63cd0bf8a82b93613f37c8bf71a0d",
+      "bytes": 49486
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-zh-conversation-portrait.png",
+      "sha256": "bd27d2c7a64f1c5a6cb02e98a58a2efbb6a23fb964381161d4e5e18ba39f1e36",
+      "bytes": 49761
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-zh-initial-map.png",
+      "sha256": "47c723f85f078cb4426bcb9d0499f542fffd94b39fc8fd4ea05387b584e986a0",
+      "bytes": 197361
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-zh-near-npc.png",
+      "sha256": "ee764d70ad103076888d321a86acd04a1f19f20d1ba7b72bbece004c8e57a215",
+      "bytes": 196771
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-zh-people-list.png",
+      "sha256": "339dcf1229d0e8aa9d58df54f0137557b0d108b68724970369cace29686f12d0",
+      "bytes": 63335
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-zh-profile-enlarged.png",
+      "sha256": "beeb7380a135dd0ad9b148fae7f1bf3100c6147ce6533ce95ffb4198577ea295",
+      "bytes": 105048
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-zh-profile-history.png",
+      "sha256": "9738bc3b48440695c3c670d65b341f46e92af372eaa0aeb419e2c6e05355b125",
+      "bytes": 47303
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-zh-profile.png",
+      "sha256": "e50d81d5c5b167d529f478e7e6e127eb415279a3c1bcda9f2be2f7f5c498e582",
+      "bytes": 52189
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-zh-revisit-near-npc.png",
+      "sha256": "1ed48ecc4ea86ca99de0472dfac2939ba55f3bab017a564fddfe0013ccbc9ca8",
+      "bytes": 170048
+    },
+    {
+      "path": "screenshots/tess-ui/tess-320-zh-revisit.png",
+      "sha256": "c6177c8b601ec4c439ae0101625e3a76d0f6d52b763180c886947e87060d3071",
+      "bytes": 49855
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-en-choice-saved.png",
+      "sha256": "fbc29261be6628a88dd6fc3d1f61b30e145d4800181bdef22de8836ef5fa5257",
+      "bytes": 91742
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-en-conversation-portrait.png",
+      "sha256": "1492928489765a170746abb51c77fabf344abda6b609e7736fdb230053c051eb",
+      "bytes": 90713
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-en-initial-map.png",
+      "sha256": "b8fbd8a72e68ffb54452ca7f2df7ca6c42fe1b7858e314e75ae1843aeffc617c",
+      "bytes": 343693
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-en-near-npc.png",
+      "sha256": "4cebdc115dffdae140b0314d02816cd373ead6576a28c54a727bde0ed8947692",
+      "bytes": 341510
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-en-people-list.png",
+      "sha256": "ebc14895c42380cdfaf38463a7326f9a7ef2ba846d85318f105635a218e8a159",
+      "bytes": 126099
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-en-profile-enlarged.png",
+      "sha256": "03900103ed4b7548ccceac68e69ee6f1b447cc644d1ad043310c34e3d66be923",
+      "bytes": 163116
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-en-profile-history.png",
+      "sha256": "0c9abff49611715d37d2d168ab3bc340db6dc7c9e8042c2b8071b73d023162bf",
+      "bytes": 97788
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-en-profile.png",
+      "sha256": "cf60defa038c09d37684fa0924dbc8eae884f6ab01837afb8872282a2cf4c7ea",
+      "bytes": 96694
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-en-revisit-near-npc.png",
+      "sha256": "75a0348bb12d4213fe83aa322469049456774abe0db82d78dae6233893b722f8",
+      "bytes": 335667
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-en-revisit.png",
+      "sha256": "5a1e3114ca70701f2f311a78c9fadd4b44640b793a663fdb54d8e9b68bfd04bc",
+      "bytes": 93027
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-zh-choice-saved.png",
+      "sha256": "8114834fc9c9565e4002594bd4e42164024c88561de563abd2e80487e62c4ae2",
+      "bytes": 99715
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-zh-conversation-portrait.png",
+      "sha256": "f1e5c8d835511b0f664731abe029548ae58f824da6a6024bb576d9bbd6f8736a",
+      "bytes": 100820
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-zh-initial-map.png",
+      "sha256": "d2372e42f4c9ef568f963c7b8a72bda628f7226eac5bd40f4fc7452b36dd5c68",
+      "bytes": 360554
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-zh-near-npc.png",
+      "sha256": "84eca37b1c149d8a953be0d0f8705635b28a90cb7ec240642d2361ae37f8a9c6",
+      "bytes": 359234
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-zh-people-list.png",
+      "sha256": "cecc8c635c324245cf1509285b44a725158b3f58edf3db08c047839a1b25f4ee",
+      "bytes": 139220
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-zh-profile-enlarged.png",
+      "sha256": "9cf1f90581896d9a6a2dfc9fe3743ab32d1b452812b6394fe10a834d82af46be",
+      "bytes": 169421
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-zh-profile-history.png",
+      "sha256": "0bf9d6b71150ccaf6f313c1bf2eb341f585f4a31f71dd4b4f2918aebaa9599ce",
+      "bytes": 102571
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-zh-profile.png",
+      "sha256": "3ecb8d5782a2caff3378c3f299a4f2bd06c90863628b620fbf3ea969da154eec",
+      "bytes": 104486
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-zh-revisit-near-npc.png",
+      "sha256": "7171783df28045c17c4b78e858d380986f893e9fec92b9aa7f95af859392b1f3",
+      "bytes": 350737
+    },
+    {
+      "path": "screenshots/tess-ui/tess-390-zh-revisit.png",
+      "sha256": "24831a1afb2eb4f1e77241f4db63648e493abf1b0f89dc530b1f0a15a5d1f3cc",
+      "bytes": 120212
+    },
+    {
+      "path": "screenshots/tess-maps/tess-cafe-320-en-initial-map.png",
+      "sha256": "37cf362a02fbcfacdf68baec01e90880e770dc3b11bb0e717be868a400d642b4",
+      "bytes": 166242
+    },
+    {
+      "path": "screenshots/tess-maps/tess-cafe-390-en-initial-map.png",
+      "sha256": "47a143649dcb0c2e13c998015f945008098971672fe9ca31308fddda094c8690",
+      "bytes": 320573
+    },
+    {
+      "path": "screenshots/tess-maps/tess-dock-320-en-initial-map.png",
+      "sha256": "a795a4d33f0138b361a27f72e66840d5acad77d9dd1b19ef6fc96ce863e9399a",
+      "bytes": 166211
+    },
+    {
+      "path": "screenshots/tess-maps/tess-dock-390-en-initial-map.png",
+      "sha256": "54ccb47cc9498df4077497d62e9cec6718d3f02c006fba1c6cce6fcf425b2095",
+      "bytes": 349120
+    },
+    {
+      "path": "screenshots/tess-maps/tess-market-320-en-initial-map.png",
+      "sha256": "a002566217b3b1387f56d2fced1523d80aaf67ef384a7686e0fb42c7d4bc9a05",
+      "bytes": 186634
+    },
+    {
+      "path": "screenshots/tess-maps/tess-market-390-en-initial-map.png",
+      "sha256": "fde07dadd8e88a2f22b0749a82fa197e68a2c182f0d831c26139166809d89e7c",
+      "bytes": 343820
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-en-choice-saved.png",
+      "sha256": "6c5f9843518240e605f8f1538fb07c4ac0c4b782a5410e9c580a53c48998add5",
+      "bytes": 42069
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-en-conversation-portrait.png",
+      "sha256": "c4afffa53448770f4a8d567d86785dc06026900da8b6188ed30cc4a49fef8210",
+      "bytes": 42645
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-en-initial-map.png",
+      "sha256": "4b3482f923b2e427fc01c31eb1c251be6523c0446314a050d8e27fd4d8df5b7c",
+      "bytes": 155026
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-en-near-npc.png",
+      "sha256": "4211ff66c13e16d71f115a5277562086e7104f3cfd24985375706f7ac3274726",
+      "bytes": 157353
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-en-people-list.png",
+      "sha256": "a1d1d96eb5041968bb979b2c3dbf999454852d4c0338ac5f4542df7d67958cc8",
+      "bytes": 49024
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-en-profile-enlarged.png",
+      "sha256": "55a062efb335a3c8982ac11f68918eaf0b5d561d686a851d5aa42d4f20fd0a8f",
+      "bytes": 87604
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-en-profile-history.png",
+      "sha256": "5f0630956b2071a56e4853c97a6fafd1aef97bce89f734ead5713a7c514a58f7",
+      "bytes": 38803
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-en-profile.png",
+      "sha256": "6aba6b13044b227473f361234d1edcd5cbef82780c2f33290f7439b36efa5a78",
+      "bytes": 42020
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-en-revisit-near-npc.png",
+      "sha256": "4025f9f105d28b4037c70bdc7add0f757083247cb86eda445cdff4dc817a83cd",
+      "bytes": 173632
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-en-revisit.png",
+      "sha256": "b4fc922caafdab026519397f74c45231d1175fd9b6f6051708dba4599bfdfd31",
+      "bytes": 44716
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-zh-choice-saved.png",
+      "sha256": "d3ddc42c2f19734e8889143c4856434fb95dbea354969b80cc03de11af981c2d",
+      "bytes": 45009
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-zh-conversation-portrait.png",
+      "sha256": "8c40dbb0761dbfd3477676ee32504dfe27f412a177ccb5105b1f9c83f1b3acf3",
+      "bytes": 45564
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-zh-initial-map.png",
+      "sha256": "f55cbd63d3ace127f6c11ca290fed37a21bfbbe139d25c9b74b29c7a790fa794",
+      "bytes": 172475
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-zh-near-npc.png",
+      "sha256": "af9d5bb21db739e22870701b51b6c4084f39fefeb58b790ed48cedf77c9b5aab",
+      "bytes": 171680
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-zh-people-list.png",
+      "sha256": "b586d7d7b528a5cb1b54039a290d3ca2615b10185244fc7c45e1592881fe92cb",
+      "bytes": 51554
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-zh-profile-enlarged.png",
+      "sha256": "0a00ddc4875c815f553a166615aa9d9e73702f511b41e64f4feac457ac829ba8",
+      "bytes": 93422
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-zh-profile-history.png",
+      "sha256": "34664c99bef1255b8e02220d2901632d5d482283c789942aac1eac880161ef4d",
+      "bytes": 45199
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-zh-profile.png",
+      "sha256": "04f3b809893fcd9932ed852d1e845b136a9a30fc3741d41a5c8eda3a5632f59e",
+      "bytes": 48087
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-zh-revisit-near-npc.png",
+      "sha256": "f47b48879f0f2f15fd0ef4e6f708679d18a431d0466e40eb641304c774831e01",
+      "bytes": 181736
+    },
+    {
+      "path": "screenshots/noor-ui/noor-320-zh-revisit.png",
+      "sha256": "5622dc27436911543a5a951a06f656e0ff78a6f959524417540fd43cf7c425bc",
+      "bytes": 48093
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-en-choice-saved.png",
+      "sha256": "0afacbcb8d186906527626a387df6ba48a4d1b9e845f38635fc2f4bf7f119355",
+      "bytes": 87008
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-en-conversation-portrait.png",
+      "sha256": "fa19e707ef8c58e2a0afb8675568bf8b5beaecd24261025a845fb1e514db8ee8",
+      "bytes": 78477
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-en-initial-map.png",
+      "sha256": "1b4d3a943116ee851db86fe4bb3de76e1efd4fda38592a68efac7f9f27f13232",
+      "bytes": 326369
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-en-near-npc.png",
+      "sha256": "b0a0b1c0a7f9c5fefea9ae45898368474bd73bc0855c86eb48088f47e9221432",
+      "bytes": 326828
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-en-people-list.png",
+      "sha256": "6b4869fd3ee8064912e187764d02479942ef13956a2d1e37954589c8edac510a",
+      "bytes": 110429
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-en-profile-enlarged.png",
+      "sha256": "cefcaa04800066185dd365150953eeda5bbba0d4cd21aca3c2692faa1e726f69",
+      "bytes": 144520
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-en-profile-history.png",
+      "sha256": "20d1be612467937eb415e24f0109cde148cd6d8f61557638d7b24130c95139b5",
+      "bytes": 82187
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-en-profile.png",
+      "sha256": "32b45946d2cc2a21b6224a960d522755d02ea378f9e7fcdfb0f8bead4dfd21d2",
+      "bytes": 87689
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-en-revisit-near-npc.png",
+      "sha256": "ea8d9664ef2cf72730ac5280d31c2410fac6011449b9deccfd63dc852e2beadf",
+      "bytes": 313254
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-en-revisit.png",
+      "sha256": "17b0b739653f9917cfcfc6aa961edbd6cde044f3ba4cbf35a1e221f1c1e0a692",
+      "bytes": 83156
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-zh-choice-saved.png",
+      "sha256": "e0e3ac069059731dc068bff05dfe21f0c2feb07c33470772b33131e81f402f52",
+      "bytes": 90469
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-zh-conversation-portrait.png",
+      "sha256": "e3307ecd6d58127ef316cfbe3b6145b8796cf73ea009b15da8885ed108648fd4",
+      "bytes": 87857
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-zh-initial-map.png",
+      "sha256": "baf662def6061111f5c9dab8192104b5e989509f2c89616540bfd17813284213",
+      "bytes": 344101
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-zh-near-npc.png",
+      "sha256": "a075b1a8ffcf4b20c78ded68ff62b78c867f0e29f8c18de476b39374c082805b",
+      "bytes": 337969
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-zh-people-list.png",
+      "sha256": "0e3b482172b81b554e6b2767370140ed76506985ff19212754467e55878001ef",
+      "bytes": 110887
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-zh-profile-enlarged.png",
+      "sha256": "a1d2231691446174117ca8f2be82fd69af8a1238c34dfc4850a2b745bed5a377",
+      "bytes": 142226
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-zh-profile-history.png",
+      "sha256": "efc3f34743359670ec1751fbc2d7031d23c44a537b9c79bb438cd1b842637609",
+      "bytes": 84917
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-zh-profile.png",
+      "sha256": "fd695c66280340fe21312df000162414158d8d20f43a29713ab3a6b34e7c9b3e",
+      "bytes": 84880
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-zh-revisit-near-npc.png",
+      "sha256": "bc46895ee78bf571c47f18a322b0faeb351220b9913dea6a051871e542d3d0b2",
+      "bytes": 345386
+    },
+    {
+      "path": "screenshots/noor-ui/noor-390-zh-revisit.png",
+      "sha256": "c890de519f44c654eb01fddfd09cedb2d8574a8da5cbeeeb0a311b243aad69d1",
+      "bytes": 89253
+    },
+    {
+      "path": "screenshots/noor-maps/noor-coast-320-en-initial-map.png",
+      "sha256": "96759a0aac1d591099d3ccb3c3f0417126ffc19babdb91fd0bb38aa27fe7f5db",
+      "bytes": 175456
+    },
+    {
+      "path": "screenshots/noor-maps/noor-coast-390-en-initial-map.png",
+      "sha256": "61e3902bc349bcf32e1298b46a6052462e85ef762446f664378ca5a261ea141f",
+      "bytes": 331603
+    },
+    {
+      "path": "screenshots/noor-maps/noor-courtyard-320-en-initial-map.png",
+      "sha256": "4b3482f923b2e427fc01c31eb1c251be6523c0446314a050d8e27fd4d8df5b7c",
+      "bytes": 155026
+    },
+    {
+      "path": "screenshots/noor-maps/noor-courtyard-390-en-initial-map.png",
+      "sha256": "5331ba8b62f6af26e0b692c03802520bbf77974a054de84bf190a68eaf900ff2",
+      "bytes": 326371
+    },
+    {
+      "path": "screenshots/noor-maps/noor-secondhand-320-en-initial-map.png",
+      "sha256": "806ba58913e77a9d132fe820906c8029b6a1a88780bb08976309edc7954971af",
+      "bytes": 147672
+    },
+    {
+      "path": "screenshots/noor-maps/noor-secondhand-390-en-initial-map.png",
+      "sha256": "bdf1292f04f304827d1d517dc12966f3a6105e222a143e8974df1e98e1057305",
+      "bytes": 273881
+    }
+  ],
+  "count": 138,
+  "bytes": 20470824
+}

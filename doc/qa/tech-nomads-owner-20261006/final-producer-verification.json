@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-06T10:47:22.451403+00:00",
+  "manifestSHA256": "3c4124720a6598ae4fa00c17067b836073aeef3bafdd93fd9a1c8cd44a5e5bb2",
+  "ownerHandoffSHA256": "02ae2552c37921aa7647d94f7333f486e0c9b54026a890bf9657c3a28fd8763f",
+  "verifiedFiles": 935,
+  "verifiedBytes": 173425146,
+  "mismatches": [],
+  "budget": {
+    "actualPOSTCap": 42,
+    "actualPOSTConsumed": 35,
+    "actualPOSTRemaining": 7,
+    "pilotActualPOSTCap": 4,
+    "pilotActualPOSTConsumed": 2,
+    "actualCost": null,
+    "feesUnknownAccepted": true
+  },
+  "rightsScope": {
+    "path": "rights-scope-application.json",
+    "sha256": "40bd7cc6ee48b15141fcb241e20e77d587916a1e32ce57df5193f870f5b16071"
+  },
+  "consumerHarperBytesSameAsOwnerTested": true
+}

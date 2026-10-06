@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "at": "2026-10-06T11:18:24.179889+00:00",
+  "reviewer": "AI owner 01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "verdict": "PASS_RECORDED_PROJECT_USE_APPLICATION_LOCAL_CANDIDATE",
+  "applicationSHA256": "40bd7cc6ee48b15141fcb241e20e77d587916a1e32ce57df5193f870f5b16071",
+  "basisChecks": [
+    {
+      "path": "/Users/yin/code/games/harbor-residents-art-20261006/historical-rights-scope-application.json",
+      "expectedSHA256": "f48d2ec2b0ebf1450ace38368ae6779ba6566db87525e0d196d843a5fbd31348",
+      "actualSHA256": "f48d2ec2b0ebf1450ace38368ae6779ba6566db87525e0d196d843a5fbd31348",
+      "matches": true
+    },
+    {
+      "path": "/Users/yin/code/games/rpg-asset-library/admission-candidates/harbor-three-accepted-20261003-v1/execution-v1/rights-confirmation.json",
+      "expectedSHA256": "5dd8c051aaa4d9ec538dc63eed7d23db26a1c41fd7d6db4f706366ecc90f5f75",
+      "actualSHA256": "5dd8c051aaa4d9ec538dc63eed7d23db26a1c41fd7d6db4f706366ecc90f5f75",
+      "matches": true
+    },
+    {
+      "path": "/Users/yin/code/games/rpg-asset-library/admission-candidates/harbor-three-accepted-20261003-v1/execution-v1/authority.json",
+      "expectedSHA256": "63cb09e7e71c093cc451571501fe8416a4432696cc2ba759a51de3eec0487ab9",
+      "actualSHA256": "63cb09e7e71c093cc451571501fe8416a4432696cc2ba759a51de3eec0487ab9",
+      "matches": true
+    }
+  ],
+  "selectedSourcesVerified": 30,
+  "mismatches": 0,
+  "scope": {
+    "copy": true,
+    "transform": true,
+    "internal-agent-use": true,
+    "cross-alteru-game-use": true,
+    "source-and-build-distribution": true
+  },
+  "interpretation": {
+    "sameServiceSameProjectExistingStandardUses": true,
+    "AIApplicabilityAssessmentNotNewHumanLegalStatement": true,
+    "oldRecordDoesNotLiterallyListNewHarperTessNoorTasks": true,
+    "notUniversalOpenLicense": true,
+    "noLibraryMutationUploadOrPublication": true
+  },
+  "humanRecordNotNewlyExpanded": true,
+  "libraryMutation": false,
+  "upload": false,
+  "publicationAuthorization": false
+}

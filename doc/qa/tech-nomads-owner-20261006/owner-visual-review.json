@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "at": "2026-10-06T11:19:56.748690+00:00",
+  "reviewerType": "AI",
+  "reviewerThreadId": "01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "verdict": "AI_PASS_LOCAL_OWNER_CONSUMER",
+  "singleImage": "Producer PASS retained, exact consumer bytes independently matched and viewed",
+  "family": "Producer independently generated nine complete source poses and whole-frame right mirrors retained; owner byte/pixel/consumer-frame audit PASS. Producer continuous isolated four-direction rAF loops are separate evidence.",
+  "ownerTargetScene": "Actual game Main/View/RPGJS fixed22-person build and local isolated authority, actual NPC coordinates/schedules, conventional keyboard and Interact controls.",
+  "ownerProfile": "Square 512 profile and256 avatar decoded, contain fit; conversation image48x48 within52 border button, relationship profile56/64 square; profile/history/enlarge no business mutation.",
+  "reviewedEvidence": {
+    "harper": [
+      "current garden390 and historical cafe/coast320/390 same consumer bytes",
+      "both-width both-language profile views; enlarged320 en/zh"
+    ],
+    "tess": [
+      "current market390, cafe390, dock320",
+      "both-width both-language profile views; enlarged390zh"
+    ],
+    "noor": [
+      "current coast390, secondhand390, courtyard320",
+      "both-width both-language profile views; enlarged390en"
+    ]
+  },
+  "identity": [
+    "Harper glasses/slate-blue/red shirt",
+    "Tess gray temples/blue layer/orange shirt",
+    "Noor braids/burgundy top/beige trousers"
+  ],
+  "viewpoint": "Compact adult figure with same camera scale and foot anchor as current residents/hero; no scene camera or renderer substituted.",
+  "edgeAudit": "All nine consumption images visible strong-magenta pixels0 under recorded definition; meaningful garment pixels retained; nearest display inspected.",
+  "occlusionLimits": [
+    "Normal resident depth can partially overlap Tess with a foreground neighbor in the cafe. Head/identity and ordinary close approach remain usable. No residents hidden to beautify the scene.",
+    "At320 some top curls can approach existing HUD overlays in coastal/dock camera framing. No claim that every pixel is unobscured at every possible position."
+  ],
+  "gameOffsets": {
+    "npc": [
+      0,
+      0
+    ],
+    "heroUnchanged": [
+      8,
+      12
+    ]
+  },
+  "humanIntervention": "None in this owner review; producer rejection histories retained",
+  "notProven": [
+    "native phone/touch experience",
+    "normal MiniApp guest/identity shell",
+    "website profile UI",
+    "new-player comprehension",
+    "owner continuous vertical NPC walking in production path"
+  ],
+  "published": false
+}

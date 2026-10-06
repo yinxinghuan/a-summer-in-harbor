@@ -1,0 +1,150 @@
+{
+  "at": "2026-10-06T10:44:19.378768+00:00",
+  "status": "COMPLETE_AI_PASS_OWNER_ADMISSION_PENDING",
+  "manifestPath": "/Users/yin/code/games/harbor-tech-nomads-art-20261006/manifest.json",
+  "manifestSHA256": "3c4124720a6598ae4fa00c17067b836073aeef3bafdd93fd9a1c8cd44a5e5bb2",
+  "deliverables": [
+    {
+      "person": "harper",
+      "path": "assets/harper.png",
+      "sha256": "fdaa1f360e9776ce7dc9ae2d65e5d4a439f9ef3f6166aa819fd07827dda950db",
+      "bytes": 119527
+    },
+    {
+      "person": "harper",
+      "path": "assets/harper-atlas.json",
+      "sha256": "46d7bdda0eaf535ac0fa1c97845a7d0f1f2194799bc044087a64a1fbd1c739a9",
+      "bytes": 6056
+    },
+    {
+      "person": "harper",
+      "path": "assets/harper-portrait-native.png",
+      "sha256": "03f5d30ab909f0df33399b32a88f8d2db7da88899ca90981512c0cc122373d4d",
+      "bytes": 722370
+    },
+    {
+      "person": "harper",
+      "path": "assets/harper-avatar.png",
+      "sha256": "bbde72ee79948d40835eca0ff85486641b81dca2f3fb03c42ef12c1ae6b611a4",
+      "bytes": 70138
+    },
+    {
+      "person": "harper",
+      "path": "assets/harper-profile.png",
+      "sha256": "60679d1f58737cdd9b8ad1a66943ef54a8dd01ed252ee302a70a4b316c42cb0b",
+      "bytes": 227950
+    },
+    {
+      "person": "tess",
+      "path": "assets/tess.png",
+      "sha256": "c70515c7d5332b33f7e8f557878509f3f6b8065d181f7956c6b980d552f770cc",
+      "bytes": 126859
+    },
+    {
+      "person": "tess",
+      "path": "assets/tess-atlas.json",
+      "sha256": "80fd46e9dc7f07ce7704728a9294ac7e0b13ea7d27fc402bf08ad0d67b210ed7",
+      "bytes": 6030
+    },
+    {
+      "person": "tess",
+      "path": "assets/tess-portrait-native.png",
+      "sha256": "ad31c14c637a51248475fef1b217c84f4c86a1c006e952b2c2616f7508c47485",
+      "bytes": 779950
+    },
+    {
+      "person": "tess",
+      "path": "assets/tess-avatar.png",
+      "sha256": "8e7d7e1129ee98468b19ca08822def23aecb9d47673e715ace614becf960a92a",
+      "bytes": 73954
+    },
+    {
+      "person": "tess",
+      "path": "assets/tess-profile.png",
+      "sha256": "f7a9f36b606d2d80aa76f6d33fdb9933c05e6bdc2e7a946d72d2d59bcb3e8a90",
+      "bytes": 242422
+    },
+    {
+      "person": "noor",
+      "path": "assets/noor.png",
+      "sha256": "f6a7709b666a2862eaca5cc5e3116c208a63a57386c064e8ecf84109f6c19753",
+      "bytes": 112343
+    },
+    {
+      "person": "noor",
+      "path": "assets/noor-atlas.json",
+      "sha256": "833f989e20893f1feeff2086d2a25f1b4c3d51342829270f63a6b58f0bd046e5",
+      "bytes": 6030
+    },
+    {
+      "person": "noor",
+      "path": "assets/noor-portrait-native.png",
+      "sha256": "5aa841cd0cf6f1e326c4f8a6247502e1306310cbce0911bdd814860c90aad809",
+      "bytes": 624735
+    },
+    {
+      "person": "noor",
+      "path": "assets/noor-avatar.png",
+      "sha256": "b463bbe3c5d1503b042ddc28b515c0f6154d8918ed25bfc10f421d1ba80797a7",
+      "bytes": 61854
+    },
+    {
+      "person": "noor",
+      "path": "assets/noor-profile.png",
+      "sha256": "6ef81c954c1cdaef467f94b20c5e37bdb10c67fc711c481da3c188c7efb51f85",
+      "bytes": 201791
+    }
+  ],
+  "budget": {
+    "actualPOSTCap": 42,
+    "actualPOSTConsumed": 35,
+    "actualPOSTRemaining": 7,
+    "pilotActualPOSTCap": 4,
+    "pilotActualPOSTConsumed": 2,
+    "actualCost": null,
+    "feesUnknownAccepted": true
+  },
+  "effectiveReviews": [
+    {
+      "person": "harper",
+      "suite": "reviews/harper-suite.json",
+      "sha256": "2a9b06980597c8e37a8f646ce44abf0defbbca633c52fd54055e312a5b4a441f",
+      "atlasSHA256": "fdaa1f360e9776ce7dc9ae2d65e5d4a439f9ef3f6166aa819fd07827dda950db",
+      "effectiveSingleSources": "pass",
+      "family": "pass",
+      "technical": "pass",
+      "isolatedRPGJSScene": "pass",
+      "formalOwnerAdmission": "pending"
+    },
+    {
+      "person": "tess",
+      "suite": "reviews/tess-suite.json",
+      "sha256": "94e182f805d2cb57c2025dc9b8ece3792eef143898029842a0dd40dbed371d59",
+      "atlasSHA256": "c70515c7d5332b33f7e8f557878509f3f6b8065d181f7956c6b980d552f770cc",
+      "effectiveSingleSources": "pass",
+      "family": "pass",
+      "technical": "pass",
+      "isolatedRPGJSScene": "pass",
+      "formalOwnerAdmission": "pending"
+    },
+    {
+      "person": "noor",
+      "suite": "reviews/noor-suite.json",
+      "sha256": "aef9f91848778a0ba9e055f95817af3b3bec8fdce6261544ed8e6919c8d8b04c",
+      "atlasSHA256": "f6a7709b666a2862eaca5cc5e3116c208a63a57386c064e8ecf84109f6c19753",
+      "effectiveSingleSources": "pass",
+      "family": "pass",
+      "technical": "pass",
+      "isolatedRPGJSScene": "pass",
+      "formalOwnerAdmission": "pending"
+    }
+  ],
+  "ownerActions": [
+    "固定版本复制15份assets消费文件，并核SHA",
+    "NPC使用offset0和foot64/122、scale56/108，在正式站位四向连续验接",
+    "资料和官网用完整方图contain，256头像与512profile各自验UI",
+    "真实320/390手机、platform-layout和external-guest正式验收由owner完成"
+  ],
+  "noProducerGameSiteLibraryMutation": true,
+  "publishedOrUploadedLibrary": false
+}

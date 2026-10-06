@@ -1,0 +1,51 @@
+{
+  "at": "2026-10-06T11:18:24.179889+00:00",
+  "scope": "Local final 22-person fixed-build Main/View/RPGJS, real handler and isolated SQLite authority. Synthetic legacy QA only; no production session or save. External requests aborted.",
+  "configuredResidents": 22,
+  "admittedResidents": 22,
+  "animalRoster": {
+    "cats": 3,
+    "gulls": 4
+  },
+  "uiStoryCases": 12,
+  "routineMapCases": 18,
+  "dimensions": [
+    [
+      320,
+      568
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "locales": [
+    "en",
+    "zh"
+  ],
+  "branches": "Both mutually exclusive choices per resident, one choice in each locale and both widths; rule tests independently cover every branch/language combination.",
+  "profileViewsReadOnly": true,
+  "choiceRelationDelta": {
+    "resident": 1,
+    "partner": 1
+  },
+  "recallRewardDelta": 0,
+  "oldMiraRelationPreserved": 2,
+  "storyRecallReloadPreserved": true,
+  "errors": [],
+  "missingAssets": [],
+  "modelCalls": 0,
+  "mediaPosts": 0,
+  "realPhone": false,
+  "miniApp": false,
+  "siteUI": false,
+  "newPlayerComprehension": "unverified",
+  "reports": [
+    "owner-harper-ui-report.json",
+    "owner-harper-maps-report.json",
+    "owner-tess-ui-report.json",
+    "owner-tess-maps-report.json",
+    "owner-noor-ui-report.json",
+    "owner-noor-maps-report.json"
+  ]
+}

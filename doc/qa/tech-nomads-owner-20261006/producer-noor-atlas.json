@@ -1,0 +1,183 @@
+{
+  "person": "noor",
+  "dimensions": [
+    384,
+    512
+  ],
+  "cell": [
+    128,
+    128
+  ],
+  "rows": [
+    "down",
+    "left",
+    "right",
+    "up"
+  ],
+  "columns": [
+    "contactA",
+    "stand",
+    "contactB"
+  ],
+  "footAnchor": [
+    64,
+    122
+  ],
+  "scale": 0.5185185185185185,
+  "NPCOffsets": [
+    0,
+    0
+  ],
+  "complete": true,
+  "independentSources": 9,
+  "provisionalRootOnly": false,
+  "frames": [
+    {
+      "direction": "down",
+      "pose": "a",
+      "row": 0,
+      "column": 0,
+      "taskKey": "noor-down-a-v2",
+      "requestId": "f2e2e83f-3733-4b32-a03c-3cb6bd0e2bb0",
+      "taskId": "mt_85d3388c8afc57863ba00d8afe2518f0",
+      "sourceSHA256": "0abcaf0588a48b974e8e4d1c19a97cce9e4074e03e0b435044462ac608477838",
+      "wholeFrameMirror": false,
+      "cellSHA256": "b83dddb1747cfb822911fd10e3675d33543bc883fa108560bc0032815f0d0923"
+    },
+    {
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "column": 1,
+      "taskKey": "noor-down-stand-v1",
+      "requestId": "6e707101-06b0-4d2f-a3b5-984757bc6f56",
+      "taskId": "mt_90f1e98c254cbd6386217199979f685e",
+      "sourceSHA256": "7d2a80195fd130a850324b6a4647c978bc38e294259f17e78ef5d3f87bb0adfc",
+      "wholeFrameMirror": false,
+      "cellSHA256": "a1e36605f7f6354118fecd6bb1546dc042dddedee0eb856476bb88a82fdb6ca9"
+    },
+    {
+      "direction": "down",
+      "pose": "b",
+      "row": 0,
+      "column": 2,
+      "taskKey": "noor-down-b-v1",
+      "requestId": "45f83b68-4add-4478-827c-8aa3fc6120ef",
+      "taskId": "mt_c373594c671b9bf4c6f41d419b65b219",
+      "sourceSHA256": "4d5fa9186c09f576d2486d7a302d37a891194a964313e51f2075075a69c4052f",
+      "wholeFrameMirror": false,
+      "cellSHA256": "eea1551d5f9c122bb235aa684a8eb1e8fe159e42ab5bac539eb0a47502102eb8"
+    },
+    {
+      "direction": "left",
+      "pose": "a",
+      "row": 1,
+      "column": 0,
+      "taskKey": "noor-left-a-v1",
+      "requestId": "728b19f9-c568-4d73-901b-857102a51cf7",
+      "taskId": "mt_61ef038dd97809870e95ce6c2640dfcc",
+      "sourceSHA256": "0d576a09c502713da3bc7d9a02e74373e27486ce490730399e01df3cb2f901b1",
+      "wholeFrameMirror": false,
+      "cellSHA256": "bf998c786455257973bf6c40a3d8e452e7146bd6cacb2af3bf6303ac45173196"
+    },
+    {
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "column": 1,
+      "taskKey": "noor-left-stand-v1",
+      "requestId": "f252495f-af98-4f9d-9cbe-30b0458ee80a",
+      "taskId": "mt_c534292b400ceab2a2dff3dc5085b2c1",
+      "sourceSHA256": "0ca4eafa356aaa2f98cac07dde558b3e0084162ac206cf258c1599d9e888973b",
+      "wholeFrameMirror": false,
+      "cellSHA256": "a340e81de794e72ba82a58700156ceeec0d99aa123bb3fd13a26525beb180d3a"
+    },
+    {
+      "direction": "left",
+      "pose": "b",
+      "row": 1,
+      "column": 2,
+      "taskKey": "noor-left-b-v1",
+      "requestId": "945482ef-7595-4c68-8426-16f7b548a8df",
+      "taskId": "mt_a4b8691f35302785ab317b557203b514",
+      "sourceSHA256": "72cfad1833f0b1127fa8f4900964b1dbba4481adc180f4c911fb4de04be234a2",
+      "wholeFrameMirror": false,
+      "cellSHA256": "b236cedf4a9617dc0f9e79d1d0e366a2760d6edf6078310ac1cd115e21c29436"
+    },
+    {
+      "direction": "right",
+      "pose": "a",
+      "row": 2,
+      "column": 0,
+      "taskKey": "noor-left-a-v1",
+      "requestId": "728b19f9-c568-4d73-901b-857102a51cf7",
+      "taskId": "mt_61ef038dd97809870e95ce6c2640dfcc",
+      "sourceSHA256": "0d576a09c502713da3bc7d9a02e74373e27486ce490730399e01df3cb2f901b1",
+      "wholeFrameMirror": true,
+      "cellSHA256": "5c6b4d8ad266f0455f61329798c6d4da223d8ec7bf2716045f071db629f14c4a"
+    },
+    {
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "column": 1,
+      "taskKey": "noor-left-stand-v1",
+      "requestId": "f252495f-af98-4f9d-9cbe-30b0458ee80a",
+      "taskId": "mt_c534292b400ceab2a2dff3dc5085b2c1",
+      "sourceSHA256": "0ca4eafa356aaa2f98cac07dde558b3e0084162ac206cf258c1599d9e888973b",
+      "wholeFrameMirror": true,
+      "cellSHA256": "4ea88f5aa780d2c0bb1972bf203f51a35426a8a3746a3ab404a9618eb15c131a"
+    },
+    {
+      "direction": "right",
+      "pose": "b",
+      "row": 2,
+      "column": 2,
+      "taskKey": "noor-left-b-v1",
+      "requestId": "945482ef-7595-4c68-8426-16f7b548a8df",
+      "taskId": "mt_a4b8691f35302785ab317b557203b514",
+      "sourceSHA256": "72cfad1833f0b1127fa8f4900964b1dbba4481adc180f4c911fb4de04be234a2",
+      "wholeFrameMirror": true,
+      "cellSHA256": "259906f652a53fa4b9dfb4b3b127d3e0b93e5dab88a0fbb3571000003acc0fe6"
+    },
+    {
+      "direction": "up",
+      "pose": "a",
+      "row": 3,
+      "column": 0,
+      "taskKey": "noor-up-a-v1",
+      "requestId": "0e899b96-5b3b-4ea7-ad6b-32622d161b51",
+      "taskId": "mt_7f8ca75ce85afdb9aed1534f65e89e16",
+      "sourceSHA256": "9453dd19e309d3f236c1feba91c8877adbc153e4a62bbb09612a264036b5bf64",
+      "wholeFrameMirror": false,
+      "cellSHA256": "09f92b4c9518c17fa582070bd2dac6521173c39790d0eb78303759181d4e245d"
+    },
+    {
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "column": 1,
+      "taskKey": "noor-up-stand-v1",
+      "requestId": "bcc15e49-e0ed-437e-8775-9986e3588ebb",
+      "taskId": "mt_8ceec21bb46c1ee178f1b4afc5711ab3",
+      "sourceSHA256": "b5b27c9479d9291a11423968711f0378626ed1750e87c1f6c3739748f4ba02ca",
+      "wholeFrameMirror": false,
+      "cellSHA256": "ffbf1950624f9a7b1c665bcfc85ad0a53138516f1825f07b5a4f9a75ae949244"
+    },
+    {
+      "direction": "up",
+      "pose": "b",
+      "row": 3,
+      "column": 2,
+      "taskKey": "noor-up-b-v1",
+      "requestId": "de57fc5a-753b-4471-a1a4-56ba3f7725bf",
+      "taskId": "mt_bdac51cfd0fc723495455ab6a1226b96",
+      "sourceSHA256": "23874defabf0b8fbfaf2c291e78705f524ed6602be5ff3afe1a9aa9ba963c74a",
+      "wholeFrameMirror": false,
+      "cellSHA256": "1b86c4af9306e379569652ee77b89f16086ac8cfe96af455d94e5d2e4d6e5877"
+    }
+  ],
+  "sha256": "f6a7709b666a2862eaca5cc5e3116c208a63a57386c064e8ecf84109f6c19753",
+  "familyReview": "pending",
+  "gameIntegration": "owner pending"
+}

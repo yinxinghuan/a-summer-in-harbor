@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "reviewer": "AI",
+  "at": "2026-10-06T10:20:13.704597+00:00",
+  "decision": "pass",
+  "person": "tess",
+  "singleSources": "pass",
+  "family": "pass",
+  "technical": "pass",
+  "isolatedTargetScene": "pass",
+  "atlasSHA256": "c70515c7d5332b33f7e8f557878509f3f6b8065d181f7956c6b980d552f770cc",
+  "nativeIndependentCount": 9,
+  "nativeSourceCountIncludingRejected": 12,
+  "portraitNativeCount": 1,
+  "selectedRevisions": [
+    "down-stand-v2",
+    "down-B-v3"
+  ],
+  "reason": "逐张实看9合格地图原源、12格2倍及三底，低马尾银鬓/成熟肤色/陶土浅蓝深靛衣装连续；双向前后A/B均双臂双腿反相，侧向近远遮挡交换，右向整格镜像。原f6 RPGJS320/390四向连续rAF各119–138样本全stride0/1/2，实际多状态截图及停步可见完整动作与朝向保留；与原主角Rowan同场比例脚点相机匹配，无严重结构视角跳变或洋红残留。下向略自然躯干转动在实际尺度下不影响朝向与身份，不按顶面面积推算相机。",
+  "evidence": [
+    "evidence/tess-atlas-2x.png",
+    "evidence/tess-atlas-three-backgrounds.png",
+    "evidence/tess-walk/320-actual-cycle-contact-sheet.png",
+    "evidence/tess-walk/390-actual-cycle-contact-sheet.png",
+    "evidence/tess-walk/capture.json",
+    "reviews/tess-mechanical.json",
+    "reviews/tess-portrait-final-v1.json",
+    "reviews/tess-root-scene-v1.json"
+  ],
+  "actualPhone": "not tested",
+  "formalGameNPCAndProfileUI": "owner pending",
+  "formalSiteUI": "Site owner pending",
+  "humanReview": null
+}
