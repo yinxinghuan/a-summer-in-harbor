@@ -3147,3 +3147,8 @@ Harbor five resident map families and profile assets (2026-10-06)
 Files: art/npc-{rowan,jordan,leila,casey,grant}.png and their -avatar.png / -root-v2.png profiles.
 Generated through AlterU Media for this project. Recorded project permission covers technical processing, internal production, reuse across AlterU games and distribution with game source or builds. No additional attribution requirement was supplied in the business confirmation. This notice records project usage permission, not a universal open-source asset license. Source generation/task and local modifications remain in each manifest.
 Fixed request/task/source/consumer hashes, mirrored side family, deterministic extraction and runtime geometry: doc/releases/five-news-turn-20261006/asset-provenance.json. Mira map is deferred; no placeholder is admitted to the published roster.
+
+Harbor Mira map family and profiles (2026-10-06 completion)
+Files: art/npc-mira.png, art/npc-mira-avatar.png, art/npc-mira-root-v2.png.
+The earlier five-resident release deferred Mira. Her newly authorized independent complete family is now admitted; rejected and unknown earlier families are not used. The same recorded AlterU project permission above covers technical processing, reuse across AlterU games and distribution with game source/builds, without an additional attribution requirement. This is project usage permission, not a universal open-source asset license.
+Fixed source/task/consumer hashes, extraction, mirrored side poses and runtime geometry: doc/releases/mira-20261006/asset-provenance.json; original producer manifest, AI review and pose plan are preserved alongside it.

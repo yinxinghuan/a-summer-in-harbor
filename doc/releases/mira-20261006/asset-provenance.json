@@ -1,0 +1,187 @@
+{
+  "producerManifestSHA256": "3eb55e08b06dcef1d12d43eb09cfa5ce2d1ed46a79d36a3f29009ee33269ba57",
+  "producerDirectory": "/Users/yin/code/games/harbor-residents-art-20261006",
+  "selectedSource": "new authorized mira-down-stand-v3 family; old rejected/unknown families not selected",
+  "assets": [
+    {
+      "component": "atlas",
+      "source": "assets/mira.png",
+      "target": "public/art/npc-mira.png",
+      "sha256": "0b2335174d87a01bcec9c83a780263a90863b92bc57f272ffca7df87babd419f",
+      "dimensions": [
+        384,
+        512
+      ]
+    },
+    {
+      "component": "avatar",
+      "source": "assets/mira-avatar.png",
+      "target": "public/art/npc-mira-avatar.png",
+      "sha256": "1fd003f4a36000b2b777170b47621dbdb864a30bda5f78ccb69e9f2cbe8c11f8",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "component": "portrait",
+      "source": "assets/mira-portrait.png",
+      "target": "public/art/npc-mira-root-v2.png",
+      "sha256": "1e451750a02ca39ef9f0d0f68af27f7acccaf1cff1461324a6755320e4244a5b",
+      "dimensions": [
+        512,
+        640
+      ]
+    }
+  ],
+  "existingFiveAndProfiles": "18 manifest assets verified; existing five consumer assets remain unchanged",
+  "sourceMappings": [
+    {
+      "resident": "mira",
+      "role": "down-a",
+      "requestId": "d9fe4f3b-d09a-412c-9698-487c715fa268",
+      "taskId": "mt_e8d1980a2a8c016ff39825b8ac466d44",
+      "sourceSHA256": "95a18865f0a84b3f03f01a40069fe0b73c764eefe0f04ef3174f52492be4fa93",
+      "sourcePath": "tasks/mira-down-a-v1/source.webp",
+      "derivedFrameSHA256": "770109312d83511d9cf349f9c150ddcba43013bc5548a6474888b95b594b5a5e"
+    },
+    {
+      "resident": "mira",
+      "role": "down-stand",
+      "requestId": "f78371ff-b253-4e7a-b0f7-75da5fc4546a",
+      "taskId": "mt_090ce99207fb3f63e1c3a449f676dde7",
+      "sourceSHA256": "04c71d8803cbc1d6d5dcf0200c3f990e4f614f6faf7da8e6a10fc2df8c602408",
+      "sourcePath": "tasks/mira-down-stand-v3/source.webp",
+      "derivedFrameSHA256": "d307f2469f8669bc207f63ceacc02100caac25f2c76cd43691b518c368cae170"
+    },
+    {
+      "resident": "mira",
+      "role": "down-b",
+      "requestId": "2e0d5805-99a5-4503-917c-a879592007cf",
+      "taskId": "mt_71631275347c6c267863a5ed79daf4ce",
+      "sourceSHA256": "3009e5c98b2d727014e403102626f24821469325c3985ff1c52fb401af18587a",
+      "sourcePath": "tasks/mira-down-b-v1/source.webp",
+      "derivedFrameSHA256": "458fa534d7cf2c45acc543595a37a4048f41f22aa6765100f3aeafb0e69322ce"
+    },
+    {
+      "resident": "mira",
+      "role": "left-a",
+      "requestId": "54104c03-15e9-46ce-bc37-09ca402e361f",
+      "taskId": "mt_06e2208448ac59d53cbf7d68c5850348",
+      "sourceSHA256": "72c9cae1b12d6cc579c14cbfa641e7726874dd376c8fbff95bf293d397fae823",
+      "sourcePath": "tasks/mira-left-a-v1/source.webp",
+      "derivedFrameSHA256": "97977fb0211194cb191446ae425d99a173c143c4e19878587a9b1143e3d7dda5"
+    },
+    {
+      "resident": "mira",
+      "role": "left-stand",
+      "requestId": "4ce760f1-72be-4a6a-ac28-92497d79b667",
+      "taskId": "mt_723989e35f3878ae313b6bd59f617c2e",
+      "sourceSHA256": "c48f20ed7e24e265a4d2aac2ec3fe87cbefc5ee53396f2a93119db8cadec6d40",
+      "sourcePath": "tasks/mira-left-stand-v1/source.webp",
+      "derivedFrameSHA256": "bafe7e90565bdd504b2c20b7cff84a74d28f1eaa610d7c7ed59192f3a9044cf6"
+    },
+    {
+      "resident": "mira",
+      "role": "left-b",
+      "requestId": "1268cc96-9099-46e8-804d-5546ac61e327",
+      "taskId": "mt_638139551a45c9f0ad6f2a61957b73c6",
+      "sourceSHA256": "0c9597cd886bcec0e59b46692ce229fd26b4b8d946dd7fc68b2d4e6250c68093",
+      "sourcePath": "tasks/mira-left-b-v1/source.webp",
+      "derivedFrameSHA256": "cb653e0ef0459471d2c61549d716ffc9a74fdadbcbdb89da92ade6da837c7072"
+    },
+    {
+      "resident": "mira",
+      "role": "up-a",
+      "requestId": "80dfc90c-8bbd-41ea-9d8d-5e387d10bc09",
+      "taskId": "mt_eae1e7cc59bc080b8b730a29e68dd543",
+      "sourceSHA256": "8accf7e91da7ddfd626be14eb775d6140b99988b38ae7e39386fef32ea72ec07",
+      "sourcePath": "tasks/mira-up-a-v1/source.webp",
+      "derivedFrameSHA256": "c00bddcf5b337a5ddf59d5e112fdf1702135dcc4731df6b5508417a77dc94141"
+    },
+    {
+      "resident": "mira",
+      "role": "up-stand",
+      "requestId": "d3f28604-ee7b-405e-9874-13a848d18fce",
+      "taskId": "mt_b341e08282eddd155e1b03357014fdee",
+      "sourceSHA256": "02d2e0924d6d6f0a6e0aa0fbf59c005b44a0e643efbad4b79c96d34e65083c90",
+      "sourcePath": "tasks/mira-up-stand-v1/source.webp",
+      "derivedFrameSHA256": "66a879e69fc7286ac775b30ff397dfca5fb81c5b3ee4ecc6f155589ee7a0cd33"
+    },
+    {
+      "resident": "mira",
+      "role": "up-b",
+      "requestId": "ef61e289-e9db-42ff-9d46-2f164086995e",
+      "taskId": "mt_6617147b181e5e0f9fb5135fee2c517c",
+      "sourceSHA256": "fa48b4e03fcea23f7da7a7f366537637c3614e7226b4da92840030285ef9196a",
+      "sourcePath": "tasks/mira-up-b-v1/source.webp",
+      "derivedFrameSHA256": "6a723ddb7abfbf095ee7159d3646d3dded25407da6a1f306f6b85ad3c77c9cd7"
+    },
+    {
+      "resident": "mira",
+      "role": "avatar",
+      "requestId": "a253c5d3-9eff-5940-af5e-45a8404fa5f8",
+      "taskId": "mt_6b445e974075988bcdda13392adce085",
+      "sourceSHA256": "68e49260f43725e275339475980a98571b528ed1c54a893be3e9bef559335a62",
+      "sourcePath": "reuse-sources/mira/avatar/source.webp",
+      "consumerSHA256": "1fd003f4a36000b2b777170b47621dbdb864a30bda5f78ccb69e9f2cbe8c11f8"
+    },
+    {
+      "resident": "mira",
+      "role": "portrait",
+      "requestId": "b89556dd-1fb5-5630-b377-27bd12d8e232",
+      "taskId": "mt_7252924f6161a433ac151ab4f67e2867",
+      "sourceSHA256": "46786b22e6d4b97bf48390ff5aa848dd984026e6308ed7919eae94d10a7958bb",
+      "sourcePath": "reuse-sources/mira/portrait/source.webp",
+      "consumerSHA256": "1e451750a02ca39ef9f0d0f68af27f7acccaf1cff1461324a6755320e4244a5b"
+    }
+  ],
+  "rendererContract": {
+    "atlas": [
+      384,
+      512
+    ],
+    "cell": [
+      128,
+      128
+    ],
+    "rows": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "columns": [
+      "contactA",
+      "stand",
+      "contactB"
+    ],
+    "footAnchor": [
+      64,
+      122
+    ],
+    "anchor": [
+      0.5,
+      0.953125
+    ],
+    "visiblePixels": 108,
+    "visibleWorldHeight": 56,
+    "worldScale": 0.5185185185185185,
+    "NPCOffsets": [
+      0,
+      0
+    ],
+    "heroPreviewOffsets": [
+      8,
+      12
+    ],
+    "cycleWorldDistances": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "speed": 112
+  },
+  "rightsScope": "rights-scope-application.json"
+}

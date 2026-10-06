@@ -1,0 +1,1140 @@
+{
+  "version": 2,
+  "batch": "harbor-residents-art-20261006",
+  "createdAt": "2026-10-06T04:43:06.683853+00:00",
+  "state": "complete",
+  "mapSuitesReady": [
+    "rowan",
+    "mira",
+    "jordan",
+    "leila",
+    "casey",
+    "grant"
+  ],
+  "residentCount": 6,
+  "readyMapSuites": 6,
+  "approvedIndividualProfiles": 12,
+  "POSTConsumed": 63,
+  "POSTCap": 78,
+  "POSTRemaining": 15,
+  "actualCost": null,
+  "rendererContract": {
+    "atlas": [
+      384,
+      512
+    ],
+    "cell": [
+      128,
+      128
+    ],
+    "rows": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "columns": [
+      "contactA",
+      "stand",
+      "contactB"
+    ],
+    "footAnchor": [
+      64,
+      122
+    ],
+    "anchor": [
+      0.5,
+      0.953125
+    ],
+    "visiblePixels": 108,
+    "visibleWorldHeight": 56,
+    "worldScale": 0.5185185185185185,
+    "NPCOffsets": [
+      0,
+      0
+    ],
+    "heroPreviewOffsets": [
+      8,
+      12
+    ],
+    "cycleWorldDistances": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "speed": 112
+  },
+  "rendererEvidence": "isolated frozen original RPGJS renderer at320x568/390x844 DPR1; no real iPhone test, no formal game modification",
+  "profilesEvidence": "12 existing identity-approved originals, existing deterministic matte with AI-confirmed holes; core RGB preserved and visible strong-magenta0. Actual owner UI admission separate.",
+  "ownerThreadId": "01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+  "residents": [
+    {
+      "id": "rowan",
+      "name": "Rowan Ellis",
+      "existingLibraryIdentity": "next-original__baker-cap-apron",
+      "newIndependentFamilyId": "harbor-resident__rowan",
+      "appearance": "brown skin, dark short hair, white baker cap, cream shirt, navy blue and cream vertical striped apron, rust trousers, dark practical shoes",
+      "mapAIUsability": "pass",
+      "profileIndividualAIUsability": "pass",
+      "readyForOwnerMapIntegration": true,
+      "actualGameIntegration": "owner verifies separately",
+      "components": {
+        "atlas": {
+          "path": "assets/rowan.png",
+          "sha256": "fc57b296b829e43a4d2d52d925d263e0d093ea882cba77911b814b0767e85b28",
+          "dimensions": [
+            384,
+            512
+          ],
+          "grid": [
+            3,
+            4
+          ],
+          "cell": [
+            128,
+            128
+          ],
+          "rowOrder": [
+            "down",
+            "left",
+            "right",
+            "up"
+          ],
+          "columnOrder": [
+            "contactA",
+            "stand",
+            "contactB"
+          ],
+          "anchor": [
+            0.5,
+            0.953125
+          ],
+          "worldScale": 0.5185185185185185,
+          "visibleWorldHeight": 56,
+          "review": "reviews/rowan-suite.json",
+          "posePlan": "pose-plans/rowan.json",
+          "suggestedOwnerTarget": "public/art/npc-rowan.png"
+        },
+        "avatar": {
+          "path": "assets/rowan-avatar.png",
+          "sha256": "54a443fef18b1571f2743149e34784a13cda2414513b3338eecc99eec834dd9b",
+          "dimensions": [
+            256,
+            256
+          ],
+          "review": "reviews/rowan-avatar.json",
+          "processing": "assets/rowan-avatar.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-rowan-avatar.png"
+        },
+        "portrait": {
+          "path": "assets/rowan-portrait.png",
+          "sha256": "e473b3e511f6ec089f5760ec38be4c94cbd44f969c707e210fc88dbf7368e27e",
+          "dimensions": [
+            512,
+            640
+          ],
+          "review": "reviews/rowan-portrait.json",
+          "processing": "assets/rowan-portrait.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-rowan-portrait.png"
+        }
+      }
+    },
+    {
+      "id": "mira",
+      "name": "Mira Vale",
+      "existingLibraryIdentity": "next-original__long-braid-dress",
+      "newIndependentFamilyId": "harbor-resident__mira",
+      "appearance": "fair freckled skin, long light blonde braid, sage green long dress, cream belt, dark short boots",
+      "mapAIUsability": "pass",
+      "profileIndividualAIUsability": "pass",
+      "readyForOwnerMapIntegration": true,
+      "actualGameIntegration": "owner verifies separately",
+      "components": {
+        "atlas": {
+          "path": "assets/mira.png",
+          "sha256": "0b2335174d87a01bcec9c83a780263a90863b92bc57f272ffca7df87babd419f",
+          "dimensions": [
+            384,
+            512
+          ],
+          "grid": [
+            3,
+            4
+          ],
+          "cell": [
+            128,
+            128
+          ],
+          "rowOrder": [
+            "down",
+            "left",
+            "right",
+            "up"
+          ],
+          "columnOrder": [
+            "contactA",
+            "stand",
+            "contactB"
+          ],
+          "anchor": [
+            0.5,
+            0.953125
+          ],
+          "worldScale": 0.5185185185185185,
+          "visibleWorldHeight": 56,
+          "review": "reviews/mira-suite.json",
+          "posePlan": "pose-plans/mira.json",
+          "suggestedOwnerTarget": "public/art/npc-mira.png"
+        },
+        "avatar": {
+          "path": "assets/mira-avatar.png",
+          "sha256": "1fd003f4a36000b2b777170b47621dbdb864a30bda5f78ccb69e9f2cbe8c11f8",
+          "dimensions": [
+            256,
+            256
+          ],
+          "review": "reviews/mira-avatar.json",
+          "processing": "assets/mira-avatar.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-mira-avatar.png"
+        },
+        "portrait": {
+          "path": "assets/mira-portrait.png",
+          "sha256": "1e451750a02ca39ef9f0d0f68af27f7acccaf1cff1461324a6755320e4244a5b",
+          "dimensions": [
+            512,
+            640
+          ],
+          "review": "reviews/mira-portrait.json",
+          "processing": "assets/mira-portrait.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-mira-portrait.png"
+        }
+      }
+    },
+    {
+      "id": "jordan",
+      "name": "Jordan Pike",
+      "existingLibraryIdentity": "next-original__rain-poncho-boots",
+      "newIndependentFamilyId": "harbor-resident__jordan",
+      "appearance": "deep brown skin, short shaved hair, round glasses, mustard yellow rain poncho, sea green rain boots",
+      "mapAIUsability": "pass",
+      "profileIndividualAIUsability": "pass",
+      "readyForOwnerMapIntegration": true,
+      "actualGameIntegration": "owner verifies separately",
+      "components": {
+        "atlas": {
+          "path": "assets/jordan.png",
+          "sha256": "8beef34c8b406b7dc61ecea550acbb46f95edbd8c325c14d921c3e6685e50b6c",
+          "dimensions": [
+            384,
+            512
+          ],
+          "grid": [
+            3,
+            4
+          ],
+          "cell": [
+            128,
+            128
+          ],
+          "rowOrder": [
+            "down",
+            "left",
+            "right",
+            "up"
+          ],
+          "columnOrder": [
+            "contactA",
+            "stand",
+            "contactB"
+          ],
+          "anchor": [
+            0.5,
+            0.953125
+          ],
+          "worldScale": 0.5185185185185185,
+          "visibleWorldHeight": 56,
+          "review": "reviews/jordan-suite.json",
+          "posePlan": "pose-plans/jordan.json",
+          "suggestedOwnerTarget": "public/art/npc-jordan.png"
+        },
+        "avatar": {
+          "path": "assets/jordan-avatar.png",
+          "sha256": "d2f65216f0a1b6e3e04cf72dbc2c9b2eec25e69d4cb0b865f31a3119a8f2fa1c",
+          "dimensions": [
+            256,
+            256
+          ],
+          "review": "reviews/jordan-avatar.json",
+          "processing": "assets/jordan-avatar.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-jordan-avatar.png"
+        },
+        "portrait": {
+          "path": "assets/jordan-portrait.png",
+          "sha256": "9d85c837d13d47bcbcc2e515fcc968d56a38cfc111b466cb34afa6234f20790f",
+          "dimensions": [
+            512,
+            640
+          ],
+          "review": "reviews/jordan-portrait.json",
+          "processing": "assets/jordan-portrait.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-jordan-portrait.png"
+        }
+      }
+    },
+    {
+      "id": "leila",
+      "name": "Leila Hart",
+      "existingLibraryIdentity": "next-original__high-bun-tracksuit",
+      "newIndependentFamilyId": "harbor-resident__leila",
+      "appearance": "olive skin, dark high bun, purple sports jacket, cream sports trousers, dark trainers",
+      "mapAIUsability": "pass",
+      "profileIndividualAIUsability": "pass",
+      "readyForOwnerMapIntegration": true,
+      "actualGameIntegration": "owner verifies separately",
+      "components": {
+        "atlas": {
+          "path": "assets/leila.png",
+          "sha256": "d9f514c3b986d8458b1ea3952f56766cd1c0aef13229285aa4f344c7bd47e3d4",
+          "dimensions": [
+            384,
+            512
+          ],
+          "grid": [
+            3,
+            4
+          ],
+          "cell": [
+            128,
+            128
+          ],
+          "rowOrder": [
+            "down",
+            "left",
+            "right",
+            "up"
+          ],
+          "columnOrder": [
+            "contactA",
+            "stand",
+            "contactB"
+          ],
+          "anchor": [
+            0.5,
+            0.953125
+          ],
+          "worldScale": 0.5185185185185185,
+          "visibleWorldHeight": 56,
+          "review": "reviews/leila-suite.json",
+          "posePlan": "pose-plans/leila.json",
+          "suggestedOwnerTarget": "public/art/npc-leila.png"
+        },
+        "avatar": {
+          "path": "assets/leila-avatar.png",
+          "sha256": "db64d2d10d74c2526373be13d675669ed3597a90797cd6b225ce042c89fa7a5a",
+          "dimensions": [
+            256,
+            256
+          ],
+          "review": "reviews/leila-avatar.json",
+          "processing": "assets/leila-avatar.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-leila-avatar.png"
+        },
+        "portrait": {
+          "path": "assets/leila-portrait.png",
+          "sha256": "012ab7ed3b2b78724715d43a4578b46d779123e54d9a70b0f231df29610e024d",
+          "dimensions": [
+            512,
+            640
+          ],
+          "review": "reviews/leila-portrait.json",
+          "processing": "assets/leila-portrait.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-leila-portrait.png"
+        }
+      }
+    },
+    {
+      "id": "casey",
+      "name": "Casey Morgan",
+      "existingLibraryIdentity": "next-original__bob-pleated-skirt",
+      "newIndependentFamilyId": "harbor-resident__casey",
+      "appearance": "light warm skin, dark straight blunt short bob, cream cable-knit sweater, navy blue pleated skirt, rust socks, cream low shoes",
+      "mapAIUsability": "pass",
+      "profileIndividualAIUsability": "pass",
+      "readyForOwnerMapIntegration": true,
+      "actualGameIntegration": "owner verifies separately",
+      "components": {
+        "atlas": {
+          "path": "assets/casey.png",
+          "sha256": "63b66e28d3854c7b23d473552a68f34c42300eef17d5fb981fd4dd85dafcef13",
+          "dimensions": [
+            384,
+            512
+          ],
+          "grid": [
+            3,
+            4
+          ],
+          "cell": [
+            128,
+            128
+          ],
+          "rowOrder": [
+            "down",
+            "left",
+            "right",
+            "up"
+          ],
+          "columnOrder": [
+            "contactA",
+            "stand",
+            "contactB"
+          ],
+          "anchor": [
+            0.5,
+            0.953125
+          ],
+          "worldScale": 0.5185185185185185,
+          "visibleWorldHeight": 56,
+          "review": "reviews/casey-suite.json",
+          "posePlan": "pose-plans/casey.json",
+          "suggestedOwnerTarget": "public/art/npc-casey.png"
+        },
+        "avatar": {
+          "path": "assets/casey-avatar.png",
+          "sha256": "66841e539a7815f11c8f1e475d2420955ec33be1576cfa11f18da2f177a4961e",
+          "dimensions": [
+            256,
+            256
+          ],
+          "review": "reviews/casey-avatar.json",
+          "processing": "assets/casey-avatar.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-casey-avatar.png"
+        },
+        "portrait": {
+          "path": "assets/casey-portrait.png",
+          "sha256": "60c1122b49f570d04ed2f176d7a08c792454e29d3fb1ebb0034999efc4da428e",
+          "dimensions": [
+            512,
+            640
+          ],
+          "review": "reviews/casey-portrait.json",
+          "processing": "assets/casey-portrait.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-casey-portrait.png"
+        }
+      }
+    },
+    {
+      "id": "grant",
+      "name": "Grant Cole",
+      "existingLibraryIdentity": "next-original__senior-bald-waistcoat",
+      "newIndependentFamilyId": "harbor-resident__grant",
+      "appearance": "older brown skinned adult with mature face wrinkles, bald head, thin glasses, CLEAN-SHAVEN face with no beard or moustache, teal waistcoat over cream shirt, brown trousers, dark practical shoes",
+      "mapAIUsability": "pass",
+      "profileIndividualAIUsability": "pass",
+      "readyForOwnerMapIntegration": true,
+      "actualGameIntegration": "owner verifies separately",
+      "components": {
+        "atlas": {
+          "path": "assets/grant.png",
+          "sha256": "21acdf3db06a7aff9968feb95732793e2ccb62736bd5ffac66884d690c017044",
+          "dimensions": [
+            384,
+            512
+          ],
+          "grid": [
+            3,
+            4
+          ],
+          "cell": [
+            128,
+            128
+          ],
+          "rowOrder": [
+            "down",
+            "left",
+            "right",
+            "up"
+          ],
+          "columnOrder": [
+            "contactA",
+            "stand",
+            "contactB"
+          ],
+          "anchor": [
+            0.5,
+            0.953125
+          ],
+          "worldScale": 0.5185185185185185,
+          "visibleWorldHeight": 56,
+          "review": "reviews/grant-suite.json",
+          "posePlan": "pose-plans/grant.json",
+          "suggestedOwnerTarget": "public/art/npc-grant.png"
+        },
+        "avatar": {
+          "path": "assets/grant-avatar.png",
+          "sha256": "3c1321555920ee04c94c23269a055093124fe1b3200357db86d1504afbce2cbe",
+          "dimensions": [
+            256,
+            256
+          ],
+          "review": "reviews/grant-avatar.json",
+          "processing": "assets/grant-avatar.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-grant-avatar.png"
+        },
+        "portrait": {
+          "path": "assets/grant-portrait.png",
+          "sha256": "6e8e851c9fad5b9dcd3434ef1172606379bc4303043acedacd0d02b91a504ecc",
+          "dimensions": [
+            512,
+            640
+          ],
+          "review": "reviews/grant-portrait.json",
+          "processing": "assets/grant-portrait.json",
+          "reuseOriginal": true,
+          "suggestedOwnerTarget": "public/art/npc-grant-portrait.png"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "scope": {
+    "onlyLocalDirectoryWritten": true,
+    "gameCodeModifiedByThisTask": false,
+    "formalLibraryModified": false,
+    "published": false
+  },
+  "privateLibraryAttachments": "art-task regular helper rejected twice; no upload here, parent handles independent authorization context",
+  "sourceMappings": [
+    {
+      "resident": "rowan",
+      "role": "down-a",
+      "requestId": "b7470b21-55d6-4e12-8e84-081cd784bbc3",
+      "taskId": "mt_dd671bf6fc0c7c290e859982d0e2b631",
+      "sourceSHA256": "5a23824f50c88fdab52fef7aecfbbaa7a8ae190d24006db70fb596cbbbd4e57a",
+      "sourcePath": "tasks/rowan-down-a-v1/source.webp",
+      "derivedFrameSHA256": "49dcac95e8fd92596ac9ec99e7be23e736ec6fdfd7e4fdc7c42eaf0508244529"
+    },
+    {
+      "resident": "rowan",
+      "role": "down-stand",
+      "requestId": "1e2d9de9-89df-4ee6-8028-af36951310a5",
+      "taskId": "mt_9e7c45eeef230a53f1efff6e9724eb6b",
+      "sourceSHA256": "0d415d5680a9537bcdae0adc6688bfe2e195a181b2693487b3db2c298b1f66f5",
+      "sourcePath": "tasks/rowan-down-stand-v3/source.webp",
+      "derivedFrameSHA256": "481a2083eda0f49a67b31b6e939f6ccd4230d2ed18dc8d66ce2eb52550175601"
+    },
+    {
+      "resident": "rowan",
+      "role": "down-b",
+      "requestId": "8481a54b-b810-498d-8126-a43b11374b9b",
+      "taskId": "mt_6dcef7b65afb0eb47860baa9a4978406",
+      "sourceSHA256": "fabee445d4ccb837154bd4078964c1b4b4849442e739c9923d6433ab5a6a4165",
+      "sourcePath": "tasks/rowan-down-b-v1/source.webp",
+      "derivedFrameSHA256": "da2cf35b296076c9c50ce620c87d34fb7be2b38e818488f27fd7679ebe05d30e"
+    },
+    {
+      "resident": "rowan",
+      "role": "left-a",
+      "requestId": "ef386f8a-2d95-4c65-9ada-b9a12741eb52",
+      "taskId": "mt_33b6df3c194420b08f3f128ac0c57433",
+      "sourceSHA256": "dd64d86e0c556414cd1d8a3b907447af4526e47c6e9df6a60de4f7be615d74ab",
+      "sourcePath": "tasks/rowan-left-a-v1/source.webp",
+      "derivedFrameSHA256": "ff0c96f29bf7a1c9cd095c59558bffaea35a19cd26ed16959ee350dd5533e090"
+    },
+    {
+      "resident": "rowan",
+      "role": "left-stand",
+      "requestId": "a6f8e6bc-ff9f-443a-88d3-0a0aaaa84b88",
+      "taskId": "mt_53026c703a8e7ed18706aed358bf0f23",
+      "sourceSHA256": "8ab2f7494b35413608fb32975cc0b58351b741ed17a36d0a719e7f5bc14d8eb2",
+      "sourcePath": "tasks/rowan-left-stand-v1/source.webp",
+      "derivedFrameSHA256": "80281ebab745614ab699aee6e86045c8c545ba332bcec9ad2061ae289bb7513e"
+    },
+    {
+      "resident": "rowan",
+      "role": "left-b",
+      "requestId": "92823b55-4125-46bd-90f2-23ee187e376a",
+      "taskId": "mt_e4b3a5dce2dd551ad84743329ad0ea25",
+      "sourceSHA256": "570f135529ec2c6b1f729483b5db1366dabb374403eae8c957f28d32dcb2ef50",
+      "sourcePath": "tasks/rowan-left-b-v2/source.webp",
+      "derivedFrameSHA256": "9ac9275551a66c72db2d8e86a8a1c3e7f6bf34cd14434e608490f32b23429378"
+    },
+    {
+      "resident": "rowan",
+      "role": "up-a",
+      "requestId": "7fb3b6c3-a187-4778-b73e-5f77e16ed3d0",
+      "taskId": "mt_1f8fc182c43fb0e40df35ce9777494bb",
+      "sourceSHA256": "648ac85bbcd99c79b5bd2f259043065c15468d6cad81a948b9298a92c6d5cd14",
+      "sourcePath": "tasks/rowan-up-a-v1/source.webp",
+      "derivedFrameSHA256": "eff213f900b6f6b59f784931593213241b1044abb6c2fb4fcc9383def7ada136"
+    },
+    {
+      "resident": "rowan",
+      "role": "up-stand",
+      "requestId": "d267f5be-9510-4b67-965e-26d6590da545",
+      "taskId": "mt_345f0f36baee08ffc86d4ff66ba428e0",
+      "sourceSHA256": "26e85ce0cb5f6943d1c3a00805311912cc4bda211bec2fda143f12dec4fb3ea1",
+      "sourcePath": "tasks/rowan-up-stand-v1/source.webp",
+      "derivedFrameSHA256": "39a2550ed0a89c8692b90bea9bc2ec828a93b913ee4b9923405be9fd54e13e13"
+    },
+    {
+      "resident": "rowan",
+      "role": "up-b",
+      "requestId": "13acfbd1-dc21-4379-9441-87a3b44232e4",
+      "taskId": "mt_aae5ea4bd4a875332f620cb0e82b6bcb",
+      "sourceSHA256": "6917ad3b9e395c20c4619b7a23e95d872e20bee4d62ad26d87bf212f0ade2c95",
+      "sourcePath": "tasks/rowan-up-b-v1/source.webp",
+      "derivedFrameSHA256": "11e5530781b1239287960b1a14481d5420af6c74d01907b3c3354e31b9a43b3c"
+    },
+    {
+      "resident": "rowan",
+      "role": "avatar",
+      "requestId": "03a0000f-5459-5e13-a7e1-091245198648",
+      "taskId": "mt_431f64ce38bd299409a2568a053172ce",
+      "sourceSHA256": "a8955f713e1cd145152e05a0b8bdabf048825d83c385f30d21cca44435bc8a06",
+      "sourcePath": "reuse-sources/rowan/avatar/source.webp",
+      "consumerSHA256": "54a443fef18b1571f2743149e34784a13cda2414513b3338eecc99eec834dd9b"
+    },
+    {
+      "resident": "rowan",
+      "role": "portrait",
+      "requestId": "54692fe0-b201-5e57-9bab-d39a7b482980",
+      "taskId": "mt_a542cbb5328e0695c576e1cd245d75e9",
+      "sourceSHA256": "e14f1861f5ff410fb8e3bcb1a2accd3bf19c947668b50105733b06e56902b269",
+      "sourcePath": "reuse-sources/rowan/portrait/source.webp",
+      "consumerSHA256": "e473b3e511f6ec089f5760ec38be4c94cbd44f969c707e210fc88dbf7368e27e"
+    },
+    {
+      "resident": "mira",
+      "role": "down-a",
+      "requestId": "d9fe4f3b-d09a-412c-9698-487c715fa268",
+      "taskId": "mt_e8d1980a2a8c016ff39825b8ac466d44",
+      "sourceSHA256": "95a18865f0a84b3f03f01a40069fe0b73c764eefe0f04ef3174f52492be4fa93",
+      "sourcePath": "tasks/mira-down-a-v1/source.webp",
+      "derivedFrameSHA256": "770109312d83511d9cf349f9c150ddcba43013bc5548a6474888b95b594b5a5e"
+    },
+    {
+      "resident": "mira",
+      "role": "down-stand",
+      "requestId": "f78371ff-b253-4e7a-b0f7-75da5fc4546a",
+      "taskId": "mt_090ce99207fb3f63e1c3a449f676dde7",
+      "sourceSHA256": "04c71d8803cbc1d6d5dcf0200c3f990e4f614f6faf7da8e6a10fc2df8c602408",
+      "sourcePath": "tasks/mira-down-stand-v3/source.webp",
+      "derivedFrameSHA256": "d307f2469f8669bc207f63ceacc02100caac25f2c76cd43691b518c368cae170"
+    },
+    {
+      "resident": "mira",
+      "role": "down-b",
+      "requestId": "2e0d5805-99a5-4503-917c-a879592007cf",
+      "taskId": "mt_71631275347c6c267863a5ed79daf4ce",
+      "sourceSHA256": "3009e5c98b2d727014e403102626f24821469325c3985ff1c52fb401af18587a",
+      "sourcePath": "tasks/mira-down-b-v1/source.webp",
+      "derivedFrameSHA256": "458fa534d7cf2c45acc543595a37a4048f41f22aa6765100f3aeafb0e69322ce"
+    },
+    {
+      "resident": "mira",
+      "role": "left-a",
+      "requestId": "54104c03-15e9-46ce-bc37-09ca402e361f",
+      "taskId": "mt_06e2208448ac59d53cbf7d68c5850348",
+      "sourceSHA256": "72c9cae1b12d6cc579c14cbfa641e7726874dd376c8fbff95bf293d397fae823",
+      "sourcePath": "tasks/mira-left-a-v1/source.webp",
+      "derivedFrameSHA256": "97977fb0211194cb191446ae425d99a173c143c4e19878587a9b1143e3d7dda5"
+    },
+    {
+      "resident": "mira",
+      "role": "left-stand",
+      "requestId": "4ce760f1-72be-4a6a-ac28-92497d79b667",
+      "taskId": "mt_723989e35f3878ae313b6bd59f617c2e",
+      "sourceSHA256": "c48f20ed7e24e265a4d2aac2ec3fe87cbefc5ee53396f2a93119db8cadec6d40",
+      "sourcePath": "tasks/mira-left-stand-v1/source.webp",
+      "derivedFrameSHA256": "bafe7e90565bdd504b2c20b7cff84a74d28f1eaa610d7c7ed59192f3a9044cf6"
+    },
+    {
+      "resident": "mira",
+      "role": "left-b",
+      "requestId": "1268cc96-9099-46e8-804d-5546ac61e327",
+      "taskId": "mt_638139551a45c9f0ad6f2a61957b73c6",
+      "sourceSHA256": "0c9597cd886bcec0e59b46692ce229fd26b4b8d946dd7fc68b2d4e6250c68093",
+      "sourcePath": "tasks/mira-left-b-v1/source.webp",
+      "derivedFrameSHA256": "cb653e0ef0459471d2c61549d716ffc9a74fdadbcbdb89da92ade6da837c7072"
+    },
+    {
+      "resident": "mira",
+      "role": "up-a",
+      "requestId": "80dfc90c-8bbd-41ea-9d8d-5e387d10bc09",
+      "taskId": "mt_eae1e7cc59bc080b8b730a29e68dd543",
+      "sourceSHA256": "8accf7e91da7ddfd626be14eb775d6140b99988b38ae7e39386fef32ea72ec07",
+      "sourcePath": "tasks/mira-up-a-v1/source.webp",
+      "derivedFrameSHA256": "c00bddcf5b337a5ddf59d5e112fdf1702135dcc4731df6b5508417a77dc94141"
+    },
+    {
+      "resident": "mira",
+      "role": "up-stand",
+      "requestId": "d3f28604-ee7b-405e-9874-13a848d18fce",
+      "taskId": "mt_b341e08282eddd155e1b03357014fdee",
+      "sourceSHA256": "02d2e0924d6d6f0a6e0aa0fbf59c005b44a0e643efbad4b79c96d34e65083c90",
+      "sourcePath": "tasks/mira-up-stand-v1/source.webp",
+      "derivedFrameSHA256": "66a879e69fc7286ac775b30ff397dfca5fb81c5b3ee4ecc6f155589ee7a0cd33"
+    },
+    {
+      "resident": "mira",
+      "role": "up-b",
+      "requestId": "ef61e289-e9db-42ff-9d46-2f164086995e",
+      "taskId": "mt_6617147b181e5e0f9fb5135fee2c517c",
+      "sourceSHA256": "fa48b4e03fcea23f7da7a7f366537637c3614e7226b4da92840030285ef9196a",
+      "sourcePath": "tasks/mira-up-b-v1/source.webp",
+      "derivedFrameSHA256": "6a723ddb7abfbf095ee7159d3646d3dded25407da6a1f306f6b85ad3c77c9cd7"
+    },
+    {
+      "resident": "mira",
+      "role": "avatar",
+      "requestId": "a253c5d3-9eff-5940-af5e-45a8404fa5f8",
+      "taskId": "mt_6b445e974075988bcdda13392adce085",
+      "sourceSHA256": "68e49260f43725e275339475980a98571b528ed1c54a893be3e9bef559335a62",
+      "sourcePath": "reuse-sources/mira/avatar/source.webp",
+      "consumerSHA256": "1fd003f4a36000b2b777170b47621dbdb864a30bda5f78ccb69e9f2cbe8c11f8"
+    },
+    {
+      "resident": "mira",
+      "role": "portrait",
+      "requestId": "b89556dd-1fb5-5630-b377-27bd12d8e232",
+      "taskId": "mt_7252924f6161a433ac151ab4f67e2867",
+      "sourceSHA256": "46786b22e6d4b97bf48390ff5aa848dd984026e6308ed7919eae94d10a7958bb",
+      "sourcePath": "reuse-sources/mira/portrait/source.webp",
+      "consumerSHA256": "1e451750a02ca39ef9f0d0f68af27f7acccaf1cff1461324a6755320e4244a5b"
+    },
+    {
+      "resident": "jordan",
+      "role": "down-a",
+      "requestId": "d88e9cc6-8b59-479c-aebc-e89daaa936b8",
+      "taskId": "mt_0fda475195ae43e06a009f6dd95ec9b9",
+      "sourceSHA256": "e423921b4267099c533c329b674c0a5b4e8f12f1c523b2aca9d9c7c0ccb67d76",
+      "sourcePath": "tasks/jordan-down-a-v1/source.webp",
+      "derivedFrameSHA256": "3e7a505ee277821278a44b4a6b6fa8d47c6c020978ce0dc40e78ada7b778ffe9"
+    },
+    {
+      "resident": "jordan",
+      "role": "down-stand",
+      "requestId": "e322e769-91d9-4860-b9ef-9088562c14ef",
+      "taskId": "mt_009d080a2f27a4fedc81591f36a37f41",
+      "sourceSHA256": "3ea9debff7d78399caa765528d7a0493fe8cdd59a2dca565d6e6195a7b3c5b33",
+      "sourcePath": "tasks/jordan-down-stand-v1/source.webp",
+      "derivedFrameSHA256": "c2a0c42f6ebbfd5dfe125beb1f660fd8f6ce4070b01045377abd11583d91e297"
+    },
+    {
+      "resident": "jordan",
+      "role": "down-b",
+      "requestId": "28a61df7-2f8e-49f3-b9ac-e5d3849abd8d",
+      "taskId": "mt_ebb6b18360ec2c0f4e9448e6840d8e6e",
+      "sourceSHA256": "1437b0f3d8ebc7b1ba36be2e3fa69fe13bef6411165ddfe5473f14bfdebdde51",
+      "sourcePath": "tasks/jordan-down-b-v1/source.webp",
+      "derivedFrameSHA256": "385ebe3440e984d6d1f89873c7e5beed8fab57056b2235d73f89ba505eb69d50"
+    },
+    {
+      "resident": "jordan",
+      "role": "left-a",
+      "requestId": "5202eadf-e7f1-475d-b7f2-c9d945e5a25c",
+      "taskId": "mt_bb780359ee9d5708fd0c50c7f3ee0ff7",
+      "sourceSHA256": "25d39e40dc9e9f6caf6c6b48e52dcc9986ea6d8853a04f2fc7e7f6f0694da072",
+      "sourcePath": "tasks/jordan-left-a-v1/source.webp",
+      "derivedFrameSHA256": "85511935deb49e2f171427602402027e3d18d74f439be9120aab6586d960c454"
+    },
+    {
+      "resident": "jordan",
+      "role": "left-stand",
+      "requestId": "8d51074d-72f2-496d-aae9-09c96dccb1c2",
+      "taskId": "mt_2bb5b683698bf6cccc973809338c9cf2",
+      "sourceSHA256": "e54fa53ad51cca8ab6c8447882e0807d39a287309e89ba29498d932944c1adc3",
+      "sourcePath": "tasks/jordan-left-stand-v1/source.webp",
+      "derivedFrameSHA256": "a92c466b4b171598d6b034af6d3b1bdb2f95f6d3c35140e70a445d4cc84fcbed"
+    },
+    {
+      "resident": "jordan",
+      "role": "left-b",
+      "requestId": "d6b80763-847e-447a-8695-b62eacc50418",
+      "taskId": "mt_773da2aa5834ed3e8684af8a1eb6bdf9",
+      "sourceSHA256": "b579f1b300655d6a127ff5046f19d6019d18e0952b8cc6e5373886038dd676ea",
+      "sourcePath": "tasks/jordan-left-b-v1/source.webp",
+      "derivedFrameSHA256": "0e2bff933f4e71d20639c964e515df10b40112e89423400932a1a2bc3bb16670"
+    },
+    {
+      "resident": "jordan",
+      "role": "up-a",
+      "requestId": "e0918a28-32d2-41d6-bb8e-29627361f4b0",
+      "taskId": "mt_f71b862ecbb463e01ed4ec38a6feeddd",
+      "sourceSHA256": "2d23a9d64f060aae4986805bd5ce968746b23dff7229a3ef5d42b4bcb9bac082",
+      "sourcePath": "tasks/jordan-up-a-v1/source.webp",
+      "derivedFrameSHA256": "3885e7616b06315ef3991c04c2146efc4b19b70de10c8c28bcd830556b4c02ec"
+    },
+    {
+      "resident": "jordan",
+      "role": "up-stand",
+      "requestId": "52624352-2ba4-40da-aa17-29a1773b6890",
+      "taskId": "mt_6a55217bbffc86c2764d915767af5ef9",
+      "sourceSHA256": "91fd7c678135f4c58c2b83919f646a20f7ca37f43efe3275ae7163457e67800a",
+      "sourcePath": "tasks/jordan-up-stand-v1/source.webp",
+      "derivedFrameSHA256": "19431ea27868785ee0323878af3c08dcacf7bc1617d67b2e579e5bc24e35e184"
+    },
+    {
+      "resident": "jordan",
+      "role": "up-b",
+      "requestId": "eef6f583-60ba-43f4-bec1-b7dd0625247b",
+      "taskId": "mt_8795f3a49505547a74c1f2bed518340e",
+      "sourceSHA256": "f6aa2e3576ba95a89b9b72c9c06ac3570986b14da69fc46110ca1ca22c1d2992",
+      "sourcePath": "tasks/jordan-up-b-v1/source.webp",
+      "derivedFrameSHA256": "c60e25697d3f6ec58fc885a53f71949dc4a869321e9467f0e1e638d67495f749"
+    },
+    {
+      "resident": "jordan",
+      "role": "avatar",
+      "requestId": "3e5d9371-28aa-511c-9208-5c5a562cd83a",
+      "taskId": "mt_31883ee94f8676f09d2ef00bb6c6f56a",
+      "sourceSHA256": "438542df744d551fffa667eb5579b7a2d9ce50150bd7cc04f2a6e6f2ece72671",
+      "sourcePath": "reuse-sources/jordan/avatar/source.webp",
+      "consumerSHA256": "d2f65216f0a1b6e3e04cf72dbc2c9b2eec25e69d4cb0b865f31a3119a8f2fa1c"
+    },
+    {
+      "resident": "jordan",
+      "role": "portrait",
+      "requestId": "35e0f358-5b96-5b56-b411-8aca58647640",
+      "taskId": "mt_f827d6c102dabc8b78711a76daddd368",
+      "sourceSHA256": "3df39a818b5e90d77bddcfecd2e73c3a864db2d855619a8b0aa96f38a68be5cb",
+      "sourcePath": "reuse-sources/jordan/portrait/source.webp",
+      "consumerSHA256": "9d85c837d13d47bcbcc2e515fcc968d56a38cfc111b466cb34afa6234f20790f"
+    },
+    {
+      "resident": "leila",
+      "role": "down-a",
+      "requestId": "78bb91d9-28cd-45fc-ad5f-2be1397b699b",
+      "taskId": "mt_4f559b6ffb7cffeec38f686d13d359c3",
+      "sourceSHA256": "04c9c352a13a970f3033a8ba4db004924800538ed5e54b6459510bae4ee52f31",
+      "sourcePath": "tasks/leila-down-a-v1/source.webp",
+      "derivedFrameSHA256": "7f706ee348efe61839587452a429b018e08e25f2b47152db3612d01792e35361"
+    },
+    {
+      "resident": "leila",
+      "role": "down-stand",
+      "requestId": "0f777e31-af33-4d43-a084-71a1c8eb80f9",
+      "taskId": "mt_d370d0895edf634e19473a936032a639",
+      "sourceSHA256": "efa2ad5ba82d37f902049d71151752f37f0d70aec2a4d7ef41fc7441c983603c",
+      "sourcePath": "tasks/leila-down-stand-v1/source.webp",
+      "derivedFrameSHA256": "91e326990259f7fb947c1dcaac48d4de4680175eba9f56adac0414b2d3193b42"
+    },
+    {
+      "resident": "leila",
+      "role": "down-b",
+      "requestId": "3efcc08f-b877-406b-a85c-95b928b85e8f",
+      "taskId": "mt_5aa934ae9c10bf5d21de7366dddd64c2",
+      "sourceSHA256": "8c17a045b88a72b59712a4d7620ecac9e16108485276cd8ef52833095bafdcb8",
+      "sourcePath": "tasks/leila-down-b-v1/source.webp",
+      "derivedFrameSHA256": "0bc1914d9a0dbba64c2d1cc6e11b808db9c42c14598cffd9de0c65eba72f4214"
+    },
+    {
+      "resident": "leila",
+      "role": "left-a",
+      "requestId": "2140564b-894e-4259-813e-48d13f37d4b0",
+      "taskId": "mt_827bef5b9e0412fe55c64cdb3afc031c",
+      "sourceSHA256": "4aaf7df056583d92f0b9e6d7e4485fd17e4286b1a66c5a69db94be52761f9119",
+      "sourcePath": "tasks/leila-left-a-v1/source.webp",
+      "derivedFrameSHA256": "2a813a65427b936ff27dd9b8443030e50df5af1f5105a73d5d9c69489fc92f1f"
+    },
+    {
+      "resident": "leila",
+      "role": "left-stand",
+      "requestId": "42ef235a-1787-44d6-859f-76fadd84d8bd",
+      "taskId": "mt_91c3f03d3a3961d33f4a9d40d8640bb3",
+      "sourceSHA256": "724c6e6dbcb6463c60385b2c3e04647cc4e03e59f7d79e2ce658fca3fa54f3fd",
+      "sourcePath": "tasks/leila-left-stand-v1/source.webp",
+      "derivedFrameSHA256": "55c1b0ec084c57caf71736e2d102bcb1473771bb039509a2ee41c647c03d9775"
+    },
+    {
+      "resident": "leila",
+      "role": "left-b",
+      "requestId": "915ac893-690b-4c61-8ee4-a947f5a39019",
+      "taskId": "mt_ea4f356486ff9ce43663827fe8e5912a",
+      "sourceSHA256": "8541dec4db456a3ab8819966e900060e587be16d6441da746c3843940f7906ec",
+      "sourcePath": "tasks/leila-left-b-v1/source.webp",
+      "derivedFrameSHA256": "388dd26c87a86ebec741b15c7827abc63ed6f7cc9274ab1c30d2cea0db04c7ed"
+    },
+    {
+      "resident": "leila",
+      "role": "up-a",
+      "requestId": "05b0ffa0-897c-4c0e-8480-dcbcd28b7d49",
+      "taskId": "mt_9b7df136d308c9972ac73288bb63da3e",
+      "sourceSHA256": "3fabe27498da0f9a5cb908d19e10c91bf77e1fa60278b54529d59e7a82fc56ea",
+      "sourcePath": "tasks/leila-up-a-v1/source.webp",
+      "derivedFrameSHA256": "bcbdaec287264639ad28cf145a108ac43430a79fd5c2752a80555c402e2727a9"
+    },
+    {
+      "resident": "leila",
+      "role": "up-stand",
+      "requestId": "17d72bfa-dbf3-4f50-830c-0b53b524db7c",
+      "taskId": "mt_7127a3bc8909e7cdda46e68083e84cf9",
+      "sourceSHA256": "cc277de628e2c2527870f604aaba916a8f960c4358e09df47b557b7641a81fda",
+      "sourcePath": "tasks/leila-up-stand-v1/source.webp",
+      "derivedFrameSHA256": "1c04af4c63b5501c399c150d23241740ea1a001efde72c27729adb34cd00d59e"
+    },
+    {
+      "resident": "leila",
+      "role": "up-b",
+      "requestId": "2c643949-8540-40a1-867f-d629602d0fb6",
+      "taskId": "mt_55a3e0e8ddd30e47c2fe334968c2b71b",
+      "sourceSHA256": "11174bd0abde75cadc2628cf41d049d30e9dc05ae4faac19039e9f0a22f0ff21",
+      "sourcePath": "tasks/leila-up-b-v1/source.webp",
+      "derivedFrameSHA256": "7d53a4716181c4a381842fae4a2f07408d8c9a04ffad59f215457a46ef134106"
+    },
+    {
+      "resident": "leila",
+      "role": "avatar",
+      "requestId": "7b938ee4-68ad-512e-86d7-7e5043e90cb6",
+      "taskId": "mt_76f3efe8676aa8a4a0366658a8b409cc",
+      "sourceSHA256": "c4ed6e32d0c4d5beac9ba415f58aa50cfc8d0d4a006993bd6a41ab7acc8b098b",
+      "sourcePath": "reuse-sources/leila/avatar/source.webp",
+      "consumerSHA256": "db64d2d10d74c2526373be13d675669ed3597a90797cd6b225ce042c89fa7a5a"
+    },
+    {
+      "resident": "leila",
+      "role": "portrait",
+      "requestId": "198a1825-6fbf-585e-aa99-76312155f19f",
+      "taskId": "mt_37a4859d5a5596ef36bee4261e995130",
+      "sourceSHA256": "268ea5391d0a4800b92fd74f7804e2cbe3a055d4713a7d8ba14c7914e0eca66c",
+      "sourcePath": "reuse-sources/leila/portrait/source.webp",
+      "consumerSHA256": "012ab7ed3b2b78724715d43a4578b46d779123e54d9a70b0f231df29610e024d"
+    },
+    {
+      "resident": "casey",
+      "role": "down-a",
+      "requestId": "6cdc9878-b906-4ce8-9c12-fe02bcff9241",
+      "taskId": "mt_ac0f6b55d9066a1841b4e1d3212df434",
+      "sourceSHA256": "9c0237228513b7900881a91e2f0329b1c79919564febf1ca40354d39a2439d5f",
+      "sourcePath": "tasks/casey-down-a-v1/source.webp",
+      "derivedFrameSHA256": "540de33ac3da1571384139c2e7b249a6de2542a5d022025ba1e119239d036080"
+    },
+    {
+      "resident": "casey",
+      "role": "down-stand",
+      "requestId": "31659292-4e39-4159-ad8d-d1cc1fcd0d48",
+      "taskId": "mt_b98569f69bfb9b7a796571046503b4be",
+      "sourceSHA256": "4d4f38fa89ba948a774e288ad4d8a4683f1b6c3d9b71440c873c62537ff5d321",
+      "sourcePath": "tasks/casey-down-stand-v1/source.webp",
+      "derivedFrameSHA256": "45a7f48e6f2d9caedcfdcda949f54660279f28810683d7166e37c0440df59125"
+    },
+    {
+      "resident": "casey",
+      "role": "down-b",
+      "requestId": "ec177259-dc1c-44cf-bf6d-9360433201a8",
+      "taskId": "mt_0894e966542d79339886c9adebfc5f3b",
+      "sourceSHA256": "508f1f35bb1df2f7927d7dd9a989722d62b3f33289d3ca6530fc97258c40bdb2",
+      "sourcePath": "tasks/casey-down-b-v1/source.webp",
+      "derivedFrameSHA256": "b44fb8eac59e4098d53864c1ebc47acbdf9fafb3588a42ff249f11719a3ebd43"
+    },
+    {
+      "resident": "casey",
+      "role": "left-a",
+      "requestId": "1bf9cfe8-0374-4ca2-84cc-d67982933fb1",
+      "taskId": "mt_d24056ddca070396554aa7f3874a3b67",
+      "sourceSHA256": "1e59d3feb0f433f0ff85a53b6bfc3e87ff3e39603c5ebc85f2a1e1c77de51bf0",
+      "sourcePath": "tasks/casey-left-a-v1/source.webp",
+      "derivedFrameSHA256": "d15fb2465d82c26ba1f4dc5d23e6c25dd77f096aa13699495aca611e8e85201f"
+    },
+    {
+      "resident": "casey",
+      "role": "left-stand",
+      "requestId": "eff42b31-4366-41d8-89d0-a71228c964da",
+      "taskId": "mt_21103c218c0fedeaec69e2b406393515",
+      "sourceSHA256": "463e9e57ac071c295ece3a5e80199e5f34797ceb3322f060848e6e901a84ec15",
+      "sourcePath": "tasks/casey-left-stand-v1/source.webp",
+      "derivedFrameSHA256": "35cb4f7cb2448c3f60af0cc750f56b818d703cf2bc5c2080d863db8bd50ef3e4"
+    },
+    {
+      "resident": "casey",
+      "role": "left-b",
+      "requestId": "ac52f57c-6e4d-4e56-bc7f-7c6a69161eb0",
+      "taskId": "mt_37b9d2f1694a5e724d7ac8ad88285bcd",
+      "sourceSHA256": "0de37b8da615c52f8c0fc1f160fe6903c18d89c3dfeee788a8134b106a7bbbfc",
+      "sourcePath": "tasks/casey-left-b-v1/source.webp",
+      "derivedFrameSHA256": "4860d9a8869242a1b34fcc8c8dc6a0cdb1d1a8dc28e606b1a51b897bcee2aa9e"
+    },
+    {
+      "resident": "casey",
+      "role": "up-a",
+      "requestId": "30b47abc-9251-4319-9d8e-2a13ae290eca",
+      "taskId": "mt_50e7b448ba16a43c9325b42bc8d9837c",
+      "sourceSHA256": "944c29f02652763e26cc1df1805a4991c1e01bf7c4808661a27b222538b9632c",
+      "sourcePath": "tasks/casey-up-a-v1/source.webp",
+      "derivedFrameSHA256": "10fa8eb1316b7c3abffb872c538a923f3ea0397871faf026c89ef00880db2bef"
+    },
+    {
+      "resident": "casey",
+      "role": "up-stand",
+      "requestId": "cf9cc446-4082-43fd-81bd-4b66fff84e47",
+      "taskId": "mt_4fdf7c467f53b168dfc4993c8553a5f8",
+      "sourceSHA256": "73fe641f8f16834d4ba35ac4b46a0e02f23e9e5fd6a1bdf1a75824b84ab3d2c8",
+      "sourcePath": "tasks/casey-up-stand-v1/source.webp",
+      "derivedFrameSHA256": "e902d2369af2a81ff20ad4f35415bbda6dca16720bf9af4624fa10c22b7993c9"
+    },
+    {
+      "resident": "casey",
+      "role": "up-b",
+      "requestId": "97772e8f-b524-4a38-8fcc-0392ceaf922a",
+      "taskId": "mt_6f2d9691beb7ee811059ff4f12781315",
+      "sourceSHA256": "851bc3e8733126cc979e9d7c573b63c9701086e5a0377ab5a8b01abfed75b73a",
+      "sourcePath": "tasks/casey-up-b-v1/source.webp",
+      "derivedFrameSHA256": "3dfa20d5d630fe32a208dacb4149859b621ce7a356a828529bf5c5bc70d66538"
+    },
+    {
+      "resident": "casey",
+      "role": "avatar",
+      "requestId": "c8b8fee0-df72-5ba3-8f79-b7c46f75a333",
+      "taskId": "mt_33468c66239f19cd321edac0803eec88",
+      "sourceSHA256": "fe1c50b9fb8e5230b15937777362f0d2f77fc00ce13aa627699e01ede7e3cb6e",
+      "sourcePath": "reuse-sources/casey/avatar/source.webp",
+      "consumerSHA256": "66841e539a7815f11c8f1e475d2420955ec33be1576cfa11f18da2f177a4961e"
+    },
+    {
+      "resident": "casey",
+      "role": "portrait",
+      "requestId": "89a70fdc-ec3e-5f9c-8429-ff601c73c70e",
+      "taskId": "mt_17383928874b393e03021d55e7a65f20",
+      "sourceSHA256": "cf0abc53a0f9cf4b46e66118f39f971f37353c4465f9c8d5e1c9e2f42579c5a1",
+      "sourcePath": "reuse-sources/casey/portrait/source.webp",
+      "consumerSHA256": "60c1122b49f570d04ed2f176d7a08c792454e29d3fb1ebb0034999efc4da428e"
+    },
+    {
+      "resident": "grant",
+      "role": "down-a",
+      "requestId": "c1bdca73-15e0-4f6e-bbf2-e0a16ef8f611",
+      "taskId": "mt_7ad7c1914a5e891267169f2ed2c6fd62",
+      "sourceSHA256": "0715b6ddab481a85fd8cd4bf64abfce78b9d9132988edf143fc126465af1b54e",
+      "sourcePath": "tasks/grant-down-a-v1/source.webp",
+      "derivedFrameSHA256": "c079c78af1a92d42c7c39c0533a34a439fbb028e6b91dc2b45a25bd0ed6ddae2"
+    },
+    {
+      "resident": "grant",
+      "role": "down-stand",
+      "requestId": "c6b7a044-7fb7-448b-aad7-7ee55fe6970f",
+      "taskId": "mt_40e56eeef9899537f2f873b9c8df041e",
+      "sourceSHA256": "5d7006156b76a230ef8a158ff24912f5de0a5a14ed24315ca4010231974b853b",
+      "sourcePath": "tasks/grant-down-stand-v2/recovery-1/source.webp",
+      "derivedFrameSHA256": "4c712b86a23992f556648960a3d815b1d5db65ce9b124b2d738d87b08c53cd31"
+    },
+    {
+      "resident": "grant",
+      "role": "down-b",
+      "requestId": "309496b6-6ccd-4288-a7dc-614c30c03591",
+      "taskId": "mt_0677c6b3815658cec3c18e9bbaf0d1d9",
+      "sourceSHA256": "a42ef5d280cf6201d2656f781cae1a38e15e9b393def4a08d8b83c90f8a8bf7c",
+      "sourcePath": "tasks/grant-down-b-v1/source.webp",
+      "derivedFrameSHA256": "e9bf2f5a077acd313ebefad77c3cf59533138e8583a1a8f4566b30dcbba8a583"
+    },
+    {
+      "resident": "grant",
+      "role": "left-a",
+      "requestId": "9514cc24-aa08-4a50-b369-17170f2841ff",
+      "taskId": "mt_8cd178b4d3030eb8d16b719e4fdbbf0c",
+      "sourceSHA256": "e38620a0cf004a68da3f8717c9606d058d15fe7a5480efa11a3edacea30bd5e7",
+      "sourcePath": "tasks/grant-left-a-v1/source.webp",
+      "derivedFrameSHA256": "b06fd9c8dacb7e5869af670847d7bcb75d23002a9558b871c121627ced9a3459"
+    },
+    {
+      "resident": "grant",
+      "role": "left-stand",
+      "requestId": "70f2ed34-77e9-4989-8ed9-a8c59408c873",
+      "taskId": "mt_9784722a63291d061d495c2e19c0a274",
+      "sourceSHA256": "bf45a2f8011300baebdca6a747b6308468a964739053c068cfe1893937d7a954",
+      "sourcePath": "tasks/grant-left-stand-v1/source.webp",
+      "derivedFrameSHA256": "376af68a8b86fa21a7eed2841cf47432147013d5630f40d9c61d46619f316b5b"
+    },
+    {
+      "resident": "grant",
+      "role": "left-b",
+      "requestId": "4ad7a4c8-c07b-4bdc-aac7-b159bbe69e95",
+      "taskId": "mt_88de14163b50633b00c3b145c135bbbf",
+      "sourceSHA256": "6dbe4b86a4a4ea805e29ea352803192bf209717649ddf3ef7c193dcf77aaa96d",
+      "sourcePath": "tasks/grant-left-b-v1/source.webp",
+      "derivedFrameSHA256": "a34525f7fab0a0b333af755148d3dc46cd8e8bb26ba5cf87c6e3daa53be70491"
+    },
+    {
+      "resident": "grant",
+      "role": "up-a",
+      "requestId": "586bbfac-209e-42d8-bb53-66ef41f6afab",
+      "taskId": "mt_214f8ce5d5ceb709cf50faf7b035fe50",
+      "sourceSHA256": "f5a71d01c39b1dc93cff3d4ee7a481042bb5d6e694aacd9ec67d4b5f741915a2",
+      "sourcePath": "tasks/grant-up-a-v1/source.webp",
+      "derivedFrameSHA256": "e7109fdf37e3e094a41eaeaf6fae3757595317a7e86744d249bcbb077dfb1980"
+    },
+    {
+      "resident": "grant",
+      "role": "up-stand",
+      "requestId": "e3f1f983-2753-4906-a72f-e1ba928fdf5c",
+      "taskId": "mt_9f80b63fcccbddaf4ee7565887117f63",
+      "sourceSHA256": "044025a802981f65c6327a9ab309136de3e84a138e94203f5ede41108b8ab597",
+      "sourcePath": "tasks/grant-up-stand-v1/source.webp",
+      "derivedFrameSHA256": "ac2b84dfad4fb1fdc000be911f78948018865c1d7d3dcfff551a52af0d67bef5"
+    },
+    {
+      "resident": "grant",
+      "role": "up-b",
+      "requestId": "c0f51818-9bf9-4764-b8f0-90d733ac3de6",
+      "taskId": "mt_6b81d32f6f71da201f52756df6069566",
+      "sourceSHA256": "b45b072d30ed55ec1e840a5006f9097a3bc5675f1e95da53d0f60913b76e51fe",
+      "sourcePath": "tasks/grant-up-b-v1/source.webp",
+      "derivedFrameSHA256": "c555b132cd3366f2e620ed3cda7f8cac6619cc4a951ddfa0d8bcc3f16a0a7c45"
+    },
+    {
+      "resident": "grant",
+      "role": "avatar",
+      "requestId": "5daeb283-53f4-5dfb-be9f-84acc41ccf30",
+      "taskId": "mt_9c981db5be11f6b05aaffee25ca855a3",
+      "sourceSHA256": "a464c3018ea0b70ec29612cc1d31177cc62b17f9d78f9a02b0f5ace3a8444375",
+      "sourcePath": "reuse-sources/grant/avatar/source.webp",
+      "consumerSHA256": "3c1321555920ee04c94c23269a055093124fe1b3200357db86d1504afbce2cbe"
+    },
+    {
+      "resident": "grant",
+      "role": "portrait",
+      "requestId": "a1eccf8b-f55b-503c-b024-360e1d72db61",
+      "taskId": "mt_ed90993dda6c291905e3efbafe8b8ac5",
+      "sourceSHA256": "617350b1b2c69b7fc91c19475dd9c764f0308e61035a3f643adb96ede1a87cdb",
+      "sourcePath": "reuse-sources/grant/portrait/source.webp",
+      "consumerSHA256": "6e8e851c9fad5b9dcd3434ef1172606379bc4303043acedacd0d02b91a504ecc"
+    }
+  ],
+  "docs": "docs/INTEGRATION.md",
+  "ledger": "CALL_LEDGER.json",
+  "rights": "rights-scope-application.json",
+  "AIReviews": "reviews/",
+  "historicalUnknownTasks": [
+    {
+      "taskKey": "mira-down-stand-v2",
+      "taskId": "mt_8cbaa6eecd3ef2a93d491a6c2ad4c4ff",
+      "requestId": "846f0c57-9ffa-4f29-afb4-c374cbae41c6",
+      "outcome": "unknown",
+      "lastTaskCheck": {
+        "at": "2026-10-06T04:30:38.957959+00:00",
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-down-stand-v2/status-history/1791261038026168000.json",
+        "status": "running"
+      },
+      "stoppedOrCancelled": false,
+      "acceptedAsAsset": false,
+      "replacementAuthority": "mira-restart-authority-20261006.json",
+      "instructions": "Retain original unknown task history; never integrate late output automatically or issue more duplicate requests."
+    }
+  ],
+  "restartAuthority": {
+    "path": "mira-restart-authority-20261006.json",
+    "sha256": "5850e5f19a18a859400af04b1cf61f35803ae4f58e4315eb04c2e216ed40c657"
+  }
+}

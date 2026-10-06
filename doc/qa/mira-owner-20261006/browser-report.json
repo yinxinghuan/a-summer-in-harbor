@@ -1,0 +1,34 @@
+{
+  "base": "fce1d30",
+  "newResidents": 1,
+  "totalResidents": 19,
+  "art": "Mira independently admitted map/avatar/portrait family; local game integration",
+  "modelCalls": 0,
+  "cases": [
+    {
+      "person": "mira",
+      "width": 320,
+      "storyCompleted": true,
+      "partner": "nell",
+      "outcome": "a",
+      "scheduleLearned": true,
+      "relationshipPanel": true,
+      "historyRetainedByAuthority": true,
+      "refresh": true
+    },
+    {
+      "person": "mira",
+      "width": 390,
+      "storyCompleted": true,
+      "partner": "nell",
+      "outcome": "b",
+      "scheduleLearned": true,
+      "relationshipPanel": true,
+      "historyRetainedByAuthority": true,
+      "refresh": true
+    }
+  ],
+  "errors": [],
+  "failedArt": [],
+  "externalAllowed": 0
+}

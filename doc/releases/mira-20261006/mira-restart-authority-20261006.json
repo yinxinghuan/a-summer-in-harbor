@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-10-06T04:33:23.282533+00:00",
+  "authorityType": "authorized coordinator relay of explicit user restart request",
+  "sourceThreadId": "01a0f63e-747b-74c8-a592-bb52c77c2017",
+  "userMessageId": "Sentinel_e5a6a27ec0808191b26c405fb1b1d9c3",
+  "userMessageAt": "2026-10-06T04:29:00Z",
+  "userQuote": "卡住的那个人物制作，要不然重新开始一下。",
+  "originalBatchCap": 78,
+  "postCountBeforeRestart": 54,
+  "remainingBeforeRestart": 24,
+  "newRootTaskKey": "mira-down-stand-v3",
+  "newRootCount": 1,
+  "newRootModel": "gpt-image-2.5-sunburst",
+  "newRootUnknownMeansStopNewPOST": true,
+  "successThenContinueMissingEightPoses": true,
+  "costUnknownAndDuplicateChargeRiskDisclosedByCoordinator": true,
+  "oldTask": {
+    "taskId": "mt_8cbaa6eecd3ef2a93d491a6c2ad4c4ff",
+    "requestId": "846f0c57-9ffa-4f29-afb4-c374cbae41c6",
+    "status": "unknown",
+    "lastReadOnlyCheck": {
+      "at": "2026-10-06T04:30:38.957959+00:00",
+      "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-down-stand-v2/status-history/1791261038026168000.json",
+      "status": "running"
+    },
+    "stoppedOrCancelled": false
+  },
+  "scope": "Independent output directory only; preserve completed five atlases and twelve profiles; no publication, library upload, or formal game modification."
+}

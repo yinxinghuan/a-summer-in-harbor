@@ -1,0 +1,435 @@
+{
+  "profiles": {
+    "mira-avatar": {
+      "sha256": "1fd003f4a36000b2b777170b47621dbdb864a30bda5f78ccb69e9f2cbe8c11f8",
+      "size": [
+        256,
+        256
+      ],
+      "strongMagentaPixels": 0,
+      "strongDefinition": "alpha>0; R,B>180; G<110; min(R,B)-G>80 (existing extraction audit)",
+      "inclusiveBoundaryCandidateCount": 0,
+      "inclusiveBoundaryCandidates": [],
+      "nearestSampling": true,
+      "fixedRawSourceSHA256": "68e49260f43725e275339475980a98571b528ed1c54a893be3e9bef559335a62",
+      "nativeSHA256": "50a53835131c135ca59e3f042fada5d408babff3f9ef1194b4d7aa6edc060389",
+      "independentOpaqueInteriorRGBUnchanged": true,
+      "AIReview": "pass",
+      "ownerUIReview": "pending"
+    },
+    "mira-portrait": {
+      "sha256": "1e451750a02ca39ef9f0d0f68af27f7acccaf1cff1461324a6755320e4244a5b",
+      "size": [
+        512,
+        640
+      ],
+      "strongMagentaPixels": 0,
+      "strongDefinition": "alpha>0; R,B>180; G<110; min(R,B)-G>80 (existing extraction audit)",
+      "inclusiveBoundaryCandidateCount": 2,
+      "inclusiveBoundaryCandidates": [
+        [
+          291,
+          238,
+          [
+            243,
+            53,
+            180,
+            255
+          ]
+        ],
+        [
+          178,
+          344,
+          [
+            187,
+            15,
+            180,
+            255
+          ]
+        ]
+      ],
+      "nearestSampling": true,
+      "fixedRawSourceSHA256": "46786b22e6d4b97bf48390ff5aa848dd984026e6308ed7919eae94d10a7958bb",
+      "nativeSHA256": "3266ef4fcf3f5b5e25e3b962b33560cedbe66536c53add2dcbc969217a5197e2",
+      "independentOpaqueInteriorRGBUnchanged": true,
+      "AIReview": "pass",
+      "ownerUIReview": "pending"
+    }
+  },
+  "maps": {
+    "mira": {
+      "sha256": "0b2335174d87a01bcec9c83a780263a90863b92bc57f272ffca7df87babd419f",
+      "size": [
+        384,
+        512
+      ],
+      "nineFixedSources": [
+        {
+          "direction": "down",
+          "pose": "stand",
+          "sha256": "04c71d8803cbc1d6d5dcf0200c3f990e4f614f6faf7da8e6a10fc2df8c602408",
+          "requestId": "f78371ff-b253-4e7a-b0f7-75da5fc4546a",
+          "taskId": "mt_090ce99207fb3f63e1c3a449f676dde7",
+          "model": "gpt-image-2.5-sunburst",
+          "mode": "edit",
+          "sourcePath": "tasks/mira-down-stand-v3/source.webp",
+          "sameIdRecovery": false
+        },
+        {
+          "direction": "down",
+          "pose": "seedContact",
+          "sha256": "95a18865f0a84b3f03f01a40069fe0b73c764eefe0f04ef3174f52492be4fa93",
+          "requestId": "d9fe4f3b-d09a-412c-9698-487c715fa268",
+          "taskId": "mt_e8d1980a2a8c016ff39825b8ac466d44",
+          "model": "gpt-image-2.5-sunburst",
+          "mode": "edit",
+          "sourcePath": "tasks/mira-down-a-v1/source.webp",
+          "sameIdRecovery": false
+        },
+        {
+          "direction": "down",
+          "pose": "oppositeContact",
+          "sha256": "3009e5c98b2d727014e403102626f24821469325c3985ff1c52fb401af18587a",
+          "requestId": "2e0d5805-99a5-4503-917c-a879592007cf",
+          "taskId": "mt_71631275347c6c267863a5ed79daf4ce",
+          "model": "gpt-image-2.5-sunburst",
+          "mode": "edit",
+          "sourcePath": "tasks/mira-down-b-v1/source.webp",
+          "sameIdRecovery": false
+        },
+        {
+          "direction": "side",
+          "pose": "stand",
+          "sha256": "c48f20ed7e24e265a4d2aac2ec3fe87cbefc5ee53396f2a93119db8cadec6d40",
+          "requestId": "4ce760f1-72be-4a6a-ac28-92497d79b667",
+          "taskId": "mt_723989e35f3878ae313b6bd59f617c2e",
+          "model": "gpt-image-2.5-sunburst",
+          "mode": "edit",
+          "sourcePath": "tasks/mira-left-stand-v1/source.webp",
+          "sameIdRecovery": false
+        },
+        {
+          "direction": "side",
+          "pose": "seedContact",
+          "sha256": "72c9cae1b12d6cc579c14cbfa641e7726874dd376c8fbff95bf293d397fae823",
+          "requestId": "54104c03-15e9-46ce-bc37-09ca402e361f",
+          "taskId": "mt_06e2208448ac59d53cbf7d68c5850348",
+          "model": "gpt-image-2.5-sunburst",
+          "mode": "edit",
+          "sourcePath": "tasks/mira-left-a-v1/source.webp",
+          "sameIdRecovery": false
+        },
+        {
+          "direction": "side",
+          "pose": "oppositeContact",
+          "sha256": "0c9597cd886bcec0e59b46692ce229fd26b4b8d946dd7fc68b2d4e6250c68093",
+          "requestId": "1268cc96-9099-46e8-804d-5546ac61e327",
+          "taskId": "mt_638139551a45c9f0ad6f2a61957b73c6",
+          "model": "gpt-image-2.5-sunburst",
+          "mode": "edit",
+          "sourcePath": "tasks/mira-left-b-v1/source.webp",
+          "sameIdRecovery": false
+        },
+        {
+          "direction": "up",
+          "pose": "stand",
+          "sha256": "02d2e0924d6d6f0a6e0aa0fbf59c005b44a0e643efbad4b79c96d34e65083c90",
+          "requestId": "d3f28604-ee7b-405e-9874-13a848d18fce",
+          "taskId": "mt_b341e08282eddd155e1b03357014fdee",
+          "model": "gpt-image-2.5-sunburst",
+          "mode": "edit",
+          "sourcePath": "tasks/mira-up-stand-v1/source.webp",
+          "sameIdRecovery": false
+        },
+        {
+          "direction": "up",
+          "pose": "seedContact",
+          "sha256": "8accf7e91da7ddfd626be14eb775d6140b99988b38ae7e39386fef32ea72ec07",
+          "requestId": "80dfc90c-8bbd-41ea-9d8d-5e387d10bc09",
+          "taskId": "mt_eae1e7cc59bc080b8b730a29e68dd543",
+          "model": "gpt-image-2.5-sunburst",
+          "mode": "edit",
+          "sourcePath": "tasks/mira-up-a-v1/source.webp",
+          "sameIdRecovery": false
+        },
+        {
+          "direction": "up",
+          "pose": "oppositeContact",
+          "sha256": "fa48b4e03fcea23f7da7a7f366537637c3614e7226b4da92840030285ef9196a",
+          "requestId": "ef61e289-e9db-42ff-9d46-2f164086995e",
+          "taskId": "mt_6617147b181e5e0f9fb5135fee2c517c",
+          "model": "gpt-image-2.5-sunburst",
+          "mode": "edit",
+          "sourcePath": "tasks/mira-up-b-v1/source.webp",
+          "sameIdRecovery": false
+        }
+      ],
+      "alphaBounds": [
+        {
+          "row": 0,
+          "col": 0,
+          "alphaBounds": [
+            40,
+            14,
+            87,
+            122
+          ]
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "alphaBounds": [
+            40,
+            14,
+            88,
+            122
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "alphaBounds": [
+            41,
+            14,
+            87,
+            122
+          ]
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "alphaBounds": [
+            37,
+            14,
+            91,
+            122
+          ]
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "alphaBounds": [
+            42,
+            14,
+            85,
+            122
+          ]
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "alphaBounds": [
+            36,
+            14,
+            92,
+            122
+          ]
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "alphaBounds": [
+            37,
+            14,
+            91,
+            122
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "alphaBounds": [
+            43,
+            14,
+            86,
+            122
+          ]
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "alphaBounds": [
+            36,
+            14,
+            92,
+            122
+          ]
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "alphaBounds": [
+            42,
+            14,
+            86,
+            122
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "alphaBounds": [
+            42,
+            14,
+            86,
+            122
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "alphaBounds": [
+            42,
+            14,
+            86,
+            122
+          ]
+        }
+      ],
+      "wholeFrameSideMirror": true,
+      "isolatedRendererEvidence": [
+        {
+          "viewport": {
+            "css": [
+              390,
+              844
+            ],
+            "dpr": 1,
+            "canvasCount": 1,
+            "renderer": "original RPGJS createRpgSpace snapshot"
+          },
+          "phaseCoverage": {
+            "left": [
+              "stand",
+              "stride-0",
+              "stride-1",
+              "stride-2"
+            ],
+            "right": [
+              "stand",
+              "stride-0",
+              "stride-1",
+              "stride-2"
+            ],
+            "up": [
+              "stand",
+              "stride-0",
+              "stride-1",
+              "stride-2"
+            ],
+            "down": [
+              "stand",
+              "stride-0",
+              "stride-1",
+              "stride-2"
+            ]
+          },
+          "stops": [
+            {
+              "direction": "left",
+              "stopped": {
+                "pose": "stand",
+                "direction": "left"
+              }
+            },
+            {
+              "direction": "right",
+              "stopped": {
+                "pose": "stand",
+                "direction": "right"
+              }
+            },
+            {
+              "direction": "up",
+              "stopped": {
+                "pose": "stand",
+                "direction": "up"
+              }
+            },
+            {
+              "direction": "down",
+              "stopped": {
+                "pose": "stand",
+                "direction": "down"
+              }
+            }
+          ],
+          "errors": [],
+          "realIPhone": false,
+          "actualGameIntegration": false
+        },
+        {
+          "viewport": {
+            "css": [
+              320,
+              568
+            ],
+            "dpr": 1,
+            "canvasCount": 1,
+            "renderer": "original RPGJS createRpgSpace snapshot"
+          },
+          "phaseCoverage": {
+            "left": [
+              "stand",
+              "stride-0",
+              "stride-1",
+              "stride-2"
+            ],
+            "right": [
+              "stand",
+              "stride-0",
+              "stride-1",
+              "stride-2"
+            ],
+            "up": [
+              "stand",
+              "stride-0",
+              "stride-1",
+              "stride-2"
+            ],
+            "down": [
+              "stand",
+              "stride-0",
+              "stride-1",
+              "stride-2"
+            ]
+          },
+          "stops": [
+            {
+              "direction": "left",
+              "stopped": {
+                "pose": "stand",
+                "direction": "left"
+              }
+            },
+            {
+              "direction": "right",
+              "stopped": {
+                "pose": "stand",
+                "direction": "right"
+              }
+            },
+            {
+              "direction": "up",
+              "stopped": {
+                "pose": "stand",
+                "direction": "up"
+              }
+            },
+            {
+              "direction": "down",
+              "stopped": {
+                "pose": "stand",
+                "direction": "down"
+              }
+            }
+          ],
+          "errors": [],
+          "realIPhone": false,
+          "actualGameIntegration": false
+        }
+      ],
+      "actualCandidateUI": "pending"
+    }
+  }
+}

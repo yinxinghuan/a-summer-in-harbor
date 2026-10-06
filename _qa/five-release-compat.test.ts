@@ -16,27 +16,20 @@ import {configuredNews} from '../server/news/configured';
 // @ts-expect-error pinned runtime
 import {AsyncSessionAuthority,openAsyncSqliteAuthorityStore} from '../vendor/dynamic-runtime/packages/authority-session/async.mjs';
 
-test('only five admitted residents are playable; unfinished Mira facts remain readable',()=>{
- const ids=['rowan','jordan','leila','casey','grant'];
- assert.deepEqual(nextResidents.map(p=>p.id),ids);
- assert.equal(Object.keys(people).length,18);
- assert.equal(people.mira,undefined);
- assert.equal(nextRoutes.mira,undefined);
- assert.ok(!npcSheets.some(p=>p.id==='npc-mira'));
- assert.ok(!Object.values(rooms).some(r=>r.entities.some(e=>e.person==='mira')));
- const s:Save={...initial('en',randomUUID()),scene:'secondhand',position:entityAt('secondhand','nell')!.approach,
-  known:['nell','mira',...ids],relations:{mira:3,rowan:1},
+test('Mira addition restores existing knowledge without rewriting earlier history or repeating completed stories',()=>{
+ const ids=['rowan','mira','jordan','leila','casey','grant'];
+ assert.deepEqual(nextResidents.map(p=>p.id),ids);assert.equal(Object.keys(people).length,19);
+ assert.equal(people.mira.mapArt,'mira');assert.ok(nextRoutes.mira);assert.ok(npcSheets.some(p=>p.id==='npc-mira'&&p.image==='./art/npc-mira.png'));
+ const s:Save={...initial('en',randomUUID()),scene:'secondhand',townMinutes:780,position:entityAt('secondhand','nell')!.approach,
+  known:['nell','mira',...ids.filter(p=>p!=='mira')],relations:{mira:3,rowan:1},
   flags:['key','unpacked','talk:mira:n2-start','talk:nell:n2-mira-consult','neighbors2:mira:done','neighbors2:rowan:done'],
   history:[{id:'old-mira',kind:'talk',person:'mira',text:['先前的经历。','An earlier experience.']}]};
- const before=JSON.stringify(s);
- runtime.assertReadable(s);assert.equal(runtime.upgrade(s),s);
- assert.ok(!knownPeople(s).includes('mira'));
- assert.ok(!relationshipStory(s).people.some(p=>p.id==='mira'));
- assert.ok(!nextStoryLeads(s).some(p=>p.id==='neighbors2-mira'));
+ const before=JSON.stringify(s);runtime.assertReadable(s);assert.equal(runtime.upgrade(s),s);
+ assert.ok(knownPeople(s).includes('mira'));assert.ok(relationshipStory(s).people.some(p=>p.id==='mira'));
+ assert.ok(nextStoryLeads(s).some(p=>p.id==='neighbors2-mira'&&p.state==='done'));
  assert.ok(!availableTopics(s,'nell').some(p=>p.id==='n2-mira-consult'));
- assert.ok(!dialogueContext(s,'nell').knownPeople.some(n=>n[1]==='Mira'));
- assert.equal(JSON.stringify(s),before);
- assert.equal(s.relations.mira,3);assert.equal(s.history[0].person,'mira');
+ assert.ok(dialogueContext(s,'nell').knownPeople.some(n=>n[1]==='Mira Vale'));
+ assert.equal(JSON.stringify(s),before);assert.equal(s.relations.mira,3);assert.equal(s.history[0].person,'mira');
 });
 
 test('13-resident-era bilingual saves reopen unchanged; CAS and replay preserve deferred facts',async()=>{

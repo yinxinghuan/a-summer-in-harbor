@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "at": "2026-10-06T04:42:43.079243+00:00",
+  "authority": "AI",
+  "decision": "pass",
+  "reason": "九独立完整姿态维持浅长辫、雀斑、奶油腰带和近踝鼠尾草绿长裙；下/背A-B前后支撑靴与摆臂交换，侧A-B近臂前后和裙摆/靴踝遮挡不同。长裙遮膝，按可见支撑和目标56世界单位循环判断，不声称直接看见膝交叉。整组三帧右侧逐像素镜像、RGBA边界和前景RGB保留通过。390×844及320×568原renderer四方向移动、三phase及保持方向停步均通过；实际截图未见头脚截断、跨格碎片或身份跳变。正式游戏接入与iPhone真机由owner另验。",
+  "singleImages": "pass",
+  "familyDirectionsAndGait": "pass",
+  "isolatedTargetRenderer": "pass",
+  "geometryAndAlpha": "pass",
+  "rendererEvidence": [
+    "evidence/mira-walk/capture.json",
+    "evidence/mira-contact-sheet.png"
+  ],
+  "atlasSHA256": "0b2335174d87a01bcec9c83a780263a90863b92bc57f272ffca7df87babd419f",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "humanOverride": null,
+  "realIPhone": false
+}

@@ -121,9 +121,9 @@
       "“米拉，修复纸张和旧照片。我能补一条裂缝，却不能替照片里的人决定要不要被记住。”",
       "“Mira. I conserve paper and old photographs. I can mend a tear. I can’t decide whether the people in a picture want to be remembered.”"
     ],
-    "art": "mira",
+    "art": "npc-mira",
     "artPlan": "next-original__long-braid-dress",
-    "artStatus": "independent local portrait/avatar admitted; map remains explicit QA placeholder pending family; not library-admitted or published",
+    "artStatus": "independent map/avatar/portrait family admitted with owner game QA; not library-admitted",
     "partner": "nell",
     "partnerName": [
       "内尔",
@@ -204,8 +204,8 @@
       "翻看待修复照片的纸张笔记。",
       "Reviewing paper-conservation notes."
     ],
-    "mapArt": "dani",
-    "avatarArt": "mira"
+    "mapArt": "mira",
+    "avatarArt": "npc-mira"
   },
   {
     "id": "jordan",

@@ -1,0 +1,86 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "period": 0,
+      "scene": "market",
+      "townMinutes": 540,
+      "hasActualTarget": true,
+      "targetBounds": {
+        "x": 148.39999389648438,
+        "y": 156.39999389648438,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "width": 320,
+      "period": 1,
+      "scene": "secondhand",
+      "townMinutes": 780,
+      "hasActualTarget": true,
+      "targetBounds": {
+        "x": 118.39999389648438,
+        "y": 243.10000610351562,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "width": 320,
+      "period": 2,
+      "scene": "cafe",
+      "townMinutes": 1080,
+      "hasActualTarget": true,
+      "targetBounds": {
+        "x": 148.39999389648438,
+        "y": 295.1000061035156,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "width": 390,
+      "period": 0,
+      "scene": "market",
+      "townMinutes": 540,
+      "hasActualTarget": true,
+      "targetBounds": {
+        "x": 183.39999389648438,
+        "y": 294.3999938964844,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "width": 390,
+      "period": 1,
+      "scene": "secondhand",
+      "townMinutes": 780,
+      "hasActualTarget": true,
+      "targetBounds": {
+        "x": 118.39999389648438,
+        "y": 417.8999938964844,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "width": 390,
+      "period": 2,
+      "scene": "cafe",
+      "townMinutes": 1080,
+      "hasActualTarget": true,
+      "targetBounds": {
+        "x": 183.39999389648438,
+        "y": 469.8999938964844,
+        "width": 44,
+        "height": 44.000030517578125
+      }
+    }
+  ],
+  "errors": [],
+  "failedArt": [],
+  "externalCallsAllowed": 0,
+  "formalPlatform": false
+}

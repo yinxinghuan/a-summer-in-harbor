@@ -1,0 +1,15 @@
+{
+  "baseCommit": "fce1d30d79e56e676a793c1362b235fbb079027c",
+  "marker": "harbor-nineteen-mira-20261006",
+  "roster": 19,
+  "bundle": "./assets/index-DGhFDRHq.js",
+  "bundleSHA256": "33792b435c6ed6ac400c66801a0d7d736532e248ae9b871f68176c8d73602940",
+  "prior15PNGsUnchanged": true,
+  "mira3PNGsMatchProducer": true,
+  "sourceAndBackendBuild": "passed",
+  "schemaMigration": false,
+  "newsCatalogUnchanged": true,
+  "backendBundleSHA256": "50d23b5eec924cff0fada224cbf71704b17f63c8e9b7bc805c41fcc2e7235b43",
+  "realTelegramGameplay": "independent QA pending; not inferred from local UI",
+  "modelCalls": 0
+}

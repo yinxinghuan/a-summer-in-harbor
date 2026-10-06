@@ -1,0 +1,644 @@
+{
+  "residentId": "mira",
+  "atlas": {
+    "path": "/Users/yin/code/games/harbor-residents-art-20261006/assets/mira.png",
+    "sha256": "0b2335174d87a01bcec9c83a780263a90863b92bc57f272ffca7df87babd419f",
+    "dimensions": [
+      384,
+      512
+    ],
+    "grid": [
+      3,
+      4
+    ],
+    "cell": [
+      128,
+      128
+    ],
+    "rowOrder": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "columnOrder": [
+      "contactA",
+      "stand",
+      "contactB"
+    ],
+    "anchor": [
+      0.5,
+      0.953125
+    ],
+    "worldScale": 0.5185185185185185,
+    "visibleWorldHeight": 56
+  },
+  "frames": [
+    {
+      "direction": "down",
+      "pose": "a",
+      "row": 0,
+      "col": 0,
+      "taskKey": "mira-down-a-v1",
+      "requestId": "d9fe4f3b-d09a-412c-9698-487c715fa268",
+      "taskId": "mt_e8d1980a2a8c016ff39825b8ac466d44",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-down-a-v1/source.webp",
+        "sha256": "95a18865f0a84b3f03f01a40069fe0b73c764eefe0f04ef3174f52492be4fa93",
+        "bytes": 710248,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        331,
+        102,
+        692,
+        940
+      ],
+      "uniformScale": 0.1288782816229117,
+      "visibleSize": [
+        47,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "770109312d83511d9cf349f9c150ddcba43013bc5548a6474888b95b594b5a5e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 831317,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "down",
+      "pose": "stand",
+      "row": 0,
+      "col": 1,
+      "taskKey": "mira-down-stand-v3",
+      "requestId": "f78371ff-b253-4e7a-b0f7-75da5fc4546a",
+      "taskId": "mt_090ce99207fb3f63e1c3a449f676dde7",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-down-stand-v3/source.webp",
+        "sha256": "04c71d8803cbc1d6d5dcf0200c3f990e4f614f6faf7da8e6a10fc2df8c602408",
+        "bytes": 693154,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        321,
+        104,
+        687,
+        922
+      ],
+      "uniformScale": 0.13202933985330073,
+      "visibleSize": [
+        48,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "d307f2469f8669bc207f63ceacc02100caac25f2c76cd43691b518c368cae170",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 813933,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "down",
+      "pose": "b",
+      "row": 0,
+      "col": 2,
+      "taskKey": "mira-down-b-v1",
+      "requestId": "2e0d5805-99a5-4503-917c-a879592007cf",
+      "taskId": "mt_71631275347c6c267863a5ed79daf4ce",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-down-b-v1/source.webp",
+        "sha256": "3009e5c98b2d727014e403102626f24821469325c3985ff1c52fb401af18587a",
+        "bytes": 719434,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        314,
+        95,
+        679,
+        947
+      ],
+      "uniformScale": 0.1267605633802817,
+      "visibleSize": [
+        46,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "458fa534d7cf2c45acc543595a37a4048f41f22aa6765100f3aeafb0e69322ce",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 830380,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "a",
+      "row": 1,
+      "col": 0,
+      "taskKey": "mira-left-a-v1",
+      "requestId": "54104c03-15e9-46ce-bc37-09ca402e361f",
+      "taskId": "mt_06e2208448ac59d53cbf7d68c5850348",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-left-a-v1/source.webp",
+        "sha256": "72c9cae1b12d6cc579c14cbfa641e7726874dd376c8fbff95bf293d397fae823",
+        "bytes": 684922,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        311,
+        132,
+        686,
+        889
+      ],
+      "uniformScale": 0.142668428005284,
+      "visibleSize": [
+        54,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "97977fb0211194cb191446ae425d99a173c143c4e19878587a9b1143e3d7dda5",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 852411,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "stand",
+      "row": 1,
+      "col": 1,
+      "taskKey": "mira-left-stand-v1",
+      "requestId": "4ce760f1-72be-4a6a-ac28-92497d79b667",
+      "taskId": "mt_723989e35f3878ae313b6bd59f617c2e",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-left-stand-v1/source.webp",
+        "sha256": "c48f20ed7e24e265a4d2aac2ec3fe87cbefc5ee53396f2a93119db8cadec6d40",
+        "bytes": 648664,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        339,
+        128,
+        653,
+        916
+      ],
+      "uniformScale": 0.13705583756345177,
+      "visibleSize": [
+        43,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "bafe7e90565bdd504b2c20b7cff84a74d28f1eaa610d7c7ed59192f3a9044cf6",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 872501,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "left",
+      "pose": "b",
+      "row": 1,
+      "col": 2,
+      "taskKey": "mira-left-b-v1",
+      "requestId": "1268cc96-9099-46e8-804d-5546ac61e327",
+      "taskId": "mt_638139551a45c9f0ad6f2a61957b73c6",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-left-b-v1/source.webp",
+        "sha256": "0c9597cd886bcec0e59b46692ce229fd26b4b8d946dd7fc68b2d4e6250c68093",
+        "bytes": 667486,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        306,
+        130,
+        700,
+        892
+      ],
+      "uniformScale": 0.14173228346456693,
+      "visibleSize": [
+        56,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "cb653e0ef0459471d2c61549d716ffc9a74fdadbcbdb89da92ade6da837c7072",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 856078,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "a",
+      "row": 2,
+      "col": 0,
+      "taskKey": "mira-left-a-v1",
+      "requestId": "54104c03-15e9-46ce-bc37-09ca402e361f",
+      "taskId": "mt_06e2208448ac59d53cbf7d68c5850348",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-left-a-v1/source.webp",
+        "sha256": "72c9cae1b12d6cc579c14cbfa641e7726874dd376c8fbff95bf293d397fae823",
+        "bytes": 684922,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        311,
+        132,
+        686,
+        889
+      ],
+      "uniformScale": 0.142668428005284,
+      "visibleSize": [
+        54,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "3cab12cda393def7527da2436553826b79cf1720d7917a329de42d33e2615dfb",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 852411,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "stand",
+      "row": 2,
+      "col": 1,
+      "taskKey": "mira-left-stand-v1",
+      "requestId": "4ce760f1-72be-4a6a-ac28-92497d79b667",
+      "taskId": "mt_723989e35f3878ae313b6bd59f617c2e",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-left-stand-v1/source.webp",
+        "sha256": "c48f20ed7e24e265a4d2aac2ec3fe87cbefc5ee53396f2a93119db8cadec6d40",
+        "bytes": 648664,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        339,
+        128,
+        653,
+        916
+      ],
+      "uniformScale": 0.13705583756345177,
+      "visibleSize": [
+        43,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "0af0c7913b4f4df6ab463e2d7762b62b65978af309f7d295dd223d2a9d998b9e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 872501,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "right",
+      "pose": "b",
+      "row": 2,
+      "col": 2,
+      "taskKey": "mira-left-b-v1",
+      "requestId": "1268cc96-9099-46e8-804d-5546ac61e327",
+      "taskId": "mt_638139551a45c9f0ad6f2a61957b73c6",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-left-b-v1/source.webp",
+        "sha256": "0c9597cd886bcec0e59b46692ce229fd26b4b8d946dd7fc68b2d4e6250c68093",
+        "bytes": 667486,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        306,
+        130,
+        700,
+        892
+      ],
+      "uniformScale": 0.14173228346456693,
+      "visibleSize": [
+        56,
+        108
+      ],
+      "wholeFrameMirror": true,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "2d66d3a9525129ef1ef1f1e0de66714160ec1d6a36d28989f0e5c6f99f07d799",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 856078,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "a",
+      "row": 3,
+      "col": 0,
+      "taskKey": "mira-up-a-v1",
+      "requestId": "80dfc90c-8bbd-41ea-9d8d-5e387d10bc09",
+      "taskId": "mt_eae1e7cc59bc080b8b730a29e68dd543",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-up-a-v1/source.webp",
+        "sha256": "8accf7e91da7ddfd626be14eb775d6140b99988b38ae7e39386fef32ea72ec07",
+        "bytes": 669844,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        345,
+        109,
+        662,
+        893
+      ],
+      "uniformScale": 0.1377551020408163,
+      "visibleSize": [
+        44,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "c00bddcf5b337a5ddf59d5e112fdf1702135dcc4731df6b5508417a77dc94141",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 869794,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "stand",
+      "row": 3,
+      "col": 1,
+      "taskKey": "mira-up-stand-v1",
+      "requestId": "d3f28604-ee7b-405e-9874-13a848d18fce",
+      "taskId": "mt_b341e08282eddd155e1b03357014fdee",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-up-stand-v1/source.webp",
+        "sha256": "02d2e0924d6d6f0a6e0aa0fbf59c005b44a0e643efbad4b79c96d34e65083c90",
+        "bytes": 678292,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        347,
+        105,
+        662,
+        883
+      ],
+      "uniformScale": 0.13881748071979436,
+      "visibleSize": [
+        44,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "66a879e69fc7286ac775b30ff397dfca5fb81c5b3ee4ecc6f155589ee7a0cd33",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 859842,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    },
+    {
+      "direction": "up",
+      "pose": "b",
+      "row": 3,
+      "col": 2,
+      "taskKey": "mira-up-b-v1",
+      "requestId": "ef61e289-e9db-42ff-9d46-2f164086995e",
+      "taskId": "mt_6617147b181e5e0f9fb5135fee2c517c",
+      "source": {
+        "path": "/Users/yin/code/games/harbor-residents-art-20261006/tasks/mira-up-b-v1/source.webp",
+        "sha256": "fa48b4e03fcea23f7da7a7f366537637c3614e7226b4da92840030285ef9196a",
+        "bytes": 678006,
+        "format": "WEBP",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      },
+      "sourceBounds": [
+        345,
+        106,
+        662,
+        893
+      ],
+      "uniformScale": 0.1372299872935197,
+      "visibleSize": [
+        44,
+        108
+      ],
+      "wholeFrameMirror": false,
+      "footAnchor": [
+        64,
+        122
+      ],
+      "cellSHA256": "6a723ddb7abfbf095ee7159d3646d3dded25407da6a1f306f6b85ad3c77c9cd7",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "keyParameters": {
+        "redMin": 180,
+        "blueMin": 180,
+        "greenMax": 110,
+        "minRBminusG": 80
+      },
+      "removedBackgroundPixels": 869595,
+      "opaqueCoreRGBUnchanged": true,
+      "foreignPixelBoundaryCheck": true
+    }
+  ],
+  "complete": true,
+  "processing": "existing Harbor strong-magenta key, full-body tight crop, uniform nearest resampling, foot-bottom alignment, whole side frame mirror; no limb editing/repainting",
+  "AIUsability": "pass",
+  "actualGameIntegration": "owner pending",
+  "libraryAdmission": "not attempted",
+  "published": false
+}
