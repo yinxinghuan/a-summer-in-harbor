@@ -1,0 +1,11 @@
+✔ only five admitted residents are playable; unfinished Mira facts remain readable (3.590416ms)
+✔ 13-resident-era bilingual saves reopen unchanged; CAS and replay preserve deferred facts (17.276208ms)
+✔ production frozen edition is exactly the admitted recheck; deployment explicitly opts in (0.785833ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 296.142667

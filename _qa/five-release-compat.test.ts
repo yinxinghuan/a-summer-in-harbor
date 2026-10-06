@@ -53,7 +53,7 @@ test('13-resident-era bilingual saves reopen unchanged; CAS and replay preserve 
     history:[{id:'old-bag',kind:'talk',person:'mara',text:['工具袋已经交还。','The tool bag was returned.']}]};
    runtime.assertReadable(old);assert.equal(runtime.upgrade(old),old);
    // Import only this test-owned fixture at the persistence boundary, as a prior writer did.
-   await store.transaction((repo:any)=>repo.insert('QA-'+locale,randomUUID(),'qa-fixture',old,Date.now()));
+   await store.transaction(async(repo:any)=>{await repo.insert('QA-'+locale,randomUUID(),'qa-fixture',old,Date.now());await repo.write('QA-'+locale,old,old.cursor,Date.now())});
    let auth=new AsyncSessionAuthority(store,runtime);
    assert.deepEqual(await auth.get('QA-'+locale,old.id),old);
    await store.close();store=openAsyncSqliteAuthorityStore(cfg);auth=new AsyncSessionAuthority(store,runtime);
@@ -71,7 +71,7 @@ test('13-resident-era bilingual saves reopen unchanged; CAS and replay preserve 
   const pinned=JSON.parse(readFileSync('doc/qa/real-news-20261005/catalog.json','utf8')).records[0];
   pre={...pre,scene:'station',position:entityAt('station','mara')!.approach,known:[...pre.known,'mara'],newsMode:'live',newsEdition:pinned};
   runtime.assertReadable(pre);
-  await store.transaction((repo:any)=>repo.insert('PRE',randomUUID(),'qa-fixture',pre,Date.now()));
+  await store.transaction(async(repo:any)=>{await repo.insert('PRE',randomUUID(),'qa-fixture',pre,Date.now());await repo.write('PRE',pre,pre.cursor,Date.now())});
   let auth=new AsyncSessionAuthority(store,runtime);
   await store.close();store=openAsyncSqliteAuthorityStore(cfg);auth=new AsyncSessionAuthority(store,runtime);
   assert.deepEqual(await auth.get('PRE',pre.id),pre);
