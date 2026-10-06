@@ -35,6 +35,10 @@ button,input,textarea,select{font-family:var(--font-ui);font-weight:400}strong,b
 .harbor-night-light{position:absolute;left:0;top:0;width:130px;height:110px;z-index:3;pointer-events:none;opacity:0;background:radial-gradient(ellipse,#ffdda177,transparent 67%);mix-blend-mode:screen}
 .harbor-world[data-period="night"] .harbor-night-light{opacity:1}
 .harbor-world[data-period="evening"] .harbor-night-light{opacity:.4}
+/* Continuous presentation: HUD and hit targets remain outside world grading. */
+.harbor-world[data-daylight="candidate"] #rpg{z-index:0}
+.harbor-world[data-daylight="candidate"]::after{z-index:1;background:linear-gradient(180deg,var(--harbor-daylight-top,transparent),var(--harbor-daylight-bottom,transparent));transition:none}
+.harbor-authored-light{position:absolute;left:0;top:0;z-index:2;pointer-events:none;border-radius:50%;opacity:var(--harbor-daylight-lamps,0);background:radial-gradient(circle,rgba(255,231,172,var(--harbor-daylight-lamp-core,.7216)) 0 8%,#ffcc7240 22%,#ffc76c12 44%,transparent 68%)}
 .harbor-crop-bed{position:absolute;left:0;top:0;width:58px;height:26px;background:repeating-linear-gradient(#75543b 0 5px,#5d402f 5px 7px);border:3px solid #ad8661;z-index:1;pointer-events:none;box-shadow:0 2px #473c2c}
 .harbor-crop-bed span{position:absolute;right:2px;top:-19px;min-width:17px;background:#f3e4b8;border:2px solid #785237;color:#38291e;text-align:center;font:12px monospace}
 .harbor-crop-bed[data-stage="growing"]{border-color:#81ae72;background:repeating-linear-gradient(90deg,#385d39 0 6px,#554233 6px 13px)}
