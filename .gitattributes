@@ -1,0 +1,3 @@
+# Preserve the byte-exact official RSS response and original build transcript.
+doc/qa/real-news-rechecked-20261006/raw.xml -text -diff
+doc/releases/five-news-turn-20261006/frontend-build.txt -text -diff
