@@ -216,3 +216,16 @@ nextPeople现在分别转发art（既有root-v2肖像路径）、avatarArt（关
 扩展点：调日程/职业观点/故事文字/脚点修改 `world/tech-nomads.json`；调故事前提、关系和回访修改 `story/tech-nomads.ts`；未来真实科技来源由owner先完成原来源审核及固定版本后另接模板。本次已核对3类实际PNG尺寸与SHA及原renderer后更新`artAdmission`；以后替换仍不能只改status绕过证据。
 
 确定性验证入口 `_qa/run-tech-nomads-offline.mjs`；三居民两分支两语言、1440分钟日程、旧档、SQLite重开/重放/CAS、未来22人动态几何与3猫4鸥见 `_qa/tech-nomads.test.ts`。`_qa/tech-nomads-pending-browser.ts` 只拦截读取独立dist和合成旧Save，不监听端口，外网全部abort；320×568/390×844双语验证原19人、猫、移动、关系历史和pending缺席。该pending浏览器脚本是制作前历史夹具，不代表当前准入状态。当前`_qa/tech-nomads-owner-browser.ts`对真实Main/View/RPGJS构建、实际handler和隔离SQLite跑12故事/资料完整流程与18日程视图；仅合成旧档，不监听端口、外网abort、无正式身份。37文件176/176离线及23针对性检查通过。三人`portraitShape:square`只调整这些人的contain尺寸，原19人规则保持。只读美术审计`scripts/audit-tech-nomads-art.mjs`应报告本地PASS；平台/手机/SiteUI/新玩家理解、本候选PG与HTTP listener仍未验证，详见`qa/tech-nomads-owner-20261006/README.md`。
+
+## 2026-10-06 镜头修复候选（正式 2e1e20e 的局部增量）
+
+本节只记录该本地候选，前文早期制作/发布状态不代表当前正式版本。本轮没有修改服务、存档、碰撞、时间、日程或经济。
+
+- `src/engine/exploration-camera.ts`：纯呈现几何。输入已有视觉矩形、逻辑可走矩形、视口世界尺寸、CSS 安全遮挡与等比缩放；输出脚点 anchor 和覆盖所有原边缘所需的额外 render bounds。12px 为最小间隔，86px 为当前完整人物帧的头部预算；原 hero 图集 alpha 高 108 / 128，对应世界 56、标准手机显示 72.8px。
+- `src/world/exploration-layout.ts`：从实际 header/location/objective/controls 读矩形，写入标题/地点底边 CSS 变量。ResizeObserver 与 childList MutationObserver 处理布局变化；镜头求解前同步重测，防止字体或操作文案变化后读上一帧尺寸。共享 guest-shell 永不作为 HUD 测量对象。
+- `src/engine/rpg-space.ts`：保留 `cameraBounds(scene)`，新增 `cameraWalkBounds(scene)`、`cameraSafeArea()`、`cameraBackdrop(scene)`。视口最底层 `TilingSprite` 复用已存在地面纹理与 160 单位平铺相位；无需新增美术或大尺寸纹理。暂停 RPGJS 默认 follow / 初始 animate 插件，避免另一个中心跟随覆盖安全 anchor；即时相机跟随、实际映射与逆映射共用同一个 viewport。
+- `src/world/View.tsx`：只接上述接口、加载现有底材、钳制就近门户标签；昼夜、人物、动物、农畦、前景揭示与权威行为保留。
+
+宿主缩小 iframe 的情况由真实子视口自然触发 resize；`env(safe-area-inset-top/bottom)` 继续进入游戏 HUD 和操作区。仓库中未发现可供该子 frame 使用的 Aigram 父覆盖高度消息合同，因此没有臆造 postMessage、query 或固定宿主高度。本地 host fixture 仅验证“缩小 iframe + 明确 CSS safe inset”这条接线，真实 Telegram/物理手机和未传 inset 的父覆盖仍 unverified。
+
+后续连续地图应传偏移合成后的可走矩形与视觉画布；碰撞/窄接缝仍属于各自规则模块。不得整份覆盖 View、回退正式昼夜，或借本增量合入 B2/头像/动物候选。

@@ -64,3 +64,26 @@ button,input,textarea,select{font-family:var(--font-ui);font-weight:400}strong,b
 
 /* Animals have a moving touch target; clicking approaches without submitting. */
 .harbor-target--animal{pointer-events:auto}
+
+/* Exploration keeps its original scale; geometry follows measured HUD content. */
+.harbor-app{--harbor-header-bottom:80px;--harbor-location-bottom:127px;--harbor-safe-top:env(safe-area-inset-top,0px);--harbor-safe-bottom:env(safe-area-inset-bottom,0px)}
+.harbor-header{padding-top:calc(10px + var(--harbor-safe-top))}
+.harbor-world{top:var(--harbor-header-bottom)}
+.harbor-location{top:calc(var(--harbor-header-bottom) + 14px)}
+.harbor-objective{top:calc(var(--harbor-location-bottom) + 12px)}
+.harbor-controls{bottom:calc(18px + var(--harbor-safe-bottom))}
+.harbor-backdrop{padding-top:calc(20px + var(--harbor-safe-top));padding-bottom:calc(20px + var(--harbor-safe-bottom))}
+@media(min-width:800px){.harbor-controls{bottom:calc(24px + var(--harbor-safe-bottom))}}
+@media(max-width:360px){.harbor-backdrop{padding-top:calc(12px + var(--harbor-safe-top));padding-bottom:calc(12px + var(--harbor-safe-bottom))}}
+/* A host-reduced frame still keeps 44px controls and the complete objective. */
+@media(max-height:520px){
+ .harbor-header{min-height:64px;padding-top:calc(8px + var(--harbor-safe-top));padding-bottom:8px}
+ .harbor-heading small{display:none}
+ .harbor-heading h1,.harbor-app:lang(en) .harbor-heading h1{font-size:22px;line-height:1}
+ .harbor-location{font-size:12px;gap:6px;line-height:1.4}
+ .harbor-location small{font-size:10px}
+ .harbor-objective{padding-top:4px;padding-bottom:4px;font-size:12px;line-height:1.4}
+ .harbor-objective span{display:none}
+}
+/* At interaction distance the action control already carries this destination. */
+.harbor-target--portal[data-near=true]{visibility:hidden;pointer-events:none}

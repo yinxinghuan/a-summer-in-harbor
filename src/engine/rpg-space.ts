@@ -1,3 +1,5 @@
+import {explorationCamera,type CameraInsets} from './exploration-camera';
+import {TilingSprite,type Texture} from 'pixi.js';
 import {createForegroundReveal} from './foreground-reveal';
 import type {Viewport} from 'pixi-viewport';
 import type {Container} from 'pixi.js';
@@ -24,6 +26,8 @@ export type SpaceOptions={
  controlsBlocked:()=>boolean;onPosition:(point:Point)=>void;onDestination:(point:Point|null)=>void;
  onFrame?:(dt:number,position:Point,scene:string,paused:boolean)=>void;
  cameraBounds?:(scene:string)=>{x:number;y:number;w:number;h:number};
+ cameraWalkBounds?:(scene:string)=>{x:number;y:number;w:number;h:number};
+ cameraSafeArea?:()=>CameraInsets;cameraBackdrop?:(scene:string)=>Texture;
  foregroundReveal?:Parameters<typeof createForegroundReveal>[0][];
  onReady:(space:Space)=>void;onError:(error:unknown)=>void;
 };
@@ -43,8 +47,33 @@ export function createRpgSpace(options:SpaceOptions){
  const stand=()=>{stride=0;if(player&&player.animationName()!=='stand')player.animationName.set('stand');projectPlayer()};
  const stage=()=>(client as unknown as {canvasApp?:{stage:Container}})?.canvasApp?.stage;
  const viewport=():Viewport|undefined=>{const visit=(node:Container|undefined):Viewport|undefined=>{if(!node)return;if('toWorld' in node&&'clamp' in node)return node as Viewport;for(const child of node.children??[]){const found=visit(child);if(found)return found}};return visit(stage())};
- let cameraSignature='';
- const configureCamera=()=>{const view=viewport();if(!view)return;const bounds=options.cameraBounds?.(scene)??{x:0,y:0,w:world.width,h:world.height};const signature=[scene,engineWidth,engineHeight].join(':');if(signature===cameraSignature)return;view.resize(engineWidth,engineHeight,world.width,world.height);const extraX=Math.max(0,engineWidth/view.scale.x-bounds.w)/2,extraY=Math.max(0,engineHeight/view.scale.y-bounds.h)/2;view.clamp({left:bounds.x-extraX,top:bounds.y-extraY,right:bounds.x+bounds.w+extraX,bottom:bounds.y+bounds.h+extraY,underflow:'none'});cameraSignature=signature;view.moveCenter(pos.x+8,pos.y+6)};
+ let cameraSignature='',backdrop:TilingSprite|undefined;
+ const configureCamera=()=>{
+  const view=viewport();if(!view)return;
+  const visual=options.cameraBounds?.(scene)??{x:0,y:0,w:world.width,h:world.height};
+  const walk=options.cameraWalkBounds?.(scene)??world.scenes[scene].interior;
+  const safe=options.cameraSafeArea?.()??{left:0,top:0,right:0,bottom:0};
+  const size={x:engineWidth/view.scale.x,y:engineHeight/view.scale.y};
+  const camera=explorationCamera(visual,walk,size,safe,scale*view.scale.x),b=camera.bounds;
+  const signature=[scene,engineWidth,engineHeight,view.scale.x,...Object.values(safe),...Object.values(visual),...Object.values(walk)].join(':');
+  if(signature!==cameraSignature){
+   view.resize(engineWidth,engineHeight,world.width,world.height);
+   view.clamp({left:b.x,top:b.y,right:b.x+b.w,bottom:b.y+b.h,underflow:'none'});
+   const texture=options.cameraBackdrop?.(scene);
+   if(texture){
+    if(!backdrop||backdrop.destroyed||backdrop.parent!==view){backdrop?.destroy();backdrop=new TilingSprite({texture,width:b.w,height:b.h});backdrop.label='exploration-overscan';backdrop.zIndex=-1000000;view.addChild(backdrop)}
+    backdrop.texture=texture;backdrop.position.set(b.x,b.y);backdrop.width=b.w;backdrop.height=b.h;
+    // Match the authored floor assembler's 160-world-unit tile and world phase.
+    backdrop.tileScale.set(160/texture.width,160/texture.height);backdrop.tilePosition.set(-b.x,-b.y);
+   }
+   cameraSignature=signature;
+  }
+  // One camera owner: default RPGJS follow/initial animation must not recenter
+  // after our safe-area solve. Immediate following has no lag at a world edge.
+  view.plugins.pause('follow');view.plugins.pause('animate');
+  const center={x:pos.x+world.actor.w/2+size.x/2-camera.anchor.x,y:pos.y+world.actor.h+size.y/2-camera.anchor.y};
+  view.moveCenter(Math.max(b.x+size.x/2,Math.min(b.x+b.w-size.x/2,center.x)),Math.max(b.y+size.y/2,Math.min(b.y+b.h-size.y/2,center.y)));
+ };
  const screen=(point:Point)=>{const q=viewport()?.toScreen(point.x,point.y)??point;return {x:leftInset+q.x*scale,y:q.y*scale}};
  const unproject=(point:Point)=>{const q={x:(point.x-leftInset)/scale,y:point.y/scale};const p=viewport()?.toWorld(q.x,q.y)??q;return {x:p.x,y:p.y}};
  const resize=()=>{
