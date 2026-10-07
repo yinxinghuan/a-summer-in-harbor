@@ -1,0 +1,34 @@
+{
+  "id": "crop:snap-pea",
+  "revision": 2,
+  "capability": "watered-crop-v1",
+  "name": [
+    "脆荚",
+    "Snap peas"
+  ],
+  "condition": "cultivated-bed-v1",
+  "actions": [
+    "plant",
+    "water",
+    "harvest"
+  ],
+  "wetMinutes": 720,
+  "growMinutes": 720,
+  "seedCost": 6,
+  "yield": 3,
+  "salePrice": 4,
+  "output": "produce",
+  "uses": [
+    "sell",
+    "save-seed",
+    "resident-order"
+  ],
+  "saleSink": "crop-counter",
+  "assets": [
+    "asset:harbor.snap-pea.young@2:99b994debb060388c944ad0da68f07ff5d8d6d46bc2027f18064dc6ea1b2aabf",
+    "asset:harbor.snap-pea.growing@2:92fe64aab2d4fc4c81831855b775487121290f3451b3cfe884a953a20cbbe16e",
+    "asset:harbor.snap-pea.ready@2:271c78eba7da67ca0ac7c81ee334758da0cfe756b599bc9db228bd06c2a56df4",
+    "asset:harbor.snap-pea.seed@2:762521df0e329e0be610e1f4beec7d4f1d263fd204faf796f3825e0363dcd5d1",
+    "asset:harbor.snap-pea.produce@2:86bc5b5f00f0b014ca97e93d7bc4efe8779d4e45e30776b85d0369caf194b985"
+  ]
+}

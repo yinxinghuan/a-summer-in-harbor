@@ -1,0 +1,27 @@
+import {useEffect,useState} from 'react';
+import {tx,type Locale,type Entity,type Words} from '../world/data';
+import type {Save} from '../story/state';
+import type {Command} from '../life/types';
+import type {LandPreview} from '../life/land';
+import {LifeCropPanel} from './LifeCropPanel';
+import type {LifeView} from './LifeBag';
+import {readLandPreview} from '../story/client';
+export const landErrors:Record<string,Words>={
+ ARCHIVED_PLOT_NEEDS_BINDING:['已有旧植株缺少真实位置，先保留它；此菜畦编号需要显式恢复接线，不能覆盖。','An archived plant has no world position. Keep it; this bed needs an explicit recovery binding before reuse.'],
+ LIFE_TARGET:['目标已变化，请重新靠近菜畦或柜台。','The target changed. Approach the bed or counter again.'],PLOT_ADMISSION_REQUIRED:['先确认这里的菜畦位置。旧植株仍保留。','Confirm a bed here first. Archived plants remain.'],CONTENT_NOT_ENABLED:['此批次已停止新的购买或播种。已有收成仍可使用。','New purchases and planting are closed for this batch. Existing harvest remains usable.'],PLOT_OCCUPIED:['这块菜畦已有植株，收成后再种。','This bed already has a plant. Harvest before replanting.'],CROP_NOT_READY:['还未成熟，浇水后去做其他事情。','It is not ready yet. Water it and do something else.'],WATER_UNAVAILABLE:['土仍湿润或植株已成熟，不用再浇。','The soil is still wet or the crop is ready. No water is needed.'],ENERGY_LOW:['回家免费休息，再来照料。','Rest at home for free, then return.'],CASH_LOW:['钱还不够，先保留已有物品。','Not enough cash. Keep your existing goods for now.'],LAND_SCENE:['请在许可区域所在地点查看。','Visit the place named in the permission.'],LAND_OUTSIDE:['这个落点不在可种植草地内，请重选。','This position is outside the growing patch. Choose another.'],LAND_PROTECTED:['这里要留给道路、街坊或动物，请重选。','Keep this space for paths, neighbors or animals. Choose another.'],LAND_OVERLAP:['这里离已有菜畦太近，请重选。','This is too close to an existing bed. Choose another.'],LAND_PLAYER_SPACE:['这块地会占住你保存的位置，请走开并保存位置后重选。','This bed would cover your saved position. Move away and save your position before choosing again.'],LAND_NO_ROUTE:['这里无法保留安全通路，请重选。','A safe route cannot be kept here. Choose another.'],LAND_PERMISSION:['先阅读并接受这片土地的新种植许可。','Read and accept this patch’s cultivation permission first.'],LAND_CAPACITY:['已经有两块新增菜畦，原来的三块仍可使用。','You already have two new beds. The original three remain available.'],REST_NEEDED:['先回家休息，空地预览不会消失。','Rest at home first. You can choose a bed later.'],CHALLENGE_ACTIVE:['先结束或暂停当前练习。','Finish or pause your current practice first.'],LIFE_B2_UNAVAILABLE:['这项生活功能暂未开放，已有玩法仍可继续。','This life feature is not available yet. Keep exploring the existing town.'],LAND_TARGET:['位置已变化，请重新选一块地。','The position changed. Choose a bed again.'],LIFE_SPATIAL_NOT_ADMITTED:['这项互动暂未开放。','This interaction is not available yet.'],LAND_ALREADY_PERMITTED:['已经记下这片土地的种植许可。','This patch’s cultivation permission is already recorded.'],ORDER_NOT_EXPIRED:['订单还没到期。','The order has not expired yet.'],ITEMS_MISSING:['这份产物已经用掉，请重新读取行囊。','That produce was used. Reload your bag.'],ORDER_MISSING:['当前没有这个订单，请重新读取。','This order is no longer active. Reload your progress.']};
+export function LandPanel({save,view:lifeView,target,locale,busy,near,onCommand,onSelect,onWalk,reload}:{save:Save;view:LifeView|null;target:Entity;locale:Locale;busy:boolean;near:boolean;onCommand:(c:Command)=>void;onSelect:(region:string)=>void;onWalk:()=>void;reload:()=>void}){
+ const [view,setView]=useState<LandPreview>(),[error,setError]=useState<Words>();
+ useEffect(()=>{let live=true;setView(undefined);setError(undefined);readLandPreview(save,target.landRegion!,target.landAt).then(v=>{if(live)setView(v)}).catch(()=>{if(live)setError(landErrors.LIFE_B2_UNAVAILABLE)});return()=>{live=false}},[save.id,save.version,target.id]);
+ if(target.landPlot)return <LifeCropPanel save={save} view={lifeView} target={target} locale={locale} busy={busy||!near} onCommand={onCommand}/>;
+ if(!view)return <p role="status">{tx(error??['正在查看这片草地…','Checking this patch…'],locale)}</p>;
+ const stale=view.snapshotVersion!==save.version;
+ return <section className="harbor-land-panel" data-land-preview>
+ <p>{tx(view.permission,locale)}</p><p>{tx([`新增菜畦 ${view.count}/2（原三畦不计入）`,`New beds ${view.count}/2 (original three excluded)`],locale)}</p>
+ {stale?<p>{tx(['进度已变化，请重新读取并重选位置。','Progress changed. Reload and choose a position again.'],locale)}<button onClick={reload}>{tx(['重新读取','Reload'],locale)}</button></p>:!view.permitted?<><p>{tx(['接受许可不花钱、不耗精力、不推进时间；开垦另行确认。','Accepting permission costs no money, energy or time. Making a bed needs a separate confirmation.'],locale)}</p><button disabled={busy||!near} onClick={()=>onCommand({verb:'permit-land',region:view.region})}>{tx(['接受这片土地的种植许可','Accept this cultivation permission'],locale)}</button></>:<>
+ <p>{tx([`开垦：现金 $0 · 精力4 · 20游戏分钟${view.cost.totalEnergy>4?'（含疲劳共耗'+view.cost.totalEnergy+'精力）':''}`,`Make a bed: $0 · 4 energy · 20 game minutes${view.cost.totalEnergy>4?' ('+view.cost.totalEnergy+' energy including fatigue)':''}`],locale)}</p>
+ {view.reason&&<p role="status">{tx(landErrors[view.reason]??['这个位置暂不可用，请重选。','This position is unavailable. Choose another.'],locale)}</p>}
+ <button disabled={busy||view.count>=2} onClick={()=>onSelect(view.region)}>{tx(target.landAt?['重选位置','Choose another position']:['在草地上选一个位置','Choose a position on the grass'],locale)}</button>
+ {target.landAt&&view.canConfirm&&(near?<button className="harbor-primary" disabled={busy} onClick={()=>onCommand({verb:'cultivate',region:view.region,at:target.landAt!})}>{tx(['确认开垦 · 精力4 · 20分钟','Confirm bed · 4 energy · 20 minutes'],locale)}</button>:<button onClick={onWalk}>{tx(['先走到这块地旁','Walk beside this bed first'],locale)}</button>)}
+ </>}
+ </section>;
+}

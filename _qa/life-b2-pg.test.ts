@@ -1,0 +1,25 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {randomUUID} from 'node:crypto';import {Pool} from 'pg';
+import {createLifeB2} from '../server/life-b2';import {runtime} from '../server/runtime';import {initial,type Save,type Action} from '../src/story/state';import {landEntity} from '../src/life/land';import {rooms} from '../src/world/data';import {GAME_UUID} from '../src/game-id';
+// @ts-expect-error frozen PG library
+import {initializeCandidateSchema,registerCandidateWorld} from '../vendor/dynamic-runtime/packages/pg-candidate/index.mjs';
+// @ts-expect-error frozen authority
+import {initializeAsyncAuthoritySchema,openPgAuthorityStore,AsyncSessionAuthority} from '../vendor/dynamic-runtime/packages/authority-session/async.mjs';
+const raw=process.env.HARBOR_ACCOUNT_QA_PG_URL;if(!raw)throw Error('ACTUAL_B2_PG_QA_URL_REQUIRED');const url=new URL(raw);
+if(!['127.0.0.1','localhost'].includes(url.hostname)||url.port!=='55439'||url.pathname!=='/harbor_account_qa_20261005')throw Error('APPROVED_ISOLATED_QA_ONLY');
+test('B2 existing isolated PG: two instances CAS, retry/reopen, zero-write projection, foreign-owner and failed intent',async()=>{
+ const pool=new Pool({connectionString:raw}),schema='kit_life_b2_qa_'+randomUUID().replaceAll('-','').slice(0,16),options={pool,schema,gameId:GAME_UUID,worldId:GAME_UUID,environment:'test'};let first:any,second:any;
+ const b2=createLifeB2({...runtime,initial:(locale:any,id:string)=>({...initial(locale,id),scene:'hill',position:rooms.hill.spawn,visited:['hill'],flags:['key','unpacked'],items:{'crop-basil':3}})});
+ const command=(s:Save,verb:'permit-land'|'cultivate',at?:{x:number;y:number}):Action=>{const e=landEntity('hill-edge',at);return {action_id:randomUUID(),expected_version:s.version,scene:s.scene,position:e.approach,target:e.id,action:'life:'+verb,payload:{command:{verb,region:'hill-edge',...(at?{at}:{})}}}};
+ const beforeSchemas=(await pool.query('SELECT schema_name FROM information_schema.schemata ORDER BY schema_name')).rows;
+ try{const check=(await pool.query('SELECT current_database() AS db,current_user AS role,inet_server_port() AS port')).rows[0];assert.deepEqual(check,{db:'harbor_account_qa_20261005',role:'harbor_qa',port:55439});
+  const client=await pool.connect();try{await initializeCandidateSchema(client,options);await initializeAsyncAuthoritySchema(client,options);await registerCandidateWorld(client,options)}finally{client.release()}
+  first=await openPgAuthorityStore(options);second=await openPgAuthorityStore(options);let aa=new AsyncSessionAuthority(first,b2.runtime),bb=new AsyncSessionAuthority(second,b2.runtime),s:Save=await aa.create('synthetic-b2-pg-A',randomUUID(),'en');
+  b2.lifeProject(s);b2.landProject(s,new URLSearchParams({region:'hill-edge',x:'500',y:'800'}));assert.deepEqual(await bb.get('synthetic-b2-pg-A',s.id),s);
+  const permission=command(s,'permit-land');await aa.action('synthetic-b2-pg-A',s.id,permission);s=await aa.get('synthetic-b2-pg-A',s.id);
+  const a=command(s,'cultivate',{x:500,y:800}),b=command(s,'cultivate',{x:552,y:840});const raced=await Promise.allSettled([aa.action('synthetic-b2-pg-A',s.id,a),bb.action('synthetic-b2-pg-A',s.id,b)]);assert.equal(raced.filter(r=>r.status==='fulfilled').length,1);const loser=raced.find(r=>r.status==='rejected');assert.ok(loser?.status==='rejected');assert.match(String(loser.reason),/VERSION_CONFLICT/);const winner=raced[0].status==='fulfilled'?a:b;
+  const head=await aa.get('synthetic-b2-pg-A',s.id);assert.deepEqual([head.version,head.cursor,head.energy,head.cash,head.townMinutes,head.landV1.plots.length],[2,2,96,25,560,1]);await bb.action('synthetic-b2-pg-A',s.id,winner);assert.deepEqual(await aa.get('synthetic-b2-pg-A',s.id),head);
+  await assert.rejects(bb.action('synthetic-b2-pg-A',s.id,{...winner,action:'life:close-order',payload:{command:{verb:'close-order'}}}),/ACTION_ID_CONFLICT/);await assert.rejects(bb.get('synthetic-b2-pg-B',s.id),/SESSION_NOT_FOUND/);
+  const bad={...command(head,'cultivate',{x:500,y:800}),target:'unknown'};await assert.rejects(aa.action('synthetic-b2-pg-A',s.id,bad));assert.deepEqual(await bb.get('synthetic-b2-pg-A',s.id),head);await first.transaction(async(repo:any)=>{assert.equal((await repo.events(s.id,-1)).length,2);assert.ok(!(await repo.receipt('synthetic-b2-pg-A',bad.action_id)))});
+  await first.close();first=await openPgAuthorityStore(options);aa=new AsyncSessionAuthority(first,b2.runtime);assert.deepEqual(await aa.get('synthetic-b2-pg-A',s.id),head);await aa.action('synthetic-b2-pg-A',s.id,permission);assert.deepEqual(await aa.get('synthetic-b2-pg-A',s.id),head);
+ }finally{await first?.close();await second?.close();await pool.query(`DROP SCHEMA IF EXISTS "${schema}" CASCADE`);const after=(await pool.query('SELECT schema_name FROM information_schema.schemata ORDER BY schema_name')).rows;assert.ok(!after.some((r:any)=>r.schema_name===schema));console.log(JSON.stringify({qaSchema:schema,ownSchemaRemoved:true,schemaListsEqual:JSON.stringify(after)===JSON.stringify(beforeSchemas),otherTestsMayRunConcurrently:true}));await pool.end()}
+});

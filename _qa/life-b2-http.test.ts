@@ -1,0 +1,24 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {randomUUID} from 'node:crypto';import {mkdtempSync,rmSync} from 'node:fs';import {tmpdir} from 'node:os';import {join} from 'node:path';
+import {makeDemoServer} from './temporary-account-server';import {createLifeB2} from '../server/life-b2';import {runtime} from '../server/runtime';import {initial} from '../src/story/state';import {rooms} from '../src/world/data';import {GAME_UUID} from '../src/game-id';import {ContentRegistry} from '../src/life/registry';
+test('B2 actual account HTTP: GET pure, ownership guard and whitelist retained, retry then latest head',async()=>{
+ const directory=mkdtempSync(join(tmpdir(),'harbor-b2-http-')),registry=new ContentRegistry(),b2=createLifeB2({...runtime,initial:(l:any,id:string)=>({...initial(l,id),scene:'hill',position:rooms.hill.spawn,visited:['hill'],flags:['key','unpacked','garden-agreed'],items:{'crop-basil':3}})},registry);
+ const server=await makeDemoServer({directory,providedRuntime:b2.runtime,lifeProject:b2.lifeProject,landProject:b2.landProject});const base=server.url+'/'+GAME_UUID+'/api';
+ try{const boot=await fetch(base+'/bootstrap',{method:'POST'}),cookie=boot.headers.get('set-cookie')!.split(';')[0];const req=async(path:string,body?:unknown,c=cookie)=>fetch(base+path,{method:body===undefined?'GET':'POST',headers:{Cookie:c,'X-Harbor-Game':GAME_UUID,'X-Harbor-Dynamic-Assets':'1','Content-Type':'application/json'},...(body===undefined?{}:{body:JSON.stringify(body)})});
+  let s=await(await req('/sessions',{enrollment_id:randomUUID(),locale:'en'})).json();const before=structuredClone(s);
+  assert.equal((await req('/sessions/'+s.id+'/life')).status,200);assert.equal((await req('/sessions/'+s.id+'/land-preview?region=hill-edge&x=500&y=800')).status,200);assert.deepEqual(await(await req('/sessions/'+s.id)).json(),before);assert.equal((await(await req('/sessions/'+s.id+'/events?after=0')).json()).length,0);
+  assert.notEqual((await req('/sessions/'+s.id+'/life',undefined,'harbor_demo='+'f'.repeat(64))).status,200);
+  const a={action_id:randomUUID(),expected_version:s.version,scene:s.scene,position:s.position,target:'life-bag',action:'life:save-seed',payload:{command:{verb:'save-seed',ref:registry.ref('crop:basil')}}};assert.equal((await req('/sessions/'+s.id+'/action',a)).status,200);s=await(await req('/sessions/'+s.id)).json();assert.deepEqual([s.version,s.items['crop-basil'],s.items['seed-basil']],[1,2,1]);
+  assert.equal((await req('/sessions/'+s.id+'/action',a)).status,200);assert.deepEqual(await(await req('/sessions/'+s.id)).json(),s);
+  assert.equal((await(await req('/sessions/'+s.id+'/action',{...a,payload:{command:{verb:'save-seed',ref:registry.ref('crop:radish')}}})).json()).error,'ACTION_ID_CONFLICT');
+  const denied={...a,action_id:randomUUID(),expected_version:s.version,action:'life:plant',payload:{command:{verb:'plant',ref:registry.ref('crop:basil'),plot:'life-bed-1'}}};assert.equal((await(await req('/sessions/'+s.id+'/action',denied)).json()).error,'LIFE_SPATIAL_NOT_ADMITTED');assert.deepEqual(await(await req('/sessions/'+s.id)).json(),s);
+ }finally{await server.close();rmSync(directory,{recursive:true,force:true})}
+});
+test('account guard preserves exact Uint8Array sidecar JSON/binary bytes; another browser gets no sidecar',async()=>{
+ const directory=mkdtempSync(join(tmpdir(),'harbor-b2-bytes-')),binary=new Uint8Array([137,80,78,71,0,255,128,1]),reply=new TextEncoder().encode(JSON.stringify({format:'synthetic-check',hash:'b'.repeat(64)}));let deliveries=0;
+ const dynamicAssets={policy:{entry:()=>false},context:(_o:any,_s:any,fn:any)=>fn(),project:(_o:any,s:any)=>s,handle:(_q:any,r:any,_o:any,_id:any,_room:any,op:any)=>{deliveries++;r.writeHead(200,{'Content-Type':op==='blob'?'application/octet-stream':'application/json'});r.end(op==='blob'?binary:reply)}};
+ const server=await makeDemoServer({directory,dynamicAssets}),base=server.url+'/'+GAME_UUID+'/api';
+ try{const boot=await fetch(base+'/bootstrap',{method:'POST'}),cookie=boot.headers.get('set-cookie')!.split(';')[0],headers={Cookie:cookie,'X-Harbor-Game':GAME_UUID,'Content-Type':'application/json'};const s=await(await fetch(base+'/sessions',{method:'POST',headers,body:JSON.stringify({enrollment_id:randomUUID(),locale:'en'})})).json();
+  for(const op of ['check','blob']){const r=await fetch(base+'/sessions/'+s.id+'/assets/home/'+op,{method:'POST',headers,body:'{}'});assert.equal(r.status,200);assert.deepEqual(new Uint8Array(await r.arrayBuffer()),op==='blob'?binary:reply)}
+  const denied=await fetch(base+'/sessions/'+s.id+'/assets/home/blob',{method:'POST',headers:{...headers,Cookie:'harbor_demo='+'f'.repeat(64)},body:'{}'});assert.notEqual(denied.status,200);assert.equal(deliveries,2);
+ }finally{await server.close();rmSync(directory,{recursive:true,force:true})}
+});

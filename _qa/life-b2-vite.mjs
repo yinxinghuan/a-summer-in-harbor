@@ -1,0 +1,3 @@
+import {createServer} from 'vite';
+const badge='<script>addEventListener("DOMContentLoaded",()=>{const b=document.createElement("div");b.id="b2-qa-label";b.textContent="LOCAL B2 QA · synthetic journey";b.style.cssText="position:fixed;bottom:0;right:0;z-index:99999;background:#171b22;color:white;font:11px sans-serif;padding:3px;pointer-events:none";document.body.append(b)})</script>';
+const server=await createServer({cacheDir:'.data/b2-vite-cache',plugins:[{name:'b2-qa-only',transformIndexHtml:html=>html.replace('</body>',badge+'</body>')}],server:{host:'127.0.0.1',port:5440,strictPort:true,proxy:{'^/[0-9a-f-]{36}/api/':{target:'http://127.0.0.1:5441',rewrite:p=>p.replace(/^\/[0-9a-f-]{36}/,'')}}}});await server.listen();server.printUrls();

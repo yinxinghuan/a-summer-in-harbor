@@ -1,3 +1,4 @@
+import {createHarborLife} from './life-assembly';
 import {configuredNews} from './news/configured';
 import {RELEASE} from '../src/release';
 import {createTemporaryAccountTransport} from './account-transport';
@@ -16,10 +17,11 @@ const pool=new Pool({host:config.pgHost,database:config.database,user:config.use
 // relabel that as generic certification; public release needs the game's canary.
 const store=await openPgAuthorityStore({pool,schema:config.schema,worldId:GAME_UUID,gameId:GAME_UUID,environment:'test'});
 await mkdir('.data/rules',{recursive:true});
-const {runtime,newsProject}=configuredNews(createRuntime(await createDialogueResolver(store),await createFieldNotes(store)),process.env.HARBOR_NEWS_CATALOG);
+const b2=createHarborLife(createRuntime(await createDialogueResolver(store),await createFieldNotes(store)));
+const {runtime,newsProject}=configuredNews(b2.runtime,process.env.HARBOR_NEWS_CATALOG);
 const authority=new AsyncSessionAuthority(store,runtime);
 const dynamicAssets=await createDynamicAssets({pool,authority,config,edgeToken:token});
-const deps={store,runtime,newsProject,dynamicAssets,usage:createPlayerUsage({store}),noteMedia:createNoteMedia(store)};
+const deps={store,runtime,newsProject,lifeProject:b2.lifeProject,landProject:b2.landProject,dynamicAssets,usage:createPlayerUsage({store}),noteMedia:createNoteMedia(store)};
 const api=config.identityMode==='temporary-unverified'?createTemporaryAccountTransport({...deps,mode:config.identityMode,gameId:GAME_UUID}):createApiHandler({authority,...deps});
 const server=createServer({maxHeaderSize:8192},async(req,res)=>{try{
  const who=verifiedEdgeOwner(req,config,token);const path=new URL(req.url!,'http://localhost').pathname;

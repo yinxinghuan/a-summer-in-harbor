@@ -2,7 +2,7 @@ import type {IncomingMessage,ServerResponse} from 'node:http';
 import {createApiHandler,json} from './http';
 /** Adapt every public read/write/sidecar through the same account access guard.
  * Raw authority/store remain internal, never an alternate public route. */
-export function createAccountApiHandler({service,usage,noteMedia,dynamicAssets,newsProject}:any){
+export function createAccountApiHandler({service,usage,noteMedia,dynamicAssets,newsProject,lifeProject,landProject}:any){
  return async(req:IncomingMessage,res:ServerResponse,actor:any)=>{
   const path=new URL(req.url!,'http://localhost').pathname;
   if(path==='/api/account/legacy'&&req.method==='GET')return json(res,200,await service.legacyDirectory(actor));
@@ -17,12 +17,12 @@ export function createAccountApiHandler({service,usage,noteMedia,dynamicAssets,n
   const run=(storageOwner:string)=>{
    const media=noteMedia&&Object.fromEntries(['status','ensure','image'].map(k=>[k,(_who:unknown,...args:unknown[])=>noteMedia[k](storageOwner,...args)]));
    const dynamic=dynamicAssets&&{policy:{entry:(_who:string,s:string)=>dynamicAssets.policy.entry(storageOwner,s)},context:(_who:string,s:string,fn:()=>Promise<unknown>)=>dynamicAssets.context(storageOwner,s,fn),project:(_who:string,h:unknown)=>dynamicAssets.project(storageOwner,h),handle:(q:unknown,r:unknown,_who:string,...args:unknown[])=>dynamicAssets.handle(q,r,storageOwner,...args)};
-   return createApiHandler({authority,usage,noteMedia:media,dynamicAssets:dynamic,newsProject})(req,res,actor.owner);
+   return createApiHandler({authority,usage,noteMedia:media,dynamicAssets:dynamic,newsProject,lifeProject,landProject})(req,res,actor.owner);
   };
   if(id){
    const chunks:Buffer[]=[];let status=200;let headers:any={};
    const output=res;
-   res={writeHead:(code:number,h:any)=>{status=code;headers=h??{}},end:(b:any)=>{if(b!==undefined)chunks.push(Buffer.isBuffer(b)?b:Buffer.from(String(b)))}} as unknown as ServerResponse;
+   res={writeHead:(code:number,h:any)=>{status=code;headers=h??{}},end:(b:any)=>{if(b!==undefined)chunks.push(Buffer.isBuffer(b)?b:b instanceof Uint8Array?Buffer.from(b):Buffer.from(String(b)))}} as unknown as ServerResponse;
    await service.withStorageAccess(actor,id,run);
    output.writeHead(status,headers);return output.end(Buffer.concat(chunks));
   }

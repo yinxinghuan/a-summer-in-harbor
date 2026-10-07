@@ -53,3 +53,6 @@ export async function readUsage():Promise<Usage>{return request('/usage')}
 export type NoteMedia={status:string;room:string;retryable?:boolean;url?:string};
 export async function ensureNoteImage(id:string,room:string):Promise<NoteMedia>{return request('/sessions/'+id+'/media/'+room+'/prepare',{})}
 export async function loadNoteImage(id:string,room:string){const s=identitySnapshot();const r=await identityFetch(getGameApiBase()+'/api/sessions/'+id+'/media/'+room,{},s);if(!r.ok)throw Error('MEDIA_UNAVAILABLE');const blob=await r.blob();s.assert();return URL.createObjectURL(blob)}
+
+export async function readLife(head:Save):Promise<import('../ui/LifeBag').LifeView>{const scope=identitySnapshot();requireBound(head,scope);return request('/sessions/'+head.id+'/life',undefined,scope)}
+export async function readLandPreview(head:Save,region:string,at?:{x:number;y:number}):Promise<import('../life/land').LandPreview>{const scope=identitySnapshot();requireBound(head,scope);const query=new URLSearchParams({region,...(at?{x:String(at.x),y:String(at.y)}:{})});return request('/sessions/'+head.id+'/land-preview?'+query,undefined,scope)}

@@ -229,3 +229,9 @@ nextPeople现在分别转发art（既有root-v2肖像路径）、avatarArt（关
 宿主缩小 iframe 的情况由真实子视口自然触发 resize；`env(safe-area-inset-top/bottom)` 继续进入游戏 HUD 和操作区。仓库中未发现可供该子 frame 使用的 Aigram 父覆盖高度消息合同，因此没有臆造 postMessage、query 或固定宿主高度。本地 host fixture 仅验证“缩小 iframe + 明确 CSS safe inset”这条接线，真实 Telegram/物理手机和未传 inset 的父覆盖仍 unverified。
 
 后续连续地图应传偏移合成后的可走矩形与视觉画布；碰撞/窄接缝仍属于各自规则模块。不得整份覆盖 View、回退正式昼夜，或借本增量合入 B2/头像/动物候选。
+
+## 2026-10-07 B2与原动物首切片局部组合
+
+server/life-assembly.ts统一plants＋existing-animal包装，public.ts及独立QA使用同一工厂。lifeProject追加animals；原account transport守卫、authority CAS/receipt与存档格式保留。src/life/use-life-snapshot.ts以身份epoch/scope和lifeSnapshotKey隔离响应，校验LifeView版本/游标/分钟及animals版本。key覆盖known和notebook/sample的实际内容。本轮是动作时钟，尚未接运动回执。
+
+src/animal-life/presentation.ts只读过滤过期sample；UI及View使用当前实时玩家点，服务端投影使用持久化点，读取不会续期。record仍重算原动物帧与邻近条件。相机/daylight/engine及依赖锁文件与正式d644逐字节一致；View只局部组合B2事件、选择覆盖层与现有动物帧，不新增第二相机或认证。

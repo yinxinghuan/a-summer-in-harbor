@@ -1,0 +1,26 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "$id":"urn:harbor:life-crop-v1",
+ "title":"B1 immutable crop definition (recognition is not production enablement)",
+ "type":"object",
+ "additionalProperties":false,
+ "required":["id","revision","capability","name","condition","actions","wetMinutes","growMinutes","seedCost","yield","salePrice","output","uses","saleSink","assets"],
+ "properties":{
+  "id":{"type":"string","pattern":"^crop:[a-z][a-z0-9-]{1,39}$"},
+  "revision":{"type":"integer","minimum":1,"maximum":100},
+  "capability":{"const":"watered-crop-v1"},
+  "name":{"type":"array","minItems":2,"maxItems":2,"items":{"type":"string","minLength":1,"maxLength":64}},
+  "condition":{"const":"cultivated-bed-v1"},
+  "actions":{"const":["plant","water","harvest"]},
+  "wetMinutes":{"const":720},
+  "growMinutes":{"type":"integer","minimum":60,"maximum":4320},
+  "seedCost":{"type":"integer","minimum":1,"maximum":25},
+  "yield":{"type":"integer","minimum":1,"maximum":6},
+  "salePrice":{"type":"integer","minimum":1,"maximum":10},
+  "output":{"const":"produce"},
+  "uses":{"const":["sell","save-seed","resident-order"]},
+  "saleSink":{"const":"crop-counter"},
+  "assets":{"type":"array","maxItems":8,"items":{"type":"string","pattern":"^asset:[a-zA-Z0-9_.:@-]{1,120}$"}}
+ },
+ "$comment":"Executable validator additionally checks yield * salePrice - seedCost <= 12, trimmed nonempty names, immutable revision/hash, legacy ID lock, rejects a new ID with mechanically identical rules, and requires exact-revision host enablement. It cannot certify rights, visual difference or geometry."
+}

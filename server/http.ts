@@ -1,6 +1,6 @@
 import type {IncomingMessage,ServerResponse} from 'node:http';
 export const json=(res:ServerResponse,status:number,data:unknown)=>{res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(data))};
-export function createApiHandler({authority,usage,noteMedia,dynamicAssets,newsProject}:any){return async(req:IncomingMessage,res:ServerResponse,who:string)=>{const path=new URL(req.url!,'http://localhost').pathname,method=req.method;
+export function createApiHandler({authority,usage,noteMedia,dynamicAssets,newsProject,lifeProject,landProject}:any){return async(req:IncomingMessage,res:ServerResponse,who:string)=>{const path=new URL(req.url!,'http://localhost').pathname,method=req.method;
   let body:any={};if(method==='POST'){let size=0,parts:Buffer[]=[];for await(const c of req){size+=c.length;if(size>(path.includes('/assets/')?16384:1500000))return json(res,413,{error:'REQUEST_TOO_LARGE'});parts.push(c)}body=JSON.parse(Buffer.concat(parts).toString()||'{}')}
   const project=async(head:any):Promise<any>=>{if(head?.head)return {...head,head:await project(head.head)};return newsProject?newsProject(head):head};
   if(path==='/api/usage'&&method==='GET')return json(res,200,await usage.status(who));
@@ -10,12 +10,17 @@ export function createApiHandler({authority,usage,noteMedia,dynamicAssets,newsPr
   if(assetMatch){const [,id,room,op]=assetMatch;if(!dynamicAssets)return json(res,403,{error:'ASSET_QA_CLOSED'});if(method!==(op==='package'?'GET':'POST'))return json(res,405,{error:'METHOD_NOT_ALLOWED'});return dynamicAssets.handle(req,res,who,id,room,op,body)}
   const mediaMatch=path.match(/^\/api\/sessions\/([a-f0-9-]{36})\/media\/(workshop-annex-[12])(?:\/(status|prepare))?$/);
   if(mediaMatch){const [,id,room,op]=mediaMatch;if(op==='status'&&method==='GET')return json(res,200,await noteMedia.status(who,id,room));if(op==='prepare'&&method==='POST')return json(res,200,await noteMedia.ensure(who,id,room));if(!op&&method==='GET'){const {bytes,type}=await noteMedia.image(who,id,room);res.writeHead(200,{'Content-Type':type,'Cache-Control':'private,max-age=86400','X-Content-Type-Options':'nosniff'});return res.end(bytes)}return json(res,405,{error:'METHOD_NOT_ALLOWED'})}
-  const match=path.match(/^\/api\/sessions\/([a-f0-9-]{36})(?:\/(action|checkpoint|events))?$/);
+  const match=path.match(/^\/api\/sessions\/([a-f0-9-]{36})(?:\/(action|checkpoint|events|life|land-preview))?$/);
   if(!match)return json(res,404,{error:'NOT_FOUND'});const [,id,operation]=match;
   const inContext=(fn:()=>Promise<any>)=>dynamicAssets?dynamicAssets.context(who,id,fn):fn();
 
   if(dynamicAssets?.policy.entry(who,id)&&req.headers['x-harbor-dynamic-assets']!=='1')return json(res,409,{error:'CLIENT_REFRESH_REQUIRED'});
   if(!operation&&method==='GET')return json(res,200,await inContext(async()=>project(dynamicAssets?await dynamicAssets.project(who,await authority.get(who,id)):await authority.get(who,id))));
+  if((operation==='life'||operation==='land-preview')&&method==='GET'){
+   const projection=operation==='life'?lifeProject:landProject;
+   if(!projection)return json(res,403,{error:'LIFE_B2_UNAVAILABLE'});
+   return json(res,200,await inContext(async()=>projection(await authority.get(who,id),new URL(req.url!,'http://localhost').searchParams)));
+  }
   if(operation==='action'&&method==='POST'){
    if(!['ask','notes-generate'].includes(body.action))return json(res,200,await inContext(async()=>project(await authority.action(who,id,body))));
    const allowance=body.action==='ask'?'dialogue':'room';await usage.reserve(who,allowance,body.action_id,{session:id,body});

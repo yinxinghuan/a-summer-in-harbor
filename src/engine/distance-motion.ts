@@ -38,7 +38,10 @@ export function advanceRoute(position: Point, route: readonly Point[], budget: n
   while (consumed < route.length) {
     const target = route[consumed]
     const dx = target.x - next.x, dy = target.y - next.y, remaining = Math.hypot(dx, dy)
-    if (remaining < EPSILON) { consumed++; continue }
+    if (remaining < EPSILON) {
+      if (!canWalk(target)) { blocked = true; break }
+      next = { ...target }; consumed++; continue
+    }
     if (budget < EPSILON) break
     const amount = Math.min(remaining, budget)
     const intended = { x: dx / remaining * amount, y: dy / remaining * amount }
@@ -52,7 +55,12 @@ export function advanceRoute(position: Point, route: readonly Point[], budget: n
       blocked = true
       break
     }
-    if (amount >= remaining - EPSILON) consumed++
+    if (amount >= remaining - EPSILON) {
+      // Keep exact authored/grid coordinates after the checked sweep. A tiny
+      // accumulated remainder can otherwise turn a legal wall edge into a hit.
+      if (!canWalk(target)) { blocked = true; break }
+      next = { ...target }; consumed++
+    }
   }
   return { position: next, distance, consumed, direction, blocked, arrived: consumed === route.length }
 }
