@@ -59,5 +59,5 @@ export function createActivePlayClock({now=Date.now,boot=randomUUID(),defaultRat
  * Failed prepare/commit saves neither natural time nor business cost. */
 export function withActivePlayRuntime<T extends {prepare:(...args:any[])=>any;assertReadable:(s:Save)=>void}>(base:T,clock:ReturnType<typeof createActivePlayClock>){
  return {...base,assertReadable(s:Save){if(!validActivePlay(s))throw Error('UNSUPPORTED_SAVE');base.assertReadable(s)},
-  async prepare(s:Save,a:Action,...context:any[]){try{return await base.prepare(a.action.startsWith('candidate-')?s:clock.business(s,a),a,...context)}catch(error){throw s.activePlayClock?brandActivePrepareFailure(error):error}}};
+  async prepare(s:Save,a:Action,...context:any[]){try{return await base.prepare(a.action.startsWith('candidate-')?s:clock.business(s,a),a,...context)}catch(error){throw s.activePlayClock||a.activePlay?brandActivePrepareFailure(error):error}}};
 }

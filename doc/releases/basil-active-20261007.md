@@ -1,0 +1,13 @@
+# Basil orders with the published natural clock
+
+This increment adds Theo’s two-portion basil request, delivery for $7, the shared first kitchen gift, supply recollection, and an expired-order action in the bag. Existing basil purchase, watered growth, harvest and seed saving remain the source of produce. Mint stays closed; no mint fixture or artwork is activated.
+
+Base ce6944b (production 6bcf74e). The combined plants/animals assembly is consumed once through decorateLife; frozen news, motion and foreground time wrap the same authority/store. New order content joins the semantic projection key. Actions use the latest confirmed feet/version/fence. Finite pre-validation failures and fenced business errors resolve as terminal gameplay failures; unknown saved data and infrastructure failures remain recoverable.
+
+Authorization: user 2026-10-07 05:42 UTC, Sentinel_c82b556f013c81918def2fd13f61b5f8, continued implementation and ready incremental release, relayed by authorized coordinator 01a0f63e. Sole deployment owner 01a10d0d-57fd-75d8-9d32-21d279e2d0a0. Producer A15510494 and necessary C-only differences were locally integrated; B36771e16 was not applied.
+
+Validation: 43 focused rules/actual account HTTP checks; separate official isolated PG16.15 account/CAS/replay/closure/restart checks pass and instance stopped. Actual compiled Main/View/RPGJS: 390 English and 320 Chinese normal buy/plant/water/nap/harvest/deliver/save-seed/reload; both delayed expired-order projections; retained B2 crop/shop/cat-proof boundaries, all pass. UI evidence is local synthetic settled-start validation, not platform or physical-phone certification. Original clock rate remains 4000ms/game-minute.
+
+Inventory: buy seed $5; harvested three portions; deliver two for $7; one retained portion converts to one same-definition seed. Cash ends at $27. Ordinary GET is pure. Natural closure/due boundary or full purse commits neither goods nor candidate clock settlement. Two competing deliveries and exact receipt replay reward once. Old and basil orders share one slot and first gift. Stopping starts retains existing order delivery/expiry readers; never remove the wrapper or plantUsesV1 as rollback.
+
+No dependency/auth configuration/schema/character/art/news-date/library/model-budget changes. Existing 22 residents, 3 cats, 4 gulls and original saves remain. External guest top pointer obstruction is an existing shared shell issue; menu redesign, Telegram/physical phone and cross-device/second real account remain separate verification. Animal C1 a843584 is queued for later rights/profile/collision admission; no new species activated here.

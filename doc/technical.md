@@ -235,3 +235,20 @@ nextPeople现在分别转发art（既有root-v2肖像路径）、avatarArt（关
 server/life-assembly.ts统一plants＋existing-animal包装，public.ts及独立QA使用同一工厂。lifeProject追加animals；原account transport守卫、authority CAS/receipt与存档格式保留。src/life/use-life-snapshot.ts以身份epoch/scope和lifeSnapshotKey隔离响应，校验LifeView版本/游标/分钟及animals版本。key覆盖known和notebook/sample的实际内容。本轮是动作时钟，尚未接运动回执。
 
 src/animal-life/presentation.ts只读过滤过期sample；UI及View使用当前实时玩家点，服务端投影使用持久化点，读取不会续期。record仍重算原动物帧与邻近条件。相机/daylight/engine及依赖锁文件与正式d644逐字节一致；View只局部组合B2事件、选择覆盖层与现有动物帧，不新增第二相机或认证。
+
+
+# 2026-10-07 罗勒局部装配（当前代码）
+
+## 1. 技术栈
+复用固定5bca React/TypeScript/Vite8/RPGJS/Pixi与同一authority，依赖未变。独立本地测试SQLite；public默认未启用罗勒，另交一份2处变化的显式激活补丁。
+
+## 2. 目录结构
+server/plant-basil.ts包裹现有createHarborLife的结果，不再创建plants/animals；plant-uses-rules.ts与src/life/plant-uses.ts保留623固定定义和严格旧记录解释。src/ui/PlantUsesPanel.tsx只含罗勒需求/订单，Main仅局部调用；snapshot.ts补plantUsesV1依赖。_qa/plant-basil*为规则/HTTP/本地普通UIfixture。
+
+## 3. 核心模块
+withBasilPlantUses(assembly,{enabled,newStarts})沿原runtime、life/land/animalProject和authority。默认罗勒可由显式wrapper启用，薄荷所有命令拒绝；旧mint状态只读保留。enabled=false阻止新前提/接单/回顾，但已接单可交或关闭；newStarts=false同样止新，旧版本crop与seed不变。无payload新plant-use动作按实际scene/居民/75px binding验证；movingClock存在时新动作同样拒绝未确认>4px的脚点。新增成功动作清掉旧animal sample，不续期旧proof。版本/cursor/history由原事务提交，失败不改head。
+
+投影附加plantUses但保留原animal/plant/land字段；UI失配禁提交。时钟场景调用者可传真实projection.current，不能伪造snapshotVersion。7f9中外层withActivePlayRuntime必须包新用途runtime以先结算时间，再校验营业/截止。有限依赖和有限业务错误的C适配另交，未覆盖owner变化中的Main。
+
+## 4. 扩展点
+在最新owner组合上局部装配wrapper，按C接缝复验时间/动物；不要重复包B2。B仅可选本地wild mint fixture，默认false、正式素材仍HOLD。既有留种沿原规则，批次新配额尚未实施。所有生成/生产/发布由另授权与唯一owner流程处理。
