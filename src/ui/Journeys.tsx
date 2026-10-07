@@ -1,0 +1,21 @@
+import {useEffect,useRef,useState} from 'react';
+import {readJourneyDirectory,chooseJourney,type JourneyChoice,hasPendingAction} from '../story/client';
+import {identitySnapshot} from '../account-link/transport';
+import {rooms,tx,type Locale} from '../world/data';
+import type {Save} from '../story/state';
+export function Journeys({save,locale,locked,onBefore,onReady,onWorking}:{save:Save;locale:Locale;locked:boolean;onBefore:()=>Promise<unknown>;onReady:(s:Save)=>void;onWorking:(v:boolean)=>void}){
+ const [directory,setDirectory]=useState<JourneyChoice>(),[loading,setLoading]=useState(true),[confirmation,setConfirmation]=useState(false),[error,setError]=useState(false),[working,setWorking]=useState(false),lock=useRef(false),live=useRef(true);
+ useEffect(()=>{live.current=true;void read().catch(()=>{});return()=>{live.current=false}},[save.id]);
+ async function read(){setLoading(true);setError(false);try{await onBefore();const d=await readJourneyDirectory(save);if(live.current)setDirectory(d)}catch{if(live.current)setError(true)}finally{if(live.current)setLoading(false)}}
+ const run=async(kind:'new'|'existing',id?:string)=>{if(lock.current||locked||hasPendingAction())return;lock.current=true;setWorking(true);onWorking(true);setError(false);try{await onBefore();const next=await chooseJourney(locale,{kind,id});if(live.current)onReady(next)}catch{if(live.current)setError(true)}finally{lock.current=false;if(live.current)setWorking(false);onWorking(false)}};
+ return <section className="harbor-journeys"><p>{tx(identitySnapshot().account?['保存在当前 AlterU 账号下。旧浏览器旅程须另外确认归入。','Saved to your current AlterU account. Adding an older browser journey needs a separate confirmation.']:['旅程属于这个浏览器。请在同一浏览器继续；清除浏览器数据可能失去入口。','Saved for this browser. Continue here; clearing browser data may lose access.'],locale)}</p>
+ <p>{tx(['关闭后继续当前旅程。新建只增加独立旅程，旧档全部保留。','Close to keep playing this journey. A new journey is separate; all older journeys stay.'],locale)}</p>
+ {loading&&<p role="status">{tx(['正在读取旅程…','Finding your journeys…'],locale)}</p>}
+ {directory&&(confirmation?<section className="harbor-journeys__confirm"><h3>{tx(['开始另一个夏天？','Begin another summer?'],locale)}</h3><p>{tx(['你将从抵达小镇开始。当前旅程与所有旧旅程都会保留，可在这里切换。','Start again from arriving in town. This journey and every older journey remain here to switch back to.'],locale)}</p><button className="harbor-primary" disabled={working||locked} onClick={()=>void run('new')}>{tx(['保留旧档，开启新旅程','Keep old journeys and start new'],locale)}</button><button disabled={working} onClick={()=>setConfirmation(false)}>{tx(['取消','Cancel'],locale)}</button></section>:<button className="harbor-primary" disabled={working||locked||loading} onClick={()=>setConfirmation(true)}>{tx(['开启独立的新旅程','Start a separate new journey'],locale)}</button>)}
+ {directory&&<div className="harbor-journeys__list">{directory.journeys.map(j=><article key={j.id} className="harbor-item"><h3>{tx(['一段海湾的夏天','A summer in Harbor'],locale)}{j.id===save.id&&<small> · {tx(['正在继续','Current'],locale)}</small>}</h3><p>{rooms[j.scene]?tx(rooms[j.scene].title,locale):tx(['已探索的地方','An explored place'],locale)}</p>{j.updated&&<small>{tx(['上次游玩：','Last played: '],locale)}{new Date(j.updated).toLocaleString(locale==='zh'?'zh-CN':'en-US')}</small>}{j.id!==save.id&&<button disabled={working||locked} onClick={()=>void run('existing',j.id)}>{tx(['继续这段旅程','Continue this journey'],locale)}</button>}</article>)}</div>}
+ {!!directory?.legacy.length&&<p>{tx(['这个浏览器还有旧旅程，尚未归入账号。它们仍保留；本页不会自动认领。','Older browser journeys have not been added to this account. They remain intact; this page does not claim them.'],locale)}</p>}
+
+ {locked&&<p role="status">{tx(['先完成或暂停当前练习，并确认等待中的进度，再切换旅程。','Finish or pause your practice and confirm pending progress before switching journeys.'],locale)}</p>}
+ {working&&<p role="status">{tx(['正在确认旅程，请稍候…','Confirming your journey. One moment…'],locale)}</p>}{error&&<p role="alert">{tx(['暂未完成，旧旅程仍保留。重试会确认同一请求。','That did not finish. Your older journeys remain. Retry confirms the same request.'],locale)}<button disabled={working} onClick={()=>void read()}>{tx(['重新读取目录','Read the directory again'],locale)}</button></p>}
+ </section>;
+}

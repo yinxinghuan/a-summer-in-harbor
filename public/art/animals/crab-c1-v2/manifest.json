@@ -1,0 +1,417 @@
+{
+  "schema": 2,
+  "id": "shore-crab-native-c1-v2",
+  "width": 512,
+  "height": 384,
+  "image": "crab-c1.png",
+  "atlasSHA256": "6447970fcf81c94f4c12e0d516b3d39081be955afeaa3d3323f33c16567cca46",
+  "nativeSources": 9,
+  "directionFrames": 12,
+  "uniformNearestScale": 0.056,
+  "worldScale": 0.5,
+  "localLimbEditing": false,
+  "wholeFrameMirrorDirections": [
+    "right"
+  ],
+  "frames": {
+    "down-stand": {
+      "column": 0,
+      "row": 0,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -13.5,
+        "y": -16.0,
+        "w": 27.0,
+        "h": 16.0
+      },
+      "source": {
+        "taskId": "mt_d24bcd33687bb7f1b873a855e2d844a6",
+        "requestId": "ed2022bd-c0a4-4505-a4ad-9b027d05a21d",
+        "url": "https://images.aiwaves.tech/uploads/1791312801113-p4dey5jryx.webp",
+        "sha256": "05cd42da5b676129dcb3d86e1e4865fe0fd50fb530511fe9a89a50bcb6e51bfa",
+        "references": []
+      },
+      "sourceRoot": [
+        512,
+        804
+      ],
+      "consumerFrameSHA256": "eb23eea2b0112b7109e4e25f5e47697f49fb1162ea9f84233096f95bd1dfebab",
+      "mirror": false
+    },
+    "down-walkA": {
+      "column": 0,
+      "row": 1,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -13.0,
+        "y": -17.5,
+        "w": 27.0,
+        "h": 17.5
+      },
+      "source": {
+        "taskId": "mt_48899b9d0939762e380eeb184ecd6539",
+        "requestId": "7bdf100d-9467-4623-9f24-ec3d9c1a6774",
+        "url": "https://images.aiwaves.tech/uploads/1791356635752-zi4i22xlbsa.webp",
+        "sha256": "32f8f4097b8c6279411d984b474ec0504439b5d6be565296719bd8fcc48f27bb",
+        "references": [
+          "down-stand"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        804
+      ],
+      "consumerFrameSHA256": "6c8adcb6a2ac1b93553255f8735cf479d913d4fa64e5be36573ec97c5d47d00a",
+      "mirror": false
+    },
+    "down-walkB": {
+      "column": 0,
+      "row": 2,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -13.5,
+        "y": -17.0,
+        "w": 27.0,
+        "h": 17.5
+      },
+      "source": {
+        "taskId": "mt_544098f2a02d007e4b7ecce77f4cecaa",
+        "requestId": "693b80de-ed57-44a7-ba6e-26d51219d2c7",
+        "url": "https://images.aiwaves.tech/uploads/1791356861425-snzdzu08p8.webp",
+        "sha256": "4d67346106b8bae2d614eb72f7f2616341a0bed24c589f2095e4e89f4789abcb",
+        "references": [
+          "crab-down-walkA-v2"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        804
+      ],
+      "consumerFrameSHA256": "b2140a37b6c6feda4ac617139c5c4c07b104ebf729ba946482e301c6a348b3fb",
+      "mirror": false
+    },
+    "left-stand": {
+      "column": 1,
+      "row": 0,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -13.5,
+        "y": -20.0,
+        "w": 26.5,
+        "h": 18.5
+      },
+      "source": {
+        "taskId": "mt_a946eb2dc375459495946b72e0cb46cb",
+        "requestId": "e371d11e-05dd-4d32-9851-2f52969b9f85",
+        "url": "https://images.aiwaves.tech/uploads/1791312995375-ry0aswh2i7n.webp",
+        "sha256": "b903f1f6b1afba814c2ada0a83950e85c91ca922c06ca9766f16816397b94abc",
+        "references": [
+          "down-stand"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        900
+      ],
+      "consumerFrameSHA256": "9b57f5f5a2151a5ef1e2a22d0e8beff276aef7730a174982413a47930f62aa6a",
+      "mirror": false
+    },
+    "right-stand": {
+      "column": 2,
+      "row": 0,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -12.5,
+        "y": -20.0,
+        "w": 26.5,
+        "h": 18.5
+      },
+      "source": {
+        "taskId": "mt_a946eb2dc375459495946b72e0cb46cb",
+        "requestId": "e371d11e-05dd-4d32-9851-2f52969b9f85",
+        "url": "https://images.aiwaves.tech/uploads/1791312995375-ry0aswh2i7n.webp",
+        "sha256": "b903f1f6b1afba814c2ada0a83950e85c91ca922c06ca9766f16816397b94abc",
+        "references": [
+          "down-stand"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        900
+      ],
+      "consumerFrameSHA256": "9efd4880c5be6a3047425ae55e3b4929ae6917168254f30066e5eee163ab8c21",
+      "mirror": true,
+      "mirrorFrom": "left-stand",
+      "wholeMirrorRootTranslationPixels": [
+        1,
+        0
+      ]
+    },
+    "left-walkA": {
+      "column": 1,
+      "row": 1,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -13.5,
+        "y": -23.0,
+        "w": 27.0,
+        "h": 22.5
+      },
+      "source": {
+        "taskId": "mt_3e496f5b5218c141d72ce570400ea77c",
+        "requestId": "9a79c362-3b41-4a11-8564-614fe6a4cdbf",
+        "url": "https://images.aiwaves.tech/uploads/1791357217743-y4klj4xsalh.webp",
+        "sha256": "f0d9ee14e4aab8a336441494ae6797cebcec1fc72ba9f6fe65b76abc38556d99",
+        "references": [
+          "left-stand"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        900
+      ],
+      "consumerFrameSHA256": "8a094846eccfc2f8296851e99bfb01bb40f2d5a493814568230ff35850b043d8",
+      "mirror": false
+    },
+    "right-walkA": {
+      "column": 2,
+      "row": 1,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -13.0,
+        "y": -23.0,
+        "w": 27.0,
+        "h": 22.5
+      },
+      "source": {
+        "taskId": "mt_3e496f5b5218c141d72ce570400ea77c",
+        "requestId": "9a79c362-3b41-4a11-8564-614fe6a4cdbf",
+        "url": "https://images.aiwaves.tech/uploads/1791357217743-y4klj4xsalh.webp",
+        "sha256": "f0d9ee14e4aab8a336441494ae6797cebcec1fc72ba9f6fe65b76abc38556d99",
+        "references": [
+          "left-stand"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        900
+      ],
+      "consumerFrameSHA256": "1303c3abcb7224ac4a4cc3523cd865fbf084fe08db5972536b1cded2ce1234af",
+      "mirror": true,
+      "mirrorFrom": "left-walkA",
+      "wholeMirrorRootTranslationPixels": [
+        1,
+        0
+      ]
+    },
+    "left-walkB": {
+      "column": 1,
+      "row": 2,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -14.0,
+        "y": -24.0,
+        "w": 28.0,
+        "h": 24.0
+      },
+      "source": {
+        "taskId": "mt_3c22f71584a804f129ea46d8b188efaa",
+        "requestId": "d5a5a7ef-2b3a-42f7-b016-d6b0bc7a31bc",
+        "url": "https://images.aiwaves.tech/uploads/1791357346513-xqzp6uye8g.webp",
+        "sha256": "e792c68bb49a12107f5d92c0a74e31b72f3d828666373c4366039b0cf0f17660",
+        "references": [
+          "crab-left-walkA-v1"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        900
+      ],
+      "consumerFrameSHA256": "5cb5972e3aa7e10e48c853ffbcd605d630e13a1e684017d7db828ebcc6b6863d",
+      "mirror": false
+    },
+    "right-walkB": {
+      "column": 2,
+      "row": 2,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -13.5,
+        "y": -24.0,
+        "w": 28.0,
+        "h": 24.0
+      },
+      "source": {
+        "taskId": "mt_3c22f71584a804f129ea46d8b188efaa",
+        "requestId": "d5a5a7ef-2b3a-42f7-b016-d6b0bc7a31bc",
+        "url": "https://images.aiwaves.tech/uploads/1791357346513-xqzp6uye8g.webp",
+        "sha256": "e792c68bb49a12107f5d92c0a74e31b72f3d828666373c4366039b0cf0f17660",
+        "references": [
+          "crab-left-walkA-v1"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        900
+      ],
+      "consumerFrameSHA256": "118136b41dca5fe5e0531fbedcefab224f742e4f8a6e2c49d9a37349542849c8",
+      "mirror": true,
+      "mirrorFrom": "left-walkB",
+      "wholeMirrorRootTranslationPixels": [
+        1,
+        0
+      ]
+    },
+    "up-stand": {
+      "column": 3,
+      "row": 0,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -13.0,
+        "y": -18.0,
+        "w": 25.5,
+        "h": 17.5
+      },
+      "source": {
+        "taskId": "mt_e8739753c38e2f05915eb84765197ba4",
+        "requestId": "1274aa9b-43ba-47e3-b7da-c8395afd99e8",
+        "url": "https://images.aiwaves.tech/uploads/1791313278432-dfvl3w49avv.webp",
+        "sha256": "38a82519f2095ac721ac44a3b5aff3bcdd014b495886bc91ab9050971904475e",
+        "references": [
+          "down-stand"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        860
+      ],
+      "consumerFrameSHA256": "848da2b824afa7e2f636f00f3732741c3315e0f67e965fe8794cbbc55fe52948",
+      "mirror": false
+    },
+    "up-walkA": {
+      "column": 3,
+      "row": 1,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -13.0,
+        "y": -19.0,
+        "w": 26.5,
+        "h": 18.5
+      },
+      "source": {
+        "taskId": "mt_776bae819753cd4e2ab9dc0ee330eff4",
+        "requestId": "8d7b3f97-8656-47ba-813b-cf24ade32490",
+        "url": "https://images.aiwaves.tech/uploads/1791357442520-de5k9zrocg.webp",
+        "sha256": "cd47829aa3b54486ade28fc7616e098e95f697bb4cc0a03ed4d6a17b2842f881",
+        "references": [
+          "up-stand"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        860
+      ],
+      "consumerFrameSHA256": "0ed20c6e3808ca6a602e5ac4d55bf716e3e3934e0cae843775fcd715d040a43b",
+      "mirror": false
+    },
+    "up-walkB": {
+      "column": 3,
+      "row": 2,
+      "anchor": [
+        0.5,
+        0.6875
+      ],
+      "relative": {
+        "x": -13.0,
+        "y": -19.0,
+        "w": 26.0,
+        "h": 18.5
+      },
+      "source": {
+        "taskId": "mt_6935d6ae6d6f08ca35f192147aed07f4",
+        "requestId": "7b93195d-6def-4ab1-898c-5188b629ba10",
+        "url": "https://images.aiwaves.tech/uploads/1791357559652-gu0tilw9476.webp",
+        "sha256": "6b60ea0e62ec6361d6fdf10aef28a89473c46af16256e6d3f28ec7c0c5d79fd5",
+        "references": [
+          "crab-up-walkA-v1"
+        ]
+      },
+      "sourceRoot": [
+        512,
+        860
+      ],
+      "consumerFrameSHA256": "a06814856397603bf4b9ee8d76ffd4d3378ff596cee354fde218c13789a1b94f",
+      "mirror": false
+    }
+  },
+  "displayEnvelope": {
+    "x": -14.0,
+    "y": -24.0,
+    "w": 28.5,
+    "h": 24.5
+  },
+  "displayGap": 8,
+  "rootContract": "fixed manually supported back-edge source root for all stand/A/B; world/event/depth foot same anchor",
+  "groundProfile": "shore-crab-native-c1-v2@2",
+  "ground": {
+    "down": [
+      -15,
+      -20,
+      30,
+      20
+    ],
+    "left": [
+      -8,
+      -26,
+      23,
+      26
+    ],
+    "right": [
+      -15,
+      -26,
+      23,
+      26
+    ],
+    "up": [
+      -15,
+      -20,
+      30,
+      20
+    ]
+  },
+  "rights": "alteru-project-use-confirmed-20261003: same project/service scope applicability; no universal MIT/CC image license",
+  "productionEnabled": false,
+  "libraryWrite": false
+}

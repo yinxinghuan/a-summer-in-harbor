@@ -1,7 +1,7 @@
 import {findPath,type Point,type Rect,type World} from '../engine/world';
 import type {AnimalState,Context,Slot,SpeciesProfile} from './types';
 export const overlaps=(a:Rect,b:Rect)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
-export const bodyAt=(p:Point,profile:SpeciesProfile):Rect=>({x:p.x-profile.collision.w/2,y:p.y-profile.collision.h,w:profile.collision.w,h:profile.collision.h});
+export const bodyAt=(p:Point,profile:Pick<SpeciesProfile,'collision'>):Rect=>({x:p.x-profile.collision.w/2,y:p.y-profile.collision.h,w:profile.collision.w,h:profile.collision.h});
 export const finitePoint=(p:Point)=>!!p&&Number.isFinite(p.x)&&Number.isFinite(p.y);
 const inside=(r:Rect,b:Rect)=>b.x>=r.x&&b.y>=r.y&&b.x+b.w<=r.x+r.w&&b.y+b.h<=r.y+r.h;
 export function pointClear(p:Point,slot:Slot,profile:SpeciesProfile,ctx:Context,others:readonly AnimalState[],includePlayer=true){
@@ -11,6 +11,14 @@ export function pointClear(p:Point,slot:Slot,profile:SpeciesProfile,ctx:Context,
   (!includePlayer||slot.scene!==ctx.scene||!overlaps(b,ctx.player))&&
   !Object.values(ctx.people).some(p=>p.scene===slot.scene&&overlaps(b,p.body))&&
   !others.some(a=>a.visible&&a.scene===slot.scene&&overlaps(b,bodyAt(a.foot,ctxProfiles(a))));
+}
+/** Shared geometry only. New locomotion must still provide its own engine and
+ * measured profile; this helper grants no species/art/save admission. */
+export function bodyClear(p:Point,sceneId:string,region:Rect,profile:Pick<SpeciesProfile,'collision'>,ctx:Context,occupied:readonly Rect[]=[],includePlayer=true){
+ const scene=ctx.world.scenes[sceneId];if(!scene||!finitePoint(p))return false;const b=bodyAt(p,profile);
+ return inside(scene.interior,b)&&inside(region,b)&&![...scene.obstacles,...(ctx.forbidden[sceneId]??[])].some(r=>overlaps(b,r))&&
+  (!includePlayer||sceneId!==ctx.scene||!overlaps(b,ctx.player))&&
+  !Object.values(ctx.people).some(p=>p.scene===sceneId&&overlaps(b,p.body))&&!occupied.some(r=>overlaps(b,r));
 }
 // Per-species collision travels with the runtime, rather than defaulting to a human box.
 import {profiles} from './config';

@@ -17,8 +17,8 @@ export const hasPendingAction=()=>!!storage().getItem(pendingKey(identitySnapsho
 async function request(path:string,body?:unknown,s=identitySnapshot()){
  const r=await identityFetch(getGameApiBase()+'/api'+path,{method:body===undefined?'GET':'POST',headers:{'X-Harbor-Dynamic-Assets':'1',...(body===undefined?{}:{'Content-Type':'application/json'})},...(body===undefined?{}:{body:JSON.stringify(body)})},s);const data=await r.json();s.assert();if(!r.ok)throw Object.assign(Error(data.error??'REQUEST_FAILED'),{status:r.status,terminal:data.terminal});return data;
 }
-export type JourneyChoice={browserClaimed?:boolean;journeys:{id:string;version:number;scene:string}[];legacy:{id:string;version:number;scene:string}[]};
-let choice:{scope:string;data:JourneyChoice}|undefined;let bound:{scope:string;id:string}|undefined;
+export type JourneyChoice={browserClaimed?:boolean;journeys:{id:string;version:number;scene:string;updated?:number}[];legacy:{id:string;version:number;scene:string;updated?:number}[]};
+let choice:{scope:string;data:JourneyChoice;management?:boolean}|undefined;let bound:{scope:string;id:string}|undefined;
 export function connectionChoice(){const s=identitySnapshot();return choice?.scope===s.scope?choice.data:undefined}
 const bind=(s:Scope,head:Save)=>{s.assert();bound={scope:s.scope,id:head.id};return head};
 function requireBound(head:Save,s:Scope){s.assert();if(bound?.scope!==s.scope||bound.id!==head.id)throw Error('IDENTITY_CHANGED')}
@@ -38,16 +38,22 @@ export async function connect(locale:Locale):Promise<Save>{
  return bind(s,await request('/sessions/'+id,undefined,s));
 }
 export async function chooseJourney(locale:Locale,option:{kind:'existing'|'claim'|'new';id?:string;confirmed?:boolean}):Promise<Save>{
- const s=identitySnapshot(),c=connectionChoice();if(!c||(!s.account&&!c.browserClaimed))throw Error('JOURNEY_SELECTION_REQUIRED');let id=option.id;
+ const s=identitySnapshot(),c=connectionChoice();if(!c||(!s.account&&!c.browserClaimed&&!choice?.management))throw Error('JOURNEY_SELECTION_REQUIRED');if(hasPendingAction())throw Error('PENDING_ACTION');let id=option.id;
  if(option.kind==='claim'){
   if(!option.confirmed||!c.legacy.some(j=>j.id===id))throw Error('CLAIM_CONFIRMATION_REQUIRED');
   const k=key('claim:'+id,s);let requestId=storage().getItem(k);if(!requestId){requestId=crypto.randomUUID();storage().setItem(k,requestId)}
   await request('/account/claim',{journey:id,requestId,confirmed:true},s);s.assert();storage().removeItem(k);
   const old=storage().getItem('harbor-pending-v2:'+id)??storage().getItem('harbor-pending-v1');if(old&&JSON.parse(old).id===id&&!storage().getItem(pendingKey(s,id!)))storage().setItem(pendingKey(s,id!),old);
  }else if(option.kind==='new'){
-  const k=key('harbor-choice-enroll',s);let enrollment=storage().getItem(k);if(!enrollment){enrollment=crypto.randomUUID();storage().setItem(k,enrollment)}id=(await request('/sessions',{enrollment_id:enrollment,locale},s)).id;s.assert();storage().removeItem(k);
+  const k=key('harbor-choice-enroll',s);let enrollment=storage().getItem(k);if(!enrollment){enrollment=crypto.randomUUID();storage().setItem(k,enrollment)}id=(await request('/sessions',{enrollment_id:enrollment,locale},s)).id;s.assert();
  }else if(!c.journeys.some(j=>j.id===id))throw Error('JOURNEY_NOT_FOUND');
- s.assert();storage().setItem(key('harbor-journey',s),id!);choice=undefined;return connect(locale);
+ s.assert();storage().setItem(key('harbor-journey',s),id!);choice=undefined;const head=await connect(locale);if(option.kind==='new')storage().removeItem(key('harbor-choice-enroll',s));return head;
+}
+/** Explicit normal-play entry. A directory read neither claims nor creates a journey. */
+export async function readJourneyDirectory(head:Save):Promise<JourneyChoice>{
+ const s=identitySnapshot();requireBound(head,s);if(hasPendingAction())throw Error('PENDING_ACTION');
+ const journeys=await request('/sessions',undefined,s),legacy=s.account?await request('/account/legacy',undefined,s):[];
+ requireBound(head,s);const data={journeys,legacy};choice={scope:s.scope,data,management:true};return data;
 }
 export async function send(head:Save,a:Action):Promise<{head:Save;text:[string,string]}>{
  const s=identitySnapshot();requireBound(head,s);const pending=pendingKey(s,head.id);

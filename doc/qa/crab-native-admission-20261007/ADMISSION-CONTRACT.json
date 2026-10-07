@@ -1,0 +1,237 @@
+{
+  "schema": 2,
+  "id": "shore-crab-native-c1-v2",
+  "profileRevision": 2,
+  "status": "PROJECT_GAME_CONSUMER_NATIVE_MOTION_ACCEPTED",
+  "audience": "international",
+  "setting": "fictional modern North American coastal town",
+  "languages": {
+    "primary": "en",
+    "localized": "zh",
+    "work": "zh"
+  },
+  "baseline": {
+    "production": "6bcf74e6cbc328c16c14d93add68142898e8487c",
+    "publicSource": "ce6944b756efe8ed0ff0f7453673d5c82141cbbd",
+    "ownerReceiptSHA256": "91a0df1b16db45204f2cfd60ec1010ee8f6b8d3748ccf0bf8b14bf6688141e46"
+  },
+  "acceptance": {
+    "rights": "PROJECT_GAME_USE_ACCEPTED",
+    "fixedSources": "PASS_9_SELECTED_1_REJECTED_RETAINED",
+    "nativeArtFamily": "PASS_SCOPED_AI_REVIEW",
+    "manualGroundProfile": "PASS_CONSERVATIVE_SUPPORT_AND_SWING_RESERVATION",
+    "latestRenderer": "PASS_24_CASES",
+    "disabledOldSaveCompatibility": "PASS_EXISTING_3_CATS_4_GULLS_ONLY",
+    "newSpeciesSaveMigration": "NOT_IMPLEMENTED_OR_CLAIMED"
+  },
+  "pins": {
+    "atlasSHA256": "6447970fcf81c94f4c12e0d516b3d39081be955afeaa3d3323f33c16567cca46",
+    "consumerManifestSHA256": "1f5cc4fff68dd3309adcf6e8a40271f0937475324819d3f2d385ae1359930c7c",
+    "profileSourceSHA256": "e26b4e70c027832bbab74c2d59e1afadbd52b17ed55deba0062d436c7ed623ba",
+    "motionSourceSHA256": "c4a43212919fcaa8c6f66ab77bcf30b471128564ca77e1c972ca530c24067f02",
+    "artConsumerSHA256": "30da82a8dc4987f2a6109fcd39f1f99fd744f731c4fd7299c0105d2ec4023b69"
+  },
+  "profile": {
+    "ground": {
+      "down": [
+        -15,
+        -20,
+        30,
+        20
+      ],
+      "left": [
+        -8,
+        -26,
+        23,
+        26
+      ],
+      "right": [
+        -15,
+        -26,
+        23,
+        26
+      ],
+      "up": [
+        -15,
+        -20,
+        30,
+        20
+      ]
+    },
+    "displayEnvelope": {
+      "x": -14.0,
+      "y": -24.0,
+      "w": 28.5,
+      "h": 24.5
+    },
+    "displayGap": 8,
+    "manualSupportPrecisionRawPixels": 12,
+    "walkingLegProjections": 72,
+    "raisedPincersExcludedFromGround": true,
+    "alphaHullGround": false,
+    "contactPhysicsClaim": false,
+    "anchor": [
+      0.5,
+      0.6875
+    ],
+    "uniformNativeScale": 0.056,
+    "worldScale": 0.5,
+    "wholeMirror": "right",
+    "localLimbEditing": false
+  },
+  "motion": {
+    "normalSpeed": 18,
+    "retreatSpeed": 26,
+    "stride": 16,
+    "stopDistance": 68,
+    "resumeDistance": 92,
+    "targetDistance": 104,
+    "maximumRetreat": 64,
+    "endPauseSeconds": 0.8,
+    "quietSeconds": 0.4,
+    "maximumDtSeconds": 0.04,
+    "axisPerpendicularToFacing": true,
+    "currentMinuteSceneProjection": true,
+    "offlineCatchup": false,
+    "boundedStructuralRescue": 24,
+    "unsafePlacement": "hide new crab; do not move old actors"
+  },
+  "requiredConsumerGuards": [
+    "current real world terrain/obstacles and player/resident bodies",
+    "original animal bodies plus all scheduled territory/flight visual reservation",
+    "complete old actor/prop envelope and authored resident route corridors",
+    "rounded rendered foot protected by separate display guard"
+  ],
+  "QA": {
+    "groundMatrix": {
+      "sourceCommit": "ce6944b756efe8ed0ff0f7453673d5c82141cbbd",
+      "scenarios": 48,
+      "groundAndVisualFrames": 17280,
+      "overlapCases": 104,
+      "actorIDs": [
+        "arthur",
+        "avery",
+        "casey",
+        "dani",
+        "elena",
+        "grant",
+        "harper",
+        "idris",
+        "jordan",
+        "june",
+        "leila",
+        "luis",
+        "mara",
+        "mira",
+        "nell",
+        "noor",
+        "owen",
+        "rowan",
+        "ruth",
+        "samira",
+        "tess",
+        "theo"
+      ],
+      "modelCalls": 0
+    },
+    "browser": {
+      "passed": true,
+      "cases": 24,
+      "sizes": [
+        [
+          390,
+          844
+        ],
+        [
+          320,
+          568
+        ]
+      ],
+      "scenes": [
+        "coast",
+        "beach",
+        "dock"
+      ],
+      "facings": [
+        "down",
+        "left",
+        "right",
+        "up"
+      ],
+      "caseScreenshots": 288,
+      "actualRAFSamples": 144,
+      "collisionCheckedApproaches": 24,
+      "browserErrors": 0,
+      "externalRequests": 0,
+      "scope": "Original RPGJS/Pixi renderer and Harbor maps/actors, synthetic local QA candidate; browser viewports, not physical phone or formal MiniApp; no authority/save/library/production writes",
+      "formalMiniApp": false,
+      "physicalDevice": false,
+      "completeMainHUD": false,
+      "guestShell": false,
+      "productionAuthority": false,
+      "movementAcknowledgment": "explicit local isolated fixture; current continuous adapter with normal walkTo and body collisions",
+      "fileNameCaveat": "platform-layout-* names are inherited; evidence is isolated dev renderer, not full product platform layout acceptance"
+    },
+    "regression123": true,
+    "build": true,
+    "secrets": true,
+    "apiBase": true,
+    "uiStatic": true,
+    "productionBundleUnchanged": true
+  },
+  "AI": {
+    "policy": "animal-grounded-choice-v4",
+    "freeFixtureClosedLoop": "PASS",
+    "individualScheduleValidation": "PASS",
+    "reviewProtocolLengthValidation": "PASS",
+    "liveV4": "UNTESTED",
+    "M1M2": "SEALED_FAILURE_RECORDS_UNCHANGED",
+    "newPaidCalls": 0,
+    "nextLiveBatchRequiresNewAuthorization": {
+      "name": "AI-M3",
+      "draftCalls": 1,
+      "independentReviewCalls": 1,
+      "maximumTotal": 2,
+      "failureCounts": true,
+      "automaticThirdCall": false,
+      "reuseOldQuota": false,
+      "monetaryCap": "not obtained; parent must resolve actual fee ceiling before authorization"
+    }
+  },
+  "activation": {
+    "productionEnabled": false,
+    "saveRegistration": false,
+    "clientMayMintProof": false,
+    "libraryWrite": false,
+    "productionDeploy": false,
+    "realPlayerStateWrite": false
+  },
+  "remainingSeams": [
+    {
+      "owner": "sole integration/release owner 01a10d0d-57fd-75d8-9d32-21d279e2d0a0",
+      "action": "Consume patch; register admitted capability/entity; integrate existing authority pose/proximity/quiet proof and optional pinned save schema; final product QA and separately authorized deploy"
+    },
+    {
+      "owner": "shared asset library owner",
+      "action": "Register accepted consumer/profile/source/rights/geometry/review metadata without overwriting rejected history"
+    },
+    {
+      "owner": "parent with user authorization",
+      "action": "Only if desired, obtain new max-two-call AI-M3 live test budget and actual monetary ceiling"
+    }
+  ],
+  "reusedSystems": [
+    "single animal runtime integration seam",
+    "existing authority CAS/idempotent receipts",
+    "existing observation facts and knowledge collection pages",
+    "version-pinned animal commissions",
+    "author-fixed relationship reward"
+  ],
+  "notExtended": [
+    "dog new native actions",
+    "burrowing or other new ability",
+    "standalone image redistribution license",
+    "inventory permission",
+    "production release scope"
+  ]
+}

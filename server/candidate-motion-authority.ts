@@ -34,8 +34,10 @@ export function withCompactMotion(authority:any,store:any,runtime:any,motion=cre
    // The same server elapsed, path sweep, boot and rolling slack checks run for both protocols.
    const next=motion(before,body).head;
    if(stable(next)!==stable(before)||next.id!==id||next.mapVersion!==before.mapVersion||next.version!==before.version+1)fail('UNSUPPORTED_MOTION_DELTA');
+   const settled=JSON.stringify({...next,nativeCrabV1:undefined});runtime.finalizeMotion?.(before,next);
+   if(JSON.stringify({...next,nativeCrabV1:undefined})!==settled)fail('UNSUPPORTED_MOTION_DELTA');
    const cursor=row.cursor+1,{transport:_,...clock}=next.movingClock!;
-   const ack:MotionAck=wire({schema:1,id,mapVersion:next.mapVersion,baseVersion:before.version,version:next.version,cursor,ordinal:p.ordinal,actionId:body.action_id,token:randomUUID(),fields:{scene:next.scene,position:next.position,townMinutes:next.townMinutes,awakeMinutes:next.awakeMinutes,energy:next.energy,visited:next.visited,clock}});
+   const ack:MotionAck=wire({schema:1,id,mapVersion:next.mapVersion,baseVersion:before.version,version:next.version,cursor,ordinal:p.ordinal,actionId:body.action_id,token:randomUUID(),fields:{...(next.nativeCrabV1?{nativeCrabV1:next.nativeCrabV1}:{}),scene:next.scene,position:next.position,townMinutes:next.townMinutes,awakeMinutes:next.awakeMinutes,energy:next.energy,visited:next.visited,clock}});
    next.cursor=cursor;next.movingClock!.transport={version:1,last:{digest:hash,ack}};runtime.assertReadable(next);
    // Atomic head + latest confirmation. No addReceipt/addEvent/clearPrepared call.
    await repo.write(owner,next,cursor,now());return ack;

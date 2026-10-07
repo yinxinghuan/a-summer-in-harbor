@@ -1,0 +1,219 @@
+{
+  "schema": 1,
+  "selectedOriginals": 9,
+  "retainedRejectedOriginals": 1,
+  "externalReferenceInputs": 0,
+  "avatarInputs": 0,
+  "textRoot": "down-stand",
+  "sources": [
+    {
+      "id": "down-stand",
+      "taskId": "mt_d24bcd33687bb7f1b873a855e2d844a6",
+      "requestId": "ed2022bd-c0a4-4505-a4ad-9b027d05a21d",
+      "url": "https://images.aiwaves.tech/uploads/1791312801113-p4dey5jryx.webp",
+      "sha256": "05cd42da5b676129dcb3d86e1e4865fe0fd50fb530511fe9a89a50bcb6e51bfa",
+      "rawPath": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/fixed-sources/stand/down/source.webp",
+      "references": [],
+      "mode": "text",
+      "selected": true,
+      "records": {
+        "request.json": "7d02ccfbc75fce529a404b1d6c13e2d7ca32d43822840827b7d2bb62eb5aa439",
+        "response.json": "7ace239a5ec38f161dd978a1898909b08a9d0bc9cc68f70753ee116d869402d7",
+        "result.json": "cc87197adad5e2f1fb98b8012f7e0f37f0898cd55ec6ecc76b0c3db489e08d66",
+        "attempt.json": "cf7541ccb686b8349c4589b6f14647db8d7f97e7fa3d0748a88b81d200dd6fa3"
+      },
+      "portableRawPath": "raw/down-stand.webp",
+      "portableRecordsPath": "fixed-source-records/down-stand"
+    },
+    {
+      "id": "left-stand",
+      "taskId": "mt_a946eb2dc375459495946b72e0cb46cb",
+      "requestId": "e371d11e-05dd-4d32-9851-2f52969b9f85",
+      "url": "https://images.aiwaves.tech/uploads/1791312995375-ry0aswh2i7n.webp",
+      "sha256": "b903f1f6b1afba814c2ada0a83950e85c91ca922c06ca9766f16816397b94abc",
+      "rawPath": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/fixed-sources/stand/left/source.webp",
+      "references": [
+        "down-stand"
+      ],
+      "mode": "edit",
+      "selected": true,
+      "records": {
+        "request.json": "62c3b08a9a4a823110002e45f948ef4ca79981c4bafec570cfe9a5fdd788343f",
+        "response.json": "305498b78b4d3b759441e119d6a3f55e057ff5371a1097f52cbb816a292c02b3",
+        "result.json": "02acea5d7a3800af086cbf64773a95fc51962a695cefeefec5064b3ba8d45c84",
+        "attempt.json": "7a429dc9139d668d0e9e3d0ec92a429fca6e70e23ce33ff10a2e56c4aa530096"
+      },
+      "portableRawPath": "raw/left-stand.webp",
+      "portableRecordsPath": "fixed-source-records/left-stand"
+    },
+    {
+      "id": "up-stand",
+      "taskId": "mt_e8739753c38e2f05915eb84765197ba4",
+      "requestId": "1274aa9b-43ba-47e3-b7da-c8395afd99e8",
+      "url": "https://images.aiwaves.tech/uploads/1791313278432-dfvl3w49avv.webp",
+      "sha256": "38a82519f2095ac721ac44a3b5aff3bcdd014b495886bc91ab9050971904475e",
+      "rawPath": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/fixed-sources/stand/up/source.webp",
+      "references": [
+        "down-stand"
+      ],
+      "mode": "edit",
+      "selected": true,
+      "records": {
+        "request.json": "0d1bad69fdfa73122ce64428b0fdbc59dd22d3a6ec1454e54dbbd7e810dfe03e",
+        "response.json": "30621ad546799a620f8e38f5f078265a8097e3ba07f56de4d76338fe7fff264c",
+        "result.json": "b4ab5f05d67666f55483fa12dba70e1fea8054b32777ea6dceeb188404d774fa",
+        "attempt.json": "07820c56d6c443586111a07a9f421b5298ecdf6b484183c54d1c27c77e62aaa0"
+      },
+      "portableRawPath": "raw/up-stand.webp",
+      "portableRecordsPath": "fixed-source-records/up-stand"
+    },
+    {
+      "id": "crab-down-walkA-v1",
+      "taskId": "mt_85b49d3716bcc5017cd4019e815cb03d",
+      "requestId": "286a6ea5-3f5d-44a5-9dde-a2fa27cd519f",
+      "url": "https://images.aiwaves.tech/uploads/1791356417697-kcvvwwqv3d.webp",
+      "sha256": "10174ac2505ad5e76f90992bba222aaaeb9a3ad148f08d9d1adcb86e7a2d4760",
+      "rawPath": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/live-batches/media-c1/tasks/crab-down-walkA-v1/source.webp",
+      "references": [
+        "down-stand"
+      ],
+      "mode": "edit",
+      "selected": false,
+      "records": {
+        "request.json": "f80b24f01dc1f9b0396d013f78359a71d5b5f1db7cafa4a23066f3f6374a10c4",
+        "response.json": "7ea7c0222c84713ffca8aff521ec5ecb258d8f27a890586e40af92d4f7e52128",
+        "result.json": "638f479be958494a7481ab53fb546050058e164e8a4f0f7ced3ae3e63055ebcb",
+        "attempt.json": "c489e1c6f58b3b6dcb30ee5fd1dbd66eafb398f7625d884572c58fd1258569fd"
+      },
+      "portableRawPath": null,
+      "portableRecordsPath": "fixed-source-records/crab-down-walkA-v1",
+      "retainedRejectedEvidencePath": "evidence/rejected-originals/crab-down-walkA-v1/source.webp"
+    },
+    {
+      "id": "crab-down-walkA-v2",
+      "taskId": "mt_48899b9d0939762e380eeb184ecd6539",
+      "requestId": "7bdf100d-9467-4623-9f24-ec3d9c1a6774",
+      "url": "https://images.aiwaves.tech/uploads/1791356635752-zi4i22xlbsa.webp",
+      "sha256": "32f8f4097b8c6279411d984b474ec0504439b5d6be565296719bd8fcc48f27bb",
+      "rawPath": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/live-batches/media-c1/tasks/crab-down-walkA-v2/source.webp",
+      "references": [
+        "down-stand"
+      ],
+      "mode": "edit",
+      "selected": true,
+      "records": {
+        "request.json": "4c126d27432c3c09750c3b4d90c04a92b505d5f867ff3aa66fedd964e5ca4a17",
+        "response.json": "ac9c922f7a42515fcdb877e44feeba55e385f884e3c9b5a98f1b21e482b55617",
+        "result.json": "488454b1c004e2f4e4240702e0986e3c474ed26ddb24e60d8813f8f4849c3694",
+        "attempt.json": "fa8a926306fd2b74dcbe49fe067ac366eac984497af2a41e3e4f79fa91ecceef"
+      },
+      "portableRawPath": "raw/crab-down-walkA-v2.webp",
+      "portableRecordsPath": "fixed-source-records/crab-down-walkA-v2"
+    },
+    {
+      "id": "crab-down-walkB-v1",
+      "taskId": "mt_544098f2a02d007e4b7ecce77f4cecaa",
+      "requestId": "693b80de-ed57-44a7-ba6e-26d51219d2c7",
+      "url": "https://images.aiwaves.tech/uploads/1791356861425-snzdzu08p8.webp",
+      "sha256": "4d67346106b8bae2d614eb72f7f2616341a0bed24c589f2095e4e89f4789abcb",
+      "rawPath": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/live-batches/media-c1/tasks/crab-down-walkB-v1/source.webp",
+      "references": [
+        "crab-down-walkA-v2"
+      ],
+      "mode": "edit",
+      "selected": true,
+      "records": {
+        "request.json": "7d782453c92d36be0e63f7f71857bf725e008da68ad7db14c0d989427adc052d",
+        "response.json": "117fc04ffe38828e492eca93bb6e53f59b8658e44b9e72fe2212748c26bc68b4",
+        "result.json": "0718f664a7190129f6972d4bf56c8608f07d9750bb13afc4fb9d86fe54f30c40",
+        "attempt.json": "dd090259340c3148ce45535659014dbd55c5ec979d3b97e775512cc29b556ab2"
+      },
+      "portableRawPath": "raw/crab-down-walkB-v1.webp",
+      "portableRecordsPath": "fixed-source-records/crab-down-walkB-v1"
+    },
+    {
+      "id": "crab-left-walkA-v1",
+      "taskId": "mt_3e496f5b5218c141d72ce570400ea77c",
+      "requestId": "9a79c362-3b41-4a11-8564-614fe6a4cdbf",
+      "url": "https://images.aiwaves.tech/uploads/1791357217743-y4klj4xsalh.webp",
+      "sha256": "f0d9ee14e4aab8a336441494ae6797cebcec1fc72ba9f6fe65b76abc38556d99",
+      "rawPath": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/live-batches/media-c1/tasks/crab-left-walkA-v1/source.webp",
+      "references": [
+        "left-stand"
+      ],
+      "mode": "edit",
+      "selected": true,
+      "records": {
+        "request.json": "4680d60e5f2b42ada632f82c01e9c5fc4aa3a5c38042a4c829dc5198992c14a1",
+        "response.json": "eb6353008f0a84a722a635889c1099f633135a935eb0db34d962c7f0d6059dbf",
+        "result.json": "48316e19e308f17337da0ff154b251ab0308b308afc6691ed593c3dbe4ee670f",
+        "attempt.json": "bd1d2fa20ac6b32739d0cd7b1bac3140ad9c73bc99484261b63d19e29335b73c"
+      },
+      "portableRawPath": "raw/crab-left-walkA-v1.webp",
+      "portableRecordsPath": "fixed-source-records/crab-left-walkA-v1"
+    },
+    {
+      "id": "crab-left-walkB-v1",
+      "taskId": "mt_3c22f71584a804f129ea46d8b188efaa",
+      "requestId": "d5a5a7ef-2b3a-42f7-b016-d6b0bc7a31bc",
+      "url": "https://images.aiwaves.tech/uploads/1791357346513-xqzp6uye8g.webp",
+      "sha256": "e792c68bb49a12107f5d92c0a74e31b72f3d828666373c4366039b0cf0f17660",
+      "rawPath": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/live-batches/media-c1/tasks/crab-left-walkB-v1/source.webp",
+      "references": [
+        "crab-left-walkA-v1"
+      ],
+      "mode": "edit",
+      "selected": true,
+      "records": {
+        "request.json": "4465911656a10d2950e4d52d08a8f5b6edba468dbc1e3fb1dda349c654121fce",
+        "response.json": "aec58002eae62ee588ee99a7fc54572e38d298c17959331f4c9c29546825ce0d",
+        "result.json": "e18c7eb868c4b2f0c1fc38d7f8770966beb9df0cdc1b040699559928cd9fba84",
+        "attempt.json": "a64e9ccd99a93c57a5dbbbfbc3e579356c0adfa8406e1727518ea47bed07aab5"
+      },
+      "portableRawPath": "raw/crab-left-walkB-v1.webp",
+      "portableRecordsPath": "fixed-source-records/crab-left-walkB-v1"
+    },
+    {
+      "id": "crab-up-walkA-v1",
+      "taskId": "mt_776bae819753cd4e2ab9dc0ee330eff4",
+      "requestId": "8d7b3f97-8656-47ba-813b-cf24ade32490",
+      "url": "https://images.aiwaves.tech/uploads/1791357442520-de5k9zrocg.webp",
+      "sha256": "cd47829aa3b54486ade28fc7616e098e95f697bb4cc0a03ed4d6a17b2842f881",
+      "rawPath": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/live-batches/media-c1/tasks/crab-up-walkA-v1/source.webp",
+      "references": [
+        "up-stand"
+      ],
+      "mode": "edit",
+      "selected": true,
+      "records": {
+        "request.json": "f7eb3feba0a64dcd3bfa08b68551f70d0033f366ad0512e4a2b4beefea4c1da3",
+        "response.json": "f0da586e9acb6b2ae2958e991630e21a4cd2a4da7d4e9258d8e8bbd86a86b941",
+        "result.json": "22c8a60dd23e2cd45d18f78bb0f90dcc00b01f972ae00a1d76533892670d458a",
+        "attempt.json": "3e88de456f0c6dc97fe5d2cefac7496e65330c88719c0c365c9d0e89a2f18845"
+      },
+      "portableRawPath": "raw/crab-up-walkA-v1.webp",
+      "portableRecordsPath": "fixed-source-records/crab-up-walkA-v1"
+    },
+    {
+      "id": "crab-up-walkB-v1",
+      "taskId": "mt_6935d6ae6d6f08ca35f192147aed07f4",
+      "requestId": "7b93195d-6def-4ab1-898c-5188b629ba10",
+      "url": "https://images.aiwaves.tech/uploads/1791357559652-gu0tilw9476.webp",
+      "sha256": "6b60ea0e62ec6361d6fdf10aef28a89473c46af16256e6d3f28ec7c0c5d79fd5",
+      "rawPath": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/live-batches/media-c1/tasks/crab-up-walkB-v1/source.webp",
+      "references": [
+        "crab-up-walkA-v1"
+      ],
+      "mode": "edit",
+      "selected": true,
+      "records": {
+        "request.json": "ad8a666dfd7f17d4d904aeeefe1c6149834269d88abc0020d65fae4e7f12961a",
+        "response.json": "f5a6a284b15797091321e6e454c4a37b18a9dd356ba66d5d2fb8c5da759caf45",
+        "result.json": "552096ba3e7bd978358ba5389bd92991de957a823c416b23d9c8fe31c2c9938e",
+        "attempt.json": "455c1cfa8ded3ed77bd5e6832209f1a2c3d22fab1c933da4132d8ae2847a0d67"
+      },
+      "portableRawPath": "raw/crab-up-walkB-v1.webp",
+      "portableRecordsPath": "fixed-source-records/crab-up-walkB-v1"
+    }
+  ]
+}

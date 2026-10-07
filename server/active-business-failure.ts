@@ -12,6 +12,8 @@ for(const code of ["ACTION_ALREADY_APPLIED", "ANIMAL_AWAY", "ANIMAL_CONTENT_CLOS
 for(const code of ['PLANT_USES_CLOSED','PLANT_USES_STARTS_CLOSED','MINT_CONTENT_CLOSED','INVALID_PLANT_USE_COMMAND','PLANT_USE_TARGET','DELIVERY_MEMORY_MISSING'])gameplay.add(code);
 // Relationship user actions; clock misconfiguration and unsupported save data stay nonterminal.
 for(const code of ['RELATIONSHIP_TOPIC_UNAVAILABLE','RELATIONSHIP_OBSERVATION_UNAVAILABLE','RELATIONSHIP_EXPLICIT_ACTION_REQUIRED'])gameplay.add(code);
+// Native crab finite gameplay failures; saved-state/clock failures remain nonterminal.
+for(const code of ['NATIVE_CRAB_CLOSED','NATIVE_CRAB_CHECKPOINT_REQUIRED','LEAVE_CRAB_SPACE','CRAB_NEEDS_QUIET_MOMENT','NATIVE_CRAB_REF_MISMATCH'])gameplay.add(code);
 class ActiveBusinessRejection extends Error{readonly terminal=true;readonly status=409;constructor(readonly code:string){super(code)}}
 export function brandActivePrepareFailure(error:unknown){return error instanceof Error&&gameplay.has(error.message)?new ActiveBusinessRejection(error.message):error}
 export function activeBusinessHttpFailure(error:unknown){

@@ -259,3 +259,38 @@ withBasilPlantUses(assembly,{enabled,newStarts})沿原runtime、life/land/animal
 2. 目录结构：`story/relationship-growth.ts`为可选schema1、阶段、三位作者profile与纯读投影；state/binding接入原动作；`server/relationship-narrative.ts`仅受限句子候选；Relationships详情与原实体面板呈现记忆/观察；新增relationship-growth测试、loopback服务器与UI脚本。
 3. 核心模块：只读upgrade不迁移，首次合法动作原子添加relationshipsV1。旧数值/支线/暂缓人物和其它模块字段保留。已有工具袋/听歌进入历史证据，不补日期或奖励；迁移后才完成原支线时，recordRelationshipStory在原事务镜像完成事实和实际分钟，legacy快照不被覆写，原奖励仍只结算一次。createRuntime第三参数可注入已提交head的分钟，禁止额外计时源。schema/rules严格拒绝未知版本；阶段即时推导，AI候选没有effects。原身份epoch/旅程隔离/pending重放沿用，音频/相机/地图不改。
 4. 扩展点：加居民需relationshipProfiles独立作者内容、已有身份/日程与真实物件接缝；调阶段改relationshipStage同时新rules版本；候选文案在profile或narrative准入句子中；其它系统share通过其原事务接入，不能加第二包装器或再发奖励。完整迁移与B2/地图验收见relationship-growth-20261007.md。本地SQLite/合成账号/桌面手机尺寸不替代正式PG、平台账号/实机和发布。
+
+
+## 2026-10-07 独立消费者与AI结构约束
+本轮基于生产6bcf74e6cbc328c16c14d93add68142898e8487c的公开源码ce6944b756efe8ed0ff0f7453673d5c82141cbbd独立检出；前文早期本地/未发布描述属于历史记录，当前游戏已由唯一owner发布。本分支没有部署或库写入。运行使用既有Node22依赖，不改锁包/vendor/凭据。
+`src/animals/native-crab-profile.ts`固定四向扫掠面；`native-crab.ts`复用距离运动核，提供旁移、限幅退避、受阻等待和只读诊断观察，不能注册生产物种或发proof。`native-crab-art.ts`提供完整RPGJS sheet与隐藏状态，`native-crab-manifest.json`和public元数据逐字一致，九源来源/SHA/统一处理均固定。`spatial.ts`仅新增共享clearance helper及类型收窄，不改既有猫鸥路径行为。
+`_qa/crab-c1.html`为dev-only诊断，`_qa/crab-c1-view.ts`使用本基线真实RPGJS/Pixi/连续空间适配器和地图；仅本地fixture确认移动，原动态动物引擎和居民走道保留。`_qa/animal-stand-space-geometry.json`重新实测23套人物（含主角）、2套动物和112件道具，另保留海鸥完整作息与飞行区域；不会用alpha包络代替蟹地面扫掠面。几何sidecar和QA元数据不进入产品bundle。
+`server/animal-grounding.ts`为确定性事实编译器，逐个体精确校验period/scene/activity，拒绝自由title/brief/page/effect/reward/proof字段；`server/animal-proposals.ts`仅test environment可用，继续原builder/gateway/CAS/artifact固定hash/同ID重放。已采用旧定义按原hash读取，不静默改写；关闭newStarts仍能读取旧定义。审查最大8条、每条300字符，超限不截断也不采用。没有新增production路由或真实模型调用。
+扩展时先改作者profile/原生素材manifest并复验所有帧/岸图；新的物种能力需工程实现，不能改AI描述绕过准入。正式蟹authority观察、存档启用、库登记与生产发布需唯一集成/库owner显式接入；本补丁维持productionEnabled=false且旧档拒绝蟹动物记忆。
+
+## 2026-10-07 UI 首期独立改造（基线3b09a9b，未发布）
+
+### 1. 技术栈
+沿正式React/TypeScript/Vite8与RPGJS/Pixi、英中轻量tx和原Story Session客户端。使用现有Node22.22.2、依赖和Chromium测试；无新增软件/依赖、后台、schema、权限、付费机制、图像/模型调用或运行时API。base仍`./`，UUID API base、alteru存储adapter与iOS长按guard保留。历史章节的“候选/未启用”等措辞属于当时记录；本次正式输入以owner的3b09a9b及09:35双部署封存回执为准，已有罗勒、自然时钟、B2猫鸥和关系成长。
+
+### 2. 目录结构
+- `src/main.tsx`：四主入口、面板/次类/来源返回栈、各页滚动快照、目标到事情的跳转、旅程加载清理。既有动作、身份epoch、挑战和自然时钟暂停继续在原App接缝执行。
+- `src/ui/Bag.tsx`：Goods/Records/Keepsakes与物品列表、单一实物计数、分类/搜索/详情、操作结果和断线恢复。`bagRows`为纯读取模型，投影失配时不暴露消费动作；投影暂失时按保存的lifeV1 lots保留批次数量。
+- `src/ui/Matters.tsx`：复用作者化relationshipStory稳定ID、成长next、已有订单、农畦/线索和暂停对练。共享事项汇总一份，现场要求保持。
+- `src/ui/Journeys.tsx`、`src/story/client.ts`：正常游玩目录读取、新建确认及切换；只使用已有sessions API，普通browser management上下文仍受当前bound/scope/pending守卫。
+- `src/ui/navigation.css`、`icons.tsx`、`Relationships.tsx`、`Map.tsx`：原像素系统的布局/SVG/局部控件，真实相机仍读取既有DOM安全区，无另一相机。
+- `_qa/ui-*`：仅合成账号、任务自有临时SQLite与独立浏览器；报告、截图和固定guest-shell响应放在本任务根evidence，不使用真实档。
+
+### 3. 核心模块
+导航层保存主页面/人物/地点/次类/scroll，来源返回恢复原状态；旅程ID变化清空导航、背包选择及临时投影。世界入口和面板入口是一套地图/人物/行囊/系统。人物有认识的人/事情/回忆，地图有地点/探索，系统有我的旅程/设置/操作帮助。记忆读取原完整history，不再自动生成重复情境摘要。
+
+BagState提升到App以保存分类、搜索和选择。rows稳定按类型及固定ID排序；view batch拥有作物库存权威，替代root crop/seed计数，纪念物只读已有实物数量。0份结果可继续读，不产生虚假库存。少量物品不显示搜索，超过12项才显示；手机选择器/桌面按钮共用状态。读失败后已升级存档的lifeV1批次与旧未升级items分别读取，不迁移或改写。未知旧批次保持只读身份，不猜物品名。
+
+物品操作只复用原留种、点心、照片和动物册取消；播种/出售/交货/分享保留原地点及服务端binding。当前请求busy与未确认pending分开：pending锁住新消耗，空闲后显示同一请求的重连，connect仍重放原action_id。数量投影须匹配head再开放批次操作。不定回包的新旅程保留原enrollment_id直到完整connect确认，新建不删除或覆盖任何旧档。切换前flush既有movement；活动挑战、锁定回合和pending阻止换档。账号目录沿原身份，browser possession不冒称离线或跨设备账号；旧browser档不会自动认领。
+
+所有新显示文案用现有tx，国际故事与美元保持；音频仍summerAudio，成功事件沿原动作回执，不增音效。全局guest-shell及adapter不改。测试只对任务临时服务读写，公开扩展响应固定取样加载，其他外网阻断；无真实Telegram/生产PG验收声明。
+
+### 4. 扩展点与整合边界
+调入口/来源返回改main；调背包类型、排序或数量读取改Bag的纯模型；调尺寸/颜色改navigation.css；新增事情必须来自已存在的作者化投影，不能在UI发奖励或解锁。第二期命名/删除/覆盖须另立服务端合同与明确确认，当前不提供按钮或假API。owner最新原生蟹等变更与main/docs存在同文件冲突时按精确diff人工合并，不能整树覆盖；AnimalNotebook新物种投影按其owner类型继续消费，不回退其服务或renderer。
+
+本切片尚未发布。接入后应在唯一owner当前HEAD重跑编译、合成账号新建/切换/重放、完整罗勒与关系/时钟组合，再由既有独立Telegram任务确认宿主安全区与真实身份。浏览器合成证明可执行，理解仍unverified。

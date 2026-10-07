@@ -1,3 +1,4 @@
+import {nativeCrabEntities} from '../animals/native-crab-config';
 import {techPeople} from './tech-nomads';
 import {nextPeople} from './next-residents';
 import {acceptedAnimals} from '../animals/art';
@@ -224,6 +225,7 @@ for(let i=0;i<3;i++)object('garden','crop-bed-'+(i+1),['菜畦 '+(i+1),'Growing 
 rooms.garden.entities.push({id:'visitor-note',kind:'object',label:['游客便条','Visitor note'],at:{x:600,y:600},approach:{x:592,y:634},actions:[]});
 object('grocery','crop-counter',['种子与收获柜台','Seeds & harvest counter'],455,365,shopVerbs);
 for(const {scene,entity} of authoredAnimalEntities(acceptedAnimals))rooms[scene].entities.push(entity);
+for(const {scene,entity} of nativeCrabEntities)rooms[scene].entities.push(entity);
 export function entityAt(scene:string,id:string){return rooms[scene]?.entities.find(e=>e.id===id)}
 
 export function worldWithFlags(flags:string[]):World {

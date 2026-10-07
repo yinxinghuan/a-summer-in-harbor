@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "baseline": "ce6944b756efe8ed0ff0f7453673d5c82141cbbd",
+  "evidenceRoot": "/Users/yin/code/games/harbor-animal-system-20261006/crab-admission-20261007",
+  "portableEvidenceRoot": "extract deliverables/consumer and supporting evidence package at a new directory; root filenames remain as recorded",
+  "files": [
+    {
+      "path": "evidence/final-summary.json",
+      "sha256": "d3832f1fa3d48fd93402c9d1316cac00f8cdd522ec0e4519c7a41edd445ad823",
+      "bytes": 1851
+    },
+    {
+      "path": "evidence/native-ground-matrix.json",
+      "sha256": "6820378046756d4b3cc55e9941c9e8b105db1660459bc4c7c19ecc30e123b4ef",
+      "bytes": 459
+    },
+    {
+      "path": "evidence/regression-final.tap",
+      "sha256": "48941e1fb8a0c62344e6d199fd257199a57fbff0a1fa7b6a64aa49e6422b9f98",
+      "bytes": 34600
+    },
+    {
+      "path": "evidence/native-crab/REPORT.json",
+      "sha256": "45f4932709a900d17f6de7447c81eef6b63c592db7d289c397672fb5dfa19cff",
+      "bytes": 3647912
+    },
+    {
+      "path": "evidence/production-entry-unchanged.json",
+      "sha256": "250e1c5e794ce754242e8f5f459c660b01d4fe40b6e452a951ec9181521418e6",
+      "bytes": 1772
+    },
+    {
+      "path": "evidence/support-annotations.json",
+      "sha256": "ceacf92b63b7fd569388f993b34ef508e2b2d9da95eed4e32967394cd879a88a",
+      "bytes": 14203
+    },
+    {
+      "path": "evidence/build-final.log",
+      "sha256": "d7f2fd8d8ef58ea81f43ce7d653b6d3cdb3ed86baa246f2c24016cd933dcfe38",
+      "bytes": 1534
+    },
+    {
+      "path": "evidence/secrets-final.log",
+      "sha256": "394a65a4e3cdae472e76b0888481fc99553e0b5c46b6574bd56048a3736ce83d",
+      "bytes": 104
+    },
+    {
+      "path": "evidence/api-base-final.log",
+      "sha256": "5bc24fd5626b31ce387cb40e94b6471f2d4cb0fef0d7c46e427cfd381757400c",
+      "bytes": 104
+    },
+    {
+      "path": "evidence/ui-strict-final.log",
+      "sha256": "4b6225a98df82950fa069b2b2e91e5c53df1abd100fac041a84676029a581af1",
+      "bytes": 170
+    },
+    {
+      "path": "evidence/old-sealed-manifest-final.json",
+      "sha256": "a976f679c0743bc45cf855f65eac925e577ba9b47012b375603b00e2bb8934c9",
+      "bytes": 189
+    }
+  ]
+}

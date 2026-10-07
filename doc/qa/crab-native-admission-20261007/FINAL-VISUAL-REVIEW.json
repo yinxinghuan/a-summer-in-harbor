@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "revision": "crab-native-consumer-ai-review-v2-20261007",
+  "timestampUTC": "2026-10-07T09:22:16Z",
+  "reviewer": "Codex AI visual applicability review; not human opinion",
+  "effectiveStatus": "ACCEPTED_FOR_THIS_GAME_LOCAL_NATIVE_CONSUMER",
+  "separateGates": {
+    "singleImages": "9 accepted native originals; rejected down-walkA-v1 retained",
+    "familyAndMotion": "stand/A/B in down,left,up and whole mirrored right: consistent low broad shell, eight walking legs, raised two pincers, native lateral stride",
+    "targetScene": "PASS three original shore maps, latest continuous renderer, both viewport sizes",
+    "technicalConsumer": "PASS fixed support sweep, root, GPU frames, visual/ground guards",
+    "projectRights": "PROJECT_GAME_USE_ACCEPTED; original business scope applied via recorded AI assessment",
+    "productionActivation": "NOT_PERFORMED",
+    "libraryMutation": "NOT_PERFORMED"
+  },
+  "evidence": [
+    {
+      "path": "evidence/support-contact.png",
+      "sha256": "2b7980407e1d931d2fa5e9c233c62fc5eba63f1743a83053763986d510d504e8"
+    },
+    {
+      "path": "evidence/support-annotations.json",
+      "sha256": "ceacf92b63b7fd569388f993b34ef508e2b2d9da95eed4e32967394cd879a88a"
+    },
+    {
+      "path": "evidence/native-crab/actual-renderer-320-native-gait-contact.png",
+      "sha256": "9241180a48ea29bfc37b1eb4e53c4191844271d6c926393cd515c7ad4286368e"
+    },
+    {
+      "path": "evidence/native-crab/actual-renderer-390-native-gait-contact.png",
+      "sha256": "6895eab57ab2d1954591c26b29290a8a3c1fff362d2220c5d6cf235a5c28f2f3"
+    },
+    {
+      "path": "evidence/native-crab/all-24-full-layout-contact.png",
+      "sha256": "7ec36a2600c8db4b14c1aa70551032a78eb68a8b6e43c2d1000d3a7c93bbb494"
+    },
+    {
+      "path": "evidence/native-crab/platform-layout-320x568-dock-down-stand.png",
+      "sha256": "94a7fc47d09504d3b9f5fb92ebcd527ecb8e3502b9849f1dfa6349ad8e897ab7"
+    },
+    {
+      "path": "evidence/native-crab/actual-rAF-coast-down.gif",
+      "sha256": "981c120e9256bec7ce1e2a89e30b04e645559f4bc51144489dd8c34ece96115f"
+    },
+    {
+      "path": "evidence/native-crab/contact-source-map.json",
+      "sha256": "e26a4623186012159fd129bb42d8aff981053752655fba5afd94d09fe84b21f4"
+    }
+  ],
+  "findings": [
+    "AI visually inspected annotated originals and final renderer captures, after same-state repair recapture; no remaining P0/P1 in the scoped native display/motion slice",
+    "Complete limb and pincer silhouettes remain within the protected envelope at 320 width; existing landscape and actor proportions retained",
+    "World/event/depth root is fixed for stand/A/B, right uses only a complete horizontal reflection and whole-frame root compensation",
+    "Lifted toes are included in conservative swing reservation; no alpha hull used as ground, no weight/contact-physics claim",
+    "No exact new projection angle inferred from visible shell/top area; comparison uses the original accepted world camera"
+  ],
+  "mechanicalEvidence": {
+    "passed": true,
+    "cases": 24,
+    "sizes": [
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "scenes": [
+      "coast",
+      "beach",
+      "dock"
+    ],
+    "facings": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "caseScreenshots": 288,
+    "actualRAFSamples": 144,
+    "collisionCheckedApproaches": 24,
+    "browserErrors": 0,
+    "externalRequests": 0,
+    "scope": "Original RPGJS/Pixi renderer and Harbor maps/actors, synthetic local QA candidate; browser viewports, not physical phone or formal MiniApp; no authority/save/library/production writes",
+    "formalMiniApp": false,
+    "physicalDevice": false,
+    "completeMainHUD": false,
+    "guestShell": false,
+    "productionAuthority": false,
+    "movementAcknowledgment": "explicit local isolated fixture; current continuous adapter with normal walkTo and body collisions",
+    "fileNameCaveat": "platform-layout-* names are inherited; evidence is isolated dev renderer, not full product platform layout acceptance"
+  },
+  "humanOverride": null,
+  "historicalRecordsPreserved": true,
+  "supersedes": "Only scoped rights/profile/local consumer HOLD in frozen prior package; raw rejects, human judgments and prior live AI failure records remain unchanged",
+  "unverified": [
+    "formal Telegram MiniApp",
+    "physical iPhone",
+    "cross-device or second real account",
+    "complete production HUD and guest-shell states",
+    "new-player comprehension",
+    "production crab authority/save integration",
+    "real model v4 generation/review"
+  ]
+}

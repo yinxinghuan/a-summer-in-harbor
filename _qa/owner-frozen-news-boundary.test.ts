@@ -1,0 +1,28 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {configuredNews} from '../server/news/configured';import {createRuntime} from '../server/runtime';import {entityAt} from '../src/world/data';import {randomUUID} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+test('actual formal frozen catalog: exact expiry rejects unread news and retains started fiction without a refresh',async()=>{
+ const path='server/news/frozen-catalog-20261006.json';
+ const frozenBytes=readFileSync(path,'utf8');const edition=JSON.parse(frozenBytes).records[0];
+ const expiry=Date.parse(edition.expiresAt);let now=expiry-1;
+ const b=configuredNews(createRuntime(),path,()=>now);
+ const unread={...b.runtime.initial('en',randomUUID()),scene:'garden',known:['dani'],position:entityAt('garden','dani')!.approach};
+ const action={action_id:randomUUID(),expected_version:0,scene:'garden',position:unread.position,target:'dani',action:'talk:visitor-news'};
+ assert.equal(b.newsProject!(unread).newsAvailability,'current');
+ const started=(await b.runtime.prepare(unread,action)).head;
+ assert.ok(started.flags.includes('news:heard'));
+ now=expiry;
+ assert.equal(b.runtime.initial('en',randomUUID()).newsEdition,undefined);
+ assert.equal(b.newsProject!(unread).newsAvailability,'expired');
+ assert.equal(b.newsProject!(unread).version,unread.version);
+ await assert.rejects(b.runtime.prepare(unread,{...action,action_id:randomUUID()}),/NEWS_SOURCE_UNAVAILABLE/);
+ const continued=(await b.runtime.prepare(started,{...action,action_id:randomUUID(),expected_version:started.version,action:'talk:visitor-test'})).head;
+ assert.equal(continued.newsEdition.id,edition.id);
+ assert.equal(continued.newsEdition.fetchedAt,edition.fetchedAt);
+ assert.equal(continued.newsEdition.expiresAt,edition.expiresAt);
+ assert.ok(continued.flags.includes('news:test'));
+ const finished=(await b.runtime.prepare(continued,{...action,action_id:randomUUID(),expected_version:continued.version,action:'talk:visitor-budget'})).head;
+ assert.ok(finished.flags.includes('news:checked'));
+ assert.equal(finished.cash,unread.cash);
+ assert.equal(finished.newsEdition.expiresAt,edition.expiresAt);
+ assert.equal(readFileSync(path,'utf8'),frozenBytes);
+});

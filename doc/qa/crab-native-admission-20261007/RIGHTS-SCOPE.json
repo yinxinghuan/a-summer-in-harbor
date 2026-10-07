@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "status": "PROJECT_GAME_USE_ACCEPTED",
+  "kind": "AI applicability assessment of existing project business confirmation; not new human grant or provider legal guarantee",
+  "basis": [
+    {
+      "path": "/Users/yin/code/games/rpg-asset-library/admission-candidates/harbor-three-accepted-20261003-v1/execution-v1/rights-confirmation.json",
+      "sha256": "5dd8c051aaa4d9ec538dc63eed7d23db26a1c41fd7d6db4f706366ecc90f5f75",
+      "localEvidenceCopy": "fixed-rights/1-rights-confirmation.json"
+    },
+    {
+      "path": "/Users/yin/code/games/rpg-asset-library/admission-candidates/harbor-three-accepted-20261003-v1/execution-v1/authority.json",
+      "sha256": "63cb09e7e71c093cc451571501fe8416a4432696cc2ba759a51de3eec0487ab9",
+      "localEvidenceCopy": "fixed-rights/2-authority.json"
+    },
+    {
+      "path": "/Users/yin/code/games/harbor-animal-system-20261006/crab-c1-aim2-20261007/source/doc/qa/tech-nomads-owner-20261006/producer-rights-scope-application.json",
+      "sha256": "40bd7cc6ee48b15141fcb241e20e77d587916a1e32ce57df5193f870f5b16071",
+      "localEvidenceCopy": "fixed-rights/3-producer-rights-scope-application.json"
+    }
+  ],
+  "originalHumanMessageId": "01a100e2-41e5-7226-9b54-1597d0a75b38",
+  "originalCoveredTaskListDoesNotLiterallyContainCrabTasks": true,
+  "applicability": "same authorized AlterU Media service, same Harbor project, text-only generated ancestor graph, same previously applied technical processing/source-build distribution standard uses; all nine originals fixed in SOURCE-CHAIN.json",
+  "license": {
+    "id": "alteru-project-use-confirmed-20261003",
+    "name": "AlterU project usage permission (business confirmation)",
+    "notice": "Generated through AlterU Media for this project. Recorded project permission covers technical processing, internal production, reuse across AlterU games and distribution with game source or builds. No additional attribution requirement was supplied in the business confirmation. This notice records project usage permission, not a universal open-source asset license. Source generation/task and local modifications remain in each manifest.",
+    "allowed": true
+  },
+  "allowedUse": [
+    "copy",
+    "whole-frame technical processing",
+    "internal agent use",
+    "reuse across AlterU games",
+    "distribution with project source/build under separately authorized release"
+  ],
+  "notGranted": [
+    "new generation budget",
+    "shared inventory mutation",
+    "standalone marketplace resale",
+    "general third-party sublicense",
+    "universal MIT/CC asset license",
+    "exclusive copyright or underlying-provider guarantee",
+    "production deploy authorization"
+  ],
+  "rightsBlockerForThisGame": null,
+  "libraryRegistration": "consumer contract ready; mutation remains library owner responsibility"
+}
