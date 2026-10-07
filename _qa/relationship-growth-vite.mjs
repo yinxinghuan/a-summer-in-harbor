@@ -1,0 +1,2 @@
+import {defineConfig} from 'vite';import base from '../vite.config.ts';
+export default defineConfig({...base,cacheDir:'.data/vite-relationship-growth',preview:{host:'127.0.0.1',port:5347,strictPort:true,proxy:{'^/[0-9a-f-]{36}/api/':{target:'http://127.0.0.1:5346',rewrite:p=>p.replace(/^\/[0-9a-f-]{36}/,'')}}},server:{host:'127.0.0.1',port:5347,strictPort:true,proxy:{'/qa/':{target:'http://127.0.0.1:5346'},'^/[0-9a-f-]{36}/api/':{target:'http://127.0.0.1:5346',rewrite:p=>p.replace(/^\/[0-9a-f-]{36}/,'')}}}});

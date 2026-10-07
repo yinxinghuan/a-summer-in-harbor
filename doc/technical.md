@@ -252,3 +252,10 @@ withBasilPlantUses(assembly,{enabled,newStarts})沿原runtime、life/land/animal
 
 ## 4. 扩展点
 在最新owner组合上局部装配wrapper，按C接缝复验时间/动物；不要重复包B2。B仅可选本地wild mint fixture，默认false、正式素材仍HOLD。既有留种沿原规则，批次新配额尚未实施。所有生成/生产/发布由另授权与唯一owner流程处理。
+
+
+## 2026-10-07 人物关系成长 v1.0（独立候选）
+1. 技术栈：沿用React/TypeScript/Vite、RPGJS空间渲染、Story Session权威事务，无新依赖。
+2. 目录结构：`story/relationship-growth.ts`为可选schema1、阶段、三位作者profile与纯读投影；state/binding接入原动作；`server/relationship-narrative.ts`仅受限句子候选；Relationships详情与原实体面板呈现记忆/观察；新增relationship-growth测试、loopback服务器与UI脚本。
+3. 核心模块：只读upgrade不迁移，首次合法动作原子添加relationshipsV1。旧数值/支线/暂缓人物和其它模块字段保留。已有工具袋/听歌进入历史证据，不补日期或奖励；迁移后才完成原支线时，recordRelationshipStory在原事务镜像完成事实和实际分钟，legacy快照不被覆写，原奖励仍只结算一次。createRuntime第三参数可注入已提交head的分钟，禁止额外计时源。schema/rules严格拒绝未知版本；阶段即时推导，AI候选没有effects。原身份epoch/旅程隔离/pending重放沿用，音频/相机/地图不改。
+4. 扩展点：加居民需relationshipProfiles独立作者内容、已有身份/日程与真实物件接缝；调阶段改relationshipStage同时新rules版本；候选文案在profile或narrative准入句子中；其它系统share通过其原事务接入，不能加第二包装器或再发奖励。完整迁移与B2/地图验收见relationship-growth-20261007.md。本地SQLite/合成账号/桌面手机尺寸不替代正式PG、平台账号/实机和发布。

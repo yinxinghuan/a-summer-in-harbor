@@ -1,3 +1,4 @@
+import {growthTopicIds,growthObservationVerbs,relationshipProfiles} from './relationship-growth';
 import {nomadTopicIds} from './tech-nomads';
 import {nextTopicIds} from './next-neighbors';
 import {newsTopicIds} from './town-news';
@@ -13,8 +14,8 @@ import type {World} from '../engine/world';
 const key=(scene:string,entity:string,verb:string)=>scene+'/'+entity+'/'+verb;
 function verbs(e:Entity):string[]{
  if(e.kind==='portal')return ['travel'];
- if(e.person)return ['introduce','ask',...(e.person==='june'&&rooms.workshop.entities.includes(e)?['notes-generate']:[]),...(topics[e.person]??[]).map(t=>'talk:'+t.id),...[...lifeTopicIds(e.person),...nextTopicIds(e.person),...nomadTopicIds(e.person)].map(id=>'talk:'+id),...(e.person==='idris'?['talk:class-invite']:[]),...(e.person==='dani'?newsTopicIds.map(id=>'talk:'+id):[]),...(e.person==='idris'?['sparring','footwork','endurance']:e.person==='ruth'?['fishing']:[]).map(id=>'challenge-start:'+id)];
- return [...(e.actions??[]),...(e.id==='terrace'?['challenge-start:repair']:e.id==='old-map'?['challenge-start:map']:[])];
+ if(e.person)return ['introduce','ask',...(e.person==='june'&&rooms.workshop.entities.includes(e)?['notes-generate']:[]),...(topics[e.person]??[]).map(t=>'talk:'+t.id),...[...(relationshipProfiles[e.person]?growthTopicIds:[]),...lifeTopicIds(e.person),...nextTopicIds(e.person),...nomadTopicIds(e.person)].map(id=>'talk:'+id),...(e.person==='idris'?['talk:class-invite']:[]),...(e.person==='dani'?newsTopicIds.map(id=>'talk:'+id):[]),...(e.person==='idris'?['sparring','footwork','endurance']:e.person==='ruth'?['fishing']:[]).map(id=>'challenge-start:'+id)];
+ return [...growthObservationVerbs(e.id),...(e.actions??[]),...(e.id==='terrace'?['challenge-start:repair']:e.id==='old-map'?['challenge-start:map']:[])];
 }
 const entityDefs=Object.values(rooms).flatMap(r=>r.entities.map(e=>({
  id:r.id+'/'+e.id,scene:r.id,position:{x:e.at.x-8,y:e.at.y-6},approach:e.approach,states:['present'],
