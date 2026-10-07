@@ -1,0 +1,3 @@
+.harbor-rel .harbor-person-avatar{display:block;position:relative;width:72px;height:90px;flex:none;overflow:hidden;background:#fff4d9}
+.harbor-rel .harbor-person-avatar img{position:absolute;max-width:none;object-fit:contain;image-rendering:pixelated;pointer-events:none}
+@media(max-width:360px){.harbor-rel .harbor-person-avatar{width:64px;height:80px}}

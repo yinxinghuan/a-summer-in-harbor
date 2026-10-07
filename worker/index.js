@@ -12,7 +12,11 @@ export async function handleApi(request,env){
  const demo=env.HARBOR_IDENTITY_MODE==='temporary-unverified';
  const url=new URL(request.url),path=url.pathname;
  const demoRoute=demo&&['/api/account/legacy','/api/account/claim'].includes(path);
- if(!demoRoute&&!/^\/api\/(?:health|bootstrap|usage|sessions(?:\/[a-f0-9-]{36}(?:\/(?:action|checkpoint|events|assets\/(?:home|cafe|garden)\/(?:prepare|package|check|manifest|blob)|media\/workshop-annex-[12](?:\/(?:status|prepare))?))?)?)$/.test(path)||url.search&&!/^\?after=\d{1,12}$/.test(url.search))return fail('NOT_FOUND',404);
+ const lifeRead=/^\/api\/sessions\/[a-f0-9-]{36}\/(?:life|land-preview)$/.test(path);
+ const landRead=lifeRead&&path.endsWith('/land-preview');
+ const entries=[...url.searchParams],keys=entries.map(([key])=>key);
+ const landQuery=landRead&&entries.length<=3&&new Set(keys).size===keys.length&&keys.every(key=>['region','x','y'].includes(key))&&/^[a-z][a-z0-9-]{0,63}$/.test(url.searchParams.get('region')??'')&&url.searchParams.has('x')===url.searchParams.has('y')&&['x','y'].every(key=>!url.searchParams.has(key)||/^-?\d{1,5}(?:\.\d{1,6})?$/.test(url.searchParams.get(key)));
+ if(!demoRoute&&!lifeRead&&!/^\/api\/(?:health|bootstrap|usage|sessions(?:\/[a-f0-9-]{36}(?:\/(?:action|checkpoint|events|assets\/(?:home|cafe|garden)\/(?:prepare|package|check|manifest|blob)|media\/workshop-annex-[12](?:\/(?:status|prepare))?))?)?)$/.test(path)||lifeRead&&request.method!=='GET'||landRead&&!landQuery||!landRead&&url.search&&(lifeRead||!/^\?after=\d{1,12}$/.test(url.search)))return fail('NOT_FOUND',404);
  if(!['GET','POST'].includes(request.method))return fail('METHOD_NOT_ALLOWED',405);
  if(request.headers.get('Origin')&&request.headers.get('Origin')!==origin||request.headers.get('Sec-Fetch-Site')==='cross-site')return fail('ORIGIN_FORBIDDEN',403);
  if(request.method==='POST'&&(request.headers.get('Origin')!==origin||!request.headers.get('Content-Type')?.startsWith('application/json')))return fail('INVALID_WRITE_ORIGIN',403);
