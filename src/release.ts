@@ -1,1 +1,2 @@
-export const RELEASE='harbor-nineteen-mira-20261006';
+/** Fixed source release marker, verified on both deployment bundles. */
+export const RELEASE='harbor-continuous-active-time-20261007';

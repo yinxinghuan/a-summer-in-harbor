@@ -1,4 +1,4 @@
-import {createHarborLife} from './life-assembly';
+import {createExplorationAssembly} from './exploration-assembly';
 import {configuredNews} from './news/configured';
 import {RELEASE} from '../src/release';
 import {createTemporaryAccountTransport} from './account-transport';
@@ -10,18 +10,18 @@ import {createServer} from 'node:http';import {mkdir} from 'node:fs/promises';im
 import {AsyncSessionAuthority,openPgAuthorityStore} from '../vendor/dynamic-runtime/packages/authority-session/async.mjs';
 // @ts-expect-error pinned library
 import {createPlayerUsage} from '../vendor/dynamic-runtime/packages/dynamic-pipeline/player-usage.mjs';
-import {createApiHandler,json} from './http';import {privateText,validatePublicConfig,verifiedEdgeOwner} from './public-config';import {createRuntime} from './runtime';import {createDialogueResolver} from './dialogue';import {createFieldNotes} from './fieldnotes';import {createNoteMedia} from './note-media';import {GAME_UUID} from '../src/game-id';
+import {createApiHandler,json} from './http';import {privateText,validatePublicConfig,verifiedEdgeOwner} from './public-config';import {createDialogueResolver} from './dialogue';import {createFieldNotes} from './fieldnotes';import {createNoteMedia} from './note-media';import {GAME_UUID} from '../src/game-id';
 const config=validatePublicConfig(JSON.parse(await privateText(process.env.HARBOR_CONFIG_FILE))),token=await privateText(process.env.HARBOR_EDGE_FILE);if(!/^[a-f0-9]{64}$/.test(token))throw Error('EDGE_TOKEN_INVALID');
 const pool=new Pool({host:config.pgHost,database:config.database,user:config.user,password:await privateText(process.env.HARBOR_PG_PASSWORD_FILE),max:4,connectionTimeoutMillis:5000,idleTimeoutMillis:30000});
 // The frozen library retains its historical test gate. This adapter does not
 // relabel that as generic certification; public release needs the game's canary.
 const store=await openPgAuthorityStore({pool,schema:config.schema,worldId:GAME_UUID,gameId:GAME_UUID,environment:'test'});
 await mkdir('.data/rules',{recursive:true});
-const b2=createHarborLife(createRuntime(await createDialogueResolver(store),await createFieldNotes(store)));
-const {runtime,newsProject}=configuredNews(b2.runtime,process.env.HARBOR_NEWS_CATALOG);
-const authority=new AsyncSessionAuthority(store,runtime);
+const assembly=createExplorationAssembly({resolveDialogue:await createDialogueResolver(store),notes:await createFieldNotes(store),defaultRate:4000,decorateRuntime:(r:any)=>configuredNews(r,process.env.HARBOR_NEWS_CATALOG)});
+const {runtime,newsProject}=assembly;
+const authority=assembly.decorateAuthority(new AsyncSessionAuthority(store,runtime),store);
 const dynamicAssets=await createDynamicAssets({pool,authority,config,edgeToken:token});
-const deps={store,runtime,newsProject,lifeProject:b2.lifeProject,landProject:b2.landProject,dynamicAssets,usage:createPlayerUsage({store}),noteMedia:createNoteMedia(store)};
+const deps={store,runtime,newsProject,lifeProject:assembly.lifeProject,landProject:assembly.landProject,decorateAuthority:assembly.decorateAuthority,dynamicAssets,usage:createPlayerUsage({store}),noteMedia:createNoteMedia(store)};
 const api=config.identityMode==='temporary-unverified'?createTemporaryAccountTransport({...deps,mode:config.identityMode,gameId:GAME_UUID}):createApiHandler({authority,...deps});
 const server=createServer({maxHeaderSize:8192},async(req,res)=>{try{
  const who=verifiedEdgeOwner(req,config,token);const path=new URL(req.url!,'http://localhost').pathname;

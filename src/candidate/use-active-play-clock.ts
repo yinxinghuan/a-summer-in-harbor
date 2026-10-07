@@ -40,7 +40,9 @@ export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,o
      if(stop&&!business){block(true);resume=true;if(live)setBlocked(false);return head}
      publish((await candidateActivePlay(head,'candidate-active-open',client)).head);resume=false;playAt=performance.now();budget.reset(playAt,playing());motionAt=-Infinity;
     }
-    if(!locked)await movement(business||!stop&&(!head.movingClock?.lease||performance.now()-motionAt>=1600));
+    // A stationary business action must retain its exact observation proof.
+    // Flush actual movement, but renew idle movement leases only during play.
+    if(!locked)await movement(!business&&!stop&&(!head.movingClock?.lease||performance.now()-motionAt>=1600));
     if(business){block(true);return head}
     // Re-read after asynchronous movement: a panel may have opened during its ACK.
     const shouldPause=latest.current.paused||document.hidden||pagedOut||locked,c=head.activePlayClock,l=c?.lease;

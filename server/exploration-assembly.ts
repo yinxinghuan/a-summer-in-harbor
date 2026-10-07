@@ -8,7 +8,7 @@ import {withCompactMotion} from './candidate-motion-authority';
 import {createActivePlayClock,withActivePlayRuntime} from './active-play-clock';
 import {withActivePlayAuthority} from './active-play-authority';
 
-/** Local owner candidate only. Public entry remains closed. The caller's final
+/** Published owner assembly. The caller's final
  * news wrapper is installed before the outer time settlement, and the account
  * service supplies its guarded transaction store to both compact channels. */
 export function createExplorationAssembly({resolveDialogue,notes,now=Date.now,boot,defaultRate=4000,plantStarts=true,decorateRuntime=(r:any)=>({runtime:r}),initial}:any={}){

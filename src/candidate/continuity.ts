@@ -49,6 +49,7 @@ export function longTravelMinutes(from:string,to:string){
  for(const q of queue){if(q.id===b)return q.n*10;for(const e of rooms[q.id].entities){const next=e.destination&&rooms[e.destination]?.area;if(next&&!seen.has(next)){seen.add(next);queue.push({id:next,n:q.n+1})}}}
  throw Error('TRAVEL_ROUTE_UNAVAILABLE');
 }
-export const candidateEnabled=()=>typeof location!=='undefined'&&['127.0.0.1','localhost'].includes(location.hostname)&&new URLSearchParams(location.search).get('candidate')==='1';
+// One versioned release contract. Production needs no query-string activation.
+export const candidateEnabled=()=>true;
 export const experimentRate=()=>new URLSearchParams(location.search).get('clock')==='4000'?4000:2000;
-export const activePlayEnabled=()=>candidateEnabled()&&new URLSearchParams(location.search).get('active_clock')==='1';
+export const activePlayEnabled=()=>true;

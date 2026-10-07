@@ -1,0 +1,204 @@
+{
+  "usagePermission": "alteru-project-use-confirmed-20261003",
+  "notice": "Existing AlterU project permission covers same-project copy and technical display transforms. This is not a universal open-source asset license. Sources and producer bytes remain unchanged.",
+  "sources": [
+    {
+      "person": "mara",
+      "sha256": "3bb21b34070e3f19ce993579649d63a5f740cc1b13146097b92871ae2752fdec",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "theo",
+      "sha256": "e53ec6ac1df44ae068f46bb2fa0b47ad4f20bdb92eb78a825d58260f4aad897b",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "june",
+      "sha256": "1ef05191ea00363b0e71a1b29d1d966f8c1da79c4bf8a268c2dc9fff3ad07e55",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "idris",
+      "sha256": "dcdcc33dfcc757dce38fdfe4f5e3f3e8f68d684b5c2514deda6364dd536ae117",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "ruth",
+      "sha256": "2fc1b1e6233cdb6a90efa933f28571cd5850b7639d370a697a726d997cad9a8e",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "luis",
+      "sha256": "0d7ca2bacdb1ded2c01a3389e77d144465de0f1bda9434853405a965f5970127",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "nell",
+      "sha256": "ca6dfb8b64ea4ea8ecff384cf7aa81242952fe8c6b752e0a8fbf128c538db70d",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "elena",
+      "sha256": "9a7600be41296f9274a4b1aadce7aa46ba81e80ba369e8f90b12f885fedf4542",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "arthur",
+      "sha256": "a11e92ca529c6c14f68421b41bd5b4ac02e9c1a959190f44f94326d47d1f6856",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "avery",
+      "sha256": "b38286d43ae2aa54f1bc1817058cda1f851abe386bf781af54374275085dd569",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "samira",
+      "sha256": "f574a49af4c8ea4985644c5513660886be61462b9cf7f53b85448a532200392c",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "owen",
+      "sha256": "d17dd043c7fa8309154dda2a5d3c307fbfe5480b61d8bbfaf74ad955af8182a7",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "dani",
+      "sha256": "f40ea733c58032b618a09d1272889eff59f1bbd74bad56fa057b8c8854cffabd",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "rowan",
+      "sha256": "54a443fef18b1571f2743149e34784a13cda2414513b3338eecc99eec834dd9b",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "mira",
+      "sha256": "1fd003f4a36000b2b777170b47621dbdb864a30bda5f78ccb69e9f2cbe8c11f8",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "jordan",
+      "sha256": "d2f65216f0a1b6e3e04cf72dbc2c9b2eec25e69d4cb0b865f31a3119a8f2fa1c",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "leila",
+      "sha256": "db64d2d10d74c2526373be13d675669ed3597a90797cd6b225ce042c89fa7a5a",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "casey",
+      "sha256": "66841e539a7815f11c8f1e475d2420955ec33be1576cfa11f18da2f177a4961e",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "grant",
+      "sha256": "3c1321555920ee04c94c23269a055093124fe1b3200357db86d1504afbce2cbe",
+      "sourceSeries": "harbor-resident-portraits-unified-20261006/site-owner-handoff-v2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "harper",
+      "sha256": "bbde72ee79948d40835eca0ff85486641b81dca2f3fb03c42ef12c1ae6b611a4",
+      "sourceSeries": "harbor-tech-nomads-art-20261006",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "tess",
+      "sha256": "8e7d7e1129ee98468b19ca08822def23aecb9d47673e715ace614becf960a92a",
+      "sourceSeries": "harbor-tech-nomads-art-20261006",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "person": "noor",
+      "sha256": "b463bbe3c5d1503b042ddc28b515c0f6154d8918ed25bfc10f421d1ba80797a7",
+      "sourceSeries": "harbor-tech-nomads-art-20261006",
+      "dimensions": [
+        256,
+        256
+      ]
+    }
+  ]
+}
