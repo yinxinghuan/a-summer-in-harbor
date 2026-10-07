@@ -1,22 +1,12 @@
-import {useEffect,useState} from 'react';
 import type {Save} from '../story/state';
 import {readLife} from '../story/client';
 import {identitySnapshot} from '../account-link/transport';
-import type {LifeView} from '../ui/LifeBag';
-import {lifeSnapshotKey,lifeViewMatchesHead} from './snapshot';
+import {useLifeProjection} from '../candidate/use-life-projection';
 
-/** Action-driven assembly: exact guarded snapshot, no motion or prediction clock. */
+/** Preserve display across harmless ACKs; never replace the server's stamps.
+ * Identity, content, scene, position and animal evidence are proof inputs. */
 export function useLifeSnapshot(save:Save|null,accountLoading:boolean){
- const identity=identitySnapshot(),scope=JSON.stringify([identity.scope,identity.epoch]),key=save?lifeSnapshotKey(save):'';
- const [entry,setEntry]=useState<{scope:string;key:string;view:LifeView}>();
- useEffect(()=>{
-  let live=true;
-  if(save&&!accountLoading)void readLife(save).then(view=>{
-   if(!lifeViewMatchesHead(save,view))throw Error('LIFE_SNAPSHOT_UNCONFIRMED');
-   if(live)setEntry({scope,key,view});
-  }).catch(()=>{if(live)setEntry(undefined)});
-  return()=>{live=false};
- },[key,scope,accountLoading]);
- const view=!accountLoading&&save&&entry?.scope===scope&&entry.key===key&&lifeViewMatchesHead(save,entry.view)?entry.view:null;
- return {view,enabled:!!view};
+ const identity=identitySnapshot(),scope=JSON.stringify([identity.scope,identity.epoch]);
+ const projection=useLifeProjection(save,scope,'owner-b2-cats-gulls-active-v1',readLife,!accountLoading);
+ return {view:projection.view,enabled:!!projection.view,projectionCurrent:projection.current,retry:projection.retry};
 }

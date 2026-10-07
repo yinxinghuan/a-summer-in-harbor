@@ -16,8 +16,11 @@ export type Entry={id:string;kind:'talk'|'action';person?:string;question?:strin
 import type {FieldNotes} from './fieldnotes-types';
 import {questProgress} from './progress';
 import type {NewsState} from './news-edition';
-export type Save=NewsState&{animalNotebookV1?:import('../animal-life/types').AnimalNotebook;techNomadsV1?:NomadMemory;landV1?:import('../life/land').LandState;animalsV1?:AnimalSave;turnBattle?:TurnBattle;awakeMinutes?:number;plots?:Record<string,Plot>;townMinutes?:number;fernStartedAt?:number;dynamicAssetRooms?:string[];roomAssetAttachments?:any[];dynamicAssetAvailable?:boolean;fieldNotes?:FieldNotes;id:string;version:number;cursor:number;mapVersion:1;locale:Locale;scene:string;position:Point;flags:string[];known:string[];visited:string[];items:Record<string,number>;energy:number;cash:number;standing:number;relations:Record<string,number>;history:Entry[];activeChallenge?:{id:string;kind:string;scene:string};};
-export type Action={action_id:string;expected_version:number;scene:string;position:Point;target:string;action:string;payload?:unknown;actorPosition?:Point};
+import type {MovingClock} from '../candidate/clock-types';
+import type {ActivePlayClock} from '../candidate/active-play-types';
+import {longTravelMinutes} from '../candidate/continuity';
+export type Save=NewsState&{movingClock?:MovingClock;activePlayClock?:ActivePlayClock;animalNotebookV1?:import('../animal-life/types').AnimalNotebook;techNomadsV1?:NomadMemory;landV1?:import('../life/land').LandState;animalsV1?:AnimalSave;turnBattle?:TurnBattle;awakeMinutes?:number;plots?:Record<string,Plot>;townMinutes?:number;fernStartedAt?:number;dynamicAssetRooms?:string[];roomAssetAttachments?:any[];dynamicAssetAvailable?:boolean;fieldNotes?:FieldNotes;id:string;version:number;cursor:number;mapVersion:1;locale:Locale;scene:string;position:Point;flags:string[];known:string[];visited:string[];items:Record<string,number>;energy:number;cash:number;standing:number;relations:Record<string,number>;history:Entry[];activeChallenge?:{id:string;kind:string;scene:string};};
+export type Action={action_id:string;expected_version:number;scene:string;position:Point;target:string;action:string;payload?:unknown;activePlay?:{client:string;lease?:string;activeMs?:number};actorPosition?:Point};
 export const has=(s:Save,id:string)=>s.flags.includes(id);
 export function initial(locale:Locale,id:string):Save{return {townMinutes:540,id,version:0,cursor:0,mapVersion:1,locale,scene:'station',position:{...rooms.station.spawn},flags:[],known:[],visited:['station'],items:{},energy:100,cash:25,standing:0,relations:{},history:[]}}
 const requireState=(value:unknown,code:string)=>{if(!value)throw Error(code)};
@@ -135,6 +138,6 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution,
    if(!['rest','sleep'].includes(a.action))flag(s,a.action);
   }
  }
- if((a.action==='travel'||a.action==='travel-map')&&s.scene!==before.scene){advanceAwake(s,20);advanceTown(s,20)}if(a.action==='rest')advanceTown(s,180);if(a.action==='sleep')sleepToMorning(s);
+ if((a.action==='travel'||a.action==='travel-map')&&s.scene!==before.scene){const minutes=before.movingClock?(a.action==='travel-map'?longTravelMinutes(before.scene,s.scene):0):20;advanceAwake(s,minutes);advanceTown(s,minutes)}if(s.movingClock&&a.action!=='ask')delete s.movingClock.lease;if(a.action==='rest')advanceTown(s,180);if(a.action==='sleep')sleepToMorning(s);
  s.energy=Math.max(0,Math.min(100,s.energy));s.cash=Math.max(0,Math.min(999,s.cash));s.standing=Math.max(0,Math.min(100,s.standing));s.version++;s.cursor++;s.history.push({id:a.action_id,kind:a.action.startsWith('talk:')||a.action==='introduce'?'talk':'action',...(e?.person?{person:e.person}:{}),text});s.history=s.history.slice(-500);return {head:s,text};
 }

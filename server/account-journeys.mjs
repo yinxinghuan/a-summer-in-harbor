@@ -7,7 +7,7 @@ import {AsyncSessionAuthority} from '../vendor/dynamic-runtime/packages/authorit
 const fail=(code,status=409)=>{throw Object.assign(Error(code),{code,status})};
 const uuid=x=>typeof x==='string'&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(x);
 const owner=x=>typeof x==='string'&&/^[a-f0-9]{64}$/.test(x);
-export function createAccountJourneyService({enabled=false,store,runtime,verifyActor,resolveActor=verifyActor}={}){
+export function createAccountJourneyService({enabled=false,store,runtime,verifyActor,resolveActor=verifyActor,decorateAuthority}={}){
  async function actor(request){
   if(!enabled)fail('ACCOUNT_SERVICE_DISABLED',503);
   if(typeof resolveActor!=='function')fail('PLATFORM_CONTEXT_UNAVAILABLE',401);
@@ -23,11 +23,13 @@ export function createAccountJourneyService({enabled=false,store,runtime,verifyA
  }
  const callContext=new AsyncLocalStorage();
  // Keep one authority instance: its existing in-flight action dedupe is retained.
- const authority=new AsyncSessionAuthority({...store,transaction:work=>store.transaction(async repo=>{
+ const guardedStore={...store,transaction:work=>store.transaction(async repo=>{
   const scope=callContext.getStore();if(!scope)fail('ACCOUNT_SCOPE_REQUIRED',500);
   const {a,id,storageOwner}=scope;await a.assertCurrent();if(await access(repo,a,id)!==storageOwner)fail('SESSION_ACCESS_CHANGED');
   const result=await work(repo);await a.assertCurrent();return result;
- })},runtime);
+ })};
+ const originalAuthority=new AsyncSessionAuthority(guardedStore,runtime);
+ const authority=decorateAuthority?decorateAuthority(originalAuthority,guardedStore,runtime):originalAuthority;
  async function invoke(request,id,method,...args){
   const a=await actor(request);if(!uuid(id))fail('INVALID_SESSION');
   const storageOwner=await store.transaction(async repo=>{await a.assertCurrent();return access(repo,a,id)});
@@ -71,5 +73,6 @@ export function createAccountJourneyService({enabled=false,store,runtime,verifyA
   async events(request,id,after){return invoke(request,id,'events',after)},
   async checkpoint(request,id,body){return invoke(request,id,'checkpoint',body)},
   async action(request,id,body){return invoke(request,id,'action',body)},
+  ...(decorateAuthority?{async motion(request,id,body){return invoke(request,id,'motion',body)},async activePlay(request,id,body){return invoke(request,id,'activePlay',body)}}:{}),
  });
 }

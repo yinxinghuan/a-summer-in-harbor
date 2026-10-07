@@ -11,10 +11,10 @@ import {CropImage} from './CropImage';
 export type LifeView=ReturnType<typeof lifeView>&{animals?:import('./AnimalNotebook').AnimalView};
 const giftNames:Record<string,Words>={'life-gift:theo-menu':['第一篮收成的菜单小卡','A menu card for my first delivery'],'life-gift:dani-page':['我的菜园与车站猫','My garden and the station cat']};
 export function gameMinuteLabel(minute:number,locale:Locale){const clock=`${String(Math.floor(minute%1440/60)).padStart(2,'0')}:${String(minute%60).padStart(2,'0')}`;return tx([`游戏第${Math.floor(minute/1440)+1}天 ${clock}`,`Game day ${Math.floor(minute/1440)+1}, ${clock}`],locale)}
-export function LifeBag({save,view,locale,busy,reload,onCommand}:{save:Save;view:LifeView|null;locale:Locale;busy:boolean;reload:()=>void;onCommand:(c:Command)=>void}){
+export function LifeBag({save,view,locale,busy,reload,onCommand,projectionCurrent}:{save:Save;view:LifeView|null;projectionCurrent?:boolean;locale:Locale;busy:boolean;reload:()=>void;onCommand:(c:Command)=>void}){
  const [tab,setTab]=useState<'goods'|'records'>('goods');
  if(!view)return <p>{tx(['种子与收藏详情暂时无法读取，已有行囊仍可查看。','Seed and collection details are unavailable just now. Your existing bag remains available.'],locale)}</p>;
- const stale=view.snapshotVersion!==save.version;
+ const stale=projectionCurrent===undefined?view.snapshotVersion!==save.version:!projectionCurrent;
  return <section className="harbor-life-bag" aria-label={tx(['种子与收藏','Seeds and collections'],locale)}>
  <div className="harbor-life-tabs">{(['goods','records'] as const).map(id=><button key={id} aria-pressed={tab===id} onClick={()=>setTab(id)}>{tx(id==='goods'?['种子与收成','Seeds & harvest']:['收藏','Collections'],locale)}<Icon name={id==='goods'?'bag':'chat'}/></button>)}</div>
  {stale&&<p role="status">{tx(['进度已更新。先重新读取，再使用物品。','Your progress changed. Reload before using an item.'],locale)}<button onClick={reload}>{tx(['重新读取','Reload'],locale)}</button></p>}

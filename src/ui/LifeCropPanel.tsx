@@ -4,10 +4,10 @@ import type {Command} from '../life/types';
 import type {LifeView} from './LifeBag';
 import {lifeItemImage} from '../world/life-crop-art';
 import {CropImage} from './CropImage';
-export function LifeCropPanel({save,view,target,locale,busy,onCommand}:{save:Save;view:LifeView|null;target:Entity;locale:Locale;busy:boolean;onCommand:(c:Command)=>void}){
+export function LifeCropPanel({save,view,target,locale,busy,onCommand,projectionCurrent}:{save:Save;view:LifeView|null;projectionCurrent?:boolean;target:Entity;locale:Locale;busy:boolean;onCommand:(c:Command)=>void}){
  const plants=view?.plants,bed=plants?.plots.find(p=>p.target===target.id);
  if(!plants||!bed)return <p>{tx(['种植接线暂未开放，菜畦位置已保存。','Planting is not available here yet. Your bed is saved.'],locale)}</p>;
- const stale=view.snapshotVersion!==save.version,locked=busy||stale||plants.blocked,status=bed.status;
+ const stale=projectionCurrent===undefined?view.snapshotVersion!==save.version:!projectionCurrent,locked=busy||stale||plants.blocked,status=bed.status;
  return <section className="harbor-life-crop" data-life-plot={bed.id}>
  <p>{tx(['种植、浇水、收成都耗2精力、推进10游戏分钟；另计既有疲劳。离线不推进时间。','Planting, watering and harvesting each cost 2 energy and 10 game minutes, plus existing fatigue. Time does not advance offline.'],locale)}</p>
  {stale&&<p role="status">{tx(['正在读取新进度，请稍候。','Reading updated progress. One moment.'],locale)}</p>}
@@ -21,8 +21,8 @@ export function LifeCropPanel({save,view,target,locale,busy,onCommand}:{save:Sav
  </>}
  </section>;
 }
-export function LifeCropCounter({save,view,locale,busy,onCommand}:{save:Save;view:LifeView|null;locale:Locale;busy:boolean;onCommand:(c:Command)=>void}){
- if(!view?.plants)return null;const p=view.plants,locked=busy||view.snapshotVersion!==save.version||p.blocked||!p.shopOpen;
+export function LifeCropCounter({save,view,locale,busy,onCommand,projectionCurrent}:{save:Save;view:LifeView|null;projectionCurrent?:boolean;locale:Locale;busy:boolean;onCommand:(c:Command)=>void}){
+ if(!view?.plants)return null;const p=view.plants,locked=busy||(projectionCurrent===undefined?view.snapshotVersion!==save.version:!projectionCurrent)||p.blocked||!p.shopOpen;
  return <section className="harbor-life-crop" data-life-counter><h3>{tx(['脆荚种子与收成','Snap pea seeds & harvest'],locale)}</h3>
  <p>{tx(['$6种子 · 浇水后720游戏分钟成熟 · 收成3份，每份可售$4。全部卖得$12；留1份再卖2份得$8，并保留下一轮的种子。','A seed costs $6. After 720 watered game minutes, harvest 3 units worth $4 each. Sell all for $12, or keep one for seed and sell two for $8.'],locale)}</p>
  <CropImage transparent image={lifeItemImage(p.ref,'seed')!} alt={tx(p.definition.name,locale)}/>

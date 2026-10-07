@@ -10,7 +10,7 @@ export function createAccountApiHandler({service,usage,noteMedia,dynamicAssets,n
    let n=0,parts:Buffer[]=[];for await(const part of req){n+=part.length;if(n>2048)return json(res,413,{error:'REQUEST_TOO_LARGE'});parts.push(part)}
    return json(res,200,await service.claim(actor,JSON.parse(Buffer.concat(parts).toString()||'{}')));
   }
-  const authority=Object.fromEntries(['directory','create','get','events','checkpoint','action'].map(k=>[k,(_who:unknown,...args:unknown[])=>service[k](actor,...args)]));
+  const authority=Object.fromEntries(['directory','create','get','events','checkpoint','action',...['motion','activePlay'].filter(k=>typeof service[k]==='function')].map(k=>[k,(_who:unknown,...args:unknown[])=>service[k](actor,...args)]));
   // Account usage is shared across that account's journeys; storage artifacts
   // of an explicitly claimed legacy journey stay at their original owner.
   const id=path.match(/^\/api\/sessions\/([a-f0-9-]{36})(?:\/|$)/)?.[1];

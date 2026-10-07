@@ -16,7 +16,7 @@ export function createDistancePoseSelector(strideDistance: number, poses: readon
   }
 }
 
-export function moveWithCollision(position: Point, delta: Point, canWalk: CanWalk) {
+export function moveWithCollision(position: Point, delta: Point, canWalk: CanWalk,onMove?:(point:Point)=>void) {
   let next = { ...position }
   let distance = 0
   // Sweep at most one world pixel per substep, including after a slow frame.
@@ -27,12 +27,13 @@ export function moveWithCollision(position: Point, delta: Point, canWalk: CanWal
     if (canWalk(horizontal)) next = horizontal
     const vertical = { x: next.x, y: next.y + delta.y / steps }
     if (canWalk(vertical)) next = vertical
-    distance += Math.hypot(next.x - before.x, next.y - before.y)
+    const moved=Math.hypot(next.x - before.x, next.y - before.y);distance += moved
+    if(moved>EPSILON)onMove?.({...next})
   }
   return { position: next, distance }
 }
 
-export function advanceRoute(position: Point, route: readonly Point[], budget: number, canWalk: CanWalk) {
+export function advanceRoute(position: Point, route: readonly Point[], budget: number, canWalk: CanWalk,onMove?:(point:Point)=>void) {
   let next = { ...position }, distance = 0, consumed = 0
   let direction = { x: 0, y: 0 }, blocked = false
   while (consumed < route.length) {
@@ -45,7 +46,7 @@ export function advanceRoute(position: Point, route: readonly Point[], budget: n
     if (budget < EPSILON) break
     const amount = Math.min(remaining, budget)
     const intended = { x: dx / remaining * amount, y: dy / remaining * amount }
-    const result = moveWithCollision(next, intended, canWalk)
+    const result = moveWithCollision(next, intended, canWalk,onMove)
     const actual = { x: result.position.x - next.x, y: result.position.y - next.y }
     if (result.distance > EPSILON) direction = actual
     next = result.position

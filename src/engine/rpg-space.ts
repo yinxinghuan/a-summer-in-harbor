@@ -1,6 +1,8 @@
 import {explorationCamera,type CameraInsets} from './exploration-camera';
 import {TilingSprite,type Texture} from 'pixi.js';
 import {createForegroundReveal} from './foreground-reveal';
+import {candidateEnabled} from '../candidate/continuity';
+import {adaptContinuousSpace} from '../candidate/render-adapter';
 import type {Viewport} from 'pixi-viewport';
 import type {Container} from 'pixi.js';
 import {Direction} from '@rpgjs/common';
@@ -9,9 +11,13 @@ import {createServer,provideServerModules,type RpgPlayer} from '@rpgjs/server';
 import {provideTiledMap as tiledClient} from '@rpgjs/tiledmap/client';
 import {provideTiledMap as tiledServer} from '@rpgjs/tiledmap/server';
 import {advanceRoute,moveWithCollision} from './distance-motion';
+import {createElapsedMotion} from './elapsed-motion';
 import {findPath,walkable,type Point,type World} from './world';
 
 export type Space={
+ suspendPrediction?:(blocked:boolean)=>void;
+ sampleMovement?:()=>void;movementPending?:()=>boolean;
+ projectEventGraphic?:(id:string,graphic:string[])=>void;
  installSpritesheets:(sheets:any[])=>void;
  position:()=>Point;scene:()=>string;renderedScene:()=>string|null;
  move:(x:number,y:number)=>void;walkTo:(target:Point,arrive?:()=>void)=>boolean;
@@ -21,10 +27,13 @@ export type Space={
 export type SpaceOptions={
  world:World;host:HTMLElement;scene:string;position:Point;speed:number;stride:number;
  sheet:any;spritesheets:any[];mapEvents:(scene:string)=>any[];
+ eventGraphics?:(scene:string,eventId:string)=>string[]|undefined;
+ arrivalWalkable?:(point:Point,scene:string)=>boolean;
  walkable?:(point:Point,scene:string)=>boolean;findPath?:(from:Point,to:Point,scene:string)=>Point[];
  prepareScene?:(scene:string)=>Promise<void>;
  controlsBlocked:()=>boolean;onPosition:(point:Point)=>void;onDestination:(point:Point|null)=>void;
  onFrame?:(dt:number,position:Point,scene:string,paused:boolean)=>void;
+ onMotionPoint?:(point:Point)=>void;
  cameraBounds?:(scene:string)=>{x:number;y:number;w:number;h:number};
  cameraWalkBounds?:(scene:string)=>{x:number;y:number;w:number;h:number};
  cameraSafeArea?:()=>CameraInsets;cameraBackdrop?:(scene:string)=>Texture;
@@ -33,14 +42,19 @@ export type SpaceOptions={
 };
 
 export function createRpgSpace(options:SpaceOptions){
+ return candidateEnabled()?adaptContinuousSpace(options,createRawRpgSpace):createRawRpgSpace(options);
+}
+function createRawRpgSpace(options:SpaceOptions){
  if(options.host.id!=='rpg')throw new Error('RPG_MOUNT_ID_REQUIRED');
  const {world,host}=options,ids=Object.keys(world.scenes);
  const reveals=(options.foregroundReveal??[]).map(createForegroundReveal);
  const debug=new URLSearchParams(location.search).has('debug');
  let scene=options.scene,pos={...options.position},client:RpgClientEngine|undefined,player:RpgPlayer|undefined;
  let loaded:string|null=null,joined:string|null=null,paused=true,changing=false,last=0,stride=0,stick={x:0,y:0},route:Point[]=[];
- let arrive:(()=>void)|undefined,engineWidth=360,engineHeight=520,scale=1,leftInset=0;
+ let arrive:(()=>void)|undefined,engineWidth=360,engineHeight=520,scale=1,leftInset=0,predictionBlocked=false;
  const checks=new Set<()=>void>(),keys=new Set<string>();
+ const input=()=>predictionBlocked?{x:0,y:0,route:[] as Point[]}:{x:stick.x+Number(keys.has('d')||keys.has('arrowright'))-Number(keys.has('a')||keys.has('arrowleft')),y:stick.y+Number(keys.has('s')||keys.has('arrowdown'))-Number(keys.has('w')||keys.has('arrowup')),route};
+ const elapsed=createElapsedMotion(performance.now(),input()),changedInput=()=>elapsed.input(performance.now(),input());
  const wait=(id:string)=>new Promise<void>((resolve,reject)=>{const check=()=>{if(loaded===id&&joined===id){clearTimeout(timer);checks.delete(check);resolve()}};const timer=setTimeout(()=>{checks.delete(check);reject(new Error('MAP_LOAD_TIMEOUT'))},12000);checks.add(check);check()});
  const cancel=()=>{route=[];arrive=undefined;options.onDestination(null)};
  const projectPlayer=()=>{const sprite=client?.getCurrentPlayer();if(!sprite||!player)return;sprite.animationFixed=true;if(sprite.x()!==pos.x)sprite.x.set(pos.x);if(sprite.y()!==pos.y)sprite.y.set(pos.y);if(sprite.direction()!==player.direction())sprite.direction.set(player.direction());if(sprite.animationName()!==player.animationName())sprite.animationName.set(player.animationName())};
@@ -86,17 +100,17 @@ export function createRpgSpace(options:SpaceOptions){
   if(client?.renderer){client.renderer.resize(engineWidth,engineHeight,resolution);client.width.set(String(engineWidth));client.height.set(String(engineHeight));configureCamera()}
  };
  const observer=new ResizeObserver(resize);observer.observe(host.parentElement!);resize();
- const runtime:Space={installSpritesheets:sheets=>{if(!client)throw Error("RENDERER_NOT_READY");for(const sheet of sheets)client.addSpriteSheet(sheet)},position:()=>({...pos}),scene:()=>scene,renderedScene:()=>loaded,
-  move:(x,y)=>{stick={x,y};if(x||y)cancel()},
-  walkTo:(target,callback)=>{if(paused||changing)return false;const next=options.findPath?.(pos,target,scene)??findPath(world,scene,pos,target);if(!next.length)return false;route=next;arrive=callback;options.onDestination(target);return true},
-  pause:value=>{paused=value;stick={x:0,y:0};keys.clear();if(value){cancel();stand()}},
-  restore:async(next,p)=>{if(!walkable(world,next,p))throw new Error('INVALID_ARRIVAL');changing=true;cancel();stick={x:0,y:0};stand();try{if(next!==scene){await options.prepareScene?.(next);loaded=null;joined=null;const changed=await player!.changeMap(next,p);if(!changed)throw new Error('MAP_CHANGE_REJECTED');await wait(next)}else await player!.teleport(p);scene=next;pos={...p};cameraSignature='';configureCamera();player!.syncChanges();projectPlayer();options.onPosition(pos)}finally{changing=false}},
+ const runtime:Space={sampleMovement:()=>{if(candidateEnabled())advancePlayer(performance.now(),paused||changing||options.controlsBlocked()||document.hidden,0)},movementPending:()=>!!(stick.x||stick.y||keys.size||route.length),suspendPrediction:value=>{predictionBlocked=value;changedInput()},projectEventGraphic:(id,graphic)=>{const e=(client as any)?.sceneMap?.events?.()[id];if(e&&JSON.stringify(e.graphics())!==JSON.stringify(graphic))e.graphics.set([...graphic])},installSpritesheets:sheets=>{if(!client)throw Error("RENDERER_NOT_READY");for(const sheet of sheets)client.addSpriteSheet(sheet)},position:()=>({...pos}),scene:()=>scene,renderedScene:()=>loaded,
+  move:(x,y)=>{stick={x,y};if(x||y)cancel();changedInput()},
+  walkTo:(target,callback)=>{if(paused||changing)return false;const next=options.findPath?.(pos,target,scene)??findPath(world,scene,pos,target);if(!next.length)return false;route=next;arrive=callback;options.onDestination(target);changedInput();return true},
+  pause:value=>{paused=value;stick={x:0,y:0};keys.clear();if(value){cancel();stand()}elapsed.reset(performance.now(),input())},
+  restore:async(next,p)=>{if(!(options.arrivalWalkable?.(p,next)??walkable(world,next,p)))throw new Error('INVALID_ARRIVAL');changing=true;cancel();stick={x:0,y:0};stand();try{if(next!==scene){await options.prepareScene?.(next);loaded=null;joined=null;const changed=await player!.changeMap(next,p);if(!changed)throw new Error('MAP_CHANGE_REJECTED');await wait(next)}else await player!.teleport(p);scene=next;pos={...p};cameraSignature='';configureCamera();player!.syncChanges();projectPlayer();options.onPosition(pos)}finally{changing=false;elapsed.reset(performance.now(),input())}},
   project:screen,toWorld:unproject,
   face:target=>{if(!player)return;const dx=target.x-pos.x,dy=target.y-pos.y;player.direction.set(Math.abs(dx)>Math.abs(dy)?(dx>0?Direction.Right:Direction.Left):(dy>0?Direction.Down:Direction.Up));stand();player.syncChanges()},
  };
- const down=(event:KeyboardEvent)=>{if(paused||changing||options.controlsBlocked()||(event.target instanceof HTMLInputElement||event.target instanceof HTMLTextAreaElement))return;const key=event.key.toLowerCase();if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright'].includes(key)){event.preventDefault();keys.add(key);cancel()}};
- const up=(event:KeyboardEvent)=>keys.delete(event.key.toLowerCase());
- const clearInput=()=>{keys.clear();stick={x:0,y:0};cancel();stand()};
+ const down=(event:KeyboardEvent)=>{if(paused||changing||(event.target instanceof HTMLInputElement||event.target instanceof HTMLTextAreaElement))return;const key=event.key.toLowerCase();if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright'].includes(key)){if(options.controlsBlocked()&&!candidateEnabled())return;event.preventDefault();if(!keys.has(key)){keys.add(key);cancel();changedInput()}}};
+ const up=(event:KeyboardEvent)=>{if(keys.delete(event.key.toLowerCase()))changedInput()};
+ const clearInput=()=>{keys.clear();stick={x:0,y:0};cancel();stand();elapsed.reset(performance.now(),input())};
  window.addEventListener('keydown',down);window.addEventListener('keyup',up);window.addEventListener('blur',clearInput);document.addEventListener('visibilitychange',()=>document.hidden&&clearInput());
  // Each authored map is a bounded cached scene. Large visual layer events have
  // an origin far from the player; point-based MMORPG chunk streaming would
@@ -110,19 +124,25 @@ export function createRpgSpace(options:SpaceOptions){
   tiledClient({basePath:'./map'}),
   provideClientModules([{spritesheets:[options.sheet,...options.spritesheets],sceneMap:{onAfterLoading(){cameraSignature='';loaded=client?.activeRoom()?.name?.replace(/^map-/,'')??null;checks.forEach(fn=>fn())}},engine:{onStart(engine){client=engine;if(debug)(host as HTMLElement&{__rpgClient?:RpgClientEngine}).__rpgClient=engine;engine.stopProcessingInput=true;engine.renderer.background.alpha=0;resize()}}}]),provideRpg(server)
  ]});
+ const advancePlayer=(time:number,blocked:boolean,dt:number)=>{
+  if(player&&!blocked){
+   const slices=candidateEnabled()?elapsed.consume(time):[{ms:dt*1000,input:input()}];
+   for(const slice of slices){
+   if(options.controlsBlocked())break;
+   let {x,y}=slice.input;const activeRoute=slice.input.route;
+   let distance=0,finished=false;const length=Math.hypot(x,y);if(length>1){x/=length;y/=length}
+   const clear=(point:Point)=>!options.controlsBlocked()&&(options.walkable?.(point,scene)??walkable(world,scene,point));
+   if(!x&&!y&&activeRoute.length){const result=advanceRoute(pos,activeRoute,options.speed*slice.ms/1000,clear,options.onMotionPoint);pos=result.position;distance=result.distance;x=result.direction.x;y=result.direction.y;activeRoute.splice(0,result.consumed);finished=result.arrived&&activeRoute===route;if(result.blocked&&!options.controlsBlocked()){activeRoute.splice(0);cancel();changedInput()}}
+   else if(x||y){const result=moveWithCollision(pos,{x:x*options.speed*slice.ms/1000,y:y*options.speed*slice.ms/1000},clear,options.onMotionPoint);x=result.position.x-pos.x;y=result.position.y-pos.y;pos=result.position;distance=result.distance}
+   if(distance>1e-7){stride=(stride+distance)%options.stride;const phase=Math.floor(stride/options.stride*4);const pose=['stride-0','stride-1','stride-2','stride-1'][phase];if(player.animationName()!==pose)player.animationName.set(pose);player.direction.set(Math.abs(x)>Math.abs(y)?(x>0?Direction.Right:Direction.Left):(y>0?Direction.Down:Direction.Up));void player.teleport(pos);player.syncChanges();options.onPosition(pos)}else stand();
+   if(finished){const callback=arrive;arrive=undefined;options.onDestination(null);stand();callback?.()}
+   }
+  }else elapsed.reset(time,input());
+ };
  const tick=(time:number)=>{
   const dt=last?Math.min(Math.max(0,(time-last)/1000),.04):0;last=time;
   const blocked=paused||changing||options.controlsBlocked()||document.hidden;
-  if(player&&!blocked){
-   let x=stick.x+Number(keys.has('d')||keys.has('arrowright'))-Number(keys.has('a')||keys.has('arrowleft'));
-   let y=stick.y+Number(keys.has('s')||keys.has('arrowdown'))-Number(keys.has('w')||keys.has('arrowup'));
-   let distance=0,finished=false;const length=Math.hypot(x,y);if(length>1){x/=length;y/=length}
-   const clear=(point:Point)=>options.walkable?.(point,scene)??walkable(world,scene,point);
-   if(!x&&!y&&route.length){const result=advanceRoute(pos,route,options.speed*dt,clear);pos=result.position;distance=result.distance;x=result.direction.x;y=result.direction.y;route.splice(0,result.consumed);finished=result.arrived;if(result.blocked)cancel()}
-   else if(x||y){const result=moveWithCollision(pos,{x:x*options.speed*dt,y:y*options.speed*dt},clear);x=result.position.x-pos.x;y=result.position.y-pos.y;pos=result.position;distance=result.distance}
-   if(distance>1e-7){stride=(stride+distance)%options.stride;const phase=Math.floor(stride/options.stride*4);const pose=['stride-0','stride-1','stride-2','stride-1'][phase];if(player.animationName()!==pose)player.animationName.set(pose);player.direction.set(Math.abs(x)>Math.abs(y)?(x>0?Direction.Right:Direction.Left):(y>0?Direction.Down:Direction.Up));void player.teleport(pos);player.syncChanges();options.onPosition(pos)}else stand();
-   if(finished){const callback=arrive;arrive=undefined;options.onDestination(null);stand();callback?.()}
-  }
+  advancePlayer(time,blocked,dt);
   configureCamera();for(const reveal of reveals)reveal(stage(),scene,pos);
   options.onFrame?.(dt,{...pos},scene,blocked);projectPlayer();requestAnimationFrame(tick);
   if(debug){const sprite=client?.getCurrentPlayer();host.dataset.playerGraphics=String(sprite?.graphics().length??-1);host.dataset.playerSheets=String(sprite?.graphicsSignals().length??-1);host.dataset.roomEvents=String(Object.keys((client?.activeRoom() as unknown as {events?:()=>Record<string,unknown>})?.events?.()??{}).length)}

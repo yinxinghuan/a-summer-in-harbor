@@ -1,0 +1,20 @@
+/** Only these authored pre-commit rejections resolve a compact pending request.
+ * HTTP status or terminal=true alone cannot prove a database outcome. */
+export const motionRejectionStatus={
+ AUTH_REQUIRED:401,INVALID_ACTION:400,INVALID_MOTION_ACTION:400,
+ ACTION_ID_CONFLICT:409,SESSION_NOT_FOUND:404,MIGRATION_REQUIRED:409,
+ MOTION_RECEIPT_RETIRED:409,MOTION_CONFIRMATION_REQUIRED:409,VERSION_CONFLICT:409,
+ MOTION_BUSINESS_PREPARED:409,UNSUPPORTED_MOTION_DELTA:409,
+ CLOCK_NOT_ENABLED:409,CHALLENGE_ACTIVE:409,UNVERIFIED_POSITION:409,
+ MOTION_EXPIRED:409,MOTION_SEQUENCE:409,INVALID_MOTION_PATH:400,
+ MOTION_TOO_FAST:409,SETTLE_FIRST:409,MOTION_ENDPOINT:409,INVALID_CLOCK:409,
+ CANDIDATE_MOTION_CLOSED:403,REQUEST_TOO_LARGE:413,
+ CANDIDATE_ACTIVE_CLOSED:403,INVALID_ACTIVE_ACTION:400,INVALID_ACTIVE_RATE:400,
+ INVALID_ACTIVE_CLOCK:409,ACTIVE_LEASE_BUSY:409,ACTIVE_LEASE_EXPIRED:409,
+ ACTIVE_SEQUENCE:409,ACTIVE_CONFIRMATION_REQUIRED:409,ACTIVE_RECEIPT_RETIRED:409,
+} as const;
+export type MotionRejectionCode=keyof typeof motionRejectionStatus;
+export function resolvedMotionFailure(error:{message?:string;status?:number;terminal?:boolean}){
+ const code=error.message as MotionRejectionCode;
+ return error.terminal===true&&Object.hasOwn(motionRejectionStatus,code)&&error.status===motionRejectionStatus[code]&&code!=='AUTH_REQUIRED';
+}
