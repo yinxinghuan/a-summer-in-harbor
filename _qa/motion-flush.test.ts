@@ -4,6 +4,7 @@ import {randomUUID} from 'node:crypto';
 import {initial,type Save} from '../src/story/state';
 import {flushMotionTrace} from '../src/candidate/motion-flush';
 import {createMovingClock} from '../server/candidate-clock';
+import {MotionRejection,motionHttpFailure} from '../server/motion-failure';
 import {dynamicWorld} from '../src/dynamic-assets/layout';
 
 function fixture(){
@@ -32,8 +33,29 @@ test('unknown requests, version conflicts and invalid paths are not retried or d
  for(const error of ['MODEL_CALL_PENDING_OR_INTERRUPTED','VERSION_CONFLICT','INVALID_MOTION_PATH']){const f=fixture();await f.ready();let calls=0;await assert.rejects(flushMotionTrace({...f.options(),points:[{x:783,y:557}],send:async()=>{calls++;throw Error(error)}}),new RegExp(error));assert.equal(calls,1);assert.deepEqual(f.confirmed,[]);}
 });
 test('a failed fresh-lease attempt is bounded and keeps the pending path for recovery',async()=>{
- const f=fixture();await f.ready();let calls=0;await assert.rejects(flushMotionTrace({...f.options(),points:[{x:783,y:557}],send:async(s,a,p,v)=>{calls++;if(a==='candidate-motion-open')return f.send(s,a,p,v);throw Error('MOTION_EXPIRED')}}),/MOTION_EXPIRED/);assert.equal(calls,3);assert.deepEqual(f.confirmed,[{position:{x:733,y:557},remaining:[{x:783,y:557}]}]);
+ const f=fixture();await f.ready();let calls=0;await assert.rejects(flushMotionTrace({...f.options(),points:[{x:783,y:557}],send:async(s,a,p,v)=>{calls++;if(a==='candidate-motion-open')return f.send(s,a,p,v);throw new MotionRejection('MOTION_EXPIRED')}}),/MOTION_EXPIRED/);assert.equal(calls,3);assert.deepEqual(f.confirmed,[{position:{x:733,y:557},remaining:[{x:783,y:557}]}]);
 });
 test('a journey change prevents the old asynchronous result from editing the new renderer buffer',async()=>{
  const f=fixture();await f.ready();f.advance(500);await assert.rejects(flushMotionTrace({...f.options(),points:[{x:783,y:557}],isCurrent:()=>false}),/MOTION_FLUSH_CANCELLED/);assert.deepEqual(f.confirmed,[]);
+});
+
+test('normal jitter rejection waits only the authored deficit and retains every corner',async()=>{
+ const f=fixture();await f.ready();f.advance(300);let rejected:any,waited=0;
+ const send=async(...args:Parameters<typeof f.send>)=>{try{return await f.send(...args)}catch(e){rejected=e;throw e}};
+ const points=[{x:763,y:557},{x:763,y:567},{x:773,y:567}];
+ const h=await flushMotionTrace({...f.options(),send,points,wait:async ms=>{waited+=ms;await f.wait(ms)}});
+ assert.equal(rejected.message,'MOTION_TOO_FAST');assert.equal(rejected.retryAfterMs,112);assert.equal(waited,112);assert.ok(waited<50/112*1000);assert.deepEqual(h.position,points.at(-1));
+ assert.deepEqual(motionHttpFailure(rejected),{status:409,body:{error:'MOTION_TOO_FAST',terminal:true,retryAfterMs:112}});
+});
+test('an unknown failure with the same speed/expiry text cannot trigger a new request',async()=>{
+ for(const name of ['MOTION_TOO_FAST','MOTION_EXPIRED']){const f=fixture();await f.ready();let calls=0;await assert.rejects(flushMotionTrace({...f.options(),points:[{x:763,y:557}],send:async()=>{calls++;throw Object.assign(Error(name),{status:503,terminal:false,retryAfterMs:1})}}),new RegExp(name));assert.equal(calls,1);assert.deepEqual(f.confirmed,[])}
+});
+test('a impossible speed path has no retry hint and cannot change the save',async()=>{
+ const f=fixture();await f.ready();f.advance(1000);const before=structuredClone(f.head());await assert.rejects(f.send(before,'candidate-motion-step',{x:933,y:557},{lease:before.movingClock!.lease!.id,sequence:1,points:[{x:933,y:557}]}),e=>{assert.equal((e as MotionRejection).retryAfterMs,undefined);return (e as Error).message==='MOTION_TOO_FAST'});assert.deepEqual(f.head(),before);
+});
+
+test('more than one wire packet of joystick corners drains without dropping turns or exceeding 32 points',async()=>{
+ const f=fixture();await f.ready();f.advance(1200);const start=f.head().position,points=Array.from({length:80},(_,i)=>({x:start.x+(i+1)*.3,y:start.y+(i%2)*.2}));const sent:any[]=[];
+ const h=await flushMotionTrace({...f.options(),points,send:async(s,a,p,v:any)=>{if(a==='candidate-motion-step')sent.push(v.points);return f.send(s,a,p,v)}});
+ assert.equal(sent.length,3);assert.deepEqual(sent.flat(),points);assert.ok(sent.every(v=>v.length<=28));assert.deepEqual(h.position,points.at(-1));assert.deepEqual(f.confirmed.at(-1).remaining,[]);
 });

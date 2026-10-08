@@ -9,7 +9,7 @@ const canonical=(v:any):any=>Array.isArray(v)?v.map(canonical):v&&typeof v==='ob
 const fail=(code:MotionRejectionCode):never=>{throw new MotionRejection(code)};
 const stable=(s:Save)=>{const {scene,position,townMinutes,awakeMinutes,energy,visited,movingClock,version,cursor,...rest}=s;return JSON.stringify(rest)};
 /** Candidate-only domain extension. Uses the existing transaction/CAS head, never touches vendor, legacy receipts or prepared rows. */
-export function withCompactMotion(authority:any,store:any,runtime:any,motion=createMovingClock(),now=Date.now,play?:{apply:(s:Save,a:Action)=>Save}){
+export function withCompactMotion(authority:any,store:any,runtime:any,motion=createMovingClock(),now=Date.now,play?:{apply:(s:Save,a:Action)=>Save},waitForSpeed?:(ms:number)=>Promise<void>){
  const inFlight=new Map<string,{hash:string;promise:Promise<MotionAck>}>();
  const method=async(owner:string,id:string,input:Action):Promise<MotionAck>=>{
   if(typeof owner!=='string'||!owner.trim()||owner.length>256)fail('AUTH_REQUIRED');
@@ -51,7 +51,11 @@ export function withCompactMotion(authority:any,store:any,runtime:any,motion=cre
    // Atomic head + latest confirmation. No addReceipt/addEvent/clearPrepared call.
    await repo.write(owner,next,cursor,now());return ack;
   });
-  const promise=Promise.resolve().then(run);inFlight.set(key,{hash,promise});try{return wire(await promise)}finally{if(inFlight.get(key)?.promise===promise)inFlight.delete(key)}
+  // Variable transit times can compress two server receipt times even though
+  // the real gesture moved at 112. Wait only the authored deficit, OUTSIDE the
+  // transaction, then re-run every owner/CAS/path/lease/prepared check. The same
+  // in-flight identity remains reserved; no failed attempt is committed.
+  const promise=Promise.resolve().then(run).catch(async(error:unknown)=>{if(!waitForSpeed||!(error instanceof MotionRejection)||error.code!=='MOTION_TOO_FAST'||error.retryAfterMs===undefined)throw error;await waitForSpeed(error.retryAfterMs);return run()});inFlight.set(key,{hash,promise});try{return wire(await promise)}finally{if(inFlight.get(key)?.promise===promise)inFlight.delete(key)}
  };
  return new Proxy(authority,{get(target,key){if(key==='motion')return method;const value=Reflect.get(target,key,target);return typeof value==='function'?value.bind(target):value}});
 }

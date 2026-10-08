@@ -2,12 +2,12 @@ import type {Space,SpaceOptions} from '../engine/rpg-space';
 import type {Point} from '../engine/world';
 import {walkable,findPath} from '../engine/world';
 import {appendMotionTrace} from './motion-trace';
-import {predictionHorizon,traceLength} from './motion-outbox';
+import {predictionHorizon,maximumQueuedPoints,traceLength} from './motion-outbox';
 import {CLUSTER,clusterCanvas,clusterWorld,clusterWalkable,globalPoint,localPoint,renderScene,isCluster,pointZone,sameCluster} from './continuity';
 export const motionProjection:{scene:string;position:Point;points:Point[];lastSample:number;traceStart:Point;networkBlocked:boolean;block?:(value:boolean)=>void;sample?:()=>void;moving?:()=>boolean;restore?:(scene:string,p:Point)=>Promise<void>}={scene:'station',position:{x:0,y:0},points:[],lastSample:0,traceStart:{x:0,y:0},networkBlocked:true};
 export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOptions)=>Space):Space{
  let raw:Space,logical=original.scene,predictedZone=logical;
- const desiredGraphics=new Map<string,string[]>();
+ const desiredGraphics=new Map<string,string[]>(),debug=new URLSearchParams(location.search).has('debug');
  const zone=()=>raw&&raw.scene()===CLUSTER?(predictedZone=pointZone(raw.position(),predictedZone)):logical;
  const projected=(p:Point)=>raw?.scene()===CLUSTER?localPoint(zone(),p):p;
  const reset=(id:string,p:Point)=>{logical=predictedZone=id;motionProjection.scene=id;motionProjection.position={...p};motionProjection.points=[];motionProjection.traceStart=globalPoint(id,p);motionProjection.lastSample=0};reset(logical,original.position);
@@ -53,10 +53,10 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
    return first.length&&last.length?[...first,{x:597,y:650},...last]:[];
   },
   worldPaused:original.worldPaused??original.controlsBlocked,
-  controlsBlocked:()=>original.controlsBlocked()||motionProjection.networkBlocked||motionProjection.points.length>=28||traceLength(motionProjection.traceStart,motionProjection.points)>=predictionHorizon,
+  controlsBlocked:()=>original.controlsBlocked()||motionProjection.networkBlocked||motionProjection.points.length>=maximumQueuedPoints||traceLength(motionProjection.traceStart,motionProjection.points)>=predictionHorizon,
   onMotionPoint:p=>appendMotionTrace(motionProjection.points,motionProjection.traceStart,p),
   onPosition:p=>{const z=zone(),local=projected(p);motionProjection.scene=z;motionProjection.position={...local};original.onPosition(local)},
-  onFrame:(dt,p,_id,paused)=>{original.onFrame?.(dt,projected(p),zone(),paused);for(const [id,graphic] of desiredGraphics){const [source,eventId]=id.split('--');raw.projectEventGraphic?.(id,original.eventGraphics?.(source,eventId)??graphic)}},
+  onFrame:(dt,p,_id,paused)=>{if(debug){const host=document.querySelector<HTMLElement>('#rpg');if(host){host.dataset.motionPoints=String(motionProjection.points.length);host.dataset.motionDistance=String(traceLength(motionProjection.traceStart,motionProjection.points));host.dataset.motionBlock=motionProjection.networkBlocked?'network':motionProjection.points.length>=maximumQueuedPoints?'corners':traceLength(motionProjection.traceStart,motionProjection.points)>=predictionHorizon?'distance':'none'}}original.onFrame?.(dt,projected(p),zone(),paused);for(const [id,graphic] of desiredGraphics){const [source,eventId]=id.split('--');raw.projectEventGraphic?.(id,original.eventGraphics?.(source,eventId)??graphic)}},
   onReady:()=>original.onReady(facade),
  });motionProjection.sample=raw.sampleMovement;motionProjection.moving=raw.movementPending;motionProjection.block=value=>{motionProjection.networkBlocked=value;raw.suspendPrediction?.(value)};motionProjection.restore=facade.restore;return facade;
 }

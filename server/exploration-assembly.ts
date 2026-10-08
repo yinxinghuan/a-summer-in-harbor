@@ -12,7 +12,7 @@ import {withActivePlayAuthority} from './active-play-authority';
 /** Published owner assembly. The caller's final
  * news wrapper is installed before the outer time settlement, and the account
  * service supplies its guarded transaction store to both compact channels. */
-export function createExplorationAssembly({resolveDialogue,notes,now=Date.now,boot,defaultRate=4000,plantStarts=true,crabEnabled=false,observeWait,decorateLife=(r:any)=>r,decorateRuntime=(r:any)=>({runtime:r}),initial}:any={}){
+export function createExplorationAssembly({resolveDialogue,notes,now=Date.now,boot,defaultRate=4000,plantStarts=true,crabEnabled=false,observeWait,motionWait=(ms:number)=>new Promise<void>(r=>setTimeout(r,ms)),decorateLife=(r:any)=>r,decorateRuntime=(r:any)=>({runtime:r}),initial}:any={}){
  const motion=createMovingClock({now,boot,worldForSave:(s:Save)=>{const w=landWorld(dynamicWorld(s.flags,!!s.dynamicAssetRooms),s.landV1),b=nativeCrabCollision(s);return b.length?{...w,scenes:{...w.scenes,[s.scene]:{...w.scenes[s.scene],obstacles:[...w.scenes[s.scene].obstacles,...b]}}}:w}});
  const base=createRuntime(resolveDialogue,notes,motion);
  const life=decorateLife(createHarborLife(initial?{...base,initial}:base,plantStarts,{enabled:crabEnabled,now,wait:observeWait}));
@@ -21,6 +21,6 @@ export function createExplorationAssembly({resolveDialogue,notes,now=Date.now,bo
  const play={...originalPlay,apply:(s:Save,a:any)=>{const next=originalPlay.apply(s,a);life.advanceForeground(s,next);return next},business:(s:Save,a:any)=>{const next=originalPlay.business(s,a);life.advanceForeground(s,next);return next}};
  const runtime=withActivePlayRuntime(withMovingClock(decorated.runtime,motion),play);
  return {...life,...decorated,runtime,motion,play,
-  decorateAuthority:(authority:any,guardedStore:any,finalRuntime=runtime)=>withActivePlayAuthority(withCompactMotion(authority,guardedStore,finalRuntime,motion,now,play),guardedStore,finalRuntime,play,now),
+  decorateAuthority:(authority:any,guardedStore:any,finalRuntime=runtime)=>withActivePlayAuthority(withCompactMotion(authority,guardedStore,finalRuntime,motion,now,play,motionWait),guardedStore,finalRuntime,play,now),
  };
 }

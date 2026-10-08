@@ -1,6 +1,10 @@
 import type {Point} from '../engine/world';
 const d=(a:Point,b:Point)=>Math.hypot(a.x-b.x,a.y-b.y);
 export const predictionHorizon=336;
+// Packet cardinality is a wire limit, not a limit on the live gesture history.
+// Retain at most four server-sized packets, still within the original distance
+// horizon. Every real corner is retained and drained as an exact ordered prefix.
+export const motionPacketPoints=28,maximumQueuedPoints=128;
 export function traceLength(start:Point,points:Point[]){let total=0;for(const p of points){total+=d(start,p);start=p}return total}
 /** ACKs consume a distance prefix of the live trace. Collinear extension or a
  * new turn during the request stays queued; nothing replaces the live suffix. */

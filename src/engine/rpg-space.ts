@@ -57,7 +57,14 @@ function createRawRpgSpace(options:SpaceOptions){
  const elapsed=createElapsedMotion(performance.now(),input()),changedInput=()=>elapsed.input(performance.now(),input());
  const wait=(id:string)=>new Promise<void>((resolve,reject)=>{const check=()=>{if(loaded===id&&joined===id){clearTimeout(timer);checks.delete(check);resolve()}};const timer=setTimeout(()=>{checks.delete(check);reject(new Error('MAP_LOAD_TIMEOUT'))},12000);checks.add(check);check()});
  const cancel=()=>{route=[];arrive=undefined;options.onDestination(null)};
- const projectPlayer=()=>{const sprite=client?.getCurrentPlayer();if(!sprite||!player)return;sprite.animationFixed=true;if(sprite.x()!==pos.x)sprite.x.set(pos.x);if(sprite.y()!==pos.y)sprite.y.set(pos.y);if(sprite.direction()!==player.direction())sprite.direction.set(player.direction());if(sprite.animationName()!==player.animationName())sprite.animationName.set(player.animationName())};
+ const projectPlayer=()=>{const sprite=client?.getCurrentPlayer();if(!sprite||!player)return;
+  // This local actor is already projected from Harbor's swept elapsed motion.
+  // RPGJS also queues one interpolation frame per teleport (including network
+  // sampling), but consumes only one per renderer tick. Do not replay that
+  // second presentation queue over the current local pose. NPC queues and the
+  // complete authoritative motion trace remain untouched.
+  if(candidateEnabled())sprite.frames.length=0;
+  sprite.animationFixed=true;if(sprite.x()!==pos.x)sprite.x.set(pos.x);if(sprite.y()!==pos.y)sprite.y.set(pos.y);if(sprite.direction()!==player.direction())sprite.direction.set(player.direction());if(sprite.animationName()!==player.animationName())sprite.animationName.set(player.animationName())};
  const stand=()=>{stride=0;if(player&&player.animationName()!=='stand')player.animationName.set('stand');projectPlayer()};
  const stage=()=>(client as unknown as {canvasApp?:{stage:Container}})?.canvasApp?.stage;
  const viewport=():Viewport|undefined=>{const visit=(node:Container|undefined):Viewport|undefined=>{if(!node)return;if('toWorld' in node&&'clamp' in node)return node as Viewport;for(const child of node.children??[]){const found=visit(child);if(found)return found}};return visit(stage())};
@@ -146,7 +153,7 @@ function createRawRpgSpace(options:SpaceOptions){
   advancePlayer(time,blocked,dt);
   configureCamera();for(const reveal of reveals)reveal(stage(),scene,pos);
   options.onFrame?.(dt,{...pos},scene,worldPaused);projectPlayer();requestAnimationFrame(tick);
-  if(debug){host.dataset.predictionBlocked=String(blocked);host.dataset.worldPaused=String(worldPaused);const sprite=client?.getCurrentPlayer();host.dataset.playerGraphics=String(sprite?.graphics().length??-1);host.dataset.playerSheets=String(sprite?.graphicsSignals().length??-1);host.dataset.roomEvents=String(Object.keys((client?.activeRoom() as unknown as {events?:()=>Record<string,unknown>})?.events?.()??{}).length)}
+  if(debug){host.dataset.projectedX=String(pos.x);host.dataset.projectedY=String(pos.y);host.dataset.predictionBlocked=String(blocked);host.dataset.worldPaused=String(worldPaused);const sprite=client?.getCurrentPlayer();host.dataset.playerGraphics=String(sprite?.graphics().length??-1);host.dataset.playerSheets=String(sprite?.graphicsSignals().length??-1);host.dataset.roomEvents=String(Object.keys((client?.activeRoom() as unknown as {events?:()=>Record<string,unknown>})?.events?.()??{}).length)}
  };
  requestAnimationFrame(tick);
  return runtime;

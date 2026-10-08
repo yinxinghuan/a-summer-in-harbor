@@ -37,6 +37,11 @@ export function createMovingClock({now=Date.now,boot=randomUUID(),worldForSave=(
     const elapsed=at-lease!.lastAt;fail(Number.isFinite(elapsed)&&elapsed>=0&&elapsed<=3000,'MOTION_EXPIRED');
     fail(Array.isArray(payload.points)&&payload.points.length<=32,'INVALID_MOTION_PATH');
     const allowance=112*Math.min(elapsed,1250)/1000+(s.movingClock!.speedSlackUnits??4);
+    // Author the wait from the entire unchanged path, not just its first rejected
+    // segment. This hint changes no speed, expiry, path or commit validation.
+    let totalDistance=0,from=isCluster(s.scene)?globalPoint(s.scene,s.position):s.position;
+    for(const point of payload.points as Point[]){fail(point&&Number.isFinite(point.x)&&Number.isFinite(point.y),'INVALID_MOTION_PATH');totalDistance+=Math.hypot(point.x-from.x,point.y-from.y);from=point}
+    if(totalDistance>allowance+1e-7){const needed=(totalDistance-(s.movingClock!.speedSlackUnits??4))/112*1000;throw new MotionRejection('MOTION_TOO_FAST',needed<=1250?Math.ceil(needed-elapsed)+1:undefined)}
     let previous=isCluster(s.scene)?globalPoint(s.scene,s.position):s.position,distance=0,zone=s.scene;
     for(const point of payload.points as Point[]){
      fail(point&&Number.isFinite(point.x)&&Number.isFinite(point.y),'INVALID_MOTION_PATH');

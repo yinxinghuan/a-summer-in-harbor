@@ -14,9 +14,12 @@ const block=(v:boolean)=>{motionProjection.networkBlocked=v;motionProjection.blo
 export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,onHead:(s:Save)=>void,onError:()=>void){
  const enabled=activePlayEnabled(),[blocked,setBlocked]=useState(enabled),wake=useRef(()=>{}),latest=useRef({save,paused,ready,onHead,onError});latest.current={save,paused,ready,onHead,onError};
  useEffect(()=>{
-  if(!enabled||!save)return;let live=true,head=save,inFlight:Promise<Save|undefined>|undefined,hold=false,resume=true,pagedOut=false,nextPump=-Infinity,motionAt=-Infinity,playAt=-Infinity,roundTrip=0;
+  if(!enabled||!save)return;let live=true,head=save,inFlight:Promise<Save|undefined>|undefined,hold=false,resume=true,pagedOut=false,nextPump=-Infinity,motionAt=-Infinity,playAt=-Infinity,roundTrip=0,owned=false;
   const playing=()=>!!latest.current.ready&&!latest.current.paused&&!document.hidden&&!pagedOut&&!latest.current.save?.activeChallenge&&!(latest.current.save&&battleLocksWorld(latest.current.save));
   const budget=createActivePlayBudget(performance.now());
+  // Real joystick turns need dispatch before the bounded prediction buffer fills.
+  // Idle heartbeat cadence must never postpone already queued movement.
+  const motionDue=()=>motionProjection.points.length>=6||traceLength(motionProjection.traceStart,motionProjection.points)>=12;
   const client=activePlayClientId(),publish=(s:Save)=>{head=s;if(live)latest.current.onHead(s)};
   const latency=(started:number)=>{roundTrip=Math.max(performance.now()-started,roundTrip*.9)};
   const active=async(action:string,activeMs?:number)=>{const started=performance.now();const result=await candidateActivePlay(head,action,client,activeMs);latency(started);playAt=started;return result};
@@ -48,13 +51,13 @@ export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,o
     if(hasPendingAction())throw Error('PENDING_ACTION');
     const foreign=head.activePlayClock?.lease&&head.activePlayClock.lease.client!==client;
     if(foreign){
-     block(true);
+     owned=false;block(true);
      // A second tab must acquire the time lease before touching movement authority.
      if(stop&&!business){block(true);resume=true;if(live)setBlocked(false);return head}
-     publish((await active('candidate-active-open')).head);resume=false;budget.reset(performance.now(),playing());motionAt=-Infinity;
+     publish((await active('candidate-active-open')).head);owned=true;resume=false;budget.reset(performance.now(),playing());motionAt=-Infinity;
     }
     if(!stop&&!business&&(resume||!head.activePlayClock?.lease)){
-     block(true);publish((await active('candidate-active-open')).head);resume=false;budget.reset(performance.now(),playing());
+     block(!owned);publish((await active('candidate-active-open')).head);owned=true;resume=false;budget.reset(performance.now(),playing());
     }
     // A stationary business action must retain its exact observation proof.
     // Flush actual movement, but renew idle movement leases only during play.
@@ -64,29 +67,29 @@ export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,o
     // Re-read after asynchronous movement: a panel may have opened during its ACK.
     const shouldPause=latest.current.paused||document.hidden||pagedOut||locked,c=head.activePlayClock,l=c?.lease;
     if(shouldPause){block(true);resume=true;if(!locked)await movement(false,true);if(l?.client===client){publish((await active('candidate-active-pause',budget.take(performance.now()))).head)}if(live)setBlocked(false);return head}
-    if(resume||!l||l.client!==client){publish((await active('candidate-active-open')).head);resume=false;budget.reset(performance.now(),playing())}
+    if(resume||!l||l.client!==client){publish((await active('candidate-active-open')).head);owned=true;resume=false;budget.reset(performance.now(),playing())}
     else if(playAt===beforePlayAt){try{publish((await active('candidate-active-tick',budget.take(performance.now()))).head)}catch(e:any){if(e.message!=='ACTIVE_LEASE_EXPIRED')throw e;publish((await active('candidate-active-open')).head);budget.reset(performance.now(),playing())}}
     if(live)setBlocked(false);block(false);return head;
    }catch(e:any){
     if(!live)return undefined;
-    block(true);resume=true;
+    owned=false;block(true);resume=true;
     if(['ACTIVE_LEASE_BUSY','VERSION_CONFLICT','ACTIVE_LEASE_EXPIRED','MOTION_EXPIRED','ACTION_ID_CONFLICT','ACTIVE_CONFIRMATION_REQUIRED','ACTIVE_RECEIPT_RETIRED'].includes(e.message)&&!hasPendingAction()){
      const fresh=await connect(head.locale);if(!live||fresh.id!==head.id)return undefined;publish(fresh);setBlocked(true);return head;
     }
     setBlocked(true);latest.current.onError();throw e;
-   }finally{const at=performance.now(),debt=traceLength(motionProjection.traceStart,motionProjection.points);nextPump=at+Math.max(0,Math.min(debt>40?0:800,2800-(at-playAt)-roundTrip));if(stop)block(true)}
+   }finally{const at=performance.now();nextPump=at+Math.max(0,Math.min(motionDue()?0:800,2800-(at-playAt)-roundTrip));if(stop)block(true)}
   };
   const enqueue=(business=false):Promise<Save|undefined>=>{
    if(inFlight)return business?inFlight.then(()=>enqueue(true)):inFlight;
-   const next=work(business);inFlight=next;void next.finally(()=>{if(inFlight===next)inFlight=undefined}).catch(()=>{});return next;
+   const next=work(business);inFlight=next;void next.then(()=>{if(inFlight===next)inFlight=undefined;if(live&&!hold&&playing()&&motionDue())void enqueue().catch(()=>{})},()=>{if(inFlight===next)inFlight=undefined});return next;
   };
   const unregister=registerCandidateFlush(async business=>{if(business){budget.set(false,performance.now());hold=true}return enqueue(!!business)},()=>{hold=false;resume=true});
   const unfence=registerActivePlayFence(s=>s.id===head.id&&s.version===head.version?{client,lease:head.activePlayClock?.lease?.id,activeMs:budget.take(performance.now())}:undefined);
-  wake.current=()=>{budget.set(!hold&&playing(),performance.now());if(hold)return;block(true);const run=()=>{if(live&&!hold)void enqueue().catch(()=>{})};if(inFlight)void inFlight.then(run,()=>{});else run()};
+  wake.current=()=>{budget.set(!hold&&playing(),performance.now());if(hold)return;const l=head.activePlayClock?.lease;block(!(owned&&playing()&&head.movingClock?.lease&&!hasPendingAction()&&(!l||l.client===client)));const run=()=>{if(live&&!hold)void enqueue().catch(()=>{})};if(inFlight)void inFlight.then(run,()=>{});else run()};
   const visibility=()=>{budget.set(!hold&&playing(),performance.now());resume=true;block(true);if(!hold)void enqueue().catch(()=>{})};
   const pagehide=()=>{pagedOut=true;visibility()},pageshow=()=>{pagedOut=false;visibility()};
   document.addEventListener('visibilitychange',visibility);window.addEventListener('pagehide',pagehide);window.addEventListener('pageshow',pageshow);
-  const timer=setInterval(()=>{if(!live||inFlight||hold)return;const s=latest.current;if(!s.ready||!s.save)return;const stop=s.paused||document.hidden||s.save.activeChallenge||battleLocksWorld(s.save);if(stop&&!head.activePlayClock?.lease)return;if(performance.now()<nextPump)return;void enqueue().catch(()=>{})},100);
+  const timer=setInterval(()=>{if(!live||inFlight||hold)return;const s=latest.current;if(!s.ready||!s.save)return;const stop=s.paused||document.hidden||s.save.activeChallenge||battleLocksWorld(s.save);if(stop&&!head.activePlayClock?.lease)return;if(performance.now()<nextPump&&!(!stop&&motionDue()))return;void enqueue().catch(()=>{})},50);
   void enqueue().catch(()=>{});
   return()=>{live=false;wake.current=()=>{};unfence();unregister();clearInterval(timer);document.removeEventListener('visibilitychange',visibility);window.removeEventListener('pagehide',pagehide);window.removeEventListener('pageshow',pageshow);block(true)};
  },[enabled,save?.id]);
