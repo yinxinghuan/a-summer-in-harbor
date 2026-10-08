@@ -1,0 +1,181 @@
+{
+  "schema": 1,
+  "assets": {
+    "crop-radish": {
+      "image": "./art/bag/crop-radish.png",
+      "source": "./art/crops/produce-radish.png",
+      "sourceSHA256": "59d31f158efc14a49099b22be8729f5db8ed0bc341b538e305df60b6577c3845",
+      "sha256": "fac8ee7f77b94bbc563e35d4b6199c1e12ec8edba7484050e54b6d6a12f6a884",
+      "sourceBox": [
+        76,
+        41,
+        180,
+        216
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "removedKeyPixels": 96,
+      "method": "existing key rule; full alpha bounds; contain 208 in 256; nearest; no drawing"
+    },
+    "crop-basil": {
+      "image": "./art/bag/crop-basil.png",
+      "source": "./art/crops/produce-basil.png",
+      "sourceSHA256": "6e062ec48c2af7283a95263926e0a9ae3e318df8ac205e2b89a41b5f15ec7587",
+      "sha256": "4a7348a71db6f87e9cda2244d24dbb2dfe80df577a86909adfc44fb38da3b2bd",
+      "sourceBox": [
+        41,
+        39,
+        215,
+        217
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "removedKeyPixels": 1,
+      "method": "existing key rule; full alpha bounds; contain 208 in 256; nearest; no drawing"
+    },
+    "crop-tomato": {
+      "image": "./art/bag/crop-tomato.png",
+      "source": "./art/crops/produce-tomato.png",
+      "sourceSHA256": "f03cb3c6c9906478454099c2669d20e7dd3aa4d17ecc8b345239f8bbac909c3e",
+      "sha256": "e7726a2e9aa5226dae6d5bcce5ea64069c5691282918a194002217ab179b49ae",
+      "sourceBox": [
+        57,
+        54,
+        197,
+        201
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "removedKeyPixels": 3,
+      "method": "existing key rule; full alpha bounds; contain 208 in 256; nearest; no drawing"
+    },
+    "wood": {
+      "image": "./art/bag/wood.png",
+      "source": "./art/driftwood.png",
+      "sourceSHA256": "8d54a6a04fe6345900d6eff722edfc5a6121c144fdabcb4cc28ac08c87a28810",
+      "sha256": "288853e615ff2f1c6fc6796bb2a6a5eb1c8d18813c679180a12f9db4a4eac2af",
+      "sourceBox": [
+        0,
+        0,
+        192,
+        94
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "removedKeyPixels": 84,
+      "method": "existing key + confirmed border-connected violet fringe; full alpha bounds; contain 208 in 256; nearest; no drawing"
+    },
+    "photo": {
+      "image": "./art/bag/photo.png",
+      "source": "./art/bridge-photo.png",
+      "sourceSHA256": "9aad9981f7e56c86517f44af90683f6227c118971b15b508e4af8be30e172536",
+      "sha256": "762f0db7a2ba241767db1299c7fa2e5f86eab098ebf53473c095caf699dd13de",
+      "sourceBox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "removedKeyPixels": 0,
+      "method": "existing key rule; full alpha bounds; contain 208 in 256; nearest; no drawing"
+    },
+    "route": {
+      "image": "./art/bag/route.png",
+      "source": "./art/trail-map-closeup.png",
+      "sourceSHA256": "9ec91ec3da191593ec8856b57522256c2acdefca938068a1ebf3b5dbda3e295a",
+      "sha256": "f0171245dc01c80d6ad14e428582ceeb46acf1e608b37edb93a4d57a8109ba1c",
+      "sourceBox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "removedKeyPixels": 0,
+      "method": "existing key rule; full alpha bounds; contain 208 in 256; nearest; no drawing"
+    },
+    "snap-pea-seed": {
+      "image": "./art/bag/snap-pea-seed.png",
+      "source": "./art/life-snap-pea-v2/seed.png",
+      "sourceSHA256": "762521df0e329e0be610e1f4beec7d4f1d263fd204faf796f3825e0363dcd5d1",
+      "sha256": "df6a3b99747eec1293d5b134d9931b55cd22517cd32f28b765bbd32eed5054db",
+      "sourceBox": [
+        45,
+        64,
+        210,
+        195
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "removedKeyPixels": 0,
+      "method": "existing key rule; full alpha bounds; contain 208 in 256; nearest; no drawing"
+    },
+    "snap-pea-produce": {
+      "image": "./art/bag/snap-pea-produce.png",
+      "source": "./art/life-snap-pea-v2/produce.png",
+      "sourceSHA256": "86bc5b5f00f0b014ca97e93d7bc4efe8779d4e45e30776b85d0369caf194b985",
+      "sha256": "9bdc85cbf210cb6f21bfc63456b5c7a65f6daad4c75581995aa3c10c0dfcb635",
+      "sourceBox": [
+        60,
+        54,
+        196,
+        193
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "removedKeyPixels": 0,
+      "method": "existing key rule; full alpha bounds; contain 208 in 256; nearest; no drawing"
+    }
+  },
+  "missing": [
+    "seed-radish",
+    "seed-basil",
+    "seed-tomato",
+    "key",
+    "toolbag",
+    "toolkit",
+    "fish",
+    "packed-snack",
+    "life-gift:theo-menu",
+    "life-gift:dani-page"
+  ],
+  "legacyRefs": [
+    {
+      "id": "crop:radish",
+      "revision": 1,
+      "hash": "122f26793c84e9386673639c808184ae6ef85b4975516febe7379117191faabf",
+      "capability": "watered-crop-v1"
+    },
+    {
+      "id": "crop:basil",
+      "revision": 1,
+      "hash": "9847ad2d0aa4e29bb5bdc69019bb7856bdd2ade044097baca5045e7ff38bca2b",
+      "capability": "watered-crop-v1"
+    },
+    {
+      "id": "crop:tomato",
+      "revision": 1,
+      "hash": "7d79f163b7b94342a021db3f5100548e186cd35088efe61e30ee484bdb855eeb",
+      "capability": "watered-crop-v1"
+    }
+  ]
+}

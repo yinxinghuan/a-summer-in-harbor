@@ -294,3 +294,7 @@ BagState提升到App以保存分类、搜索和选择。rows稳定按类型及�
 调入口/来源返回改main；调背包类型、排序或数量读取改Bag的纯模型；调尺寸/颜色改navigation.css；新增事情必须来自已存在的作者化投影，不能在UI发奖励或解锁。第二期命名/删除/覆盖须另立服务端合同与明确确认，当前不提供按钮或假API。owner最新原生蟹等变更与main/docs存在同文件冲突时按精确diff人工合并，不能整树覆盖；AnimalNotebook新物种投影按其owner类型继续消费，不回退其服务或renderer。
 
 本切片尚未发布。接入后应在唯一owner当前HEAD重跑编译、合成账号新建/切换/重放、完整罗勒与关系/时钟组合，再由既有独立Telegram任务确认宿主安全区与真实身份。浏览器合成证明可执行，理解仍unverified。
+
+## 正式 b24 最小 UI 拆分
+
+本候选直接以 b24ff51149a2b8c34782991765aa90f557c0994e 为唯一 parent；从 a797 选择菜单 Map／Bag／icons／focus／CSS，并剔除 f9 薄荷消费、狗、道路与 AI v5 依赖。server、world、life、animals、worker、账号／存档、package/lock 与原图保持 b24 字节。bag-art 按 id/revision/hash/capability 固定消费八份独立派生，动作继续走原有命令；焦点与阅读状态仅为本地呈现。部署门禁独立保留，未上线。

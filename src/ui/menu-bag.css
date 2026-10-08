@@ -1,0 +1,28 @@
+.harbor-panel > .harbor-subnav { position:relative; top:auto; flex-shrink:0; margin:0; padding:4px 18px 10px; border-bottom:2px solid #c7b791; }
+.harbor-map-gesture { touch-action:pan-y pinch-zoom; }
+.harbor-map-gesture[data-pan="true"] { touch-action:none; cursor:grab; }
+.harbor-map-gesture[data-pan="true"]:active { cursor:grabbing; }
+.harbor-map-tools { display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+.harbor-map-tools button { min-height:44px; min-width:44px; white-space:nowrap; }
+.harbor-map-tools button[aria-pressed="true"] { background:#d6e3c7; border-color:#54714a; }
+.harbor-map-hint { font-size:13px; line-height:1.5; color:#645945; margin:6px 0 14px; }
+.harbor-bag__list > button { min-height:96px; padding:10px; gap:12px; align-items:center; }
+.harbor-bag__art { display:flex; align-items:center; justify-content:center; flex:0 0 72px; height:72px; overflow:hidden; background:#eee7d5; border:1px solid #d1c3a6; border-radius:4px; }
+.harbor-bag__art img.harbor-crop-icon { width:72px; height:72px; max-width:100%; object-fit:contain; image-rendering:pixelated; }
+.harbor-bag__art > small { max-width:62px; font-size:11px; line-height:1.4; color:#716552; text-align:center; white-space:normal; }
+.harbor-bag__list > button > span:not(.harbor-bag__art) { min-width:0; flex:1; }
+.harbor-bag__list strong { overflow-wrap:anywhere; }
+.harbor-bag__quantity { flex-shrink:0; font-variant-numeric:tabular-nums; }
+.harbor-bag__detail { position:relative; top:auto; padding:16px; }
+.harbor-bag__detail-art { display:flex; align-items:center; justify-content:center; width:144px; height:144px; margin:12px auto; background:#eee7d5; border:1px solid #d1c3a6; border-radius:4px; }
+.harbor-bag__detail-art img.harbor-crop-icon { width:144px; height:144px; object-fit:contain; image-rendering:pixelated; }
+.harbor-bag__detail-art > p { padding:10px; font-size:13px; text-align:center; color:#716552; }
+.harbor-bag__detail h3 { overflow-wrap:anywhere; }
+.harbor-bag__detail h3 > span { white-space:nowrap; }
+.harbor-bag__detail h3:focus { outline:2px solid #54714a; outline-offset:4px; }
+.harbor-panel:focus, .harbor-portrait-full:focus { outline:none; }
+.harbor-bag__detail > button, .harbor-mainnav button, .harbor-subnav button { min-height:44px; }
+.harbor-bag > .harbor-subnav, .harbor-rel__tabs { position:relative; top:auto; }
+.harbor-panel--people .harbor-panel__body > .harbor-subnav { position:relative; top:auto; }
+@media(min-width:800px) { .harbor-bag__detail { position:sticky; top:0; } }
+@media(max-width:420px) { .harbor-bag__list > button { gap:8px; padding:8px; } .harbor-bag__list strong { font-size:14px; } .harbor-panel > .harbor-subnav { padding-left:14px; padding-right:14px; } }
