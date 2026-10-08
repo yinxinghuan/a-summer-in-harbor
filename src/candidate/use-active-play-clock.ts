@@ -2,30 +2,35 @@ import {useEffect,useRef,useState} from 'react';
 import type {Save} from '../story/state';
 import {battleLocksWorld} from '../story/turn-battle';
 import {candidateMotion,candidateActivePlay,activePlayClientId,connect,hasPendingAction} from '../story/client';
-import {activePlayEnabled,globalPoint,isCluster,localPoint,pointZone} from './continuity';
+import {activePlayEnabled,globalPoint,isCluster} from './continuity';
 import {motionProjection} from './render-adapter';
 import {registerCandidateFlush,registerActivePlayFence} from './exploration-flush';
 import {createActivePlayBudget} from './active-play-budget';
+import {flushMotionTrace} from './motion-flush';
 const block=(v:boolean)=>{motionProjection.networkBlocked=v;motionProjection.block?.(v)};
 /** One queue arbitrates two protocols. Heartbeats use elapsed server time, never rAF distance. */
 export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,onHead:(s:Save)=>void,onError:()=>void){
  const enabled=activePlayEnabled(),[blocked,setBlocked]=useState(enabled),wake=useRef(()=>{}),latest=useRef({save,paused,ready,onHead,onError});latest.current={save,paused,ready,onHead,onError};
  useEffect(()=>{
-  if(!enabled||!save)return;let live=true,head=save,inFlight:Promise<Save|undefined>|undefined,hold=false,resume=true,pagedOut=false,lastPump=-Infinity,motionAt=-Infinity,playAt=-Infinity;
+  if(!enabled||!save)return;let live=true,head=save,inFlight:Promise<Save|undefined>|undefined,hold=false,resume=true,pagedOut=false,nextPump=-Infinity,motionAt=-Infinity,playAt=-Infinity,roundTrip=0;
   const playing=()=>!!latest.current.ready&&!latest.current.paused&&!document.hidden&&!pagedOut&&!latest.current.save?.activeChallenge&&!(latest.current.save&&battleLocksWorld(latest.current.save));
   const budget=createActivePlayBudget(performance.now());
   const client=activePlayClientId(),publish=(s:Save)=>{head=s;if(live)latest.current.onHead(s)};
+  const latency=(started:number)=>{roundTrip=Math.max(performance.now()-started,roundTrip*.9)};
+  const active=async(action:string,activeMs?:number)=>{const started=performance.now();const result=await candidateActivePlay(head,action,client,activeMs);latency(started);playAt=started;return result};
   const movement=async(force=false)=>{
    motionProjection.sample?.();const hasPoints=motionProjection.points.length>0||!!motionProjection.moving?.();
    if(!hasPoints&&!force)return;
    block(true);
    if(!head.movingClock)publish((await candidateMotion(head,'candidate-clock-enable',head.position,{millisecondsPerMinute:4000})).head);
-   if(!head.movingClock!.lease||performance.now()-motionAt>2500){motionProjection.points=[];await motionProjection.restore?.(head.scene,head.position);publish((await candidateMotion(head,'candidate-motion-open',head.position,{})).head);motionAt=performance.now()}
-   motionProjection.sample?.();const points=motionProjection.points.splice(0),tail=isCluster(head.scene)?globalPoint(motionProjection.scene,motionProjection.position):motionProjection.position;
+   motionProjection.sample?.();const points=motionProjection.points.map(p=>({...p})),tail=isCluster(head.scene)?globalPoint(motionProjection.scene,motionProjection.position):motionProjection.position;
    const previous=points.at(-1)??(isCluster(head.scene)?globalPoint(head.scene,head.position):head.position);
    if(Math.hypot(previous.x-tail.x,previous.y-tail.y)>.01)points.push({...tail});
-   if(points.length||force){const zone=isCluster(head.scene)?points.reduce((z,p)=>pointZone(p,z),head.scene):head.scene,end=points.at(-1),position=end?(isCluster(zone)?localPoint(zone,end):end):head.position;
-    publish((await candidateMotion(head,'candidate-motion-step',position,{lease:head.movingClock!.lease!.id,sequence:head.movingClock!.lease!.sequence+1,points})).head);motionAt=performance.now();motionProjection.traceStart=globalPoint(head.scene,head.position)}
+   await flushMotionTrace({head,points,force,renew:performance.now()-motionAt>2500,
+    send:async(s,action,position,payload)=>{const started=performance.now();const result=await candidateMotion(s,action,position,payload);latency(started);motionAt=started;return result},
+    wait:ms=>new Promise(resolve=>setTimeout(resolve,ms)),isCurrent:()=>live&&latest.current.save?.id===head.id,
+    confirmed:(s,remaining)=>{publish(s);motionProjection.points=remaining;motionProjection.traceStart=globalPoint(s.scene,s.position)},
+   });
   };
   const work=async(business=false):Promise<Save|undefined>=>{
    const current=latest.current;if(!current.ready||!current.save||current.save.id!==head.id)return head;
@@ -38,7 +43,7 @@ export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,o
     if(foreign){
      // A second tab must acquire the time lease before touching movement authority.
      if(stop&&!business){block(true);resume=true;if(live)setBlocked(false);return head}
-     publish((await candidateActivePlay(head,'candidate-active-open',client)).head);resume=false;playAt=performance.now();budget.reset(playAt,playing());motionAt=-Infinity;
+     publish((await active('candidate-active-open')).head);resume=false;budget.reset(performance.now(),playing());motionAt=-Infinity;
     }
     // A stationary business action must retain its exact observation proof.
     // Flush actual movement, but renew idle movement leases only during play.
@@ -46,9 +51,9 @@ export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,o
     if(business){block(true);return head}
     // Re-read after asynchronous movement: a panel may have opened during its ACK.
     const shouldPause=latest.current.paused||document.hidden||pagedOut||locked,c=head.activePlayClock,l=c?.lease;
-    if(shouldPause){block(true);resume=true;if(l?.client===client){publish((await candidateActivePlay(head,'candidate-active-pause',client,budget.take(performance.now()))).head)}if(live)setBlocked(false);return head}
-    if(resume||!l||l.client!==client||performance.now()-playAt>2500){publish((await candidateActivePlay(head,'candidate-active-open',client)).head);resume=false;playAt=performance.now();budget.reset(playAt,playing())}
-    else{publish((await candidateActivePlay(head,'candidate-active-tick',client,budget.take(performance.now()))).head);playAt=performance.now()}
+    if(shouldPause){block(true);resume=true;if(l?.client===client){publish((await active('candidate-active-pause',budget.take(performance.now()))).head)}if(live)setBlocked(false);return head}
+    if(resume||!l||l.client!==client||performance.now()-playAt+roundTrip>2800){publish((await active('candidate-active-open')).head);resume=false;budget.reset(performance.now(),playing())}
+    else{try{publish((await active('candidate-active-tick',budget.take(performance.now()))).head)}catch(e:any){if(e.message!=='ACTIVE_LEASE_EXPIRED')throw e;publish((await active('candidate-active-open')).head);budget.reset(performance.now(),playing())}}
     if(live)setBlocked(false);block(false);return head;
    }catch(e:any){
     if(!live)return undefined;
@@ -57,7 +62,7 @@ export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,o
      const fresh=await connect(head.locale);if(!live||fresh.id!==head.id)return undefined;publish(fresh);setBlocked(true);return head;
     }
     setBlocked(true);latest.current.onError();throw e;
-   }finally{lastPump=performance.now();if(stop)block(true)}
+   }finally{const at=performance.now();nextPump=at+Math.max(0,Math.min(800,2800-(at-motionAt)-roundTrip,2800-(at-playAt)-2*roundTrip));if(stop)block(true)}
   };
   const enqueue=(business=false):Promise<Save|undefined>=>{
    if(inFlight)return business?inFlight.then(()=>enqueue(true)):inFlight;
@@ -69,7 +74,7 @@ export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,o
   const visibility=()=>{budget.set(!hold&&playing(),performance.now());resume=true;block(true);if(!hold)void enqueue().catch(()=>{})};
   const pagehide=()=>{pagedOut=true;visibility()},pageshow=()=>{pagedOut=false;visibility()};
   document.addEventListener('visibilitychange',visibility);window.addEventListener('pagehide',pagehide);window.addEventListener('pageshow',pageshow);
-  const timer=setInterval(()=>{if(!live||inFlight||hold)return;const s=latest.current;if(!s.ready||!s.save)return;const stop=s.paused||document.hidden||s.save.activeChallenge||battleLocksWorld(s.save);if(stop&&!head.activePlayClock?.lease)return;if(performance.now()-lastPump<800)return;void enqueue().catch(()=>{})},100);
+  const timer=setInterval(()=>{if(!live||inFlight||hold)return;const s=latest.current;if(!s.ready||!s.save)return;const stop=s.paused||document.hidden||s.save.activeChallenge||battleLocksWorld(s.save);if(stop&&!head.activePlayClock?.lease)return;if(performance.now()<nextPump)return;void enqueue().catch(()=>{})},100);
   void enqueue().catch(()=>{});
   return()=>{live=false;wake.current=()=>{};unfence();unregister();clearInterval(timer);document.removeEventListener('visibilitychange',visibility);window.removeEventListener('pagehide',pagehide);window.removeEventListener('pageshow',pageshow);block(true)};
  },[enabled,save?.id]);
