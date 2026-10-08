@@ -1,5 +1,5 @@
 import {validNativeCrabField} from '../animals/native-crab-game';
-export type MotionFields={nativeCrabV1?:import('../animals/native-crab-game').NativeCrabSave;scene:string;position:{x:number;y:number};townMinutes?:number;awakeMinutes?:number;energy:number;visited:string[];clock:Omit<MovingClock,'transport'>};
+export type MotionFields={play?:Omit<import('./active-play-types').ActivePlayClock,'transport'>;nativeCrabV1?:import('../animals/native-crab-game').NativeCrabSave;scene:string;position:{x:number;y:number};townMinutes?:number;awakeMinutes?:number;energy:number;visited:string[];clock:Omit<MovingClock,'transport'>};
 export type MotionAck={schema:1;id:string;mapVersion:1;baseVersion:number;version:number;cursor:number;ordinal:number;actionId:string;token:string;fields:MotionFields};
 /** Injective bounded identity, disjoint from historical client-generated UUID action IDs. */
 export const motionActionId=(journey:string,ordinal:number)=>`motion-${journey}-${ordinal}`;
@@ -8,5 +8,5 @@ export type MovingClock={version:2;millisecondsPerMinute:2000|4000;remainderMs:n
 export function applyMotionAck<T extends {id:string;mapVersion:1;version:number;cursor:number;movingClock?:MovingClock}>(head:T,ack:MotionAck):T{
  if(ack.schema!==1||ack.id!==head.id||ack.mapVersion!==head.mapVersion||ack.baseVersion!==head.version||ack.version!==head.version+1)throw Error('MOTION_HEAD_RESYNC');
  if(!validNativeCrabField(ack.fields.nativeCrabV1,ack.version,ack.fields.townMinutes??540))throw Error('MOTION_REPLY_UNCONFIRMED');
- const {clock,...fields}=ack.fields;return {...head,...fields,version:ack.version,cursor:ack.cursor,movingClock:{...clock,transport:{version:1,last:{digest:'',ack}}}};
+ const {clock,play,...fields}=ack.fields;return {...head,...fields,...(play?{activePlayClock:{...play,transport:(head as any).activePlayClock?.transport}}:{}),version:ack.version,cursor:ack.cursor,movingClock:{...clock,transport:{version:1,last:{digest:'',ack}}}};
 }

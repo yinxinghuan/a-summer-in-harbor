@@ -3,5 +3,5 @@
 export function createActivePlayBudget(at:number,active=false){
  let cursor=at,enabled=active,bank=0;
  const advance=(next:number)=>{const elapsed=next-cursor;cursor=next;if(!Number.isFinite(elapsed)||elapsed<0||elapsed>3000){bank=0;return}if(enabled)bank=Math.min(3000,bank+elapsed)};
- return {set(active:boolean,at:number){advance(at);enabled=active},take(at:number){advance(at);const whole=Math.floor(bank);bank-=whole;return whole},reset(at:number,active:boolean){cursor=at;bank=0;enabled=active}};
+ return {set(active:boolean,at:number){advance(at);enabled=active},take(at:number){advance(at);const whole=Math.floor(bank);bank-=whole;return whole},refund(ms:number){if(Number.isSafeInteger(ms)&&ms>=0)bank=Math.min(3000,bank+ms)},reset(at:number,active:boolean){cursor=at;bank=0;enabled=active}};
 }

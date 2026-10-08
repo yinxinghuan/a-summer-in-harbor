@@ -9,7 +9,7 @@ const canonical=(v:any):any=>Array.isArray(v)?v.map(canonical):v&&typeof v==='ob
 const fail=(code:MotionRejectionCode):never=>{throw new MotionRejection(code)};
 const stable=(s:Save)=>{const {scene,position,townMinutes,awakeMinutes,energy,visited,movingClock,version,cursor,...rest}=s;return JSON.stringify(rest)};
 /** Candidate-only domain extension. Uses the existing transaction/CAS head, never touches vendor, legacy receipts or prepared rows. */
-export function withCompactMotion(authority:any,store:any,runtime:any,motion=createMovingClock(),now=Date.now){
+export function withCompactMotion(authority:any,store:any,runtime:any,motion=createMovingClock(),now=Date.now,play?:{apply:(s:Save,a:Action)=>Save}){
  const inFlight=new Map<string,{hash:string;promise:Promise<MotionAck>}>();
  const method=async(owner:string,id:string,input:Action):Promise<MotionAck>=>{
   if(typeof owner!=='string'||!owner.trim()||owner.length>256)fail('AUTH_REQUIRED');
@@ -32,12 +32,21 @@ export function withCompactMotion(authority:any,store:any,runtime:any,motion=cre
    if(await repo.preparedCount(owner))fail('MOTION_BUSINESS_PREPARED');
    // Movement is synchronous authored geometry: compute and commit under the same writer transaction.
    // The same server elapsed, path sweep, boot and rolling slack checks run for both protocols.
-   const next=motion(before,body).head;
+   let next=motion(before,body).head;
    if(stable(next)!==stable(before)||next.id!==id||next.mapVersion!==before.mapVersion||next.version!==before.version+1)fail('UNSUPPORTED_MOTION_DELTA');
+   // The two existing validations share one CAS/receipt. The unchanged motion
+   // speed/path/TTL checks run first; a bad time fence rolls back the whole head.
+   const f=p.foreground;
+   if(f!==undefined){
+    if(!play)fail('CANDIDATE_ACTIVE_CLOSED');
+    if(!f||typeof f!=='object'||Object.keys(f).sort().join(',')!=='activeMs,client,lease,sequence'||typeof f.client!=='string'||!/^[-a-f0-9]{36}$/.test(f.client)||typeof f.lease!=='string'||f.lease.length!==36||!Number.isSafeInteger(f.sequence)||f.sequence<1||!Number.isSafeInteger(f.activeMs)||f.activeMs<0||f.activeMs>3000)fail('INVALID_ACTIVE_ACTION');
+    next=play!.apply(next,{...body,scene:next.scene,position:next.position,action:'candidate-active-tick',payload:f});
+   }
    const settled=JSON.stringify({...next,nativeCrabV1:undefined});runtime.finalizeMotion?.(before,next);
    if(JSON.stringify({...next,nativeCrabV1:undefined})!==settled)fail('UNSUPPORTED_MOTION_DELTA');
    const cursor=row.cursor+1,{transport:_,...clock}=next.movingClock!;
-   const ack:MotionAck=wire({schema:1,id,mapVersion:next.mapVersion,baseVersion:before.version,version:next.version,cursor,ordinal:p.ordinal,actionId:body.action_id,token:randomUUID(),fields:{...(next.nativeCrabV1?{nativeCrabV1:next.nativeCrabV1}:{}),scene:next.scene,position:next.position,townMinutes:next.townMinutes,awakeMinutes:next.awakeMinutes,energy:next.energy,visited:next.visited,clock}});
+   const playFields=f?(({transport:_,...c})=>c)(next.activePlayClock!):undefined;
+   const ack:MotionAck=wire({schema:1,id,mapVersion:next.mapVersion,baseVersion:before.version,version:next.version,cursor,ordinal:p.ordinal,actionId:body.action_id,token:randomUUID(),fields:{...(playFields?{play:playFields}:{}),...(next.nativeCrabV1?{nativeCrabV1:next.nativeCrabV1}:{}),scene:next.scene,position:next.position,townMinutes:next.townMinutes,awakeMinutes:next.awakeMinutes,energy:next.energy,visited:next.visited,clock}});
    next.cursor=cursor;next.movingClock!.transport={version:1,last:{digest:hash,ack}};runtime.assertReadable(next);
    // Atomic head + latest confirmation. No addReceipt/addEvent/clearPrepared call.
    await repo.write(owner,next,cursor,now());return ack;

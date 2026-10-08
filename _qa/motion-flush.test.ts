@@ -32,7 +32,7 @@ test('unknown requests, version conflicts and invalid paths are not retried or d
  for(const error of ['MODEL_CALL_PENDING_OR_INTERRUPTED','VERSION_CONFLICT','INVALID_MOTION_PATH']){const f=fixture();await f.ready();let calls=0;await assert.rejects(flushMotionTrace({...f.options(),points:[{x:783,y:557}],send:async()=>{calls++;throw Error(error)}}),new RegExp(error));assert.equal(calls,1);assert.deepEqual(f.confirmed,[]);}
 });
 test('a failed fresh-lease attempt is bounded and keeps the pending path for recovery',async()=>{
- const f=fixture();await f.ready();let calls=0;await assert.rejects(flushMotionTrace({...f.options(),points:[{x:783,y:557}],send:async(s,a,p,v)=>{calls++;if(a==='candidate-motion-open')return f.send(s,a,p,v);throw Error('MOTION_EXPIRED')}}),/MOTION_EXPIRED/);assert.equal(calls,3);assert.deepEqual(f.confirmed,[]);
+ const f=fixture();await f.ready();let calls=0;await assert.rejects(flushMotionTrace({...f.options(),points:[{x:783,y:557}],send:async(s,a,p,v)=>{calls++;if(a==='candidate-motion-open')return f.send(s,a,p,v);throw Error('MOTION_EXPIRED')}}),/MOTION_EXPIRED/);assert.equal(calls,3);assert.deepEqual(f.confirmed,[{position:{x:733,y:557},remaining:[{x:783,y:557}]}]);
 });
 test('a journey change prevents the old asynchronous result from editing the new renderer buffer',async()=>{
  const f=fixture();await f.ready();f.advance(500);await assert.rejects(flushMotionTrace({...f.options(),points:[{x:783,y:557}],isCurrent:()=>false}),/MOTION_FLUSH_CANCELLED/);assert.deepEqual(f.confirmed,[]);

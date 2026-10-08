@@ -2,6 +2,7 @@ import type {Space,SpaceOptions} from '../engine/rpg-space';
 import type {Point} from '../engine/world';
 import {walkable,findPath} from '../engine/world';
 import {appendMotionTrace} from './motion-trace';
+import {predictionHorizon,traceLength} from './motion-outbox';
 import {CLUSTER,clusterCanvas,clusterWorld,clusterWalkable,globalPoint,localPoint,renderScene,isCluster,pointZone,sameCluster} from './continuity';
 export const motionProjection:{scene:string;position:Point;points:Point[];lastSample:number;traceStart:Point;networkBlocked:boolean;block?:(value:boolean)=>void;sample?:()=>void;moving?:()=>boolean;restore?:(scene:string,p:Point)=>Promise<void>}={scene:'station',position:{x:0,y:0},points:[],lastSample:0,traceStart:{x:0,y:0},networkBlocked:true};
 export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOptions)=>Space):Space{
@@ -15,7 +16,7 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
   walkTo:(p,arrive)=>raw.walkTo(globalPoint(logical,p),arrive),pause:p=>raw.pause(p),
   restore:async(id,p)=>{const dest=globalPoint(id,p),crossing=id!==logical&&zone()===id,same=sameCluster(id,logical)&&raw.scene()===CLUSTER;logical=id;
    // A crossing acknowledgement retains current prediction; explicit distant arrivals still snap.
-   if(crossing&&same&&Math.hypot(raw.position().x-dest.x,raw.position().y-dest.y)<90)return;
+   if(crossing&&same&&(motionProjection.points.length>0||Math.hypot(raw.position().x-dest.x,raw.position().y-dest.y)<90))return;
    reset(id,p);await raw.restore(renderScene(id),dest);
   },project:p=>raw.project(globalPoint(logical,p)),toWorld:p=>localPoint(logical,raw.toWorld(p)),face:p=>raw.face(globalPoint(logical,p))
  };
@@ -51,7 +52,8 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
    const gates={market:{x:597,y:720},bazaar:{x:597,y:580}},first=route(from,a,gates[from as keyof typeof gates]),last=route(to,gates[to as keyof typeof gates],b);
    return first.length&&last.length?[...first,{x:597,y:650},...last]:[];
   },
-  controlsBlocked:()=>original.controlsBlocked()||motionProjection.networkBlocked||motionProjection.points.length>=28,
+  worldPaused:original.worldPaused??original.controlsBlocked,
+  controlsBlocked:()=>original.controlsBlocked()||motionProjection.networkBlocked||motionProjection.points.length>=28||traceLength(motionProjection.traceStart,motionProjection.points)>=predictionHorizon,
   onMotionPoint:p=>appendMotionTrace(motionProjection.points,motionProjection.traceStart,p),
   onPosition:p=>{const z=zone(),local=projected(p);motionProjection.scene=z;motionProjection.position={...local};original.onPosition(local)},
   onFrame:(dt,p,_id,paused)=>{original.onFrame?.(dt,projected(p),zone(),paused);for(const [id,graphic] of desiredGraphics){const [source,eventId]=id.split('--');raw.projectEventGraphic?.(id,original.eventGraphics?.(source,eventId)??graphic)}},

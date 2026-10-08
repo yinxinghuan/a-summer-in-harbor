@@ -31,7 +31,7 @@ export type SpaceOptions={
  arrivalWalkable?:(point:Point,scene:string)=>boolean;
  walkable?:(point:Point,scene:string)=>boolean;findPath?:(from:Point,to:Point,scene:string)=>Point[];
  prepareScene?:(scene:string)=>Promise<void>;
- controlsBlocked:()=>boolean;onPosition:(point:Point)=>void;onDestination:(point:Point|null)=>void;
+ controlsBlocked:()=>boolean;worldPaused?:()=>boolean;onPosition:(point:Point)=>void;onDestination:(point:Point|null)=>void;
  onFrame?:(dt:number,position:Point,scene:string,paused:boolean)=>void;
  onMotionPoint?:(point:Point)=>void;
  cameraBounds?:(scene:string)=>{x:number;y:number;w:number;h:number};
@@ -141,11 +141,12 @@ function createRawRpgSpace(options:SpaceOptions){
  };
  const tick=(time:number)=>{
   const dt=last?Math.min(Math.max(0,(time-last)/1000),.04):0;last=time;
-  const blocked=paused||changing||options.controlsBlocked()||document.hidden;
+  const worldPaused=paused||changing||(options.worldPaused?.()??options.controlsBlocked())||document.hidden;
+  const blocked=worldPaused||options.controlsBlocked();
   advancePlayer(time,blocked,dt);
   configureCamera();for(const reveal of reveals)reveal(stage(),scene,pos);
-  options.onFrame?.(dt,{...pos},scene,blocked);projectPlayer();requestAnimationFrame(tick);
-  if(debug){const sprite=client?.getCurrentPlayer();host.dataset.playerGraphics=String(sprite?.graphics().length??-1);host.dataset.playerSheets=String(sprite?.graphicsSignals().length??-1);host.dataset.roomEvents=String(Object.keys((client?.activeRoom() as unknown as {events?:()=>Record<string,unknown>})?.events?.()??{}).length)}
+  options.onFrame?.(dt,{...pos},scene,worldPaused);projectPlayer();requestAnimationFrame(tick);
+  if(debug){host.dataset.predictionBlocked=String(blocked);host.dataset.worldPaused=String(worldPaused);const sprite=client?.getCurrentPlayer();host.dataset.playerGraphics=String(sprite?.graphics().length??-1);host.dataset.playerSheets=String(sprite?.graphicsSignals().length??-1);host.dataset.roomEvents=String(Object.keys((client?.activeRoom() as unknown as {events?:()=>Record<string,unknown>})?.events?.()??{}).length)}
  };
  requestAnimationFrame(tick);
  return runtime;

@@ -7,6 +7,8 @@ import {motionProjection} from './render-adapter';
 import {registerCandidateFlush,registerActivePlayFence} from './exploration-flush';
 import {createActivePlayBudget} from './active-play-budget';
 import {flushMotionTrace} from './motion-flush';
+import {consumeTrace,traceLength} from './motion-outbox';
+import {resolvedMotionFailure} from './motion-errors';
 const block=(v:boolean)=>{motionProjection.networkBlocked=v;motionProjection.block?.(v)};
 /** One queue arbitrates two protocols. Heartbeats use elapsed server time, never rAF distance. */
 export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,onHead:(s:Save)=>void,onError:()=>void){
@@ -18,18 +20,23 @@ export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,o
   const client=activePlayClientId(),publish=(s:Save)=>{head=s;if(live)latest.current.onHead(s)};
   const latency=(started:number)=>{roundTrip=Math.max(performance.now()-started,roundTrip*.9)};
   const active=async(action:string,activeMs?:number)=>{const started=performance.now();const result=await candidateActivePlay(head,action,client,activeMs);latency(started);playAt=started;return result};
-  const movement=async(force=false)=>{
+  const movement=async(force=false,business=false)=>{
    motionProjection.sample?.();const hasPoints=motionProjection.points.length>0||!!motionProjection.moving?.();
    if(!hasPoints&&!force)return;
-   block(true);
+   if(business||!head.movingClock?.lease)block(true);
    if(!head.movingClock)publish((await candidateMotion(head,'candidate-clock-enable',head.position,{millisecondsPerMinute:4000})).head);
    motionProjection.sample?.();const points=motionProjection.points.map(p=>({...p})),tail=isCluster(head.scene)?globalPoint(motionProjection.scene,motionProjection.position):motionProjection.position;
    const previous=points.at(-1)??(isCluster(head.scene)?globalPoint(head.scene,head.position):head.position);
    if(Math.hypot(previous.x-tail.x,previous.y-tail.y)>.01)points.push({...tail});
-   await flushMotionTrace({head,points,force,renew:performance.now()-motionAt>2500,
-    send:async(s,action,position,payload)=>{const started=performance.now();const result=await candidateMotion(s,action,position,payload);latency(started);motionAt=started;return result},
+   const limit=business?140:Math.min(140,Math.max(1,112*Math.min(1250,performance.now()-motionAt)/1000));
+   await flushMotionTrace({head,points,force,renew:performance.now()-motionAt>2500,limit,maxBatches:business?Infinity:1,
+    send:async(s,action,position,payload)=>{const started=performance.now(),l=s.activePlayClock?.lease,combined=!business&&playing()&&l?.client===client;
+     const activeMs=combined?budget.take(started):0;
+     try{const result=await candidateMotion(s,action,position,{...(payload as object),...(combined?{foreground:{client,lease:l.id,sequence:l.sequence+1,activeMs}}:{})});latency(started);motionAt=started;if(combined)playAt=started;return result}
+     catch(e:any){if(combined&&resolvedMotionFailure(e))budget.refund(activeMs);throw e}
+    },
     wait:ms=>new Promise(resolve=>setTimeout(resolve,ms)),isCurrent:()=>live&&latest.current.save?.id===head.id,
-    confirmed:(s,remaining)=>{publish(s);motionProjection.points=remaining;motionProjection.traceStart=globalPoint(s.scene,s.position)},
+    confirmed:(s,_remaining,accepted)=>{motionProjection.points=consumeTrace(motionProjection.traceStart,motionProjection.points,accepted);motionProjection.traceStart=globalPoint(s.scene,s.position);publish(s)},
    });
   };
   const work=async(business=false):Promise<Save|undefined>=>{
@@ -41,19 +48,24 @@ export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,o
     if(hasPendingAction())throw Error('PENDING_ACTION');
     const foreign=head.activePlayClock?.lease&&head.activePlayClock.lease.client!==client;
     if(foreign){
+     block(true);
      // A second tab must acquire the time lease before touching movement authority.
      if(stop&&!business){block(true);resume=true;if(live)setBlocked(false);return head}
      publish((await active('candidate-active-open')).head);resume=false;budget.reset(performance.now(),playing());motionAt=-Infinity;
     }
+    if(!stop&&!business&&(resume||!head.activePlayClock?.lease)){
+     block(true);publish((await active('candidate-active-open')).head);resume=false;budget.reset(performance.now(),playing());
+    }
     // A stationary business action must retain its exact observation proof.
     // Flush actual movement, but renew idle movement leases only during play.
-    if(!locked)await movement(!business&&!stop&&(!head.movingClock?.lease||performance.now()-motionAt>=1600));
+    const beforePlayAt=playAt;
+    if(!locked)await movement(!business&&!stop,business||stop);
     if(business){block(true);return head}
     // Re-read after asynchronous movement: a panel may have opened during its ACK.
     const shouldPause=latest.current.paused||document.hidden||pagedOut||locked,c=head.activePlayClock,l=c?.lease;
-    if(shouldPause){block(true);resume=true;if(l?.client===client){publish((await active('candidate-active-pause',budget.take(performance.now()))).head)}if(live)setBlocked(false);return head}
-    if(resume||!l||l.client!==client||performance.now()-playAt+roundTrip>2800){publish((await active('candidate-active-open')).head);resume=false;budget.reset(performance.now(),playing())}
-    else{try{publish((await active('candidate-active-tick',budget.take(performance.now()))).head)}catch(e:any){if(e.message!=='ACTIVE_LEASE_EXPIRED')throw e;publish((await active('candidate-active-open')).head);budget.reset(performance.now(),playing())}}
+    if(shouldPause){block(true);resume=true;if(!locked)await movement(false,true);if(l?.client===client){publish((await active('candidate-active-pause',budget.take(performance.now()))).head)}if(live)setBlocked(false);return head}
+    if(resume||!l||l.client!==client){publish((await active('candidate-active-open')).head);resume=false;budget.reset(performance.now(),playing())}
+    else if(playAt===beforePlayAt){try{publish((await active('candidate-active-tick',budget.take(performance.now()))).head)}catch(e:any){if(e.message!=='ACTIVE_LEASE_EXPIRED')throw e;publish((await active('candidate-active-open')).head);budget.reset(performance.now(),playing())}}
     if(live)setBlocked(false);block(false);return head;
    }catch(e:any){
     if(!live)return undefined;
@@ -62,7 +74,7 @@ export function useActivePlayClock(save:Save|null,paused:boolean,ready:boolean,o
      const fresh=await connect(head.locale);if(!live||fresh.id!==head.id)return undefined;publish(fresh);setBlocked(true);return head;
     }
     setBlocked(true);latest.current.onError();throw e;
-   }finally{const at=performance.now();nextPump=at+Math.max(0,Math.min(800,2800-(at-motionAt)-roundTrip,2800-(at-playAt)-2*roundTrip));if(stop)block(true)}
+   }finally{const at=performance.now(),debt=traceLength(motionProjection.traceStart,motionProjection.points);nextPump=at+Math.max(0,Math.min(debt>40?0:800,2800-(at-playAt)-roundTrip));if(stop)block(true)}
   };
   const enqueue=(business=false):Promise<Save|undefined>=>{
    if(inFlight)return business?inFlight.then(()=>enqueue(true)):inFlight;

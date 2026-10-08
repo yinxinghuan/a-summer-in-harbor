@@ -6,7 +6,7 @@ type Sender=(head:Save,action:string,position:Point,payload:unknown)=>Promise<{h
 const distance=(a:Point,b:Point)=>Math.hypot(a.x-b.x,a.y-b.y);
 /** Keep every corner. A fresh lease admits a bounded prefix using fresh server
  * elapsed time; it never authorizes an expired lease or an old offline interval. */
-function prefix(start:Point,points:Point[],limit=96){
+function prefix(start:Point,points:Point[],limit:number){
  const taken:Point[]=[],rest=points.map(p=>({...p}));let previous=start,total=0;
  while(rest.length){const p=rest[0],d=distance(previous,p),left=limit-total;
   if(d>left+1e-7){taken.push({x:previous.x+(p.x-previous.x)*left/d,y:previous.y+(p.y-previous.y)*left/d});total+=left;break;}
@@ -14,15 +14,15 @@ function prefix(start:Point,points:Point[],limit=96){
  }
  return {taken,rest,distance:total};
 }
-export async function flushMotionTrace({head,points,force=false,renew=false,send,wait,confirmed,isCurrent=()=>true}:{head:Save;points:Point[];force?:boolean;renew?:boolean;send:Sender;wait:(ms:number)=>Promise<void>;confirmed:(head:Save,remaining:Point[])=>void;isCurrent?:()=>boolean}){
+export async function flushMotionTrace({head,points,force=false,renew=false,limit=140,maxBatches=Infinity,send,wait,confirmed,isCurrent=()=>true}:{head:Save;points:Point[];force?:boolean;renew?:boolean;limit?:number;maxBatches?:number;send:Sender;wait:(ms:number)=>Promise<void>;confirmed:(head:Save,remaining:Point[],accepted:Point[])=>void;isCurrent?:()=>boolean}){
  let remaining=points.map(p=>({...p})),opened=false;
  const open=async()=>{head=(await send(head,'candidate-motion-open',head.position,{})).head;opened=true;};
- const accept=()=>{if(!isCurrent())throw Error('MOTION_FLUSH_CANCELLED');confirmed(head,remaining.map(p=>({...p})));};
+ const accept=(accepted:Point[]=[])=>{if(!isCurrent())throw Error('MOTION_FLUSH_CANCELLED');confirmed(head,remaining.map(p=>({...p})),accepted);};
  if(!head.movingClock?.lease||renew&&!remaining.length){await open();accept();}
  // Opening an idle lease already renews it; do not spend another round trip.
  if(!remaining.length){if(force&&!opened){head=(await send(head,'candidate-motion-step',head.position,{lease:head.movingClock!.lease!.id,sequence:head.movingClock!.lease!.sequence+1,points:[]})).head;accept();}return head;}
- while(remaining.length){
-  const chunk=prefix(globalPoint(head.scene,head.position),remaining);
+ let batches=0;while(remaining.length&&batches++<maxBatches){
+  const chunk=prefix(globalPoint(head.scene,head.position),remaining,limit);
   const step=async()=>{
    const zone=isCluster(head.scene)?chunk.taken.reduce((z,p)=>pointZone(p,z),head.scene):head.scene,end=chunk.taken.at(-1)!;
    return (await send(head,'candidate-motion-step',isCluster(zone)?localPoint(zone,end):end,{lease:head.movingClock!.lease!.id,sequence:head.movingClock!.lease!.sequence+1,points:chunk.taken})).head;
@@ -31,11 +31,11 @@ export async function flushMotionTrace({head,points,force=false,renew=false,send
   try{head=await step();}catch(e:any){
    // Only a definite terminal expiry can be recovered. Unknown requests and
    // version/owner/path failures retain the normal durable recovery path.
-   if(e.message!=='MOTION_EXPIRED')throw e;
-   await open();if(!isCurrent())throw Error('MOTION_FLUSH_CANCELLED');
+   if(!['MOTION_EXPIRED','MOTION_TOO_FAST'].includes(e.message))throw e;
+   if(e.message==='MOTION_EXPIRED'){await open();accept()}if(!isCurrent())throw Error('MOTION_FLUSH_CANCELLED');
    await wait(Math.ceil(chunk.distance/112*1000)+1);head=await step();
   }
-  remaining=chunk.rest;accept();opened=true;
+  remaining=chunk.rest;accept(chunk.taken);opened=true;
  }
  return head;
 }
