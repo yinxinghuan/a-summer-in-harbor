@@ -1,0 +1,191 @@
+{
+  "species": "dog",
+  "visualVersion": "street-dog-native-walk-v1",
+  "image": "./art/animals/dog-native-walk-v1.png",
+  "atlas": {
+    "w": 384,
+    "h": 512
+  },
+  "frames": {
+    "walkA": {
+      "down": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "97e0a19c3729b64fa3ede2dd109ca204184740d12fe7e8db231525aa5d7a0121",
+        "requestId": "34a44563-7a6c-41cf-be0e-ea64520abcf1",
+        "taskId": "mt_a2e228217b8cde51a2d7a91d83f85385"
+      },
+      "left": {
+        "x": 0,
+        "y": 128,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "f1c86290d5685cb0744487e91fa4f2eff1f9dfde3f05b3c0683c1f5d2b742ea2",
+        "requestId": "e4ef0f5c-92cc-4b00-afc6-2fe9b470c4ce",
+        "taskId": "mt_211248505b0efe699e38c631d588b77c"
+      },
+      "right": {
+        "x": 0,
+        "y": 256,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "f1c86290d5685cb0744487e91fa4f2eff1f9dfde3f05b3c0683c1f5d2b742ea2",
+        "requestId": "e4ef0f5c-92cc-4b00-afc6-2fe9b470c4ce",
+        "taskId": "mt_211248505b0efe699e38c631d588b77c"
+      },
+      "up": {
+        "x": 0,
+        "y": 384,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "742e107c969577fdf4c958b7719b03b9e93da2c702bf4848e3d0cfef5580804d",
+        "requestId": "8df86121-5984-4ca0-b79c-dae6b36f2df8",
+        "taskId": "mt_358eac899f5bc87d9ff0f93ba4416f9d"
+      }
+    },
+    "stand": {
+      "down": {
+        "x": 128,
+        "y": 0,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "78881fa58d143bdc0dd68655651d1c3cb2c08a91e1c38e240febb0f28c2fbb9a",
+        "requestId": "e79a5a0d-c7c8-49ea-855c-6a4b9371d3f4",
+        "taskId": "mt_cc321460d836575142cc6129a90c90ab"
+      },
+      "left": {
+        "x": 128,
+        "y": 128,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "274c4b69d3d3251829ee455ea03deb505a4e7d907e6e61aeaca79f60af4c7428",
+        "requestId": "34da591f-1a6b-4451-b2bd-b19ffcad8f11",
+        "taskId": "mt_14c19242c4054295e5c33a12d27912e7"
+      },
+      "right": {
+        "x": 128,
+        "y": 256,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "274c4b69d3d3251829ee455ea03deb505a4e7d907e6e61aeaca79f60af4c7428",
+        "requestId": "34da591f-1a6b-4451-b2bd-b19ffcad8f11",
+        "taskId": "mt_14c19242c4054295e5c33a12d27912e7"
+      },
+      "up": {
+        "x": 128,
+        "y": 384,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "da722ae1f030c01a5a5971eda4257ef568a4e29b4ae6414986493f2e490a59bb",
+        "requestId": "40053837-16ea-4157-af35-4812d70beb2f",
+        "taskId": "mt_ceceaa6eedf49479d515c4b7b263e6ad"
+      }
+    },
+    "walkB": {
+      "down": {
+        "x": 256,
+        "y": 0,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "a05a6360f2854e26d08e2bb6aaa20cff6a7d92bac2d92c11c9229b09e6310389",
+        "requestId": "6f8843d1-c286-44db-a13b-40ee306d0340",
+        "taskId": "mt_d7b1922762fd6311e913c1a63c58ed1f"
+      },
+      "left": {
+        "x": 256,
+        "y": 128,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "42142585f708fbf773b937d91333556d3c835c60628c62b918ceea6a320537f1",
+        "requestId": "5215e3a1-26c3-4581-b7df-b5052a4af9c2",
+        "taskId": "mt_22214c5155d555dc12e7f285e253529c"
+      },
+      "right": {
+        "x": 256,
+        "y": 256,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "42142585f708fbf773b937d91333556d3c835c60628c62b918ceea6a320537f1",
+        "requestId": "5215e3a1-26c3-4581-b7df-b5052a4af9c2",
+        "taskId": "mt_22214c5155d555dc12e7f285e253529c"
+      },
+      "up": {
+        "x": 256,
+        "y": 384,
+        "w": 128,
+        "h": 128,
+        "anchor": [
+          0.5,
+          0.8125
+        ],
+        "scale": 0.5,
+        "sourceSha256": "a10a60a1470bb3491a09a9fe730f7e961b39ff6f1d343aa292092e90354fc5ae",
+        "requestId": "b1800468-3ef0-478c-9e2e-aa2c489e2071",
+        "taskId": "mt_f82318ea5f5de4cc3b12309a5c161b9b"
+      }
+    }
+  },
+  "review": {
+    "singleImage": "accepted",
+    "family": "accepted",
+    "targetScene": "accepted",
+    "technical": "accepted"
+  }
+}

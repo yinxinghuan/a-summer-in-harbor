@@ -1,0 +1,1655 @@
+{
+  "base": "b24ff51149a2b8c34782991765aa90f557c0994e",
+  "dog": {
+    "revision": 1,
+    "nativeDirections": [
+      "down",
+      "left",
+      "up"
+    ],
+    "nativePoses": [
+      "stand",
+      "walkA",
+      "walkB"
+    ],
+    "right": "whole-frame mirror of left",
+    "atlas": [
+      384,
+      512
+    ],
+    "frame": [
+      128,
+      128
+    ],
+    "root": [
+      64,
+      104
+    ],
+    "scale": 0.5,
+    "speed": 36,
+    "stride": 28,
+    "followStop": 44,
+    "followMax": 96,
+    "productionEnabled": false,
+    "groundGeometry": "HOLD until all native poses measured"
+  },
+  "mint": {
+    "node": {
+      "id": "harbor-mint-hill-1",
+      "species": "plant:harbor-mint",
+      "revision": 2,
+      "scene": "hill",
+      "at": {
+        "x": 550,
+        "y": 690
+      },
+      "approach": {
+        "x": 542,
+        "y": 708
+      },
+      "stockCap": 2,
+      "stockFloor": 1,
+      "recoveryMinutes": 720
+    },
+    "canvas": [
+      256,
+      256
+    ],
+    "maximumWidth": 48,
+    "maximumHeight": 36,
+    "root": [
+      128,
+      224
+    ],
+    "itemSlot": [
+      64,
+      64
+    ],
+    "collision": "none",
+    "partialHarvest": "same retained clump",
+    "geometryStatus": "provisional; measure native art before admission",
+    "definitionHash": "b7163ddef34d02097fcf088d22764309c5669ec7709ca594889fd09d0f7d1cfd",
+    "legacyDefinitionHash": "4693aa545e4fb1adeb323c4c7db3d7863162f7a747153078a5069b77b446611e",
+    "legacyReader": "preserves hash/source/items; stops new v1 observe/collect; archive/share remain",
+    "artAdmission": "HOLD no native art"
+  },
+  "road": {
+    "texturePhase": 160,
+    "nativeAtlas": [
+      1024,
+      1024
+    ],
+    "grid": [
+      4,
+      4
+    ],
+    "cell": [
+      256,
+      256
+    ],
+    "cellWorld": 40,
+    "sourceWorldScale": 0.15625,
+    "soilEdgeWidth": [
+      6,
+      12
+    ],
+    "stoneEdgeWidth": [
+      8,
+      12
+    ],
+    "families": [
+      "compacted-soil-grass",
+      "flat-stone-trim"
+    ],
+    "soilCells": [
+      "center",
+      "N",
+      "E",
+      "S",
+      "W",
+      "outer-NW",
+      "outer-NE",
+      "outer-SE",
+      "outer-SW",
+      "inner-NW",
+      "inner-NE",
+      "inner-SE",
+      "inner-SW",
+      "cap-N",
+      "cap-S",
+      "gravel"
+    ],
+    "stoneCells": [
+      "center",
+      "N",
+      "E",
+      "S",
+      "W",
+      "outer-NW",
+      "outer-NE",
+      "outer-SE",
+      "outer-SW",
+      "inner-NW",
+      "inner-NE",
+      "inner-SE",
+      "inner-SW",
+      "T-no-internal-edge",
+      "cross-no-internal-edge",
+      "end"
+    ],
+    "productionEnabled": false,
+    "plans": {
+      "station": [
+        {
+          "from": {
+            "x": 480,
+            "y": 80
+          },
+          "to": {
+            "x": 480,
+            "y": 430
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 480,
+            "y": 650
+          },
+          "to": {
+            "x": 480,
+            "y": 960
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 80
+          },
+          "to": {
+            "x": 710,
+            "y": 430
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 650
+          },
+          "to": {
+            "x": 710,
+            "y": 890
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 945
+          },
+          "to": {
+            "x": 710,
+            "y": 960
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 790,
+            "y": 235
+          },
+          "to": {
+            "x": 790,
+            "y": 430
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 1090,
+            "y": 235
+          },
+          "to": {
+            "x": 1090,
+            "y": 430
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 212,
+            "y": 330
+          },
+          "to": {
+            "x": 212,
+            "y": 430
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 287,
+            "y": 330
+          },
+          "to": {
+            "x": 287,
+            "y": 430
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 120,
+            "y": 430
+          },
+          "to": {
+            "x": 120,
+            "y": 650
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 995,
+            "y": 875
+          },
+          "to": {
+            "x": 995,
+            "y": 890
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 1145,
+            "y": 875
+          },
+          "to": {
+            "x": 1145,
+            "y": 925
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 1130,
+            "y": 925
+          },
+          "to": {
+            "x": 1130,
+            "y": 945
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 790,
+            "y": 235
+          },
+          "to": {
+            "x": 1090,
+            "y": 235
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 212,
+            "y": 330
+          },
+          "to": {
+            "x": 287,
+            "y": 330
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 120,
+            "y": 430
+          },
+          "to": {
+            "x": 212,
+            "y": 430
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 287,
+            "y": 430
+          },
+          "to": {
+            "x": 480,
+            "y": 430
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 430
+          },
+          "to": {
+            "x": 790,
+            "y": 430
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 1090,
+            "y": 430
+          },
+          "to": {
+            "x": 1320,
+            "y": 430
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 120,
+            "y": 650
+          },
+          "to": {
+            "x": 480,
+            "y": 650
+          },
+          "road": "stone",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 650
+          },
+          "to": {
+            "x": 1320,
+            "y": 650
+          },
+          "road": "stone",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 995,
+            "y": 875
+          },
+          "to": {
+            "x": 1145,
+            "y": 875
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 890
+          },
+          "to": {
+            "x": 995,
+            "y": 890
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 1130,
+            "y": 925
+          },
+          "to": {
+            "x": 1145,
+            "y": 925
+          },
+          "road": "stone",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 945
+          },
+          "to": {
+            "x": 1130,
+            "y": 945
+          },
+          "road": "stone",
+          "side": "S"
+        }
+      ],
+      "harbor": [],
+      "market": [
+        {
+          "from": {
+            "x": 500,
+            "y": 80
+          },
+          "to": {
+            "x": 500,
+            "y": 220
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 500,
+            "y": 780
+          },
+          "to": {
+            "x": 500,
+            "y": 960
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 80
+          },
+          "to": {
+            "x": 710,
+            "y": 220
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 780
+          },
+          "to": {
+            "x": 710,
+            "y": 960
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 280,
+            "y": 220
+          },
+          "to": {
+            "x": 280,
+            "y": 780
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 1070,
+            "y": 220
+          },
+          "to": {
+            "x": 1070,
+            "y": 460
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 1070,
+            "y": 620
+          },
+          "to": {
+            "x": 1070,
+            "y": 780
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 280,
+            "y": 220
+          },
+          "to": {
+            "x": 500,
+            "y": 220
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 220
+          },
+          "to": {
+            "x": 1070,
+            "y": 220
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 1070,
+            "y": 460
+          },
+          "to": {
+            "x": 1320,
+            "y": 460
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 1070,
+            "y": 620
+          },
+          "to": {
+            "x": 1320,
+            "y": 620
+          },
+          "road": "stone",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 280,
+            "y": 780
+          },
+          "to": {
+            "x": 500,
+            "y": 780
+          },
+          "road": "stone",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 710,
+            "y": 780
+          },
+          "to": {
+            "x": 1070,
+            "y": 780
+          },
+          "road": "stone",
+          "side": "S"
+        }
+      ],
+      "coast": [
+        {
+          "from": {
+            "x": 495,
+            "y": 80
+          },
+          "to": {
+            "x": 495,
+            "y": 415
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 605,
+            "y": 80
+          },
+          "to": {
+            "x": 605,
+            "y": 415
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 1010,
+            "y": 120
+          },
+          "to": {
+            "x": 1010,
+            "y": 415
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 1160,
+            "y": 120
+          },
+          "to": {
+            "x": 1160,
+            "y": 415
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 80,
+            "y": 535
+          },
+          "to": {
+            "x": 80,
+            "y": 600
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 960,
+            "y": 535
+          },
+          "to": {
+            "x": 960,
+            "y": 600
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 1010,
+            "y": 120
+          },
+          "to": {
+            "x": 1160,
+            "y": 120
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 40,
+            "y": 415
+          },
+          "to": {
+            "x": 495,
+            "y": 415
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 605,
+            "y": 415
+          },
+          "to": {
+            "x": 1010,
+            "y": 415
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 1160,
+            "y": 415
+          },
+          "to": {
+            "x": 1320,
+            "y": 415
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 40,
+            "y": 535
+          },
+          "to": {
+            "x": 80,
+            "y": 535
+          },
+          "road": "stone",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 960,
+            "y": 535
+          },
+          "to": {
+            "x": 1320,
+            "y": 535
+          },
+          "road": "stone",
+          "side": "S"
+        }
+      ],
+      "hill": [
+        {
+          "from": {
+            "x": 305,
+            "y": 80
+          },
+          "to": {
+            "x": 305,
+            "y": 200
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 405,
+            "y": 80
+          },
+          "to": {
+            "x": 405,
+            "y": 200
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 955,
+            "y": 80
+          },
+          "to": {
+            "x": 955,
+            "y": 200
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 1055,
+            "y": 80
+          },
+          "to": {
+            "x": 1055,
+            "y": 200
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 300,
+            "y": 200
+          },
+          "to": {
+            "x": 300,
+            "y": 330
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 1080,
+            "y": 200
+          },
+          "to": {
+            "x": 1080,
+            "y": 330
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 590,
+            "y": 330
+          },
+          "to": {
+            "x": 590,
+            "y": 500
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 590,
+            "y": 600
+          },
+          "to": {
+            "x": 590,
+            "y": 960
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 740,
+            "y": 330
+          },
+          "to": {
+            "x": 740,
+            "y": 500
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 740,
+            "y": 600
+          },
+          "to": {
+            "x": 740,
+            "y": 960
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 960,
+            "y": 330
+          },
+          "to": {
+            "x": 960,
+            "y": 500
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 1060,
+            "y": 330
+          },
+          "to": {
+            "x": 1060,
+            "y": 500
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 300,
+            "y": 200
+          },
+          "to": {
+            "x": 305,
+            "y": 200
+          },
+          "road": "sand",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 405,
+            "y": 200
+          },
+          "to": {
+            "x": 955,
+            "y": 200
+          },
+          "road": "sand",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 1055,
+            "y": 200
+          },
+          "to": {
+            "x": 1080,
+            "y": 200
+          },
+          "road": "sand",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 300,
+            "y": 330
+          },
+          "to": {
+            "x": 590,
+            "y": 330
+          },
+          "road": "sand",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 740,
+            "y": 330
+          },
+          "to": {
+            "x": 960,
+            "y": 330
+          },
+          "road": "sand",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 1060,
+            "y": 330
+          },
+          "to": {
+            "x": 1080,
+            "y": 330
+          },
+          "road": "sand",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 40,
+            "y": 500
+          },
+          "to": {
+            "x": 590,
+            "y": 500
+          },
+          "road": "sand",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 740,
+            "y": 500
+          },
+          "to": {
+            "x": 960,
+            "y": 500
+          },
+          "road": "sand",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 1060,
+            "y": 500
+          },
+          "to": {
+            "x": 1320,
+            "y": 500
+          },
+          "road": "sand",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 40,
+            "y": 600
+          },
+          "to": {
+            "x": 590,
+            "y": 600
+          },
+          "road": "sand",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 740,
+            "y": 600
+          },
+          "to": {
+            "x": 1320,
+            "y": 600
+          },
+          "road": "sand",
+          "side": "S"
+        }
+      ],
+      "dock": [],
+      "beach": [
+        {
+          "from": {
+            "x": 430,
+            "y": 120
+          },
+          "to": {
+            "x": 430,
+            "y": 240
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 530,
+            "y": 120
+          },
+          "to": {
+            "x": 530,
+            "y": 240
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 80,
+            "y": 240
+          },
+          "to": {
+            "x": 430,
+            "y": 240
+          },
+          "road": "sand",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 530,
+            "y": 240
+          },
+          "to": {
+            "x": 880,
+            "y": 240
+          },
+          "road": "sand",
+          "side": "N"
+        }
+      ],
+      "path": [
+        {
+          "from": {
+            "x": 800,
+            "y": 285
+          },
+          "to": {
+            "x": 800,
+            "y": 385
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 430,
+            "y": 385
+          },
+          "to": {
+            "x": 430,
+            "y": 680
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 530,
+            "y": 385
+          },
+          "to": {
+            "x": 530,
+            "y": 680
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 80,
+            "y": 285
+          },
+          "to": {
+            "x": 392,
+            "y": 285
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 568,
+            "y": 285
+          },
+          "to": {
+            "x": 800,
+            "y": 285
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 80,
+            "y": 385
+          },
+          "to": {
+            "x": 430,
+            "y": 385
+          },
+          "road": "stone",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 530,
+            "y": 385
+          },
+          "to": {
+            "x": 800,
+            "y": 385
+          },
+          "road": "stone",
+          "side": "S"
+        }
+      ],
+      "garden": [
+        {
+          "from": {
+            "x": 430,
+            "y": 210
+          },
+          "to": {
+            "x": 430,
+            "y": 340
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 430,
+            "y": 440
+          },
+          "to": {
+            "x": 430,
+            "y": 680
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 210
+          },
+          "to": {
+            "x": 540,
+            "y": 340
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 440
+          },
+          "to": {
+            "x": 540,
+            "y": 680
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 240,
+            "y": 340
+          },
+          "to": {
+            "x": 240,
+            "y": 440
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 700,
+            "y": 340
+          },
+          "to": {
+            "x": 700,
+            "y": 440
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 430,
+            "y": 210
+          },
+          "to": {
+            "x": 540,
+            "y": 210
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 240,
+            "y": 340
+          },
+          "to": {
+            "x": 430,
+            "y": 340
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 340
+          },
+          "to": {
+            "x": 700,
+            "y": 340
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 240,
+            "y": 440
+          },
+          "to": {
+            "x": 430,
+            "y": 440
+          },
+          "road": "stone",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 440
+          },
+          "to": {
+            "x": 700,
+            "y": 440
+          },
+          "road": "stone",
+          "side": "S"
+        }
+      ],
+      "camp": [
+        {
+          "from": {
+            "x": 430,
+            "y": 210
+          },
+          "to": {
+            "x": 430,
+            "y": 340
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 430,
+            "y": 440
+          },
+          "to": {
+            "x": 430,
+            "y": 680
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 210
+          },
+          "to": {
+            "x": 540,
+            "y": 340
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 440
+          },
+          "to": {
+            "x": 540,
+            "y": 680
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 240,
+            "y": 340
+          },
+          "to": {
+            "x": 240,
+            "y": 440
+          },
+          "road": "sand",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 700,
+            "y": 340
+          },
+          "to": {
+            "x": 700,
+            "y": 440
+          },
+          "road": "sand",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 430,
+            "y": 210
+          },
+          "to": {
+            "x": 540,
+            "y": 210
+          },
+          "road": "sand",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 240,
+            "y": 340
+          },
+          "to": {
+            "x": 430,
+            "y": 340
+          },
+          "road": "sand",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 340
+          },
+          "to": {
+            "x": 700,
+            "y": 340
+          },
+          "road": "sand",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 240,
+            "y": 440
+          },
+          "to": {
+            "x": 430,
+            "y": 440
+          },
+          "road": "sand",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 440
+          },
+          "to": {
+            "x": 700,
+            "y": 440
+          },
+          "road": "sand",
+          "side": "S"
+        }
+      ],
+      "courtyard": [
+        {
+          "from": {
+            "x": 430,
+            "y": 210
+          },
+          "to": {
+            "x": 430,
+            "y": 340
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 430,
+            "y": 440
+          },
+          "to": {
+            "x": 430,
+            "y": 680
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 210
+          },
+          "to": {
+            "x": 540,
+            "y": 340
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 440
+          },
+          "to": {
+            "x": 540,
+            "y": 680
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 240,
+            "y": 340
+          },
+          "to": {
+            "x": 240,
+            "y": 440
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 700,
+            "y": 340
+          },
+          "to": {
+            "x": 700,
+            "y": 440
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 430,
+            "y": 210
+          },
+          "to": {
+            "x": 540,
+            "y": 210
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 240,
+            "y": 340
+          },
+          "to": {
+            "x": 430,
+            "y": 340
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 340
+          },
+          "to": {
+            "x": 700,
+            "y": 340
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 240,
+            "y": 440
+          },
+          "to": {
+            "x": 430,
+            "y": 440
+          },
+          "road": "stone",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 540,
+            "y": 440
+          },
+          "to": {
+            "x": 700,
+            "y": 440
+          },
+          "road": "stone",
+          "side": "S"
+        }
+      ],
+      "bazaar": [
+        {
+          "from": {
+            "x": 190,
+            "y": 210
+          },
+          "to": {
+            "x": 190,
+            "y": 590
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 770,
+            "y": 210
+          },
+          "to": {
+            "x": 770,
+            "y": 590
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 430,
+            "y": 590
+          },
+          "to": {
+            "x": 430,
+            "y": 680
+          },
+          "road": "stone",
+          "side": "W"
+        },
+        {
+          "from": {
+            "x": 530,
+            "y": 590
+          },
+          "to": {
+            "x": 530,
+            "y": 680
+          },
+          "road": "stone",
+          "side": "E"
+        },
+        {
+          "from": {
+            "x": 190,
+            "y": 210
+          },
+          "to": {
+            "x": 770,
+            "y": 210
+          },
+          "road": "stone",
+          "side": "N"
+        },
+        {
+          "from": {
+            "x": 190,
+            "y": 590
+          },
+          "to": {
+            "x": 430,
+            "y": 590
+          },
+          "road": "stone",
+          "side": "S"
+        },
+        {
+          "from": {
+            "x": 530,
+            "y": 590
+          },
+          "to": {
+            "x": 770,
+            "y": 590
+          },
+          "road": "stone",
+          "side": "S"
+        }
+      ]
+    },
+    "cluster": "market offset(0,540), bazaar offset(125,0); final seam/corner composition still needs native family"
+  }
+}

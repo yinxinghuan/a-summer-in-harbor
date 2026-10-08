@@ -3,7 +3,7 @@ import type {Save} from '../story/state';
 import type {PlantUseVerb,PlantUsesView} from '../life/plant-uses';
 import type {LifeView} from './LifeBag';
 import {gameMinuteLabel} from './LifeBag';
-export const useView=(view:LifeView|null)=>(view as (LifeView&{plantUses?:PlantUsesView&{basilEnabled:boolean;mintEnabled:boolean}})|null)?.plantUses;
+export const useView=(view:LifeView|null)=>(view as (LifeView&{plantUses?:PlantUsesView&{basilEnabled:boolean;mintEnabled:boolean;mintNewStarts?:boolean;mintArtId?:string}})|null)?.plantUses;
 export function PlantUsesPanel({save,view,person,locale,busy,current,onAction}:{save:Save;view:LifeView|null;person?:string;locale:Locale;busy:boolean;current?:boolean;onAction:(v:PlantUseVerb)=>void}){
  const p=useView(view);if(!p||!person||!save.known.includes(person))return null;const locked=busy||!(current??p.snapshotVersion===save.version)||!!save.activeChallenge;
  if(person!=='theo'||save.scene!=='cafe'||(!p.basilEnabled&&!p.order))return null;const now=save.townMinutes??540,open=now%1440>=360&&now%1440<1020,o=p.order;

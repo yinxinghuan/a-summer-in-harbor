@@ -1,0 +1,33 @@
+{
+  "id": "harbor-mint-art-v1",
+  "review": {
+    "singleImage": "accepted",
+    "family": "accepted",
+    "targetScene": "accepted",
+    "technical": "accepted",
+    "rights": "project-reuse-confirmed"
+  },
+  "bush": {
+    "image": "./art/plants/wild-mint-bush.png",
+    "sha256": "c6660a62a5c76a492257a6ae1d50b3b239397de1ce55f7771502304ebfd1ac48",
+    "sourceSHA256": "48931d17a316975d763afbfd29947fdaee91ff1c451fc07ea0c8b9f6b44ec0c5",
+    "requestId": "26a4b80f-4db9-475d-afc0-7cf8f7480011",
+    "taskId": "mt_8a37b5430cba4130a6c03d5341a368ff",
+    "width": 256,
+    "height": 256
+  },
+  "root": [
+    128.75,
+    205.5
+  ],
+  "scale": 0.22929936305732485,
+  "leaf": {
+    "image": "./art/plants/wild-mint-leaf-compact-v2.png",
+    "sha256": "16695d05074c5ecd7f691a28e8cb023ded415ea3ce2d909965bea2371b459aaf",
+    "sourceSHA256": "a38321e7a025bece9f15f1c82ff2e5ee11e3497b7cb262e9c58fd46c1adb50ee",
+    "requestId": "58f27b2c-0b31-4ff1-a654-6b058535973a",
+    "taskId": "mt_809642a41f825b65c9619ea9a810a5ff",
+    "width": 256,
+    "height": 256
+  }
+}

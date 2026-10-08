@@ -1,0 +1,79 @@
+{
+  "scope": "fixed consumer files, raw tasks retained separately with exact request/source/task/rights",
+  "base": "b24ff51149a2b8c34782991765aa90f557c0994e",
+  "assets": {
+    "src/animals/native-dog-art.json": {
+      "bytes": 5058,
+      "sha256": "884cd75255c40909f6da5417567ff7fa6c8e0c27098dc7328293bfff71bb6654"
+    },
+    "src/animals/native-dog.ts": {
+      "bytes": 2755,
+      "sha256": "a8ff78f410a4ffb59d2da441f52c2c675b79b514372dac3ca408e7a2e2a520c5"
+    },
+    "src/world/wild-mint-manifest.json": {
+      "bytes": 1053,
+      "sha256": "73de499599ba3d95c756cb22b149f859d9fbe3269e0e43d624d5a85cd55f66cc"
+    },
+    "public/art/plants/wild-mint-leaf.png": {
+      "bytes": 18431,
+      "sha256": "9a271b7e77bc622337d2b4f52223201487bd93d05b04e641545c9f4369947d1c"
+    },
+    "public/art/plants/wild-mint-bush.png": {
+      "bytes": 44505,
+      "sha256": "c6660a62a5c76a492257a6ae1d50b3b239397de1ce55f7771502304ebfd1ac48"
+    },
+    "public/art/plants/wild-mint-leaf-compact-v2.png": {
+      "bytes": 43091,
+      "sha256": "16695d05074c5ecd7f691a28e8cb023ded415ea3ce2d909965bea2371b459aaf"
+    },
+    "public/art/animals/dog-native-walk-v1.png": {
+      "bytes": 91887,
+      "sha256": "3cddb0070093a67542dbab178be2da65b6a27e342a475c6df91f8aa24b3501d9"
+    },
+    "public/map/garden-base.png": {
+      "bytes": 468446,
+      "sha256": "df0a405f7db5dccdb537492a6532608ff572de6d6834777eef8fd988ffb7afef"
+    },
+    "public/map/path-base.png": {
+      "bytes": 457070,
+      "sha256": "98c76f12a4af719ebfb6fd17c939ddad1c41bc4912ac6f7cdc4def4a6474b7e8"
+    },
+    "public/map/market-bazaar-base.png": {
+      "bytes": 807868,
+      "sha256": "5e5861253f3cc8e80e8f309f2025907075dbe8f5c4c9af7de9085703930f3353"
+    },
+    "public/map/hill-base.png": {
+      "bytes": 488134,
+      "sha256": "a2f7ef6c272afc21332553a79fa9c76fc047078d78a118e3f9ef08e2bdc67c72"
+    },
+    "public/map/camp-base.png": {
+      "bytes": 444711,
+      "sha256": "35b2ca2a888e54a8038658d7e38731081da58d023b35912b540e29d01f881a96"
+    },
+    "public/map/bazaar-base.png": {
+      "bytes": 469136,
+      "sha256": "1320262a4e47da6e2f870401566d22a86d8c4773e396e2537fcf8c89202a0389"
+    },
+    "public/map/station-base.png": {
+      "bytes": 532832,
+      "sha256": "a36b635bd4694d43b7bb2a644138b506fd402095dccf0b9e0c8ef2e102e25e16"
+    },
+    "public/map/coast-base.png": {
+      "bytes": 899103,
+      "sha256": "04720c15a6b1a5ac4e19fa8bbd6cdef01f08b9bf9b23b1a6288f92b0d8f2ddbc"
+    },
+    "public/map/courtyard-base.png": {
+      "bytes": 468534,
+      "sha256": "9821eb932442ad2f70e428604dc57bd182c00111c92e598571f40f30f72fa035"
+    },
+    "public/map/market-base.png": {
+      "bytes": 696044,
+      "sha256": "5bd0803c337d44b14c4586b46d40d1fdba58896f3ee682f3ba6412b32898a3a1"
+    }
+  },
+  "mediaActualPosts": 13,
+  "newTargets": 10,
+  "libraryBudget": 0,
+  "fees": null,
+  "rights": "Harbor-specific existing approved project reuse; no Library admission or blanket redistribution grant"
+}

@@ -10,7 +10,7 @@ import {pinLegacy,addLot} from '../src/life/save';
 import {createPlantsRegistry,snapPeaV2Ref} from '../server/life-plants-b2';
 import {lifeView} from '../server/life-view';
 test('selected derivatives match their fixed source bytes and complete 256px PNG canvases',()=>{
- assert.equal(Object.keys(art.assets).length,8);
+ assert.equal(Object.keys(art.assets).length,9);
  for(const a of Object.values(art.assets)){
   const source=readFileSync('public/'+a.source.slice(2)),png=readFileSync('public/'+a.image.slice(2));
   const hash=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
@@ -28,7 +28,7 @@ test('unknown crop revisions, changed hashes and old pea batches never borrow cu
 });
 test('items without corresponding art stay text-only instead of using another item',()=>{
  for(const id of art.missing)assert.equal(itemArt(id),undefined,id);
- assert.equal(itemArt('wild:harbor-mint-leaf'),undefined);assert.equal(itemArt('wild-mint-leaf'),undefined);
+ assert.equal(itemArt('wild:harbor-mint-leaf'),art.assets['wild-mint-leaf'].image);assert.equal(itemArt('wild-mint-leaf'),art.assets['wild-mint-leaf'].image);
  assert.equal(itemArt('wood'),art.assets.wood.image);assert.equal(itemArt('unknown'),undefined);
 });
 test('read-failure and recovered projection share art and quantities without duplicating saved inventory',()=>{

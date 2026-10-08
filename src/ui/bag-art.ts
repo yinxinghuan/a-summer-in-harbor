@@ -1,9 +1,12 @@
 import manifest from './bag-art.json';
 import snapPea from '../world/snap-pea-art.json';
+import {mintArtAccepted,wildMintAssets} from '../world/wild-mint-art';
 import type {ContentRef} from '../life/types';
 
 export function itemArt(item:string):string|undefined{
- return manifest.assets[item as keyof typeof manifest.assets]?.image;
+ const key=item==='wild:harbor-mint-leaf'?'wild-mint-leaf':item;
+ if(key==='wild-mint-leaf'&&!mintArtAccepted(wildMintAssets))return;
+ return manifest.assets[key as keyof typeof manifest.assets]?.image;
 }
 /** Exact immutable batch identity; never borrow the current species image for an unknown old revision. */
 export function batchArt(ref:ContentRef,kind:'seed'|'produce'):string|undefined{

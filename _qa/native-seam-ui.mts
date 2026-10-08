@@ -1,0 +1,39 @@
+// @ts-nocheck -- compiled real Main/View, local synthetic account and ordinary input.
+import {mintNode} from '../src/life/plant-uses';
+import {mintEntities} from '../src/world/wild-mint-art';
+import {localPoint,isCluster} from '../src/candidate/continuity';
+import {createExplorationAssembly} from '../server/exploration-assembly';import {withBasilPlantUses} from '../server/plant-basil';import {withWildMint} from '../server/wild-mint';import {makeDemoServer} from './temporary-account-server';import {initial} from '../src/story/state';import {rooms} from '../src/world/data';import {GAME_UUID} from '../src/game-id';
+import {mkdtempSync,rmSync,readFileSync,existsSync} from 'node:fs';import {tmpdir} from 'node:os';import {join,resolve,extname} from 'node:path';import {writeFile,mkdir} from 'node:fs/promises';import {chromium} from 'playwright';import assert from 'node:assert/strict';
+const directory=mkdtempSync(join(tmpdir(),'dog-mint-road-ui-')),out=process.env.HARBOR_PREP_UI_OUT??'../live-20261007/evidence/native-seam-ui-final';await mkdir(out,{recursive:true});let spec,models=0;
+const assembly=createExplorationAssembly({crabEnabled:true,resolveDialogue:async()=>{models++;throw Error('QA_MODEL_DISABLED')},decorateLife:r=>withWildMint(withBasilPlantUses(r,{enabled:true}),{enabled:true}),initial:(l,id)=>({...initial(l,id),...structuredClone(spec),id,version:0,cursor:0,history:[]})});
+const server=await makeDemoServer({directory,port:5579,providedRuntime:assembly.runtime,lifeProject:assembly.lifeProject,landProject:assembly.landProject,decorateAuthority:assembly.decorateAuthority});
+const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.png':'image/png','.json':'application/json','.svg':'image/svg+xml','.tmx':'application/xml','.woff2':'font/woff2','.ttf':'font/ttf','.mp3':'audio/mpeg'};
+const report={scope:'local compiled actual Main/View/RPGJS + temporary account/SQLite; explicitly synthetic settled initial scene; subsequent normal keyboard/menu input. Native dog/mint admitted candidate. Not physical/Telegram.',cases:[],errors:[],models:0,externalBlocked:0};
+let browser;
+try{
+ browser=await chromium.launch({headless:true,executablePath:'/Users/yin/Library/Caches/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-mac-arm64/chrome-headless-shell',args:['--use-angle=swiftshader','--disk-cache-size=1','--media-cache-size=1','--disable-gpu-shader-disk-cache']});
+ for(const [width,height,locale] of [[320,568,'zh'],[390,844,'en'],[1280,800,'en']])for(const scene of (process.env.HARBOR_PREP_UI_HILL?['hill']:['market'])){
+  spec={scene,townMinutes:1020,flags:['key','unpacked','bag-returned','alternative-route','route-open','market-open'],visited:Object.keys(rooms),known:['dani','theo','mara'],items:{key:1},position:{x:600,y:180}};
+  const label=`${width}-${locale}-${scene}`,c=await browser.newContext({viewport:{width,height},locale:locale==='zh'?'zh-CN':'en-US',serviceWorkers:'block'});
+  let caseClosing=false;
+  await c.route('**/*',async r=>{const u=new URL(r.request().url());if(u.hostname!=='127.0.0.1'){report.externalBlocked++;return r.abort()}if(u.pathname.includes('/api/')){try{await r.fulfill({response:await r.fetch({url:server.url+u.pathname+u.search})})}catch(e){if(!caseClosing)report.errors.push({label,error:String(e)})}return;}const file=resolve('dist','.'+(u.pathname==='/'?'/index.html':decodeURIComponent(u.pathname)));if(!file.startsWith(resolve('dist')+'/')||!existsSync(file))return r.fulfill({status:404,body:'Missing'});return r.fulfill({status:200,contentType:mime[extname(file)]??'application/octet-stream',body:readFileSync(file)})});
+  await c.addInitScript(()=>{window.__name=f=>f});const page=await c.newPage();page.on('pageerror',e=>report.errors.push({label,error:String(e)}));page.setDefaultTimeout(20000);await page.goto(server.url+'/?debug=1');
+  const ready=()=>page.waitForFunction(()=>document.querySelector('#rpg')?.__rpgClient?.getCurrentPlayer()&&!document.querySelector('.harbor-loading'));await ready();for(let i=0;i<3;i++)await page.locator('.harbor-opening button').click();
+  const measure=()=>page.evaluate(()=>{const c=document.querySelector('#rpg').__rpgClient,p=c.getCurrentPlayer(),ev=Object.values(c.sceneMap.events());return {room:c.activeRoom()?.name,position:{x:p.x(),y:p.y()},events:ev.length,newDogs:ev.filter(e=>e.id.includes('dog')).length,newMint:ev.filter(e=>e.id.includes('mint')).length,overflow:document.documentElement.scrollWidth>innerWidth+1,loading:!!document.querySelector('.harbor-loading'),error:document.querySelector('.harbor-error')?.textContent}});
+  const before=await measure();assert.equal(before.newDogs,['station','market','bazaar','courtyard'].includes(scene)?1:0);assert.equal(before.newMint,scene==='hill'?1:0);assert.ok(before.events>10);assert.equal(before.overflow,false);
+  await page.screenshot({path:`${out}/${label}-baseline-platform-layout.png`});
+  const actor=await page.evaluate(()=>{const client=document.querySelector('#rpg').__rpgClient;const events=Object.values(client.sceneMap.events());const dog=events.find(e=>e.id.includes('animal-harbor-dog-1'));return dog?{graphics:dog.graphics(),animation:dog.animationName(),foot:{x:dog.x(),y:dog.y()}}:null;});
+  const walk=async(key,test)=>{await page.keyboard.down(key);for(let step=0;step<90;step++){await page.waitForTimeout(120);if(test((await measure()).position))break;}await page.keyboard.up(key);await page.waitForTimeout(200)};
+  await walk('ArrowUp',p=>p.y<610);let after=await measure();assert.ok(after.position.y<610,JSON.stringify({after,actor}));await page.screenshot({path:`${out}/${label}-bazaar-platform-layout.png`});
+  const hidden=await page.evaluate(()=>Object.values(document.querySelector('#rpg').__rpgClient.sceneMap.events()).filter(e=>e.id.includes('animal-harbor-dog-1')).map(e=>({id:e.id,graphics:e.graphics()})));assert.ok(hidden.every(e=>e.graphics.length===0),JSON.stringify({hidden,after}));
+  await walk('ArrowDown',p=>p.y>720);after=await measure();assert.ok(after.position.y>680,JSON.stringify(after));await page.screenshot({path:`${out}/${label}-market-return-platform-layout.png`});assert.equal(after.loading,false);
+
+  await page.getByRole('button',{name:locale==='zh'?'行囊':'Bag',exact:true}).click();
+  const [journey]=await(await c.request.get(server.url+'/'+GAME_UUID+'/api/sessions')).json();let head,gap=999;
+  for(let attempt=0;attempt<20;attempt++){head=await(await c.request.get(server.url+'/'+GAME_UUID+'/api/sessions/'+journey.id)).json();const pos=(await measure()).position,q=isCluster(head.scene)?localPoint(head.scene,pos):pos;gap=Math.hypot(q.x-head.position.x,q.y-head.position.y);if(gap<4)break;await page.waitForTimeout(150)}assert.ok(gap<4,'normal pause flush did not settle '+JSON.stringify({gap,head:head.position,rendered:(await measure()).position}));assert.equal(head.items.key,1);
+
+  await page.reload();await ready();const restored=await measure(),savedDisplay=isCluster(head.scene)?localPoint(head.scene,restored.position):restored.position;assert.ok(Math.hypot(savedDisplay.x-head.position.x,savedDisplay.y-head.position.y)<4,JSON.stringify({label,head:head.position,restored:savedDisplay}));report.cases.push({label,before,after,restored,version:head.version,actor,hidden,result:'PASS'});caseClosing=true;await c.close();await writeFile(out+'/report.json',JSON.stringify(report,null,2));
+ }
+ assert.deepEqual(report.errors,[]);assert.equal(models,0);report.models=models;report.result='PASS';
+}catch(e){report.result='FAIL';report.failure=String(e);report.stack=e.stack;process.exitCode=1}
+finally{await writeFile(out+'/report.json',JSON.stringify(report,null,2));await browser?.close();await server.close();rmSync(directory,{recursive:true,force:true})}console.log(JSON.stringify({result:report.result,cases:report.cases.length,failure:report.failure,errors:report.errors}));

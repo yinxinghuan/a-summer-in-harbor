@@ -144,6 +144,24 @@
       ],
       "removedKeyPixels": 0,
       "method": "existing key rule; full alpha bounds; contain 208 in 256; nearest; no drawing"
+    },
+    "wild-mint-leaf": {
+      "image": "./art/bag/wild-mint-leaf.png",
+      "source": "./art/plants/wild-mint-leaf-compact-v2.png",
+      "sourceSHA256": "16695d05074c5ecd7f691a28e8cb023ded415ea3ce2d909965bea2371b459aaf",
+      "sha256": "5112caf6ce2eced5b9b60c14eb88f70550834247d1d341532eac1dd89826fcbf",
+      "sourceBox": [
+        17,
+        48,
+        239,
+        208
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "removedKeyPixels": 0,
+      "method": "existing key rule; full alpha bounds; contain 208 in 256; nearest; no drawing"
     }
   },
   "missing": [

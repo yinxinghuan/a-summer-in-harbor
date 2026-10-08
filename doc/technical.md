@@ -298,3 +298,36 @@ BagState提升到App以保存分类、搜索和选择。rows稳定按类型及�
 ## 正式 b24 最小 UI 拆分
 
 本候选直接以 b24ff51149a2b8c34782991765aa90f557c0994e 为唯一 parent；从 a797 选择菜单 Map／Bag／icons／focus／CSS，并剔除 f9 薄荷消费、狗、道路与 AI v5 依赖。server、world、life、animals、worker、账号／存档、package/lock 与原图保持 b24 字节。bag-art 按 id/revision/hash/capability 固定消费八份独立派生，动作继续走原有命令；焦点与阅读状态仅为本地呈现。部署门禁独立保留，未上线。
+
+## b24ff51 三项收尾准备（独立候选，未发布）
+
+`src/animals/behavior.ts`仅狗follow分支增加暂停时owner-away及96上限停止；`dog-admission.ts`准备12格/9独立源和原生动作家族门禁，不改acceptedAnimals或正式名册。
+
+`src/life/plant-uses.ts`保留逐字legacyMintNode@1、新增草地@2；`plant-uses-rules.ts`同时读取两hash，旧记录不改写，旧版停止新增观察/采集但归档/分享沿原来源。`server/wild-mint.ts`消费一次已有罗勒life装配，默认返回原对象，显式开启但缺合格图直接拒绝；public.ts未挂载。`wild-mint-art.ts`真实素材为null，Main/View/叶片行囊只增加受门禁约束的消费接缝；不创建假的sprite/hotspot。
+
+`road-boundaries.ts`从实际outdoors顶层patch生成只读材质并集边界，不按每块矩形描边；consumer-spec.json记录全部场景计划/图集cell规格。尚未用缺失图覆盖正式地图。
+
+本轮31项规则/旧档/SQLite、原岸蟹3项及三尺寸6组编译Main关闭态通过；另3组新草地root UI验证。首次监听EPERM在限定loopback批准下仅重跑受影响测试；测试坐标比较曾漏市场540显示偏移，修正harness而未改时间或游戏坐标。免费范围生成POST/发布/素材库写入/真实玩家操作均0。费用清单见任务根ART-ORDER.json；新批16 POST上限尚待用户一次确认，单价/总额未知。
+
+
+## Native 三项收尾候选 · b24ff51
+
+native-dog独立模块采用52×34占地和51×46显示包络。可选profile/displayClear保持默认七动物结果；原蟹geometry pins不变。View增加狗事件/邻区隐藏，预测区变化先隐藏狗再等原场景回执；withWildMint包装最终withBasil一次，缺图显式拒绝，@1/@2旧记录可读。canonical approach不变，renderer靠近点改为494,708。九个单区map-base及实际market-bazaar合成底图只重组地面纹理，碰撞/portal/地块/时间/菜单/冻结新闻不改。恢复时先暂停等待原异步移动回执落盘，再检查head，不用过早head伪判回读失败。关闭薄荷新开始保留新版reader，不回滚数据库。完整源/hash/请求/实际QA在native-consumer-spec与owner live交付。
+
+
+
+## 2026-10-08 菜单、地图与行囊候选
+
+独立候选继承正式 b24 → 已封存 f9 狗/薄荷/道路；此增量只改 Main 菜单接线、Map/Bag、同一套导航 SVG 和 UI 样式，不改认证、服务器、作物/动物/时间规则、名册或旧存档。动物 AI v5 另行只读接收，未混入本 UI 提交。
+
+地图普通滚轮保留页面滚动，不再与地图缩放同时触发。固定「地点/探索」放在 panel body 外；地图自身仍被 body 正常裁剪。触摸默认 pan-y，显式「拖动地图」切换 map-only pointer/pinch；缩放按钮/全图仍可用。地图区域、选中地点和 view 存在当前 App ref，切换入口恢复；切换 journey 清空，不写存档。地图地点选择不再改变 Places 的 scroll key，同根入口重复点击保持当前位置。
+
+行囊/人物分类随各自正文正常滚动，桌面详情只在 body 内吸附，避免旧分类栏叠盖列表。
+
+主面板和放大图采用可逆 DOM inert、最上层焦点循环与原 opener 回焦。Escape 在输入框中生效，先关放大图；滚动列表/关闭用 click。地图拖动才捕获 pointer，普通触摸不捕获。没有增加业务 writer。
+
+行囊数量仍由原固定批次和物理物品 DTO 负责，未创建第二库存。batchArt 对 id/revision/hash/capability 精确匹配，未知旧版不借用最新版。复用九张实际对应游戏图，确定性包含完整前景/照片；派生与源 SHA 位于 src/ui/bag-art.json。木板仅额外去除已看图确认且连通透明边的深紫底残留，原游戏源字节不变。不含对应美术的种子、钥匙、工具、鱼、点心、纪念卡继续文字标识，既没有通用图标冒充也没有新增生成。详情和列表同源；选择/返回有明确焦点；缺读/更新中禁用使用，薄荷归档现在 await 原请求并防止同轮连点。耗尽所选物品保留零数量和来源说明。
+
+QA 位于 _qa/menu-bag-after.mts：编译后实际 Main/View/RPGJS + 隔离普通浏览器 possession cookie/SQLite，外部请求阻断。预置存档明确为合成，本轮观察、输入、留种/吃点心/归档仍走原 authority。初期测试脚本抢在 React/image effects 前读 DOM 的失败、滚轮指针落入固定栏、桌面隐藏 select 的定位失败保留在外部 evidence；最终矩阵必须以 report.json 为准。不存在本轮实机、Telegram、跨设备或生产发布证明。
+
+

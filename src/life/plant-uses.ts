@@ -2,7 +2,9 @@ import type {LifeSave,ContentRef} from './types';
 import type {Words} from '../world/data';
 
 export const basilTemplate=Object.freeze({id:'theo-basil-v1',revision:1,quantity:2,reward:7,cooldownMinutes:2880});
-export const mintNode=Object.freeze({id:'harbor-mint-hill-1',species:'plant:harbor-mint',revision:1,scene:'hill',at:{x:640,y:790},approach:{x:632,y:808},stockCap:2,stockFloor:1,recoveryMinutes:720});
+export const legacyMintNode=Object.freeze({id:'harbor-mint-hill-1',species:'plant:harbor-mint',revision:1,scene:'hill',at:{x:640,y:790},approach:{x:632,y:808},stockCap:2,stockFloor:1,recoveryMinutes:720});
+// New author definition; v1 is preserved verbatim for archived fixture records.
+export const mintNode=Object.freeze({...legacyMintNode,revision:2,at:{x:550,y:690},approach:{x:542,y:708}});
 export const mintItem='wild:harbor-mint-leaf';
 export type PlantOrder={id:string;template:'theo-basil-v1';templateHash:string;crop:ContentRef;quantity:2;reward:7;acceptedMinute:number;dueMinute:number};
 export type MintState={node:'harbor-mint-hill-1';definitionHash:string;stock:1|2;recoverAt:number|null;observedAt?:number;observationSource?:string;leaves:number;firstLeafSource?:string;lastLeafSource?:string;archivedAt?:number;archiveSource?:string;sharedAt?:number;shareSource?:string};

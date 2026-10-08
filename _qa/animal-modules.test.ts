@@ -11,7 +11,7 @@ import {findPath,type World} from '../src/engine/world';
 import type {AnimalDef,AnimalState,Context,Slot} from '../src/animals/types';
 const geometry=JSON.parse(readFileSync(new URL('../doc/qa/animals-integration-20261006/geometry.json',import.meta.url),'utf8'));
 const metrics={scheduleCases:0,bodySafetyFrames:0,reachablePortalRoutes:0,occupiedOldSaveCases:0,clockJumpCases:0,actualGullRetreatCases:0,rendererTestedByThisSuite:false,generatedImagesUsedByThisSuite:0};
-after(()=>writeFileSync(new URL('../doc/qa/animals-integration-20261006/behavior-matrix.json',import.meta.url),JSON.stringify({testedAt:new Date().toISOString(),metrics,scope:'Node behavioral + captured actual map geometry, no renderer, no human comprehension, no phone device'},null,2)+'\n'));
+after(()=>writeFileSync(process.env.HARBOR_ANIMAL_MATRIX_OUT??new URL('../doc/qa/animals-integration-20261006/behavior-matrix.json',import.meta.url),JSON.stringify({testedAt:new Date().toISOString(),metrics,scope:'Node behavioral + captured actual map geometry, no renderer, no human comprehension, no phone device'},null,2)+'\n'));
 const real=(scene:string,minutes=540,index=0):Context=>({world:geometry.worlds[index].world,scene,townMinutes:minutes,player:{...geometry.rooms[scene].spawn,...geometry.worlds[index].world.actor},people:geometry.people[minutes]??{},forbidden:geometry.forbidden,paused:false});
 const slot:Slot={scene:'yard',region:{x:10,y:10,w:260,h:180},points:[{x:36,y:44},{x:230,y:44},{x:230,y:150},{x:36,y:150}],activity:'wander'};
 const cat:AnimalDef={id:'cat-test',species:'cat',visualVersion:'fixture-cat',schedule:{morning:slot,afternoon:{...slot,activity:'sun-rest'},night:{...slot,activity:'sleep'}}};
@@ -108,7 +108,7 @@ test('gull retreat cannot cross an obstacle separating landing regions',()=>{
  const out=sim(r,ctx,3)[0];assert.ok(out.foot.x<70);assert.notEqual(out.phase,'flight');assert.equal(out.elevation,0);
 });
 test('follow fixture stops short of owner and freezes when owner is absent or across map',()=>{
- const dog:AnimalDef={id:'dog-algorithm-test',species:'dog',visualVersion:'none',ownerId:'owner',schedule:{morning:{...slot,activity:'follow'}}};const ctx=context({people:{owner:{scene:'yard',foot:{x:200,y:100},body:{x:191,y:92,w:18,h:8}}}}),r=createAnimalRuntime([dog]);
+ const dog:AnimalDef={id:'dog-algorithm-test',species:'dog',visualVersion:'none',ownerId:'owner',schedule:{morning:{...slot,points:[{x:120,y:100}],activity:'follow'}}};const ctx=context({people:{owner:{scene:'yard',foot:{x:200,y:100},body:{x:191,y:92,w:18,h:8}}}}),r=createAnimalRuntime([dog]);
  const out=sim(r,ctx,8)[0];assert.ok(Math.hypot(out.foot.x-200,out.foot.y-100)<=48);assert.ok(!overlaps(bodyAt(out.foot,profiles.dog),ctx.people.owner.body));
  ctx.people.owner.scene='other';const after=r.tick(.02,ctx)[0],foot=structuredClone(after.foot);assert.equal(after.reason,'owner-away');assert.deepEqual(sim(r,ctx,2)[0].foot,foot);delete ctx.people.owner;assert.equal(r.tick(.02,ctx)[0].reason,'owner-away');
 });
