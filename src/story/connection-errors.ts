@@ -2,6 +2,7 @@ import type {Words} from '../world/data';
 const messages:Record<string,Words>={
  PLATFORM_LOGIN_REQUIRED:['请先登录账号，再开始或继续旅程。','Sign in before starting or continuing a journey.'],
  login_required:['登录已取消。准备好时可以再试。','Sign-in was cancelled. Try again when you are ready.'],
+ PLATFORM_ID_UNAVAILABLE:['登录窗口已关闭，但平台账号信息尚未同步。请稍后再试；已有旅程不变。','The sign-in window closed, but platform account information has not arrived. Try again shortly; saved journeys stay.'],
  PLATFORM_LOGIN_UNAVAILABLE:['登录入口暂时无法打开，请重新载入后再试。','Sign-in could not open. Reload and try again.'],
  JOURNEY_EMPTY:['还没有旅程，选择新游戏开始。','You have no journeys yet. Choose New game to begin.'],
  SESSION_LIMIT:['已保留100段旅程。请选择继续已有旅程。','You have 100 saved journeys. Continue an existing one.'],

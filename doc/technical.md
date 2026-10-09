@@ -4,6 +4,8 @@
 
 本轮基于正式 `00c4dbf37bee9ee87b8c6717b671d6b5644030f1`。该提交的固定动物故事已在现有 ECS、主站与 Pages 发布并回读；下方动物候选和更早章节是历史记录。本轮登录改造仅独立本地候选，未获得新的生产切换授权。
 
+真实登录反馈后的独立只读诊断受Chrome Apple Events JavaScript关闭阻挡，未刷新或修改用户标签。原guest-shell隔离成功响应复现统计GET迟到时，游戏已显示新游戏却仍持有entryLock。平台登录调用现以原shell有效live ID为完成信号，不等待无关stats reply；所有late reply有处理但不重新锁定入口。原窗口已关闭2秒仍无身份时显示明确账号未同步反馈，不猜ID、不读token、不重新认证。四种原shell成功/统计pending/统计503/缺ID情形均用本地fixture验证；不把fixture当用户实际成功记录。
+
 `transport.ts` 在首次 bootstrap 前启用原 IdentityEpoch，仅消费 live Aigram ID；没有 ID 时不发游戏请求。顶层页面仅 query 伪装的 shell 不成为宿主身份。`platform-login.ts` 通过原 guest-shell 保护 GET 打开原邮箱验证码窗口，成功后读取 live ID；没有自造表单、认证内核、token或 Telegram 验签。沿用用户接受的 temporary-unverified 信任范围，不能把客户端 ID称为服务端认证。
 
 首页 AccountStart 仅登录门禁、继续和新游戏；无档只给新游戏。入口目录只读，取消/失败不建档，不自动进入游戏。Continue 按服务端 updated 排序读取最近游玩档，忽略旧本地指针；显式 New 复用原幂等 enrollment 与100档上限，不覆盖或删旧档。System 内原 Journeys 管理继续复用，选档与新档确认保留；不重做既有菜单。

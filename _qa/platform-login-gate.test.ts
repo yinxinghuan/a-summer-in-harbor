@@ -22,7 +22,9 @@ test('existing platform transport open/cancel and success consume only live IDs,
  try{
   const {signInToPlatform}=await import('../src/account-link/platform-login');const p=signInToPlatform();assert.equal(signInToPlatform(),p);assert.equal(calls,1);reject(Error('login_required'));await assert.rejects(p,/login_required/);assert.equal((globalThis as any).window.Aigram.telegramId,'__alteru_guest__');
   const success=signInToPlatform();(globalThis as any).window.Aigram.telegramId='710001';resolve({errcode:0});assert.equal(await success,'710001');assert.equal(calls,2);assert.equal(await signInToPlatform(),'710001');assert.equal(calls,2);
-  (globalThis as any).window.Aigram.telegramId=null;const noId=signInToPlatform();resolve({retcode:0});await assert.rejects(noId,/PLATFORM_LOGIN_REQUIRED/);
+  (globalThis as any).window.Aigram.telegramId=null;const noId=signInToPlatform();resolve({retcode:0});await assert.rejects(noId,/PLATFORM_ID_UNAVAILABLE/);
+  // Live shell identity completes entry even when the unrelated statistics read never finishes.
+  const pending=signInToPlatform();(globalThis as any).window.Aigram.telegramId='710001';assert.equal(await pending,'710001');(globalThis as any).window=saved;resolve({retcode:0});await new Promise<void>(r=>queueMicrotask(r));
  }finally{(globalThis as any).window=saved}
 });
 

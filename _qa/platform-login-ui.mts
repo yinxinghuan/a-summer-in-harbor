@@ -1,7 +1,7 @@
 // @ts-nocheck -- compiled Main/View/Pixi; all account IDs and saves are isolated synthetic fixtures.
 import {chromium} from 'playwright';import {makeDemoServer} from './temporary-account-server';import {createExplorationAssembly} from '../server/exploration-assembly';import {withBasilPlantUses} from '../server/plant-basil';import {withWildMint} from '../server/wild-mint';import {createReviewedAnimalLife} from '../server/reviewed-animal-life';import pack from '../server/content/reviewed-evening-gull-watch.json';import {initial} from '../src/story/state';import {GAME_UUID} from '../src/game-id';
 import {mkdtempSync,readFileSync,existsSync,rmSync} from 'node:fs';import {writeFile,mkdir} from 'node:fs/promises';import {resolve,extname} from 'node:path';import assert from 'node:assert/strict';import {randomUUID} from 'node:crypto';
-const out='../evidence/login-ui-final-v5-00c4';await mkdir(out,{recursive:true});let models=0,server,browser;
+const out='../evidence/login-real-diagnosis/core-ui-after';await mkdir(out,{recursive:true});let models=0,server,browser;
 const root='/Users/yin/code/games/harbor-animal-ai-owner-aba82cc-20261009/evidence';const loader=readFileSync(root+'/guest-shell-public-20261009.js'),impl=readFileSync(root+'/guest-shell-impl-public-20261009.js');
 const directory=mkdtempSync('/tmp/harbor-login-ui-');
 const prior=JSON.parse(readFileSync('../evidence/ordinary-local-animal-page.json','utf8')).head;let fixtureMode='normal';
