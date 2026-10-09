@@ -1,0 +1,47 @@
+{
+  "atUtc": "2026-10-09T12:38:09.903611+00:00",
+  "base": "00c4dbf37bee9ee87b8c6717b671d6b5644030f1",
+  "result": "PASS",
+  "firstPass": "evidence/login-ui/report.json (31 states before00c4 alignment)",
+  "finalPass": "evidence/login-ui-final-v5-00c4/report.json (39 states with00c4 animal assembly)",
+  "matchedPlatformMobile": [
+    "320-zh-continue-new.png",
+    "390-en-signed-out-platform-layout.png"
+  ],
+  "externalGuest": "390-en-external-guest-banner.png",
+  "actualInspected": [
+    "320-zh-continue-new.png",
+    "390-en-signed-out-platform-layout.png",
+    "390-en-external-guest-banner.png",
+    "320-zh-system-journeys.png",
+    "320-zh-full-100-last-save-reachable.png",
+    "390-en-login-cancelled.png",
+    "320-zh-existing-animal-page-preserved.png",
+    "390-en-new-confirmation.png",
+    "390-en-directory-error-retry.png",
+    "390-en-directory-retry-success.png"
+  ],
+  "scores": {
+    "hierarchy": 4,
+    "coherence": 4,
+    "readability": 4,
+    "gameFeel": 4,
+    "assetQuality": 5,
+    "responsiveUx": 4,
+    "polish": 4
+  },
+  "P0": [],
+  "P1": [],
+  "materialP2": [],
+  "intentionalExceptions": [
+    "Original external guest banner can overlap old gameplay HUD; retained separate platform-layout versus external-guest composition contract, no production CSS offset.",
+    "Original login modal and its platform branding are unchanged."
+  ],
+  "evidenceCorrections": [
+    "System-switch wait now requires old Journeys panel unloaded, new renderer ready and actual movement save confirmation before checking recent ordering.",
+    "Page matrix uses QA-only hide of external banner for platform composition; visible external entry remains separately captured.",
+    "Wait for local font readiness, image decoding and two rAF before capture; standalone original-resolution external image confirms full page."
+  ],
+  "realEmailVerification": "NOT_TESTED",
+  "physicalTelegramHardware": "NOT_TESTED"
+}

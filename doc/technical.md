@@ -1,5 +1,19 @@
 # 《海湾新生活》技术文档
 
+## 2026-10-09 平台登录与账号存档候选
+
+本轮基于正式 `00c4dbf37bee9ee87b8c6717b671d6b5644030f1`。该提交的固定动物故事已在现有 ECS、主站与 Pages 发布并回读；下方动物候选和更早章节是历史记录。本轮登录改造仅独立本地候选，未获得新的生产切换授权。
+
+`transport.ts` 在首次 bootstrap 前启用原 IdentityEpoch，仅消费 live Aigram ID；没有 ID 时不发游戏请求。顶层页面仅 query 伪装的 shell 不成为宿主身份。`platform-login.ts` 通过原 guest-shell 保护 GET 打开原邮箱验证码窗口，成功后读取 live ID；没有自造表单、认证内核、token或 Telegram 验签。沿用用户接受的 temporary-unverified 信任范围，不能把客户端 ID称为服务端认证。
+
+首页 AccountStart 仅登录门禁、继续和新游戏；无档只给新游戏。入口目录只读，取消/失败不建档，不自动进入游戏。Continue 按服务端 updated 排序读取最近游玩档，忽略旧本地指针；显式 New 复用原幂等 enrollment 与100档上限，不覆盖或删旧档。System 内原 Journeys 管理继续复用，选档与新档确认保留；不重做既有菜单。
+
+`server/public.ts` 保持 `createReviewedAnimalLife`、原 news/plants/crab/basil/mint/active-play/compact-motion 装配，仅选入 `accountOnly:true`。匿名浏览器入口401，新的 legacy claim/目录410；原已经绑定的旧档仍按原 accountBinding reader读取，没有迁移或改写。默认可选参数保持历史局部authoring测试合同，正式 public明确关闭匿名与新认领。
+
+退出或切号复用 identity epoch撤销请求；Main 清理旧world、面板、用量与动态纹理，加载回调按epoch/saveID检查。未知动作回执保存在原账号/旅程的pending；迟到响应不清掉或绑定另一账号，返回原账号重放同ID。运动、时间与动物保存算法未变；仅相应客户端夹具改为账号模式和显式选档，继续验证不确定结果恢复。
+
+实际邮箱验证码成功尚需用户在原平台窗口自主完成；自动化仅打开/取消原shell，账号成功与切换使用清晰标记的本地隔离SQLite夹具，绝不注入正式身份或操作原存档。完整回归复用已经安装的 PG16.15，在本任务自己的127.0.0.1数据库运行与停止；无安装、购买、收费模型或媒体调用。
+
 ## 2026-10-09 固定已审核动物故事候选（以下旧章节保留历史）
 
 本候选从正式前端 aba82cc 独立检出，现网后端 e59b2d4 保持。生产已是原 ECS PostgreSQL；后文早期“本地/未发布”描述是相应日期记录。当前候选尚未部署，不改现有账号 temporary-unverified 方案、存档归属、安全设置或迁移。

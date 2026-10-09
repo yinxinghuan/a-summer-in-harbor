@@ -28,3 +28,5 @@
 .harbor-target--land-icon{width:44px;height:44px;padding:9px;max-width:44px}.harbor-target--land-icon svg{width:24px;height:24px}
 
 .harbor-animal-notebook p{font-size:16px;line-height:1.5}.harbor-animal-notebook button{min-height:44px;white-space:normal;text-align:left;line-height:1.45;margin:4px 0;max-width:100%}.harbor-animal-notebook strong{overflow-wrap:anywhere}
+
+.harbor-account-entry{height:auto;min-height:100dvh;padding:24px;justify-content:center}.harbor-account-entry .harbor-entry__art{width:min(65vw,24dvh,240px);margin-bottom:12px}.harbor-account-entry h1{font-size:clamp(28px,7vw,40px);margin:12px 0}.harbor-account-entry>p{margin:8px 0 20px}.harbor-entry__actions{width:min(100%,280px);display:flex;flex-direction:column;gap:12px}.harbor-entry__actions>button{min-height:48px;width:100%}.harbor-entry__feedback{max-width:360px;min-height:36px;font-size:13px;line-height:1.5}.harbor-entry__feedback p{margin:12px 0}.harbor-entry__feedback .harbor-error{text-align:left}.harbor-entry__actions>button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}

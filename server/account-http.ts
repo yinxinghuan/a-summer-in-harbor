@@ -2,9 +2,10 @@ import type {IncomingMessage,ServerResponse} from 'node:http';
 import {createApiHandler,json} from './http';
 /** Adapt every public read/write/sidecar through the same account access guard.
  * Raw authority/store remain internal, never an alternate public route. */
-export function createAccountApiHandler({service,usage,noteMedia,dynamicAssets,newsProject,lifeProject,landProject}:any){
+export function createAccountApiHandler({service,usage,noteMedia,dynamicAssets,newsProject,lifeProject,landProject,allowLegacyClaim=true}:any){
  return async(req:IncomingMessage,res:ServerResponse,actor:any)=>{
   const path=new URL(req.url!,'http://localhost').pathname;
+  if(!allowLegacyClaim&&['/api/account/legacy','/api/account/claim'].includes(path))return json(res,410,{error:'LEGACY_CLAIM_CLOSED'});
   if(path==='/api/account/legacy'&&req.method==='GET')return json(res,200,await service.legacyDirectory(actor));
   if(path==='/api/account/claim'&&req.method==='POST'){
    let n=0,parts:Buffer[]=[];for await(const part of req){n+=part.length;if(n>2048)return json(res,413,{error:'REQUEST_TOO_LARGE'});parts.push(part)}

@@ -1,5 +1,11 @@
 import type {Words} from '../world/data';
 const messages:Record<string,Words>={
+ PLATFORM_LOGIN_REQUIRED:['请先登录账号，再开始或继续旅程。','Sign in before starting or continuing a journey.'],
+ login_required:['登录已取消。准备好时可以再试。','Sign-in was cancelled. Try again when you are ready.'],
+ PLATFORM_LOGIN_UNAVAILABLE:['登录入口暂时无法打开，请重新载入后再试。','Sign-in could not open. Reload and try again.'],
+ JOURNEY_EMPTY:['还没有旅程，选择新游戏开始。','You have no journeys yet. Choose New game to begin.'],
+ SESSION_LIMIT:['已保留100段旅程。请选择继续已有旅程。','You have 100 saved journeys. Continue an existing one.'],
+
  PLAY_WINDOW_CLOSED:['海湾目前暂停开放。你的旅程仍保留着，请稍后回来。','The bay is closed for now. Your journey is saved; please come back later.'],
  PUBLIC_DEPLOYMENT_UNCONFIGURED:['海湾还在准备迎接访客，请稍后再来。','The bay is getting ready for visitors. Please come back later.'],
  SERVICE_UNAVAILABLE:['暂时连不上海湾，请稍后重新连接。','The bay cannot be reached right now. Please reconnect in a moment.'],
