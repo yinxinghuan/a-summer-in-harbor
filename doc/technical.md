@@ -378,3 +378,15 @@ QA 位于 _qa/menu-bag-after.mts：编译后实际 Main/View/RPGJS + 隔离普�
 ## 扩展点及回退
 
 启用只需在审核后的组合入口显式开启ecology，不能直接拿本地fixture当正式登录验收。新策略一旦被正式写入，回退必须保留本候选reader、settlement、compact delta和已减少的期限；关闭ecology/newStarts只能阻止新增pin，不恢复旧期限或DB快照。第一阶段1fbb790兼容回退不含本策略，不能在第二阶段暴露后直接使用。未来新规则/素材必须另版本，不能原地改pin。后续雨后发现、收藏线索与AI故事仍开放规划；真实模型调用需另有预算，不能借ECS或素材库额度。
+
+## 2026-10-09 · b12发布后第三阶段本地架构准备
+
+前述“生产未启用”描述a245历史状态；b12已启用并双发布，兼容关闭890不回58。正常平台账号玩法仍未验。第三阶段仅本地模块，public.ts、Save schema、前端、存档delta、资讯和原clock不变。
+
+`server/after-rain-evidence.ts`的afterRainFacts复用assertWeatherReadable、原固定weatherAt和参数pin，通过周期算术得到最近已结束雨段；雨段计算O(1)，不扫历史。事实ID由旅程范围、固定参数、政策激活分钟和雨段SHA形成；版本独立，重复读取稳定、异旅程不能复用。只在原outdoor场景、当前雨后阴天slot、实际pin之后有经过雨分钟时返回。旧档/雨中/室内/已过窗口返回null，无新增head字段。
+
+已有薄荷线索复用原assertPlantUsesReadable/ContentRegistry/mintStatus和mintDefinitionHash，最多一条。只有nativev2已观察且可再访才带原节点/scene/geometry；不改stock/leaves/期限/来源，不迁移v1或注册素材。admitAfterRainDraft只接受有限topic/tone、当前版本/factID、effects=[]；确定性双语说明不冒充AI生成。
+
+prepareAfterRainDialogue是默认关闭的localFixture-only dry adapter。调用方提供原最终authority的admission callback，不重造身份、world、空间或时钟；本地fixture实用admitSpatialAction+validateQuestion证明已有登场、近距、版本/scene准入。复用dialogueContext并structuredClone再冻结，原residentLife/relationshipNarrative/currentObjective/dated news保留，单独追加confirmed-game-weather来源。没有调用原gateway、配置、数据库、模型或生成API。public.ts没有导入模块，不能把这些测试写成已完成真实authority事务/正式对话验收。
+
+下一接缝：用完整最终assembly的spatialContext/prepare链验证B2/moving transport和pending重放，再做明确独立SQLite/PG、真实Main收藏/对话页面；保持唯一原authority、原builder/gateway和预算。未来新观察记录必须固定版本与稳定receipt id并在原CAS事务幂等保存，不能让模型正文自行记录观察/给物品。真实AI服务、调用上限、费用需要独立具体批准；本批paidCalls=0，原冻结news日期/hash不变。
