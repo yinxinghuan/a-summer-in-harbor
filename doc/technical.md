@@ -1,5 +1,15 @@
 # 《海湾新生活》技术文档
 
+## 2026-10-09 固定已审核动物故事候选（以下旧章节保留历史）
+
+本候选从正式前端 aba82cc 独立检出，现网后端 e59b2d4 保持。生产已是原 ECS PostgreSQL；后文早期“本地/未发布”描述是相应日期记录。当前候选尚未部署，不改现有账号 temporary-unverified 方案、存档归属、安全设置或迁移。
+
+`server/content/reviewed-evening-gull-watch.json` 固定制作端已封存2次调用的安全消费字段。`reviewed-animal-life.ts` 验证 contractHash、独立审查绑定、事实编译结果和 content ref/hash，再将该定义追加到原 registry；不复用制作端 artifact/head/binding，不创建 proposal pipeline、网关或模型路由。`reviewedAnimalRegistry(false)` 只止新加入的故事，原内置委托仍启用，旧页 reader 保留。
+
+`life-assembly.ts` 仅接受可选 registry；`exploration-assembly.ts` 接受可选 createLife，保持 e59 的 motionWait 与全部原时钟/空间装配。`public.ts` 只将同一个 createReviewedAnimalLife 接入原装配，plants/native-crab/B2/basil/mint/news 仍只包装一次；没有新 authority、数据库DDL、第二 writer 或收费调用。现有 Main/View 的通用 AnimalInteraction/AnimalPages 消费新 DTO，src/public/worker/vendor/package/lock 的生产字节保持基线。
+
+验收使用已修正的本地 fixture 与独立 SQLite：原普通命令完成两观察、NPC结算、数据库重开和同ID重放的2/2证据保留，不冒称本轮再次执行。新界面验收只读取未介绍、可选择与已有册页，业务 action 阻断，仅允许原时钟初始化/移动通道；三尺寸中英9状态和定向事实合同测试，无 AI/媒体调用。初期 harness 错误（非法旧作物fixture、误拦时钟初始化、图片解码/异步面板等待）均保留报告，不放宽规则换通过。新玩家理解、真实手机、完整正式委托流程与最终发布仍分别列明状态。
+
 ## 1. 技术栈
 
 TypeScript、React 18、Vite 8（`base: './'`）。场景使用 RPGJS 5 beta34、CanvasEngine 2.2、PixiJS 8；没有每帧 Canvas2D 拼地面。Node 24 的本地权威服务使用当前技能导出的 async Story Session 测试候选和 SQLite。规则扩展由冻结 compiler、delta verifier 与本机 SWI-Prolog 验证。

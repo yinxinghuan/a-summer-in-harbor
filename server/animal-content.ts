@@ -2,6 +2,7 @@ import {createHash} from 'node:crypto';
 import type {AnimalCommission,AnimalRef,Observation} from '../src/animal-life/types';
 import {acceptedAnimals} from '../src/animals/art';
 import {slotAt} from '../src/animals/behavior';
+import {animalContractLimits,animalIdSchema,contractViolations} from './animal-contract-schema';
 
 export const canonical=(v:any):string=>Array.isArray(v)?'['+v.map(canonical).join(',')+']':v&&typeof v==='object'?'{'+Object.keys(v).filter(k=>v[k]!==undefined).sort().map(k=>JSON.stringify(k)+':'+canonical(v[k])).join(',')+'}':JSON.stringify(v);
 export const contentHash=(v:unknown)=>createHash('sha256').update(canonical(v)).digest('hex');
@@ -13,9 +14,9 @@ export const builtInCommissions:AnimalCommission[]=[
 export function validateCommission(v:unknown):asserts v is AnimalCommission{
  const d=v as AnimalCommission;
  if(!d||typeof d!=='object'||Array.isArray(d)||Object.keys(d).sort().join(',')!=='brief,capability,id,page,requirements,resident,revision,schema,title')throw Error('ANIMAL_CONTENT_FIELDS');
- if(d.schema!==1||!/^animals:[a-z][a-z0-9-]{2,40}$/.test(d.id)||!Number.isSafeInteger(d.revision)||d.revision<1||d.revision>100||d.capability!=='animal-notebook-v1'||!['mara','ruth','owen','dani'].includes(d.resident))throw Error('ANIMAL_CAPABILITY_UNAVAILABLE');
- for(const [k,max] of [['title',80],['brief',500],['page',500]] as const){const w=d[k];if(!Array.isArray(w)||w.length!==2||w.some(t=>typeof t!=='string'||!t.trim()||t.length>max||/[<>]|https?:|javascript:|\b(eval|fetch|script)\s*\(/i.test(t)))throw Error('ANIMAL_TEXT');}
- if(!Array.isArray(d.requirements)||d.requirements.length<2||d.requirements.length>4)throw Error('ANIMAL_REQUIREMENTS');
+ if(d.schema!==1||contractViolations(d.id,animalIdSchema).length||!Number.isSafeInteger(d.revision)||d.revision<1||d.revision>100||d.capability!=='animal-notebook-v1'||!['mara','ruth','owen','dani'].includes(d.resident))throw Error('ANIMAL_CAPABILITY_UNAVAILABLE');
+ for(const [k,max] of Object.entries(animalContractLimits.compiledTextCodeUnits) as [keyof typeof animalContractLimits.compiledTextCodeUnits,number][]){const w=d[k];if(!Array.isArray(w)||w.length!==2||w.some(t=>typeof t!=='string'||!t.trim()||t.length>max||/[<>]|https?:|javascript:|\b(eval|fetch|script)\s*\(/i.test(t)))throw Error('ANIMAL_TEXT');}
+ if(!Array.isArray(d.requirements)||d.requirements.length<animalContractLimits.minimumObservations||d.requirements.length>animalContractLimits.maximumObservations)throw Error('ANIMAL_REQUIREMENTS');
  const identities=new Set<string>();
  for(const r of d.requirements){
   if(!r||Object.keys(r).sort().join(',')!=='animal,behavior')throw Error('ANIMAL_REQUIREMENTS');

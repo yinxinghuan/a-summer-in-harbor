@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "sourceBatch": "AI-M4-v5",
+  "contractHash": "efa7da631ced846e7d6b69cfa363f808a0e6ac15d485ec1a2fb9a43a4ed1f473",
+  "definition": {
+    "schema": 1,
+    "id": "animals:evening-gull-watch",
+    "revision": 1,
+    "capability": "animal-notebook-v1",
+    "resident": "dani",
+    "title": [
+      "留一点安静的空间",
+      "Leave a little quiet space"
+    ],
+    "brief": [
+      "“请分别观察：第3只岸边海鸥傍晚在海岸安静活动；第4只岸边海鸥傍晚在海岸安静活动。给它们留出空间，不必催促。没有期限。”",
+      "“Watch each separately: shore gull 3 moving quietly in The Coast (evening); shore gull 4 moving quietly in The Coast (evening). Leave them space. No deadline.”"
+    ],
+    "page": [
+      "我与Dani Costa分享了不同的观察：第3只岸边海鸥傍晚在海岸安静活动；第4只岸边海鸥傍晚在海岸安静活动。",
+      "I shared different observations with Dani Costa: shore gull 3 moving quietly in The Coast (evening); shore gull 4 moving quietly in The Coast (evening)."
+    ],
+    "requirements": [
+      {
+        "animal": "harbor-gull-3",
+        "behavior": "shore-space"
+      },
+      {
+        "animal": "harbor-gull-4",
+        "behavior": "shore-space"
+      }
+    ]
+  },
+  "ref": {
+    "id": "animals:evening-gull-watch",
+    "revision": 1,
+    "hash": "90f342762db592665e8df74bb7ffcab6ce67e905fadfaed6e742854eee5e264a",
+    "capability": "animal-notebook-v1"
+  },
+  "groundedChoice": {
+    "schema": 1,
+    "id": "animals:evening-gull-watch",
+    "revision": 1,
+    "resident": "dani",
+    "theme": "leave-space",
+    "observations": [
+      {
+        "animal": "harbor-gull-3",
+        "behavior": "shore-space",
+        "period": "evening",
+        "scene": "coast"
+      },
+      {
+        "animal": "harbor-gull-4",
+        "behavior": "shore-space",
+        "period": "evening",
+        "scene": "coast"
+      }
+    ]
+  },
+  "independentReview": {
+    "format": "harbor-animal-review-v2",
+    "passed": true,
+    "findings": []
+  },
+  "gameChatCalls": 2,
+  "underlyingModel": null,
+  "cost": null,
+  "rewardContract": "original animal-notebook-v1 fixed +1 relationship on completed share, one immutable knowledge page; no cash/items",
+  "finalCodeCommit": "10d80bdcf282e989450b7d1ebfe91700e754c38e"
+}
