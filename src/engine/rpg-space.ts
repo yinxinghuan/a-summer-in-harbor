@@ -71,6 +71,11 @@ function createRawRpgSpace(options:SpaceOptions){
  let cameraSignature='',backdrop:TilingSprite|undefined;
  const configureCamera=()=>{
   const view=viewport();if(!view)return;
+  // Pausing plugins alone does not disable RPGJS character.ce's reactive
+  // instant-follow callback, which calls moveCenter again when x/y change.
+  // A reserved non-actor target releases that default owner. Map transfers
+  // reset the target, so reclaim it before every safe-area camera solve.
+  if(client?.cameraFollowTargetId()!=='harbor-safe-area-camera')client?.setCameraFollow('harbor-safe-area-camera',false);
   const visual=options.cameraBounds?.(scene)??{x:0,y:0,w:world.width,h:world.height};
   const walk=options.cameraWalkBounds?.(scene)??world.scenes[scene].interior;
   const safe=options.cameraSafeArea?.()??{left:0,top:0,right:0,bottom:0};
@@ -106,6 +111,10 @@ function createRawRpgSpace(options:SpaceOptions){
   const resolution=Math.min(3,Math.max(1,Math.ceil(scale*(devicePixelRatio||1)*4)/4));
   if(client?.renderer){client.renderer.resize(engineWidth,engineHeight,resolution);client.width.set(String(engineWidth));client.height.set(String(engineHeight));configureCamera()}
  };
+ // The embedded RPGJS sync/physics tick may apply an older local ACK after
+ // Harbor's rAF projection. Commit the same swept pose and camera together at
+ // the public Pixi paint boundary; this performs no motion or time settlement.
+ const presentation={prerender:()=>{if(candidateEnabled()){projectPlayer();configureCamera()}}};
  const observer=new ResizeObserver(resize);observer.observe(host.parentElement!);resize();
  const runtime:Space={sampleMovement:()=>{if(candidateEnabled())advancePlayer(performance.now(),paused||changing||options.controlsBlocked()||document.hidden,0)},movementPending:()=>!!(stick.x||stick.y||keys.size||route.length),suspendPrediction:value=>{predictionBlocked=value;changedInput()},projectEventGraphic:(id,graphic)=>{const e=(client as any)?.sceneMap?.events?.()[id];if(e&&JSON.stringify(e.graphics())!==JSON.stringify(graphic))e.graphics.set([...graphic])},installSpritesheets:sheets=>{if(!client)throw Error("RENDERER_NOT_READY");for(const sheet of sheets)client.addSpriteSheet(sheet)},position:()=>({...pos}),scene:()=>scene,renderedScene:()=>loaded,
   move:(x,y)=>{stick={x,y};if(x||y)cancel();changedInput()},
@@ -129,7 +138,7 @@ function createRawRpgSpace(options:SpaceOptions){
  startGame({providers:[
   provideClientGlobalConfig({prediction:{enabled:false},bootstrapCanvasOptions:{antialias:false,backgroundAlpha:0,autoDensity:true,resolution:1}}),
   tiledClient({basePath:'./map'}),
-  provideClientModules([{spritesheets:[options.sheet,...options.spritesheets],sceneMap:{onAfterLoading(){cameraSignature='';loaded=client?.activeRoom()?.name?.replace(/^map-/,'')??null;checks.forEach(fn=>fn())}},engine:{onStart(engine){client=engine;if(debug)(host as HTMLElement&{__rpgClient?:RpgClientEngine}).__rpgClient=engine;engine.stopProcessingInput=true;engine.renderer.background.alpha=0;resize()}}}]),provideRpg(server)
+  provideClientModules([{spritesheets:[options.sheet,...options.spritesheets],sceneMap:{onAfterLoading(){cameraSignature='';loaded=client?.activeRoom()?.name?.replace(/^map-/,'')??null;checks.forEach(fn=>fn())}},engine:{onStart(engine){client=engine;if(debug)(host as HTMLElement&{__rpgClient?:RpgClientEngine}).__rpgClient=engine;engine.stopProcessingInput=true;engine.renderer.background.alpha=0;engine.renderer.runners.prerender.add(presentation);resize()}}}]),provideRpg(server)
  ]});
  const advancePlayer=(time:number,blocked:boolean,dt:number)=>{
   if(player&&!blocked){
