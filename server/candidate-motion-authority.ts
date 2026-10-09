@@ -1,3 +1,4 @@
+import {weatherPatch,applyWeatherPatch} from '../src/weather/state';
 import {createHash,randomUUID} from 'node:crypto';
 import {MotionRejection} from './motion-failure';
 import type {MotionRejectionCode} from '../src/candidate/motion-errors';
@@ -42,11 +43,15 @@ export function withCompactMotion(authority:any,store:any,runtime:any,motion=cre
     if(!f||typeof f!=='object'||Object.keys(f).sort().join(',')!=='activeMs,client,lease,sequence'||typeof f.client!=='string'||!/^[-a-f0-9]{36}$/.test(f.client)||typeof f.lease!=='string'||f.lease.length!==36||!Number.isSafeInteger(f.sequence)||f.sequence<1||!Number.isSafeInteger(f.activeMs)||f.activeMs<0||f.activeMs>3000)fail('INVALID_ACTIVE_ACTION');
     next=play!.apply(next,{...body,scene:next.scene,position:next.position,action:'candidate-active-tick',payload:f});
    }
-   const settled=JSON.stringify({...next,nativeCrabV1:undefined});runtime.finalizeMotion?.(before,next);
-   if(JSON.stringify({...next,nativeCrabV1:undefined})!==settled)fail('UNSUPPORTED_MOTION_DELTA');
+   const settled=structuredClone(next);runtime.finalizeMotion?.(before,next);
+   // Validate the bounded same-bed delta, rather than exempting all crop fields
+   // from the original movement invariant. Closed weather admits no such edits.
+   let expected:Save;
+   try{expected=applyWeatherPatch({...settled,nativeCrabV1:next.nativeCrabV1},weatherPatch(settled,next),{...settled,townMinutes:before.townMinutes})}catch{fail('UNSUPPORTED_MOTION_DELTA')}
+   if(JSON.stringify(canonical(expected!))!==JSON.stringify(canonical(next)))fail('UNSUPPORTED_MOTION_DELTA');
    const cursor=row.cursor+1,{transport:_,...clock}=next.movingClock!;
    const playFields=f?(({transport:_,...c})=>c)(next.activePlayClock!):undefined;
-   const ack:MotionAck=wire({schema:1,id,mapVersion:next.mapVersion,baseVersion:before.version,version:next.version,cursor,ordinal:p.ordinal,actionId:body.action_id,token:randomUUID(),fields:{...(playFields?{play:playFields}:{}),...(next.nativeCrabV1?{nativeCrabV1:next.nativeCrabV1}:{}),scene:next.scene,position:next.position,townMinutes:next.townMinutes,awakeMinutes:next.awakeMinutes,energy:next.energy,visited:next.visited,clock}});
+   const ack:MotionAck=wire({schema:1,id,mapVersion:next.mapVersion,baseVersion:before.version,version:next.version,cursor,ordinal:p.ordinal,actionId:body.action_id,token:randomUUID(),fields:{...(weatherPatch(before,next)?{weather:weatherPatch(before,next)}:{}),...(playFields?{play:playFields}:{}),...(next.nativeCrabV1?{nativeCrabV1:next.nativeCrabV1}:{}),scene:next.scene,position:next.position,townMinutes:next.townMinutes,awakeMinutes:next.awakeMinutes,energy:next.energy,visited:next.visited,clock}});
    next.cursor=cursor;next.movingClock!.transport={version:1,last:{digest:hash,ack}};runtime.assertReadable(next);
    // Atomic head + latest confirmation. No addReceipt/addEvent/clearPrepared call.
    await repo.write(owner,next,cursor,now());return ack;

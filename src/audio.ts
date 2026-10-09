@@ -16,15 +16,31 @@ export class SummerAudio{
  private stepIndex=0;
  private transitionVoice?:{source:AudioBufferSourceNode;gain:GainNode};
  private stepVoice?:{source:AudioBufferSourceNode;gain:GainNode};
+ private rainVoice?:{source:AudioBufferSourceNode;gain:GainNode;filter:BiquadFilterNode};
+ private rainWanted=false;
+ private rainBuffer?:AudioBuffer;
  constructor(){
-  document.addEventListener('visibilitychange',()=>{if(!this.context)return;if(document.hidden){this.stopSteps();this.stopTransition(true);void this.context.suspend()}else if(!this.muted)void this.context.resume().catch(()=>{})});
+  document.addEventListener('visibilitychange',()=>{if(!this.context)return;if(document.hidden){this.stopSteps();this.stopTransition(true);this.stopRain();void this.context.suspend()}else if(!this.muted)void this.context.resume().then(()=>this.syncRain()).catch(()=>{})});
  }
  unlock(){
   if(!this.context){this.context=new AudioContext();this.master=this.context.createGain();this.master.gain.value=this.muted?0:.22;this.master.connect(this.context.destination)}
-  if(!this.muted)void this.context.resume().then(()=>this.change()).catch(()=>{});
+  if(!this.muted)void this.context.resume().then(()=>{void this.change();this.syncRain()}).catch(()=>{});
   this.prepareSteps();this.prepareTransition();
  }
- setMuted(muted:boolean){this.muted=muted;if(muted){this.stopSteps();this.stopTransition()}if(this.master&&this.context){this.master.gain.cancelScheduledValues(this.context.currentTime);this.master.gain.setTargetAtTime(muted?0:.22,this.context.currentTime,.08)}if(!muted)this.unlock()}
+ setMuted(muted:boolean){this.muted=muted;if(muted){this.stopSteps();this.stopTransition();this.stopRain()}if(this.master&&this.context){this.master.gain.cancelScheduledValues(this.context.currentTime);this.master.gain.setTargetAtTime(muted?0:.22,this.context.currentTime,.08)}if(!muted)this.unlock()}
+ /** Original procedural soft rain through the existing unlocked mixer. No
+  * generated/downloaded media or extra AudioContext; one looping voice. */
+ setRain(wanted:boolean){this.rainWanted=wanted;this.syncRain()}
+ private stopRain(){const voice=this.rainVoice;if(!voice)return;this.rainVoice=undefined;voice.source.stop();voice.source.disconnect();voice.gain.disconnect();voice.filter.disconnect()}
+ private syncRain(){
+  const c=this.context;
+  if(!this.rainWanted||this.muted||document.hidden||!c||c.state!=='running'){this.stopRain();return}
+  if(this.rainVoice)return;
+  if(!this.rainBuffer){const buffer=c.createBuffer(1,c.sampleRate*2,c.sampleRate),data=buffer.getChannelData(0);let seed=7411,last=0;
+   for(let i=0;i<data.length;i++){seed=(Math.imul(seed,1664525)+1013904223)>>>0;last=.45*last+.55*(seed/4294967296*2-1);data[i]=last*.32}this.rainBuffer=buffer}
+  const source=c.createBufferSource(),gain=c.createGain(),filter=c.createBiquadFilter();source.buffer=this.rainBuffer;source.loop=true;filter.type='lowpass';filter.frequency.value=2200;gain.gain.value=.23;
+  source.connect(filter);filter.connect(gain);gain.connect(this.master!);this.rainVoice={source,gain,filter};source.start();
+ }
  /** Decode ahead of time; an unloaded step is skipped, never played later. */
  private prepareSteps(){
   const context=this.context;if(!context)return;

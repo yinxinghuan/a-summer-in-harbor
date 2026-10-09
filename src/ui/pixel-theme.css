@@ -69,6 +69,17 @@ button,input,textarea,select{font-family:var(--font-ui);font-weight:400}strong,b
 .harbor-app{--harbor-header-bottom:80px;--harbor-location-bottom:127px;--harbor-safe-top:env(safe-area-inset-top,0px);--harbor-safe-bottom:env(safe-area-inset-bottom,0px)}
 .harbor-header{padding-top:calc(10px + var(--harbor-safe-top))}
 .harbor-world{top:var(--harbor-header-bottom)}
+.harbor-weather{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.harbor-weather__shade{position:absolute;inset:0;background:transparent;transition:background-color .8s}
+.harbor-weather[data-weather="cloudy"] .harbor-weather__shade{background:linear-gradient(145deg,#3e566815,transparent 38%,#3e566812 72%,transparent)}
+.harbor-weather[data-weather="light-rain"] .harbor-weather__shade{background:#344b5e1a}
+.harbor-weather__rain{position:absolute;inset:0;overflow:hidden}
+.harbor-weather__rain i{position:absolute;left:var(--rain-x);top:-22%;height:12px;width:1px;background:#d3e9ed99;transform:rotate(14deg);animation:harbor-rain-fall var(--rain-duration) var(--rain-delay) linear infinite}
+.harbor-weather[data-weather-paused="true"] .harbor-weather__rain i{animation-play-state:paused}
+.harbor-weather[data-weather-quality="low"] .harbor-weather__rain i{opacity:.6}
+@keyframes harbor-rain-fall{from{translate:0 0}to{translate:-30px 100vh}}
+@media(prefers-reduced-motion:reduce){.harbor-weather__shade{transition:none}.harbor-weather__rain{background:repeating-linear-gradient(105deg,transparent 0 48px,#d3e9ed10 49px,transparent 50px)}.harbor-weather__rain i{animation:none;display:none}}
+.harbor-location .harbor-weather-label{white-space:nowrap;font-size:11px}
 .harbor-location{top:calc(var(--harbor-header-bottom) + 14px)}
 .harbor-objective{top:calc(var(--harbor-location-bottom) + 12px)}
 .harbor-controls{bottom:calc(18px + var(--harbor-safe-bottom))}

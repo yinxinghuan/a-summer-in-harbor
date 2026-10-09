@@ -1,3 +1,4 @@
+import {weatherPatch} from '../src/weather/state';
 import {createHash,randomUUID} from 'node:crypto';
 import type {Save,Action} from '../src/story/state';
 import {activePlayActionId,type ActivePlayAck} from '../src/candidate/active-play-types';
@@ -25,7 +26,7 @@ export function withActivePlayAuthority(authority:any,store:any,runtime:any,cloc
    if(await repo.preparedCount(owner))throw new MotionRejection('MOTION_BUSINESS_PREPARED');
    const next=clock.apply(before,a),cursor=row.cursor+1;next.version=before.version+1;next.cursor=cursor;
    const {transport:_,...c}=next.activePlayClock!;
-   const ack:ActivePlayAck=wire({schema:1,channel:'active-play',id,mapVersion:next.mapVersion,baseVersion:before.version,version:next.version,cursor,ordinal:p.ordinal,actionId:a.action_id,token:randomUUID(),fields:{...(next.nativeCrabV1?{nativeCrabV1:next.nativeCrabV1}:{}),townMinutes:next.townMinutes??540,awakeMinutes:next.awakeMinutes??0,energy:next.energy,clock:c}});
+   const ack:ActivePlayAck=wire({schema:1,channel:'active-play',id,mapVersion:next.mapVersion,baseVersion:before.version,version:next.version,cursor,ordinal:p.ordinal,actionId:a.action_id,token:randomUUID(),fields:{...(weatherPatch(before,next)?{weather:weatherPatch(before,next)}:{}),...(next.nativeCrabV1?{nativeCrabV1:next.nativeCrabV1}:{}),townMinutes:next.townMinutes??540,awakeMinutes:next.awakeMinutes??0,energy:next.energy,clock:c}});
    next.activePlayClock!.transport={last:{digest,ack}};runtime.assertReadable(next);await repo.write(owner,next,cursor,now());return ack;
   });
  };

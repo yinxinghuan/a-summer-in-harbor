@@ -1,7 +1,8 @@
+import {applyWeatherPatch,type WeatherPatch} from '../weather/state';
 import {validNativeCrabField} from '../animals/native-crab-game';
 export type ActivePlayRate=2000|4000;
 export type ActivePlayClock={schema:1;millisecondsPerMinute:ActivePlayRate;remainderMs:number;lease?:{id:string;client:string;boot:string;sequence:number;lastAt:number};transport?:{last:{digest:string;ack:ActivePlayAck}}};
-export type ActivePlayAck={schema:1;channel:'active-play';id:string;mapVersion:1;baseVersion:number;version:number;cursor:number;ordinal:number;actionId:string;token:string;fields:{nativeCrabV1?:import('../animals/native-crab-game').NativeCrabSave;townMinutes:number;awakeMinutes:number;energy:number;clock:Omit<ActivePlayClock,'transport'>}};
+export type ActivePlayAck={schema:1;channel:'active-play';id:string;mapVersion:1;baseVersion:number;version:number;cursor:number;ordinal:number;actionId:string;token:string;fields:{weather?:WeatherPatch;nativeCrabV1?:import('../animals/native-crab-game').NativeCrabSave;townMinutes:number;awakeMinutes:number;energy:number;clock:Omit<ActivePlayClock,'transport'>}};
 export const activePlayActionId=(id:string,ordinal:number)=>`play-${id}-${ordinal}`;
 export function confirmActivePlay(ack:ActivePlayAck,id:string,a:{action_id:string;expected_version:number;action:string;payload?:unknown}){
  const p=a.payload as any,c=ack?.fields?.clock,l=c?.lease;
@@ -10,5 +11,5 @@ export function confirmActivePlay(ack:ActivePlayAck,id:string,a:{action_id:strin
 }
 export function applyActivePlayAck<T extends {id:string;mapVersion:1;version:number;cursor:number;activePlayClock?:ActivePlayClock}>(head:T,ack:ActivePlayAck):T{
  if(ack.id!==head.id||ack.mapVersion!==head.mapVersion||ack.baseVersion!==head.version||ack.version!==head.version+1)throw Error('ACTIVE_HEAD_RESYNC');
- const {clock,...fields}=ack.fields;return {...head,...fields,version:ack.version,cursor:ack.cursor,activePlayClock:{...clock,transport:{last:{digest:'',ack}}}};
+ const {clock,weather,...fields}=ack.fields;return applyWeatherPatch({...head,...fields,version:ack.version,cursor:ack.cursor,activePlayClock:{...clock,transport:{last:{digest:'',ack}}}},weather,head);
 }

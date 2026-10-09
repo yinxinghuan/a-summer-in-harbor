@@ -1,0 +1,20 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {randomUUID} from 'node:crypto';import {Pool} from 'pg';
+import {initial,type Save,type Action} from '../src/story/state';import {entityAt,rooms} from '../src/world/data';import {createWeatherState} from '../src/weather/state';import {createExplorationAssembly} from '../server/exploration-assembly';
+// @ts-expect-error frozen authority
+import {initializeAsyncAuthoritySchema,openPgAuthorityStore,AsyncSessionAuthority} from '../vendor/dynamic-runtime/packages/authority-session/async.mjs';
+// @ts-expect-error frozen PG adapter
+import {initializeCandidateSchema,registerCandidateWorld} from '../vendor/dynamic-runtime/packages/pg-candidate/index.mjs';
+test('actual isolated PG weather: concurrent rest CAS, replay, restart, foreign owner and zero-write reads',async()=>{
+ const raw=process.env.HARBOR_ACCOUNT_QA_PG_URL;if(!raw)throw Error('ACTUAL_PG_QA_URL_REQUIRED');const url=new URL(raw);assert.equal(url.hostname,'127.0.0.1');assert.match(url.pathname,/^\/harbor_account_qa_/);
+ const pool=new Pool({connectionString:raw,max:4}),schema='kit_weather_qa_'+randomUUID().replaceAll('-','').slice(0,16),options={pool,schema,worldId:randomUUID(),gameId:'weather-local-only',environment:'test'};let a:any,b:any;
+ try{const c=await pool.connect();try{await initializeCandidateSchema(c,options);await initializeAsyncAuthoritySchema(c,options);await registerCandidateWorld(c,options)}finally{c.release()}
+ a=await openPgAuthorityStore(options);b=await openPgAuthorityStore(options);
+ const assembly=createExplorationAssembly({weather:{enabled:true},initial:(locale:any,id:string)=>({...initial(locale,id),scene:'home',position:entityAt('home','bed')!.approach,townMinutes:900,weatherV1:createWeatherState(900),flags:['key','unpacked','bag-returned'],visited:Object.keys(rooms),plots:{'crop-bed-1':{crop:'basil',grown:0,updatedAt:900,wetUntil:900}}})});
+ const aa=assembly.decorateAuthority(new AsyncSessionAuthority(a,assembly.runtime),a),bb=assembly.decorateAuthority(new AsyncSessionAuthority(b,assembly.runtime),b),owner=randomUUID();let s:Save=await aa.create(owner,randomUUID(),'en');
+ const command=():Action=>({action_id:randomUUID(),expected_version:s.version,scene:s.scene,position:s.position,target:'bed',action:'rest'}),one=command(),two=command();
+ const race=await Promise.allSettled([aa.action(owner,s.id,one),bb.action(owner,s.id,two)]);assert.equal(race.filter(r=>r.status==='fulfilled').length,1);assert.equal(race.filter(r=>r.status==='rejected'&&/VERSION_CONFLICT/.test(String(r.reason))).length,1);const index=race[0].status==='fulfilled'?0:1,winner=index?two:one,receipt=(race[index] as PromiseFulfilledResult<any>).value;s=await aa.get(owner,s.id);assert.equal(s.plots!['crop-bed-1'].grown,60);assert.equal(s.townMinutes,1080);assert.equal(s.weatherV1!.water['garden:crop-bed-1'],60);
+ const fingerprint=async()=>{const tables=(await pool.query('select table_name from information_schema.tables where table_schema=$1 order by table_name',[schema])).rows;return Promise.all(tables.map(async({table_name:t})=>{assert.match(t,/^[a-z_]+$/);return {table:t,...(await pool.query(`select count(*)::int as count,md5(coalesce(string_agg(md5(row_to_json(t)::text),'' order by md5(row_to_json(t)::text)),'')) as digest from "${schema}"."${t}" t`)).rows[0]}}))};
+ const before=await fingerprint();assert.deepEqual(await bb.action(owner,s.id,winner),receipt);for(let i=0;i<3;i++)assert.deepEqual(await bb.get(owner,s.id),s);await assert.rejects(bb.get('other-account',s.id),/SESSION_NOT_FOUND/);assert.deepEqual(await fingerprint(),before);
+ await a.close();a=await openPgAuthorityStore(options);const reopened=assembly.decorateAuthority(new AsyncSessionAuthority(a,assembly.runtime),a);assert.deepEqual(await reopened.get(owner,s.id),s);assert.deepEqual(await reopened.action(owner,s.id,winner),receipt);assert.deepEqual(await fingerprint(),before);
+ }finally{await a?.close();await b?.close();await pool.query(`DROP SCHEMA IF EXISTS "${schema}" CASCADE`);await pool.end()}
+});
