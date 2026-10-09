@@ -1,0 +1,9 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {randomUUID,createHash} from 'node:crypto';import {readFileSync} from 'node:fs';
+import {initial} from '../src/story/state';import {createWeatherState,weatherPatch,applyWeatherPatch} from '../src/weather/state';import {createWeatherSettlement} from '../server/weather';import {mintDefinitionHash} from '../server/plant-uses-rules';
+test('actual old58 reader requires page refresh; newer reader safely accepts old backend deltas before cutover',async()=>{
+ const base=new URL('../../evidence/',import.meta.url),lock=JSON.parse(readFileSync(new URL('old58-reader-lock.json',base),'utf8'));assert.equal(lock.sourceCommit,'58c46bdd1dfe09c977e86076a4686d78473af1d2');assert.equal(createHash('sha256').update(readFileSync(new URL('old58-reader.mjs',base))).digest('hex'),lock.bundleSHA256);
+ const old=await import(new URL('old58-reader.mjs',base).href);
+ const s={...initial('en',randomUUID()),townMinutes:900,weatherV1:createWeatherState(900),plantUsesV1:{schema:1 as const,deliveries:0,mint:{node:'harbor-mint-hill-1' as const,definitionHash:mintDefinitionHash,stock:1 as const,recoverAt:1620,leaves:0}}};
+ const oldNext={...structuredClone(s),townMinutes:901};createWeatherSettlement({enabled:true,ecology:false}).settle(s,oldNext);const oldDelta=old.weatherPatch(s,oldNext);assert.deepEqual(applyWeatherPatch({...s,townMinutes:901},oldDelta,s),oldNext,'front-first new reader works while backend remains58');
+ const newNext={...structuredClone(s),townMinutes:901};createWeatherSettlement({enabled:true,ecology:true}).settle(s,newNext);const delta=weatherPatch(s,newNext);assert.ok(delta?.weatherEcologyV1);assert.ok(delta?.mintRecovery);const before=JSON.stringify(s);assert.throws(()=>old.applyWeatherPatch({...s,townMinutes:901},delta,s),/WEATHER_REPLY_UNCONFIRMED/);assert.equal(JSON.stringify(s),before);assert.deepEqual(applyWeatherPatch({...s,townMinutes:901},delta,s),newNext);
+});

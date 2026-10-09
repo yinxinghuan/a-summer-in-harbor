@@ -21,7 +21,9 @@ export function createAnimalRuntime(defs:readonly AnimalDef[],options:{profiles?
  const states=new Map(defs.map(a=>[a.id,initial(a)]));let signature='',lastMinutes=-1;
  const reconcile=(ctx:Context)=>{
   periodAt(ctx.townMinutes);const nextSignature=ctx.scene+':'+ctx.townMinutes+':'+JSON.stringify(ctx.animalSlots??{});
-  if(nextSignature===signature)return;const preserve=new Set(defs.filter(a=>{const state=states.get(a.id)!,slot=contextSlot(a,ctx);return a.species==='cat'&&state.visible&&!!state.slot?.shelter&&!!slot?.shelter&&state.scene===ctx.scene&&slot.scene===ctx.scene&&lastMinutes>=0&&periodAt(lastMinutes)===periodAt(ctx.townMinutes)}).map(a=>a.id));signature=nextSignature;lastMinutes=ctx.townMinutes;
+  // First lazy activation may replace an ordinary old58 slot. Preserve its
+  // actual visible foot too, rather than resetting a walking cat to spawn.
+  if(nextSignature===signature)return;const preserve=new Set(defs.filter(a=>{const state=states.get(a.id)!,slot=contextSlot(a,ctx);return a.species==='cat'&&state.visible&&!!slot?.shelter&&state.scene===ctx.scene&&slot.scene===ctx.scene&&lastMinutes>=0&&periodAt(lastMinutes)===periodAt(ctx.townMinutes)}).map(a=>a.id));signature=nextSignature;lastMinutes=ctx.townMinutes;
   // Hide first so old-scene bodies cannot reserve space in a new scene.
   for(const state of states.values()){if(preserve.has(state.id))continue;state.visible=false;state.route=[];state.elevation=0;state.attention=0;state.cooldown=0;state.flightDistance=0;state.wingTime=0;state.distance=0;state.wait=0;state.waypoint=0}
   for(const def of defs){const state=states.get(def.id)!,slot=contextSlot(def,ctx),oldActivity=state.slot?.activity;state.scene=slot?.scene??null;state.slot=slot;if(preserve.has(def.id)){if(oldActivity!==slot?.activity){state.route=[];state.wait=0;state.pose='stand'}continue}state.phase='hidden';state.pose='stand';state.reason=slot?'other-scene':'schedule-away';if(!slot||slot.scene!==ctx.scene)continue;
