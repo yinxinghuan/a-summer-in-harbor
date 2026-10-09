@@ -357,3 +357,24 @@ native-dog独立模块采用52×34占地和51×46显示包络。可选profile/di
 QA 位于 _qa/menu-bag-after.mts：编译后实际 Main/View/RPGJS + 隔离普通浏览器 possession cookie/SQLite，外部请求阻断。预置存档明确为合成，本轮观察、输入、留种/吃点心/归档仍走原 authority。初期测试脚本抢在 React/image effects 前读 DOM 的失败、滚轮指针落入固定栏、桌面隐藏 select 的定位失败保留在外部 evidence；最终矩阵必须以 report.json 为准。不存在本轮实机、Telegram、跨设备或生产发布证明。
 
 
+# 天气第二阶段独立候选（基线58，2026-10-09）
+
+## 技术栈
+
+沿用原React/TypeScript、RPGJS/Pixi/Vite和权威Session/CAS、SQLite测试服务。无新依赖、生成、数据库表、定时任务或身份方式。
+
+## 目录结构
+
+`src/weather/ecology.ts`固定可选weatherEcologyV1规则、当前分钟激活、每日额度。`server/weather-ecology.ts`只帮助原生v2已恢复中的野薄荷，原v1 hash保持。`src/weather/state.ts`扩展原紧凑weather回执：只传新策略和recoverAt减量，不携带库存、订单或历史。`src/weather/animal-shelter.ts`集中声明已有树冠/合法走廊，renderer与服务端cat动作共享。`src/weather/resident-reactions.ts`保存六位居民双语反应与露天停步条件。规则与实际页面脚本为`_qa/weather-ecology.test.ts`和`_qa/weather-ecology-ui.mts`。
+
+## 核心模块
+
+`createWeatherSettlement({ecology:true})`才允许新策略；生产入口public.ts未启用此开关。读不迁移，旧档首次已确认动作从当下固定策略，无离线补算。原weatherV1与五床每天60分钟额度未改。薄荷额外恢复最多每实际雨分钟1分钟、每游戏日60分钟，严格保留节点hash、来源、stock、叶子数量和原720下界；若本动作新采集而改变期限，动作前区间不记给新采集。active与motion同原事务/CAS提交，重放不重算。
+
+猫只在原昼间日程场景内寻路到已有树冠脚点；原world、树干、门、地块、玩家、居民、其他动物仍阻挡。目标不可达时留在安全原位，不把附近任意脚点称为避雨。每分钟确认在同一时段/场景保留当前足点及路径，雨止通过同一有界走廊返回；正常时段换场优先原日程。夜间原睡眠/禁抚摸/观察不改。狗、蟹、海鸥保持。旧动物观察frame按原sample合同重算，既有册页与收藏不迁移；雨天昼间猫不准采样晒太阳，UI与server同时拒用。猫的既有每天一次抚摸仍沿原动作规则。没有新增动物奖励。
+
+六位已介绍居民的可见描述追加当前天气反应，未认识的人不泄露身份；原日程/服务准入/关系记忆保持。自由对白context只增加当前已确认天气与规则事实，没有发模型请求。设置、菜单、相机、连续地图、昼夜与时间系统未重做。
+
+## 扩展点及回退
+
+启用只需在审核后的组合入口显式开启ecology，不能直接拿本地fixture当正式登录验收。新策略一旦被正式写入，回退必须保留本候选reader、settlement、compact delta和已减少的期限；关闭ecology/newStarts只能阻止新增pin，不恢复旧期限或DB快照。第一阶段1fbb790兼容回退不含本策略，不能在第二阶段暴露后直接使用。未来新规则/素材必须另版本，不能原地改pin。后续雨后发现、收藏线索与AI故事仍开放规划；真实模型调用需另有预算，不能借ECS或素材库额度。

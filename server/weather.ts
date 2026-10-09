@@ -1,19 +1,22 @@
 import type {Save} from '../src/story/state';
+import {initializeWeatherEcology,settleWeatherEcology} from './weather-ecology';
 import {rooms} from '../src/world/data';
 import {crops,plotIds} from '../src/story/crops';
 import {landRegion} from '../src/life/land';
 import type {LifeSave} from '../src/life/types';
 import {createPlantsRegistry} from './life-plants-b2';
 import {assertWeatherReadable,createWeatherState,weatherAt,defaultWeatherParameters,validWeatherParameters,type WeatherParameters} from '../src/weather/state';
-export type WeatherOptions={enabled?:boolean;newStarts?:boolean;parameters?:WeatherParameters};
+export type WeatherOptions={enabled?:boolean;newStarts?:boolean;ecology?:boolean;parameters?:WeatherParameters};
 /** Bounded rain, one wet-growth minute per actual raining town minute. Already
  * wet time is not counted twice; per fixed bed/day caps survive harvest/replant. */
 export function createWeatherSettlement(options:WeatherOptions={}){
  const enabled=options.enabled===true,newStarts=options.newStarts!==false,parameters=options.parameters??defaultWeatherParameters,registry=createPlantsRegistry();
  if(!validWeatherParameters(parameters))throw Error('INVALID_WEATHER_INPUT');
- const initialize=(s:Save)=>{if(enabled&&newStarts&&!s.weatherV1)s.weatherV1=createWeatherState(s.townMinutes??540,parameters);return s};
+ const initialize=(s:Save)=>{if(enabled&&newStarts&&!s.weatherV1)s.weatherV1=createWeatherState(s.townMinutes??540,parameters);initializeWeatherEcology(s,options.ecology===true&&newStarts);return s};
  const settle=(before:Save,next:Save)=>{
   if(!next.weatherV1){if(!enabled||!newStarts)return;next.weatherV1=createWeatherState(before.townMinutes??540,parameters)}
+  if(!next.weatherEcologyV1&&options.ecology===true&&newStarts){const pin=initialize(structuredClone(before)).weatherEcologyV1;if(pin)next.weatherEcologyV1=pin}
+  settleWeatherEcology(before,next);
   const w=next.weatherV1,from=w.settledThrough,to=next.townMinutes??540;
   if(to<from)throw Error('WEATHER_TIME_REVERSED');if(to===from){assertWeatherReadable(next);return}
   const plots:{key:string;p:{grown:number;updatedAt:number;wetUntil:number};maximum:number;start:number}[]=[];

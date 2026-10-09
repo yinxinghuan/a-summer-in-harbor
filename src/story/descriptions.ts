@@ -2,9 +2,14 @@ import {relationshipGreeting} from './relationship-growth';
 import {newsMemory} from './town-news';
 import {plotIds,plotDescription,shopHours} from './crops';
 import {residentActivity,fernDescription,openingNotice} from '../world/residents';
-import type {Entity,Words} from '../world/data';
+import {rooms,type Entity,type Words} from '../world/data';
+import {residentWeatherReaction} from '../weather/resident-reactions';
 import {has,type Save} from './state';
 export function description(s:Save,e:Entity):Words{
+ const original=baseDescription(s,e),reaction=e.person&&residentWeatherReaction(s,e.person,!!rooms[s.scene]?.outdoor);
+ return reaction?[original[0]+' '+reaction[0],original[1]+' '+reaction[1]]:original;
+}
+function baseDescription(s:Save,e:Entity):Words{
  if(e.id==='visitor-note')return newsMemory(s)??['这里留着一小块贴游客留言的地方。','A little space is kept for visitors’ notes.'];
  if(plotIds.includes(e.id))return plotDescription(s,e.id);
  if(e.id==='crop-counter')return shopHours;

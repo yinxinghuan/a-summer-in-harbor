@@ -1,3 +1,4 @@
+import {rainCatShelterActive} from '../src/weather/animal-shelter';
 import {createLifePlantsB2,createPlantsRegistry} from './life-plants-b2';
 import type {createRuntime} from './runtime';
 import {AnimalContentRegistry,sameAnimalRef,canonical,contentHash} from './animal-content';
@@ -26,7 +27,9 @@ const notebook=(s:AnimalLifeSave):AnimalNotebook=>s.animalNotebookV1??{schema:1,
 /** A server-owned deterministic sampler. No pose, behavior, foot or proof is
  * accepted from the action payload. This frame is also the renderer input. */
 export function sampleAnimal(s:AnimalLifeSave,target:string,p:Point){
- const engine=createAnimalRuntime(acceptedAnimals),ctx=gameAnimalContext(s,p,{world:landWorld(dynamicWorld(s.flags,false),s.landV1),paused:true});
+ // Immutable old sample proofs keep their original frame contract. New rain
+ // shelter is not a sun-rest observation; live sampling rejects it separately.
+ const engine=createAnimalRuntime(acceptedAnimals),ctx=gameAnimalContext(s,p,{world:landWorld(dynamicWorld(s.flags,false),s.landV1),paused:true,weatherShelter:false});
  const frame=engine.tick(0,ctx).find(a=>a.id===target);
  if(!frame?.visible||frame.scene!==s.scene)throw Error('ANIMAL_AWAY');
  const behavior=frame.species==='gull'?'shore-space':frame.phase==='sun-rest'?'sun-rest':frame.phase==='sleep'?'sleep':undefined;
@@ -76,6 +79,7 @@ export function createAnimalLife(base:ReturnType<typeof createRuntime>,content=n
    const c=parseAnimalCommand(a);let head:AnimalLifeSave=structuredClone(previous),text:[string,string],person:string|undefined;
    head.animalNotebookV1=structuredClone(notebook(previous));const n=head.animalNotebookV1;
    if(c.verb==='sample'){
+    if(rainCatShelterActive(head,a.target))throw Error('OBSERVATION_NOT_AVAILABLE');
     const v=sampleAnimal(head,a.target,a.position);n.sample={...v,sourceAction:a.action_id,version:head.version+1,scene:head.scene,minute:now(head),player:{...a.position}};
     text=v.behavior==='shore-space'?['你留出一点距离。海鸥仍有自己的空间，可以记下这次观察。','You leave room for the gull. You can record this quiet observation.']:v.behavior==='sleep'?['它蜷着睡觉。没有叫醒它，可以把这一刻记下来。','It is curled up asleep. You let it rest; this moment can go in your notebook.']:['它在阳光里安静待着。可以把这一刻记下来。','It rests in the sunlight. This moment can go in your notebook.'];
    }else if(c.verb==='record'){

@@ -5,6 +5,7 @@ import {animalPath,finitePoint,freePoint,pointClear,candidates} from './spatial'
 import type {AnimalDef,AnimalState,Context,Facing,Period,Pose,Slot,SpeciesProfile} from './types';
 export function periodAt(minutes:number):Period{if(!Number.isSafeInteger(minutes)||minutes<0)throw Error('INVALID_TOWN_TIME');const m=minutes%1440;return m<360||m>=1260?'night':m<720?'morning':m<1020?'afternoon':'evening'}
 export const slotAt=(a:AnimalDef,m:number):Slot|null=>a.schedule[periodAt(m)]??null;
+export const contextSlot=(a:AnimalDef,ctx:Context):Slot|null=>ctx.animalSlots?.[a.id]??slotAt(a,ctx.townMinutes);
 const face=(from:Point,to:Point,previous:Facing):Facing=>{const x=to.x-from.x,y=to.y-from.y;if(Math.abs(x)+Math.abs(y)<1e-7)return previous;return Math.abs(x)>Math.abs(y)?x>0?'right':'left':y>0?'down':'up'};
 const initial=(a:AnimalDef):AnimalState=>({id:a.id,species:a.species,visualVersion:a.visualVersion,scene:null,slot:null,foot:{x:0,y:0},direction:'down',pose:'stand',phase:'hidden',visible:false,distance:0,elevation:0,attention:0,cooldown:0,route:[],flightDistance:0,flightTotal:0,wingTime:0,waypoint:0,wait:0});
 /** Observed movement is ephemeral; only committed townMinutes selects a schedule. */
@@ -19,12 +20,12 @@ export function createAnimalRuntime(defs:readonly AnimalDef[],options:{profiles?
  if(new Set(defs.map(a=>a.id)).size!==defs.length)throw Error('DUPLICATE_ANIMAL_ID');
  const states=new Map(defs.map(a=>[a.id,initial(a)]));let signature='',lastMinutes=-1;
  const reconcile=(ctx:Context)=>{
-  periodAt(ctx.townMinutes);const nextSignature=ctx.scene+':'+ctx.townMinutes;
-  if(nextSignature===signature)return;signature=nextSignature;lastMinutes=ctx.townMinutes;
+  periodAt(ctx.townMinutes);const nextSignature=ctx.scene+':'+ctx.townMinutes+':'+JSON.stringify(ctx.animalSlots??{});
+  if(nextSignature===signature)return;const preserve=new Set(defs.filter(a=>{const state=states.get(a.id)!,slot=contextSlot(a,ctx);return a.species==='cat'&&state.visible&&!!state.slot?.shelter&&!!slot?.shelter&&state.scene===ctx.scene&&slot.scene===ctx.scene&&lastMinutes>=0&&periodAt(lastMinutes)===periodAt(ctx.townMinutes)}).map(a=>a.id));signature=nextSignature;lastMinutes=ctx.townMinutes;
   // Hide first so old-scene bodies cannot reserve space in a new scene.
-  for(const state of states.values()){state.visible=false;state.route=[];state.elevation=0;state.attention=0;state.cooldown=0;state.flightDistance=0;state.wingTime=0;state.distance=0;state.wait=0;state.waypoint=0}
-  for(const def of defs){const state=states.get(def.id)!,slot=slotAt(def,ctx.townMinutes);state.scene=slot?.scene??null;state.slot=slot;state.phase='hidden';state.pose='stand';state.reason=slot?'other-scene':'schedule-away';if(!slot||slot.scene!==ctx.scene)continue;
-   const offset=defs.indexOf(def)%slot.points.length,preferred=slot.points[offset];
+  for(const state of states.values()){if(preserve.has(state.id))continue;state.visible=false;state.route=[];state.elevation=0;state.attention=0;state.cooldown=0;state.flightDistance=0;state.wingTime=0;state.distance=0;state.wait=0;state.waypoint=0}
+  for(const def of defs){const state=states.get(def.id)!,slot=contextSlot(def,ctx),oldActivity=state.slot?.activity;state.scene=slot?.scene??null;state.slot=slot;if(preserve.has(def.id)){if(oldActivity!==slot?.activity){state.route=[];state.wait=0;state.pose='stand'}continue}state.phase='hidden';state.pose='stand';state.reason=slot?'other-scene':'schedule-away';if(!slot||slot.scene!==ctx.scene)continue;
+   const offset=defs.indexOf(def)%slot.points.length,preferred=slot.shelter?.homePoint??slot.points[offset];
    const foot=free(preferred,slot,effective[def.species],ctx,[...states.values()].filter(a=>a.id!==def.id));
    if(!foot){state.reason='no-safe-position';continue}state.foot={...foot};state.waypoint=offset;state.visible=true;state.reason=undefined;state.phase=slot.activity==='sleep'?'sleep':slot.activity==='sun-rest'?'sun-rest':'idle';state.pose=state.phase==='sleep'?'sleep':state.phase==='sun-rest'?'sun-rest':'stand';
   }
@@ -48,8 +49,20 @@ export function createAnimalRuntime(defs:readonly AnimalDef[],options:{profiles?
    if(!dt){if(def.species==='dog'){s.phase='idle';s.pose='stand';s.route=[]}continue}
    s.cooldown=Math.max(0,s.cooldown-dt);s.attention=Math.max(0,s.attention-dt);s.wait=Math.max(0,s.wait-dt);
    const player={x:ctx.player.x+ctx.player.w/2,y:ctx.player.y+ctx.player.h/2},near=Math.hypot(player.x-s.foot.x,player.y-s.foot.y);
-   if(slot.activity==='sleep'){s.phase='sleep';s.pose='sleep';s.route=[];s.elevation=0;continue}
    if(s.attention>0){s.phase='attention';s.pose='stand';s.direction=face(s.foot,player,s.direction);s.route=[];continue}
+   if(slot.shelter){
+    const r=slot.shelter.homeRegion,b={x:s.foot.x-profile.collision.w/2,y:s.foot.y-profile.collision.h,w:profile.collision.w,h:profile.collision.h},home=b.x>=r.x&&b.y>=r.y&&b.x+b.w<=r.x+r.w&&b.y+b.h<=r.y+r.h;
+    const target=slot.activity==='shelter'?slot.shelter.point:!home?slot.shelter.homePoint:undefined;
+    if(target){
+     if(Math.hypot(s.foot.x-target.x,s.foot.y-target.y)<.1){s.phase='idle';s.pose='stand';s.route=[];s.reason=slot.activity==='shelter'?'rain-shelter':undefined;continue}
+     // The parking foot itself must be clear. Never substitute an uncovered
+     // nearby point and call it shelter; blocked routes wait at a safe foot.
+     if(!s.route.length)s.route=clear(target,slot,profile,ctx,others)?animalPath(s.foot,target,slot,profile,ctx,others):[];
+     if(!s.route.length){s.phase='idle';s.pose='stand';s.reason='shelter-route-blocked';continue}
+     const previous=s.foot,result=advanceRoute(s.foot,s.route,profile.speed*dt,q=>clear(q,slot,profile,ctx,others));s.foot=result.position;s.route.splice(0,result.consumed);s.distance+=result.distance;s.direction=face(previous,s.foot,s.direction);s.phase=result.distance>0?'walk':'idle';s.pose=result.distance>0?(['walkA','stand','walkB','stand'] as Pose[])[Math.floor(s.distance/profile.stride*4)%4]:'stand';s.reason=result.blocked?'shelter-route-blocked':result.arrived&&slot.activity==='shelter'?'rain-shelter':undefined;if(result.blocked||result.arrived)s.route=[];continue;
+    }
+   }
+   if(slot.activity==='sleep'){s.phase='sleep';s.pose='sleep';s.route=[];s.elevation=0;continue}
    if(def.species==='gull'&&near<profile.retreatDistance&&s.cooldown===0&&s.phase!=='flight'){
     const desired=free({x:s.foot.x+(s.foot.x-player.x),y:s.foot.y+(s.foot.y-player.y)},slot,profile,ctx,others,profile.landingDistance);
     const route=desired?animalPath(s.foot,desired,slot,profile,ctx,others):[];

@@ -1,6 +1,6 @@
 import type {Point} from '../engine/world';
 import {profiles} from './config';
-import {slotAt} from './behavior';
+import {contextSlot} from './behavior';
 import {pointClear} from './spatial';
 import type {AnimalDef,AnimalSave,Context} from './types';
 export function validAnimalSave(value:unknown,defs:readonly AnimalDef[],minutes:number):value is AnimalSave|undefined{
@@ -13,7 +13,7 @@ export function validAnimalSave(value:unknown,defs:readonly AnimalDef[],minutes:
 /** Return a fresh optional field, never mutate or reinitialize the rest of the save. */
 export function animalSave(value:unknown,defs:readonly AnimalDef[],minutes:number):AnimalSave{if(!validAnimalSave(value,defs,minutes))throw Error('UNSUPPORTED_ANIMAL_SAVE');return value===undefined?{schema:1,individuals:{}}:structuredClone(value)}
 export function applyAnimalInteraction(previous:unknown,defs:readonly AnimalDef[],ctx:Context,a:{target:string;verb:'call'|'pet';foot:Point}){
- const memory=animalSave(previous,defs,ctx.townMinutes),def=defs.find(d=>d.id===a.target),slot=def&&slotAt(def,ctx.townMinutes);
+ const memory=animalSave(previous,defs,ctx.townMinutes),def=defs.find(d=>d.id===a.target),slot=def&&contextSlot(def,ctx);
  if(!def||def.species!=='cat'||!slot||slot.scene!==ctx.scene)throw Error('ANIMAL_AWAY');
  if(slot.activity==='sleep')throw Error('ANIMAL_RESTING');
  if(!['call','pet'].includes(a.verb))throw Error('ANIMAL_ACTION_UNAVAILABLE');

@@ -6,13 +6,15 @@ import {behaviorLabels as names,observationLabel} from '../animal-life/labels';
 import {gameMinuteLabel} from './LifeBag';
 import {currentAnimalSample} from '../animal-life/presentation';
 import type {Point} from '../engine/world';
+import {rainCatShelterActive} from '../weather/animal-shelter';
 export type AnimalView=ReturnType<ReturnType<typeof createAnimalLife>['animalProject']>;
 export function AnimalInteraction({save,view,target,locale,busy,ready,playerPosition,onCommand,projectionCurrent}:{save:Save;projectionCurrent?:boolean;view?:AnimalView;target:Entity;locale:Locale;busy:boolean;ready:boolean;playerPosition?:Point;onCommand:(c:AnimalCommand)=>void}){
  if(!view||target.person&&!ready)return null;
  const stale=projectionCurrent===undefined?view.snapshotVersion!==save.version:!projectionCurrent;
  const rows=view.commissions.filter(e=>save.known.includes(e.definition.resident)&&e.definition.resident===target.person),sample=view.sample&&view.sample.frame.id===target.animalId?currentAnimalSample(save,view.sample,playerPosition):undefined;
  return <section className="harbor-animal-notebook" aria-label={tx(['动物日常','Animal routines'],locale)}>
- {target.animalId&&<>
+ {target.animalId&&rainCatShelterActive(save,target.animalId)&&<p data-cat-rain>{tx(['小雨里，先让它找个安稳位置。晒太阳观察可以等雨停再来；已有记录仍保留。','Let it find a quiet spot in the rain. Return after rain for a sunning observation; existing records are kept.'],locale)}</p>}
+ {target.animalId&&!rainCatShelterActive(save,target.animalId)&&<>
   <p>{tx(target.animalId==='harbor-shore-crab-1'?['蟹会横着退开。不要追赶，退开一点，等它安静停下再观察；没有物品消耗。','The crab retreats sideways. Don’t chase it. Leave room and watch when it settles; no items are used.']:target.animalId.startsWith('harbor-gull-')?['留出一点距离，不追赶也不投喂。观察失败不会损失任何物品。','Leave a little room. No chasing or feeding. An unavailable observation costs nothing.']:['晒太阳或睡眠时，可以安静观察；不需要叫醒它。','Watch quietly when it is sunning or sleeping. There is no need to wake it.'],locale)}</p>
   {sample?<><p role="status">{tx(['这一刻：','This moment: '],locale)}{tx(names[sample.behavior],locale)}</p><button disabled={busy||stale||!ready} onClick={()=>onCommand({verb:'record'})}>{tx(['记下这次观察','Record this observation'],locale)}</button></>:<button disabled={busy||stale||!ready} onClick={()=>onCommand({verb:'sample'})}>{tx(['静静看一会儿','Watch quietly'],locale)}</button>}
  </>}
