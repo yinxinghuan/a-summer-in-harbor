@@ -14,6 +14,9 @@ for(const code of ['PLANT_USES_CLOSED','PLANT_USES_STARTS_CLOSED','MINT_CONTENT_
 for(const code of ['RELATIONSHIP_TOPIC_UNAVAILABLE','RELATIONSHIP_OBSERVATION_UNAVAILABLE','RELATIONSHIP_EXPLICIT_ACTION_REQUIRED'])gameplay.add(code);
 // Native crab finite gameplay failures; saved-state/clock failures remain nonterminal.
 for(const code of ['NATIVE_CRAB_CLOSED','NATIVE_CRAB_CHECKPOINT_REQUIRED','LEAVE_CRAB_SPACE','CRAB_NEEDS_QUIET_MOMENT','NATIVE_CRAB_REF_MISMATCH'])gameplay.add(code);
+// Rain drafts are finite pre-commit gameplay choices. Policy drift and invalid
+// saved weather remain infrastructure failures; never retire their request.
+for(const code of ['AFTER_RAIN_CLOSED','AFTER_RAIN_UNAVAILABLE','AFTER_RAIN_FACT_MISMATCH','AFTER_RAIN_VERSION_CONFLICT','AFTER_RAIN_TOPIC_NOT_GROUNDED','AFTER_RAIN_PERSON_UNAVAILABLE','UNSUPPORTED_AFTER_RAIN_DRAFT'])gameplay.add(code);
 class ActiveBusinessRejection extends Error{readonly terminal=true;readonly status=409;constructor(readonly code:string){super(code)}}
 export function brandActivePrepareFailure(error:unknown){return error instanceof Error&&gameplay.has(error.message)?new ActiveBusinessRejection(error.message):error}
 export function activeBusinessHttpFailure(error:unknown){

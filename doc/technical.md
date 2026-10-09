@@ -390,3 +390,18 @@ QA 位于 _qa/menu-bag-after.mts：编译后实际 Main/View/RPGJS + 隔离普�
 prepareAfterRainDialogue是默认关闭的localFixture-only dry adapter。调用方提供原最终authority的admission callback，不重造身份、world、空间或时钟；本地fixture实用admitSpatialAction+validateQuestion证明已有登场、近距、版本/scene准入。复用dialogueContext并structuredClone再冻结，原residentLife/relationshipNarrative/currentObjective/dated news保留，单独追加confirmed-game-weather来源。没有调用原gateway、配置、数据库、模型或生成API。public.ts没有导入模块，不能把这些测试写成已完成真实authority事务/正式对话验收。
 
 下一接缝：用完整最终assembly的spatialContext/prepare链验证B2/moving transport和pending重放，再做明确独立SQLite/PG、真实Main收藏/对话页面；保持唯一原authority、原builder/gateway和预算。未来新观察记录必须固定版本与稳定receipt id并在原CAS事务幂等保存，不能让模型正文自行记录观察/给物品。真实AI服务、调用上限、费用需要独立具体批准；本批paidCalls=0，原冻结news日期/hash不变。
+## 天气第三阶段本地集成（2026-10-09，未发布）
+
+基线为正式 b12，继承 b6 的只读事实计算。`server/after-rain-runtime.ts` 将有限雨段事实和六位原居民的双语视角投影为 `afterRain`，通过原 `server/runtime.ts` 的 `weather-after-rain` 动作写一条普通 talk history。准入借用原 ask 的已认识、在场、近距、场景、挑战守卫，并保留原 movement、B2、pending、CAS 与前台时间包装器。没有第二 writer 或新增 Save 字段。
+
+动作 payload 精确为 schema/factId/topic/tone/effects 五项，effects 必须为空；expected_version 沿原 action 验证。雨段 ID 绑定旅程、参数、policy 激活点与原游戏分钟，过期不补算离线，也不把恢复后的薄荷全归功于雨。原 v1 薄荷读取保留，不借 v2 线索。
+
+`createExplorationAssembly` 的 `afterRain` 默认为 false，候选 `server/public.ts` 显式开启；它没有被本轮执行。b6 的 `afterRainRuntimeEnabled=false` 仍表示其独立 dry adapter 关闭，不是新集成的开关。生产文件没有读取或复制本机私有配置。旧 b12 实际 reader 可读新增普通历史，关闭新入口不需要恢复数据库或迁移存档；仍须保留 b12 的天气生态 reader。
+
+`server/dialogue.ts` 在原上下文后追加有界天气证据，保留生活、关系、任务和有日期新闻，原模型 gateway 与计费策略不变。本轮真实模型调用为零；本地注入 planner/transport spy 不是 AI 生成证据。规则回应没有 question 字段，不设置 `free-dialogue-experienced`，UI 也明确其来源。
+
+`src/ui/AfterRain.tsx` 沿原人物交互与人物→回忆呈现。`lifeProjectionKey` 纳入天气 pin，避免同分钟政策变化复用旧投影。投影未核实、busy、pending 时沿原流程禁用。原收藏、采叶、订单、菜单、昼夜、相机、素材、身份和自然时间不变。
+
+有限用户操作错误必须由 `server/active-business-failure.ts` 明确列入409终态集合。本次实际Main发现失效fact被503包装后原pending无法结束，现已修复；存档损坏、policy drift、基础设施错误继续503非终态，保留原请求。320实际本地HTTP拒绝后经原关闭/重开、用户再次选择，只有新明确请求保存一次回应；回包丢失重放则沿原同一请求复用。
+
+验证与复跑说明见 `doc/weather-stage3-integration-20261009.md`。正常平台登录、手机/Telegram、跨设备、真实AI回答和新玩家理解未验收，不能据本地合成旅程推定已通过。候选尚无发布授权，不上传后端、不推送镜像、不修改玩家原档。
