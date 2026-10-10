@@ -1,5 +1,5 @@
 import {explorationCamera,type CameraInsets} from './exploration-camera';
-import {TilingSprite,type Texture} from 'pixi.js';
+import {TilingSprite,Sprite,Graphics,Container as FloorContainer,Texture,Rectangle} from 'pixi.js';
 import {createForegroundReveal} from './foreground-reveal';
 import {candidateEnabled} from '../candidate/continuity';
 import {adaptContinuousSpace} from '../candidate/render-adapter';
@@ -37,6 +37,7 @@ export type SpaceOptions={
  cameraBounds?:(scene:string)=>{x:number;y:number;w:number;h:number};
  cameraWalkBounds?:(scene:string)=>{x:number;y:number;w:number;h:number};
  cameraSafeArea?:()=>CameraInsets;cameraBackdrop?:(scene:string)=>Texture;
+ floorLayers?:(scene:string)=>{texture:Texture;at:Point;clip:{x:number;y:number;w:number;h:number};crop?:{x:number;y:number;w:number;h:number};polygon?:Point[]}[];
  foregroundReveal?:Parameters<typeof createForegroundReveal>[0][];
  onReady:(space:Space)=>void;onError:(error:unknown)=>void;
 };
@@ -68,7 +69,7 @@ function createRawRpgSpace(options:SpaceOptions){
  const stand=()=>{stride=0;if(player&&player.animationName()!=='stand')player.animationName.set('stand');projectPlayer()};
  const stage=()=>(client as unknown as {canvasApp?:{stage:Container}})?.canvasApp?.stage;
  const viewport=():Viewport|undefined=>{const visit=(node:Container|undefined):Viewport|undefined=>{if(!node)return;if('toWorld' in node&&'clamp' in node)return node as Viewport;for(const child of node.children??[]){const found=visit(child);if(found)return found}};return visit(stage())};
- let cameraSignature='',backdrop:TilingSprite|undefined;
+ let cameraSignature='',backdrop:TilingSprite|undefined,floors:FloorContainer|undefined,floorScene='',floorCuts:Texture[]=[];
  const configureCamera=()=>{
   const view=viewport();if(!view)return;
   // Pausing plugins alone does not disable RPGJS character.ce's reactive
@@ -93,6 +94,11 @@ function createRawRpgSpace(options:SpaceOptions){
     backdrop.tileScale.set(160/texture.width,160/texture.height);backdrop.tilePosition.set(-b.x,-b.y);
    }
    cameraSignature=signature;
+  }
+  // Reuse cached source textures with masks, never a giant new coastal bitmap.
+  if(floorScene!==scene||!floors||floors.destroyed||floors.parent!==view){
+   floors?.destroy({children:true});floorCuts.forEach(t=>t.destroy(false));floorCuts=[];floors=new FloorContainer();floors.label='harbor-continuous-floors';floors.zIndex=-999999;floorScene=scene;view.addChild(floors);
+   for(const layer of options.floorLayers?.(scene)??[]){const texture=layer.crop?new Texture({source:layer.texture.source,frame:new Rectangle(layer.crop.x,layer.crop.y,layer.crop.w,layer.crop.h)}):layer.texture;if(layer.crop)floorCuts.push(texture);const sprite=new Sprite(texture),mask=new Graphics();if(layer.polygon)mask.poly(layer.polygon.flatMap(p=>[p.x,p.y]));else mask.rect(layer.clip.x,layer.clip.y,layer.clip.w,layer.clip.h);mask.fill(0xffffff);sprite.position.set(layer.at.x,layer.at.y);sprite.mask=mask;floors.addChild(sprite,mask);}
   }
   // One camera owner: default RPGJS follow/initial animation must not recenter
   // after our safe-area solve. Immediate following has no lag at a world edge.

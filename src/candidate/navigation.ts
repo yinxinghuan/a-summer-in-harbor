@@ -5,7 +5,8 @@ import {sameCluster,globalPoint,localPoint} from './continuity';
 export function continuousObjectiveEntrance(s:Save){
  const entrance=nextObjectiveEntrance(s);
  if(!entrance?.destination||!sameCluster(s.scene,entrance.destination))return entrance;
- const target=nextObjectiveEntrance({...s,scene:entrance.destination});
+ let destination=entrance.destination,target=nextObjectiveEntrance({...s,scene:destination});const seen=new Set([s.scene]);
+ while(target?.destination&&sameCluster(s.scene,target.destination)&&!seen.has(target.destination)){seen.add(destination);destination=target.destination;target=nextObjectiveEntrance({...s,scene:destination});}
  if(!target)return entrance;
- return {...target,id:'continuous--'+entrance.destination+'--'+target.id,at:localPoint(s.scene,globalPoint(entrance.destination,target.at)),approach:localPoint(s.scene,globalPoint(entrance.destination,target.approach))};
+ return {...target,id:'continuous--'+destination+'--'+target.id,at:localPoint(s.scene,globalPoint(destination,target.at)),approach:localPoint(s.scene,globalPoint(destination,target.approach))};
 }

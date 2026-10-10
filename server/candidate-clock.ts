@@ -47,7 +47,7 @@ export function createMovingClock({now=Date.now,boot=randomUUID(),worldForSave=(
      fail(point&&Number.isFinite(point.x)&&Number.isFinite(point.y),'INVALID_MOTION_PATH');
      const d=Math.hypot(point.x-previous.x,point.y-previous.y),n=Math.max(1,Math.ceil(d));
      fail(distance+d<=allowance+1e-7,'MOTION_TOO_FAST');
-     for(let i=1;i<=n;i++){const q={x:previous.x+(point.x-previous.x)*i/n,y:previous.y+(point.y-previous.y)*i/n};fail(isCluster(s.scene)?clusterWalkable(w,q,zone):walkable(w,s.scene,q),'INVALID_MOTION_PATH');const next=isCluster(s.scene)?pointZone(q,zone):zone;fail(next===zone||s.flags.includes('unpacked'),'SETTLE_FIRST');zone=next;if(!s.visited.includes(zone))s.visited.push(zone)}
+     let swept=previous;for(let i=1;i<=n;i++){const q={x:previous.x+(point.x-previous.x)*i/n,y:previous.y+(point.y-previous.y)*i/n};fail(isCluster(s.scene)?clusterWalkable(w,q,zone,swept):walkable(w,s.scene,q),'INVALID_MOTION_PATH');const next=isCluster(s.scene)?pointZone(q,zone,swept):zone;fail(next===zone||s.flags.includes('unpacked'),'SETTLE_FIRST');zone=next;swept=q;if(!s.visited.includes(zone))s.visited.push(zone)}
      distance+=d;previous=point;
     }
     fail(distance<=allowance+1e-7,'MOTION_TOO_FAST');

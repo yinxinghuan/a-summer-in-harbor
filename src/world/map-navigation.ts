@@ -2,7 +2,7 @@ import {rooms,type Entity,type Words} from './data';
 import type {Save} from '../story/state';
 import {findPath,type Point} from '../engine/world';
 import {worldWithFlags} from './data';
-import {globalPoint,localPoint,sameCluster} from '../candidate/continuity';
+import {globalPoint,localPoint,sameCluster,continuousPath} from '../candidate/continuity';
 export const mapAreas=['station','harbor','market','coast','hill'];
 export type RouteFailure='UNKNOWN_TARGET'|'CURRENT_LOCATION'|'KEY_NEEDED'|'SETTLE_FIRST'|'NOTES_LOCKED'|'LOCATION_UNKNOWN'|'TRAVEL_ROUTE_UNAVAILABLE'|'CHALLENGE_ACTIVE';
 export const routeMessages:Record<RouteFailure,Words>={UNKNOWN_TARGET:['这里暂未开放。','This place is not available.'],CURRENT_LOCATION:['你正在这里。','You are here.'],KEY_NEEDED:['先向玛拉取得租屋钥匙。','Get your room key from Mara first.'],SETTLE_FIRST:['先回租屋放下行李。','Put your bag down in your room first.'],NOTES_LOCKED:['先发现修理铺里的这条线索。','Discover this lead at the workshop first.'],LOCATION_UNKNOWN:['首次到访请步行，熟悉整条路线后可快捷返回。','Walk on your first visit. Quick return needs a familiar route.'],TRAVEL_ROUTE_UNAVAILABLE:['目前没有可通行的路线。','There is no open route right now.'],CHALLENGE_ACTIVE:['先结束当前活动再出发。','Finish the current activity before leaving.']};
@@ -37,11 +37,14 @@ export function walkingEntrance(s:NavigationSave,target:string):Entity|undefined
   const at=rooms[target].spawn;
   return {...first,id:'map-walk--'+target,at:localPoint(s.scene,globalPoint(target,at)),approach:localPoint(s.scene,globalPoint(target,at))};
  }
- return first;
+ let index=0;while(index<r.portals.length-1&&sameCluster(s.scene,r.places[index+1]))index++;
+ const source=r.places[index],door=r.portals[index];
+ return source===s.scene?door:{...door,id:'map-entrance--'+source+'--'+door.id,at:localPoint(s.scene,globalPoint(source,door.at)),approach:localPoint(s.scene,globalPoint(source,door.approach))};
 }
 export function entranceReachable(s:NavigationSave,target:string){
  const e=walkingEntrance(s,target);if(!e)return false;
- if(sameCluster(s.scene,target)){const w=worldWithFlags(s.flags),gates={market:{x:597,y:180},bazaar:{x:472,y:580}};return findPath(w,s.scene,s.position,gates[s.scene as keyof typeof gates]).length>0&&findPath(w,target,gates[target as keyof typeof gates],localPoint(target,globalPoint(s.scene,e.approach))).length>0;}
+ const route=mapRoute(s,target);let source=s.scene;if(!sameCluster(s.scene,target)){let i=0;while(i<route.portals.length-1&&sameCluster(s.scene,route.places[i+1]))i++;source=route.places[i]??s.scene;}else source=target;
+ if(sameCluster(s.scene,source))return continuousPath(worldWithFlags(s.flags),s.scene,globalPoint(s.scene,s.position),source,globalPoint(s.scene,e.approach)).length>0;
  return findPath(worldWithFlags(s.flags),s.scene,s.position,e.approach).length>0;
 }
 export function mapPosition(scene:string,p:Point,area:string):Point|undefined{

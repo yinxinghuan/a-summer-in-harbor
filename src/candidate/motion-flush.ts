@@ -1,6 +1,6 @@
 import type {Save} from '../story/state';
 import type {Point} from '../engine/world';
-import {globalPoint,isCluster,localPoint,pointZone} from './continuity';
+import {globalPoint,isCluster,localPoint,pointZone,traceZone} from './continuity';
 import {resolvedMotionFailure} from './motion-errors';
 import {motionPacketPoints} from './motion-outbox';
 
@@ -26,7 +26,7 @@ export async function flushMotionTrace({head,points,force=false,renew=false,limi
  let batches=0;while(remaining.length&&batches++<maxBatches){
   const chunk=prefix(globalPoint(head.scene,head.position),remaining,limit);
   const step=async()=>{
-   const zone=isCluster(head.scene)?chunk.taken.reduce((z,p)=>pointZone(p,z),head.scene):head.scene,end=chunk.taken.at(-1)!;
+   const zone=isCluster(head.scene)?traceZone(head.scene,globalPoint(head.scene,head.position),chunk.taken):head.scene,end=chunk.taken.at(-1)!;
    return (await send(head,'candidate-motion-step',isCluster(zone)?localPoint(zone,end):end,{lease:head.movingClock!.lease!.id,sequence:head.movingClock!.lease!.sequence+1,points:chunk.taken})).head;
   };
   if(opened&&chunk.distance>0)await wait(Math.ceil(chunk.distance/112*1000)+1);

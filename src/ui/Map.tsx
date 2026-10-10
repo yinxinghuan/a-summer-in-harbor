@@ -4,7 +4,7 @@ import {findPath} from '../engine/world';
 import {rooms,tx,worldWithFlags,type Locale} from '../world/data';
 import {outdoors} from '../world/outdoors';
 import {mapAreas,mapRoute,mapPosition,walkingEntrance,entranceReachable,placeTitle,visiblePlaces,routeMessages} from '../world/map-navigation';
-import {longTravelMinutes,sameCluster,globalPoint} from '../candidate/continuity';
+import {longTravelMinutes,sameCluster,globalPoint,clusterFor,zonesFor} from '../candidate/continuity';
 import {arrivalWarnings} from '../story/resident-guide';
 import type {Save} from '../story/state';
 export type BayMapState={area:string;selected:string;view:MapView};
@@ -26,13 +26,14 @@ export function BayMap({save,locale,busy,onTravel,onWalk,focus,onSelectPlace,onE
  const choose=(id:string)=>{submission.current=false;setSelected(id);if(area==='all')setArea(rooms[id].area)};
  const shared=sameCluster(save.scene,selected);
  const route=mapRoute(save,selected),quick=mapRoute(save,selected,true),entrance=walkingEntrance(save,selected),reachable=!route.failure&&entranceReachable(save,selected);
- const projected=(id:string,p:{x:number;y:number})=>{if(area==='market'){const q=globalPoint(id,p);return {x:185+q.x*.3,y:70+q.y*.3}}return xy(p)};
- const sourceZones=area==='market'?['market','bazaar']:[area];
- const current=area==='all'?overview[rooms[save.scene].area]:area==='market'&&['market','bazaar'].includes(save.scene)?projected(save.scene,save.position):mapPosition(save.scene,save.position,area);
- const nodes=area==='all'?mapAreas.map(id=>({id,at:overview[id],portal:false})):[...sourceZones.flatMap(id=>rooms[id].entities.filter(e=>e.kind==='portal'&&e.destination&&valid.includes(e.destination)&&!(area==='market'&&['market','bazaar'].includes(e.destination))).map(e=>({id:e.destination!,at:projected(id,e.at),portal:!rooms[e.destination!].outdoor}))),...(area==='market'?[{id:'bazaar',at:projected('bazaar',rooms.bazaar.spawn),portal:false}]:[])];
+ const physical=clusterFor(area),scale=area==='market'?.3:physical?.25:.45;
+ const projected=(id:string,p:{x:number;y:number})=>{if(physical){const q=globalPoint(id,p);return {x:(area==='market'?185:70)+q.x*scale,y:(area==='market'?70:80)+q.y*scale}}return xy(p)};
+ const sourceZones=zonesFor(area);
+ const current=area==='all'?overview[rooms[save.scene].area]:!!physical&&sourceZones.includes(save.scene)?projected(save.scene,save.position):mapPosition(save.scene,save.position,area);
+ const nodes=area==='all'?mapAreas.map(id=>({id,at:overview[id],portal:false})):[...sourceZones.flatMap(id=>rooms[id].entities.filter(e=>e.kind==='portal'&&e.destination&&valid.includes(e.destination)&&!sourceZones.includes(e.destination)).map(e=>({id:e.destination!,at:projected(id,e.at),portal:!rooms[e.destination!].outdoor}))),...sourceZones.filter(id=>id!==area).map(id=>({id,at:projected(id,rooms[id].spawn),portal:false}))];
  const places=area==='all'?mapAreas:[...new Set([area,...nodes.map(n=>n.id),...valid.filter(id=>rooms[id].area===area)])];
  const path=area!=='all'&&save.scene===area&&entrance?findPath(worldWithFlags(save.flags),save.scene,save.position,entrance.approach).map(p=>projected(save.scene,p)):[];
- const targetNode=nodes.find(n=>n.id===selected),currentPoint=current?(area==='all'||area==='market'&&['market','bazaar'].includes(save.scene)?current:projected(area,current)):undefined;
+ const targetNode=nodes.find(n=>n.id===selected),currentPoint=current?(area==='all'||!!physical&&sourceZones.includes(save.scene)?current:projected(area,current)):undefined;
  const locate=()=>{if(area!==rooms[save.scene].area){setArea(rooms[save.scene].area);return}if(currentPoint){const g=gesture.current;g.set({z:Math.max(g.view.z,.65),x:-(currentPoint.x-size.w/2)*Math.max(g.view.z,.65),y:-(currentPoint.y-size.h/2)*Math.max(g.view.z,.65)});draw()}};
  const point=(e:React.PointerEvent)=>{const r=box.current!.getBoundingClientRect();return {x:e.clientX-r.left-r.width/2,y:e.clientY-r.top-r.height/2}};
  return <div className="harbor-spatial-map">
@@ -40,8 +41,8 @@ export function BayMap({save,locale,busy,onTravel,onWalk,focus,onSelectPlace,onE
   <p className="harbor-spatial-current">{tx(['你在这里：','You are here: '],locale)}{tx(placeTitle(save,save.scene),locale)}{!rooms[save.scene].outdoor?' · '+tx(['建筑内','Inside'],locale):''}</p>
   <div className="harbor-map-gesture harbor-spatial-viewport" ref={box} role="group" aria-label={tx(['道路与入口地图；拖动或双指缩放','Roads and entrances; drag or pinch to zoom'],locale)} onPointerDown={e=>{if(e.button!==0)return;gesture.current.down(e.pointerId,point(e));e.currentTarget.setPointerCapture(e.pointerId)}} onPointerMove={e=>{if(gesture.current.points.has(e.pointerId)){gesture.current.move(e.pointerId,point(e));draw()}}} onPointerUp={e=>{const g=gesture.current;if(!g.points.has(e.pointerId))return;if(!g.moved){const el=document.elementFromPoint(e.clientX,e.clientY)?.closest<HTMLElement>('[data-place]');if(el&&box.current?.contains(el)&&el.dataset.place)choose(el.dataset.place)}g.up(e.pointerId)}} onPointerCancel={()=>gesture.current.cancel()} onLostPointerCapture={e=>{if(gesture.current.points.has(e.pointerId))gesture.current.cancel()}}>
    <div ref={paper} className="harbor-spatial-paper" style={{width:size.w,height:size.h}}><svg width={size.w} height={size.h} aria-hidden="true">
-    {area==='all'?mapAreas.flatMap(id=>rooms[id].entities.filter(e=>e.destination&&mapAreas.includes(e.destination)&&id<e.destination).map(e=><path key={id+e.destination} className="harbor-spatial-road" d={`M${overview[id].x},${overview[id].y} L${overview[e.destination!].x},${overview[e.destination!].y}`}/>)):sourceZones.flatMap(id=>outdoors[id]?.patches.map((p,i)=><rect key={id+i} x={projected(id,p).x} y={projected(id,p).y} width={p.w*(area==='market'?.3:.45)} height={p.h*(area==='market'?.3:.45)} fill={{grass:'#dae4cd',stone:'#c7bc99',sand:'#e9d6ab',water:'#accbc9',wood:'#b7a788'}[p.material]}/>)??[])}
-    {area!=='all'&&sourceZones.flatMap(id=>outdoors[id]?.barriers.map((p,i)=><rect key={'b'+id+i} x={projected(id,p).x} y={projected(id,p).y} width={p.w*(area==='market'?.3:.45)} height={p.h*(area==='market'?.3:.45)} fill="#798d7d" stroke="#405f58"/>)??[])}
+    {area==='all'?mapAreas.flatMap(id=>rooms[id].entities.filter(e=>e.destination&&mapAreas.includes(e.destination)&&id<e.destination).map(e=><path key={id+e.destination} className="harbor-spatial-road" d={`M${overview[id].x},${overview[id].y} L${overview[e.destination!].x},${overview[e.destination!].y}`}/>)):sourceZones.flatMap(id=>outdoors[id]?.patches.map((p,i)=><rect key={id+i} x={projected(id,p).x} y={projected(id,p).y} width={p.w*scale} height={p.h*scale} fill={{grass:'#dae4cd',stone:'#c7bc99',sand:'#e9d6ab',water:'#accbc9',wood:'#b7a788'}[p.material]}/>)??[])}
+    {area!=='all'&&sourceZones.flatMap(id=>outdoors[id]?.barriers.map((p,i)=><rect key={'b'+id+i} x={projected(id,p).x} y={projected(id,p).y} width={p.w*scale} height={p.h*scale} fill="#798d7d" stroke="#405f58"/>)??[])}
     {path.length>0&&<polyline className="harbor-spatial-route" points={path.map(p=>`${p.x},${p.y}`).join(' ')}/>}
    </svg>{nodes.map((n,i)=><button key={n.id} data-place={n.id} className={'harbor-spatial-marker '+(n.portal?'is-building ':'')+(n.id===selected?'is-selected':'')} style={{left:n.at.x,top:n.at.y}} aria-label={tx(placeTitle(save,n.id),locale)+' · '+tx(n.portal?['建筑入口','Building entrance']:['公共道路','Public route'],locale)} title={tx(placeTitle(save,n.id),locale)} onClick={e=>{if(e.detail===0)choose(n.id)}}>{n.portal?<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 21V4h16v17M10 21V10h7v11M13 15h1" fill="none" stroke="currentColor" strokeWidth="2"/></svg>:null}<span>{i+1}</span></button>)}
     {currentPoint&&<span className="harbor-spatial-marker harbor-spatial-you" style={{left:currentPoint.x,top:currentPoint.y}} title={tx(['你在这里','You are here'],locale)} aria-label={tx(['你在这里','You are here'],locale)}>●</span>}
