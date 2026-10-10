@@ -1,5 +1,7 @@
+import {waterBanks} from './strong-ground-edges';
 import {rooms,world} from './data';
 import {outdoors,passages} from './outdoors';
+import {terrainAt} from './road-boundaries';
 import dimensions from './art-dimensions.json';
 import {walkable,type Point,type Rect} from '../engine/world';
 import {globalPoint,localPoint,zonesFor,renderScene} from '../candidate/continuity';
@@ -38,6 +40,7 @@ export function boundaryPieces(scene:string):BoundaryPiece[]{
    }
   }
  }
+ for(const id of zones)for(const e of waterBanks(id)){const vertical=e.from.x===e.to.x,len=vertical?e.to.y-e.from.y:e.to.x-e.from.x;for(let t=42,i=0;t<len-20;t+=92,i++){const art=e.side==='S'||i%3===1?'coastal-rocks-low':'harbor-bollard-v1',w=boundaryArtWidths[art],d=dimensions[boundaryAsset(art)],h=w*d.height/d.width,p={x:e.from.x+(vertical?0:t),y:e.from.y+(vertical?t:0)},r={x:vertical?(e.side==='W'?p.x-w:p.x):p.x-w/2,y:vertical?p.y-h/2:(e.side==='N'?p.y-h:p.y),w,h};const rect={...globalPoint(id,r),w,h};if(!boundaryPaintClear(rect,zones))continue;let water=true;for(let y=r.y+2;y<r.y+h;y+=4)for(let x=r.x+2;x<r.x+w;x+=4)if(terrainAt(outdoors[id],{x,y})!=='water')water=false;if(water)result.push({scene:id,art,rect})}}
  cache.set(key,result);return result;
 }
 export function boundaryAudit(){return Object.values(rooms).filter(r=>r.outdoor).map(r=>({scene:r.id,logicalBounds:r.interior,physicalMap:renderScene(r.id),routeOpenings:Object.entries(passages[r.id]??{}).map(([to,p])=>({to,side:p.side,at:p.at,clearWidth:180})),pieces:boundaryPieces(r.id).filter(p=>p.scene===r.id).length,policy:'exterior only; existing water and bridge retained; no new collision'}));}

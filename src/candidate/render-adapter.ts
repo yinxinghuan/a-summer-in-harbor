@@ -1,3 +1,4 @@
+import {strongGroundEdges} from '../world/strong-ground-edges';
 import {sharedGroup} from './shared-admission';
 import {boundaryPieces,boundaryArtWidths,boundaryAsset} from '../world/outdoor-boundaries';
 import {prepareCropImage} from '../world/crop-art';
@@ -11,6 +12,16 @@ import {appendMotionTrace} from './motion-trace';
 import {predictionHorizon,maximumQueuedPoints,traceLength} from './motion-outbox';
 import {CLUSTER,COASTAL,clusters,clusterFor,clusterWorld,clusterWalkable,globalPoint,localPoint,renderScene,isCluster,pointZone,sameCluster,continuousPath,traceZone} from './continuity';
 const boundaryTextures=new Map<string,Texture>();
+const edgeTextures=new Map<string,Texture>();
+const edgeKey=(p:ReturnType<typeof strongGroundEdges>[number])=>[p.material,p.rect.w,p.rect.h,p.phase].join(':');
+/** Small native-pixel crops at the same 160-world-unit floor scale; no authored assets. */
+async function prepareEdgePixels(p:ReturnType<typeof strongGroundEdges>[number]){
+ const key=edgeKey(p);if(edgeTextures.has(key))return;const source=new Image();source.src='./art/floor-'+p.material+'.png';await source.decode();
+ const ratio=source.naturalWidth/160,canvas=document.createElement('canvas');canvas.width=p.rect.w;canvas.height=p.rect.h;
+ const context=canvas.getContext('2d')!;context.imageSmoothingEnabled=false;
+ context.drawImage(source,(p.phase*181)%(source.naturalWidth-p.rect.w*ratio),(p.phase*137)%(source.naturalHeight-p.rect.h*ratio),p.rect.w*ratio,p.rect.h*ratio,0,0,p.rect.w,p.rect.h);
+ const texture=await Assets.load<Texture>(canvas.toDataURL('image/png'));texture.source.scaleMode='nearest';edgeTextures.set(key,texture);
+}
 const boundaryWidths=boundaryArtWidths;
 const boundarySheets=Object.entries(boundaryWidths).map(([art,width])=>{const d=dimensions[boundaryAsset(art as keyof typeof boundaryWidths)];return {id:'harbor-boundary-sheet-'+art,image:'harbor-boundary-image-'+art,width:d.width,height:d.height,framesWidth:1,framesHeight:1,textures:{stand:{animations:()=>[[{frameX:0,frameY:0,time:0,anchor:[.5,1],scale:[width/d.width,width/d.width]}]]}}}});
 const boundaryEvents=(id:string)=>boundaryPieces(id).map((p,i)=>({id:'harbor-boundary-'+p.scene+'-'+i,x:p.rect.x+p.rect.w/2,y:p.rect.y+p.rect.h,event:{onInit(this:any){this.setHitbox(1,1);this.through=true;this.animationFixed=true;this.setGraphic('harbor-boundary-sheet-'+p.art);this.animationName.set('stand');this.syncChanges()}}}));
@@ -43,11 +54,11 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
  raw=create({...original,world:renderWorld,scene:renderScene(logical),position:globalPoint(logical,original.position),spritesheets:[...original.spritesheets,ground,...boundarySheets],
   mapEvents:id=>[...(!clusters[id]?original.mapEvents(id):[
    ...(id===CLUSTER?[{id:'base-'+CLUSTER,x:0,y:0,event:{onInit(this:any){this.setHitbox(1,1);this.through=true;this.animationFixed=true;this.setGraphic(ground.id);this.animationName.set('stand');this.syncChanges()}}}]:[]),
-   ...clusters[id].zones.flatMap(zone=>original.mapEvents(zone).filter(e=>!e.id.startsWith('base-')).map(e=>wrappedEvent(zone,e)))]),...boundaryEvents(id)],
+   ...clusters[id].zones.flatMap(zone=>original.mapEvents(zone).filter(e=>!e.id.startsWith('base-')).map(e=>wrappedEvent(zone,e)))]).filter(e=>!strongGroundEdges(id).length||!e.id.startsWith('base-')),...boundaryEvents(id)],
   cameraBounds:id=>clusters[id]?.canvas??original.cameraBounds?.(id)??clusters[CLUSTER].canvas,
   cameraWalkBounds:id=>clusters[id]?base.scenes[id].interior:original.cameraWalkBounds?.(id)??original.world.scenes[id].interior,
   cameraSafeArea:original.cameraSafeArea,
-  floorLayers:id=>id===COASTAL?[
+  floorLayers:id=>[...(id===COASTAL?[
    {texture:Assets.get('./map/coast-base.png'),at:{x:0,y:0},clip:{x:0,y:0,w:1280,h:805}},
    {texture:Assets.get('./map/beach-base.png'),at:globalPoint('beach',{x:0,y:0}),clip:{x:70,y:805,w:1210,h:933}},
    {texture:Assets.get('./map/path-base.png'),at:globalPoint('path',{x:0,y:0}),clip:{x:1235,y:140,w:1365,h:1088},polygon:[{x:1280,y:140},{x:2600,y:140},{x:2600,y:1228},{x:1235,y:1228},{x:1235,y:1100},{x:1244,y:1100},{x:1244,y:1052},{x:1256,y:1052},{x:1256,y:1004},{x:1268,y:1004},{x:1268,y:956},{x:1280,y:956},{x:1280,y:908},{x:1272,y:908},{x:1272,y:860},{x:1260,y:860},{x:1260,y:812},{x:1244,y:812},{x:1244,y:760},{x:1235,y:760},{x:1235,y:708},{x:1248,y:708},{x:1248,y:660},{x:1260,y:660},{x:1260,y:620},{x:1272,y:620},{x:1272,y:580},{x:1280,y:580}]},
@@ -57,10 +68,10 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
    {texture:Assets.get('./map/beach-base.png'),crop:{x:80,y:400,w:800,h:90},at:{x:150,y:805},clip:{x:150,y:805,w:800,h:90}},
    // Existing stone pixels taper 120px coast road to the 100px path road.
    {texture:Assets.get('./map/coast-base.png'),crop:{x:100,y:415,w:180,h:120},at:{x:1210,y:415},clip:{x:1210,y:415,w:180,h:120},polygon:[{x:1210,y:415},{x:1240,y:415},{x:1240,y:419},{x:1260,y:419},{x:1260,y:423},{x:1280,y:423},{x:1280,y:425},{x:1390,y:425},{x:1390,y:525},{x:1280,y:525},{x:1280,y:527},{x:1260,y:527},{x:1260,y:531},{x:1240,y:531},{x:1240,y:535},{x:1210,y:535}]}
-  ]:original.floorLayers?.(id)??[],
+  ]:strongGroundEdges(id).length?[{texture:Assets.get(id===CLUSTER?ground.image:'./map/'+id+'-base.png'),at:{x:0,y:0},clip:clusters[id]?.canvas??original.cameraBounds?.(id)??original.world.scenes[id].interior},...(original.floorLayers?.(id)??[])]:original.floorLayers?.(id)??[]),...strongGroundEdges(id).map(p=>({texture:edgeTextures.get(edgeKey(p))!,at:p.rect,clip:p.rect}))],
   cameraBackdrop:original.cameraBackdrop?(id=>original.cameraBackdrop!(clusters[id]?zone():id)):undefined,
   foregroundReveal:original.foregroundReveal?.map(reveal=>({...reveal,active:(p,id)=>reveal.active?.(clusters[id]?localPoint(zone(),p):p,clusters[id]?zone():id)??true,textureForScene:id=>reveal.textureForScene(clusters[id]?zone():id),originForScene:reveal.originForScene?(id)=>reveal.originForScene!(clusters[id]?zone():id):undefined})),
-  prepareScene:async id=>{if(clusters[id]){await Promise.all(clusters[id].zones.map(zone=>original.prepareScene?.(zone)));if(id===CLUSTER)await Assets.load(ground.image)}else await original.prepareScene?.(id);await Promise.all([...new Set(boundaryPieces(id).map(p=>p.art))].map(async art=>{if(boundaryTextures.has(art))return;const asset=boundaryAsset(art),url='./art/'+asset+'.png',source=['coastal-rocks','flower-planter'].includes(asset)?await prepareCropImage(url):url;const alias='harbor-boundary-image-'+art;Assets.add({alias,src:source});const texture=await Assets.load<Texture>(alias);texture.source.scaleMode='nearest';boundaryTextures.set(art,texture)}))},
+  prepareScene:async id=>{if(clusters[id]){await Promise.all(clusters[id].zones.map(zone=>original.prepareScene?.(zone)));if(id===CLUSTER)await Assets.load(ground.image)}else await original.prepareScene?.(id);const edges=strongGroundEdges(id);if(edges.length){for(const p of edges)await prepareEdgePixels(p)};await Promise.all([...new Set(boundaryPieces(id).map(p=>p.art))].map(async art=>{if(boundaryTextures.has(art))return;const asset=boundaryAsset(art),url='./art/'+asset+'.png',source=['coastal-rocks','flower-planter'].includes(asset)?await prepareCropImage(url):url;const alias='harbor-boundary-image-'+art;Assets.add({alias,src:source});const texture=await Assets.load<Texture>(alias);texture.source.scaleMode='nearest';boundaryTextures.set(art,texture)}))},
   walkable:(p,id)=>{if(!clusters[id])return original.walkable?.(p,id)??walkable(original.world,id,p);let z=zone();const start=raw.position(),sweptWorld=original.collisionWorld?.()??original.world;let previous=start;const steps=Math.max(1,Math.ceil(Math.hypot(p.x-start.x,p.y-start.y)));for(let i=1;i<=steps;i++){const q={x:start.x+(p.x-start.x)*i/steps,y:start.y+(p.y-start.y)*i/steps};if(!clusterWalkable(sweptWorld,q,z,previous))return false;z=pointZone(q,z,previous);if(!sharedGroup(z)&&original.walkable&&!original.walkable(localPoint(z,q),z))return false;previous=q;}return true},
   // Arrival validates the preserved logical map, whose overlap can differ from
   // the combined renderer's static obstacle union. Prediction still uses its
