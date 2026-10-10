@@ -1,3 +1,4 @@
+import {instanceClientModules} from './module-instance';
 import {explorationCamera,type CameraInsets} from './exploration-camera';
 import {TilingSprite,Sprite,Graphics,Container as FloorContainer,Texture,Rectangle} from 'pixi.js';
 import {createForegroundReveal} from './foreground-reveal';
@@ -15,6 +16,7 @@ import {createElapsedMotion} from './elapsed-motion';
 import {findPath,walkable,type Point,type World} from './world';
 
 export type Space={
+ dispose?:()=>void;
  suspendPrediction?:(blocked:boolean)=>void;
  sampleMovement?:()=>void;movementPending?:()=>boolean;
  projectEventGraphic?:(id:string,graphic:string[])=>void;
@@ -51,6 +53,7 @@ function createRawRpgSpace(options:SpaceOptions){
  const reveals=(options.foregroundReveal??[]).map(createForegroundReveal);
  const debug=new URLSearchParams(location.search).has('debug');
  let scene=options.scene,pos={...options.position},client:RpgClientEngine|undefined,player:RpgPlayer|undefined;
+ let disposed=false,frame=0;
  let loaded:string|null=null,joined:string|null=null,paused=true,changing=false,last=0,stride=0,stick={x:0,y:0},route:Point[]=[];
  let arrive:(()=>void)|undefined,engineWidth=360,engineHeight=520,scale=1,leftInset=0,predictionBlocked=false;
  const checks=new Set<()=>void>(),keys=new Set<string>();
@@ -120,9 +123,9 @@ function createRawRpgSpace(options:SpaceOptions){
  // The embedded RPGJS sync/physics tick may apply an older local ACK after
  // Harbor's rAF projection. Commit the same swept pose and camera together at
  // the public Pixi paint boundary; this performs no motion or time settlement.
- const presentation={prerender:()=>{if(candidateEnabled()){projectPlayer();configureCamera()}}};
+ const presentation={prerender:()=>{if(!disposed&&candidateEnabled()){projectPlayer();configureCamera()}}};
  const observer=new ResizeObserver(resize);observer.observe(host.parentElement!);resize();
- const runtime:Space={sampleMovement:()=>{if(candidateEnabled())advancePlayer(performance.now(),paused||changing||options.controlsBlocked()||document.hidden,0)},movementPending:()=>!!(stick.x||stick.y||keys.size||route.length),suspendPrediction:value=>{predictionBlocked=value;changedInput()},projectEventGraphic:(id,graphic)=>{const e=(client as any)?.sceneMap?.events?.()[id];if(e&&JSON.stringify(e.graphics())!==JSON.stringify(graphic))e.graphics.set([...graphic])},installSpritesheets:sheets=>{if(!client)throw Error("RENDERER_NOT_READY");for(const sheet of sheets)client.addSpriteSheet(sheet)},position:()=>({...pos}),scene:()=>scene,renderedScene:()=>loaded,
+ const runtime:Space={dispose:()=>{if(disposed)return;disposed=true;cancelAnimationFrame(frame);observer.disconnect();window.removeEventListener('keydown',down);window.removeEventListener('keyup',up);window.removeEventListener('blur',clearInput);document.removeEventListener('visibilitychange',visibility);checks.clear();client?.renderer?.runners.prerender.remove(presentation);client?.clear();client=undefined;player=undefined},sampleMovement:()=>{if(candidateEnabled())advancePlayer(performance.now(),paused||changing||options.controlsBlocked()||document.hidden,0)},movementPending:()=>!!(stick.x||stick.y||keys.size||route.length),suspendPrediction:value=>{predictionBlocked=value;changedInput()},projectEventGraphic:(id,graphic)=>{const e=(client as any)?.sceneMap?.events?.()[id];if(e&&JSON.stringify(e.graphics())!==JSON.stringify(graphic))e.graphics.set([...graphic])},installSpritesheets:sheets=>{if(!client)throw Error("RENDERER_NOT_READY");for(const sheet of sheets)client.addSpriteSheet(sheet)},position:()=>({...pos}),scene:()=>scene,renderedScene:()=>loaded,
   move:(x,y)=>{stick={x,y};if(x||y)cancel();changedInput()},
   walkTo:(target,callback)=>{if(paused||changing)return false;const next=options.findPath?.(pos,target,scene)??findPath(world,scene,pos,target);if(!next.length)return false;route=next;arrive=callback;options.onDestination(target);changedInput();return true},
   pause:value=>{paused=value;stick={x:0,y:0};keys.clear();if(value){cancel();stand()}elapsed.reset(performance.now(),input())},
@@ -133,19 +136,20 @@ function createRawRpgSpace(options:SpaceOptions){
  const down=(event:KeyboardEvent)=>{if(paused||changing||(event.target instanceof HTMLInputElement||event.target instanceof HTMLTextAreaElement))return;const key=event.key.toLowerCase();if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright'].includes(key)){if(options.controlsBlocked()&&!candidateEnabled())return;event.preventDefault();if(!keys.has(key)){keys.add(key);cancel();changedInput()}}};
  const up=(event:KeyboardEvent)=>{if(keys.delete(event.key.toLowerCase()))changedInput()};
  const clearInput=()=>{keys.clear();stick={x:0,y:0};cancel();stand();elapsed.reset(performance.now(),input())};
- window.addEventListener('keydown',down);window.addEventListener('keyup',up);window.addEventListener('blur',clearInput);document.addEventListener('visibilitychange',()=>document.hidden&&clearInput());
+ const visibility=()=>document.hidden&&clearInput();
+ window.addEventListener('keydown',down);window.addEventListener('keyup',up);window.addEventListener('blur',clearInput);document.addEventListener('visibilitychange',visibility);
  // Each authored map is a bounded cached scene. Large visual layer events have
  // an origin far from the player; point-based MMORPG chunk streaming would
  // remove their entire floor texture even while that texture fills the screen.
  const server=createServer({providers:[tiledServer({basePath:'./map',streaming:false}),provideServerModules([{player:{
-  onJoinMap(instance,map){player=instance;instance.setGraphic(options.sheet.id);instance.setHitbox(world.actor.w,world.actor.h);instance.animationFixed=true;instance.animationName.set('stand');joined=map.id.replace(/^map-/,'');checks.forEach(fn=>fn())},
-  async onConnected(instance){player=instance;try{instance.setGraphic(options.sheet.id);instance.setHitbox(world.actor.w,world.actor.h);instance.animationFixed=true;instance.animationName.set('stand');await options.prepareScene?.(scene);await instance.changeMap(scene,pos);void wait(scene).then(()=>{projectPlayer();options.onReady(runtime)}).catch(options.onError)}catch(error){options.onError(error)}}
+  onJoinMap(instance,map){if(disposed)return;player=instance;instance.setGraphic(options.sheet.id);instance.setHitbox(world.actor.w,world.actor.h);instance.animationFixed=true;instance.animationName.set('stand');joined=map.id.replace(/^map-/,'');checks.forEach(fn=>fn())},
+  async onConnected(instance){if(disposed)return;player=instance;try{instance.setGraphic(options.sheet.id);instance.setHitbox(world.actor.w,world.actor.h);instance.animationFixed=true;instance.animationName.set('stand');await options.prepareScene?.(scene);await instance.changeMap(scene,pos);void wait(scene).then(()=>{if(disposed)return;projectPlayer();options.onReady(runtime)}).catch(error=>{if(!disposed)options.onError(error)})}catch(error){if(!disposed)options.onError(error)}}
  },maps:ids.map(id=>({id,events:options.mapEvents(id)}))}]) ]});
  startGame({providers:[
   provideClientGlobalConfig({prediction:{enabled:false},bootstrapCanvasOptions:{antialias:false,backgroundAlpha:0,autoDensity:true,resolution:1}}),
-  tiledClient({basePath:'./map'}),
-  provideClientModules([{spritesheets:[options.sheet,...options.spritesheets],sceneMap:{onAfterLoading(){cameraSignature='';loaded=client?.activeRoom()?.name?.replace(/^map-/,'')??null;checks.forEach(fn=>fn())}},engine:{onStart(engine){client=engine;if(debug)(host as HTMLElement&{__rpgClient?:RpgClientEngine}).__rpgClient=engine;engine.stopProcessingInput=true;engine.renderer.background.alpha=0;engine.renderer.runners.prerender.add(presentation);resize()}}}]),provideRpg(server)
- ]});
+  instanceClientModules(tiledClient({basePath:'./map'})),
+  provideClientModules([{spritesheets:[options.sheet,...options.spritesheets],sceneMap:{onAfterLoading(){cameraSignature='';loaded=client?.activeRoom()?.name?.replace(/^map-/,'')??null;checks.forEach(fn=>fn())}},engine:{onStart(engine){if(disposed){engine.clear();return}client=engine;if(debug)(host as HTMLElement&{__rpgClient?:RpgClientEngine}).__rpgClient=engine;engine.stopProcessingInput=true;engine.renderer.background.alpha=0;engine.renderer.runners.prerender.add(presentation);resize()}}}]),provideRpg(server)
+ ]}).catch(error=>{if(!disposed)options.onError(error)});
  const advancePlayer=(time:number,blocked:boolean,dt:number)=>{
   if(player&&!blocked){
    const slices=candidateEnabled()?elapsed.consume(time):[{ms:dt*1000,input:input()}];
@@ -162,14 +166,15 @@ function createRawRpgSpace(options:SpaceOptions){
   }else elapsed.reset(time,input());
  };
  const tick=(time:number)=>{
+  if(disposed)return;
   const dt=last?Math.min(Math.max(0,(time-last)/1000),.04):0;last=time;
   const worldPaused=paused||changing||(options.worldPaused?.()??options.controlsBlocked())||document.hidden;
   const blocked=worldPaused||options.controlsBlocked();
   advancePlayer(time,blocked,dt);
   configureCamera();for(const reveal of reveals)reveal(stage(),scene,pos);
-  options.onFrame?.(dt,{...pos},scene,worldPaused);projectPlayer();requestAnimationFrame(tick);
+  options.onFrame?.(dt,{...pos},scene,worldPaused);projectPlayer();frame=requestAnimationFrame(tick);
   if(debug){host.dataset.projectedX=String(pos.x);host.dataset.projectedY=String(pos.y);host.dataset.predictionBlocked=String(blocked);host.dataset.worldPaused=String(worldPaused);const sprite=client?.getCurrentPlayer();host.dataset.playerGraphics=String(sprite?.graphics().length??-1);host.dataset.playerSheets=String(sprite?.graphicsSignals().length??-1);host.dataset.roomEvents=String(Object.keys((client?.activeRoom() as unknown as {events?:()=>Record<string,unknown>})?.events?.()??{}).length)}
  };
- requestAnimationFrame(tick);
+ frame=requestAnimationFrame(tick);
  return runtime;
 }

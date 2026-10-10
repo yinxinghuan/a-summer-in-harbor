@@ -13,6 +13,7 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
  const projected=(p:Point)=>raw&&clusters[raw.scene()]?localPoint(zone(),p):p;
  const reset=(id:string,p:Point)=>{logical=predictedZone=id;previousGlobal=globalPoint(id,p);motionProjection.scene=id;motionProjection.position={...p};motionProjection.points=[];motionProjection.traceStart=globalPoint(id,p);motionProjection.lastSample=0};reset(logical,original.position);
  const facade:Space={
+  dispose:()=>{if(motionProjection.sample===raw.sampleMovement){motionProjection.sample=undefined;motionProjection.moving=undefined;motionProjection.block=undefined;motionProjection.restore=undefined;motionProjection.points=[];motionProjection.networkBlocked=true}raw.dispose?.()},
   installSpritesheets:s=>raw.installSpritesheets(s),position:()=>projected(raw.position()),scene:zone,renderedScene:()=>raw.renderedScene()&&clusters[raw.renderedScene()!]?zone():raw.renderedScene(),move:(x,y)=>raw.move(x,y),
   walkTo:(p,arrive)=>raw.walkTo(globalPoint(logical,p),arrive),pause:p=>raw.pause(p),
   restore:async(id,p)=>{const dest=globalPoint(id,p),crossing=id!==logical&&zone()===id,same=sameCluster(id,logical)&&raw.scene()===renderScene(id);logical=id;
