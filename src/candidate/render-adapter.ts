@@ -1,3 +1,7 @@
+import {boundaryPieces} from '../world/outdoor-boundaries';
+import {prepareCropImage} from '../world/crop-art';
+import type {Texture} from 'pixi.js';
+import dimensions from '../world/art-dimensions.json';
 import {Assets} from 'pixi.js';
 import type {Space,SpaceOptions} from '../engine/rpg-space';
 import type {Point} from '../engine/world';
@@ -5,6 +9,10 @@ import {walkable,findPath} from '../engine/world';
 import {appendMotionTrace} from './motion-trace';
 import {predictionHorizon,maximumQueuedPoints,traceLength} from './motion-outbox';
 import {CLUSTER,COASTAL,clusters,clusterFor,clusterWorld,clusterWalkable,globalPoint,localPoint,renderScene,isCluster,pointZone,sameCluster,continuousPath,traceZone} from './continuity';
+const boundaryTextures=new Map<string,Texture>();
+const boundaryWidths={'nature-juniper-v1':96,'coastal-rocks':86,'harbor-bollard-v1':38} as const;
+const boundarySheets=Object.entries(boundaryWidths).map(([art,width])=>{const d=dimensions[art as keyof typeof boundaryWidths];return {id:'harbor-boundary-sheet-'+art,image:'harbor-boundary-image-'+art,width:d.width,height:d.height,framesWidth:1,framesHeight:1,textures:{stand:{animations:()=>[[{frameX:0,frameY:0,time:0,anchor:[.5,1],scale:[width/d.width,width/d.width]}]]}}}});
+const boundaryEvents=(id:string)=>boundaryPieces(id).map((p,i)=>({id:'harbor-boundary-'+p.scene+'-'+i,x:p.rect.x+p.rect.w/2,y:p.rect.y+p.rect.h,event:{onInit(this:any){this.setHitbox(1,1);this.through=true;this.animationFixed=true;this.setGraphic('harbor-boundary-sheet-'+p.art);this.animationName.set('stand');this.syncChanges()}}}));
 export const motionProjection:{scene:string;position:Point;points:Point[];lastSample:number;traceStart:Point;networkBlocked:boolean;block?:(value:boolean)=>void;sample?:()=>void;moving?:()=>boolean;restore?:(scene:string,p:Point)=>Promise<void>}={scene:'station',position:{x:0,y:0},points:[],lastSample:0,traceStart:{x:0,y:0},networkBlocked:true};
 export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOptions)=>Space):Space{
  let raw:Space,logical=original.scene,predictedZone=logical,previousGlobal=globalPoint(logical,original.position);
@@ -31,10 +39,10 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
  // Register only the combined renderer map. Registering the two source maps as
  // well lets their onInit closures overwrite the actor handles for this map.
  const renderWorld={...base,scenes:Object.fromEntries(Object.entries(base.scenes).filter(([id])=>!isCluster(id)))};
- raw=create({...original,world:renderWorld,scene:renderScene(logical),position:globalPoint(logical,original.position),spritesheets:[...original.spritesheets,ground],
-  mapEvents:id=>!clusters[id]?original.mapEvents(id):[
+ raw=create({...original,world:renderWorld,scene:renderScene(logical),position:globalPoint(logical,original.position),spritesheets:[...original.spritesheets,ground,...boundarySheets],
+  mapEvents:id=>[...(!clusters[id]?original.mapEvents(id):[
    ...(id===CLUSTER?[{id:'base-'+CLUSTER,x:0,y:0,event:{onInit(this:any){this.setHitbox(1,1);this.through=true;this.animationFixed=true;this.setGraphic(ground.id);this.animationName.set('stand');this.syncChanges()}}}]:[]),
-   ...clusters[id].zones.flatMap(zone=>original.mapEvents(zone).filter(e=>!e.id.startsWith('base-')).map(e=>wrappedEvent(zone,e)))],
+   ...clusters[id].zones.flatMap(zone=>original.mapEvents(zone).filter(e=>!e.id.startsWith('base-')).map(e=>wrappedEvent(zone,e)))]),...boundaryEvents(id)],
   cameraBounds:id=>clusters[id]?.canvas??original.cameraBounds?.(id)??clusters[CLUSTER].canvas,
   cameraWalkBounds:id=>clusters[id]?base.scenes[id].interior:original.cameraWalkBounds?.(id)??original.world.scenes[id].interior,
   cameraSafeArea:original.cameraSafeArea,
@@ -49,7 +57,7 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
   ]:original.floorLayers?.(id)??[],
   cameraBackdrop:original.cameraBackdrop?(id=>original.cameraBackdrop!(clusters[id]?zone():id)):undefined,
   foregroundReveal:original.foregroundReveal?.map(reveal=>({...reveal,active:(p,id)=>reveal.active?.(clusters[id]?localPoint(zone(),p):p,clusters[id]?zone():id)??true,textureForScene:id=>reveal.textureForScene(clusters[id]?zone():id),originForScene:reveal.originForScene?(id)=>reveal.originForScene!(clusters[id]?zone():id):undefined})),
-  prepareScene:async id=>{if(clusters[id]){await Promise.all(clusters[id].zones.map(zone=>original.prepareScene?.(zone)));if(id===CLUSTER)await Assets.load(ground.image)}else await original.prepareScene?.(id)},
+  prepareScene:async id=>{if(clusters[id]){await Promise.all(clusters[id].zones.map(zone=>original.prepareScene?.(zone)));if(id===CLUSTER)await Assets.load(ground.image)}else await original.prepareScene?.(id);await Promise.all([...new Set(boundaryPieces(id).map(p=>p.art))].map(async art=>{if(boundaryTextures.has(art))return;const url='./art/'+art+'.png',source=art==='coastal-rocks'?await prepareCropImage(url):url;const alias='harbor-boundary-image-'+art;Assets.add({alias,src:source});const texture=await Assets.load<Texture>(alias);texture.source.scaleMode='nearest';boundaryTextures.set(art,texture)}))},
   walkable:(p,id)=>{if(!clusters[id])return original.walkable?.(p,id)??walkable(original.world,id,p);let z=zone();const start=raw.position();let previous=start;const steps=Math.max(1,Math.ceil(Math.hypot(p.x-start.x,p.y-start.y)));for(let i=1;i<=steps;i++){const q={x:start.x+(p.x-start.x)*i/steps,y:start.y+(p.y-start.y)*i/steps};if(!clusterWalkable(original.world,q,z,previous))return false;z=pointZone(q,z,previous);if(original.walkable&&!original.walkable(localPoint(z,q),z))return false;previous=q;}return true},
   // Arrival validates the preserved logical map, whose overlap can differ from
   // the combined renderer's static obstacle union. Prediction still uses its

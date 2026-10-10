@@ -1,7 +1,7 @@
 import {chromium} from 'playwright';import assert from 'node:assert/strict';import {mkdir,writeFile} from 'node:fs/promises';
 const stage=process.env.CHAPEL_QA_STAGE??'first',out='../evidence/ui-'+stage;await mkdir(out,{recursive:true});
 const b=await chromium.launch({headless:true,executablePath:'/Users/yin/Library/Caches/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-mac-arm64/chrome-headless-shell',args:['--use-angle=swiftshader']}),report=[];let active;
-try{for(const f of [{w:320,h:568,locale:'zh',branch:'reading',owner:'990111'},{w:390,h:844,locale:'en',branch:'listening',owner:'990112'},{w:1280,h:800,locale:'en',branch:'reading',owner:'990113'}]){
+try{for(const f of [{w:320,h:568,locale:'zh',branch:'reading',owner:'990111'},{w:390,h:844,locale:'en',branch:'listening',owner:'990112'},{w:1280,h:800,locale:'en',branch:'reading',owner:'990113'}].filter(f=>!process.env.CHAPEL_QA_WIDTH||f.w===Number(process.env.CHAPEL_QA_WIDTH))){
  const c=await b.newContext({viewport:{width:f.w,height:f.h},hasTouch:f.w<600});await c.route('**/*',r=>new URL(r.request().url()).hostname==='127.0.0.1'?r.continue():r.fulfill({status:200,body:''}));
  const seed=await(await c.request.get(`http://127.0.0.1:5591/qa/prepare?owner=${f.owner}&scene=hill&x=502&y=397&minute=780`)).json();assert.ok(seed.id,JSON.stringify(seed));
  await c.addInitScript(({id,owner,locale})=>{window.Aigram={isInAigram:true,telegramId:owner,callAigramAPI:async()=>({})};addEventListener('DOMContentLoaded',()=>{window.alteruLocalStorage.setItem('harbor-opening:'+id,'3');window.alteruLocalStorage.setItem('harbor-locale',locale);window.alteruLocalStorage.setItem('harbor-muted','1')})},{id:seed.id,owner:f.owner,locale:f.locale});
