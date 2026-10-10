@@ -1,3 +1,4 @@
+import {mapRoute,entranceFailure} from '../world/map-navigation';
 import {growthTopics,applyGrowthTopic,applyGrowthObservation,recordRelationshipMeeting,recordRelationshipStory,growthTopicIds,type RelationshipGrowth} from './relationship-growth';
 import {nomadTopics,applyNomadTopic,type NomadMemory} from './tech-nomads';
 import type {AnimalSave} from '../animals/types';
@@ -84,7 +85,7 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution,
  if(a.action==='ask'){const {person,question}=validateQuestion(before,a);requireState(resolution,'DIALOGUE_RESOLUTION_REQUIRED');if(resolution!.topic){requireState(!growthTopicIds.includes(resolution!.topic),'RELATIONSHIP_EXPLICIT_ACTION_REQUIRED');const result=applyAction(before,{...a,action:'talk:'+resolution!.topic},undefined,spatialWorld,relationshipClock);result.head.history.at(-1)!.question=question;flag(result.head,'free-dialogue-experienced');return result}const next=structuredClone(before);flag(next,'free-dialogue-experienced');next.position={...a.position};next.version++;next.cursor++;next.history.push({id:a.action_id,kind:'talk',person,question,text:resolution!.reply});next.history=next.history.slice(-500);return {head:next,text:resolution!.reply};}
  const s=structuredClone(before);const relationshipMinute=relationshipClock(s);requireState(relationshipMinute===townMinutes(s),'RELATIONSHIP_CLOCK_NOT_COMMITTED');s.position={...a.position};let text:Words=['完成了。','Done.'];const e=entityAt(s.scene,a.target);
  if(a.action.startsWith('battle-')||a.action==='snack-eat'){text=applyBattle(s,a)}
- else if(a.action==='travel-map'){requireState(!s.activeChallenge,'CHALLENGE_ACTIVE');requireState(s.visited.includes(a.target)&&rooms[a.target],'LOCATION_UNKNOWN');s.scene=a.target;s.position={...rooms[a.target].spawn};text=['你沿熟悉的路抵达目的地。','You follow the familiar route back.'];}
+ else if(a.action==='travel-map'){requireState(!s.activeChallenge,'CHALLENGE_ACTIVE');const route=mapRoute(s,a.target,true);requireState(!route.failure,route.failure??'TRAVEL_ROUTE_UNAVAILABLE');s.scene=a.target;s.position={...rooms[a.target].spawn};text=['你沿熟悉的路抵达目的地。','You follow the familiar route back.'];}
  else if(a.action==='challenge-finish'){
   requireState(s.activeChallenge?.id===a.target,'CHALLENGE_MISMATCH');const active=s.activeChallenge!;const p=a.payload as {runs?:InputRun[];solution?:number[];fishing?:FishingRun[];withdraw?:boolean};requireState(p&&typeof p==='object','INVALID_RESULT');
   if(p.withdraw){text=['你停了下来，可以准备好后再试。','You stop for now. You can try again whenever you like.'];}
@@ -103,9 +104,7 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution,
   requireState(!s.activeChallenge,'CHALLENGE_ACTIVE');requireState(e,'UNKNOWN_TARGET');requireState(presentEntity(s,e!),'PERSON_AWAY');requireState(Math.hypot(s.position.x+8-observedActor(e!,a.actorPosition).x,s.position.y+6-observedActor(e!,a.actorPosition).y)<=75,'TOO_FAR');
   if(a.action==='travel'){
    requireState(e!.kind==='portal','NOT_A_DOOR');const dest=e!.destination!;
-   if(dest.startsWith('workshop-annex-'))requireState(s.fieldNotes?.rooms.some(r=>r.id===dest),'NOTES_LOCKED');
-   if(dest==='home')requireState(has(s,'key'),'KEY_NEEDED');
-   if(!has(s,'unpacked'))requireState(['station','home','cafe','grocery'].includes(dest),'SETTLE_FIRST');
+   const denied=entranceFailure(s,dest);requireState(!denied,denied??'TRAVEL_ROUTE_UNAVAILABLE');
    s.scene=dest;const returnEntrance=rooms[dest].entities.find(portal=>portal.kind==='portal'&&portal.destination===before.scene);s.position={...(returnEntrance?.approach??rooms[dest].spawn)};if(!s.visited.includes(dest))s.visited.push(dest);text=[`你来到${s.fieldNotes?.rooms.find(r=>r.id===dest)?.title[0]??rooms[dest].title[0]}。`,`You arrive at ${s.fieldNotes?.rooms.find(r=>r.id===dest)?.title[1]??rooms[dest].title[1]}.`];
   }else if(a.action==='introduce'){
    requireState(e!.person,'NOT_A_PERSON');requireState(!s.known.includes(e!.person!),'ALREADY_INTRODUCED');s.known.push(e!.person!);recordRelationshipMeeting(s,e!.person!,relationshipMinute);text=people[e!.person!].intro;

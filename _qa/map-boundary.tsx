@@ -1,0 +1,3 @@
+import React from 'react';import {createRoot} from 'react-dom/client';import {BayMap} from '../src/ui/Map';import {initial} from '../src/story/state';import '../src/style.css';
+const s={...initial('en','synthetic-boundary'),flags:['key','unpacked'],position:{x:-100,y:-100}};
+createRoot(document.getElementById('root')!).render(<main className="harbor-app"><div className="harbor-backdrop"><section className="harbor-panel harbor-panel--map"><div className="harbor-panel__body"><BayMap save={s} locale="en" busy={false} focus="cafe" onWalk={()=>{throw Error('UNREACHABLE_WALK_SUBMITTED')}} onTravel={()=>{throw Error('UNKNOWN_QUICK_SUBMITTED')}}/></div></section></div></main>);
