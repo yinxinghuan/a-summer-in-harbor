@@ -1,5 +1,4 @@
 import {acceptedAnimals} from '../src/animals/art';
-import {rooms} from '../src/world/data';
 
 /** Executable contract descriptor, not a claim of provider JSON Schema support.
  * Every string bound uses UTF-16 code units (String.length); never truncate. */
@@ -20,8 +19,13 @@ export const animalThemes=freeze(['compare-routines','leave-space'] as const);
 export const animalBehaviors=freeze(['sun-rest','sleep','shore-space'] as const);
 export const animalPeriods=freeze(['morning','afternoon','evening','night'] as const);
 export const animalIdSchema=text(11,49,{pattern:'^animals:[a-z][a-z0-9-]{2,40}$'});
+// The v5 review contract is fixed independently of later map additions. A new
+// room does not expand animal observations or invalidate an existing story pin.
+export const animalObservationSceneIds=freeze([
+ 'station','home','cafe','grocery','harbor','dock','workshop','gym','market','bazaar','secondhand','courtyard','coast','beach','path','lighthouse','hill','garden','camp','weather','workshop-annex-1','workshop-annex-2',
+] as const);
 export const animalObservationSchema=freeze<ContractSchema>({type:'object',properties:{
- animal:enumeration(acceptedAnimals.map(a=>a.id)),behavior:enumeration(animalBehaviors),period:enumeration(animalPeriods),scene:enumeration(Object.keys(rooms)),
+ animal:enumeration(acceptedAnimals.map(a=>a.id)),behavior:enumeration(animalBehaviors),period:enumeration(animalPeriods),scene:enumeration(animalObservationSceneIds),
 }});
 export const animalChoiceSchema=freeze<ContractSchema>({type:'object',properties:{
  schema:{type:'literal',value:1},id:animalIdSchema,revision:{type:'literal',value:1},resident:enumeration(animalResidents),theme:enumeration(animalThemes),
