@@ -31,6 +31,7 @@ export type SpaceOptions={
  sheet:any;spritesheets:any[];mapEvents:(scene:string)=>any[];
  eventGraphics?:(scene:string,eventId:string)=>string[]|undefined;
  arrivalWalkable?:(point:Point,scene:string)=>boolean;
+ collisionWorld?:()=>World;
  walkable?:(point:Point,scene:string)=>boolean;findPath?:(from:Point,to:Point,scene:string)=>Point[];
  prepareScene?:(scene:string)=>Promise<void>;
  controlsBlocked:()=>boolean;worldPaused?:()=>boolean;onPosition:(point:Point)=>void;onDestination:(point:Point|null)=>void;

@@ -1,3 +1,4 @@
+import {coastBeachPair} from './coast-beach';
 import {boundaryPieces} from '../world/outdoor-boundaries';
 import {prepareCropImage} from '../world/crop-art';
 import type {Texture} from 'pixi.js';
@@ -58,7 +59,7 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
   cameraBackdrop:original.cameraBackdrop?(id=>original.cameraBackdrop!(clusters[id]?zone():id)):undefined,
   foregroundReveal:original.foregroundReveal?.map(reveal=>({...reveal,active:(p,id)=>reveal.active?.(clusters[id]?localPoint(zone(),p):p,clusters[id]?zone():id)??true,textureForScene:id=>reveal.textureForScene(clusters[id]?zone():id),originForScene:reveal.originForScene?(id)=>reveal.originForScene!(clusters[id]?zone():id):undefined})),
   prepareScene:async id=>{if(clusters[id]){await Promise.all(clusters[id].zones.map(zone=>original.prepareScene?.(zone)));if(id===CLUSTER)await Assets.load(ground.image)}else await original.prepareScene?.(id);await Promise.all([...new Set(boundaryPieces(id).map(p=>p.art))].map(async art=>{if(boundaryTextures.has(art))return;const url='./art/'+art+'.png',source=art==='coastal-rocks'?await prepareCropImage(url):url;const alias='harbor-boundary-image-'+art;Assets.add({alias,src:source});const texture=await Assets.load<Texture>(alias);texture.source.scaleMode='nearest';boundaryTextures.set(art,texture)}))},
-  walkable:(p,id)=>{if(!clusters[id])return original.walkable?.(p,id)??walkable(original.world,id,p);let z=zone();const start=raw.position();let previous=start;const steps=Math.max(1,Math.ceil(Math.hypot(p.x-start.x,p.y-start.y)));for(let i=1;i<=steps;i++){const q={x:start.x+(p.x-start.x)*i/steps,y:start.y+(p.y-start.y)*i/steps};if(!clusterWalkable(original.world,q,z,previous))return false;z=pointZone(q,z,previous);if(original.walkable&&!original.walkable(localPoint(z,q),z))return false;previous=q;}return true},
+  walkable:(p,id)=>{if(!clusters[id])return original.walkable?.(p,id)??walkable(original.world,id,p);let z=zone();const start=raw.position(),sweptWorld=original.collisionWorld?.()??original.world;let previous=start;const steps=Math.max(1,Math.ceil(Math.hypot(p.x-start.x,p.y-start.y)));for(let i=1;i<=steps;i++){const q={x:start.x+(p.x-start.x)*i/steps,y:start.y+(p.y-start.y)*i/steps};if(!clusterWalkable(sweptWorld,q,z,previous))return false;z=pointZone(q,z,previous);if(!coastBeachPair(z)&&original.walkable&&!original.walkable(localPoint(z,q),z))return false;previous=q;}return true},
   // Arrival validates the preserved logical map, whose overlap can differ from
   // the combined renderer's static obstacle union. Prediction still uses its
   // swept dynamic collision checks and the authored narrow seam.
@@ -66,7 +67,7 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
   findPath:(a,b,id)=>{
    if(!clusters[id])return original.findPath?.(a,b,id)??findPath(original.world,id,a,b);
    const from=pointZone(a,predictedZone),to=pointZone(b,from);
-   return continuousPath(original.world,from,a,to,b,(zone,x,y)=>original.findPath?.(x,y,zone)??findPath(original.world,zone,x,y));
+   return continuousPath(original.collisionWorld?.()??original.world,from,a,to,b,(zone,x,y)=>original.findPath?.(x,y,zone)??findPath(original.world,zone,x,y));
   },
   worldPaused:original.worldPaused??original.controlsBlocked,
   controlsBlocked:()=>original.controlsBlocked()||motionProjection.networkBlocked||motionProjection.points.length>=maximumQueuedPoints||traceLength(motionProjection.traceStart,motionProjection.points)>=predictionHorizon,

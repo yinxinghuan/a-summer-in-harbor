@@ -29,7 +29,7 @@ async function fixture(run:(f:any)=>Promise<void>,extra:Partial<Save>={}){
 }
 test('cluster uses a narrow real dry path, local identity roundtrips and old world stays intact',()=>{
  const before=JSON.stringify(world),c=clusterWorld(world),a=globalPoint('market',{x:597,y:180}),b=globalPoint('bazaar',{x:472,y:580});
- assert.ok(findPath(c,CLUSTER,a,b).length);assert.ok(clusterWalkable(world,{x:597,y:645}));assert.equal(clusterWalkable(world,{x:800,y:645}),false);assert.deepEqual(localPoint('market',a),{x:597,y:180});assert.equal(JSON.stringify(world),before);assert.equal(Object.keys(rooms).length,22);
+ assert.ok(findPath(c,CLUSTER,a,b).length);assert.ok(clusterWalkable(world,{x:597,y:645}));assert.equal(clusterWalkable(world,{x:800,y:645}),false);assert.deepEqual(localPoint('market',a),{x:597,y:180});assert.equal(JSON.stringify(world),before);assert.equal(Object.keys(rooms).length,23,'the approved chapel is the sole room added to the former22-room baseline');assert.ok(rooms.chapel);
 });
 test('objective arrow walks across the removed portal to the real notice without changing story IDs',()=>{
  const s={...initial('en',randomUUID()),scene:'market',position:{x:597,y:180},flags:['key','unpacked','bag-returned']};const target=continuousObjectiveEntrance(s)!;assert.equal(target.id,'continuous--bazaar--notice');const destination=globalPoint(s.scene,target.approach);assert.deepEqual(destination,globalPoint('bazaar',entityAt('bazaar','notice')!.approach));assert.ok(findPath(clusterWorld(world),CLUSTER,globalPoint(s.scene,s.position),destination).length);assert.equal(s.scene,'market');

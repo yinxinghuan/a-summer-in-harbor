@@ -1,3 +1,4 @@
+import {coastBeachPair,coastBeachZone,coastBeachWalkable,coastBeachPath} from './coast-beach';
 import {rooms,world} from '../world/data';
 import {walkable,findPath,type Point,type World,type Rect} from '../engine/world';
 export const CLUSTER='market-bazaar';
@@ -26,6 +27,7 @@ const roomContains=(id:string,p:Point)=>inside({...globalPoint(id,world.scenes[i
 /** Previous point is needed only for coastal crossings; an idle old overlap position never changes identity. */
 export function pointZone(p:Point,preferred?:string,previous?:Point){
  const c=clusterFor(preferred??CLUSTER)??clusters[CLUSTER];
+ if(coastBeachPair(preferred)&&previous){const paired=coastBeachZone(p,preferred!,previous);if(paired!==preferred)return paired;}
  if(c.id===COASTAL&&preferred&&previous){for(const s of c.seams){if(!s.zones.includes(preferred)||!inside(s.corridor,p)||!inside(s.corridor,previous))continue;
   const shift=s.axis==='x'?world.actor.w/2:world.actor.h/2,a=previous[s.axis]+shift,b=p[s.axis]+shift;
   const outgoing=s.zones[0]===preferred;if(outgoing?a<s.boundary&&b>=s.boundary:a>=s.boundary&&b<s.boundary)return s.zones[outgoing?1:0];
@@ -36,7 +38,7 @@ export function pointZone(p:Point,preferred?:string,previous?:Point){
 }
 export function clusterWalkable(base:World,p:Point,preferred?:string,previous?:Point){
  const c=clusterFor(preferred??CLUSTER)??clusters[CLUSTER];
- if(c.id===COASTAL){const zone=pointZone(p,preferred,previous);if(preferred&&zone!==preferred){if(!previous||!c.seams.some(s=>s.zones.includes(preferred)&&s.zones.includes(zone)&&inside(s.corridor,p)&&inside(s.corridor,previous)))return false;}return walkable(base,zone,localPoint(zone,p));}
+ if(c.id===COASTAL){const zone=pointZone(p,preferred,previous);if(coastBeachPair(preferred)&&coastBeachPair(zone))return coastBeachWalkable(base,p,previous);if(preferred&&zone!==preferred){if(!previous||!c.seams.some(s=>s.zones.includes(preferred)&&s.zones.includes(zone)&&inside(s.corridor,p)&&inside(s.corridor,previous)))return false;}return walkable(base,zone,localPoint(zone,p));}
  // Preserve the proven marketplace admission, including old overlap positions.
  if(preferred&&isCluster(preferred)&&walkable(base,preferred,localPoint(preferred,p)))return true;
  const zone=pointZone(p,preferred),q=localPoint(zone,p);
@@ -47,7 +49,8 @@ export function clusterWalkable(base:World,p:Point,preferred?:string,previous?:P
 /** Same sampled classification on client and server; no endpoint-only zone jump. */
 export function traceZone(scene:string,start:Point,points:Point[]){let zone=scene,previous=start;for(const p of points){const n=Math.max(1,Math.ceil(Math.hypot(p.x-previous.x,p.y-previous.y)));let before=previous;for(let i=1;i<=n;i++){const q={x:previous.x+(p.x-previous.x)*i/n,y:previous.y+(p.y-previous.y)*i/n};zone=pointZone(q,zone,before);before=q;}previous=p;}return zone;}
 export function continuousPath(base:World,from:string,a:Point,to:string,b:Point,localFind=(id:string,x:Point,y:Point)=>findPath(base,id,x,y)):Point[]{
- const part=(id:string,x:Point,y:Point)=>localFind(id,localPoint(id,x),localPoint(id,y)).map(p=>globalPoint(id,p));
+ const part=(id:string,x:Point,y:Point)=>coastBeachPair(id)?coastBeachPath(base,x,y):localFind(id,localPoint(id,x),localPoint(id,y)).map(p=>globalPoint(id,p));
+ if(coastBeachPair(from)&&coastBeachPair(to))return coastBeachPath(base,a,b);
  if(from===to)return part(from,a,b);if(!sameCluster(from,to))return [];
  const c=clusterFor(from)!,queue=[from],came=new Map<string,{from:string;seam:Seam}>();
  for(const id of queue)for(const s of c.seams){if(!s.zones.includes(id))continue;const next=s.zones.find(z=>z!==id)!;if(next!==from&&!came.has(next)){came.set(next,{from:id,seam:s});queue.push(next)}}
