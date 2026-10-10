@@ -3,7 +3,7 @@ import type {WeatherState} from '../weather/state';
 import type {WeatherEcologyState} from '../weather/ecology';
 import {WeatherLayer,type WeatherQuality} from '../weather/WeatherLayer';
 import type {WeatherKind} from '../weather/state';
-import {createNativeDogRuntime,nativeDogSheet,nativeDogEntities,nativeDogId,nativeDogBody} from '../animals/native-dog';
+import {createNativeDogRuntime,nativeDogSheet,nativeDogEntities,nativeDogId,nativeDogBody,nativeDogTargets} from '../animals/native-dog';
 import {mintEntities,mintSheets,wildMintAssets,mintArtAccepted} from './wild-mint-art';
 import {nativeCrabFrame,nativeCrabTargets,type NativeCrabSave} from '../animals/native-crab-game';
 import {nativeCrabId} from '../animals/native-crab-config';
@@ -132,7 +132,7 @@ export function View({weatherV1,weatherEcologyV1,weather='clear',weatherQuality=
     dogStates=dogRuntime.current.tick(blocked?0:dt,animalCtx(p),animalStates,latest.current.flags.includes('bag-returned'));
     for(const state of dogStates){const actor=animalActors.get(id+'/'+nativeDogId);if(!actor)continue;if(!state.visible){if(actor.graphics().length){actor.setGraphic([]);actor.syncChanges()}continue}if(actor.graphics()[0]!==nativeDogSheet.id)actor.setGraphic(nativeDogSheet.id);void actor.teleport({x:Math.round(state.foot.x),y:Math.round(state.foot.y)});const animation=animalAnimation(state);if(actor.animationName()!==animation)actor.animationName.set(animation);actor.syncChanges()}
     animalScene=id;animalProjection=animalPresentation(animalStates,animalArts,id);
-    const memoryTargets:Entity[]=[...animalProjection.targets,...nativeTargets].map(target=>({...target,label:target.id.startsWith('harbor-cat-')&&(latest.current.animalsV1?.individuals[target.id]?.familiarity??0)>0?['熟悉的猫','Familiar cat']:target.label}));
+    const memoryTargets:Entity[]=[...animalProjection.targets,...nativeTargets,...nativeDogTargets(dogStates,id)].map(target=>({...target,label:target.id.startsWith('harbor-cat-')&&(latest.current.animalsV1?.individuals[target.id]?.familiarity??0)>0?['熟悉的猫','Familiar cat']:target.label}));
     for(const e of rooms[id].entities.filter(e=>e.animalId)){
      const actor=animalActors.get(id+'/'+e.id);if(!actor)continue;
      if(e.id===nativeCrabId){if(!nativeFrame?.visible){if(actor.graphics().length){actor.setGraphic([]);actor.syncChanges()}continue}if(actor.graphics()[0]!==nativeSheet.id)actor.setGraphic(nativeSheet.id);void actor.teleport({x:Math.round(nativeFrame.foot.x),y:Math.round(nativeFrame.foot.y)});const animation=nativeCrabAnimation(nativeFrame);if(actor.animationName()!==animation)actor.animationName.set(animation);actor.syncChanges();continue}

@@ -24,6 +24,12 @@ if(!prepared)throw Error('NATIVE_DOG_NOT_ADMITTED');
 export const nativeDogSheet=prepared.sheet;
 export const nativeDogBody=(p:Point)=>bodyAt(p,nativeDogProfile);
 export const nativeDogEntities=(scene:string)=>Object.values(nativeDogDef.schedule).filter(s=>s.scene===scene).map(s=>({id:nativeDogId,animalId:nativeDogId,kind:'object' as const,label:['狗','Dog'] as [string,string],at:{...s.points[0]},approach:{x:s.points[0].x-8,y:s.points[0].y+50},actions:[]}));
+/** Live visual and interaction coordinates share one admitted foot. Read-only:
+ * no dog relationship/feeding/commission command is introduced by this target. */
+export function nativeDogTargets(states:readonly AnimalState[],scene:string){
+ return states.filter(s=>s.id===nativeDogId&&s.visible&&s.scene===scene).map(s=>({id:nativeDogId,animalId:nativeDogId,kind:'object' as const,label:['狗','Dog'] as [string,string],at:{...s.foot},approach:{x:s.foot.x-8,y:s.foot.y+50},actions:[]}));
+}
+export const nativeDogObservationText=['这只狗待在照看它的人附近。给它留出一些空间，静静看看。','The dog stays near its caretaker. Leave it some room and take a quiet look.'] as [string,string];
 /** Native measured ground plus full visual protection, independent of the frozen
  * seven-animal roster/geometry consumed by the already published crab. */
 export function createNativeDogRuntime(){
