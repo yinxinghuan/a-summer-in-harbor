@@ -28,7 +28,7 @@ export const nativeDogEntities=(scene:string)=>Object.values(nativeDogDef.schedu
  * seven-animal roster/geometry consumed by the already published crab. */
 export function createNativeDogRuntime(){
  let old:readonly AnimalState[]=[],cache=new WeakMap<Context,PreviewContext>();
- const runtime=createAnimalRuntime([nativeDogDef],{profiles:{dog:nativeDogProfile},displayClear:(p,slot,ctx)=>{
+ const runtime=createAnimalRuntime([nativeDogDef],{profiles:{dog:nativeDogProfile},holdOccupied:true,preserveVisibleSlot:true,displayClear:(p,slot,ctx)=>{
   let input=cache.get(ctx);if(!input){input={context:ctx,states:old,geometry:geometryFile as unknown as Geometry};cache.set(ctx,input)}
   return previewClear(p,slot.scene,slot.region,nativeDogEnvelope,input);
  }});

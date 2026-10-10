@@ -1,7 +1,7 @@
 import {advanceRoute} from '../engine/distance-motion';
 import type {Point} from '../engine/world';
 import {profiles} from './config';
-import {animalPath,finitePoint,freePoint,pointClear,candidates} from './spatial';
+import {animalPath,finitePoint,freePoint,pointClear,terrainClear,candidates} from './spatial';
 import type {AnimalDef,AnimalState,Context,Facing,Period,Pose,Slot,SpeciesProfile} from './types';
 export function periodAt(minutes:number):Period{if(!Number.isSafeInteger(minutes)||minutes<0)throw Error('INVALID_TOWN_TIME');const m=minutes%1440;return m<360||m>=1260?'night':m<720?'morning':m<1020?'afternoon':'evening'}
 export const slotAt=(a:AnimalDef,m:number):Slot|null=>a.schedule[periodAt(m)]??null;
@@ -9,7 +9,7 @@ export const contextSlot=(a:AnimalDef,ctx:Context):Slot|null=>ctx.animalSlots?.[
 const face=(from:Point,to:Point,previous:Facing):Facing=>{const x=to.x-from.x,y=to.y-from.y;if(Math.abs(x)+Math.abs(y)<1e-7)return previous;return Math.abs(x)>Math.abs(y)?x>0?'right':'left':y>0?'down':'up'};
 const initial=(a:AnimalDef):AnimalState=>({id:a.id,species:a.species,visualVersion:a.visualVersion,scene:null,slot:null,foot:{x:0,y:0},direction:'down',pose:'stand',phase:'hidden',visible:false,distance:0,elevation:0,attention:0,cooldown:0,route:[],flightDistance:0,flightTotal:0,wingTime:0,waypoint:0,wait:0});
 /** Observed movement is ephemeral; only committed townMinutes selects a schedule. */
-export function createAnimalRuntime(defs:readonly AnimalDef[],options:{profiles?:Partial<typeof profiles>;displayClear?:(p:Point,slot:Slot,ctx:Context)=>boolean}={}){
+export function createAnimalRuntime(defs:readonly AnimalDef[],options:{profiles?:Partial<typeof profiles>;displayClear?:(p:Point,slot:Slot,ctx:Context)=>boolean;holdOccupied?:boolean;preserveVisibleSlot?:boolean}={}){
  const effective={...profiles,...options.profiles};
  const clear=(p:Point,slot:Slot,profile:SpeciesProfile,ctx:Context,others:readonly AnimalState[])=>pointClear(p,slot,profile,ctx,others)&&(!options.displayClear||options.displayClear(p,slot,ctx));
  const free=(preferred:Point,slot:Slot,profile:SpeciesProfile,ctx:Context,others:readonly AnimalState[],minimum=0)=>{
@@ -23,7 +23,7 @@ export function createAnimalRuntime(defs:readonly AnimalDef[],options:{profiles?
   periodAt(ctx.townMinutes);const nextSignature=ctx.scene+':'+ctx.townMinutes+':'+JSON.stringify(ctx.animalSlots??{});
   // First lazy activation may replace an ordinary old58 slot. Preserve its
   // actual visible foot too, rather than resetting a walking cat to spawn.
-  if(nextSignature===signature)return;const preserve=new Set(defs.filter(a=>{const state=states.get(a.id)!,slot=contextSlot(a,ctx);return a.species==='cat'&&state.visible&&!!slot?.shelter&&state.scene===ctx.scene&&slot.scene===ctx.scene&&lastMinutes>=0&&periodAt(lastMinutes)===periodAt(ctx.townMinutes)}).map(a=>a.id));signature=nextSignature;lastMinutes=ctx.townMinutes;
+  if(nextSignature===signature)return;const preserve=new Set(defs.filter(a=>{const state=states.get(a.id)!,slot=contextSlot(a,ctx);return state.visible&&state.scene===ctx.scene&&slot?.scene===ctx.scene&&(options.preserveVisibleSlot&&JSON.stringify(state.slot)===JSON.stringify(slot)||a.species==='cat'&&!!slot.shelter&&lastMinutes>=0&&periodAt(lastMinutes)===periodAt(ctx.townMinutes))}).map(a=>a.id));signature=nextSignature;lastMinutes=ctx.townMinutes;
   // Hide first so old-scene bodies cannot reserve space in a new scene.
   for(const state of states.values()){if(preserve.has(state.id))continue;state.visible=false;state.route=[];state.elevation=0;state.attention=0;state.cooldown=0;state.flightDistance=0;state.wingTime=0;state.distance=0;state.wait=0;state.waypoint=0}
   for(const def of defs){const state=states.get(def.id)!,slot=contextSlot(def,ctx),oldActivity=state.slot?.activity;state.scene=slot?.scene??null;state.slot=slot;if(preserve.has(def.id)){if(oldActivity!==slot?.activity){state.route=[];state.wait=0;state.pose='stand'}continue}state.phase='hidden';state.pose='stand';state.reason=slot?'other-scene':'schedule-away';if(!slot||slot.scene!==ctx.scene)continue;
@@ -39,7 +39,13 @@ export function createAnimalRuntime(defs:readonly AnimalDef[],options:{profiles?
   for(const def of defs){const s=states.get(def.id)!,slot=s.slot;if(!slot||slot.scene!==ctx.scene)continue;const profile=effective[def.species],others=[...states.values()].filter(a=>a.id!==s.id);
    if(!s.visible){const q=free(slot.points[s.waypoint%slot.points.length],slot,profile,ctx,others);if(!q)continue;s.foot={...q};s.visible=true;s.reason=undefined}
    // Old saves / newly present residents can overlap the animal. Move only it.
-   if(!clear(s.foot,slot,profile,ctx,others)){const q=free(s.foot,slot,profile,ctx,others);if(!q){s.visible=false;s.phase='hidden';s.reason='no-safe-position';s.route=[];s.elevation=0;continue}s.foot={...q};s.route=[];s.elevation=0;s.flightDistance=0;s.distance=0}
+   if(!clear(s.foot,slot,profile,ctx,others)){
+    // Native dog: pause at its existing valid ground foot while a player or
+    // resident occupies the display gap. Retry ordinary speed-limited follow
+    // once that space clears; never jump to a newly selected nearby point.
+    if(options.holdOccupied){s.route=[];s.elevation=0;s.phase='idle';s.pose='stand';s.reason='space-occupied';if(!terrainClear(s.foot,slot,profile,ctx)){s.visible=false;s.phase='hidden';s.reason='no-safe-position'}continue}
+    const q=free(s.foot,slot,profile,ctx,others);if(!q){s.visible=false;s.phase='hidden';s.reason='no-safe-position';s.route=[];s.elevation=0;continue}s.foot={...q};s.route=[];s.elevation=0;s.flightDistance=0;s.distance=0
+   }
    // Dog ownership is observed even while a panel pauses the scene. Never
    // chase a missing/outpaced resident, or silently follow the player.
    if(def.species==='dog'&&slot.activity==='follow'){

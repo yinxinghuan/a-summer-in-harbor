@@ -4,10 +4,16 @@ export const overlaps=(a:Rect,b:Rect)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.
 export const bodyAt=(p:Point,profile:Pick<SpeciesProfile,'collision'>):Rect=>({x:p.x-profile.collision.w/2,y:p.y-profile.collision.h,w:profile.collision.w,h:profile.collision.h});
 export const finitePoint=(p:Point)=>!!p&&Number.isFinite(p.x)&&Number.isFinite(p.y);
 const inside=(r:Rect,b:Rect)=>b.x>=r.x&&b.y>=r.y&&b.x+b.w<=r.x+r.w&&b.y+b.h<=r.y+r.h;
-export function pointClear(p:Point,slot:Slot,profile:SpeciesProfile,ctx:Context,others:readonly AnimalState[],includePlayer=true){
+/** Permanent ground only. A moving actor entering a display envelope must not
+ * turn a valid visible foot into an instant relocation. */
+export function terrainClear(p:Point,slot:Slot,profile:SpeciesProfile,ctx:Context){
  const scene=ctx.world.scenes[slot.scene];if(!scene||!finitePoint(p))return false;
  const b=bodyAt(p,profile);
- return inside(scene.interior,b)&&inside(slot.region,b)&&![...scene.obstacles,...(ctx.forbidden[slot.scene]??[])].some(r=>overlaps(b,r))&&
+ return inside(scene.interior,b)&&inside(slot.region,b)&&![...scene.obstacles,...(ctx.forbidden[slot.scene]??[])].some(r=>overlaps(b,r));
+}
+export function pointClear(p:Point,slot:Slot,profile:SpeciesProfile,ctx:Context,others:readonly AnimalState[],includePlayer=true){
+ const b=bodyAt(p,profile);
+ return terrainClear(p,slot,profile,ctx)&&
   (!includePlayer||slot.scene!==ctx.scene||!overlaps(b,ctx.player))&&
   !Object.values(ctx.people).some(p=>p.scene===slot.scene&&overlaps(b,p.body))&&
   !others.some(a=>a.visible&&a.scene===slot.scene&&overlaps(b,bodyAt(a.foot,ctxProfiles(a))));
