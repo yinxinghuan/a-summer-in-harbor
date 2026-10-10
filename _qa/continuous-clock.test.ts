@@ -12,7 +12,7 @@ import {townPeriod,residentHere,fernStage} from '../src/world/residents';
 import {plotStatus} from '../src/story/crops';
 import {arrivalWarnings} from '../src/story/resident-guide';
 import {continuousObjectiveEntrance} from '../src/candidate/navigation';
-import {clusterWorld,clusterWalkable,globalPoint,localPoint,pointZone,longTravelMinutes,CLUSTER} from '../src/candidate/continuity';
+import {clusterWorld,clusterWalkable,globalPoint,localPoint,pointZone,traceZone,longTravelMinutes,CLUSTER} from '../src/candidate/continuity';
 import {findPath} from '../src/engine/world';
 // @ts-expect-error frozen test authority
 import {AsyncSessionAuthority,openAsyncSqliteAuthorityStore} from '../vendor/dynamic-runtime/packages/authority-session/async.mjs';
@@ -24,7 +24,7 @@ async function fixture(run:(f:any)=>Promise<void>,extra:Partial<Save>={}){
  const command=(action:string,payload:any={},position=head.position):Action=>({action_id:randomUUID(),expected_version:head.version,scene:head.scene,position,target:'',action,payload});
  const send=async(a:Action)=>{const r=await authority.action(owner,head.id,a);head=r.head;return r};
  const enable=async(rate=2000)=>{await send(command('candidate-clock-enable',{millisecondsPerMinute:rate}));await send(command('candidate-motion-open'))};
- const move=async(points:any[],ms=1000)=>{now+=ms;const end=points.at(-1)??globalPoint(head.scene,head.position),zone=points.reduce((z:string,p:any)=>pointZone(p,z),head.scene),a=command('candidate-motion-step',{lease:head.movingClock.lease.id,sequence:head.movingClock.lease.sequence+1,points},localPoint(zone,end));return send(a)};
+ const move=async(points:any[],ms=1000)=>{now+=ms;const start=globalPoint(head.scene,head.position),end=points.at(-1)??start,zone=traceZone(head.scene,start,points),a=command('candidate-motion-step',{lease:head.movingClock.lease.id,sequence:head.movingClock.lease.sequence+1,points},localPoint(zone,end));return send(a)};
  try{await run({get head(){return head},get authority(){return authority},owner,command,send,enable,move,advance:(n:number)=>now+=n,restart:()=>{authority=make('new-boot')},store})}finally{store.close?.();rmSync(dir,{recursive:true,force:true})}
 }
 test('cluster uses a narrow real dry path, local identity roundtrips and old world stays intact',()=>{

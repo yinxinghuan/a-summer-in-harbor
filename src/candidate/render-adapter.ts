@@ -1,4 +1,4 @@
-import {coastBeachPair} from './coast-beach';
+import {sharedGroup} from './shared-admission';
 import {boundaryPieces} from '../world/outdoor-boundaries';
 import {prepareCropImage} from '../world/crop-art';
 import type {Texture} from 'pixi.js';
@@ -51,6 +51,8 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
    {texture:Assets.get('./map/coast-base.png'),at:{x:0,y:0},clip:{x:0,y:0,w:1280,h:805}},
    {texture:Assets.get('./map/beach-base.png'),at:globalPoint('beach',{x:0,y:0}),clip:{x:70,y:805,w:1210,h:933}},
    {texture:Assets.get('./map/path-base.png'),at:globalPoint('path',{x:0,y:0}),clip:{x:1235,y:140,w:1365,h:1088},polygon:[{x:1280,y:140},{x:2600,y:140},{x:2600,y:1228},{x:1235,y:1228},{x:1235,y:1100},{x:1244,y:1100},{x:1244,y:1052},{x:1256,y:1052},{x:1256,y:1004},{x:1268,y:1004},{x:1268,y:956},{x:1280,y:956},{x:1280,y:908},{x:1272,y:908},{x:1272,y:860},{x:1260,y:860},{x:1260,y:812},{x:1244,y:812},{x:1244,y:760},{x:1235,y:760},{x:1235,y:708},{x:1248,y:708},{x:1248,y:660},{x:1260,y:660},{x:1260,y:620},{x:1272,y:620},{x:1272,y:580},{x:1280,y:580}]},
+   // The entire old path playable rectangle is dry/wet source ground, not an invisible jagged ownership edge.
+   {texture:Assets.get('./map/path-base.png'),crop:{x:80,y:120,w:800,h:560},at:{x:1235,y:260},clip:{x:1235,y:260,w:800,h:560}},
    // Reuse undistorted source pixels: unify the beach entry's legacy grass rectangles.
    {texture:Assets.get('./map/beach-base.png'),crop:{x:80,y:400,w:800,h:90},at:{x:150,y:805},clip:{x:150,y:805,w:800,h:90}},
    // Existing stone pixels taper 120px coast road to the 100px path road.
@@ -59,10 +61,10 @@ export function adaptContinuousSpace(original:SpaceOptions,create:(o:SpaceOption
   cameraBackdrop:original.cameraBackdrop?(id=>original.cameraBackdrop!(clusters[id]?zone():id)):undefined,
   foregroundReveal:original.foregroundReveal?.map(reveal=>({...reveal,active:(p,id)=>reveal.active?.(clusters[id]?localPoint(zone(),p):p,clusters[id]?zone():id)??true,textureForScene:id=>reveal.textureForScene(clusters[id]?zone():id),originForScene:reveal.originForScene?(id)=>reveal.originForScene!(clusters[id]?zone():id):undefined})),
   prepareScene:async id=>{if(clusters[id]){await Promise.all(clusters[id].zones.map(zone=>original.prepareScene?.(zone)));if(id===CLUSTER)await Assets.load(ground.image)}else await original.prepareScene?.(id);await Promise.all([...new Set(boundaryPieces(id).map(p=>p.art))].map(async art=>{if(boundaryTextures.has(art))return;const url='./art/'+art+'.png',source=art==='coastal-rocks'?await prepareCropImage(url):url;const alias='harbor-boundary-image-'+art;Assets.add({alias,src:source});const texture=await Assets.load<Texture>(alias);texture.source.scaleMode='nearest';boundaryTextures.set(art,texture)}))},
-  walkable:(p,id)=>{if(!clusters[id])return original.walkable?.(p,id)??walkable(original.world,id,p);let z=zone();const start=raw.position(),sweptWorld=original.collisionWorld?.()??original.world;let previous=start;const steps=Math.max(1,Math.ceil(Math.hypot(p.x-start.x,p.y-start.y)));for(let i=1;i<=steps;i++){const q={x:start.x+(p.x-start.x)*i/steps,y:start.y+(p.y-start.y)*i/steps};if(!clusterWalkable(sweptWorld,q,z,previous))return false;z=pointZone(q,z,previous);if(!coastBeachPair(z)&&original.walkable&&!original.walkable(localPoint(z,q),z))return false;previous=q;}return true},
+  walkable:(p,id)=>{if(!clusters[id])return original.walkable?.(p,id)??walkable(original.world,id,p);let z=zone();const start=raw.position(),sweptWorld=original.collisionWorld?.()??original.world;let previous=start;const steps=Math.max(1,Math.ceil(Math.hypot(p.x-start.x,p.y-start.y)));for(let i=1;i<=steps;i++){const q={x:start.x+(p.x-start.x)*i/steps,y:start.y+(p.y-start.y)*i/steps};if(!clusterWalkable(sweptWorld,q,z,previous))return false;z=pointZone(q,z,previous);if(!sharedGroup(z)&&original.walkable&&!original.walkable(localPoint(z,q),z))return false;previous=q;}return true},
   // Arrival validates the preserved logical map, whose overlap can differ from
   // the combined renderer's static obstacle union. Prediction still uses its
-  // swept dynamic collision checks and the authored narrow seam.
+  // shared swept dynamic collision checks.
   arrivalWalkable:(p,id)=>clusters[id]?walkable(original.world,logical,localPoint(logical,p)):(original.arrivalWalkable?.(p,id)??walkable(original.world,id,p)),
   findPath:(a,b,id)=>{
    if(!clusters[id])return original.findPath?.(a,b,id)??findPath(original.world,id,a,b);
