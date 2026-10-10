@@ -124,5 +124,18 @@
     "真实 iPhone 持续性能未验证",
     "音乐听感未由人验证",
     "完整时长仍是目标，不能把自动化最短通关当实玩时长"
-  ]
+  ],
+  "chapelExtension": {
+    "status": "local-functional-candidate-not-published",
+    "scope": "optional authored neighborhood visit; persistent choice within original authority",
+    "evidence": [
+      "doc/requirements.md",
+      "_qa/chapel.test.ts",
+      "_qa/chapel-browser.mjs"
+    ],
+    "paidRequests": 0,
+    "newPlayerComprehension": "unverified",
+    "phoneHardware": "unverified",
+    "churchFacade": "HOLD"
+  }
 }

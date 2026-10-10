@@ -1,0 +1,1 @@
+import {rooms,doorways,world} from '../src/world/data';import {writeFileSync} from 'node:fs';writeFileSync(new URL('../doc/chapel-layout.json',import.meta.url),JSON.stringify({rooms:{chapel:rooms.chapel},doorways:{chapel:doorways.chapel},world:{actor:world.actor,scene:world.scenes.chapel}},null,2));

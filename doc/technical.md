@@ -405,3 +405,8 @@ prepareAfterRainDialogue是默认关闭的localFixture-only dry adapter。调用
 有限用户操作错误必须由 `server/active-business-failure.ts` 明确列入409终态集合。本次实际Main发现失效fact被503包装后原pending无法结束，现已修复；存档损坏、policy drift、基础设施错误继续503非终态，保留原请求。320实际本地HTTP拒绝后经原关闭/重开、用户再次选择，只有新明确请求保存一次回应；回包丢失重放则沿原同一请求复用。
 
 验证与复跑说明见 `doc/weather-stage3-integration-20261009.md`。正常平台登录、手机/Telegram、跨设备、真实AI回答和新玩家理解未验收，不能据本地合成旅程推定已通过。候选尚无发布授权，不上传后端、不推送镜像、不修改玩家原档。
+
+
+### 教堂本地扩展（未发布）
+`src/story/chapel.ts`只消费权威flags/分钟/known；实体动作走原applyAction/空间绑定/唯一authority的CAS与回执。新的有限玩法错误加入active-business-failure，unsupported保存仍保留请求待恢复。旧档不自动补参与，新增事实缺省为空。世界声明由chapel-layout加入，`_qa/export-chapel-layout.ts`从实际World导出，`scripts/assemble-chapel.py`只构建新场景四层和带实际碰撞的TMX，不重烘焙其他地图。Pillow沿已安装x86_64 Python运行，无安装。
+复用动物7c89d8c中的renderer module-instance/disposal修复为独立共享依赖，未引入动物AI host；owner组合时保留一次，不整份覆盖其他Main/View变化。QA环回5590→5591使用合成内存authority，外网被浏览器harness阻断、无生产身份/存档。真实生产/PostgreSQL/平台证据须独立验接，不能继承本地通过。

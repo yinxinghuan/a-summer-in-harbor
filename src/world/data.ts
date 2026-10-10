@@ -1,3 +1,4 @@
+import {addChapel} from './chapel-layout';
 import {nativeCrabEntities} from '../animals/native-crab-config';
 import {techPeople} from './tech-nomads';
 import {nextPeople} from './next-residents';
@@ -209,6 +210,7 @@ for(const [scene,x,y,width] of [['home',475,490,240],['cafe',500,530,260]] as [s
 dressHarbor(rooms);
 organizeDailyLife(rooms);
 enrichPlanting(rooms);
+addChapel(rooms);
 
 export const doorways=Object.fromEntries(Object.values(rooms).filter(r=>!r.outdoor).map(r=>{
  const floorEnd=r.interior.y+r.interior.h,door={id:'exit',side:'S' as const,center:480,width:50,leafWidth:46,leafBottom:floorEnd+8,opening:{start:455,end:505},activation:{x:441,y:floorEnd-58,w:78,h:58},closedFootprint:{x:455,y:floorEnd,w:50,h:8}};

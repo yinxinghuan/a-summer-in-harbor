@@ -1,3 +1,4 @@
+import {chapelTopics,applyChapelAction,chapelObjective} from './chapel';
 import {mapRoute,entranceFailure} from '../world/map-navigation';
 import {growthTopics,applyGrowthTopic,applyGrowthObservation,recordRelationshipMeeting,recordRelationshipStory,growthTopicIds,type RelationshipGrowth} from './relationship-growth';
 import {nomadTopics,applyNomadTopic,type NomadMemory} from './tech-nomads';
@@ -33,6 +34,7 @@ const relate=(s:Save,id:string,n:number)=>s.relations[id]=Math.max(-100,Math.min
 export const items:Record<string,{name:Words;description:Words;kind:'tools'|'objects'|'notes'}>={...battleItems,...cropItems,key:{name:['租屋钥匙','Room key'],description:['玛拉给你的钥匙，门在车站街。','Mara’s spare key. Your door is on Station Street.'],kind:'tools'},toolbag:{name:['玛拉的工具袋','Mara’s tool bag'],description:['西奥替她收好了。','Theo kept it safe behind the counter.'],kind:'objects'},toolkit:{name:['借来的工具','Borrowed tools'],description:['琼借给你的，可以修桥，也可以用于小修理。','June’s tools for repairs around town.'],kind:'tools'},wood:{name:['结实的木板','Sound timber'],description:['沙滩上的旧木板，修桥需要两块。','Salvaged at the beach. Two planks will mend the bridge.'],kind:'objects'},fish:{name:['新鲜的鱼','Fresh fish'],description:['可交给咖啡馆做当日特餐。','Theo can use it for the daily special.'],kind:'objects'},photo:{name:['旧桥照片','Bridge photograph'],description:['过去的海岸小桥与公共路线。','The old footbridge and its public approach.'],kind:'notes'},route:{name:['山坡路线图','Hillside route map'],description:['一条经过气象站下方的公共小路。','A public trail below the weather station.'],kind:'notes'}};
 export const hasCoastRoute=(s:Save)=>has(s,'bridge-fixed')||has(s,'alternative-route')||has(s,'garden-agreed');
 export function objective(s:Save):Words{
+ if(s.scene==='chapel')return chapelObjective(s);
  if(has(s,'market-open'))return ['夏日在继续 · 探索、钓鱼，或回家歇一会儿','Summer continues · Explore, fish, or head home'];
  if(!s.known.includes('mara')&&!has(s,'key'))return ['车站街 · 和提钥匙的女士打个招呼','Station Street · Say hello to the woman with the keys'];
  if(!has(s,'key'))return ['车站街 · 向玛拉领取租屋钥匙','Station Street · Ask Mara for your key'];
@@ -74,7 +76,7 @@ function currentTopic(s:Save,p:string,t:(typeof topics)[string][number]){
  }
  return reply?{...t,reply}:t;
 }
-export function availableTopics(s:Save,p:string){return [...(topics[p]??[]),...lifeTopics(s,p),...newsTopics(s,p),...nextTopics(s,p),...nomadTopics(s,p),...battleTopics(s,p),...growthTopics(s,p)].filter(t=>(!t.requires||has(s,t.requires))&&(!t.all||t.all.every(f=>has(s,f)))&&(!t.once||!has(s,`talk:${p}:${t.id}`))&&(t.id!=='return-bag'||(!!s.items.toolbag&&!has(s,'bag-returned')))&&(t.id!=='fish'||!!s.items.fish)&&(t.id!=='key'||!has(s,'key'))&&!(p==='theo'&&t.id==='bag'&&(!!s.items.toolbag||has(s,'bag-returned')))&&!(p==='june'&&t.id==='tools'&&!!s.items.toolkit)&&!(p==='elena'&&t.id==='hours'&&has(s,'garden-agreed'))).filter(t=>!(p==='luis'&&['snack','water','packed-snack'].includes(t.id)&&s.scene!=='grocery')&&!(p==='theo'&&['bag','fish'].includes(t.id)&&s.scene!=='cafe')).map(t=>currentTopic(s,p,t))}
+export function availableTopics(s:Save,p:string){return [...(topics[p]??[]),...chapelTopics(s,p),...lifeTopics(s,p),...newsTopics(s,p),...nextTopics(s,p),...nomadTopics(s,p),...battleTopics(s,p),...growthTopics(s,p)].filter(t=>(!t.requires||has(s,t.requires))&&(!t.all||t.all.every(f=>has(s,f)))&&(!t.once||!has(s,`talk:${p}:${t.id}`))&&(t.id!=='return-bag'||(!!s.items.toolbag&&!has(s,'bag-returned')))&&(t.id!=='fish'||!!s.items.fish)&&(t.id!=='key'||!has(s,'key'))&&!(p==='theo'&&t.id==='bag'&&(!!s.items.toolbag||has(s,'bag-returned')))&&!(p==='june'&&t.id==='tools'&&!!s.items.toolkit)&&!(p==='elena'&&t.id==='hours'&&has(s,'garden-agreed'))).filter(t=>!(p==='luis'&&['snack','water','packed-snack'].includes(t.id)&&s.scene!=='grocery')&&!(p==='theo'&&['bag','fish'].includes(t.id)&&s.scene!=='cafe')).map(t=>currentTopic(s,p,t))}
 export function validateQuestion(s:Save,a:Action){
  requireState(a.expected_version===s.version,'VERSION_CONFLICT');requireState(a.scene===s.scene&&walkable(worldWithFlags(s.flags),s.scene,a.position),'INVALID_POSITION');requireState(!s.activeChallenge&&!battleLocksWorld(s),'CHALLENGE_ACTIVE');const e=entityAt(s.scene,a.target);requireState(e?.person&&s.known.includes(e.person),'INTRODUCE_FIRST');requireState(presentEntity(s,e!),'PERSON_AWAY');requireState(Math.hypot(a.position.x+8-observedActor(e!,a.actorPosition).x,a.position.y+6-observedActor(e!,a.actorPosition).y)<=75,'TOO_FAR');const text=(a.payload as {text?:unknown})?.text;requireState(typeof text==='string'&&text.trim().length>0&&text.length<=400,'INVALID_QUESTION');return {person:e!.person!,question:(text as string).trim()};
 }
@@ -105,7 +107,7 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution,
   if(a.action==='travel'){
    requireState(e!.kind==='portal','NOT_A_DOOR');const dest=e!.destination!;
    const denied=entranceFailure(s,dest);requireState(!denied,denied??'TRAVEL_ROUTE_UNAVAILABLE');
-   s.scene=dest;const returnEntrance=rooms[dest].entities.find(portal=>portal.kind==='portal'&&portal.destination===before.scene);s.position={...(returnEntrance?.approach??rooms[dest].spawn)};if(!s.visited.includes(dest))s.visited.push(dest);text=[`你来到${s.fieldNotes?.rooms.find(r=>r.id===dest)?.title[0]??rooms[dest].title[0]}。`,`You arrive at ${s.fieldNotes?.rooms.find(r=>r.id===dest)?.title[1]??rooms[dest].title[1]}.`];
+   s.scene=dest;const returnEntrance=rooms[dest].entities.find(portal=>portal.kind==='portal'&&portal.destination===before.scene);s.position={...(returnEntrance?.approach??rooms[dest].spawn)};if(!s.visited.includes(dest))s.visited.push(dest);if(dest==='chapel')flag(s,'chapel:visited');text=[`你来到${s.fieldNotes?.rooms.find(r=>r.id===dest)?.title[0]??rooms[dest].title[0]}。`,`You arrive at ${s.fieldNotes?.rooms.find(r=>r.id===dest)?.title[1]??rooms[dest].title[1]}.`];
   }else if(a.action==='introduce'){
    requireState(e!.person,'NOT_A_PERSON');requireState(!s.known.includes(e!.person!),'ALREADY_INTRODUCED');s.known.push(e!.person!);recordRelationshipMeeting(s,e!.person!,relationshipMinute);text=people[e!.person!].intro;
   }else if(a.action.startsWith('talk:')){
@@ -116,6 +118,8 @@ export function applyAction(before:Save,a:Action,resolution?:DialogueResolution,
    text=applyGrowthObservation(s,e!.id,a.action.slice('relationship-observe:'.length),relationshipMinute);
   }else if((cropVerbs.includes(a.action)||shopVerbs.includes(a.action))&&e!.actions?.includes(a.action)){
    text=applyCrop(s,e!.id,a.action);if(a.action==='water-crop'||a.action==='harvest-crop'||a.action.startsWith('plant:')){advanceAwake(s,10);advanceTown(s,10)}
+  }else if(a.action.startsWith('chapel-')){
+   requireState(e!.actions?.includes(a.action),'ACTION_UNAVAILABLE');text=applyChapelAction(s,a.action);
   }else if(a.action.startsWith('challenge-start:')){
    requireState(!s.turnBattle,'BATTLE_EXISTS');const kind=a.action.slice(16);requireState((e!.person==='idris'&&s.scene==='gym'&&['sparring','footwork','endurance'].includes(kind))||(e!.person==='ruth'&&s.scene==='dock'&&kind==='fishing')||(e!.id==='terrace'&&kind==='repair'&&!has(s,'terrace-fixed'))||(e!.id==='old-map'&&kind==='map'&&!has(s,'alternative-route')),'CHALLENGE_UNAVAILABLE');
    if(['sparring','footwork','endurance','fishing'].includes(kind))requireState(s.energy>=10,'REST_NEEDED');

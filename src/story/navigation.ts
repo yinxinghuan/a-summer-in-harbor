@@ -20,6 +20,8 @@ export function objectivePlace(s:Save):{scene:string;entity:string}|null{
 }
 /** A walking hint to the next real entrance, never a teleport to an unseen room. */
 export function nextObjectiveEntrance(s:Save):Entity|undefined{
+ if(s.scene==='chapel')return undefined; // optional local visit owns its current hint, no main-quest auto-exit
+
  const goal=objectivePlace(s);if(!goal)return;
  if(s.scene===goal.scene)return rooms[s.scene].entities.find(e=>e.id===goal.entity&&presentEntity(s,e));
  const queue=[s.scene],came=new Map<string,string>();came.set(s.scene,'');

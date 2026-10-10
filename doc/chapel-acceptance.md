@@ -1,0 +1,17 @@
+# Local chapel candidate acceptance — 2026-10-10
+
+Base: formal 599a8b46967cfe0285bba972d32bf2c4046b3db5. Local implementation only. Original modern North American coastal setting, English and Chinese UI, original account-bound Story authority and original natural town clock remain the contract.
+
+The optional loop is hill entry → read notice → choose reading or listening → save one participation and meeting clue → exit to the original hill approach → return and recall. Leaving before participation has no completion/reward. No cash, items, energy, new audio or model call is awarded/consumed by this addition. Only Dani/Samira afternoon locations move; morning/evening routes and all 22 identities remain. Samira listening requires her actual afternoon presence and prior introduction.
+
+63 local regression tests passed, including the six chapel cases, SQLite replay/CAS/reopen/account isolation and existing story, active play, B2/time and coastal contracts. The actual compiled Main/View/RPGJS flow passed at 320×568 Chinese, 390×844 English and 1280×800 English with ordinary input, both choices, round-trip, recall and reload. All three restored movement after reload. At 320, reload encountered 43 finite ACTIVE_LEASE_BUSY responses from the unchanged original lease; after expiry normal movement recovered. Do not claim all network responses succeeded.
+
+Two matched 8-case room passes cover 320/390 four corners with original foreground soft reveal and normal movement away. The owner inspected all corner screenshots in both passes, south near/away screenshots, final entry images and representative participation/recall/restore screens. The early inherited side-cap overflow was clipped only in the new assembler. Hall-specific objective replaces the irrelevant main quest while inside; global menus/control behavior remains.
+
+Original 358 public asset files and package/lock match base. Five new chapel map files match source/dist; no existing map was rebaked. Reused local source PNGs are unchanged. Bench/table/bookcase/notice/coat solid footprints come from the actual World export and new TMX. The optional extra reading chair is intentionally a lightweight visual consequence with no blocking footprint, and is not claimed as a solid seating simulation.
+
+Shared renderer lifecycle dependency: exactly four files from animal candidate 7c89d8c8bc8a0cd042719c3d144c7d658c155a88. This prevents repeated normalization of RPGJS declarations and disposes the instance/listeners on account or Save remount. It imports no animal proposal host. Owner combination must keep the shared change once; avoid full-file replacement over newer Main/View work.
+
+Scope remains a functional reused community hall and labelled sign entry. Church-specific facade, newly selected church furniture rights/profile, physical phone, Telegram/remote host, production PostgreSQL combination and new-player understanding remain unverified. No official Save or published page was changed, and no model/media/Library request or paid installation was made. External evidence and offline REVIEW.html are retained in the owned task root; no credentials are included.
+
+Pre-ship grep finding: the original harbor-controls onPointerDown is intentional immediate game input, outside scroll content. No new scroll container uses pointer-down selection. Source/dist secrets, API-base, strict UI, TMX and scene visual checks passed.

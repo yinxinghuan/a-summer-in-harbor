@@ -614,5 +614,33 @@
     "width": 436,
     "height": 67,
     "empty": false
+  },
+  "chapel-base": {
+    "x": 270,
+    "y": 225,
+    "width": 420,
+    "height": 360,
+    "empty": false
+  },
+  "chapel-north": {
+    "x": 270,
+    "y": 161,
+    "width": 420,
+    "height": 64,
+    "empty": false
+  },
+  "chapel-side": {
+    "x": 262,
+    "y": 161,
+    "width": 436,
+    "height": 424,
+    "empty": false
+  },
+  "chapel-front": {
+    "x": 262,
+    "y": 526,
+    "width": 436,
+    "height": 67,
+    "empty": false
   }
 }
