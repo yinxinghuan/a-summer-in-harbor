@@ -7,9 +7,9 @@ import {shoreActionLabel} from './ShoreFishingAccess';
 import {tx,type Locale} from '../world/data';
 import type {Save} from '../story/state';
 import type {ShoreCheck} from '../world/shore-water';
-export function ShoreCastShortcut({save,shore,locale,busy,compact,onPrepare,onCast,onPreview,limited}:{save:Save;shore:ShoreCheck;locale:Locale;busy:boolean;compact:boolean;onPrepare:()=>void;onCast:(power?:number)=>void;onPreview?:(power:number|null)=>void;limited?:boolean}){
+export function ShoreCastShortcut({save,shore,locale,busy,compact,onPrepare,onCast,onPreview,limited,canBegin}:{save:Save;shore:ShoreCheck;locale:Locale;busy:boolean;compact:boolean;onPrepare:()=>void;onCast:(power?:number)=>void;onPreview?:(power:number|null)=>void;limited?:boolean;canBegin?:()=>boolean}){
  const ready=shore.ok&&hasFishingKit(save)&&save.energy>=10&&!save.turnBattle&&!save.activeChallenge&&FISHING_NEW_STARTS;
  if(!compact||!ready)return <button className="harbor-shore-action" data-open-shore disabled={busy} onClick={onPrepare}>{tx(shoreActionLabel(shore),locale)}</button>;
  const bait=currentBait(save,shore.ok?shore.target.water:undefined);
- return <div className="harbor-shore-shortcuts"><ChargedCast direct limited={limited} locale={locale} disabled={busy} onCast={onCast} onPreview={onPreview} detail={tx(baitCatalog[bait].name,locale)}/><button data-open-shore disabled={busy} onClick={onPrepare}>{tx(['换饵 / 帮助','Bait / help'],locale)}</button></div>;
+ return <div className="harbor-shore-shortcuts"><ChargedCast direct limited={limited} locale={locale} disabled={busy} canBegin={canBegin} onCast={onCast} onPreview={onPreview} detail={tx(baitCatalog[bait].name,locale)}/><button data-open-shore disabled={busy} onClick={onPrepare}>{tx(['换饵 / 帮助','Bait / help'],locale)}</button></div>;
 }
