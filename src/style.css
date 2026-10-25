@@ -139,3 +139,11 @@
 .harbor-fishing-scene[data-fishing-scene-phase=bite] [data-fishing-ripple]{stroke:#f4d17e}
 .harbor-fishing-scene[data-fishing-scene-phase=charging] [data-fishing-ripple]{stroke:#f4d17e;stroke-dasharray:4 3}
 @media(max-width:350px){.harbor-shore-shortcuts{grid-template-columns:minmax(0,1fr) 66px}.harbor-shore-shortcuts strong{font-size:14px}.harbor-fishing-tap[data-fishing-phase=bite] .harbor-fishing__cue{font-size:19px!important}}
+/* Only mounted after an authoritative saved catch; confirm remains the existing separate settlement. */
+.harbor-catch-reveal{display:flex;align-items:center;gap:10px;padding:8px 10px;border:2px solid #bb9653;background:#fff1bd;color:#213f39;min-width:0;animation:harbor-catch-arrive .28s ease-out both}
+.harbor-catch-reveal[data-catch-restored=true]{animation:none}
+.harbor-catch-reveal img{width:112px;height:80px;flex:none;object-fit:contain;image-rendering:pixelated}
+.harbor-catch-reveal>div{display:grid;min-width:0;gap:3px}.harbor-catch-reveal strong{display:block;font-size:22px;line-height:1.1;overflow-wrap:anywhere}.harbor-catch-reveal small,.harbor-catch-reveal span{font-size:13px}
+@keyframes harbor-catch-arrive{from{opacity:0;transform:translateY(9px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-height:550px){.harbor-catch-reveal{gap:6px;padding:4px 7px}.harbor-catch-reveal img{width:88px;height:58px}.harbor-catch-reveal strong{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.harbor-catch-reveal{animation:none}}

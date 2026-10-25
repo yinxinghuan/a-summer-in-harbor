@@ -1,7 +1,8 @@
+import {CatchReveal} from './CatchReveal';
 import {useEffect,useRef,useState} from 'react';
 import {replayTap,tapWindow as makeWindow,type TapWindow} from '../challenges/fishing-tap';
 import {fishingInitial,type FishingRun} from '../challenges/fishing';
-import {speciesNames,type PendingFishingResult,type ShoreEncounter,type ShoreInput} from '../challenges/shore-fishing';
+import {type PendingFishingResult,type ShoreEncounter,type ShoreInput} from '../challenges/shore-fishing';
 import {fishingLifecycle} from '../challenges/fishing-lifecycle';
 import {fishingBaitCue,fishingPresentationEvent,type FishingPresentation} from './fishing-experience';
 import {tx,type Locale,type Words} from '../world/data';
@@ -39,14 +40,15 @@ export function TapFishing({locale,onFinish,onLeave,firstDiscovery,busy,error,on
  },[phase,ticks,haul,paused]);
  useEffect(()=>{const app=root.current?.closest<HTMLElement>('.harbor-app');return()=>{app?.dispatchEvent(new CustomEvent(fishingPresentationEvent,{detail:{challenge:challengeId??'tap-c-local',phase:'closed'}}));if(app){delete app.dataset.fishingPhase;delete app.dataset.fishingInteraction}}},[]);
  async function submit(confirm:boolean){if(submitLock.current||busy)return;submitLock.current=true;setSubmitting(true);persist();try{const ok=await(confirm?onFinish([],input.current??undefined):onLeave());if(ok){confirmed.current=true;window.alteruLocalStorage.removeItem(key)}}finally{submitLock.current=false;setSubmitting(false)}}
- const caught=result.current?.result==='caught',locked=busy||submitting,canConfirm=phase==='result'&&!locked&&(!onReserve||!!pendingResult);
- const cue:Words=phase==='waiting'?['留意浮漂，咬钩时点一下提竿。','Watch the float. Tap Hook when it dips.']:phase==='bite'?['咬钩了，现在提竿！','A bite—hook now!']:phase==='haul'?['鱼正靠岸…','Bringing it ashore…']:caught?['钓上来了！','You caught one!']:input.current?.hookTick===null?['错过咬钩了，下次浮漂下沉时提竿。','The bite passed. Hook when the float dips next time.']:['提竿太早，鱼游走了。等浮漂下沉再提竿。','Too early. Wait for the float to dip before hooking.'];
+ const caught=result.current?.result==='caught',authoritativeCatch=caught&&pendingResult?.result==='caught',locked=busy||submitting,canConfirm=phase==='result'&&!locked&&(!onReserve||!!pendingResult);
+ const cue:Words=phase==='waiting'?['留意浮漂，咬钩时点一下提竿。','Watch the float. Tap Hook when it dips.']:phase==='bite'?['咬钩了，现在提竿！','A bite—hook now!']:phase==='haul'?['鱼正靠岸…','Bringing it ashore…']:authoritativeCatch?['钓上来了！','You caught one!']:caught?['正在确认鱼获…','Confirming your catch…']:input.current?.hookTick===null?['错过咬钩了，下次浮漂下沉时提竿。','The bite passed. Hook when the float dips next time.']:['提竿太早，鱼游走了。等浮漂下沉再提竿。','Too early. Wait for the float to dip before hooking.'];
  return <section ref={root} tabIndex={-1} className="harbor-panel harbor-fishing harbor-fishing-dock harbor-fishing-tap" role="region" aria-label={tx(['场景内钓鱼','Fishing in the scene'],locale)} data-fishing-phase={phase} data-fishing-paused-state={paused}>
   <div className="harbor-panel__body">
    <p className="harbor-fishing__cue" data-fishing-cue role={phase==='bite'?'alert':'status'}>{tx(cue,locale)}</p>
+   {authoritativeCatch&&<CatchReveal species={encounter?.species} locale={locale} first={firstDiscovery} restored={boot.phase==='result'}/>}
    {(phase==='waiting'||phase==='bite')&&<small data-fishing-current-bait>{tx(fishingBaitCue(encounter),locale)}</small>}
    {paused&&phase!=='result'&&<p data-fishing-paused role="status">{tx(['已暂停，回到此页后继续。','Paused. Return to continue.'],locale)}</p>}
-   {phase==='result'&&<div data-fishing-result>{caught&&<strong>{tx(encounter?speciesNames[encounter.species]:['鲜鱼','Fresh fish'],locale)}</strong>}{caught&&firstDiscovery&&<span data-fishing-first> · {tx(['首次发现','First discovery'],locale)}</span>}<small>{tx(caught?(encounter?.ticket&&encounter.ticket.bait!=='reusable-fishing-lure'?['确认入包：精力−2，鱼饵−1。','On confirmation: 2 energy and one bait.']:['确认入包：精力−2，拟饵保留。','On confirmation: 2 energy; reusable lure kept.']):['鱼饵与精力未消耗。','No bait or energy used.'],locale)}</small></div>}
+   {phase==='result'&&<div data-fishing-result><small>{tx(caught?(encounter?.ticket&&encounter.ticket.bait!=='reusable-fishing-lure'?['确认入包：精力−2，鱼饵−1。','On confirmation: 2 energy and one bait.']:['确认入包：精力−2，拟饵保留。','On confirmation: 2 energy; reusable lure kept.']):['鱼饵与精力未消耗。','No bait or energy used.'],locale)}</small></div>}
    {onReserve&&input.current&&<p data-fishing-saved={!!pendingResult} role="status">{tx(pendingResult?(caught?['结果已保存，确认后入包。','Result saved. Confirm to put it in your bag.']:['结果已保存。','Result saved.']):reserveError?['结果尚未保存，请重试并保持页面。','Result not saved. Retry and keep this page open.']:['正在保存结果…','Saving result…'],locale)}</p>}
    {reserveError&&!pendingResult&&<button disabled={saving||busy} onClick={()=>void reserve()}>{tx(['重试保存','Retry saving'],locale)}</button>}
    {draftError&&!pendingResult&&<p role="status">{tx(['设备暂不能保存进度，请保持页面并等待结果保存。','Device storage is unavailable. Keep the page open until the result saves.'],locale)}</p>}

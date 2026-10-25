@@ -17,10 +17,10 @@ export function castPlan(scene:string,standing:Point,world:World):CastPlan|null{
   if(points.length&&(!best.length||points.at(-1)!.distance-points[0].distance>best.at(-1)!.distance-best[0].distance))best=points;
  }
  // Thin water remains governed by the existing shore check; do not pretend that more power can cross a bank.
- return {samples:best.length?best:[nearest.target],limited:!best.length||best.at(-1)!.distance-best[0].distance<24};
+ return {samples:best,limited:!best.length||best.at(-1)!.distance-best[0].distance<24};
 }
 export function poweredCast(plan:CastPlan|null,power:number):ShoreCheck{
- if(!plan)return{ok:false,reason:'WATER_TOO_FAR'};
+ if(!plan||!plan.samples.length)return{ok:false,reason:'WATER_TOO_FAR'};
  const samples=plan.samples,p=chargePower(power*1000),wanted=samples[0].distance+(samples.at(-1)!.distance-samples[0].distance)*p;
  return{ok:true,target:samples.reduce((best,x)=>Math.abs(x.distance-wanted)<Math.abs(best.distance-wanted)?x:best,samples[0])};
 }

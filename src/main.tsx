@@ -191,14 +191,14 @@ function App(){
   const app=document.querySelector('.harbor-app');if(power===null){castGesture.current=null;setCasting(false);setCastLimited(false);app?.dispatchEvent(new CustomEvent(fishingPresentationEvent,{detail:{challenge:'cast-charge',phase:'closed'}}));return}
   if(!save||busy||save.activeChallenge)return;
   if(!castGesture.current){const standing={...position.current};castGesture.current={id:save.id,scene:save.scene,standing,plan:castPlan(save.scene,standing,landWorld(dynamicWorld(save.flags,!!dynamicKey),save.landV1))}}
-  const g=castGesture.current,value=poweredCast(g.plan,power);setCasting(true);setCastLimited(g.plan?.limited??true);setShoreSample({journey:g.id,scene:g.scene,standing:g.standing,value});
+  const g=castGesture.current;if(g.plan&&!g.plan.samples.length){setError(['这段水面没有可见的安全落点，沿岸换一个无遮挡位置。','No clear, visible landing here. Try another spot along the bank.']);return false}const value=poweredCast(g.plan,power);setCasting(true);setCastLimited(g.plan?.limited??true);setShoreSample({journey:g.id,scene:g.scene,standing:g.standing,value});
   if(value.ok)app?.dispatchEvent(new CustomEvent(fishingPresentationEvent,{detail:{challenge:'cast-charge',phase:'charging',chargePower:power,paused:false,held:true,state:fishingInitial(),waitTicks:0,anchor:{scene:g.scene,standing:g.standing,target:value.target.at}}}));
  };
  const castShore=(power=.5)=>{
   if(!save||busy||save.activeChallenge)return;const standing={...position.current},g=castGesture.current;
   if(g&&(g.id!==save.id||g.scene!==save.scene||Math.hypot(g.standing.x-standing.x,g.standing.y-standing.y)>.5)){castPreview(null);setError(['站位已变化，请重新蓄力。','Your position changed. Charge again.']);return}
-  const world=landWorld(dynamicWorld(save.flags,!!dynamicKey),save.landV1),planned=poweredCast(g?.plan??castPlan(save.scene,standing,world),power),value=planned.ok?checkShore(save.scene,standing,world,planned.target.at):planned;
-  setShoreSample({journey:save.id,scene:save.scene,standing,value});if(!value.ok){castPreview(null);setError(shoreReasons[value.reason]);return}setFishingFeedback(null);void act('fishing:start',null,{cast:value.target.at},'shore-water');castPreview(null);
+  const world=landWorld(dynamicWorld(save.flags,!!dynamicKey),save.landV1),plan=g?.plan??castPlan(save.scene,standing,world),planned=poweredCast(plan,power),value=planned.ok?checkShore(save.scene,standing,world,planned.target.at):planned;
+  setShoreSample({journey:save.id,scene:save.scene,standing,value});if(!value.ok){const noSafeLanding=!!(plan&&plan.samples.length===0);castPreview(null);setError(noSafeLanding?['这段水面没有可见的安全落点，沿岸换一个无遮挡位置。','No clear, visible landing here. Try another spot along the bank.']:shoreReasons[value.reason]);return}setFishingFeedback(null);void act('fishing:start',null,{cast:value.target.at},'shore-water');castPreview(null);
  };
  const showFishingPractice=()=>{navigate('map','gym');setMapTab('exploration')};
  const walkFishing=()=>{if(!save||busy||hasPendingAction()||accountLoading||save.activeChallenge)return;const e=save.scene==='dock'?rooms.dock.entities.find(e=>e.person==='ruth'&&residentHere(save,'ruth','dock')):walkingEntrance(save,'dock');if(!e){navigate('map','dock');return}close();walkRequest.current=e;};
