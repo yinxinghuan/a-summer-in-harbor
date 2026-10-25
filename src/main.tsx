@@ -189,9 +189,9 @@ function App(){
  const openShore=()=>{if(!save||busy||accountLoading||save.activeChallenge)return;uiEpoch.current++;setError(null);setMessage(null);setTarget({id:'shore-water',kind:'object',label:['水边垂钓','Shore fishing'],at:shore.ok?shore.target.at:{...position.current},approach:{...position.current},actions:[]});setPanel('entity')};
  const castPreview=(power:number|null)=>{
   const app=document.querySelector('.harbor-app');if(power===null){castGesture.current=null;setCasting(false);setCastLimited(false);app?.dispatchEvent(new CustomEvent(fishingPresentationEvent,{detail:{challenge:'cast-charge',phase:'closed'}}));return}
-  if(!save||busy||save.activeChallenge)return;
+  if(!save||busy||save.activeChallenge)return false;
   if(!castGesture.current){const standing={...position.current};castGesture.current={id:save.id,scene:save.scene,standing,plan:castPlan(save.scene,standing,landWorld(dynamicWorld(save.flags,!!dynamicKey),save.landV1))}}
-  const g=castGesture.current;if(g.plan&&!g.plan.samples.length){setError(['这段水面没有可见的安全落点，沿岸换一个无遮挡位置。','No clear, visible landing here. Try another spot along the bank.']);return false}const value=poweredCast(g.plan,power);setCasting(true);setCastLimited(g.plan?.limited??true);setShoreSample({journey:g.id,scene:g.scene,standing:g.standing,value});
+  const g=castGesture.current;if(!g.plan||!g.plan.samples.length){setError(g.plan?['这段水面没有可见的安全落点，沿岸换一个无遮挡位置。','No clear, visible landing here. Try another spot along the bank.']:['这里暂时没有有效落点，请站稳后靠近无遮挡水边。','There is no valid landing here. Stand near a clear bank and try again.']);return false}const value=poweredCast(g.plan,power);setCasting(true);setCastLimited(g.plan?.limited??true);setShoreSample({journey:g.id,scene:g.scene,standing:g.standing,value});
   if(value.ok)app?.dispatchEvent(new CustomEvent(fishingPresentationEvent,{detail:{challenge:'cast-charge',phase:'charging',chargePower:power,paused:false,held:true,state:fishingInitial(),waitTicks:0,anchor:{scene:g.scene,standing:g.standing,target:value.target.at}}}));
  };
  const castShore=(power=.5)=>{
