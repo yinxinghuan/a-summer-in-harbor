@@ -53,7 +53,7 @@ export function TapFishing({locale,onFinish,onLeave,firstDiscovery,busy,error,on
    {error&&<p className="harbor-error" role="alert">{tx(error,locale)}</p>}{(error||reserveError&&!pendingResult)&&onReconnect&&<button disabled={locked} onClick={onReconnect}>{tx(['重新连接，核对进度','Reconnect and check progress'],locale)}</button>}
   </div>
   <footer className="harbor-fishing__actions">
-   {phase==='result'?<button data-fishing-confirm className="harbor-primary" disabled={!canConfirm} onClick={()=>void submit(true)}>{tx(caught?['确认鱼获入包','Confirm catch to bag']:['返回准备','Back to preparation'],locale)}</button>:phase!=='haul'&&<button data-fishing-hook className="harbor-primary" disabled={locked||paused} onClick={()=>{if(!paused&&!locked&&['waiting','bite'].includes(phaseRef.current))settle(clock.current)}}>{tx(['提竿','Hook'],locale)}</button>}
+   {phase==='result'?<button data-fishing-confirm className="harbor-primary" disabled={!canConfirm} onClick={()=>void submit(true)}>{tx(caught?['确认鱼获入包','Confirm catch to bag']:['返回准备','Back to preparation'],locale)}</button>:phase!=='haul'&&<button data-fishing-hook className="harbor-primary" disabled={locked||paused} onClick={()=>{if(!paused&&!locked&&['waiting','bite'].includes(phaseRef.current))settle(clock.current)}}>{tx(phase==='bite'?['现在提竿！','Hook now!']:['提竿','Hook'],locale)}</button>}
    {!caught&&phase!=='result'&&<button data-fishing-leave disabled={locked} onClick={()=>void submit(false)}>{tx(['收竿','Leave'],locale)}</button>}
   </footer>
  </section>;

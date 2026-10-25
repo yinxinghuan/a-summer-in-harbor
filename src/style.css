@@ -126,3 +126,16 @@
 @media(max-height:550px){.harbor-fishing-tap{max-height:40dvh}.harbor-fishing-tap .harbor-panel__body{padding:5px 12px}.harbor-fishing-tap .harbor-fishing__actions{padding:4px 12px max(4px,env(safe-area-inset-bottom))}}
 
 .harbor-panel[data-fishing-ready=true]{max-height:42dvh;display:flex;flex-direction:column}.harbor-panel[data-fishing-ready=true]>header{padding:6px 12px}.harbor-panel[data-fishing-ready=true]>header small{display:none}.harbor-panel[data-fishing-ready=true]>header h2{font-size:1rem}.harbor-panel[data-fishing-ready=true]>.harbor-panel__body{overflow:auto;min-height:0;padding:6px 12px}.harbor-panel[data-fishing-ready=true] .harbor-fishing-ready-actions{padding:6px 12px;flex-shrink:0}
+/* Cast feel revision: power previews the actual authority-checked water landing. */
+.harbor-cast-power{display:block;width:100%;height:10px;border:1px solid currentColor;background:#152e2a;margin-top:5px;overflow:hidden}
+.harbor-cast-power>span{display:block;height:100%;background:#f0c66b;transition:width 45ms linear}
+.harbor-app[data-cast-charging] .harbor-shore-preview{visibility:hidden!important}
+.harbor-fishing-scene [data-fishing-bite-mark]{visibility:hidden}
+.harbor-fishing-scene [data-fishing-bite-mark] circle{fill:#f4d17e;stroke:#213f39;stroke-width:2}
+.harbor-fishing-scene [data-fishing-bite-mark] text{font:900 23px sans-serif;fill:#213f39;stroke:none}
+.harbor-fishing-tap[data-fishing-phase=bite]{border-top:5px solid #b34b31}
+.harbor-fishing-tap[data-fishing-phase=bite] .harbor-fishing__cue{font-size:22px!important;font-weight:800;background:#f4d17e;color:#213f39;padding:6px 10px;border:2px solid #b34b31}
+.harbor-fishing-tap[data-fishing-phase=bite] [data-fishing-hook]{background:#f4d17e;color:#213f39;border:3px solid #b34b31;font-size:21px}
+.harbor-fishing-scene[data-fishing-scene-phase=bite] [data-fishing-ripple]{stroke:#f4d17e}
+.harbor-fishing-scene[data-fishing-scene-phase=charging] [data-fishing-ripple]{stroke:#f4d17e;stroke-dasharray:4 3}
+@media(max-width:350px){.harbor-shore-shortcuts{grid-template-columns:minmax(0,1fr) 66px}.harbor-shore-shortcuts strong{font-size:14px}.harbor-fishing-tap[data-fishing-phase=bite] .harbor-fishing__cue{font-size:19px!important}}

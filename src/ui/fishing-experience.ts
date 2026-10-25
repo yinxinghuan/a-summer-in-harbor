@@ -6,7 +6,7 @@ import type {Point} from '../engine/world';
 export type FishingPhase='ready'|'waiting'|'bite'|'reeling'|'result';
 export const fishingPresentationEvent='harbor:fishing-presentation';
 /** Read-only presentation; never sent as a reward, action, or save field. */
-export type FishingPresentation={challenge:string;phase:FishingPhase|'closed';paused:boolean;held:boolean;state:FishingState;waitTicks:number;anchorSource?:'encounter'|'legacy-shore-check';anchor?:{scene:string;standing:Point;target:Point}};
+export type FishingPresentation={challenge:string;phase:FishingPhase|'charging'|'closed';chargePower?:number;paused:boolean;held:boolean;state:FishingState;waitTicks:number;anchorSource?:'encounter'|'legacy-shore-check';anchor?:{scene:string;standing:Point;target:Point}};
 export function fishingBaitCue(encounter?:ShoreEncounter):Words{
  if(!encounter)return['借竿钓获为通用鲜鱼，不登记新物种。','Borrowed-rod catches are fresh fish, outside the species journal.'];
  const id=encounter.ticket?.bait??'reusable-fishing-lure',name=baitCatalog[id].name;
